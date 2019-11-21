@@ -1,0 +1,62 @@
+<StyleCopSettings Version="105">
+  <GlobalSettings>
+    <CollectionProperty Name="RecognizedWords">
+      <Value>Api</Value>
+      <Value>API</Value>
+      <Value>appender</Value>
+      <Value>Auth</Value>
+      <Value>conref</Value>
+      <Value>conrefs</Value>
+      <Value>Db</Value>
+      <Value>dbo</Value>
+      <Value>Deletable</Value>
+      <Value>Hangfire</Value>
+      <Value>OAuth</Value>
+      <Value>Owin</Value>
+      <Value>queryable</Value>
+      <Value>recurse</Value>
+      <Value>Redis</Value>
+      <Value>Sql</Value>
+      <Value>SQL</Value>
+      <Value>stylesheet</Value>
+      <Value>Vasont</Value>
+      <Value>XQuery</Value>
+      <Value>xref</Value>
+      <Value>xrefs</Value>
+    </CollectionProperty>
+  </GlobalSettings>
+  <Parsers>
+    <Parser ParserId="StyleCop.CSharp.CsParser">
+      <ParserSettings>
+        <BooleanProperty Name="AnalyzeDesignerFiles">False</BooleanProperty>
+      </ParserSettings>
+    </Parser>
+  </Parsers>
+  <Analyzers>
+    <Analyzer AnalyzerId="StyleCop.CSharp.ReadabilityRules">
+      <Rules>
+        <Rule Name="ParameterMustFollowComma">
+          <RuleSettings>
+            <BooleanProperty Name="Enabled">False</BooleanProperty>
+          </RuleSettings>
+        </Rule>
+        <Rule Name="SplitParametersMustStartOnLineAfterDeclaration">
+          <RuleSettings>
+            <BooleanProperty Name="Enabled">False</BooleanProperty>
+          </RuleSettings>
+        </Rule>
+        <Rule Name="ParametersMustBeOnSameLineOrSeparateLines">
+          <RuleSettings>
+            <BooleanProperty Name="Enabled">False</BooleanProperty>
+          </RuleSettings>
+        </Rule>
+        <Rule Name="ParameterMustNotSpanMultipleLines">
+          <RuleSettings>
+            <BooleanProperty Name="Enabled">False</BooleanProperty>
+          </RuleSettings>
+        </Rule>
+      </Rules>
+      <AnalyzerSettings />
+    </Analyzer>
+  </Analyzers>
+</StyleCopSettings>

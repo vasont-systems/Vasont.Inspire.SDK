@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;netstandard2.1;net461;net48</TargetFrameworks>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.5.0</Version>
+    <Authors>Vasont Systems</Authors>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/vasont-systems/Vasont.Inspire.SDK</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>CCMS</PackageTags>
+    <PackageReleaseNotes>Initial Open Source Release</PackageReleaseNotes>
+    <PackageProjectUrl>https://dev.vasont.com/</PackageProjectUrl>
+    <Description>Contains the Vasont Inspire SDK Client for integrating with Vasont Inspire CCMS REST Web API.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Extensions\**" />
+    <EmbeddedResource Remove="Extensions\**" />
+    <None Remove="Extensions\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="IdentityModel" Version="4.1.0" />
+    <PackageReference Include="Vasont.Inspire.Models" Version="1.0.1" />
+  </ItemGroup>
+
+</Project>
