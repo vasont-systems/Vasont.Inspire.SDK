@@ -22,7 +22,7 @@
 
   <ItemGroup>
     <PackageReference Include="IdentityModel" Version="4.1.1" />
-    <PackageReference Include="Vasont.Inspire.Models" Version="1.0.4" />
+    <PackageReference Include="Vasont.Inspire.Models" Version="1.0.5" />
   </ItemGroup>
 
 </Project>
