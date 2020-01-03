@@ -204,7 +204,7 @@ namespace Vasont.Inspire.SDK.Components
         /// <returns>Returns a boolean value indicating whether the action succeeded or not.</returns>
         public static bool MoveComponentsToFolder(this InspireClient client, List<long> componentIds, long targetFolderId)
         {
-            if (componentIds == null || componentIds.Count() <= 0)
+            if (componentIds == null || !componentIds.Any())
             {
                 throw new ArgumentNullException(nameof(componentIds));
             }
@@ -300,7 +300,7 @@ namespace Vasont.Inspire.SDK.Components
         /// <param name="importModel">The import model.</param>
         /// <param name="filePaths">Contains a list of local file paths that will be submitted for synchronization import.</param>
         /// <returns>
-        /// Returns a <see cref="WorkerStateModel" /> of type <see cref="ImportStateModel" />.
+        /// Returns a <see cref="WorkerStateModel" /> of type <see cref="MinimalImportStateModel" />.
         /// </returns>
         /// <exception cref="ArgumentNullException">Thrown if the import model is null.</exception>
         public static WorkerStateModel<MinimalImportStateModel> ImportComponents(this InspireClient client, ImportRequestModel importModel, List<string> filePaths)
@@ -328,7 +328,7 @@ namespace Vasont.Inspire.SDK.Components
         /// </summary>
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <param name="workerKey">Contains the import worker key to find.</param>
-        /// <returns>Returns a <see cref="WorkerStateModel"/> of type <see cref="ImportStateModel"/>.</returns>
+        /// <returns>Returns a <see cref="WorkerStateModel"/> of type <see cref="MinimalImportStateModel"/>.</returns>
         public static WorkerStateModel<MinimalImportStateModel> GetImportState(this InspireClient client, string workerKey)
         {
             if (string.IsNullOrEmpty(workerKey))
@@ -347,7 +347,7 @@ namespace Vasont.Inspire.SDK.Components
         /// </summary>
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <param name="inputModel">Contains the <see cref="WorkerStateModel"/> input.</param>
-        /// <returns>Returns a <see cref="WorkerStateModel"/> of type <see cref="ImportStateModel"/>.</returns>
+        /// <returns>Returns a <see cref="WorkerStateModel"/> of type <see cref="MinimalImportStateModel"/>.</returns>
         public static WorkerStateModel<MinimalImportStateModel> GetImportState(this InspireClient client, WorkerStateModel inputModel)
         {
             if (inputModel == null)
@@ -366,7 +366,7 @@ namespace Vasont.Inspire.SDK.Components
         /// </summary>
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <param name="workerKey">Contains the export worker key to find.</param>
-        /// <returns>Returns a <see cref="WorkerStateModel"/> of type <see cref="ExportStateModel"/>.</returns>
+        /// <returns>Returns a <see cref="WorkerStateModel"/> of type <see cref="MinimalExportStateModel"/>.</returns>
         public static WorkerStateModel<MinimalExportStateModel> GetExportState(this InspireClient client, string workerKey)
         {
             if (string.IsNullOrEmpty(workerKey))
@@ -385,7 +385,7 @@ namespace Vasont.Inspire.SDK.Components
         /// </summary>
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <param name="inputModel">Contains the <see cref="WorkerStateModel"/> input.</param>
-        /// <returns>Returns a <see cref="WorkerStateModel"/> of type <see cref="ExportStateModel"/>.</returns>
+        /// <returns>Returns a <see cref="WorkerStateModel"/> of type <see cref="MinimalExportStateModel"/>.</returns>
         public static WorkerStateModel<MinimalExportStateModel> GetExportState(this InspireClient client, WorkerStateModel inputModel)
         {
             if (inputModel == null)
