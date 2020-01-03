@@ -3,20 +3,20 @@
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;netstandard2.1;net461;net48</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.5.4</Version>
+    <Version>1.5.5</Version>
     <Authors>Vasont Systems</Authors>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <RepositoryUrl>https://github.com/vasont-systems/Vasont.Inspire.SDK</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>CCMS</PackageTags>
-    <PackageReleaseNotes>Added missing configuration extension methods</PackageReleaseNotes>
+    <PackageReleaseNotes>Added missing component extension methods</PackageReleaseNotes>
     <PackageProjectUrl>https://dev.vasont.com/</PackageProjectUrl>
     <Description>Contains the Vasont Inspire SDK Client for integrating with Vasont Inspire CCMS REST Web API.</Description>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="IdentityModel" Version="4.1.1" />
-    <PackageReference Include="Vasont.Inspire.Models" Version="1.1.0" />
+    <PackageReference Include="Vasont.Inspire.Models" Version="1.1.3" />
   </ItemGroup>
 
 </Project>
