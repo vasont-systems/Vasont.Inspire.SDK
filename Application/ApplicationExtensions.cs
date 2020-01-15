@@ -17,8 +17,6 @@ namespace Vasont.Inspire.SDK.Application
     /// </summary>
     public static class ApplicationExtensions
     {
-        #region Public Extension Methods
-
         /// <summary>
         /// This method is used to return the tenant information for the application instance.
         /// </summary>
@@ -119,6 +117,5 @@ namespace Vasont.Inspire.SDK.Application
             var request = client.CreateRequest("/api/Tags");
             return client.RequestContent<List<TagModel>>(request);
         }
-        #endregion
     }
 }
