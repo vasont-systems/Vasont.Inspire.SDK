@@ -62,7 +62,7 @@ namespace Vasont.Inspire.SDK.Projects
         /// <returns>Returns a list of <see cref="ProjectModel"/> models.</returns>
         public static List<ProjectModel> GetAssignedProjects(this InspireClient client, int maximumResults)
         {
-            var request = client.CreateRequest("/api/Projects/Assigned");
+            var request = client.CreateRequest("/api/Projects/Assignments");
             return client.RequestContent<List<ProjectModel>>(request);
         }
 
@@ -99,18 +99,6 @@ namespace Vasont.Inspire.SDK.Projects
         {
             var request = client.CreateRequest("/api/Projects/" + projectId + "/Assignments");
             return client.RequestContent<List<ProjectAssignmentModel>>(request);
-        }
-
-        /// <summary>
-        /// This method is used to return project incomplete assignments within the system that are associated with the user.
-        /// </summary>
-        /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
-        /// <param name="userId">Contains the identity of the user.</param>
-        /// <returns>Returns a list of <see cref="MinimalProjectAssignmentModel"/> models.</returns>
-        public static List<MinimalProjectAssignmentModel> GetUserAssignments(this InspireClient client, long userId)
-        {
-            var request = client.CreateRequest("/api/Projects/Assignments/" + userId);
-            return client.RequestContent<List<MinimalProjectAssignmentModel>>(request);
         }
 
         /// <summary>
@@ -356,7 +344,7 @@ namespace Vasont.Inspire.SDK.Projects
         /// <param name="folderId">Contains the identity of the project folder.</param>
         /// <param name="includeSubFolders">Contains a value indicating whether components in descendant sub-folders should be exported.</param>
         /// <returns>The <see cref="ExportRequestModel"/> object with information about the export process.</returns>
-        public static ExportRequestModel ExportComponents(this InspireClient client, long projectId, long folderId, bool includeSubFolders)
+        public static ExportRequestModel ExportComponents(this InspireClient client, long projectId, long folderId, bool includeSubFolders, long exportId = 0)
         {
             if (projectId <= 0)
             {
@@ -368,7 +356,7 @@ namespace Vasont.Inspire.SDK.Projects
                 throw new ArgumentNullException(nameof(folderId));
             }
 
-            var request = client.CreateRequest("/api/Projects/" + projectId + "/FolderItems/" + folderId + "/Export?includeSubFolders=" + includeSubFolders, HttpMethod.Post);
+            var request = client.CreateRequest("/api/Projects/" + projectId + "/FolderItems/" + folderId + "/Export/" + exportId + "/?includeSubFolders=" + includeSubFolders, HttpMethod.Post);
             return client.RequestContent<ExportRequestModel>(request);
         }
 
@@ -472,7 +460,7 @@ namespace Vasont.Inspire.SDK.Projects
                 throw new ArgumentNullException(nameof(model));
             }
 
-            var request = client.CreateRequest("/api/Projects/" + projectId + "/Assignments/" + projectAssignmentId + "/Complete", HttpMethod.Put);
+            var request = client.CreateRequest("/api/Projects/" + projectId + "/Assignments/" + projectAssignmentId + "/State/Complete", HttpMethod.Put);
             return client.RequestContent<ProjectAssignmentModel, ProjectAssignmentModel>(request, model);
         }
 
