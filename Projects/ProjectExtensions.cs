@@ -102,18 +102,6 @@ namespace Vasont.Inspire.SDK.Projects
         }
 
         /// <summary>
-        /// This method is used to return project incomplete assignments within the system that are associated with the user.
-        /// </summary>
-        /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
-        /// <param name="userId">Contains the identity of the user.</param>
-        /// <returns>Returns a list of <see cref="MinimalProjectAssignmentModel"/> models.</returns>
-        public static List<MinimalProjectAssignmentModel> GetUserAssignments(this InspireClient client, long userId)
-        {
-            var request = client.CreateRequest("/api/Projects/Assignments/" + userId);
-            return client.RequestContent<List<MinimalProjectAssignmentModel>>(request);
-        }
-
-        /// <summary>
         /// This method is used to delete an existing project.
         /// </summary>
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
