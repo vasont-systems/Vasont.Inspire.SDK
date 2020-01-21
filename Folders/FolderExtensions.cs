@@ -134,16 +134,11 @@ namespace Vasont.Inspire.SDK.Folders
         /// <param name="targetFolderId">Contains the folder identity.</param>
         /// <param name="includeSubFolders">Contains a flag indicating whether to include subfolders or not.</param>
         /// <returns>Returns a <see cref="ExportRequestModel"/> object if found.</returns>
-        public static ExportRequestModel ExportFolder(this InspireClient client, long targetFolderId, long exportId, bool includeSubFolders = false)
+        public static ExportRequestModel ExportFolder(this InspireClient client, long targetFolderId, long exportId = 0, bool includeSubFolders = false)
         {
             if (targetFolderId <= 0)
             {
                 throw new ArgumentNullException(nameof(targetFolderId));
-            }
-
-            if (exportId <= 0)
-            {
-                throw new ArgumentNullException(nameof(exportId));
             }
 
             var request = client.CreateRequest("/api/Folders/" + targetFolderId + "/Export/" + exportId + "/?includeSubFolders=" + includeSubFolders, HttpMethod.Post);
