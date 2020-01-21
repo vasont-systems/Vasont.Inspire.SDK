@@ -9,14 +9,14 @@
     <RepositoryUrl>https://github.com/vasont-systems/Vasont.Inspire.SDK</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>CCMS</PackageTags>
-    <PackageReleaseNotes>Added extension methods for working with reviews</PackageReleaseNotes>
+    <PackageReleaseNotes>Added extension methods for working with reviews and fixed up route issues.</PackageReleaseNotes>
     <PackageProjectUrl>https://dev.vasont.com/</PackageProjectUrl>
     <Description>Contains the Vasont Inspire SDK Client for integrating with Vasont Inspire CCMS REST Web API.</Description>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="IdentityModel" Version="4.1.1" />
-    <PackageReference Include="Vasont.Inspire.Models" Version="1.1.5" />
+    <PackageReference Include="Vasont.Inspire.Models" Version="1.1.6" />
   </ItemGroup>
 
 </Project>
