@@ -142,7 +142,7 @@ namespace Vasont.Inspire.SDK.Components
         /// <returns>Returns a <see cref="BatchComponentsResultModel"/> object containing a list of requested components.</returns>
         public static List<XmlComponentElementModel> GetComponentElements(this InspireClient client, long componentId, List<string> allowedElements)
         {
-            var request = client.CreateRequest($"/api/Components/{componentId}", HttpMethod.Post);
+            var request = client.CreateRequest($"/api/Components/{componentId}/Elements", HttpMethod.Post);
             return client.RequestContent<List<string>, List<XmlComponentElementModel>>(request, allowedElements);
         }
 
@@ -820,7 +820,7 @@ namespace Vasont.Inspire.SDK.Components
         /// <returns>Returns a <see cref="ComponentHistoryResultModel"/> model.</returns>
         public static ChangesetModel RestoreComponentFromHistory(this InspireClient client, long componentId, Guid changesetId, RestoreOptionsModel inputModel)
         {
-            var request = client.CreateRequest($"/api/Components/{componentId}/History/{changesetId}", HttpMethod.Post);
+            var request = client.CreateRequest($"/api/Components/{componentId}/Restore/{changesetId}", HttpMethod.Post);
             return client.RequestContent<RestoreOptionsModel, ChangesetModel>(request, inputModel);
         }
         #endregion

@@ -78,7 +78,7 @@ namespace Vasont.Inspire.SDK.Translations
         /// </summary>
         /// <param name="client">The client.</param>
         /// <param name="translationComponentIds">The translation component ids to reset state to queued.</param>
-        /// <returns>Returns a List of <see cref="MinimalTranslationComponentModel"/> objects.</returns>
+        /// <returns>Returns a List of <see cref="MinimalTranslationJobComponentModel"/> objects.</returns>
         public static List<MinimalTranslationJobComponentModel> ResetTranslationComponentsState(this InspireClient client, List<long> translationComponentIds)
         {
             if (translationComponentIds == null)

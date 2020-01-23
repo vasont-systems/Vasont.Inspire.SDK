@@ -31,7 +31,7 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <returns>Returns a list of <see cref="AttributeModel"/> from the application.</returns>
         public static List<AttributeModel> GetAttributes(this InspireClient client)
         {
-            var request = client.CreateRequest("/api/Configuration/Attributes");
+            var request = client.CreateRequest("/api/Configurations/Attributes");
             return client.RequestContent<List<AttributeModel>>(request);
         }
 
@@ -43,7 +43,7 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <returns>Returns a specific <see cref="AttributeModel"/> from the application.</returns>
         public static AttributeModel GetAttribute(this InspireClient client, long attributeId)
         {
-            var request = client.CreateRequest($"/api/Configuration/Attributes/{attributeId}");
+            var request = client.CreateRequest($"/api/Configurations/Attributes/{attributeId}");
             return client.RequestContent<AttributeModel>(request);
         }
 
@@ -60,7 +60,7 @@ namespace Vasont.Inspire.SDK.Configuration
                 throw new ArgumentNullException(nameof(model));
             }
 
-            var request = client.CreateRequest($"/api/Configuration/Attributes/{model.AttributeId}", HttpMethod.Put);
+            var request = client.CreateRequest($"/api/Configurations/Attributes/{model.AttributeId}", HttpMethod.Put);
             return client.RequestContent<AttributeModel, AttributeModel>(request, model);
         }
 
@@ -77,7 +77,7 @@ namespace Vasont.Inspire.SDK.Configuration
                 throw new ArgumentNullException(nameof(model));
             }
 
-            var request = client.CreateRequest("/api/Configuration/Attributes", HttpMethod.Post);
+            var request = client.CreateRequest("/api/Configurations/Attributes", HttpMethod.Post);
             return client.RequestContent<AttributeModel, AttributeModel>(request, model);
         }
 
@@ -89,7 +89,7 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <returns>Returns the results of the action.</returns>
         public static bool RemoveAttribute(this InspireClient client, long attributeId)
         {
-            var request = client.CreateRequest($"/api/Configuration/Attributes/{attributeId}", HttpMethod.Delete);
+            var request = client.CreateRequest($"/api/Configurations/Attributes/{attributeId}", HttpMethod.Delete);
             client.RequestContent(request);
             return !client.HasError;
         }
@@ -103,7 +103,7 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <returns>Returns a list of <see cref="MinimalProfileAttributeModel"/> from the application.</returns>
         public static List<MinimalProfileAttributeModel> GetProfileAttributes(this InspireClient client)
         {
-            var request = client.CreateRequest("/api/Configuration/ProfileAttributes");
+            var request = client.CreateRequest("/api/Configurations/ProfileAttributes");
             return client.RequestContent<List<MinimalProfileAttributeModel>>(request);
         }
 
@@ -114,7 +114,7 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <returns>Returns a list of <see cref="ProfileAttributeItemModel"/> from the application.</returns>
         public static List<ProfileAttributeItemModel> GetProfileAttributeItems(this InspireClient client)
         {
-            var request = client.CreateRequest("/api/Configuration/ProfileAttributes/Selector/Items");
+            var request = client.CreateRequest("/api/Configurations/ProfileAttributes/Selector/Items");
             return client.RequestContent<List<ProfileAttributeItemModel>>(request);
         }
 
@@ -126,7 +126,7 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <returns>Returns a specific <see cref="ProfileAttributeModel"/> from the application.</returns>
         public static ProfileAttributeModel GetProfileAttribute(this InspireClient client, long attributeId)
         {
-            var request = client.CreateRequest($"/api/Configuration/ProfileAttributes/{attributeId}");
+            var request = client.CreateRequest($"/api/Configurations/ProfileAttributes/{attributeId}");
             return client.RequestContent<ProfileAttributeModel>(request);
         }
 
@@ -143,7 +143,7 @@ namespace Vasont.Inspire.SDK.Configuration
                 throw new ArgumentNullException(nameof(model));
             }
 
-            var request = client.CreateRequest($"/api/Configuration/ProfileAttributes/{model.AttributeId}", HttpMethod.Put);
+            var request = client.CreateRequest($"/api/Configurations/ProfileAttributes/{model.AttributeId}", HttpMethod.Put);
             return client.RequestContent<ProfileAttributeModel, ProfileAttributeModel>(request, model);
         }
 
@@ -160,7 +160,7 @@ namespace Vasont.Inspire.SDK.Configuration
                 throw new ArgumentNullException(nameof(model));
             }
 
-            var request = client.CreateRequest("/api/Configuration/ProfileAttributes", HttpMethod.Post);
+            var request = client.CreateRequest("/api/Configurations/ProfileAttributes", HttpMethod.Post);
             return client.RequestContent<ProfileAttributeModel, ProfileAttributeModel>(request, model);
         }
 
@@ -172,7 +172,7 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <returns>Returns the results of the action.</returns>
         public static bool RemoveProfileAttribute(this InspireClient client, long attributeId)
         {
-            var request = client.CreateRequest($"/api/Configuration/ProfileAttributes/{attributeId}", HttpMethod.Delete);
+            var request = client.CreateRequest($"/api/Configurations/ProfileAttributes/{attributeId}", HttpMethod.Delete);
             client.RequestContent(request);
             return !client.HasError;
         }
@@ -187,7 +187,7 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <returns>Returns a list of schema standards from the application.</returns>
         public static List<string> GetSchemaStandards(this InspireClient client)
         {
-            var request = client.CreateRequest("/api/Configuration/SchemaStandards");
+            var request = client.CreateRequest("/api/Configurations/SchemaStandards");
             return client.RequestContent<List<string>>(request);
         }
         #endregion
@@ -200,7 +200,7 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <returns>Returns a list of <see cref="ComponentTypeModel"/> from the application.</returns>
         public static List<ComponentTypeModel> GetComponentTypes(this InspireClient client)
         {
-            var request = client.CreateRequest("/api/Configuration/ComponentTypes");
+            var request = client.CreateRequest("/api/Configurations/ComponentTypes");
             return client.RequestContent<List<ComponentTypeModel>>(request);
         }
 
@@ -212,7 +212,7 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <returns>Returns a specific <see cref="ComponentTypeModel"/> from the application.</returns>
         public static ComponentTypeModel GetComponentType(this InspireClient client, long componentTypeId)
         {
-            var request = client.CreateRequest($"/api/Configuration/ComponentTypes/{componentTypeId}");
+            var request = client.CreateRequest($"/api/Configurations/ComponentTypes/{componentTypeId}");
             return client.RequestContent<ComponentTypeModel>(request);
         }
 
@@ -229,7 +229,7 @@ namespace Vasont.Inspire.SDK.Configuration
                 throw new ArgumentNullException(nameof(model));
             }
 
-            var request = client.CreateRequest($"/api/Configuration/ComponentTypes/{model.ComponentTypeId}", HttpMethod.Put);
+            var request = client.CreateRequest($"/api/Configurations/ComponentTypes/{model.ComponentTypeId}", HttpMethod.Put);
             return client.RequestContent<ComponentTypeModel, ComponentTypeModel>(request, model);
         }
 
@@ -246,7 +246,7 @@ namespace Vasont.Inspire.SDK.Configuration
                 throw new ArgumentNullException(nameof(model));
             }
 
-            var request = client.CreateRequest("/api/Configuration/ComponentTypes", HttpMethod.Post);
+            var request = client.CreateRequest("/api/Configurations/ComponentTypes", HttpMethod.Post);
             return client.RequestContent<ComponentTypeModel, ComponentTypeModel>(request, model);
         }
 
@@ -258,7 +258,7 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <returns>Returns the results of the action.</returns>
         public static bool RemoveComponentType(this InspireClient client, long componentTypeId)
         {
-            var request = client.CreateRequest($"/api/Configuration/ComponentTypes/{componentTypeId}", HttpMethod.Delete);
+            var request = client.CreateRequest($"/api/Configurations/ComponentTypes/{componentTypeId}", HttpMethod.Delete);
             client.RequestContent(request);
             return !client.HasError;
         }
@@ -272,7 +272,7 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <returns>Returns a list of <see cref="ElementModel"/> from the application.</returns>
         public static List<ElementModel> GetElements(this InspireClient client)
         {
-            var request = client.CreateRequest("/api/Configuration/Elements");
+            var request = client.CreateRequest("/api/Configurations/Elements");
             return client.RequestContent<List<ElementModel>>(request);
         }
 
@@ -284,7 +284,7 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <returns>Returns a specific <see cref="ElementModel"/> from the application.</returns>
         public static ElementModel GetElement(this InspireClient client, long elementId)
         {
-            var request = client.CreateRequest($"/api/Configuration/Elements/{elementId}");
+            var request = client.CreateRequest($"/api/Configurations/Elements/{elementId}");
             return client.RequestContent<ElementModel>(request);
         }
 
@@ -301,7 +301,7 @@ namespace Vasont.Inspire.SDK.Configuration
                 throw new ArgumentNullException(nameof(model));
             }
 
-            var request = client.CreateRequest($"/api/Configuration/Elements/{model.ElementId}", HttpMethod.Put);
+            var request = client.CreateRequest($"/api/Configurations/Elements/{model.ElementId}", HttpMethod.Put);
             return client.RequestContent<ElementModel, ElementModel>(request, model);
         }
 
@@ -318,7 +318,7 @@ namespace Vasont.Inspire.SDK.Configuration
                 throw new ArgumentNullException(nameof(model));
             }
 
-            var request = client.CreateRequest("/api/Configuration/Elements", HttpMethod.Post);
+            var request = client.CreateRequest("/api/Configurations/Elements", HttpMethod.Post);
             return client.RequestContent<ElementModel, ElementModel>(request, model);
         }
 
@@ -330,7 +330,7 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <returns>Returns the results of the action.</returns>
         public static bool RemoveElement(this InspireClient client, long elementId)
         {
-            var request = client.CreateRequest($"/api/Configuration/Elements/{elementId}", HttpMethod.Delete);
+            var request = client.CreateRequest($"/api/Configurations/Elements/{elementId}", HttpMethod.Delete);
             client.RequestContent(request);
             return !client.HasError;
         }
@@ -344,7 +344,7 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <returns>Returns a list of <see cref="ExportModel"/> from the application.</returns>
         public static List<ExportModel> GetExports(this InspireClient client)
         {
-            var request = client.CreateRequest("/api/Configuration/Exports");
+            var request = client.CreateRequest("/api/Configurations/Exports");
             return client.RequestContent<List<ExportModel>>(request);
         }
 
@@ -356,7 +356,7 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <returns>Returns a specific <see cref="ExportModel"/> from the application.</returns>
         public static ExportModel GetExport(this InspireClient client, long exportId)
         {
-            var request = client.CreateRequest($"/api/Configuration/Exports/{exportId}");
+            var request = client.CreateRequest($"/api/Configurations/Exports/{exportId}");
             return client.RequestContent<ExportModel>(request);
         }
 
@@ -373,7 +373,7 @@ namespace Vasont.Inspire.SDK.Configuration
                 throw new ArgumentNullException(nameof(model));
             }
 
-            var request = client.CreateRequest($"/api/Configuration/Exports/{model.ExportId}", HttpMethod.Put);
+            var request = client.CreateRequest($"/api/Configurations/Exports/{model.ExportId}", HttpMethod.Put);
             return client.RequestContent<ExportModel, ExportModel>(request, model);
         }
 
@@ -390,7 +390,7 @@ namespace Vasont.Inspire.SDK.Configuration
                 throw new ArgumentNullException(nameof(model));
             }
 
-            var request = client.CreateRequest("/api/Configuration/Exports", HttpMethod.Post);
+            var request = client.CreateRequest("/api/Configurations/Exports", HttpMethod.Post);
             return client.RequestContent<ExportModel, ExportModel>(request, model);
         }
 
@@ -402,7 +402,7 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <returns>Returns the results of the action.</returns>
         public static bool RemoveExport(this InspireClient client, long exportId)
         {
-            var request = client.CreateRequest($"/api/Configuration/Exports/{exportId}", HttpMethod.Delete);
+            var request = client.CreateRequest($"/api/Configurations/Exports/{exportId}", HttpMethod.Delete);
             client.RequestContent(request);
             return !client.HasError;
         }
@@ -414,7 +414,7 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <returns>Returns a list of <see cref="PluginModel"/> from the application.</returns>
         public static List<PluginModel> GetExportPlugins(this InspireClient client)
         {
-            var request = client.CreateRequest("/api/Configuration/Exports/Plugins");
+            var request = client.CreateRequest("/api/Configurations/Exports/Plugins");
             return client.RequestContent<List<PluginModel>>(request);
         }
 
@@ -426,7 +426,7 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <returns>Returns a list of <see cref="PluginParameterModel"/> from the application.</returns>
         public static List<PluginParameterModel> GetExportPluginParameters(this InspireClient client, long pluginId)
         {
-            var request = client.CreateRequest($"/api/Configuration/Exports/Plugins/{pluginId}/Parameters");
+            var request = client.CreateRequest($"/api/Configurations/Exports/Plugins/{pluginId}/Parameters");
             return client.RequestContent<List<PluginParameterModel>>(request);
         }
 
@@ -439,7 +439,7 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <returns>Returns a list of <see cref="PluginParameterModel"/> from the application.</returns>
         public static ExportSelectionModel GetExportComponentType(this InspireClient client, long componentTypeId, ExportType exportType = ExportType.Standard)
         {
-            var request = client.CreateRequest($"/api/Configuration/Exports/ComponentTypes/{componentTypeId}?exportType={exportType}");
+            var request = client.CreateRequest($"/api/Configurations/Exports/ComponentTypes/{componentTypeId}?exportType={exportType}");
             return client.RequestContent<ExportSelectionModel>(request);
         }
 
@@ -453,7 +453,7 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <returns>Returns a list of <see cref="LinkMethodModel"/> from the application.</returns>
         public static List<LinkMethodModel> GetLinkMethods(this InspireClient client)
         {
-            var request = client.CreateRequest("/api/Configuration/LinkMethods");
+            var request = client.CreateRequest("/api/Configurations/LinkMethods");
             return client.RequestContent<List<LinkMethodModel>>(request);
         }
         #endregion
@@ -466,7 +466,7 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <returns>Returns a list of <see cref="XmlLinkTypeModel"/> from the application.</returns>
         public static List<XmlLinkTypeModel> GetXmlLinkTypes(this InspireClient client)
         {
-            var request = client.CreateRequest("/api/Configuration/XmlLinkTypes");
+            var request = client.CreateRequest("/api/Configurations/XmlLinkTypes");
             return client.RequestContent<List<XmlLinkTypeModel>>(request);
         }
 
@@ -478,7 +478,7 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <returns>Returns a specific <see cref="XmlLinkTypeModel"/> from the application.</returns>
         public static XmlLinkTypeModel GetXmlLinkType(this InspireClient client, long xmlLinkTypeId)
         {
-            var request = client.CreateRequest($"/api/Configuration/XmlLinkTypes/{xmlLinkTypeId}");
+            var request = client.CreateRequest($"/api/Configurations/XmlLinkTypes/{xmlLinkTypeId}");
             return client.RequestContent<XmlLinkTypeModel>(request);
         }
 
@@ -495,7 +495,7 @@ namespace Vasont.Inspire.SDK.Configuration
                 throw new ArgumentNullException(nameof(model));
             }
 
-            var request = client.CreateRequest($"/api/Configuration/XmlLinkTypes/{model.XmlLinkTypeId}", HttpMethod.Put);
+            var request = client.CreateRequest($"/api/Configurations/XmlLinkTypes/{model.XmlLinkTypeId}", HttpMethod.Put);
             return client.RequestContent<XmlLinkTypeModel, XmlLinkTypeModel>(request, model);
         }
 
@@ -512,7 +512,7 @@ namespace Vasont.Inspire.SDK.Configuration
                 throw new ArgumentNullException(nameof(model));
             }
 
-            var request = client.CreateRequest("/api/Configuration/XmlLinkTypes", HttpMethod.Post);
+            var request = client.CreateRequest("/api/Configurations/XmlLinkTypes", HttpMethod.Post);
             return client.RequestContent<XmlLinkTypeModel, XmlLinkTypeModel>(request, model);
         }
 
@@ -524,7 +524,7 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <returns>Returns the results of the action.</returns>
         public static bool RemoveXmlLinkType(this InspireClient client, long xmlLinkTypeId)
         {
-            var request = client.CreateRequest($"/api/Configuration/XmlLinkTypes/{xmlLinkTypeId}", HttpMethod.Delete);
+            var request = client.CreateRequest($"/api/Configurations/XmlLinkTypes/{xmlLinkTypeId}", HttpMethod.Delete);
             client.RequestContent(request);
             return !client.HasError;
         }
@@ -538,7 +538,7 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <returns>Returns a list of <see cref="RelationModel"/> from the application.</returns>
         public static List<RelationModel> GetRelations(this InspireClient client)
         {
-            var request = client.CreateRequest("/api/Configuration/Relations");
+            var request = client.CreateRequest("/api/Configurations/Relations");
             return client.RequestContent<List<RelationModel>>(request);
         }
 
@@ -550,7 +550,7 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <returns>Returns a specific <see cref="XmlLinkTypeModel"/> from the application.</returns>
         public static RelationModel GetRelation(this InspireClient client, long relationId)
         {
-            var request = client.CreateRequest($"/api/Configuration/Relations/{relationId}");
+            var request = client.CreateRequest($"/api/Configurations/Relations/{relationId}");
             return client.RequestContent<RelationModel>(request);
         }
 
@@ -567,7 +567,7 @@ namespace Vasont.Inspire.SDK.Configuration
                 throw new ArgumentNullException(nameof(model));
             }
 
-            var request = client.CreateRequest($"/api/Configuration/Relations/{model.RelationId}", HttpMethod.Put);
+            var request = client.CreateRequest($"/api/Configurations/Relations/{model.RelationId}", HttpMethod.Put);
             return client.RequestContent<RelationModel, RelationModel>(request, model);
         }
 
@@ -584,7 +584,7 @@ namespace Vasont.Inspire.SDK.Configuration
                 throw new ArgumentNullException(nameof(model));
             }
 
-            var request = client.CreateRequest("/api/Configuration/Relations", HttpMethod.Post);
+            var request = client.CreateRequest("/api/Configurations/Relations", HttpMethod.Post);
             return client.RequestContent<RelationModel, RelationModel>(request, model);
         }
 
@@ -596,24 +596,13 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <returns>Returns the results of the action.</returns>
         public static bool RemoveRelation(this InspireClient client, long relationId)
         {
-            var request = client.CreateRequest($"/api/Configuration/Relations/{relationId}", HttpMethod.Delete);
+            var request = client.CreateRequest($"/api/Configurations/Relations/{relationId}", HttpMethod.Delete);
             client.RequestContent(request);
             return !client.HasError;
         }
         #endregion 
 
         #region Public Tag Methods
-        /// <summary>
-        /// This method is used to retrieve a list of tags.
-        /// </summary>
-        /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
-        /// <returns>Returns a list of <see cref="TagModel"/> from the application.</returns>
-        public static List<TagModel> GetTags(this InspireClient client)
-        {
-            var request = client.CreateRequest("/api/Configuration/Tags");
-            return client.RequestContent<List<TagModel>>(request);
-        }
-
         /// <summary>
         /// This method is used to retrieve a specific tag.
         /// </summary>
@@ -622,7 +611,7 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <returns>Returns a specific <see cref="TagModel"/> from the application.</returns>
         public static TagModel GetTag(this InspireClient client, long tagId)
         {
-            var request = client.CreateRequest($"/api/Configuration/Tags/{tagId}");
+            var request = client.CreateRequest($"/api/Configurations/Tags/{tagId}");
             return client.RequestContent<TagModel>(request);
         }
 
@@ -639,7 +628,7 @@ namespace Vasont.Inspire.SDK.Configuration
                 throw new ArgumentNullException(nameof(model));
             }
 
-            var request = client.CreateRequest($"/api/Configuration/Tags/{model.TagId}", HttpMethod.Put);
+            var request = client.CreateRequest($"/api/Configurations/Tags/{model.TagId}", HttpMethod.Put);
             return client.RequestContent<TagModel, TagModel>(request, model);
         }
 
@@ -656,7 +645,7 @@ namespace Vasont.Inspire.SDK.Configuration
                 throw new ArgumentNullException(nameof(model));
             }
 
-            var request = client.CreateRequest("/api/Configuration/Tags", HttpMethod.Post);
+            var request = client.CreateRequest("/api/Configurations/Tags", HttpMethod.Post);
             return client.RequestContent<TagModel, TagModel>(request, model);
         }
 
@@ -668,7 +657,7 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <returns>Returns the results of the action.</returns>
         public static bool RemoveTag(this InspireClient client, long tagId)
         {
-            var request = client.CreateRequest($"/api/Configuration/Tags/{tagId}", HttpMethod.Delete);
+            var request = client.CreateRequest($"/api/Configurations/Tags/{tagId}", HttpMethod.Delete);
             client.RequestContent(request);
             return !client.HasError;
         }
@@ -682,7 +671,7 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <returns>Returns a list of <see cref="ProjectActivityModel"/> from the application.</returns>
         public static List<ProjectActivityModel> GetProjectActivities(this InspireClient client)
         {
-            var request = client.CreateRequest("/api/Configuration/ProjectActivities");
+            var request = client.CreateRequest("/api/Configurations/ProjectActivities");
             return client.RequestContent<List<ProjectActivityModel>>(request);
         }
 
@@ -694,7 +683,7 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <returns>Returns a specific <see cref="ProjectActivityModel"/> from the application.</returns>
         public static ProjectActivityModel GetProjectActivity(this InspireClient client, long projectActivityId)
         {
-            var request = client.CreateRequest($"/api/Configuration/ProjectActivities/{projectActivityId}");
+            var request = client.CreateRequest($"/api/Configurations/ProjectActivities/{projectActivityId}");
             return client.RequestContent<ProjectActivityModel>(request);
         }
 
@@ -711,7 +700,7 @@ namespace Vasont.Inspire.SDK.Configuration
                 throw new ArgumentNullException(nameof(model));
             }
 
-            var request = client.CreateRequest($"/api/Configuration/ProjectActivities/{model.ProjectActivityId}", HttpMethod.Put);
+            var request = client.CreateRequest($"/api/Configurations/ProjectActivities/{model.ProjectActivityId}", HttpMethod.Put);
             return client.RequestContent<ProjectActivityModel, ProjectActivityModel>(request, model);
         }
 
@@ -728,7 +717,7 @@ namespace Vasont.Inspire.SDK.Configuration
                 throw new ArgumentNullException(nameof(model));
             }
 
-            var request = client.CreateRequest("/api/Configuration/ProjectActivities", HttpMethod.Post);
+            var request = client.CreateRequest("/api/Configurations/ProjectActivities", HttpMethod.Post);
             return client.RequestContent<ProjectActivityModel, ProjectActivityModel>(request, model);
         }
 
@@ -740,7 +729,7 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <returns>Returns the results of the action.</returns>
         public static bool RemoveProjectActivity(this InspireClient client, long projectActivityId)
         {
-            var request = client.CreateRequest($"/api/Configuration/ProjectActivities/{projectActivityId}", HttpMethod.Delete);
+            var request = client.CreateRequest($"/api/Configurations/ProjectActivities/{projectActivityId}", HttpMethod.Delete);
             client.RequestContent(request);
             return !client.HasError;
         }
@@ -754,7 +743,7 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <returns>Returns a list of <see cref="LanguageModel"/> from the application.</returns>
         public static List<LanguageModel> GetLanguages(this InspireClient client)
         {
-            var request = client.CreateRequest("/api/Configuration/Languages");
+            var request = client.CreateRequest("/api/Configurations/Languages");
             return client.RequestContent<List<LanguageModel>>(request);
         }
 
@@ -766,7 +755,7 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <returns>Returns a specific <see cref="LanguageModel"/> from the application.</returns>
         public static LanguageModel GetLanguage(this InspireClient client, string languageCode)
         {
-            var request = client.CreateRequest($"/api/Configuration/Languages/{languageCode}");
+            var request = client.CreateRequest($"/api/Configurations/Languages/{languageCode}");
             return client.RequestContent<LanguageModel>(request);
         }
 
@@ -783,7 +772,7 @@ namespace Vasont.Inspire.SDK.Configuration
                 throw new ArgumentNullException(nameof(model));
             }
 
-            var request = client.CreateRequest($"/api/Configuration/Languages/{model.LanguageCode}", HttpMethod.Put);
+            var request = client.CreateRequest($"/api/Configurations/Languages/{model.LanguageCode}", HttpMethod.Put);
             return client.RequestContent<LanguageModel, LanguageModel>(request, model);
         }
 
@@ -800,7 +789,7 @@ namespace Vasont.Inspire.SDK.Configuration
                 throw new ArgumentNullException(nameof(model));
             }
 
-            var request = client.CreateRequest("/api/Configuration/Languages", HttpMethod.Post);
+            var request = client.CreateRequest("/api/Configurations/Languages", HttpMethod.Post);
             return client.RequestContent<LanguageModel, LanguageModel>(request, model);
         }
 
@@ -812,7 +801,7 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <returns>Returns the results of the action.</returns>
         public static bool RemoveLanguage(this InspireClient client, string languageCode)
         {
-            var request = client.CreateRequest($"/api/Configuration/Languages/{languageCode}", HttpMethod.Delete);
+            var request = client.CreateRequest($"/api/Configurations/Languages/{languageCode}", HttpMethod.Delete);
             client.RequestContent(request);
             return !client.HasError;
         }
@@ -826,7 +815,7 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <returns>Returns a list of <see cref="WebhookConfigurationModel"/> from the application.</returns>
         public static List<WebhookConfigurationModel> GetWebHookConfigurations(this InspireClient client)
         {
-            var request = client.CreateRequest("/api/Configuration/WebhookConfigurations");
+            var request = client.CreateRequest("/api/Configurations/WebhookConfigurations");
             return client.RequestContent<List<WebhookConfigurationModel>>(request);
         }
 
@@ -838,7 +827,7 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <returns>Returns a specific <see cref="WebhookConfigurationModel"/> from the application.</returns>
         public static WebhookConfigurationModel GetWebHookConfiguration(this InspireClient client, long webHookConfigurationId)
         {
-            var request = client.CreateRequest($"/api/Configuration/WebhookConfigurations/{webHookConfigurationId}");
+            var request = client.CreateRequest($"/api/Configurations/WebhookConfigurations/{webHookConfigurationId}");
             return client.RequestContent<WebhookConfigurationModel>(request);
         }
 
@@ -855,7 +844,7 @@ namespace Vasont.Inspire.SDK.Configuration
                 throw new ArgumentNullException(nameof(model));
             }
 
-            var request = client.CreateRequest($"/api/Configuration/WebhookConfigurations/{model.Name}", HttpMethod.Put);
+            var request = client.CreateRequest($"/api/Configurations/WebhookConfigurations/{model.Name}", HttpMethod.Put);
             return client.RequestContent<WebhookConfigurationModel, WebhookConfigurationModel>(request, model);
         }
 
@@ -872,7 +861,7 @@ namespace Vasont.Inspire.SDK.Configuration
                 throw new ArgumentNullException(nameof(model));
             }
 
-            var request = client.CreateRequest("/api/Configuration/WebhookConfigurations", HttpMethod.Post);
+            var request = client.CreateRequest("/api/Configurations/WebhookConfigurations", HttpMethod.Post);
             return client.RequestContent<WebhookConfigurationModel, WebhookConfigurationModel>(request, model);
         }
 
@@ -884,7 +873,79 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <returns>Returns the results of the action.</returns>
         public static bool RemoveWebHookConfiguration(this InspireClient client, string name)
         {
-            var request = client.CreateRequest($"/api/Configuration/WebhookConfigurations/{name}", HttpMethod.Delete);
+            var request = client.CreateRequest($"/api/Configurations/WebhookConfigurations/{name}", HttpMethod.Delete);
+            client.RequestContent(request);
+            return !client.HasError;
+        }
+        #endregion
+
+        #region Public Extension Blacklist Methods
+        /// <summary>
+        /// This method is used to retrieve a list of file extensions.
+        /// </summary>
+        /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
+        /// <returns>Returns a list of <see cref="FileExtensionModel"/> from the application.</returns>
+        public static List<FileExtensionModel> GetFileExtensions(this InspireClient client)
+        {
+            var request = client.CreateRequest("/api/Configurations/FileExtensions");
+            return client.RequestContent<List<FileExtensionModel>>(request);
+        }
+
+        /// <summary>
+        /// This method is used to retrieve a specific file extension configuration.
+        /// </summary>
+        /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
+        /// <param name="extensionId">Contains the record identity to retrieve.</param>
+        /// <returns>Returns a specific <see cref="FileExtensionModel"/> from the application.</returns>
+        public static FileExtensionModel GetFileExtension(this InspireClient client, long extensionId)
+        {
+            var request = client.CreateRequest($"/api/Configurations/FileExtensions/{extensionId}");
+            return client.RequestContent<FileExtensionModel>(request);
+        }
+
+        /// <summary>
+        /// This method is used to update an existing file extension.
+        /// </summary>
+        /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
+        /// <param name="model">Contains the model to update.</param>
+        /// <returns>Returns the updated <see cref="FileExtensionModel"/> model from the application.</returns>
+        public static FileExtensionModel UpdateFileExtension(this InspireClient client, FileExtensionModel model)
+        {
+            if (model == null)
+            {
+                throw new ArgumentNullException(nameof(model));
+            }
+
+            var request = client.CreateRequest($"/api/Configurations/FileExtensions/{model.FileExtensionId}", HttpMethod.Put);
+            return client.RequestContent<FileExtensionModel, FileExtensionModel>(request, model);
+        }
+
+        /// <summary>
+        /// This Method is used to create a new file extension blacklist configuration.
+        /// </summary>
+        /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
+        /// <param name="model">Contains the model to create.</param>
+        /// <returns>Returns a specific <see cref="FileExtensionModel"/> that was created.</returns>
+        public static FileExtensionModel CreateFileExtension(this InspireClient client, FileExtensionModel model)
+        {
+            if (model == null)
+            {
+                throw new ArgumentNullException(nameof(model));
+            }
+
+            var request = client.CreateRequest("/api/Configurations/FileExtensions", HttpMethod.Post);
+            return client.RequestContent<FileExtensionModel, FileExtensionModel>(request, model);
+        }
+
+        /// <summary>
+        /// This Method is used to remove a file extension configuration.
+        /// </summary>
+        /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
+        /// <param name="extensionId">Contains the identity of record to delete.</param>
+        /// <returns>Returns the results of the action.</returns>
+        public static bool RemoveFileExtension(this InspireClient client, long extensionId)
+        {
+            var request = client.CreateRequest($"/api/Configurations/FileExtensions/{extensionId}", HttpMethod.Delete);
             client.RequestContent(request);
             return !client.HasError;
         }
