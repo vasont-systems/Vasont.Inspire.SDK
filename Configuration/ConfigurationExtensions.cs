@@ -878,5 +878,77 @@ namespace Vasont.Inspire.SDK.Configuration
             return !client.HasError;
         }
         #endregion
+
+        #region Public Extension Blacklist Methods
+        /// <summary>
+        /// This method is used to retrieve a list of file extensions.
+        /// </summary>
+        /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
+        /// <returns>Returns a list of <see cref="FileExtensionModel"/> from the application.</returns>
+        public static List<FileExtensionModel> GetFileExtensions(this InspireClient client)
+        {
+            var request = client.CreateRequest("/api/Configurations/FileExtensions");
+            return client.RequestContent<List<FileExtensionModel>>(request);
+        }
+
+        /// <summary>
+        /// This method is used to retrieve a specific file extension configuration.
+        /// </summary>
+        /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
+        /// <param name="extensionId">Contains the record identity to retrieve.</param>
+        /// <returns>Returns a specific <see cref="FileExtensionModel"/> from the application.</returns>
+        public static FileExtensionModel GetFileExtension(this InspireClient client, long extensionId)
+        {
+            var request = client.CreateRequest($"/api/Configurations/FileExtensions/{extensionId}");
+            return client.RequestContent<FileExtensionModel>(request);
+        }
+
+        /// <summary>
+        /// This method is used to update an existing file extension.
+        /// </summary>
+        /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
+        /// <param name="model">Contains the model to update.</param>
+        /// <returns>Returns the updated <see cref="FileExtensionModel"/> model from the application.</returns>
+        public static FileExtensionModel UpdateFileExtension(this InspireClient client, FileExtensionModel model)
+        {
+            if (model == null)
+            {
+                throw new ArgumentNullException(nameof(model));
+            }
+
+            var request = client.CreateRequest($"/api/Configurations/FileExtensions/{model.FileExtensionId}", HttpMethod.Put);
+            return client.RequestContent<FileExtensionModel, FileExtensionModel>(request, model);
+        }
+
+        /// <summary>
+        /// This Method is used to create a new file extension blacklist configuration.
+        /// </summary>
+        /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
+        /// <param name="model">Contains the model to create.</param>
+        /// <returns>Returns a specific <see cref="FileExtensionModel"/> that was created.</returns>
+        public static FileExtensionModel CreateFileExtension(this InspireClient client, FileExtensionModel model)
+        {
+            if (model == null)
+            {
+                throw new ArgumentNullException(nameof(model));
+            }
+
+            var request = client.CreateRequest("/api/Configurations/FileExtensions", HttpMethod.Post);
+            return client.RequestContent<FileExtensionModel, FileExtensionModel>(request, model);
+        }
+
+        /// <summary>
+        /// This Method is used to remove a file extension configuration.
+        /// </summary>
+        /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
+        /// <param name="extensionId">Contains the identity of record to delete.</param>
+        /// <returns>Returns the results of the action.</returns>
+        public static bool RemoveFileExtension(this InspireClient client, long extensionId)
+        {
+            var request = client.CreateRequest($"/api/Configurations/FileExtensions/{extensionId}", HttpMethod.Delete);
+            client.RequestContent(request);
+            return !client.HasError;
+        }
+        #endregion
     }
 }

@@ -132,6 +132,7 @@ namespace Vasont.Inspire.SDK.Folders
         /// </summary>
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <param name="targetFolderId">Contains the folder identity.</param>
+        /// <param name="exportId">Contains the export identity value.</param>
         /// <param name="includeSubFolders">Contains a flag indicating whether to include subfolders or not.</param>
         /// <returns>Returns a <see cref="ExportRequestModel"/> object if found.</returns>
         public static ExportRequestModel ExportFolder(this InspireClient client, long targetFolderId, long exportId = 0, bool includeSubFolders = false)
