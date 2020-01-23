@@ -50,7 +50,7 @@ namespace Vasont.Inspire.SDK.Projects
         /// <returns>Returns a list of <see cref="ProjectModel"/> models.</returns>
         public static List<ProjectModel> GetRecentlyOpenedProjects(this InspireClient client, int maximumResults)
         {
-            var request = client.CreateRequest("/api/Projects/Recent");
+            var request = client.CreateRequest($"/api/Projects/Recent?maximumResults={maximumResults}");
             return client.RequestContent<List<ProjectModel>>(request);
         }
 
@@ -58,11 +58,10 @@ namespace Vasont.Inspire.SDK.Projects
         /// This method is used to return projects within the system where the given userId is a member.
         /// </summary>
         /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
-        /// <param name="maximumResults">A value indicating the maximum number of results to return</param>
         /// <returns>Returns a list of <see cref="ProjectModel"/> models.</returns>
-        public static List<ProjectModel> GetAssignedProjects(this InspireClient client, int maximumResults)
+        public static List<ProjectModel> GetAssignedProjects(this InspireClient client)
         {
-            var request = client.CreateRequest("/api/Projects/Assignments");
+            var request = client.CreateRequest($"/api/Projects/Assignments");
             return client.RequestContent<List<ProjectModel>>(request);
         }
 
@@ -343,6 +342,7 @@ namespace Vasont.Inspire.SDK.Projects
         /// <param name="projectId">Contains the identity of the project.</param>
         /// <param name="folderId">Contains the identity of the project folder.</param>
         /// <param name="includeSubFolders">Contains a value indicating whether components in descendant sub-folders should be exported.</param>
+        /// <param name="exportId">Contains the export identity.</param>
         /// <returns>The <see cref="ExportRequestModel"/> object with information about the export process.</returns>
         public static ExportRequestModel ExportComponents(this InspireClient client, long projectId, long folderId, bool includeSubFolders, long exportId = 0)
         {

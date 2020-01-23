@@ -5,11 +5,7 @@
 //-------------------------------------------------------------
 namespace Vasont.Inspire.SDK.Application
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Net.Http;
     using Vasont.Inspire.Models.Common;
-    using Vasont.Inspire.Models.Components;
 
     /// <summary>
     /// This class extends the <see cref="InspireClient"/> class to include methods for calling 

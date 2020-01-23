@@ -53,7 +53,7 @@ namespace Vasont.Inspire.SDK.Review
         }
 
         /// <summary>
-        /// This method is used to retrieve the component workflow templates.
+        /// This method is used to retrieve a reviews browse result.
         /// </summary>
         /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
         /// <param name="model">Contains the model for review browsing.</param>
@@ -62,6 +62,31 @@ namespace Vasont.Inspire.SDK.Review
         {
             var request = client.CreateRequest($"/api/Reviews/Browse", HttpMethod.Post);
             return client.RequestContent<ReviewBrowseQueryModel, ReviewBrowseResultModel>(request, model);
+        }
+        
+        /// <summary>
+        /// This method is used to retrieve a list of associated review components for the specified review.
+        /// </summary>
+        /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
+        /// <param name="reviewId">Contains the review identity.</param>
+        /// <returns>Returns a list of <see cref="ReviewComponentModel"/> objects.</returns>
+        public static List<ReviewComponentModel> GetReviewComponents(this InspireClient client, long reviewId)
+        {
+            var request = client.CreateRequest($"/api/Reviews/{reviewId}/Components", HttpMethod.Get);
+            return client.RequestContent<List<ReviewComponentModel>>(request);
+        }
+
+        /// <summary>
+        /// This method is used to retrieve a specific review component specified.
+        /// </summary>
+        /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
+        /// <param name="reviewId">Contains the review identity.</param>
+        /// <param name="reviewComponentId">Contains the review component identity to retrieve.</param>
+        /// <returns>Returns the review component <see cref="ReviewComponentModel"/> object.</returns>
+        public static ReviewComponentModel GetReviewComponent(this InspireClient client, long reviewId, long reviewComponentId)
+        {
+            var request = client.CreateRequest($"/api/Reviews/{reviewId}/Components/{reviewComponentId}", HttpMethod.Get);
+            return client.RequestContent<ReviewComponentModel>(request);
         }
 
         /// <summary>
