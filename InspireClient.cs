@@ -522,7 +522,6 @@ namespace Vasont.Inspire.SDK
         /// <summary>
         /// Verifies the token that was passed into the client against the token introspection endpoint.
         /// </summary>
-        /// <param name="token">The token to verify.</param>
         /// <param name="cancellationToken">A cancellation token.</param>
         /// <returns>Returns a value indicating whether the token is active and valid.</returns>
         protected async Task<bool> VerifyAccessTokenAsync(CancellationToken cancellationToken)
