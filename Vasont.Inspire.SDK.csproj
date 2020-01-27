@@ -1,23 +1,67 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup Label="MultilingualAppToolkit">
+    <MultilingualAppToolkitVersion>4.0</MultilingualAppToolkitVersion>
+    <MultilingualFallbackLanguage>en</MultilingualFallbackLanguage>
+    <TranslationReport Condition="'$(Configuration)' == 'Release'">true</TranslationReport>
+    <SuppressPseudoWarning Condition="'$(Configuration)' == 'Debug'">true</SuppressPseudoWarning>
+  </PropertyGroup>
   <PropertyGroup>
     <TargetFrameworks>netstandard2.1</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.6.0</Version>
-    <Authors>Vasont Systems</Authors>
+    <Version>1.6.1</Version>
+    <Authors>GlobalLink Vasont</Authors>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <RepositoryUrl>https://github.com/vasont-systems/Vasont.Inspire.SDK</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>CCMS</PackageTags>
-    <PackageReleaseNotes>Updated Core nuget packages.
-Dropping support for .NET standard 2.0 and 4.6.1. This is .NET Core 2.2 which is already flagged as deprecated. Support for LTS will be our only standard from here on out. Since .NET 5 is a unified framework to Core, we're only supporting .NET Core Standard from now on. Please update to a .NET Core framework development cycle.</PackageReleaseNotes>
+    <PackageReleaseNotes>Updated to include support for Vasont Identity Server Delegation credentials method. This method will allow this SDK client to delegate access to another API for a specific user authenticated client. This allows an API to communicate with another API with delegated credentials without having to grant scope to the originating client.
+
+Additionally added some resource strings and machine translated languages.</PackageReleaseNotes>
     <PackageProjectUrl>https://dev.vasont.com/</PackageProjectUrl>
     <Description>Contains the Vasont Inspire SDK Client for integrating with Vasont Inspire CCMS REST Web API.</Description>
+    <NeutralLanguage>en</NeutralLanguage>
+    <Company>GlobalLink Vasont</Company>
   </PropertyGroup>
-
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.ResxResources.targets" Label="MultilingualAppToolkit" Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\v$(MultilingualAppToolkitVersion)\Microsoft.Multilingual.ResxResources.targets')" />
+  <Target Name="MATPrerequisite" BeforeTargets="PrepareForBuild" Condition="!Exists('$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.ResxResources.targets')" Label="MultilingualAppToolkit">
+    <Warning Text="$(MSBuildProjectFile) is Multilingual build enabled, but the Multilingual App Toolkit is unavailable during the build. If building with Visual Studio, please check to ensure that toolkit is properly installed." />
+  </Target>
+  <ItemGroup>
+    <None Remove="MultilingualResources\Vasont.Inspire.SDK.de.xlf" />
+    <None Remove="MultilingualResources\Vasont.Inspire.SDK.es.xlf" />
+    <None Remove="MultilingualResources\Vasont.Inspire.SDK.fr.xlf" />
+    <None Remove="MultilingualResources\Vasont.Inspire.SDK.hi.xlf" />
+    <None Remove="MultilingualResources\Vasont.Inspire.SDK.ja.xlf" />
+    <None Remove="MultilingualResources\Vasont.Inspire.SDK.ko.xlf" />
+    <None Remove="MultilingualResources\Vasont.Inspire.SDK.ru.xlf" />
+    <None Remove="MultilingualResources\Vasont.Inspire.SDK.zh-Hans.xlf" />
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="IdentityModel" Version="4.1.1" />
     <PackageReference Include="Vasont.Inspire.Models" Version="1.1.8" />
   </ItemGroup>
-
+  <ItemGroup>
+    <XliffResource Include="MultilingualResources\Vasont.Inspire.SDK.de.xlf" />
+    <XliffResource Include="MultilingualResources\Vasont.Inspire.SDK.es.xlf" />
+    <XliffResource Include="MultilingualResources\Vasont.Inspire.SDK.fr.xlf" />
+    <XliffResource Include="MultilingualResources\Vasont.Inspire.SDK.hi.xlf" />
+    <XliffResource Include="MultilingualResources\Vasont.Inspire.SDK.ja.xlf" />
+    <XliffResource Include="MultilingualResources\Vasont.Inspire.SDK.ko.xlf" />
+    <XliffResource Include="MultilingualResources\Vasont.Inspire.SDK.ru.xlf" />
+    <XliffResource Include="MultilingualResources\Vasont.Inspire.SDK.zh-Hans.xlf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
 </Project>

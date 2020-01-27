@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AccessMethodRequiresTokenErrorText" xml:space="preserve">
+    <value>निर्दिष्ट पहुंच विधि के लिए विन्यास में एक एक्सेस टोकन निर्दिष्ट करने की आवश्यकता होती है।</value>
+  </data>
+  <data name="IntrospectionConfigNeededErrorText" xml:space="preserve">
+    <value>क्लाइंट एक्सेस टोकन एक्सेस को सत्यापित करने के लिए एक आत्मनिरीक्षण एंडपॉइंट निर्दिष्ट किया जाना चाहिए। या तो खोज सक्षम करें या विन्यास में एक आत्मनिरीक्षण अंतिम बिंदु निर्दिष्ट करें।</value>
+  </data>
+  <data name="InvalidRequestTypeErrorText" xml:space="preserve">
+    <value>अनुरोध विधि पोस्ट, पुट या डिलीट होनी चाहिए</value>
+  </data>
+  <data name="TokenIntrospectionInvalidErrorText" xml:space="preserve">
+    <value>निर्दिष्ट एक्सेस टोकन मान्य नहीं था।</value>
+  </data>
+</root>
