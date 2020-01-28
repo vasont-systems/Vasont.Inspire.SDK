@@ -80,11 +80,10 @@ namespace Vasont.Inspire.SDK
         /// <param name="userId">Contains the user id used for password authentication method.</param>
         /// <param name="password">Contains the user password used for password authentication method.</param>
         /// <param name="useDiscovery">Contains a value indicating whether the authority discovery endpoint will be used for token endpoint lookup.</param>
-        /// <param name="token">Contains an optional access token passed from the client software to be used in communication with the backchannel created within the SDK library.</param>
-        /// <param name="introspectionEndpoint">Contains an optional Identity Server token introspection endpoint.</param>
+        /// <param name="delegatedAccessToken">Contains an optional access token passed from the client software to be used in communication with the backchannel created within the SDK library.</param>
         public InspireClientConfiguration(string clientId, ClientAuthenticationMethods clientAuthenticationMethod,
-            string authorityUri, string resourceUri, string clientSecret = "", string userId = "", string password = "", bool useDiscovery = true, string token = "", string introspectionEndpoint = null)
-            : this(clientId, clientAuthenticationMethod, new Uri(authorityUri), new Uri(resourceUri), clientSecret, userId, password, useDiscovery, token, introspectionEndpoint != null ? new Uri(introspectionEndpoint) : null)
+            string authorityUri, string resourceUri, string clientSecret = "", string userId = "", string password = "", bool useDiscovery = true, string delegatedAccessToken = "")
+            : this(clientId, clientAuthenticationMethod, new Uri(authorityUri), new Uri(resourceUri), clientSecret, userId, password, useDiscovery, delegatedAccessToken)
         {
         }
 
@@ -99,10 +98,9 @@ namespace Vasont.Inspire.SDK
         /// <param name="userId">Contains the user id used for password authentication method.</param>
         /// <param name="password">Contains the user password used for password authentication method.</param>
         /// <param name="useDiscovery">Contains a value indicating whether the authority discovery endpoint will be used for token endpoint lookup.</param>
-        /// <param name="token">Contains an optional access token passed from the client software to be used in communication with the backchannel created within the SDK library.</param>
-        /// <param name="introspectionEndpoint">Contains an optional Identity Server token introspection endpoint.</param>
+        /// <param name="delegatedAccessToken">Contains an optional access token passed from the client software to be used in communication with the backchannel created within the SDK library.</param>
         public InspireClientConfiguration(string clientId, ClientAuthenticationMethods clientAuthenticationMethod,
-            Uri authorityUri, Uri resourceUri, string clientSecret = "", string userId = "", string password = "", bool useDiscovery = true, string token = "", Uri introspectionEndpoint = null)
+            Uri authorityUri, Uri resourceUri, string clientSecret = "", string userId = "", string password = "", bool useDiscovery = true, string delegatedAccessToken = "")
         {
             this.ClientId = clientId;
             this.AuthenticationMethod = clientAuthenticationMethod;
@@ -113,8 +111,7 @@ namespace Vasont.Inspire.SDK
             this.Password = password;
             this.UseDiscovery = useDiscovery;
             this.TargetResourceScopes = new[] { DefaultTargetResourceScope };
-            this.ClientAccessToken = token;
-            this.IntrospectionEndpoint = introspectionEndpoint;
+            this.DelegatedAccessToken = delegatedAccessToken;
         }
 
         #endregion Public Constructors
@@ -172,15 +169,7 @@ namespace Vasont.Inspire.SDK
         /// <value>
         /// The client access token.
         /// </value>
-        public string ClientAccessToken { get; set; }
-
-        /// <summary>
-        /// Gets or sets the introspection endpoint.
-        /// </summary>
-        /// <value>
-        /// The introspection endpoint.
-        /// </value>
-        public Uri IntrospectionEndpoint { get; set; }
+        public string DelegatedAccessToken { get; set; }
 
         #endregion Public Properties
     }

@@ -37,11 +37,6 @@ namespace Vasont.Inspire.SDK
         #region Private Fields
 
         /// <summary>
-        /// Contains the access token string.
-        /// </summary>
-        private readonly string internalAccessToken;
-
-        /// <summary>
         /// Contains the calculated default token endpoint.
         /// </summary>
         private readonly string defaultTokenEndpoint;
@@ -56,11 +51,6 @@ namespace Vasont.Inspire.SDK
         /// </summary>
         private DiscoveryDocumentResponse discovery;
 
-        /// <summary>
-        /// Contains a value indicating whether the access token was verified
-        /// </summary>
-        private bool tokenVerified;
-
         #endregion Private Fields
 
         #region Public Constructors
@@ -73,7 +63,6 @@ namespace Vasont.Inspire.SDK
         {
             this.Config = config;
             this.defaultTokenEndpoint = new Uri(this.Config.AuthorityUri, "/connect/token").ToString();
-            this.internalAccessToken = config.ClientAccessToken;
         }
 
         #endregion Public Constructors
@@ -120,7 +109,7 @@ namespace Vasont.Inspire.SDK
         /// <value>
         /// The access token.
         /// </value>
-        protected string AccessToken => this.TokenResponse?.AccessToken ?? this.internalAccessToken;
+        protected string AccessToken => this.TokenResponse?.AccessToken ?? string.Empty;
 
         /// <summary>
         /// Gets the token endpoint for the identity authority.
@@ -153,15 +142,9 @@ namespace Vasont.Inspire.SDK
             bool authenticationSuccessful;
             string requestScopes = scopes + (!string.IsNullOrWhiteSpace(scopes) ? " " : string.Empty) + string.Join(" ", this.Config.TargetResourceScopes);
 
-            if (this.Config.AuthenticationMethod == ClientAuthenticationMethods.Delegation && string.IsNullOrWhiteSpace(this.Config.ClientAccessToken))
+            if (this.Config.AuthenticationMethod == ClientAuthenticationMethods.Delegation && string.IsNullOrWhiteSpace(this.Config.DelegatedAccessToken))
             {
                 throw new InspireClientException(this.Config, Resources.AccessMethodRequiresTokenErrorText);
-            }
-
-            // if we're using predefined token, we must use discovery if no introspection endpoint was specified.
-            if (!string.IsNullOrWhiteSpace(this.Config.ClientAccessToken) && this.Config.IntrospectionEndpoint == null && !this.Config.UseDiscovery)
-            {
-                throw new InspireClientException(this.Config, Resources.IntrospectionConfigNeededErrorText);
             }
 
             // if we're using discovery and need to call it...
@@ -179,15 +162,7 @@ namespace Vasont.Inspire.SDK
             switch (this.Config.AuthenticationMethod)
             {
                 case ClientAuthenticationMethods.Delegation:
-                    // verify the token passed
-                    this.tokenVerified = await this.VerifyAccessTokenAsync(cancellationToken).ConfigureAwait(false);
-
-                    // the token specified was valid...
-                    if (this.tokenVerified)
-                    {
-                        this.TokenResponse = await this.RequestDelegationAsync(requestScopes, cancellationToken).ConfigureAwait(false);
-                    }
-
+                    this.TokenResponse = await this.RequestDelegationAsync(requestScopes, this.Config.DelegatedAccessToken, cancellationToken).ConfigureAwait(false);
                     break;
 
                 case ClientAuthenticationMethods.ClientCredentials:
@@ -520,35 +495,13 @@ namespace Vasont.Inspire.SDK
         }
 
         /// <summary>
-        /// Verifies the token that was passed into the client against the token introspection endpoint.
-        /// </summary>
-        /// <param name="cancellationToken">A cancellation token.</param>
-        /// <returns>Returns a value indicating whether the token is active and valid.</returns>
-        protected async Task<bool> VerifyAccessTokenAsync(CancellationToken cancellationToken)
-        {
-            TokenIntrospectionResponse response;
-
-            using (HttpClient client = new HttpClient())
-            {
-                response = await client.IntrospectTokenAsync(new TokenIntrospectionRequest
-                {
-                    Address = this.discovery.IntrospectionEndpoint,
-                    Token = this.AccessToken,
-                    ClientId = this.Config.ClientId,
-                    ClientSecret = this.Config.ClientSecret
-                }, cancellationToken);
-            }
-
-            return response != null && response.IsActive;
-        }
-
-        /// <summary>
         /// This method is used to request a delegation token from the identity server that supports the custom grant type of "delegation".
         /// </summary>
         /// <param name="scopes">The scopes.</param>
+        /// <param name="delegatedAccessToken">Contains the delegated access token.</param>
         /// <param name="cancellationToken">The cancellation token.</param>
         /// <returns>Returns a new token response from the request.</returns>
-        protected async Task<TokenResponse> RequestDelegationAsync(string scopes, CancellationToken cancellationToken)
+        protected async Task<TokenResponse> RequestDelegationAsync(string scopes, string delegatedAccessToken, CancellationToken cancellationToken)
         {
             TokenResponse result;
 
@@ -563,7 +516,7 @@ namespace Vasont.Inspire.SDK
                     Parameters =
                     {
                         { "scope", scopes },
-                        { "token", this.Config.ClientAccessToken }
+                        { "token", delegatedAccessToken }
                     }
                 }, cancellationToken)
                     .ConfigureAwait(false);
