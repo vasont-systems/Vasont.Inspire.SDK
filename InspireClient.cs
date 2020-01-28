@@ -153,7 +153,7 @@ namespace Vasont.Inspire.SDK
             bool authenticationSuccessful;
             string requestScopes = scopes + (!string.IsNullOrWhiteSpace(scopes) ? " " : string.Empty) + string.Join(" ", this.Config.TargetResourceScopes);
 
-            if (this.Config.AuthenticationMethod == ClientAuthenticationMethods.Delegation && !string.IsNullOrWhiteSpace(this.Config.ClientAccessToken))
+            if (this.Config.AuthenticationMethod == ClientAuthenticationMethods.Delegation && string.IsNullOrWhiteSpace(this.Config.ClientAccessToken))
             {
                 throw new InspireClientException(this.Config, Resources.AccessMethodRequiresTokenErrorText);
             }

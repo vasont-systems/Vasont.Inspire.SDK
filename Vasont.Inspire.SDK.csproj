@@ -9,15 +9,13 @@
   <PropertyGroup>
     <TargetFrameworks>netstandard2.1</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.6.1</Version>
+    <Version>1.6.2</Version>
     <Authors>GlobalLink Vasont</Authors>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <RepositoryUrl>https://github.com/vasont-systems/Vasont.Inspire.SDK</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>CCMS</PackageTags>
-    <PackageReleaseNotes>Updated to include support for Vasont Identity Server Delegation credentials method. This method will allow this SDK client to delegate access to another API for a specific user authenticated client. This allows an API to communicate with another API with delegated credentials without having to grant scope to the originating client.
-
-Additionally added some resource strings and machine translated languages.</PackageReleaseNotes>
+    <PackageReleaseNotes>fixed bug in Authenticate regarding delegation token check.</PackageReleaseNotes>
     <PackageProjectUrl>https://dev.vasont.com/</PackageProjectUrl>
     <Description>Contains the Vasont Inspire SDK Client for integrating with Vasont Inspire CCMS REST Web API.</Description>
     <NeutralLanguage>en</NeutralLanguage>
