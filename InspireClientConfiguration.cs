@@ -6,7 +6,7 @@
 namespace Vasont.Inspire.SDK
 {
     using System;
-    
+
     /// <summary>
     /// Contains an enumerated list of SDK client authentication methods.
     /// </summary>
@@ -23,7 +23,12 @@ namespace Vasont.Inspire.SDK
         /// <remarks>
         /// The spec recommends using the resource owner password grant only for "trusted" (or legacy) applications.
         /// </remarks>
-        ResourceOwnerPassword
+        ResourceOwnerPassword,
+
+        /// <summary>
+        /// This method shall allow a client token to be exchanged for another from the authority for client delegation with another API.
+        /// </summary>
+        Delegation
     }
 
     /// <summary>
@@ -32,25 +37,30 @@ namespace Vasont.Inspire.SDK
     public class InspireClientConfiguration
     {
         #region Constants
+
         /// <summary>
         /// Contains the default inspire SDK client id.
         /// </summary>
         public const string DefaultClientId = "inspiresdk";
 
 #pragma warning disable S1075 // URIs should not be hardcoded
+
         /// <summary>
         /// Contains the default authority URL.
         /// </summary>
         public const string DefaultAuthorityUrl = "https://identity.vasont.com/"; // NOSONAR
+
 #pragma warning restore S1075 // URIs should not be hardcoded
 
         /// <summary>
         /// Contains the default inspire resource scope name.
         /// </summary>
         public const string DefaultTargetResourceScope = "inspireapi";
-        #endregion
+
+        #endregion Constants
 
         #region Public Constructors
+
         /// <summary>
         /// Initializes a new instance of the <see cref="InspireClientConfiguration"/> class.
         /// </summary>
@@ -70,9 +80,10 @@ namespace Vasont.Inspire.SDK
         /// <param name="userId">Contains the user id used for password authentication method.</param>
         /// <param name="password">Contains the user password used for password authentication method.</param>
         /// <param name="useDiscovery">Contains a value indicating whether the authority discovery endpoint will be used for token endpoint lookup.</param>
+        /// <param name="delegatedAccessToken">Contains an optional access token passed from the client software to be used in communication with the backchannel created within the SDK library.</param>
         public InspireClientConfiguration(string clientId, ClientAuthenticationMethods clientAuthenticationMethod,
-            string authorityUri, string resourceUri, string clientSecret = "", string userId = "", string password = "", bool useDiscovery = true)
-            : this(clientId, clientAuthenticationMethod, new Uri(authorityUri), new Uri(resourceUri), clientSecret, userId, password, useDiscovery)
+            string authorityUri, string resourceUri, string clientSecret = "", string userId = "", string password = "", bool useDiscovery = true, string delegatedAccessToken = "")
+            : this(clientId, clientAuthenticationMethod, new Uri(authorityUri), new Uri(resourceUri), clientSecret, userId, password, useDiscovery, delegatedAccessToken)
         {
         }
 
@@ -87,8 +98,9 @@ namespace Vasont.Inspire.SDK
         /// <param name="userId">Contains the user id used for password authentication method.</param>
         /// <param name="password">Contains the user password used for password authentication method.</param>
         /// <param name="useDiscovery">Contains a value indicating whether the authority discovery endpoint will be used for token endpoint lookup.</param>
+        /// <param name="delegatedAccessToken">Contains an optional access token passed from the client software to be used in communication with the backchannel created within the SDK library.</param>
         public InspireClientConfiguration(string clientId, ClientAuthenticationMethods clientAuthenticationMethod,
-            Uri authorityUri, Uri resourceUri, string clientSecret = "", string userId = "", string password = "", bool useDiscovery = true)
+            Uri authorityUri, Uri resourceUri, string clientSecret = "", string userId = "", string password = "", bool useDiscovery = true, string delegatedAccessToken = "")
         {
             this.ClientId = clientId;
             this.AuthenticationMethod = clientAuthenticationMethod;
@@ -99,10 +111,13 @@ namespace Vasont.Inspire.SDK
             this.Password = password;
             this.UseDiscovery = useDiscovery;
             this.TargetResourceScopes = new[] { DefaultTargetResourceScope };
+            this.DelegatedAccessToken = delegatedAccessToken;
         }
-        #endregion
+
+        #endregion Public Constructors
 
         #region Public Properties
+
         /// <summary>
         /// Gets or sets the SDK client identity.
         /// </summary>
@@ -147,6 +162,15 @@ namespace Vasont.Inspire.SDK
         /// Gets or sets the password used for password client authentication.
         /// </summary>
         public string Password { get; set; }
-        #endregion
+
+        /// <summary>
+        /// Gets or sets the client access token.
+        /// </summary>
+        /// <value>
+        /// The client access token.
+        /// </value>
+        public string DelegatedAccessToken { get; set; }
+
+        #endregion Public Properties
     }
 }

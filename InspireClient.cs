@@ -18,13 +18,24 @@ namespace Vasont.Inspire.SDK
     using IdentityModel.Client;
     using Models.Common;
     using Newtonsoft.Json;
+    using Vasont.Inspire.SDK.Properties;
 
     /// <summary>
     /// This class is the primary client from which interaction to the Inspire Web API shall be made.
     /// </summary>
     public class InspireClient : IDisposable
     {
+        #region Private Constants
+
+        /// <summary>
+        /// The delegation grant type name
+        /// </summary>
+        private const string DelegationGrantTypeName = "delegation";
+
+        #endregion Private Constants
+
         #region Private Fields
+
         /// <summary>
         /// Contains the calculated default token endpoint.
         /// </summary>
@@ -39,9 +50,11 @@ namespace Vasont.Inspire.SDK
         /// Contains a discovery result from the authority.
         /// </summary>
         private DiscoveryDocumentResponse discovery;
-        #endregion
+
+        #endregion Private Fields
 
         #region Public Constructors
+
         /// <summary>
         /// Initializes a new instance of the <see cref="InspireClient"/> class.
         /// </summary>
@@ -51,19 +64,21 @@ namespace Vasont.Inspire.SDK
             this.Config = config;
             this.defaultTokenEndpoint = new Uri(this.Config.AuthorityUri, "/connect/token").ToString();
         }
-        #endregion
+
+        #endregion Public Constructors
 
         #region Public Properties
+
         /// <summary>
         /// Gets the inspire client configuration.
         /// </summary>
         public InspireClientConfiguration Config { get; }
-        
+
         /// <summary>
         /// Gets a value indicating whether the client has authenticated with the server at some point
         /// </summary>
         public bool HasAuthenticated => this.TokenResponse != null && !this.TokenResponse.IsError;
-        
+
         /// <summary>
         /// Gets a value indicating whether the client has an error.
         /// </summary>
@@ -78,19 +93,30 @@ namespace Vasont.Inspire.SDK
         /// Gets the last exception handled within the client.
         /// </summary>
         public Exception LastException { get; private set; }
-        #endregion
+
+        #endregion Public Properties
 
         #region Protected Properties
+
         /// <summary>
         /// Gets or sets the client authentication token response.
         /// </summary>
         protected TokenResponse TokenResponse { get; set; }
 
         /// <summary>
+        /// Gets the access token.
+        /// </summary>
+        /// <value>
+        /// The access token.
+        /// </value>
+        protected string AccessToken => this.TokenResponse?.AccessToken ?? string.Empty;
+
+        /// <summary>
         /// Gets the token endpoint for the identity authority.
         /// </summary>
         protected string TokenEndpoint => this.Config.UseDiscovery && this.discovery != null ? this.discovery.TokenEndpoint : this.defaultTokenEndpoint;
-        #endregion
+
+        #endregion Protected Properties
 
         #region Public Methods
 
@@ -113,7 +139,13 @@ namespace Vasont.Inspire.SDK
         /// <exception cref="InspireClientException">The exception is thrown if an issue occurs during discovery or client authentication.</exception>
         public async Task<bool> AuthenticateAsync(string scopes = "", CancellationToken cancellationToken = default(CancellationToken))
         {
+            bool authenticationSuccessful;
             string requestScopes = scopes + (!string.IsNullOrWhiteSpace(scopes) ? " " : string.Empty) + string.Join(" ", this.Config.TargetResourceScopes);
+
+            if (this.Config.AuthenticationMethod == ClientAuthenticationMethods.Delegation && string.IsNullOrWhiteSpace(this.Config.DelegatedAccessToken))
+            {
+                throw new InspireClientException(this.Config, Resources.AccessMethodRequiresTokenErrorText);
+            }
 
             // if we're using discovery and need to call it...
             if (this.discovery == null && this.Config.UseDiscovery)
@@ -129,29 +161,37 @@ namespace Vasont.Inspire.SDK
 
             switch (this.Config.AuthenticationMethod)
             {
+                case ClientAuthenticationMethods.Delegation:
+                    this.TokenResponse = await this.RequestDelegationAsync(requestScopes, this.Config.DelegatedAccessToken, cancellationToken).ConfigureAwait(false);
+                    break;
+
                 case ClientAuthenticationMethods.ClientCredentials:
                     this.TokenResponse = await this.RequestClientCredentialsAsync(requestScopes, cancellationToken).ConfigureAwait(false);
                     break;
+
                 case ClientAuthenticationMethods.ResourceOwnerPassword:
                     this.TokenResponse = await this.RequestResourceOwnerPasswordAsync(this.Config.UserId, this.Config.Password, requestScopes, cancellationToken).ConfigureAwait(false);
                     break;
             }
 
+            authenticationSuccessful = this.TokenResponse != null && !this.TokenResponse.IsError;
+
             // an error occurred...
-            if (this.TokenResponse.IsError)
+            if (!authenticationSuccessful)
             {
+                string errorMessage = this.TokenResponse.Error + Environment.NewLine + this.TokenResponse.ErrorDescription;
                 this.LastErrorResponse = new ErrorResponseModel();
-                this.LastErrorResponse.Messages.Add(new ErrorModel 
+                this.LastErrorResponse.Messages.Add(new ErrorModel
                 {
-                    Message = this.TokenResponse.Error,
+                    Message = errorMessage,
                     EventDate = DateTime.UtcNow
                 });
 
                 // bubble up an error response.
-                throw new InspireClientException(this.Config, this.TokenResponse.Error + Environment.NewLine + this.TokenResponse.ErrorDescription);
+                throw new InspireClientException(this.Config, errorMessage);
             }
 
-            return !this.TokenResponse.IsError;
+            return authenticationSuccessful;
         }
 
         /// <summary>
@@ -203,7 +243,7 @@ namespace Vasont.Inspire.SDK
             request.UserAgent = "Inspire SDK Client";
             request.Accept = "application/json";
             request.ContentType = contentType;
-            
+
             // Set a cache policy level for the "http:" and "https" schemes.
             if (noCache)
             {
@@ -212,7 +252,7 @@ namespace Vasont.Inspire.SDK
 
             if (this.HasAuthenticated)
             {
-                request.Headers.Add("Authorization", "Bearer " + this.TokenResponse.AccessToken);
+                request.Headers.Add("Authorization", "Bearer " + this.AccessToken);
             }
 
             return request;
@@ -266,9 +306,9 @@ namespace Vasont.Inspire.SDK
             // check to ensure we're not trying to post data on a GET or other non-body request.
             if (request.Method != HttpMethod.Post.Method && request.Method != HttpMethod.Put.Method && request.Method != HttpMethod.Delete.Method)
             {
-                throw new HttpRequestException("Request method must be POST, PUT, or DELETE");
+                throw new HttpRequestException(Resources.InvalidRequestTypeErrorText);
             }
-            
+
             byte[] requestData = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(requestBodyModel));
 
             // write data out to the request stream
@@ -359,6 +399,7 @@ namespace Vasont.Inspire.SDK
         }
 
         #region IDispose Methods
+
         /// <summary>
         /// This method is called upon disposal of the client class.
         /// </summary>
@@ -367,9 +408,11 @@ namespace Vasont.Inspire.SDK
             this.Dispose(true);
             GC.SuppressFinalize(this);
         }
-        #endregion
+
+        #endregion IDispose Methods
 
         #region Protected Methods
+
         /// <summary>
         /// This method is called upon disposal of the client class.
         /// </summary>
@@ -396,10 +439,13 @@ namespace Vasont.Inspire.SDK
             this.LastErrorResponse = null;
             this.LastException = null;
         }
-        #endregion
-        #endregion
+
+        #endregion Protected Methods
+
+        #endregion Public Methods
 
         #region Protected Methods
+
         /// <summary>
         /// This method is used to contact an authority discovery endpoint for information for interacting with the authority.
         /// </summary>
@@ -449,6 +495,37 @@ namespace Vasont.Inspire.SDK
         }
 
         /// <summary>
+        /// This method is used to request a delegation token from the identity server that supports the custom grant type of "delegation".
+        /// </summary>
+        /// <param name="scopes">The scopes.</param>
+        /// <param name="delegatedAccessToken">Contains the delegated access token.</param>
+        /// <param name="cancellationToken">The cancellation token.</param>
+        /// <returns>Returns a new token response from the request.</returns>
+        protected async Task<TokenResponse> RequestDelegationAsync(string scopes, string delegatedAccessToken, CancellationToken cancellationToken)
+        {
+            TokenResponse result;
+
+            using (HttpClient client = new HttpClient())
+            {
+                result = await client.RequestTokenAsync(new TokenRequest
+                {
+                    Address = this.TokenEndpoint,
+                    GrantType = DelegationGrantTypeName,
+                    ClientId = this.Config.ClientId, // this would be the ID of the API1 client
+                    ClientSecret = this.Config.ClientSecret,
+                    Parameters =
+                    {
+                        { "scope", scopes },
+                        { "token", delegatedAccessToken }
+                    }
+                }, cancellationToken)
+                    .ConfigureAwait(false);
+            }
+
+            return result;
+        }
+
+        /// <summary>
         /// Request the resource owner credentials.
         /// </summary>
         /// <param name="userName">Contains the user name.</param>
@@ -478,9 +555,11 @@ namespace Vasont.Inspire.SDK
 
             return result;
         }
-        #endregion
+
+        #endregion Protected Methods
 
         #region Private Methods
+
         /// <summary>
         /// This method is used to reset session-related fields.
         /// </summary>
@@ -489,6 +568,7 @@ namespace Vasont.Inspire.SDK
             this.ResetErrors();
             this.TokenResponse = null;
         }
-        #endregion
+
+        #endregion Private Methods
     }
 }
