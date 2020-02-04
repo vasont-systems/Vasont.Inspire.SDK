@@ -7,15 +7,15 @@
     <SuppressPseudoWarning Condition="'$(Configuration)' == 'Debug'">true</SuppressPseudoWarning>
   </PropertyGroup>
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.1</TargetFrameworks>
+    <TargetFrameworks>net461;net48;netstandard2.1</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.6.3</Version>
+    <Version>1.6.4</Version>
     <Authors>GlobalLink Vasont</Authors>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <RepositoryUrl>https://github.com/vasont-systems/Vasont.Inspire.SDK</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>CCMS</PackageTags>
-    <PackageReleaseNotes>fixed bug in Authenticate regarding delegation token check.</PackageReleaseNotes>
+    <PackageReleaseNotes>Adding support back in for older frameworks to support Kairos PD until it can be refactored into Inspire.</PackageReleaseNotes>
     <PackageProjectUrl>https://dev.vasont.com/</PackageProjectUrl>
     <Description>Contains the Vasont Inspire SDK Client for integrating with Vasont Inspire CCMS REST Web API.</Description>
     <NeutralLanguage>en</NeutralLanguage>
@@ -37,7 +37,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="IdentityModel" Version="4.1.1" />
-    <PackageReference Include="Vasont.Inspire.Models" Version="1.1.8" />
+    <PackageReference Include="Vasont.Inspire.Models" Version="1.1.9" />
   </ItemGroup>
   <ItemGroup>
     <XliffResource Include="MultilingualResources\Vasont.Inspire.SDK.de.xlf" />
