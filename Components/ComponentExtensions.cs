@@ -18,12 +18,13 @@ namespace Vasont.Inspire.SDK.Components
     using Vasont.Inspire.SDK.Extensions;
 
     /// <summary>
-    /// This class extends the <see cref="InspireClient"/> class to include methods for calling 
+    /// This class extends the <see cref="InspireClient"/> class to include methods for calling
     /// component API endpoints.
     /// </summary>
     public static class ComponentExtensions
     {
         #region TODO: Review location: Component Type Methods
+
         /// <summary>
         /// This method is used to retrieve and return minimal models for component types.
         /// </summary>
@@ -34,7 +35,8 @@ namespace Vasont.Inspire.SDK.Components
             var request = client.CreateRequest("/api/ComponentTypes");
             return client.RequestContent<List<MinimalComponentTypeModel>>(request);
         }
-        #endregion
+
+        #endregion TODO: Review location: Component Type Methods
 
         #region Public Component Extension Methods
 
@@ -177,24 +179,6 @@ namespace Vasont.Inspire.SDK.Components
         }
 
         /// <summary>
-        /// This method is used to update permissions for a single component.
-        /// </summary>
-        /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
-        /// <param name="componentId">Contains the component identity.</param>
-        /// <param name="inputModel">Contains the <see cref="PermissionUpdateModel"/> input.</param>
-        /// <returns>Returns the updated <see cref="PermissionUpdateModel"/> object.</returns>
-        public static PermissionUpdateModel UpdateComponentPermissions(this InspireClient client, long componentId, PermissionUpdateModel inputModel)
-        {
-            if (inputModel == null)
-            {
-                throw new ArgumentNullException(nameof(inputModel));
-            }
-
-            var request = client.CreateRequest($"/api/Components/{componentId}/Permissions", HttpMethod.Put);
-            return client.RequestContent<PermissionUpdateModel, PermissionUpdateModel>(request, inputModel);
-        }
-
-        /// <summary>
         /// This method is used to create a new component from a template, and return details about the newly created component.
         /// </summary>
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
@@ -295,6 +279,24 @@ namespace Vasont.Inspire.SDK.Components
             }
 
             var request = client.CreateRequest("/api/Components/Permissions", HttpMethod.Put);
+            return client.RequestContent<PermissionUpdateModel, PermissionUpdateModel>(request, inputModel);
+        }
+
+        /// <summary>
+        /// This method is used to update permissions for a single component.
+        /// </summary>
+        /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
+        /// <param name="componentId">Contains the component identity.</param>
+        /// <param name="inputModel">Contains the <see cref="PermissionUpdateModel"/> input.</param>
+        /// <returns>Returns the updated <see cref="PermissionUpdateModel"/> object.</returns>
+        public static PermissionUpdateModel UpdateComponentPermissions(this InspireClient client, long componentId, PermissionUpdateModel inputModel)
+        {
+            if (inputModel == null)
+            {
+                throw new ArgumentNullException(nameof(inputModel));
+            }
+
+            var request = client.CreateRequest($"/api/Components/{componentId}/Permissions", HttpMethod.Put);
             return client.RequestContent<PermissionUpdateModel, PermissionUpdateModel>(request, inputModel);
         }
 
@@ -542,7 +544,7 @@ namespace Vasont.Inspire.SDK.Components
             return client.RequestContent<MinimalWorkerStateModel<MinimalExportStateModel>>(request);
         }
 
-        #endregion
+        #endregion Public Component Extension Methods
 
         #region Public Tag Related Methods
 
@@ -576,9 +578,10 @@ namespace Vasont.Inspire.SDK.Components
         {
             return client.UpdateComponentTags(componentId, inputModel);
         }
-        #endregion
 
-        #region Public Component Relation Methods     
+        #endregion Public Tag Related Methods
+
+        #region Public Component Relation Methods
 
         /// <summary>
         /// This method is used to repair an invalid component relationship.
@@ -736,9 +739,10 @@ namespace Vasont.Inspire.SDK.Components
             return client.RequestContent<ComponentRelationsQueryModel, byte[]>(request, inputModel);
         }
 
-        #endregion
+        #endregion Public Component Relation Methods
 
         #region Translation Related Extension Methods
+
         /// <summary>
         /// This method is used to get the translations for the specified component.
         /// </summary>
@@ -775,9 +779,10 @@ namespace Vasont.Inspire.SDK.Components
             return client.RequestContent<ComponentRelationsQueryModel, byte[]>(request, inputModel);
         }
 
-        #endregion
+        #endregion Translation Related Extension Methods
 
         #region History Relation Extension Methods
+
         /// <summary>
         /// This method is used to get the history for the specified component.
         /// </summary>
@@ -823,6 +828,7 @@ namespace Vasont.Inspire.SDK.Components
             var request = client.CreateRequest($"/api/Components/{componentId}/Restore/{changesetId}", HttpMethod.Post);
             return client.RequestContent<RestoreOptionsModel, ChangesetModel>(request, inputModel);
         }
-        #endregion
+
+        #endregion History Relation Extension Methods
     }
 }
