@@ -18,12 +18,13 @@ namespace Vasont.Inspire.SDK.Configuration
     using Vasont.Inspire.Models.Components;
 
     /// <summary>
-    /// This class extends the <see cref="InspireClient"/> class to include methods for calling 
+    /// This class extends the <see cref="InspireClient"/> class to include methods for calling
     /// application API endpoints.
     /// </summary>
     public static class ConfigurationExtensions
     {
         #region Public Attribute Methods
+
         /// <summary>
         /// This method is used to retrieve and return attributes.
         /// </summary>
@@ -93,9 +94,11 @@ namespace Vasont.Inspire.SDK.Configuration
             client.RequestContent(request);
             return !client.HasError;
         }
-        #endregion
+
+        #endregion Public Attribute Methods
 
         #region Public Profile Attribute Controller Methods
+
         /// <summary>
         /// This method is used to retrieve a list of minimal profile attributes.
         /// </summary>
@@ -176,7 +179,8 @@ namespace Vasont.Inspire.SDK.Configuration
             client.RequestContent(request);
             return !client.HasError;
         }
-        #endregion
+
+        #endregion Public Profile Attribute Controller Methods
 
         #region Public Schema Standard Methods
 
@@ -190,9 +194,11 @@ namespace Vasont.Inspire.SDK.Configuration
             var request = client.CreateRequest("/api/Configurations/SchemaStandards");
             return client.RequestContent<List<string>>(request);
         }
-        #endregion
+
+        #endregion Public Schema Standard Methods
 
         #region Public Component Type Methods
+
         /// <summary>
         /// This method is used to retrieve a list of component types.
         /// </summary>
@@ -262,9 +268,11 @@ namespace Vasont.Inspire.SDK.Configuration
             client.RequestContent(request);
             return !client.HasError;
         }
-        #endregion
+
+        #endregion Public Component Type Methods
 
         #region Public Element Methods
+
         /// <summary>
         /// This method is used to retrieve a list of elements.
         /// </summary>
@@ -334,9 +342,11 @@ namespace Vasont.Inspire.SDK.Configuration
             client.RequestContent(request);
             return !client.HasError;
         }
-        #endregion
+
+        #endregion Public Element Methods
 
         #region Public Export Methods
+
         /// <summary>
         /// This method is used to retrieve a list of exports.
         /// </summary>
@@ -443,9 +453,10 @@ namespace Vasont.Inspire.SDK.Configuration
             return client.RequestContent<ExportSelectionModel>(request);
         }
 
-        #endregion
+        #endregion Public Export Methods
 
         #region Public Link Method Methods
+
         /// <summary>
         /// This method is used to retrieve a list of link methods.
         /// </summary>
@@ -456,9 +467,11 @@ namespace Vasont.Inspire.SDK.Configuration
             var request = client.CreateRequest("/api/Configurations/LinkMethods");
             return client.RequestContent<List<LinkMethodModel>>(request);
         }
-        #endregion
+
+        #endregion Public Link Method Methods
 
         #region Public Xml Link Type Methods
+
         /// <summary>
         /// This method is used to retrieve a list of XML link types.
         /// </summary>
@@ -528,9 +541,11 @@ namespace Vasont.Inspire.SDK.Configuration
             client.RequestContent(request);
             return !client.HasError;
         }
-        #endregion
+
+        #endregion Public Xml Link Type Methods
 
         #region Public Relation Methods
+
         /// <summary>
         /// This method is used to retrieve a list of Relation types.
         /// </summary>
@@ -600,9 +615,13 @@ namespace Vasont.Inspire.SDK.Configuration
             client.RequestContent(request);
             return !client.HasError;
         }
-        #endregion 
+
+        #endregion Public Relation Methods
+
+
 
         #region Public Tag Methods
+
         /// <summary>
         /// This method is used to retrieve a specific tag.
         /// </summary>
@@ -661,9 +680,11 @@ namespace Vasont.Inspire.SDK.Configuration
             client.RequestContent(request);
             return !client.HasError;
         }
-        #endregion
+
+        #endregion Public Tag Methods
 
         #region Public Project Activity Controller Methods
+
         /// <summary>
         /// This method is used to retrieve a list of project activities.
         /// </summary>
@@ -733,17 +754,21 @@ namespace Vasont.Inspire.SDK.Configuration
             client.RequestContent(request);
             return !client.HasError;
         }
-        #endregion 
+
+        #endregion Public Project Activity Controller Methods
+
+
 
         #region Public Languages Methods
+
         /// <summary>
         /// This method is used to retrieve a list of languages.
         /// </summary>
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <returns>Returns a list of <see cref="LanguageModel"/> from the application.</returns>
-        public static List<LanguageModel> GetLanguages(this InspireClient client)
+        public static List<LanguageModel> GetLanguages(this InspireClient client, bool dictionaryOnly = false)
         {
-            var request = client.CreateRequest("/api/Configurations/Languages");
+            var request = client.CreateRequest($"/api/Configurations/Languages?dictionaryOnly={dictionaryOnly}");
             return client.RequestContent<List<LanguageModel>>(request);
         }
 
@@ -805,9 +830,11 @@ namespace Vasont.Inspire.SDK.Configuration
             client.RequestContent(request);
             return !client.HasError;
         }
-        #endregion
+
+        #endregion Public Languages Methods
 
         #region Public Webhook Configurations Methods
+
         /// <summary>
         /// This method is used to retrieve a list of web hook configurations.
         /// </summary>
@@ -877,9 +904,11 @@ namespace Vasont.Inspire.SDK.Configuration
             client.RequestContent(request);
             return !client.HasError;
         }
-        #endregion
+
+        #endregion Public Webhook Configurations Methods
 
         #region Public Extension Blacklist Methods
+
         /// <summary>
         /// This method is used to retrieve a list of file extensions.
         /// </summary>
@@ -949,6 +978,7 @@ namespace Vasont.Inspire.SDK.Configuration
             client.RequestContent(request);
             return !client.HasError;
         }
-        #endregion
+
+        #endregion Public Extension Blacklist Methods
     }
 }
