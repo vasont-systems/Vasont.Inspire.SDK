@@ -24,4 +24,7 @@
   <data name="TokenIntrospectionInvalidErrorText" xml:space="preserve">
     <value>指定されたアクセス トークンが無効です。</value>
   </data>
+  <data name="InvalidEditorRequestMissingComponentErrorText" xml:space="preserve">
+    <value>コンポーネント ID または一意のファイル名は、エディター要求で指定する必要があります。</value>
+  </data>
 </root>

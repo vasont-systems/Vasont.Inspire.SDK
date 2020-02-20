@@ -22,6 +22,10 @@
           <source>The access token specified was not valid.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Указанный токен доступа недействителен.</target>
         </trans-unit>
+        <trans-unit id="InvalidEditorRequestMissingComponentErrorText" translate="yes" xml:space="preserve">
+          <source>A component identity or unique file name must be specified in the editor request.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Идентификационный компонент или уникальное имя файла должны быть указаны в запросе редактора.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

@@ -24,4 +24,7 @@
   <data name="TokenIntrospectionInvalidErrorText" xml:space="preserve">
     <value>El token de acceso especificado no era válido.</value>
   </data>
+  <data name="InvalidEditorRequestMissingComponentErrorText" xml:space="preserve">
+    <value>Se debe especificar una identidad de componente o un nombre de archivo único en la solicitud del editor.</value>
+  </data>
 </root>

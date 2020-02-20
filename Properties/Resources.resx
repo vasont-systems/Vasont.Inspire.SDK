@@ -123,6 +123,9 @@
   <data name="IntrospectionConfigNeededErrorText" xml:space="preserve">
     <value>An introspection endpoint must be specified to verify client access token access. Either enable discovery or specify an introspection endpoint in configuration.</value>
   </data>
+  <data name="InvalidEditorRequestMissingComponentErrorText" xml:space="preserve">
+    <value>A component identity or unique file name must be specified in the editor request.</value>
+  </data>
   <data name="InvalidRequestTypeErrorText" xml:space="preserve">
     <value>Request method must be POST, PUT, or DELETE</value>
   </data>

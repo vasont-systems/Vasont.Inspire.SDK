@@ -24,4 +24,7 @@
   <data name="TokenIntrospectionInvalidErrorText" xml:space="preserve">
     <value>Le jeton d'accès spécifié n'était pas valide.</value>
   </data>
+  <data name="InvalidEditorRequestMissingComponentErrorText" xml:space="preserve">
+    <value>Une identité de composant ou un nom de fichier unique doit être spécifié dans la demande de l’éditeur.</value>
+  </data>
 </root>

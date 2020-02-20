@@ -24,4 +24,7 @@
   <data name="TokenIntrospectionInvalidErrorText" xml:space="preserve">
     <value>निर्दिष्ट एक्सेस टोकन मान्य नहीं था।</value>
   </data>
+  <data name="InvalidEditorRequestMissingComponentErrorText" xml:space="preserve">
+    <value>संपादक अनुरोध में एक घटक पहचान या अद्वितीय फ़ाइल नाम निर्दिष्ट किया जाना चाहिए।</value>
+  </data>
 </root>

@@ -24,4 +24,7 @@
   <data name="TokenIntrospectionInvalidErrorText" xml:space="preserve">
     <value>지정된 액세스 토큰이 잘못되었습니다.</value>
   </data>
+  <data name="InvalidEditorRequestMissingComponentErrorText" xml:space="preserve">
+    <value>구성 요소 ID 또는 고유 파일 이름은 편집기 요청에 지정해야 합니다.</value>
+  </data>
 </root>

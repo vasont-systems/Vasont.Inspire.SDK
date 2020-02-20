@@ -24,4 +24,7 @@
   <data name="TokenIntrospectionInvalidErrorText" xml:space="preserve">
     <value>Указанный токен доступа недействителен.</value>
   </data>
+  <data name="InvalidEditorRequestMissingComponentErrorText" xml:space="preserve">
+    <value>Идентификационный компонент или уникальное имя файла должны быть указаны в запросе редактора.</value>
+  </data>
 </root>
