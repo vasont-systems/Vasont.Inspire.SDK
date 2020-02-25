@@ -22,6 +22,10 @@
           <source>The access token specified was not valid.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">निर्दिष्ट एक्सेस टोकन मान्य नहीं था।</target>
         </trans-unit>
+        <trans-unit id="InvalidEditorRequestMissingComponentErrorText" translate="yes" xml:space="preserve">
+          <source>A component identity or unique file name must be specified in the editor request.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">संपादक अनुरोध में एक घटक पहचान या अद्वितीय फ़ाइल नाम निर्दिष्ट किया जाना चाहिए।</target>
+        </trans-unit>
       </group>
     </body>
   </file>

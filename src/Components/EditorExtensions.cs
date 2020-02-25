@@ -1,4 +1,9 @@
-﻿namespace Vasont.Inspire.SDK.Components
+﻿//-------------------------------------------------------------
+// <copyright file="EditorExtensions.cs" company="Vasont Systems">
+// Copyright (c) GlobalLink Vasont. All rights reserved.
+// </copyright>
+//-------------------------------------------------------------
+namespace Vasont.Inspire.SDK.Components
 {
     using System;
     using System.Collections.Generic;
@@ -7,7 +12,11 @@
     using System.Text;
     using System.Threading.Tasks;
     using Vasont.Inspire.Models.Components;
+    using Vasont.Inspire.SDK.Properties;
 
+    /// <summary>
+    /// This extensions class contains methods for supporting and interacting with external-editor related API calls.
+    /// </summary>
     public static class EditorExtensions
     {
         #region Editor Related Extension Methods
@@ -22,6 +31,11 @@
             if (model == null)
             {
                 throw new ArgumentNullException(nameof(model));
+            }
+
+            if (model.ComponentId == 0 && string.IsNullOrWhiteSpace(model.Href))
+            {
+                throw new ArgumentException(Resources.InvalidEditorRequestMissingComponentErrorText, nameof(model));
             }
 
             string queryTemplate = "&editorMode={0}&editorType={1}&schema={2}&version={3}&mapReferenceId={4}";

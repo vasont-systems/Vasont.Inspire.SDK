@@ -22,6 +22,10 @@
           <source>The access token specified was not valid.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">지정된 액세스 토큰이 잘못되었습니다.</target>
         </trans-unit>
+        <trans-unit id="InvalidEditorRequestMissingComponentErrorText" translate="yes" xml:space="preserve">
+          <source>A component identity or unique file name must be specified in the editor request.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">구성 요소 ID 또는 고유 파일 이름은 편집기 요청에 지정해야 합니다.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

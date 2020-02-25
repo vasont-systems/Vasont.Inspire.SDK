@@ -22,6 +22,10 @@
           <source>The access token specified was not valid.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Le jeton d'accès spécifié n'était pas valide.</target>
         </trans-unit>
+        <trans-unit id="InvalidEditorRequestMissingComponentErrorText" translate="yes" xml:space="preserve">
+          <source>A component identity or unique file name must be specified in the editor request.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Une identité de composant ou un nom de fichier unique doit être spécifié dans la demande de l’éditeur.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

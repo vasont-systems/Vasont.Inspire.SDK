@@ -24,4 +24,7 @@
   <data name="TokenIntrospectionInvalidErrorText" xml:space="preserve">
     <value>Das angegebene Zugriffstoken war ungültig.</value>
   </data>
+  <data name="InvalidEditorRequestMissingComponentErrorText" xml:space="preserve">
+    <value>Eine Komponentenidentität oder ein eindeutiger Dateiname muss in der Editoranforderung angegeben werden.</value>
+  </data>
 </root>
