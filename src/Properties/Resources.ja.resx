@@ -13,15 +13,18 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AccessMethodRequiresTokenErrorText" xml:space="preserve">
-    <value>El método de acceso especificado requiere que se especifique un token de acceso en la configuración.</value>
+    <value>指定されたアクセス方法では、構成でアクセス トークンを指定する必要があります。</value>
   </data>
   <data name="IntrospectionConfigNeededErrorText" xml:space="preserve">
-    <value>Se debe especificar un punto de conexión de introspección para comprobar el acceso al token de acceso de cliente. Habilite la detección o especifique un punto de conexión de introspección en la configuración.</value>
+    <value>クライアント アクセス トークン アクセスを確認するには、イントロスペクション エンドポイントを指定する必要があります。検出を有効にするか、構成でイントロスペクション エンドポイントを指定します。</value>
   </data>
   <data name="InvalidRequestTypeErrorText" xml:space="preserve">
-    <value>El método de solicitud debe ser POST, PUT o DELETE</value>
+    <value>要求メソッドは、ポスト、PUT、または削除する必要があります。</value>
   </data>
   <data name="TokenIntrospectionInvalidErrorText" xml:space="preserve">
-    <value>El token de acceso especificado no era válido.</value>
+    <value>指定されたアクセス トークンが無効です。</value>
+  </data>
+  <data name="InvalidEditorRequestMissingComponentErrorText" xml:space="preserve">
+    <value>コンポーネント ID または一意のファイル名は、エディター要求で指定する必要があります。</value>
   </data>
 </root>

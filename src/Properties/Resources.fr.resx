@@ -13,15 +13,18 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AccessMethodRequiresTokenErrorText" xml:space="preserve">
-    <value>Die angegebene Zugriffsmethode erfordert, dass in der Konfiguration ein Zugriffstoken angegeben wird.</value>
+    <value>La méthode d'accès spécifiée nécessite qu'un jeton d'accès soit spécifié dans la configuration.</value>
   </data>
   <data name="IntrospectionConfigNeededErrorText" xml:space="preserve">
-    <value>Ein Introspection-Endpunkt muss angegeben werden, um den Clientzugriffstokenzugriff zu überprüfen. Aktivieren Sie entweder die Ermittlung, oder geben Sie einen Introspection-Endpunkt in der Konfiguration an.</value>
+    <value>Un point de terminaison d'introspection doit être spécifié pour vérifier l'accès au jeton d'accès du client. Activez la découverte ou spécifiez un point de terminaison d'introspection en configuration.</value>
   </data>
   <data name="InvalidRequestTypeErrorText" xml:space="preserve">
-    <value>Die Anforderungsmethode muss POST, PUT oder DELETE sein.</value>
+    <value>La méthode de demande doit être POST, PUT, ou DELETE</value>
   </data>
   <data name="TokenIntrospectionInvalidErrorText" xml:space="preserve">
-    <value>Das angegebene Zugriffstoken war ungültig.</value>
+    <value>Le jeton d'accès spécifié n'était pas valide.</value>
+  </data>
+  <data name="InvalidEditorRequestMissingComponentErrorText" xml:space="preserve">
+    <value>Une identité de composant ou un nom de fichier unique doit être spécifié dans la demande de l’éditeur.</value>
   </data>
 </root>

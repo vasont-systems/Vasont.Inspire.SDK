@@ -13,15 +13,18 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AccessMethodRequiresTokenErrorText" xml:space="preserve">
-    <value>指定されたアクセス方法では、構成でアクセス トークンを指定する必要があります。</value>
+    <value>指定的访问方法要求在配置中指定访问令牌。</value>
   </data>
   <data name="IntrospectionConfigNeededErrorText" xml:space="preserve">
-    <value>クライアント アクセス トークン アクセスを確認するには、イントロスペクション エンドポイントを指定する必要があります。検出を有効にするか、構成でイントロスペクション エンドポイントを指定します。</value>
+    <value>必须指定自省终结点以验证客户端访问令牌访问。在配置中启用发现或指定自省终结点。</value>
   </data>
   <data name="InvalidRequestTypeErrorText" xml:space="preserve">
-    <value>要求メソッドは、ポスト、PUT、または削除する必要があります。</value>
+    <value>请求方法必须为 POST、PUT 或"删除"</value>
   </data>
   <data name="TokenIntrospectionInvalidErrorText" xml:space="preserve">
-    <value>指定されたアクセス トークンが無効です。</value>
+    <value>指定的访问令牌无效。</value>
+  </data>
+  <data name="InvalidEditorRequestMissingComponentErrorText" xml:space="preserve">
+    <value>必须在编辑器请求中指定组件标识或唯一文件名。</value>
   </data>
 </root>

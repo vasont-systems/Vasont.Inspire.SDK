@@ -13,15 +13,18 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AccessMethodRequiresTokenErrorText" xml:space="preserve">
-    <value>指定的访问方法要求在配置中指定访问令牌。</value>
+    <value>Die angegebene Zugriffsmethode erfordert, dass in der Konfiguration ein Zugriffstoken angegeben wird.</value>
   </data>
   <data name="IntrospectionConfigNeededErrorText" xml:space="preserve">
-    <value>必须指定自省终结点以验证客户端访问令牌访问。在配置中启用发现或指定自省终结点。</value>
+    <value>Ein Introspection-Endpunkt muss angegeben werden, um den Clientzugriffstokenzugriff zu überprüfen. Aktivieren Sie entweder die Ermittlung, oder geben Sie einen Introspection-Endpunkt in der Konfiguration an.</value>
   </data>
   <data name="InvalidRequestTypeErrorText" xml:space="preserve">
-    <value>请求方法必须为 POST、PUT 或"删除"</value>
+    <value>Die Anforderungsmethode muss POST, PUT oder DELETE sein.</value>
   </data>
   <data name="TokenIntrospectionInvalidErrorText" xml:space="preserve">
-    <value>指定的访问令牌无效。</value>
+    <value>Das angegebene Zugriffstoken war ungültig.</value>
+  </data>
+  <data name="InvalidEditorRequestMissingComponentErrorText" xml:space="preserve">
+    <value>Eine Komponentenidentität oder ein eindeutiger Dateiname muss in der Editoranforderung angegeben werden.</value>
   </data>
 </root>

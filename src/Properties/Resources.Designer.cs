@@ -79,6 +79,15 @@ namespace Vasont.Inspire.SDK.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to A component identity or unique file name must be specified in the editor request..
+        /// </summary>
+        internal static string InvalidEditorRequestMissingComponentErrorText {
+            get {
+                return ResourceManager.GetString("InvalidEditorRequestMissingComponentErrorText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Request method must be POST, PUT, or DELETE.
         /// </summary>
         internal static string InvalidRequestTypeErrorText {
