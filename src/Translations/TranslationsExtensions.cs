@@ -143,7 +143,7 @@ namespace Vasont.Inspire.SDK.Translations
                 throw new ArgumentNullException(nameof(translationJobIds));
             }
 
-            var request = client.CreateRequest("/api/Translations/TranslationExportJobModels", HttpMethod.Get);
+            var request = client.CreateRequest("/api/Translations/TranslationExportJobModels", HttpMethod.Post);
 
             return client.RequestContent<List<long>, List<TranslationExportJobModel>>(request, translationJobIds);
         }
