@@ -20,7 +20,7 @@ namespace Vasont.Inspire.SDK.Application
         /// <returns>Returns a <see cref="TenantDetailModel"/> object if found.</returns>
         public static TenantDetailModel GetAppInfo(this InspireClient client)
         {
-            var request = client.CreateRequest("/api/Application/AppInfo");
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Application/AppInfo");
             return client.RequestContent<TenantDetailModel>(request);
         }
 
@@ -31,7 +31,7 @@ namespace Vasont.Inspire.SDK.Application
         /// <returns>Returns a string OK if the server responded.</returns>
         public static string KeepAlive(this InspireClient client)
         {
-            var request = client.CreateRequest("/api/Misc/KeepAlive");
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Misc/KeepAlive");
             return client.RequestContent<string>(request);
         }
     }

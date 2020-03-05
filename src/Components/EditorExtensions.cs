@@ -6,11 +6,7 @@
 namespace Vasont.Inspire.SDK.Components
 {
     using System;
-    using System.Collections.Generic;
-    using System.Linq;
     using System.Net;
-    using System.Text;
-    using System.Threading.Tasks;
     using Vasont.Inspire.Models.Components;
     using Vasont.Inspire.SDK.Properties;
 
@@ -39,11 +35,11 @@ namespace Vasont.Inspire.SDK.Components
             }
 
             string queryTemplate = "&editorMode={0}&editorType={1}&schema={2}&version={3}&mapReferenceId={4}";
-            string query = string.Format(queryTemplate, 
-                model.EditorMode, 
-                model.EditorType, 
-                WebUtility.UrlEncode(model.SchemaType), 
-                WebUtility.UrlEncode(model.Version), 
+            string query = string.Format(queryTemplate,
+                model.EditorMode,
+                model.EditorType,
+                WebUtility.UrlEncode(model.SchemaType),
+                WebUtility.UrlEncode(model.Version),
                 model.MapReferenceId);
 
             if (model.ResolveReferences)
@@ -62,7 +58,7 @@ namespace Vasont.Inspire.SDK.Components
             }
 
             query = (model.ComponentId > 0 ? "componentId=" + model.ComponentId.ToString() : "href=" + model.Href) + query;
-            var request = client.CreateRequest($"/api/Editor?{query}");
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Editor?{query}");
             return client.RequestContent<MinimalEditorXmlModel>(request);
         }
         #endregion
