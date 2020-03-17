@@ -352,10 +352,10 @@ namespace Vasont.Inspire.SDK.Configuration
         /// </summary>
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <returns>Returns a list of <see cref="ExportModel"/> from the application.</returns>
-        public static List<ExportModel> GetExports(this InspireClient client)
+        public static List<ExportConfigurationModel> GetExports(this InspireClient client)
         {
             var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/Exports");
-            return client.RequestContent<List<ExportModel>>(request);
+            return client.RequestContent<List<ExportConfigurationModel>>(request);
         }
 
         /// <summary>
@@ -364,10 +364,10 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <param name="exportId">Contains the record identity to retrieve.</param>
         /// <returns>Returns a specific <see cref="ExportModel"/> from the application.</returns>
-        public static ExportModel GetExport(this InspireClient client, long exportId)
+        public static ExportConfigurationModel GetExport(this InspireClient client, long exportId)
         {
             var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/Exports/{exportId}");
-            return client.RequestContent<ExportModel>(request);
+            return client.RequestContent<ExportConfigurationModel>(request);
         }
 
         /// <summary>
@@ -376,7 +376,7 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <param name="model">Contains the export model to update.</param>
         /// <returns>Returns the updated <see cref="ExportModel"/> model from the application.</returns>
-        public static ExportModel UpdateExport(this InspireClient client, ExportModel model)
+        public static ExportConfigurationModel UpdateExport(this InspireClient client, ExportConfigurationModel model)
         {
             if (model == null)
             {
@@ -384,7 +384,7 @@ namespace Vasont.Inspire.SDK.Configuration
             }
 
             var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/Exports/{model.ExportId}", HttpMethod.Put);
-            return client.RequestContent<ExportModel, ExportModel>(request, model);
+            return client.RequestContent<ExportConfigurationModel, ExportConfigurationModel>(request, model);
         }
 
         /// <summary>
@@ -393,7 +393,7 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <param name="model">Contains the export model to create.</param>
         /// <returns>Returns a specific <see cref="ElementModel"/> that was created.</returns>
-        public static ExportModel CreateExport(this InspireClient client, ExportModel model)
+        public static ExportConfigurationModel CreateExport(this InspireClient client, ExportConfigurationModel model)
         {
             if (model == null)
             {
@@ -401,7 +401,7 @@ namespace Vasont.Inspire.SDK.Configuration
             }
 
             var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/Exports", HttpMethod.Post);
-            return client.RequestContent<ExportModel, ExportModel>(request, model);
+            return client.RequestContent<ExportConfigurationModel, ExportConfigurationModel>(request, model);
         }
 
         /// <summary>
