@@ -26,7 +26,7 @@ namespace Vasont.Inspire.SDK.Projects
         /// <returns>Returns a list of <see cref="ProjectModel"/> models.</returns>
         public static List<ProjectModel> GetProjects(this InspireClient client)
         {
-            var request = client.CreateRequest("/api/Projects");
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Projects");
             return client.RequestContent<List<ProjectModel>>(request);
         }
 
@@ -38,7 +38,7 @@ namespace Vasont.Inspire.SDK.Projects
         /// <returns>Returns a <see cref="ProjectModel"/> if found.</returns>
         public static ProjectModel GetProject(this InspireClient client, long projectId)
         {
-            var request = client.CreateRequest("/api/Projects/" + projectId);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Projects/{projectId}");
             return client.RequestContent<ProjectModel>(request);
         }
 
@@ -50,7 +50,7 @@ namespace Vasont.Inspire.SDK.Projects
         /// <returns>Returns a list of <see cref="ProjectModel"/> models.</returns>
         public static List<ProjectModel> GetRecentlyOpenedProjects(this InspireClient client, int maximumResults)
         {
-            var request = client.CreateRequest($"/api/Projects/Recent?maximumResults={maximumResults}");
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Projects/Recent?maximumResults={maximumResults}");
             return client.RequestContent<List<ProjectModel>>(request);
         }
 
@@ -61,7 +61,7 @@ namespace Vasont.Inspire.SDK.Projects
         /// <returns>Returns a list of <see cref="ProjectModel"/> models.</returns>
         public static List<ProjectModel> GetAssignedProjects(this InspireClient client)
         {
-            var request = client.CreateRequest($"/api/Projects/Assignments");
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Projects/Assignments");
             return client.RequestContent<List<ProjectModel>>(request);
         }
 
@@ -73,7 +73,7 @@ namespace Vasont.Inspire.SDK.Projects
         /// <returns>Returns a list of <see cref="MinimalUserModel"/> models.</returns>
         public static List<MinimalUserModel> GetAvailableParticipants(this InspireClient client, long projectId)
         {
-            var request = client.CreateRequest("/api/Projects/" + projectId + "/AvailableParticipants");
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Projects/{projectId}/AvailableParticipants");
             return client.RequestContent<List<MinimalUserModel>>(request);
         }
 
@@ -84,7 +84,7 @@ namespace Vasont.Inspire.SDK.Projects
         /// <returns>Returns a list of <see cref="ProjectActivityModel"/> models.</returns>
         public static List<ProjectActivityModel> GetActivities(this InspireClient client)
         {
-            var request = client.CreateRequest("/api/Projects/Activities");
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Projects/Activities");
             return client.RequestContent<List<ProjectActivityModel>>(request);
         }
 
@@ -96,7 +96,7 @@ namespace Vasont.Inspire.SDK.Projects
         /// <returns>Returns a list of <see cref="ProjectAssignmentModel"/> models.</returns>
         public static List<ProjectAssignmentModel> GetProjectAssignments(this InspireClient client, long projectId)
         {
-            var request = client.CreateRequest("/api/Projects/" + projectId + "/Assignments");
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Projects/{projectId}/Assignments");
             return client.RequestContent<List<ProjectAssignmentModel>>(request);
         }
 
@@ -113,7 +113,7 @@ namespace Vasont.Inspire.SDK.Projects
                 throw new ArgumentNullException(nameof(projectId));
             }
 
-            var request = client.CreateRequest("api/Projects/" + projectId, HttpMethod.Delete);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Projects/{projectId}", HttpMethod.Delete);
             client.RequestContent(request);
             return client.HasError;
         }
@@ -137,7 +137,7 @@ namespace Vasont.Inspire.SDK.Projects
                 throw new ArgumentNullException(nameof(model));
             }
 
-            var request = client.CreateRequest("api/Projects/" + projectId + "/Participants", HttpMethod.Delete);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Projects/{projectId}/Participants", HttpMethod.Delete);
             client.RequestContent(request, model);
             return client.HasError;
         }
@@ -161,7 +161,7 @@ namespace Vasont.Inspire.SDK.Projects
                 throw new ArgumentNullException(nameof(projectAssignmentId));
             }
 
-            var request = client.CreateRequest("api/Projects/" + projectId + "/Assignments/" + projectAssignmentId, HttpMethod.Delete);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Projects/{projectId}/Assignments/{projectAssignmentId}", HttpMethod.Delete);
             client.RequestContent(request);
             return client.HasError;
         }
@@ -191,7 +191,7 @@ namespace Vasont.Inspire.SDK.Projects
                 throw new ArgumentNullException(nameof(componentId));
             }
 
-            var request = client.CreateRequest("api/Projects/" + projectId + "/Assignments/" + projectAssignmentId + "/Components/" + componentId, HttpMethod.Delete);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Projects/{projectId}/Assignments/{projectAssignmentId}/Components/{componentId}", HttpMethod.Delete);
             client.RequestContent(request);
             return client.HasError;
         }
@@ -215,7 +215,7 @@ namespace Vasont.Inspire.SDK.Projects
                 throw new ArgumentNullException(nameof(model));
             }
 
-            var request = client.CreateRequest("api/Projects/" + projectId + "/FolderItems/0", HttpMethod.Delete);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Projects/{projectId}/FolderItems/0", HttpMethod.Delete);
             client.RequestContent(request, model);
             return client.HasError;
         }
@@ -233,7 +233,7 @@ namespace Vasont.Inspire.SDK.Projects
                 throw new ArgumentNullException(nameof(inputModel));
             }
 
-            var request = client.CreateRequest("/api/Projects", HttpMethod.Post);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Projects", HttpMethod.Post);
             return client.RequestContent<ProjectModel, ProjectModel>(request, inputModel);
         }
 
@@ -256,7 +256,7 @@ namespace Vasont.Inspire.SDK.Projects
                 throw new ArgumentNullException(nameof(models));
             }
 
-            var request = client.CreateRequest("/api/Projects/" + projectId + "/Participants", HttpMethod.Post);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Projects/{projectId}/Participants", HttpMethod.Post);
             return client.RequestContent<List<ProjectParticipantModel>, List<ProjectParticipantModel>>(request, models);
         }
 
@@ -279,7 +279,7 @@ namespace Vasont.Inspire.SDK.Projects
                 throw new ArgumentNullException(nameof(model));
             }
 
-            var request = client.CreateRequest("/api/Projects/" + projectId + "/Assignments", HttpMethod.Post);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Projects/{projectId}/Assignments", HttpMethod.Post);
             return client.RequestContent<ProjectAssignmentModel, ProjectAssignmentModel>(request, model);
         }
 
@@ -302,7 +302,7 @@ namespace Vasont.Inspire.SDK.Projects
                 throw new ArgumentNullException(nameof(model));
             }
 
-            var request = client.CreateRequest("/api/Projects/" + projectId + "/FolderItems", HttpMethod.Post);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Projects/{projectId}/FolderItems", HttpMethod.Post);
             return client.RequestContent<ProjectFolderItemModel, ProjectFolderItemModel>(request, model);
         }
 
@@ -331,7 +331,7 @@ namespace Vasont.Inspire.SDK.Projects
                 throw new ArgumentNullException(nameof(models));
             }
 
-            var request = client.CreateRequest("/api/Projects/" + projectId + "/Folders/" + folderId, HttpMethod.Post);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Projects/{projectId}/Folders/{folderId}", HttpMethod.Post);
             return client.RequestContent<List<MinimalComponentModel>, List<MinimalComponentModel>>(request, models);
         }
 
@@ -356,7 +356,7 @@ namespace Vasont.Inspire.SDK.Projects
                 throw new ArgumentNullException(nameof(folderId));
             }
 
-            var request = client.CreateRequest("/api/Projects/" + projectId + "/FolderItems/" + folderId + "/Export/" + exportId + "/?includeSubFolders=" + includeSubFolders, HttpMethod.Post);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Projects/{projectId}/FolderItems/{folderId}/Export/{exportId}/?includeSubFolders={includeSubFolders}", HttpMethod.Post);
             return client.RequestContent<ExportRequestModel>(request);
         }
 
@@ -379,7 +379,7 @@ namespace Vasont.Inspire.SDK.Projects
                 throw new ArgumentNullException(nameof(inputModel));
             }
 
-            var request = client.CreateRequest("/api/Projects/" + projectId, HttpMethod.Put);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Projects/{projectId}", HttpMethod.Put);
             return client.RequestContent<ProjectModel, ProjectModel>(request, inputModel);
         }
 
@@ -402,7 +402,7 @@ namespace Vasont.Inspire.SDK.Projects
                 throw new ArgumentNullException(nameof(models));
             }
 
-            var request = client.CreateRequest("/api/Projects/" + projectId + "/Participants", HttpMethod.Put);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Projects/{projectId}/Participants", HttpMethod.Put);
             return client.RequestContent<List<ProjectParticipantModel>, List<ProjectParticipantModel>>(request, models);
         }
 
@@ -431,7 +431,7 @@ namespace Vasont.Inspire.SDK.Projects
                 throw new ArgumentNullException(nameof(model));
             }
 
-            var request = client.CreateRequest("/api/Projects/" + projectId + "/Assignments/" + projectAssignmentId, HttpMethod.Put);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Projects/{projectId}/Assignments/{projectAssignmentId}", HttpMethod.Put);
             return client.RequestContent<ProjectAssignmentModel, ProjectAssignmentModel>(request, model);
         }
 
@@ -460,7 +460,7 @@ namespace Vasont.Inspire.SDK.Projects
                 throw new ArgumentNullException(nameof(model));
             }
 
-            var request = client.CreateRequest("/api/Projects/" + projectId + "/Assignments/" + projectAssignmentId + "/State/Complete", HttpMethod.Put);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Projects/{projectId}/Assignments/{projectAssignmentId}/State/Complete", HttpMethod.Put);
             return client.RequestContent<ProjectAssignmentModel, ProjectAssignmentModel>(request, model);
         }
 
@@ -489,7 +489,7 @@ namespace Vasont.Inspire.SDK.Projects
                 throw new ArgumentNullException(nameof(model));
             }
 
-            var request = client.CreateRequest("/api/Projects/" + projectId + "/FolderItems/" + itemId + "/Rename", HttpMethod.Put);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Projects/{projectId}/FolderItems/{itemId}/Rename", HttpMethod.Put);
             return client.RequestContent<ProjectFolderItemModel, ProjectFolderItemModel>(request, model);
         }
 
@@ -519,7 +519,7 @@ namespace Vasont.Inspire.SDK.Projects
                 throw new ArgumentNullException(nameof(model));
             }
 
-            var request = client.CreateRequest("/api/Projects/" + projectId + "/FolderItems/" + itemId + "/Move/" + targetFolderId, HttpMethod.Put);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Projects/{projectId}/FolderItems/{itemId}/Move/{targetFolderId}", HttpMethod.Put);
             return client.RequestContent<ProjectFolderItemModel, ProjectFolderItemModel>(request, model);
         }
     }

@@ -5,6 +5,7 @@
 //-------------------------------------------------------------
 namespace Vasont.Inspire.SDK.Application
 {
+    using System;
     using Vasont.Inspire.Models.Common;
 
     /// <summary>
@@ -18,9 +19,21 @@ namespace Vasont.Inspire.SDK.Application
         /// </summary>
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <returns>Returns a <see cref="TenantDetailModel"/> object if found.</returns>
+        [Obsolete("This call uses legacy route. Please use RetrieveAppInfo() going forward. This method will be removed in a future release.")]
         public static TenantDetailModel GetAppInfo(this InspireClient client)
         {
-            var request = client.CreateRequest("/api/Application/AppInfo");
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/AppInfo");
+            return client.RequestContent<TenantDetailModel>(request);
+        }
+
+        /// <summary>
+        /// This method is used to return the tenant information for the application instance.
+        /// </summary>
+        /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
+        /// <returns>Returns a <see cref="TenantDetailModel"/> object if found.</returns>
+        public static TenantDetailModel RetrieveAppInfo(this InspireClient client)
+        {
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Application/AppInfo");
             return client.RequestContent<TenantDetailModel>(request);
         }
 
@@ -31,7 +44,7 @@ namespace Vasont.Inspire.SDK.Application
         /// <returns>Returns a string OK if the server responded.</returns>
         public static string KeepAlive(this InspireClient client)
         {
-            var request = client.CreateRequest("/api/Misc/KeepAlive");
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Misc/KeepAlive");
             return client.RequestContent<string>(request);
         }
     }

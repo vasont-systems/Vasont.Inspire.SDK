@@ -24,17 +24,17 @@ namespace Vasont.Inspire.SDK.Translations
         /// <returns>Returns a List of <see cref="TranslationVendorModel"/> objects.</returns>
         public static List<TranslationVendorModel> GetTranslationVendors(this InspireClient client)
         {
-            var request = client.CreateRequest("/api/Translations/Vendors");
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Translations/Vendors");
             return client.RequestContent<List<TranslationVendorModel>>(request);
         }
 
         /// <summary>Gets the translation job by identifier.</summary>
         /// <param name="client">The client.</param>
         /// <param name="translationJobId">The translation job identifier.</param>
-        /// <returns>Returnes the <see cref="TranslationJobModel"/> object found for the requested Id.</returns>
+        /// <returns>Returns the <see cref="TranslationJobModel"/> object found for the requested Id.</returns>
         public static TranslationJobModel GetTranslationJobById(this InspireClient client, long translationJobId)
         {
-            var request = client.CreateRequest($"/api/Translations/{translationJobId}");
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Translations/{translationJobId}");
             return client.RequestContent<TranslationJobModel>(request);
         }
 
@@ -49,7 +49,7 @@ namespace Vasont.Inspire.SDK.Translations
                 throw new ArgumentNullException(nameof(translationJobIds));
             }
 
-            var request = client.CreateRequest("/api/Translations/RetrieveTranslationJobs", HttpMethod.Post);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Translations/RetrieveTranslationJobs", HttpMethod.Post);
 
             return client.RequestContent<List<long>, List<MinimalTranslationJobModel>>(request, translationJobIds);
         }
@@ -65,7 +65,7 @@ namespace Vasont.Inspire.SDK.Translations
                 throw new ArgumentNullException(nameof(model));
             }
 
-            var request = client.CreateRequest($"/api/Translations/{model.TranslationJobId}/Cancel", HttpMethod.Put);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Translations/{model.TranslationJobId}/Cancel", HttpMethod.Put);
             return client.RequestContent<TranslationJobModel, TranslationJobModel>(request, model);
         }
 
@@ -81,14 +81,14 @@ namespace Vasont.Inspire.SDK.Translations
             {
                 throw new ArgumentNullException(nameof(translationVendorId));
             }
-            
+
             TranslationExportRequestModel translationExportRequestModel = new TranslationExportRequestModel
             {
                 TranslationVendorId = translationVendorId,
                 SendNotification = false
             };
 
-            var request = client.CreateRequest($"/api/Translations/Export/GetQueued/{translationVendorId}", HttpMethod.Post);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Translations/Export/GetQueued/{translationVendorId}", HttpMethod.Post);
 
             return client.RequestContent<TranslationExportRequestModel, WorkerStateModel<TranslationExportStateModel>>(request, translationExportRequestModel);
         }
@@ -109,7 +109,7 @@ namespace Vasont.Inspire.SDK.Translations
             }
 
             string encodedWorkerKey = Uri.EscapeUriString(workerKey);
-            var request = client.CreateRequest($"/api/Translations/Export/{encodedWorkerKey}/", HttpMethod.Get);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Translations/Export/{encodedWorkerKey}/", HttpMethod.Get);
 
             return client.RequestContent<MinimalWorkerStateModel<TranslationExportStateModel>>(request);
         }
@@ -127,7 +127,7 @@ namespace Vasont.Inspire.SDK.Translations
                 throw new ArgumentNullException(nameof(translationComponentIds));
             }
 
-            var request = client.CreateRequest("/api/Translations/Components/SetQueued", HttpMethod.Post);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Translations/Components/SetQueued", HttpMethod.Post);
 
             return client.RequestContent<List<long>, List<MinimalTranslationJobComponentModel>>(request, translationComponentIds);
         }
@@ -143,7 +143,7 @@ namespace Vasont.Inspire.SDK.Translations
                 throw new ArgumentNullException(nameof(translationJobIds));
             }
 
-            var request = client.CreateRequest("/api/Translations/TranslationExportJobModels", HttpMethod.Post);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Translations/TranslationExportJobModels", HttpMethod.Post);
 
             return client.RequestContent<List<long>, List<TranslationExportJobModel>>(request, translationJobIds);
         }
@@ -159,7 +159,7 @@ namespace Vasont.Inspire.SDK.Translations
                 throw new ArgumentNullException(nameof(models));
             }
 
-            var request = client.CreateRequest("/api/Translations/Jobs/SetStatus", HttpMethod.Post);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Translations/Jobs/SetStatus", HttpMethod.Post);
 
             return client.RequestContent<List<TranslationExportJobModel>, List<TranslationExportJobModel>>(request, models);
         }
