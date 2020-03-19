@@ -1,0 +1,2048 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Vasont.Inspire.SDK</name>
+    </assembly>
+    <members>
+        <member name="T:Vasont.Inspire.SDK.Application.ApplicationExtensions">
+            <summary>
+            This class extends the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> class to include methods for calling 
+            application API endpoints.
+            </summary>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Application.ApplicationExtensions.GetAppInfo(Vasont.Inspire.SDK.InspireClient)">
+            <summary>
+            This method is used to return the tenant information for the application instance.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <returns>Returns a <see cref="T:Vasont.Inspire.Models.Common.TenantDetailModel"/> object if found.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Application.ApplicationExtensions.RetrieveAppInfo(Vasont.Inspire.SDK.InspireClient)">
+            <summary>
+            This method is used to return the tenant information for the application instance.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <returns>Returns a <see cref="T:Vasont.Inspire.Models.Common.TenantDetailModel"/> object if found.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Application.ApplicationExtensions.KeepAlive(Vasont.Inspire.SDK.InspireClient)">
+            <summary>
+            This method is used to simply return OK to test and keep the server alive.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <returns>Returns a string OK if the server responded.</returns>
+        </member>
+        <member name="T:Vasont.Inspire.SDK.Components.ComponentExtensions">
+            <summary>
+            This class extends the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> class to include methods for calling
+            component API endpoints.
+            </summary>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentTypes(Vasont.Inspire.SDK.InspireClient)">
+            <summary>
+            This method is used to retrieve and return minimal models for component types.
+            </summary>
+            <param name="client"><see cref="T:Vasont.Inspire.SDK.InspireClient"/> used to communication with the API endpoint.</param>
+            <returns>Returns a list of <see cref="T:Vasont.Inspire.Models.Components.MinimalComponentTypeModel"/> minimal component type models.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentWorkflowTemplates(Vasont.Inspire.SDK.InspireClient)">
+            <summary>
+            This method is used to retrieve the component workflow templates.
+            </summary>
+            <param name="client"><see cref="T:Vasont.Inspire.SDK.InspireClient"/> used to communication with the API endpoint.</param>
+            <returns>Returns a list of <see cref="T:Vasont.Inspire.Models.Workflow.WorkflowTemplateModel"/> objects.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentWorkflowTemplate(Vasont.Inspire.SDK.InspireClient,System.Int64)">
+            <summary>
+            This method is used to retrieve a specific component's workflow templates.
+            </summary>
+            <param name="client"><see cref="T:Vasont.Inspire.SDK.InspireClient"/> used to communication with the API endpoint.</param>
+            <param name="componentId">Contains the unique identity of the component.</param>
+            <returns>Returns a list of <see cref="T:Vasont.Inspire.Models.Workflow.WorkflowTemplateModel"/> objects.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentTemplates(Vasont.Inspire.SDK.InspireClient,System.String)">
+            <summary>
+            This method is used to retrieve the component templates based on the supplied document types.
+            </summary>
+            <param name="client"><see cref="T:Vasont.Inspire.SDK.InspireClient"/> used to communication with the API endpoint.</param>
+            <param name="documentTypes">Contains a comma delimited list of document types that will be used to filter the results.</param>
+            <returns>Returns the <see cref="T:Vasont.Inspire.Models.Components.MinimalComponentModel"/> object.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponents(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.BatchComponentsRequestModel)">
+            <summary>
+            This method is used to retrieve a batch of requested components.
+            </summary>
+            <param name="client"><see cref="T:Vasont.Inspire.SDK.InspireClient"/> used to communication with the API endpoint.</param>
+            <param name="componentIds">The list of component identifiers.</param>
+            <returns>Returns a <see cref="T:Vasont.Inspire.Models.Components.BatchComponentsResultModel"/> object containing a list of requested components.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponent(Vasont.Inspire.SDK.InspireClient,System.Int64)">
+            <summary>
+            This method is used to retrieve minimal detail about a specific component.
+            </summary>
+            <param name="client"><see cref="T:Vasont.Inspire.SDK.InspireClient"/> used to communication with the API endpoint.</param>
+            <param name="componentId">The component identity.</param>
+            <returns>Returns a list of <see cref="T:Vasont.Inspire.Models.Components.MinimalComponentModel"/> objects.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentDetail(Vasont.Inspire.SDK.InspireClient,System.Int64)">
+            <summary>
+            This method is used to retrieve the detail of the specific component.
+            </summary>
+            <param name="client">The client.</param>
+            <param name="componentId">The component identifier.</param>
+            <returns>Returns the detailed component model.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentContent(Vasont.Inspire.SDK.InspireClient,System.Int64)">
+            <summary>
+            This method is used to retrieve the content from a specific component.
+            </summary>
+            <param name="client"><see cref="T:Vasont.Inspire.SDK.InspireClient"/> used to communication with the API endpoint.</param>
+            <param name="componentId">The component identity.</param>
+            <returns>Returns an array of bytes that represent the content of the component.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentPermissions(Vasont.Inspire.SDK.InspireClient,System.Int64)">
+            <summary>
+            This method is used to retrieve the permission details for a specific component.
+            </summary>
+            <param name="client"><see cref="T:Vasont.Inspire.SDK.InspireClient"/> used to communication with the API endpoint.</param>
+            <param name="componentId">The component identity.</param>
+            <returns>Returns the <see cref="T:Vasont.Inspire.Models.Components.PermissionUpdateModel"/> object.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentElements(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Collections.Generic.List{System.String})">
+            <summary>
+            This method is used to retrieve the specified components elements.
+            </summary>
+            <param name="client"><see cref="T:Vasont.Inspire.SDK.InspireClient"/> used to communication with the API endpoint.</param>
+            <param name="componentId">The list of component identifier.</param>
+            <param name="allowedElements">Contains an optional list of allowed element names.</param>
+            <returns>Returns a <see cref="T:Vasont.Inspire.Models.Components.BatchComponentsResultModel"/> object containing a list of requested components.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Components.ComponentExtensions.ApproveComponents(Vasont.Inspire.SDK.InspireClient,System.Collections.Generic.List{System.Int64})">
+            <summary>
+            This method is used approve one or more component states.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="componentIds">Contains the component identities.</param>
+            <returns>Returns a value indicating success.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentConfiguration(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Boolean)">
+            <summary>
+            This method is used to retrieve a component configuration for a specified component
+            </summary>
+            <param name="client"><see cref="T:Vasont.Inspire.SDK.InspireClient"/> used to communication with the API endpoint.</param>
+            <param name="componentId">Contains the component identity.</param>
+            <param name="forceReload">Contains a value indicating whether the configuration cache is bypassed and reloaded.</param>
+            <returns>Returns the <see cref="T:Vasont.Inspire.Models.Components.Schema.ComponentConfigurationModel"/> object.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Components.ComponentExtensions.CreateComponent(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.CreateComponentFromTemplateModel)">
+            <summary>
+            This method is used to create a new component from a template, and return details about the newly created component.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="inputModel">Contains the <see cref="T:Vasont.Inspire.Models.Components.CreateComponentFromTemplateModel"/> input.</param>
+            <returns>Returns a <see cref="T:Vasont.Inspire.Models.Components.MinimalComponentModel"/> object if found.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Components.ComponentExtensions.CreateComponentAs(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.SaveAsComponentModel)">
+            <summary>
+            Saves the component content as a different component target.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="inputModel">Contains the <see cref="T:Vasont.Inspire.Models.Components.SaveAsComponentModel"/> input.</param>
+            <returns>Returns a <see cref="T:Vasont.Inspire.Models.Components.MinimalComponentModel"/> object if found.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Components.ComponentExtensions.CreateComponentBranch(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.SaveAsBranchModel)">
+            <summary>
+            Creates a new component content branch.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="inputModel">Contains the <see cref="T:Vasont.Inspire.Models.Components.SaveAsBranchModel"/> input.</param>
+            <returns>Returns a <see cref="T:Vasont.Inspire.Models.Components.MinimalComponentModel"/> object if found.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Components.ComponentExtensions.CreateComponentsExportRequest(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Transfers.ExportRequestModel)">
+            <summary>
+            This method is used to request an export process for one or more components.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="exportId">Contains the export identity.</param>
+            <param name="inputModel">Contains the <see cref="T:Vasont.Inspire.Models.Transfers.ExportRequestModel"/> input.</param>
+            <returns>Returns a <see cref="T:Vasont.Inspire.Models.Transfers.ExportRequestModel"/> object if found.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Components.ComponentExtensions.RenameComponent(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Components.MinimalComponentModel)">
+            <summary>
+            This method is used to rename an existing component.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="componentId">Contains the component identity.</param>
+            <param name="inputModel">Contains the <see cref="T:Vasont.Inspire.Models.Components.MinimalComponentModel"/> input.</param>
+            <returns>Returns a <see cref="T:Vasont.Inspire.Models.Components.MinimalComponentModel"/> object if found.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Components.ComponentExtensions.UpdateComponentPermissions(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.PermissionUpdateModel)">
+            <summary>
+            This method is used to set permissions on an existing component.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="inputModel">Contains the <see cref="T:Vasont.Inspire.Models.Components.PermissionUpdateModel"/> input.</param>
+            <returns>Returns a <see cref="T:Vasont.Inspire.Models.Components.PermissionUpdateModel"/> object if found.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Components.ComponentExtensions.UpdateComponentPermissions(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Components.PermissionUpdateModel)">
+            <summary>
+            This method is used to update permissions for a single component.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="componentId">Contains the component identity.</param>
+            <param name="inputModel">Contains the <see cref="T:Vasont.Inspire.Models.Components.PermissionUpdateModel"/> input.</param>
+            <returns>Returns the updated <see cref="T:Vasont.Inspire.Models.Components.PermissionUpdateModel"/> object.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Components.ComponentExtensions.SetComponentPermissions(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.PermissionUpdateModel)">
+            <summary>
+            This method is used to set permissions on an existing component.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="inputModel">Contains the <see cref="T:Vasont.Inspire.Models.Components.PermissionUpdateModel"/> input.</param>
+            <returns>Returns a <see cref="T:Vasont.Inspire.Models.Components.PermissionUpdateModel"/> object if found.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Components.ComponentExtensions.MoveComponentsToFolder(Vasont.Inspire.SDK.InspireClient,System.Collections.Generic.List{System.Int64},System.Int64)">
+            <summary>
+            This method is used to move existing components to a new folder.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="componentIds">Contains a list of component identities.</param>
+            <param name="targetFolderId">Contains the target folder identity.</param>
+            <returns>Returns a boolean value indicating whether the action succeeded or not.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Components.ComponentExtensions.LockComponent(Vasont.Inspire.SDK.InspireClient,System.Int64)">
+            <summary>
+            This method is used to lock a component.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="componenttId">Contains the component identity.</param>
+            <returns>Returns a <see cref="T:Vasont.Inspire.Models.Components.ComponentLockModel"/> object.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Components.ComponentExtensions.LockComponents(Vasont.Inspire.SDK.InspireClient,System.Collections.Generic.List{System.Int64})">
+            <summary>
+            Locks the components asynchronous.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="componentIds">Contains a list of component identifiers.</param>
+            <returns>Returns a List of <see cref="T:Vasont.Inspire.Models.Components.BatchComponentLockModel"/> objects of the components that have been locked.</returns>
+            <exception cref="T:System.ArgumentNullException">componentIds is required</exception>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Components.ComponentExtensions.UnlockComponents(Vasont.Inspire.SDK.InspireClient,System.Collections.Generic.List{System.Int64},System.Boolean)">
+            <summary>
+            Unlocks the components.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="componentIds">Contains a list of component identifiers.</param>
+            <param name="confirmPendingEdits">Contains a boolean value if set to <c>true</c> [confirm pending edits].</param>
+            <returns>Returns a List of <see cref="T:Vasont.Inspire.Models.Components.UnlockResultModel"/> objects.</returns>
+            <exception cref="T:System.ArgumentNullException">componentIds is required</exception>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Components.ComponentExtensions.UnlockComponent(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Boolean)">
+            <summary>
+            This method is used to unlock a component.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="componenttId">Contains the component identity.</param>
+            <param name="confirmPendingEdits">Contains a value indicating whether it is okay to unlock the component regardless of pending edits.</param>
+            <returns>Returns a <see cref="T:Vasont.Inspire.Models.Components.UnlockResultModel"/> object.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Components.ComponentExtensions.DeleteComponent(Vasont.Inspire.SDK.InspireClient,System.Int64)">
+            <summary>
+            This method is used to delete a specific component.
+            </summary>
+            <param name="client"><see cref="T:Vasont.Inspire.SDK.InspireClient"/> used to communication with the API endpoint.</param>
+            <param name="componentId">The component identity.</param>
+            <returns>Returns a <see cref="T:Vasont.Inspire.Models.Components.DeleteResultModel"/> object.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Components.ComponentExtensions.DeleteComponents(Vasont.Inspire.SDK.InspireClient,System.Collections.Generic.List{System.Int64})">
+            <summary>
+            Deletes the specified components.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="componentIds">Contains a list of component identifiers.</param>
+            <returns>Returns a value indicating the success of the deletion action.</returns>
+            <exception cref="T:System.ArgumentNullException">componentIds is required</exception>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Components.ComponentExtensions.ImportComponents(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Transfers.ImportRequestModel,System.Collections.Generic.List{System.String})">
+            <summary>
+            This REST method is used to import components from one or more files.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient" /> that is used for communication.</param>
+            <param name="importModel">The import model.</param>
+            <param name="filePaths">Contains a list of local file paths that will be submitted for synchronization import.</param>
+            <returns>
+            Returns a <see cref="T:Vasont.Inspire.Models.Worker.WorkerStateModel" /> of type <see cref="T:Vasont.Inspire.Models.Transfers.MinimalImportStateModel" />.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">Thrown if the import model is null.</exception>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Components.ComponentExtensions.GetImportState(Vasont.Inspire.SDK.InspireClient,System.String)">
+            <summary>
+            This method is called to get the state of an import worker process.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="workerKey">Contains the import worker key to find.</param>
+            <returns>Returns a <see cref="T:Vasont.Inspire.Models.Worker.WorkerStateModel"/> of type <see cref="T:Vasont.Inspire.Models.Transfers.MinimalImportStateModel"/>.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Components.ComponentExtensions.GetImportState(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Worker.WorkerStateModel)">
+            <summary>
+            This method is called to get the state of an import worker process.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="inputModel">Contains the <see cref="T:Vasont.Inspire.Models.Worker.WorkerStateModel"/> input.</param>
+            <returns>Returns a <see cref="T:Vasont.Inspire.Models.Worker.WorkerStateModel"/> of type <see cref="T:Vasont.Inspire.Models.Transfers.MinimalImportStateModel"/>.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Components.ComponentExtensions.GetExportState(Vasont.Inspire.SDK.InspireClient,System.String)">
+            <summary>
+            This method is called to get the state of an export worker process.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="workerKey">Contains the export worker key to find.</param>
+            <returns>Returns a <see cref="T:Vasont.Inspire.Models.Worker.WorkerStateModel"/> of type <see cref="T:Vasont.Inspire.Models.Transfers.MinimalExportStateModel"/>.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Components.ComponentExtensions.GetExportState(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Worker.WorkerStateModel)">
+            <summary>
+            This method is called to get the state of an export worker process.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="inputModel">Contains the <see cref="T:Vasont.Inspire.Models.Worker.WorkerStateModel"/> input.</param>
+            <returns>Returns a <see cref="T:Vasont.Inspire.Models.Worker.WorkerStateModel"/> of type <see cref="T:Vasont.Inspire.Models.Transfers.MinimalExportStateModel"/>.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Components.ComponentExtensions.UpdateComponentTags(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Components.ComponentTagModel)">
+            <summary>
+            Posts the component tags.
+            </summary>
+            <param name="client">The client.</param>
+            <param name="componentId">The component identifier.</param>
+            <param name="inputModel">The input model.</param>
+            <returns>Returns the updated <see cref="T:Vasont.Inspire.Models.Components.ComponentTagModel"/> object.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Components.ComponentExtensions.PostComponentTags(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Components.ComponentTagModel)">
+            <summary>
+            Posts the component tags.
+            </summary>
+            <param name="client">The client.</param>
+            <param name="componentId">The component identifier.</param>
+            <param name="inputModel">The input model.</param>
+            <returns>Returns the updated <see cref="T:Vasont.Inspire.Models.Components.ComponentTagModel"/> object.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Components.ComponentExtensions.RepairComponentRelationship(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.ComponentRelationModel)">
+            <summary>
+            This method is used to repair an invalid component relationship.
+            </summary>
+            <param name="client"><see cref="T:Vasont.Inspire.SDK.InspireClient"/> used to communication with the API endpoint.</param>
+            <param name="inputModel">The <see cref="T:Vasont.Inspire.Models.Components.ComponentRelationsQueryModel"/> input model.</param>
+            <returns>Returns a <see cref="T:Vasont.Inspire.Models.Components.ComponentRelationsResultModel"/> model.</returns>
+            <exception cref="T:System.ArgumentNullException">thrown if the model is not set.</exception>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Components.ComponentExtensions.AutoRepairComponentRelationships(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.ComponentAutoRepairRequestModel)">
+            <summary>
+            This method is used to repair an invalid component relationship.
+            </summary>
+            <param name="client"><see cref="T:Vasont.Inspire.SDK.InspireClient"/> used to communication with the API endpoint.</param>
+            <param name="inputModel">The <see cref="T:Vasont.Inspire.Models.Components.ComponentAutoRepairRequestModel"/> input model.</param>
+            <returns>Returns a <see cref="T:Vasont.Inspire.Models.Worker.MinimalWorkerStateModel`1"/> model.</returns>
+            <exception cref="T:System.ArgumentNullException">thrown if the model is not set.</exception>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentRelations(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)">
+            <summary>
+            Gets the component relations.
+            </summary>
+            <param name="client"><see cref="T:Vasont.Inspire.SDK.InspireClient"/> used to communication with the API endpoint.</param>
+            <param name="inputModel">The <see cref="T:Vasont.Inspire.Models.Components.ComponentRelationsQueryModel"/> input model.</param>
+            <returns>Returns a <see cref="T:Vasont.Inspire.Models.Components.ComponentRelationsResultModel"/> model.</returns>
+            <exception cref="T:System.ArgumentNullException">thrown if the model is not set.</exception>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentRelationsReport(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)">
+            <summary>
+            This method is used to get the relations for the specified component and return as a CSV formatted report file contents.
+            </summary>
+            <param name="client"><see cref="T:Vasont.Inspire.SDK.InspireClient"/> used to communication with the API endpoint.</param>
+            <param name="inputModel">The <see cref="T:Vasont.Inspire.Models.Components.ComponentRelationsQueryModel"/> input model.</param>
+            <returns>Returns a <see cref="T:Vasont.Inspire.Models.Components.ComponentRelationsResultModel"/> model.</returns>
+            <exception cref="T:System.ArgumentNullException">thrown if the model is not set.</exception>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentDependencies(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)">
+            <summary>
+            Gets the component dependencies.
+            </summary>
+            <param name="client"><see cref="T:Vasont.Inspire.SDK.InspireClient"/> used to communication with the API endpoint.</param>
+            <param name="inputModel">The <see cref="T:Vasont.Inspire.Models.Components.ComponentRelationsQueryModel"/> input model.</param>
+            <returns>Returns a <see cref="T:Vasont.Inspire.Models.Components.ComponentDependenciesResultModel"/> model.</returns>
+            <exception cref="T:System.ArgumentNullException">thrown if the model is not set.</exception>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentDependenciesReport(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)">
+            <summary>
+            This method is used to get the dependencies for the specified component and return as a CSV formatted report file contents.
+            </summary>
+            <param name="client"><see cref="T:Vasont.Inspire.SDK.InspireClient"/> used to communication with the API endpoint.</param>
+            <param name="inputModel">The <see cref="T:Vasont.Inspire.Models.Components.ComponentRelationsQueryModel"/> input model.</param>
+            <returns>Returns a <see cref="T:Vasont.Inspire.Models.Components.ComponentRelationsResultModel"/> model.</returns>
+            <exception cref="T:System.ArgumentNullException">thrown if the model is not set.</exception>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentBranchRelations(Vasont.Inspire.SDK.InspireClient,System.Int64)">
+            <summary>
+            This method is used to retrieve the branch relations for the specified component.
+            </summary>
+            <param name="client"><see cref="T:Vasont.Inspire.SDK.InspireClient"/> used to communication with the API endpoint.</param>
+            <param name="sourceComponentId">Contains the source component identity to retrieve branch relations.</param>
+            <returns>Returns a <see cref="T:System.Collections.Generic.List`1"/> model.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentBranches(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)">
+            <summary>
+            This method is used to get the branches for the specified component.
+            </summary>
+            <param name="client"><see cref="T:Vasont.Inspire.SDK.InspireClient"/> used to communication with the API endpoint.</param>
+            <param name="inputModel">The <see cref="T:Vasont.Inspire.Models.Components.ComponentRelationsQueryModel"/> input model.</param>
+            <returns>Returns a <see cref="T:Vasont.Inspire.Models.Components.ComponentRelationsResultModel"/> model.</returns>
+            <exception cref="T:System.ArgumentNullException">thrown if the model is not set.</exception>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentBranchesReport(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)">
+            <summary>
+            This method is used to get the branches for the specified component and return as a CSV formatted report file contents.
+            </summary>
+            <param name="client"><see cref="T:Vasont.Inspire.SDK.InspireClient"/> used to communication with the API endpoint.</param>
+            <param name="inputModel">The <see cref="T:Vasont.Inspire.Models.Components.ComponentRelationsQueryModel"/> input model.</param>
+            <returns>Returns a <see cref="T:Vasont.Inspire.Models.Components.ComponentRelationsResultModel"/> model.</returns>
+            <exception cref="T:System.ArgumentNullException">thrown if the model is not set.</exception>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentTranslations(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)">
+            <summary>
+            This method is used to get the translations for the specified component.
+            </summary>
+            <param name="client"><see cref="T:Vasont.Inspire.SDK.InspireClient"/> used to communication with the API endpoint.</param>
+            <param name="inputModel">The <see cref="T:Vasont.Inspire.Models.Components.ComponentRelationsQueryModel"/> input model.</param>
+            <returns>Returns a <see cref="T:Vasont.Inspire.Models.Components.ComponentRelationsResultModel"/> model.</returns>
+            <exception cref="T:System.ArgumentNullException">thrown if the model is not set.</exception>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentTranslationsReport(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)">
+            <summary>
+            This method is used to get the translations for the specified component and return as a CSV formatted report file contents.
+            </summary>
+            <param name="client"><see cref="T:Vasont.Inspire.SDK.InspireClient"/> used to communication with the API endpoint.</param>
+            <param name="inputModel">The <see cref="T:Vasont.Inspire.Models.Components.ComponentRelationsQueryModel"/> input model.</param>
+            <returns>Returns a <see cref="T:Vasont.Inspire.Models.Components.ComponentRelationsResultModel"/> model.</returns>
+            <exception cref="T:System.ArgumentNullException">thrown if the model is not set.</exception>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentHistory(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Versioning.ComponentHistoryQueryModel,System.Boolean)">
+            <summary>
+            This method is used to get the history for the specified component.
+            </summary>
+            <param name="client"><see cref="T:Vasont.Inspire.SDK.InspireClient"/> used to communication with the API endpoint.</param>
+            <param name="inputModel">The <see cref="T:Vasont.Inspire.Models.Versioning.ComponentHistoryQueryModel"/> input model.</param>
+            <param name="usePostMethod">Contains a value indicating whether the POST method is used in query.</param>
+            <returns>Returns a <see cref="T:Vasont.Inspire.Models.Versioning.ComponentHistoryResultModel"/> model.</returns>
+            <exception cref="T:System.ArgumentNullException">thrown if the model is not set.</exception>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentHistoryDetails(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Guid)">
+            <summary>
+            This method is used to get the history for the specified component.
+            </summary>
+            <param name="client"><see cref="T:Vasont.Inspire.SDK.InspireClient"/> used to communication with the API endpoint.</param>
+            <param name="componentId">Contains the component identity.</param>
+            <param name="changesetId">Contains the specific history changeset record identity.</param>
+            <returns>Returns a <see cref="T:Vasont.Inspire.Models.Versioning.ComponentHistoryResultModel"/> model.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Components.ComponentExtensions.RestoreComponentFromHistory(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Guid,Vasont.Inspire.Models.Versioning.RestoreOptionsModel)">
+            <summary>
+            This method is used to get the history for the specified component.
+            </summary>
+            <param name="client"><see cref="T:Vasont.Inspire.SDK.InspireClient"/> used to communication with the API endpoint.</param>
+            <param name="componentId">Contains the component identity.</param>
+            <param name="changesetId">Contains the specific history changeset record identity.</param>
+            <param name="inputModel">Contains the <see cref="T:Vasont.Inspire.Models.Versioning.RestoreOptionsModel"/> model.</param>
+            <returns>Returns a <see cref="T:Vasont.Inspire.Models.Versioning.ComponentHistoryResultModel"/> model.</returns>
+        </member>
+        <member name="T:Vasont.Inspire.SDK.Components.EditorExtensions">
+            <summary>
+            This extensions class contains methods for supporting and interacting with external-editor related API calls.
+            </summary>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Components.EditorExtensions.GetEditorComponent(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.EditorLoadModel)">
+            <summary>
+            This method is used to create an Inspire Editor record and lock for editing the specified XML component.
+            </summary>
+            <param name="client"><see cref="T:Vasont.Inspire.SDK.InspireClient"/> used to communication with the API endpoint.</param>
+            <param name="model">Contains the component load editor model.</param>
+            <returns>Returns the <see cref="T:Vasont.Inspire.Models.Components.MinimalEditorXmlModel"/> object that represents the editor record created.</returns>
+        </member>
+        <member name="T:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions">
+            <summary>
+            This class extends the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> class to include methods for calling
+            application API endpoints.
+            </summary>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetAttributes(Vasont.Inspire.SDK.InspireClient)">
+            <summary>
+            This method is used to retrieve and return attributes.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <returns>Returns a list of <see cref="T:Vasont.Inspire.Models.Configuration.AttributeModel"/> from the application.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetAttribute(Vasont.Inspire.SDK.InspireClient,System.Int64)">
+            <summary>
+            This Method used to retrieve and return a specific attribute.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="attributeId">Contains the attribute identity to retrieve metadata for.</param>
+            <returns>Returns a specific <see cref="T:Vasont.Inspire.Models.Configuration.AttributeModel"/> from the application.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.UpdateAttribute(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Configuration.AttributeModel)">
+            <summary>
+            This method is used to update an existing attribute.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="model">Contains the attribute model to update.</param>
+            <returns>Returns the updated <see cref="T:Vasont.Inspire.Models.Configuration.AttributeModel"/> model from the application.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.CreateAttribute(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Configuration.AttributeModel)">
+            <summary>
+            This Method is used to create a new attribute.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="model">Contains the attribute model to create.</param>
+            <returns>Returns a specific <see cref="T:Vasont.Inspire.Models.Configuration.AttributeModel"/> that was created.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RemoveAttribute(Vasont.Inspire.SDK.InspireClient,System.Int64)">
+            <summary>
+            This Method is used to create a new attribute.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="attributeId">Contains the attribute identity to delete.</param>
+            <returns>Returns the results of the action.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetProfileAttributes(Vasont.Inspire.SDK.InspireClient)">
+            <summary>
+            This method is used to retrieve a list of minimal profile attributes.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <returns>Returns a list of <see cref="T:Vasont.Inspire.Models.Components.Schema.MinimalProfileAttributeModel"/> from the application.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetProfileAttributeItems(Vasont.Inspire.SDK.InspireClient)">
+            <summary>
+            This method is used to retrieve a list of profile attribute items.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <returns>Returns a list of <see cref="T:Vasont.Inspire.Models.Components.Schema.ProfileAttributeItemModel"/> from the application.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetProfileAttribute(Vasont.Inspire.SDK.InspireClient,System.Int64)">
+            <summary>
+            This method is used to retrieve a specific profile attributes.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="attributeId">Contains the attribute identity to retrieve metadata for.</param>
+            <returns>Returns a specific <see cref="T:Vasont.Inspire.Models.Components.Schema.ProfileAttributeModel"/> from the application.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.UpdateProfileAttribute(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.Schema.ProfileAttributeModel)">
+            <summary>
+            This method is used to update an existing profile attribute.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="model">Contains the profile attribute model to update.</param>
+            <returns>Returns the updated <see cref="T:Vasont.Inspire.Models.Components.Schema.ProfileAttributeModel"/> model from the application.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.CreateProfileAttribute(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.Schema.ProfileAttributeModel)">
+            <summary>
+            This Method is used to create a new profile attribute.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="model">Contains the profile attribute model to create.</param>
+            <returns>Returns a specific <see cref="T:Vasont.Inspire.Models.Components.Schema.ProfileAttributeModel"/> that was created.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RemoveProfileAttribute(Vasont.Inspire.SDK.InspireClient,System.Int64)">
+            <summary>
+            This Method is used to create a new attribute.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="attributeId">Contains the attribute identity to delete.</param>
+            <returns>Returns the results of the action.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetSchemaStandards(Vasont.Inspire.SDK.InspireClient)">
+            <summary>
+            This method is used to retrieve a list of schema standards.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <returns>Returns a list of schema standards from the application.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetComponentTypes(Vasont.Inspire.SDK.InspireClient)">
+            <summary>
+            This method is used to retrieve a list of component types.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <returns>Returns a list of <see cref="T:Vasont.Inspire.Models.Components.ComponentTypeModel"/> from the application.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetComponentType(Vasont.Inspire.SDK.InspireClient,System.Int64)">
+            <summary>
+            This method is used to retrieve a specific component type.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="componentTypeId">Contains the component type identity to retrieve metadata for.</param>
+            <returns>Returns a specific <see cref="T:Vasont.Inspire.Models.Components.ComponentTypeModel"/> from the application.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.UpdateComponentType(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.ComponentTypeModel)">
+            <summary>
+            This method is used to update an existing component type.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="model">Contains the component type model to update.</param>
+            <returns>Returns the updated <see cref="T:Vasont.Inspire.Models.Components.ComponentTypeModel"/> model from the application.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.CreateComponentType(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.ComponentTypeModel)">
+            <summary>
+            This Method is used to create a new component type.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="model">Contains the component type model to create.</param>
+            <returns>Returns a specific <see cref="T:Vasont.Inspire.Models.Components.ComponentTypeModel"/> that was created.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RemoveComponentType(Vasont.Inspire.SDK.InspireClient,System.Int64)">
+            <summary>
+            This Method is used to remove a component type.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="componentTypeId">Contains the component type identity to delete.</param>
+            <returns>Returns the results of the action.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetElements(Vasont.Inspire.SDK.InspireClient)">
+            <summary>
+            This method is used to retrieve a list of elements.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <returns>Returns a list of <see cref="T:Vasont.Inspire.Models.Configuration.ElementModel"/> from the application.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetElement(Vasont.Inspire.SDK.InspireClient,System.Int64)">
+            <summary>
+            This method is used to retrieve a specific element.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="elementId">Contains the record identity to retrieve.</param>
+            <returns>Returns a specific <see cref="T:Vasont.Inspire.Models.Configuration.ElementModel"/> from the application.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.UpdateElement(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Configuration.ElementModel)">
+            <summary>
+            This method is used to update an existing element model.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="model">Contains the element model to update.</param>
+            <returns>Returns the updated <see cref="T:Vasont.Inspire.Models.Configuration.ElementModel"/> model from the application.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.CreateElement(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Configuration.ElementModel)">
+            <summary>
+            This Method is used to create a new element.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="model">Contains the element model to create.</param>
+            <returns>Returns a specific <see cref="T:Vasont.Inspire.Models.Configuration.ElementModel"/> that was created.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RemoveElement(Vasont.Inspire.SDK.InspireClient,System.Int64)">
+            <summary>
+            This Method is used to create a new attribute.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="elementId">Contains the element identity to delete.</param>
+            <returns>Returns the results of the action.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetExports(Vasont.Inspire.SDK.InspireClient)">
+            <summary>
+            This method is used to retrieve a list of exports.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <returns>Returns a list of <see cref="!:ExportModel"/> from the application.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetExport(Vasont.Inspire.SDK.InspireClient,System.Int64)">
+            <summary>
+            This method is used to retrieve a specific export.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="exportId">Contains the record identity to retrieve.</param>
+            <returns>Returns a specific <see cref="!:ExportModel"/> from the application.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.UpdateExport(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Transfers.ExportConfigurationModel)">
+            <summary>
+            This method is used to update an existing export model.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="model">Contains the export model to update.</param>
+            <returns>Returns the updated <see cref="!:ExportModel"/> model from the application.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.CreateExport(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Transfers.ExportConfigurationModel)">
+            <summary>
+            This Method is used to create a new export.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="model">Contains the export model to create.</param>
+            <returns>Returns a specific <see cref="T:Vasont.Inspire.Models.Configuration.ElementModel"/> that was created.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RemoveExport(Vasont.Inspire.SDK.InspireClient,System.Int64)">
+            <summary>
+            This Method is used to create remove a export.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="exportId">Contains the export identity to delete.</param>
+            <returns>Returns the results of the action.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetExportPlugins(Vasont.Inspire.SDK.InspireClient)">
+            <summary>
+            This method is used to retrieve a list of export plugins.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <returns>Returns a list of <see cref="T:Vasont.Inspire.Models.Plugins.PluginModel"/> from the application.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetExportPluginParameters(Vasont.Inspire.SDK.InspireClient,System.Int64)">
+            <summary>
+            This method is used to retrieve a list of export plugin parameters.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="pluginId">Contains the plugin identity to retrieve metadata for.</param>
+            <returns>Returns a list of <see cref="T:Vasont.Inspire.Models.Plugins.PluginParameterModel"/> from the application.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetExportComponentType(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Transfers.ExportType)">
+            <summary>
+            This method is used to retrieve a specific export component type selection model.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="componentTypeId">Contains the specific export component type.</param>
+            <param name="exportType">Contains the <see cref="T:Vasont.Inspire.Models.Transfers.ExportType"/> type that will be retrieved, Standard is default.</param>
+            <returns>Returns a list of <see cref="T:Vasont.Inspire.Models.Plugins.PluginParameterModel"/> from the application.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetLinkMethods(Vasont.Inspire.SDK.InspireClient)">
+            <summary>
+            This method is used to retrieve a list of link methods.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <returns>Returns a list of <see cref="T:Vasont.Inspire.Models.Configuration.LinkMethodModel"/> from the application.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetXmlLinkTypes(Vasont.Inspire.SDK.InspireClient)">
+            <summary>
+            This method is used to retrieve a list of XML link types.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <returns>Returns a list of <see cref="T:Vasont.Inspire.Models.Configuration.XmlLinkTypeModel"/> from the application.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetXmlLinkType(Vasont.Inspire.SDK.InspireClient,System.Int64)">
+            <summary>
+            This method is used to retrieve a specific XML link type.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="xmlLinkTypeId">Contains the record identity to retrieve.</param>
+            <returns>Returns a specific <see cref="T:Vasont.Inspire.Models.Configuration.XmlLinkTypeModel"/> from the application.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.UpdateXmlLinkType(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Configuration.XmlLinkTypeModel)">
+            <summary>
+            This method is used to update an existing XML link type model.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="model">Contains the model to update.</param>
+            <returns>Returns the updated <see cref="T:Vasont.Inspire.Models.Configuration.XmlLinkTypeModel"/> model from the application.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.CreateXmlLinkType(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Configuration.XmlLinkTypeModel)">
+            <summary>
+            This Method is used to create a new XML Link type.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="model">Contains the model to create.</param>
+            <returns>Returns a specific <see cref="T:Vasont.Inspire.Models.Configuration.XmlLinkTypeModel"/> that was created.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RemoveXmlLinkType(Vasont.Inspire.SDK.InspireClient,System.Int64)">
+            <summary>
+            This Method is used to remove a XML link type.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="xmlLinkTypeId">Contains the identity of record to delete.</param>
+            <returns>Returns the results of the action.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetRelations(Vasont.Inspire.SDK.InspireClient)">
+            <summary>
+            This method is used to retrieve a list of Relation types.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <returns>Returns a list of <see cref="T:Vasont.Inspire.Models.Configuration.RelationModel"/> from the application.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetRelation(Vasont.Inspire.SDK.InspireClient,System.Int64)">
+            <summary>
+            This method is used to retrieve a specific Relation type.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="relationId">Contains the record identity to retrieve.</param>
+            <returns>Returns a specific <see cref="T:Vasont.Inspire.Models.Configuration.XmlLinkTypeModel"/> from the application.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.UpdateRelation(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Configuration.RelationModel)">
+            <summary>
+            This method is used to update an existing relation model.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="model">Contains the model to update.</param>
+            <returns>Returns the updated <see cref="T:Vasont.Inspire.Models.Configuration.RelationModel"/> model from the application.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.CreateRelation(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Configuration.RelationModel)">
+            <summary>
+            This Method is used to create a new relation.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="model">Contains the model to create.</param>
+            <returns>Returns a specific <see cref="T:Vasont.Inspire.Models.Configuration.RelationModel"/> that was created.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RemoveRelation(Vasont.Inspire.SDK.InspireClient,System.Int64)">
+            <summary>
+            This Method is used to remove a relation.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="relationId">Contains the identity of record to delete.</param>
+            <returns>Returns the results of the action.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetTag(Vasont.Inspire.SDK.InspireClient,System.Int64)">
+            <summary>
+            This method is used to retrieve a specific tag.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="tagId">Contains the record identity to retrieve.</param>
+            <returns>Returns a specific <see cref="T:Vasont.Inspire.Models.Components.TagModel"/> from the application.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.UpdateTag(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.TagModel)">
+            <summary>
+            This method is used to update an existing tag.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="model">Contains the model to update.</param>
+            <returns>Returns the updated <see cref="T:Vasont.Inspire.Models.Components.TagModel"/> model from the application.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.CreateTag(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.TagModel)">
+            <summary>
+            This Method is used to create a new tag.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="model">Contains the model to create.</param>
+            <returns>Returns a specific <see cref="T:Vasont.Inspire.Models.Components.TagModel"/> that was created.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RemoveTag(Vasont.Inspire.SDK.InspireClient,System.Int64)">
+            <summary>
+            This Method is used to remove a tag.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="tagId">Contains the identity of record to delete.</param>
+            <returns>Returns the results of the action.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetProjectActivities(Vasont.Inspire.SDK.InspireClient)">
+            <summary>
+            This method is used to retrieve a list of project activities.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <returns>Returns a list of <see cref="T:Vasont.Inspire.Models.Projects.ProjectActivityModel"/> from the application.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetProjectActivity(Vasont.Inspire.SDK.InspireClient,System.Int64)">
+            <summary>
+            This method is used to retrieve a specific project activity.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="projectActivityId">Contains the record identity to retrieve.</param>
+            <returns>Returns a specific <see cref="T:Vasont.Inspire.Models.Projects.ProjectActivityModel"/> from the application.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.UpdateProjectActivity(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Projects.ProjectActivityModel)">
+            <summary>
+            This method is used to update an existing project activity.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="model">Contains the model to update.</param>
+            <returns>Returns the updated <see cref="T:Vasont.Inspire.Models.Projects.ProjectActivityModel"/> model from the application.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.CreateProjectActivity(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Projects.ProjectActivityModel)">
+            <summary>
+            This Method is used to create a new project activity.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="model">Contains the model to create.</param>
+            <returns>Returns a specific <see cref="T:Vasont.Inspire.Models.Projects.ProjectActivityModel"/> that was created.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RemoveProjectActivity(Vasont.Inspire.SDK.InspireClient,System.Int64)">
+            <summary>
+            This Method is used to remove a project activity.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="projectActivityId">Contains the identity of record to delete.</param>
+            <returns>Returns the results of the action.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetLanguages(Vasont.Inspire.SDK.InspireClient,System.Boolean)">
+            <summary>
+            This method is used to retrieve a list of languages.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="dictionaryOnly">Contains a value indicating whether the languages that are for editor dictionary only are returned.</param>
+            <returns>Returns a list of <see cref="T:Vasont.Inspire.Models.Common.LanguageModel"/> from the application.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetLanguage(Vasont.Inspire.SDK.InspireClient,System.String)">
+            <summary>
+            This method is used to retrieve a specific language.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="languageCode">Contains the record identity to retrieve.</param>
+            <returns>Returns a specific <see cref="T:Vasont.Inspire.Models.Common.LanguageModel"/> from the application.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.UpdateLanguage(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Common.LanguageModel)">
+            <summary>
+            This method is used to update an existing language.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="model">Contains the model to update.</param>
+            <returns>Returns the updated <see cref="T:Vasont.Inspire.Models.Common.LanguageModel"/> model from the application.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.CreateLanguage(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Common.LanguageModel)">
+            <summary>
+            This Method is used to create a new language.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="model">Contains the model to create.</param>
+            <returns>Returns a specific <see cref="T:Vasont.Inspire.Models.Common.LanguageModel"/> that was created.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RemoveLanguage(Vasont.Inspire.SDK.InspireClient,System.String)">
+            <summary>
+            This Method is used to remove a language.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="languageCode">Contains the identity of record to delete.</param>
+            <returns>Returns the results of the action.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetWebHookConfigurations(Vasont.Inspire.SDK.InspireClient)">
+            <summary>
+            This method is used to retrieve a list of web hook configurations.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <returns>Returns a list of <see cref="T:Vasont.Inspire.Models.Webhooks.WebhookConfigurationModel"/> from the application.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetWebHookConfiguration(Vasont.Inspire.SDK.InspireClient,System.Int64)">
+            <summary>
+            This method is used to retrieve a specific web hook configuration.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="webHookConfigurationId">Contains the record identity to retrieve.</param>
+            <returns>Returns a specific <see cref="T:Vasont.Inspire.Models.Webhooks.WebhookConfigurationModel"/> from the application.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.UpdateWebHookConfiguration(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Webhooks.WebhookConfigurationModel)">
+            <summary>
+            This method is used to update an existing web hook configuration.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="model">Contains the model to update.</param>
+            <returns>Returns the updated <see cref="T:Vasont.Inspire.Models.Webhooks.WebhookConfigurationModel"/> model from the application.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.CreateWebHookConfiguration(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Webhooks.WebhookConfigurationModel)">
+            <summary>
+            This Method is used to create a new web hook configuration.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="model">Contains the model to create.</param>
+            <returns>Returns a specific <see cref="T:Vasont.Inspire.Models.Common.LanguageModel"/> that was created.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RemoveWebHookConfiguration(Vasont.Inspire.SDK.InspireClient,System.String)">
+            <summary>
+            This Method is used to remove a web hook configuration.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="name">Contains the identity of record to delete.</param>
+            <returns>Returns the results of the action.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetFileExtensions(Vasont.Inspire.SDK.InspireClient)">
+            <summary>
+            This method is used to retrieve a list of file extensions.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <returns>Returns a list of <see cref="T:Vasont.Inspire.Models.Common.FileExtensionModel"/> from the application.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetFileExtension(Vasont.Inspire.SDK.InspireClient,System.Int64)">
+            <summary>
+            This method is used to retrieve a specific file extension configuration.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="extensionId">Contains the record identity to retrieve.</param>
+            <returns>Returns a specific <see cref="T:Vasont.Inspire.Models.Common.FileExtensionModel"/> from the application.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.UpdateFileExtension(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Common.FileExtensionModel)">
+            <summary>
+            This method is used to update an existing file extension.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="model">Contains the model to update.</param>
+            <returns>Returns the updated <see cref="T:Vasont.Inspire.Models.Common.FileExtensionModel"/> model from the application.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.CreateFileExtension(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Common.FileExtensionModel)">
+            <summary>
+            This Method is used to create a new file extension blacklist configuration.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="model">Contains the model to create.</param>
+            <returns>Returns a specific <see cref="T:Vasont.Inspire.Models.Common.FileExtensionModel"/> that was created.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RemoveFileExtension(Vasont.Inspire.SDK.InspireClient,System.Int64)">
+            <summary>
+            This Method is used to remove a file extension configuration.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="extensionId">Contains the identity of record to delete.</param>
+            <returns>Returns the results of the action.</returns>
+        </member>
+        <member name="T:Vasont.Inspire.SDK.Extensions.StreamExtensions">
+            <summary>
+            This class contains static extensions for the Stream object.
+            </summary>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Extensions.StreamExtensions.WriteMultiPartFormData(System.IO.Stream,System.Object,System.Collections.Generic.List{System.String},System.String,System.String,System.Text.Encoding)">
+            <summary>
+            This extension method is used to write a multi-part form post to a specified stream.
+            </summary>
+            <param name="formDataStream">Contains the form data stream to write the output to.</param>
+            <param name="formModel">Contains the form model object to serialize to the output.</param>
+            <param name="files">Contains a list of file paths to load and write to the form data stream.</param>
+            <param name="modelFormName">Contains the model form name used in the multi-part header formatting.</param>
+            <param name="boundary">Contains the boundary name for the multi-part data.</param>
+            <param name="encoding">Contains an optional encoding for string data. By default, encoding is UTF8.</param>
+        </member>
+        <member name="T:Vasont.Inspire.SDK.Folders.FolderExtensions">
+            <summary>
+            This class extends the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> class to include methods for calling 
+            folder API endpoints.
+            </summary>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Folders.FolderExtensions.GetFoldersByFolderId(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Boolean,Vasont.Inspire.Models.Security.PermissionFlags)">
+            <summary>
+            This method is used to return a list of folders that are children of the specified parent folder. 
+            If parent folder is not specified, a list of root folders will be returned.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="folderId">Contains the folder identity to retrieve child folders from, pass a value of zero to retrieve all folders.</param>
+            <param name="includeAllDescendantFolders">Contains a value to indicate whether or not to include all descendant folders.</param>
+            <param name="permissionFlag">Contains an optional <see cref="T:Vasont.Inspire.Models.Security.PermissionFlags"/> that will be used to filter the results of the query.</param>
+            <returns>Returns a list of <see cref="T:Vasont.Inspire.Models.Components.FolderBrowseModel"/> objects if found.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Folders.FolderExtensions.GetComponentsByFolderId(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Components.FolderComponentsQueryModel)">
+            <summary>
+            This method is used to return components that are stored within a specific folder matching a specific search criteria.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="folderId">Contains the folder identity to retrieve components from, pass a value of zero to retrieve all components.</param>
+            <param name="inputModel">Contains the <see cref="T:Vasont.Inspire.Models.Components.FolderComponentsQueryModel"/> input.</param>
+            <returns>Returns a <see cref="T:Vasont.Inspire.Models.Components.FolderComponentsResultModel"/> object if found.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Folders.FolderExtensions.GetAncestorSiblingFoldersByFolderId(Vasont.Inspire.SDK.InspireClient,System.Int64)">
+            <summary>
+            This method is used to return a list of folders including the specified folder, 
+            its ancestor folders, and corresponding sibling folders.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="folderId">Contains the folder identity.</param>
+            <returns>Returns a list of <see cref="T:Vasont.Inspire.Models.Components.FolderBrowseModel"/> objects if found.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Folders.FolderExtensions.GetFolderPermissions(Vasont.Inspire.SDK.InspireClient,System.Int64)">
+            <summary>
+            This method is used to return folder permission details.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="folderId">Contains the folder identity.</param>
+            <returns>Returns a <see cref="T:Vasont.Inspire.Models.Components.PermissionUpdateModel"/> object if found.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Folders.FolderExtensions.MoveFolder(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Int64)">
+            <summary>
+            This method is used to move a source folder to a target folder.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="sourceFolderId">Contains the source folder identity.</param>
+            <param name="targetFolderId">Contains the target folder identity to which to move this folder to.</param>
+            <returns>Returns a <see cref="T:Vasont.Inspire.Models.Components.FolderBrowseModel"/> object if found.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Folders.FolderExtensions.CreateFolder(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Components.FolderBrowseModel)">
+            <summary>
+            This method is used to create a new folder and return details about the newly created folder.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="targetFolderId">Contains the folder identity.</param>
+            <param name="inputModel">Contains the <see cref="T:Vasont.Inspire.Models.Components.FolderBrowseModel"/> input.</param>
+            <returns>Returns a <see cref="T:Vasont.Inspire.Models.Components.FolderBrowseModel"/> object if found.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Folders.FolderExtensions.ExportFolder(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Int64,System.Boolean)">
+            <summary>
+            This method is used to initiate an export request and return details about the successfully submitted export request.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="targetFolderId">Contains the folder identity.</param>
+            <param name="exportId">Contains the export identity value.</param>
+            <param name="includeSubFolders">Contains a flag indicating whether to include subfolders or not.</param>
+            <returns>Returns a <see cref="T:Vasont.Inspire.Models.Transfers.ExportRequestModel"/> object if found.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Folders.FolderExtensions.DeleteFolder(Vasont.Inspire.SDK.InspireClient,System.Int64)">
+            <summary>
+            This method is used to delete an existing folder.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="folderId">Contains the folder identity.</param>
+            <returns>Returns a boolean value indicating whether the action succeeded or not.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Folders.FolderExtensions.UpdateFolderPermissions(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Components.PermissionUpdateModel)">
+            <summary>
+            This method is used to update existing folder permissions.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="folderId">Contains the folder identity.</param>
+            <param name="inputModel">Contains the <see cref="T:Vasont.Inspire.Models.Components.PermissionUpdateModel"/> input.</param>
+            <returns>Returns the updated <see cref="T:Vasont.Inspire.Models.Components.PermissionUpdateModel"/> object.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Folders.FolderExtensions.UpdateFolder(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Components.FolderBrowseModel)">
+            <summary>
+            This method is used to update an existing folder.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="folderId">Contains the folder identity.</param>
+            <param name="inputModel">Contains the <see cref="T:Vasont.Inspire.Models.Components.FolderBrowseModel"/> input.</param>
+            <returns>Returns the updated <see cref="T:Vasont.Inspire.Models.Components.FolderBrowseModel"/> object.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Folders.FolderExtensions.RenameFolder(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Components.FolderBrowseModel)">
+            <summary>
+            This method is used to rename an existing folder.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="folderId">Contains the folder identity.</param>
+            <param name="inputModel">Contains the <see cref="T:Vasont.Inspire.Models.Components.FolderBrowseModel"/> input.</param>
+            <returns>Returns the renamed <see cref="T:Vasont.Inspire.Models.Components.FolderBrowseModel"/> object.</returns>
+        </member>
+        <member name="T:Vasont.Inspire.SDK.InspireClient">
+            <summary>
+            This class is the primary client from which interaction to the Inspire Web API shall be made.
+            </summary>
+        </member>
+        <member name="F:Vasont.Inspire.SDK.InspireClient.DelegationGrantTypeName">
+            <summary>
+            The delegation grant type name
+            </summary>
+        </member>
+        <member name="F:Vasont.Inspire.SDK.InspireClient.defaultTokenEndpoint">
+            <summary>
+            Contains the calculated default token endpoint.
+            </summary>
+        </member>
+        <member name="F:Vasont.Inspire.SDK.InspireClient.disposed">
+            <summary>
+            Contains a value indicating whether the class has been disposed.
+            </summary>
+        </member>
+        <member name="F:Vasont.Inspire.SDK.InspireClient.discovery">
+            <summary>
+            Contains a discovery result from the authority.
+            </summary>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.InspireClient.#ctor(Vasont.Inspire.SDK.InspireClientConfiguration)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> class.
+            </summary>
+            <param name="config">Contains an instance of the <see cref="T:Vasont.Inspire.SDK.InspireClientConfiguration"/> class that contains client configuration settings.</param>
+        </member>
+        <member name="P:Vasont.Inspire.SDK.InspireClient.Config">
+            <summary>
+            Gets the inspire client configuration.
+            </summary>
+        </member>
+        <member name="P:Vasont.Inspire.SDK.InspireClient.HasAuthenticated">
+            <summary>
+            Gets a value indicating whether the client has authenticated with the server at some point
+            </summary>
+        </member>
+        <member name="P:Vasont.Inspire.SDK.InspireClient.HasError">
+            <summary>
+            Gets a value indicating whether the client has an error.
+            </summary>
+        </member>
+        <member name="P:Vasont.Inspire.SDK.InspireClient.LastErrorResponse">
+            <summary>
+            Gets the last error response model from an internal RequestContent call.
+            </summary>
+        </member>
+        <member name="P:Vasont.Inspire.SDK.InspireClient.LastException">
+            <summary>
+            Gets the last exception handled within the client.
+            </summary>
+        </member>
+        <member name="P:Vasont.Inspire.SDK.InspireClient.TokenResponse">
+            <summary>
+            Gets or sets the client authentication token response.
+            </summary>
+        </member>
+        <member name="P:Vasont.Inspire.SDK.InspireClient.AccessToken">
+            <summary>
+            Gets the access token.
+            </summary>
+            <value>
+            The access token.
+            </value>
+        </member>
+        <member name="P:Vasont.Inspire.SDK.InspireClient.TokenEndpoint">
+            <summary>
+            Gets the token endpoint for the identity authority.
+            </summary>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.InspireClient.Authenticate(System.String)">
+            <summary>
+            Authenticates the client with the specified scopes in a synchronous manor.
+            </summary>
+            <param name="scopes">The scopes to use.</param>
+            <returns>Returns the result of the authentication.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.InspireClient.AuthenticateAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            This method is used to retrieve and authorize the client for back-channel communication to the Identity API.
+            </summary>
+            <param name="scopes">Contains the scopes that are requested for the client credentials authentication.</param>
+            <param name="cancellationToken">Contains an optional cancellation token.</param>
+            <returns>Returns a value indicating whether the authentication was successful.</returns>
+            <exception cref="T:Vasont.Inspire.SDK.InspireClientException">The exception is thrown if an issue occurs during discovery or client authentication.</exception>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.InspireClient.CreateRequest(System.String,System.Net.Http.HttpMethod,System.Boolean,System.Net.ICredentials,System.String)">
+            <summary>
+            This method is used to easily create a new WebRequest object for the Web API.
+            </summary>
+            <param name="relativeUri">Contains the relative Uri path of the web request to make against the Web API.</param>
+            <param name="method">Contains the HttpMethod request method object.</param>
+            <param name="noCache">Contains a value indicating whether the URL shall contain a parameter preventing the server from returning cached content.</param>
+            <param name="credentials">Contains optional credentials </param>
+            <param name="contentType">Contains optional content type.</param>
+            <returns>Returns a new WebRequest object to execute.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.InspireClient.CreateRequest(System.String,System.String,System.Boolean,System.Net.ICredentials,System.String)">
+            <summary>
+            This method is used to easily create a new WebRequest object for the Web API.
+            </summary>
+            <param name="relativeUri">Contains the relative Uri path of the web request to make against the Web API.</param>
+            <param name="method">Contains the request method as a string value.</param>
+            <param name="noCache">Contains a value indicating whether the URL shall contain a parameter preventing the server from returning cached content.</param>
+            <param name="credentials">Contains optional credentials </param>
+            <param name="contentType">Contains optional content type.</param>
+            <returns>Returns a new HttpWebRequest object to execute.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.InspireClient.RequestContent``2(System.Net.HttpWebRequest,``0)">
+            <summary>
+            This method is used to execute a web request and return the results of the request as a defined object type.
+            </summary>
+            <typeparam name="T">Contains the type of the object that is to be sent with the request.</typeparam>
+            <typeparam name="TOut">Contains the type of object that is returned from the request.</typeparam>
+            <param name="request">Contains the HttpWebRequest to execute.</param>
+            <param name="requestBodyModel">Contains the object to serialize and submit with the request.</param>
+            <returns>Returns the content of the request response as the specified object.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.InspireClient.RequestContent``1(System.Net.HttpWebRequest)">
+            <summary>
+            This method is used to execute a web request and return the results of the request as a defined object type.
+            </summary>
+            <typeparam name="TOut">Contains the type of object that is returned from the request.</typeparam>
+            <param name="request">Contains the HttpWebRequest to execute.</param>
+            <returns>Returns the content of the request response as the specified object.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.InspireClient.RequestContent``1(System.Net.HttpWebRequest,``0)">
+            <summary>
+            This method is used to execute a web request and return the results of the request as a string.
+            </summary>
+            <typeparam name="T">Contains the type of the object that is to be sent with the request.</typeparam>
+            <param name="request">Contains the HttpWebRequest to execute.</param>
+            <param name="requestBodyModel">Contains the object to serialize and submit with the request.</param>
+            <returns>Returns the content of the request response.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.InspireClient.RequestContent(System.Net.HttpWebRequest)">
+            <summary>
+            This method is used to execute a web request and return the results of the request as a string.
+            </summary>
+            <param name="request">Contains the HttpWebRequest to execute.</param>
+            <returns>Returns the content of the request response.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.InspireClient.Dispose">
+            <summary>
+            This method is called upon disposal of the client class.
+            </summary>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.InspireClient.Dispose(System.Boolean)">
+            <summary>
+            This method is called upon disposal of the client class.
+            </summary>
+            <param name="disposing">Contains a value indicating whether the class is currently being disposed.</param>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.InspireClient.ResetErrors">
+            <summary>
+            This method is used to clear any previous error objects.
+            </summary>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.InspireClient.RequestDiscoveryAsync(System.Uri,System.Threading.CancellationToken)">
+            <summary>
+            This method is used to contact an authority discovery endpoint for information for interacting with the authority.
+            </summary>
+            <param name="authorityUri">Contains the authority URI to contact.</param>
+            <param name="cancellationToken">Contains a cancellation token.</param>
+            <returns>Returns a <see cref="T:IdentityModel.Client.DiscoveryDocumentResponse"/> object when successful.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.InspireClient.RequestClientCredentialsAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Requests the client credentials.
+            </summary>
+            <param name="scopes">The scopes.</param>
+            <param name="cancellationToken">The cancellation token.</param>
+            <returns>Returns a <see cref="P:Vasont.Inspire.SDK.InspireClient.TokenResponse"/> object.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.InspireClient.RequestDelegationAsync(System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            This method is used to request a delegation token from the identity server that supports the custom grant type of "delegation".
+            </summary>
+            <param name="scopes">The scopes.</param>
+            <param name="delegatedAccessToken">Contains the delegated access token.</param>
+            <param name="cancellationToken">The cancellation token.</param>
+            <returns>Returns a new token response from the request.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.InspireClient.RequestResourceOwnerPasswordAsync(System.String,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Request the resource owner credentials.
+            </summary>
+            <param name="userName">Contains the user name.</param>
+            <param name="password">Contains the user password.</param>
+            <param name="scopes">Contains the scopes.</param>
+            <param name="cancellationToken">Contains a cancellation token.</param>
+            <returns>Returns a <see cref="P:Vasont.Inspire.SDK.InspireClient.TokenResponse"/> object.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.InspireClient.ResetSession">
+            <summary>
+            This method is used to reset session-related fields.
+            </summary>
+        </member>
+        <member name="T:Vasont.Inspire.SDK.ClientAuthenticationMethods">
+            <summary>
+            Contains an enumerated list of SDK client authentication methods.
+            </summary>
+        </member>
+        <member name="F:Vasont.Inspire.SDK.ClientAuthenticationMethods.ClientCredentials">
+            <summary>
+            The client shall authenticate with a client secret.
+            </summary>
+        </member>
+        <member name="F:Vasont.Inspire.SDK.ClientAuthenticationMethods.ResourceOwnerPassword">
+            <summary>
+            The client shall authenticate with the resource owner using a user id and password.
+            </summary>
+            <remarks>
+            The spec recommends using the resource owner password grant only for "trusted" (or legacy) applications.
+            </remarks>
+        </member>
+        <member name="F:Vasont.Inspire.SDK.ClientAuthenticationMethods.Delegation">
+            <summary>
+            This method shall allow a client token to be exchanged for another from the authority for client delegation with another API.
+            </summary>
+        </member>
+        <member name="T:Vasont.Inspire.SDK.InspireClientConfiguration">
+            <summary>
+            This class contains inspire client SDK configuration options.
+            </summary>
+        </member>
+        <member name="F:Vasont.Inspire.SDK.InspireClientConfiguration.DefaultClientId">
+            <summary>
+            Contains the default inspire SDK client id.
+            </summary>
+        </member>
+        <member name="F:Vasont.Inspire.SDK.InspireClientConfiguration.DefaultAuthorityUrl">
+            <summary>
+            Contains the default authority URL.
+            </summary>
+        </member>
+        <member name="F:Vasont.Inspire.SDK.InspireClientConfiguration.DefaultTargetResourceScope">
+            <summary>
+            Contains the default inspire resource scope name.
+            </summary>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.InspireClientConfiguration.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Vasont.Inspire.SDK.InspireClientConfiguration"/> class.
+            </summary>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.InspireClientConfiguration.#ctor(System.String,Vasont.Inspire.SDK.ClientAuthenticationMethods,System.String,System.String,System.String,System.String,System.String,System.Boolean,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Vasont.Inspire.SDK.InspireClientConfiguration"/> class.
+            </summary>
+            <param name="clientId">Contains the client identity to use for authentication.</param>
+            <param name="clientAuthenticationMethod">Contains an optional client authentication method.</param>
+            <param name="authorityUri">Contains the authority URI that will validate the client credentials and produce access token.</param>
+            <param name="resourceUri">Contains the API resource URI that will be accessed by the client.</param>
+            <param name="clientSecret">Contains an optional client secret key for client credential authentication method.</param>
+            <param name="userId">Contains the user id used for password authentication method.</param>
+            <param name="password">Contains the user password used for password authentication method.</param>
+            <param name="useDiscovery">Contains a value indicating whether the authority discovery endpoint will be used for token endpoint lookup.</param>
+            <param name="delegatedAccessToken">Contains an optional access token passed from the client software to be used in communication with the backchannel created within the SDK library.</param>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.InspireClientConfiguration.#ctor(System.String,Vasont.Inspire.SDK.ClientAuthenticationMethods,System.Uri,System.Uri,System.String,System.String,System.String,System.Boolean,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Vasont.Inspire.SDK.InspireClientConfiguration"/> class.
+            </summary>
+            <param name="clientId">Contains the client identity to use for authentication.</param>
+            <param name="clientAuthenticationMethod">Contains an optional client authentication method.</param>
+            <param name="authorityUri">Contains the authority URI that will validate the client credentials and produce access token.</param>
+            <param name="resourceUri">Contains the API resource URI that will be accessed by the client.</param>
+            <param name="clientSecret">Contains an optional client secret key for client credential authentication method.</param>
+            <param name="userId">Contains the user id used for password authentication method.</param>
+            <param name="password">Contains the user password used for password authentication method.</param>
+            <param name="useDiscovery">Contains a value indicating whether the authority discovery endpoint will be used for token endpoint lookup.</param>
+            <param name="delegatedAccessToken">Contains an optional access token passed from the client software to be used in communication with the backchannel created within the SDK library.</param>
+        </member>
+        <member name="P:Vasont.Inspire.SDK.InspireClientConfiguration.ClientId">
+            <summary>
+            Gets or sets the SDK client identity.
+            </summary>
+        </member>
+        <member name="P:Vasont.Inspire.SDK.InspireClientConfiguration.AuthenticationMethod">
+            <summary>
+            Gets or sets the client authentication method used.
+            </summary>
+        </member>
+        <member name="P:Vasont.Inspire.SDK.InspireClientConfiguration.AuthorityUri">
+            <summary>
+            Gets or sets the SSO Authority URI.
+            </summary>
+        </member>
+        <member name="P:Vasont.Inspire.SDK.InspireClientConfiguration.UseDiscovery">
+            <summary>
+            Gets or sets a value indicating whether the authority discovery endpoint will be used for token endpoint lookup.
+            </summary>
+        </member>
+        <member name="P:Vasont.Inspire.SDK.InspireClientConfiguration.ResourceUri">
+            <summary>
+            Gets or sets the API resource URI.
+            </summary>
+        </member>
+        <member name="P:Vasont.Inspire.SDK.InspireClientConfiguration.TargetResourceScopes">
+            <summary>
+            Gets a list of target resource scopes.
+            </summary>
+        </member>
+        <member name="P:Vasont.Inspire.SDK.InspireClientConfiguration.ClientSecret">
+            <summary>
+            Gets or sets the client secret value used for client credential authentication.
+            </summary>
+        </member>
+        <member name="P:Vasont.Inspire.SDK.InspireClientConfiguration.UserId">
+            <summary>
+            Gets or sets the user name used for password client authentication.
+            </summary>
+        </member>
+        <member name="P:Vasont.Inspire.SDK.InspireClientConfiguration.Password">
+            <summary>
+            Gets or sets the password used for password client authentication.
+            </summary>
+        </member>
+        <member name="P:Vasont.Inspire.SDK.InspireClientConfiguration.DelegatedAccessToken">
+            <summary>
+            Gets or sets the client access token.
+            </summary>
+            <value>
+            The client access token.
+            </value>
+        </member>
+        <member name="P:Vasont.Inspire.SDK.InspireClientConfiguration.RoutePrefix">
+            <summary>
+            Gets or sets an optional URI route prefix to add to all requests. 
+            </summary>
+            <remarks>This was added for backwards compatibility and may not remain in future releases.</remarks>
+        </member>
+        <member name="T:Vasont.Inspire.SDK.InspireClientException">
+            <summary>
+            This class extends the default client exception to include additional configuration detail.
+            </summary>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.InspireClientException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Vasont.Inspire.SDK.InspireClientException"/> class.
+            </summary>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.InspireClientException.#ctor(Vasont.Inspire.SDK.InspireClientConfiguration,System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Vasont.Inspire.SDK.InspireClientException"/> class.
+            </summary>
+            <param name="config">Contains the optional inspire client configuration settings.</param>
+            <param name="message">Contains a message.</param>
+            <param name="innerException">Contains an optional inner exception.</param>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.InspireClientException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Vasont.Inspire.SDK.InspireClientException"/> class.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.InspireClientException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Vasont.Inspire.SDK.InspireClientException"/> class.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">The exception that is the cause of the current exception, or a null reference (Nothing in Visual Basic) if no inner exception is specified.</param>
+        </member>
+        <member name="P:Vasont.Inspire.SDK.InspireClientException.ClientConfiguration">
+            <summary>
+            Gets the inspire client configuration settings.
+            </summary>
+        </member>
+        <member name="T:Vasont.Inspire.SDK.Projects.ProjectExtensions">
+            <summary>
+            This class extends the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> class to include methods for calling 
+            project API endpoints.
+            </summary>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Projects.ProjectExtensions.GetProjects(Vasont.Inspire.SDK.InspireClient)">
+            <summary>
+            This method retrieves the projects that the specified user is assigned membership and/or ownership.
+            </summary>
+            <param name="client"><see cref="T:Vasont.Inspire.SDK.InspireClient"/> used to communication with the API endpoint.</param>
+            <returns>Returns a list of <see cref="T:Vasont.Inspire.Models.Projects.ProjectModel"/> models.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Projects.ProjectExtensions.GetProject(Vasont.Inspire.SDK.InspireClient,System.Int64)">
+            <summary>
+            This method is used to return a project within the system.
+            </summary>
+            <param name="client"><see cref="T:Vasont.Inspire.SDK.InspireClient"/> used to communication with the API endpoint.</param>
+            <param name="projectId">Contains the identity for a project to find.</param>
+            <returns>Returns a <see cref="T:Vasont.Inspire.Models.Projects.ProjectModel"/> if found.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Projects.ProjectExtensions.GetRecentlyOpenedProjects(Vasont.Inspire.SDK.InspireClient,System.Int32)">
+            <summary>
+            This method retrieves the projects that the specified user has recently opened.
+            </summary>
+            <param name="client"><see cref="T:Vasont.Inspire.SDK.InspireClient"/> used to communication with the API endpoint.</param>
+            <param name="maximumResults">A value indicating the maximum number of results to return</param>
+            <returns>Returns a list of <see cref="T:Vasont.Inspire.Models.Projects.ProjectModel"/> models.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Projects.ProjectExtensions.GetAssignedProjects(Vasont.Inspire.SDK.InspireClient)">
+            <summary>
+            This method is used to return projects within the system where the given userId is a member.
+            </summary>
+            <param name="client"><see cref="T:Vasont.Inspire.SDK.InspireClient"/> used to communication with the API endpoint.</param>
+            <returns>Returns a list of <see cref="T:Vasont.Inspire.Models.Projects.ProjectModel"/> models.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Projects.ProjectExtensions.GetAvailableParticipants(Vasont.Inspire.SDK.InspireClient,System.Int64)">
+            <summary>
+            This method is used to return a list of available participants.
+            </summary>
+            <param name="client"><see cref="T:Vasont.Inspire.SDK.InspireClient"/> used to communication with the API endpoint.</param>
+            <param name="projectId">Contains the identity for a project to find.</param>
+            <returns>Returns a list of <see cref="T:Vasont.Inspire.Models.Security.MinimalUserModel"/> models.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Projects.ProjectExtensions.GetActivities(Vasont.Inspire.SDK.InspireClient)">
+            <summary>
+            This method is used to retrieve all the available project activities.
+            </summary>
+            <param name="client"><see cref="T:Vasont.Inspire.SDK.InspireClient"/> used to communication with the API endpoint.</param>
+            <returns>Returns a list of <see cref="T:Vasont.Inspire.Models.Projects.ProjectActivityModel"/> models.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Projects.ProjectExtensions.GetProjectAssignments(Vasont.Inspire.SDK.InspireClient,System.Int64)">
+            <summary>
+            This method is used to return project assignments within the system that are associated with a project.
+            </summary>
+            <param name="client"><see cref="T:Vasont.Inspire.SDK.InspireClient"/> used to communication with the API endpoint.</param>
+            <param name="projectId">Contains the identity of the project that is being searched for assignments.</param>
+            <returns>Returns a list of <see cref="T:Vasont.Inspire.Models.Projects.ProjectAssignmentModel"/> models.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Projects.ProjectExtensions.DeleteProject(Vasont.Inspire.SDK.InspireClient,System.Int64)">
+            <summary>
+            This method is used to delete an existing project.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="projectId">Contains the project identity.</param>
+            <returns>Returns a boolean value indicating whether the action succeeded or not.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Projects.ProjectExtensions.DeleteProjectParticipant(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Projects.ProjectParticipantModel)">
+            <summary>
+            This method is used to delete a project participant.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="projectId">Contains the project identity.</param>
+            <param name="model">Contains the <see cref="T:Vasont.Inspire.Models.Projects.ProjectParticipantModel"/> that will identify which participant to delete.</param>
+            <returns>Returns a boolean value indicating whether the action succeeded or not.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Projects.ProjectExtensions.DeleteProjectAssignment(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Int64)">
+            <summary>
+            This method is used to delete a project assignment.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="projectId">Contains the identity of the project in which the assignment will be deleted.</param>
+            <param name="projectAssignmentId">Contains the project assignment identity to delete.</param>
+            <returns>Returns a boolean value indicating whether the action succeeded or not.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Projects.ProjectExtensions.DeleteProjectAssignmentComponent(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Int64,System.Int64)">
+            <summary>
+            This method is used to remove a component from a project assignment.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="projectId">Contains the identity of the project.</param>
+            <param name="projectAssignmentId">Contains the identity of the project assignment.</param>
+            <param name="componentId">Contains the identity of the component that will be removed from the assignment.</param>
+            <returns>Returns a boolean value indicating whether the action succeeded or not.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Projects.ProjectExtensions.DeleteProjectFolder(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Projects.ProjectFolderItemModel)">
+            <summary>
+            This method is used to delete a project folder item model.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="projectId">Contains the identity of the parent project.</param>
+            <param name="model">Contains the existing <see cref="T:Vasont.Inspire.Models.Projects.ProjectFolderItemModel"/> to delete.</param>
+            <returns>Returns a boolean value indicating whether the action succeeded or not.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Projects.ProjectExtensions.CreateProject(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Projects.ProjectModel)">
+            <summary>
+            This method is used to create a new project.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="inputModel">Contains the <see cref="T:Vasont.Inspire.Models.Projects.ProjectModel"/> input.</param>
+            <returns>Returns the <see cref="T:Vasont.Inspire.Models.Projects.ProjectModel"/> object if found.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Projects.ProjectExtensions.CreateProjectParticipants(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Collections.Generic.List{Vasont.Inspire.Models.Projects.ProjectParticipantModel})">
+            <summary>
+            This method is used to add project participants.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="projectId">Contains the identity of the project that will have its participants added.</param>
+            <param name="models">Contains a list of <see cref="T:Vasont.Inspire.Models.Projects.ProjectParticipantModel"/> related to the project that will be added.</param>
+            <returns>Returns a list of newly created <see cref="T:Vasont.Inspire.Models.Projects.ProjectParticipantModel"/> objects.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Projects.ProjectExtensions.CreateProjectAssignment(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Projects.ProjectAssignmentModel)">
+            <summary>
+            This method is used to create a new project assignment.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="projectId">Contains the identity of the project in which the assignment will be created.</param>
+            <param name="model">Contains a <see cref="T:Vasont.Inspire.Models.Projects.ProjectAssignmentModel"/> with details about project assignments.</param>
+            <returns>Returns the newly created <see cref="T:Vasont.Inspire.Models.Projects.ProjectAssignmentModel"/> object.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Projects.ProjectExtensions.CreateProjectFolder(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Projects.ProjectFolderItemModel)">
+            <summary>
+            This method is used to create a project folder item model.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="projectId">Contains the identity of the parent project.</param>
+            <param name="model">Contains a <see cref="T:Vasont.Inspire.Models.Projects.ProjectFolderItemModel"/> to create.</param>
+            <returns>Returns the newly created <see cref="T:Vasont.Inspire.Models.Projects.ProjectFolderItemModel"/> object.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Projects.ProjectExtensions.AddComponentsToFolder(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Int64,System.Collections.Generic.List{Vasont.Inspire.Models.Components.MinimalComponentModel})">
+            <summary>
+            This method is used to add components to an existing folder.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="projectId">Contains the identity of the parent project.</param>
+            <param name="folderId">Contains the identity of the project folder.</param>
+            <param name="models">A list of <see cref="T:Vasont.Inspire.Models.Components.MinimalComponentModel"/> objects.</param>
+            <returns>Returns a list of <see cref="T:Vasont.Inspire.Models.Components.MinimalComponentModel"/> objects.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Projects.ProjectExtensions.ExportComponents(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Int64,System.Boolean,System.Int64)">
+            <summary>
+            This method is used to request an export process for one or more components.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="projectId">Contains the identity of the project.</param>
+            <param name="folderId">Contains the identity of the project folder.</param>
+            <param name="includeSubFolders">Contains a value indicating whether components in descendant sub-folders should be exported.</param>
+            <param name="exportId">Contains the export identity.</param>
+            <returns>The <see cref="T:Vasont.Inspire.Models.Transfers.ExportRequestModel"/> object with information about the export process.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Projects.ProjectExtensions.UpdateProject(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Projects.ProjectModel)">
+            <summary>
+            This method is used to update an existing project.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="projectId">Contains the identity of the project to update.</param>
+            <param name="inputModel">Contains the <see cref="T:Vasont.Inspire.Models.Projects.ProjectModel"/> input.</param>
+            <returns>Returns the updated <see cref="T:Vasont.Inspire.Models.Projects.ProjectModel"/> object.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Projects.ProjectExtensions.UpdateProjectParticipants(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Collections.Generic.List{Vasont.Inspire.Models.Projects.ProjectParticipantModel})">
+            <summary>
+            This method is used to update project participants.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="projectId">Contains the identity of the project that will have its participants updated.</param>
+            <param name="models">Contains a list of <see cref="T:Vasont.Inspire.Models.Projects.ProjectParticipantModel"/> related to the project.</param>
+            <returns>Returns a list of <see cref="T:Vasont.Inspire.Models.Projects.ProjectParticipantModel"/> objects.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Projects.ProjectExtensions.UpdateProjectAssignment(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Int64,Vasont.Inspire.Models.Projects.ProjectAssignmentModel)">
+            <summary>
+            This method is used to update a project assignment.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="projectId">Contains the identity of the project.</param>
+            <param name="projectAssignmentId">Contains the identity of the project assignment to update.</param>
+            <param name="model">Contains the <see cref="T:Vasont.Inspire.Models.Projects.ProjectAssignmentModel"/> object.</param>
+            <returns>Returns the <see cref="T:Vasont.Inspire.Models.Projects.ProjectAssignmentModel"/> object.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Projects.ProjectExtensions.UpdateProjectAssignmentCompletionStatus(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Int64,Vasont.Inspire.Models.Projects.ProjectAssignmentModel)">
+            <summary>
+            This method is used to update a project assignment completion status.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="projectId">Contains the identity of the project.</param>
+            <param name="projectAssignmentId">Contains the identity of the project assignment to update.</param>
+            <param name="model">Contains the <see cref="T:Vasont.Inspire.Models.Projects.ProjectAssignmentModel"/> object.</param>
+            <returns>Returns the <see cref="T:Vasont.Inspire.Models.Projects.ProjectAssignmentModel"/> object.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Projects.ProjectExtensions.RenameProjectFolder(Vasont.Inspire.SDK.InspireClient,System.Int64,System.String,Vasont.Inspire.Models.Projects.ProjectFolderItemModel)">
+            <summary>
+            This method is used to rename a project folder.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="projectId">Contains the identity of the project.</param>
+            <param name="itemId">Contains the identity of the folder item object.</param>
+            <param name="model">Contains the <see cref="T:Vasont.Inspire.Models.Projects.ProjectFolderItemModel"/> object.</param>
+            <returns>Returns the <see cref="T:Vasont.Inspire.Models.Projects.ProjectFolderItemModel"/> object.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Projects.ProjectExtensions.MoveProjectFolder(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Projects.ProjectFolderItemModel,System.Int64,System.String,System.String)">
+            <summary>
+            This method is used to move a project folder to another target folder.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="model">Contains the existing project folder item model to move.</param>
+            <param name="projectId">Contains the identity of the parent project.</param>
+            <param name="itemId">Contains the identity of the folder item object.</param>
+            <param name="targetFolderId">Contains the new target folder of the folder item.</param>
+            <returns>Returns the <see cref="T:Vasont.Inspire.Models.Projects.ProjectFolderItemModel"/> object.</returns>
+        </member>
+        <member name="T:Vasont.Inspire.SDK.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Vasont.Inspire.SDK.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Vasont.Inspire.SDK.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Vasont.Inspire.SDK.Properties.Resources.AccessMethodRequiresTokenErrorText">
+            <summary>
+              Looks up a localized string similar to The specified access method requires an access token be specified in the configuration..
+            </summary>
+        </member>
+        <member name="P:Vasont.Inspire.SDK.Properties.Resources.IntrospectionConfigNeededErrorText">
+            <summary>
+              Looks up a localized string similar to An introspection endpoint must be specified to verify client access token access. Either enable discovery or specify an introspection endpoint in configuration..
+            </summary>
+        </member>
+        <member name="P:Vasont.Inspire.SDK.Properties.Resources.InvalidEditorRequestMissingComponentErrorText">
+            <summary>
+              Looks up a localized string similar to A component identity or unique file name must be specified in the editor request..
+            </summary>
+        </member>
+        <member name="P:Vasont.Inspire.SDK.Properties.Resources.InvalidRequestTypeErrorText">
+            <summary>
+              Looks up a localized string similar to Request method must be POST, PUT, or DELETE.
+            </summary>
+        </member>
+        <member name="P:Vasont.Inspire.SDK.Properties.Resources.TokenIntrospectionInvalidErrorText">
+            <summary>
+              Looks up a localized string similar to The access token specified was not valid..
+            </summary>
+        </member>
+        <member name="T:Vasont.Inspire.SDK.Review.ReviewExtensions">
+            <summary>
+            This class contains extension methods for calling component review related API endpoints.
+            </summary>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Review.ReviewExtensions.GetReview(Vasont.Inspire.SDK.InspireClient,System.Int64)">
+            <summary>
+            This method is used to retrieve a specific review model.
+            </summary>
+            <param name="client"><see cref="T:Vasont.Inspire.SDK.InspireClient"/> used to communication with the API endpoint.</param>
+            <param name="reviewId">Contains the unique identity of the review.</param>
+            <returns>Returns a <see cref="T:Vasont.Inspire.Models.Reviews.ReviewModel"/> model if found.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Review.ReviewExtensions.GetReviewEdit(Vasont.Inspire.SDK.InspireClient,System.Int64)">
+            <summary>
+            This method is used to retrieve a specific edit review model.
+            </summary>
+            <param name="client"><see cref="T:Vasont.Inspire.SDK.InspireClient"/> used to communication with the API endpoint.</param>
+            <param name="reviewId">Contains the unique identity of the review.</param>
+            <returns>Returns a <see cref="T:Vasont.Inspire.Models.Reviews.ReviewerEditModel"/> model if found.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Review.ReviewExtensions.GetReviewDetail(Vasont.Inspire.SDK.InspireClient,System.Int64)">
+            <summary>
+            This method is used to retrieve a specific detailed review model.
+            </summary>
+            <param name="client"><see cref="T:Vasont.Inspire.SDK.InspireClient"/> used to communication with the API endpoint.</param>
+            <param name="reviewId">Contains the unique identity of the review.</param>
+            <returns>Returns a <see cref="T:Vasont.Inspire.Models.Reviews.ReviewDetailModel"/> model if found.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Review.ReviewExtensions.GetReviews(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Reviews.ReviewBrowseQueryModel)">
+            <summary>
+            This method is used to retrieve a reviews browse result.
+            </summary>
+            <param name="client"><see cref="T:Vasont.Inspire.SDK.InspireClient"/> used to communication with the API endpoint.</param>
+            <param name="model">Contains the model for review browsing.</param>
+            <returns>Returns a list of <see cref="T:Vasont.Inspire.Models.Reviews.ReviewBrowseResultModel"/> objects.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Review.ReviewExtensions.GetReviewComponents(Vasont.Inspire.SDK.InspireClient,System.Int64)">
+            <summary>
+            This method is used to retrieve a list of associated review components for the specified review.
+            </summary>
+            <param name="client"><see cref="T:Vasont.Inspire.SDK.InspireClient"/> used to communication with the API endpoint.</param>
+            <param name="reviewId">Contains the review identity.</param>
+            <returns>Returns a list of <see cref="T:Vasont.Inspire.Models.Reviews.ReviewComponentModel"/> objects.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Review.ReviewExtensions.GetReviewComponent(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Int64)">
+            <summary>
+            This method is used to retrieve a specific review component specified.
+            </summary>
+            <param name="client"><see cref="T:Vasont.Inspire.SDK.InspireClient"/> used to communication with the API endpoint.</param>
+            <param name="reviewId">Contains the review identity.</param>
+            <param name="reviewComponentId">Contains the review component identity to retrieve.</param>
+            <returns>Returns the review component <see cref="T:Vasont.Inspire.Models.Reviews.ReviewComponentModel"/> object.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Review.ReviewExtensions.GetUserReviewAssignments(Vasont.Inspire.SDK.InspireClient)">
+            <summary>
+            This method is used to return active reviews within the system that are associated with the user.
+            </summary>
+            <param name="client"><see cref="T:Vasont.Inspire.SDK.InspireClient"/> used to communication with the API endpoint.</param>
+            <returns>Returns a list of <see cref="T:Vasont.Inspire.Models.Reviews.ReviewAssignmentModel"/> models if found.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Review.ReviewExtensions.GetReviewCoordinators(Vasont.Inspire.SDK.InspireClient)">
+            <summary>
+            This REST endpoint retrieves the users that have the permissions to create reviews.
+            </summary>
+            <param name="client"><see cref="T:Vasont.Inspire.SDK.InspireClient"/> used to communication with the API endpoint.</param>
+            <returns>Returns a <see cref="T:Vasont.Inspire.Models.Reviews.ReviewDetailModel"/> model if found.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Review.ReviewExtensions.UpdateReview(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Reviews.ReviewModel)">
+            <summary>
+            This method is used to update the review.
+            </summary>
+            <param name="client"><see cref="T:Vasont.Inspire.SDK.InspireClient"/> used to communication with the API endpoint.</param>
+            <param name="model">Contains the review model to update.</param>
+            <returns>Returns a list of <see cref="T:Vasont.Inspire.Models.Reviews.ReviewModel"/> objects.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Review.ReviewExtensions.UpdateReviewComponents(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Reviews.ReviewChangedComponentQueryModel)">
+            <summary>
+            This method is used to return review components within a review that have been updated after a specified date.
+            </summary>
+            <param name="client"><see cref="T:Vasont.Inspire.SDK.InspireClient"/> used to communication with the API endpoint.</param>
+            <param name="model">Contains the changed components query model.</param>
+            <returns>Returns a list of <see cref="T:Vasont.Inspire.Models.Workflow.WorkflowTemplateModel"/> objects.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Review.ReviewExtensions.UpdateReviewComponentState(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Int64,System.Boolean)">
+            <summary>
+            This REST method is used to update a review component states.
+            </summary>
+            <param name="client"><see cref="T:Vasont.Inspire.SDK.InspireClient"/> used to communication with the API endpoint.</param>
+            <param name="reviewId">Contains the identity of the review to update.</param>
+            <param name="reviewComponentId">Contains the identity of the review component.</param>
+            <param name="completed">Contains a value indicating whether the review component should be completed.</param>
+            <returns>Returns a list of <see cref="T:Vasont.Inspire.Models.Workflow.WorkflowTemplateModel"/> objects.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Review.ReviewExtensions.CreateReview(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Reviews.ReviewModel)">
+            <summary>
+            This method is used to create a new review.
+            </summary>
+            <param name="client"><see cref="T:Vasont.Inspire.SDK.InspireClient"/> used to communication with the API endpoint.</param>
+            <param name="model">Contains the review model to create the new review.</param>
+            <returns>Returns a list of <see cref="T:Vasont.Inspire.Models.Workflow.WorkflowTemplateModel"/> objects.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Review.ReviewExtensions.CompleteReviewerSession(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Reviews.ReviewModel)">
+            <summary>
+            This method is used to complete a reviewer session.
+            </summary>
+            <param name="client"><see cref="T:Vasont.Inspire.SDK.InspireClient"/> used to communication with the API endpoint.</param>
+            <param name="model">Contains the review model to create the new review.</param>
+            <returns>Returns a list of <see cref="T:Vasont.Inspire.Models.Workflow.WorkflowTemplateModel"/> objects.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Review.ReviewExtensions.CompleteReview(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Reviews.ReviewModel)">
+            <summary>
+            This method is used to complete a review.
+            </summary>
+            <param name="client"><see cref="T:Vasont.Inspire.SDK.InspireClient"/> used to communication with the API endpoint.</param>
+            <param name="model">Contains the review model to create the new review.</param>
+            <returns>Returns a list of <see cref="T:Vasont.Inspire.Models.Workflow.WorkflowTemplateModel"/> objects.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Review.ReviewExtensions.CancelReview(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Reviews.ReviewCancellationModel)">
+            <summary>
+            This method is used to cancel a review.
+            </summary>
+            <param name="client"><see cref="T:Vasont.Inspire.SDK.InspireClient"/> used to communication with the API endpoint.</param>
+            <param name="reviewId">Contains the identity of the review.</param>
+            <param name="model">Contains the review model to create the new review.</param>
+            <returns>Returns a list of <see cref="T:Vasont.Inspire.Models.Workflow.WorkflowTemplateModel"/> objects.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Review.ReviewExtensions.DeleteReview(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Reviews.ReviewCancellationModel)">
+            <summary>
+            This method is used to delete a review.
+            </summary>
+            <param name="client"><see cref="T:Vasont.Inspire.SDK.InspireClient"/> used to communication with the API endpoint.</param>
+            <param name="reviewId">Contains the identity of the review.</param>
+            <param name="model">Contains the <see cref="T:Vasont.Inspire.Models.Reviews.ReviewCancellationModel"/> to be used to cancel the review.</param>
+            <returns>Returns a list of <see cref="T:Vasont.Inspire.Models.Workflow.WorkflowTemplateModel"/> objects.</returns>
+        </member>
+        <member name="T:Vasont.Inspire.SDK.Security.RoleExtensions">
+            <summary>
+            This class extends the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> class to include methods for calling 
+            role API endpoints.
+            </summary>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Security.RoleExtensions.GetAllRoles(Vasont.Inspire.SDK.InspireClient,System.Int64)">
+            <summary>
+            This method is used to retrieve a specific role model from the system.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="roleId">The role identity.</param>
+            <returns>Returns <see cref="T:Vasont.Inspire.Models.Security.RoleModel"/> object if found.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Security.RoleExtensions.GetRoles(Vasont.Inspire.SDK.InspireClient,System.String,System.String,System.String)">
+            <summary>
+            This method is used to retrieve roles that match the search criteria.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="roleName">Name of the role.</param>
+            <param name="orderBy">The field to order by the list of roles.</param>
+            <param name="direction">The direction of the order by, ascending or descending.</param>
+            <returns>Returns <see cref="T:Vasont.Inspire.Models.Security.RoleModel"/> object if found.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Security.RoleExtensions.CreateRole(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Security.RoleModel)">
+            <summary>
+            This method is used to create a new role, and return the new RoleModel.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="inputModel">Contains the <see cref="T:Vasont.Inspire.Models.Security.RoleModel"/> input.</param>
+            <returns>Returns the newly created <see cref="T:Vasont.Inspire.Models.Security.RoleModel"/> object.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Security.RoleExtensions.UpdateRole(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Security.RoleModel)">
+            <summary>
+            This method is used to update an existing role, and return the updated RoleModel.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="roleId">Contains the role identity.</param>
+            <param name="inputModel">Contains the <see cref="T:Vasont.Inspire.Models.Security.RoleModel"/> input.</param>
+            <returns>Returns the updated <see cref="T:Vasont.Inspire.Models.Security.RoleModel"/> object.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Security.RoleExtensions.DeleteRole(Vasont.Inspire.SDK.InspireClient,System.Int64)">
+            <summary>
+            This method is used to delete an existing role.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="roleId">Contains the role identity to delete.</param>
+            <returns>Returns a value indicating whether the delete request was successful.</returns>
+        </member>
+        <member name="T:Vasont.Inspire.SDK.Security.UserExtensions">
+            <summary>
+            This class extends the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> class to include methods for calling 
+            user API endpoints.
+            </summary>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Security.UserExtensions.GetAllUsers(Vasont.Inspire.SDK.InspireClient)">
+            <summary>
+            This method is used to retrieve a list of users from the system.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <returns>Returns a list of <see cref="T:Vasont.Inspire.Models.Utilities.SelectUserRoleModel"/> objects if found.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Security.UserExtensions.GetUser(Vasont.Inspire.SDK.InspireClient,System.Int64)">
+            <summary>
+            This method is used to retrieve information about a specific user.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="userId">Contains the user identity.</param>
+            <returns>Returns <see cref="T:Vasont.Inspire.Models.Security.UserModel"/> object if found.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Security.UserExtensions.GetUsers(Vasont.Inspire.SDK.InspireClient,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            This method is used to retrieve information about a specific user.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="userName">Contains the name of the user.</param>
+            <param name="email">Contains the email of the user.</param>
+            <param name="phone">Contains the phone number of the user.</param>
+            <param name="orderBy">Contains the order by field.</param>
+            <param name="direction">Contains the direction of sort, "ascending" by default.</param>
+            <returns>Returns <see cref="T:Vasont.Inspire.Models.Security.UserModel"/> object if found.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Security.UserExtensions.CreateUser(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Security.UserModel)">
+            <summary>
+            This method is used to create a new user, and return the new UserModel.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="inputModel">Contains the <see cref="T:Vasont.Inspire.Models.Security.UserModel"/> input.</param>
+            <returns>Returns the newly created <see cref="T:Vasont.Inspire.Models.Security.UserModel"/> object.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Security.UserExtensions.UpdateUser(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Security.UserModel)">
+            <summary>
+            This method is used to update an existing user, and return the updated UserModel.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="userId">Contains the user identity.</param>
+            <param name="inputModel">Contains the <see cref="T:Vasont.Inspire.Models.Security.UserModel"/> input.</param>
+            <returns>Returns the updated <see cref="T:Vasont.Inspire.Models.Security.UserModel"/> object.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Security.UserExtensions.DeleteUser(Vasont.Inspire.SDK.InspireClient,System.Int64)">
+            <summary>
+            This method is used to delete an existing user.
+            </summary>
+            <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
+            <param name="userId">Contains the user identity to delete.</param>
+            <returns>Returns a value indicating whether the delete request was successful.</returns>
+        </member>
+        <member name="T:Vasont.Inspire.SDK.Translations.TranslationsExtensions">
+            <summary>
+            This class extends the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> class to include methods for calling 
+            user API endpoints.
+            </summary>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Translations.TranslationsExtensions.GetTranslationVendors(Vasont.Inspire.SDK.InspireClient)">
+            <summary>
+            Gets all translation vendors.
+            </summary>
+            <param name="client">The client.</param>
+            <returns>Returns a List of <see cref="T:Vasont.Inspire.Models.Translations.TranslationVendorModel"/> objects.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Translations.TranslationsExtensions.GetTranslationJobById(Vasont.Inspire.SDK.InspireClient,System.Int64)">
+            <summary>Gets the translation job by identifier.</summary>
+            <param name="client">The client.</param>
+            <param name="translationJobId">The translation job identifier.</param>
+            <returns>Returns the <see cref="T:Vasont.Inspire.Models.Translations.TranslationJobModel"/> object found for the requested Id.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationJobs(Vasont.Inspire.SDK.InspireClient,System.Collections.Generic.List{System.Int64})">
+            <summary>Finds the translation jobs.</summary>
+            <param name="client">The client.</param>
+            <param name="translationJobIds">The translation job ids.</param>
+            <returns>Returns a List of the requested <see cref="T:Vasont.Inspire.Models.Translations.TranslationJobModel"/> objects.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Translations.TranslationsExtensions.PutTranslationCancel(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Translations.TranslationJobModel)">
+            <summary>Cancels a Translation Job.</summary>
+            <param name="client">The client.</param>
+            <param name="model">The model.</param>
+            <returns>Returns the <see cref="T:Vasont.Inspire.Models.Translations.TranslationJobModel"/> object that was canceled.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Translations.TranslationsExtensions.GetQueuedTranslationJobs(Vasont.Inspire.SDK.InspireClient,System.Int64)">
+            <summary>
+            Gets the queued translation jobs.
+            </summary>
+            <param name="client">The client.</param>
+            <param name="translationVendorId">The translation vendor identifier.</param>
+            <returns>Returns a <see cref="T:Vasont.Inspire.Models.Worker.WorkerStateModel" /> of type <see cref="T:Vasont.Inspire.Models.Translations.TranslationExportStateModel" />.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Translations.TranslationsExtensions.GetTranslationExportState(Vasont.Inspire.SDK.InspireClient,System.String)">
+            <summary>
+            Gets the translation export state.
+            </summary>
+            <param name="client">The client.</param>
+            <param name="workerKey">The worker key.</param>
+            <returns>
+            Returns a <see cref="T:Vasont.Inspire.Models.Worker.WorkerStateModel" /> of type <see cref="T:Vasont.Inspire.Models.Translations.TranslationExportStateModel" />.
+            </returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Translations.TranslationsExtensions.ResetTranslationComponentsState(Vasont.Inspire.SDK.InspireClient,System.Collections.Generic.List{System.Int64})">
+            <summary>
+            Resets the state of the translation components to queued.
+            </summary>
+            <param name="client">The client.</param>
+            <param name="translationComponentIds">The translation component ids to reset state to queued.</param>
+            <returns>Returns a List of <see cref="T:Vasont.Inspire.Models.Translations.MinimalTranslationJobComponentModel"/> objects.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Translations.TranslationsExtensions.GetTranslationExportJobs(Vasont.Inspire.SDK.InspireClient,System.Collections.Generic.List{System.Int64})">
+            <summary>Gets the translation export jobs.</summary>
+            <param name="client">The client.</param>
+            <param name="translationJobIds">The translation job ids.</param>
+            <returns>Returns a List of <see cref="T:Vasont.Inspire.Models.Translations.TranslationExportJobModel"/> objects.</returns>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Translations.TranslationsExtensions.SetTranslationJobStatus(Vasont.Inspire.SDK.InspireClient,System.Collections.Generic.List{Vasont.Inspire.Models.Translations.TranslationExportJobModel})">
+            <summary>Sets the translation job status.</summary>
+            <param name="client">The client.</param>
+            <param name="models">The models.</param>
+            <returns>Returns a List of <see cref="T:Vasont.Inspire.Models.Translations.TranslationExportJobModel"/> objects.</returns>
+        </member>
+    </members>
+</doc>
