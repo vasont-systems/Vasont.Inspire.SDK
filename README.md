@@ -26,6 +26,6 @@ If you are interested in fixing issues and contributing directly to the code bas
 ## Related Projects
 Many of the core components to the Vasont Inspire SDK live in their own repositories on GitHub. For example, the Vasont.Inspire.Models project contains the common models used in the SDK and Inspire application. 
 ## Code of Conduct
-This project has adopted the [Vasont Systems Open Source Code of Conduct](https://dev.vasont.com/documentation/vasont-systems-open-source-code-of-conduct/). For more information see the Code of Conduct FAQ or contact support@vasont.com with additional questions or comments.
+This project has adopted the [Vasont Systems Open Source Code of Conduct](https://dev.vasont.com/vasont-systems-open-source-code-of-conduct/). For more information see the Code of Conduct FAQ or contact support@vasont.com with additional questions or comments.
 ## License
 Copyright &copy; Vasont Systems. All rights reserved.

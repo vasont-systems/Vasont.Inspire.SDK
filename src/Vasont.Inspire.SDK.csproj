@@ -9,20 +9,20 @@
   <PropertyGroup>
     <TargetFrameworks>net461;net48;netstandard2.1</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.7.1</Version>
+    <Version>1.7.2</Version>
     <Authors>GlobalLink Vasont</Authors>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <RepositoryUrl>https://github.com/vasont-systems/Vasont.Inspire.SDK</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>CCMS</PackageTags>
-    <PackageReleaseNotes>Updated referenced libraries. Made a fix to AppInfo route.</PackageReleaseNotes>
+    <PackageReleaseNotes>Updated models library reference to contain latest models.</PackageReleaseNotes>
     <PackageProjectUrl>https://dev.vasont.com/</PackageProjectUrl>
     <Description>Contains the Vasont Inspire SDK Client for integrating with Vasont Inspire CCMS REST Web API.</Description>
     <NeutralLanguage>en</NeutralLanguage>
     <Company>GlobalLink Vasont</Company>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net461|AnyCPU'">
-    <DocumentationFile>D:\Projects\Vasont Systems\GitHub\Vasont.Inspire.SDK\src\Vasont.Inspire.SDK.xml</DocumentationFile>
+    <DocumentationFile>Vasont.Inspire.SDK.xml</DocumentationFile>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.ResxResources.targets" Label="MultilingualAppToolkit" Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\v$(MultilingualAppToolkitVersion)\Microsoft.Multilingual.ResxResources.targets')" />
   <Target Name="MATPrerequisite" BeforeTargets="PrepareForBuild" Condition="!Exists('$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.ResxResources.targets')" Label="MultilingualAppToolkit">
@@ -40,7 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="IdentityModel" Version="4.1.1" />
-    <PackageReference Include="Vasont.Inspire.Models" Version="1.1.19" />
+    <PackageReference Include="Vasont.Inspire.Models" Version="1.1.20" />
   </ItemGroup>
   <ItemGroup>
     <XliffResource Include="MultilingualResources\Vasont.Inspire.SDK.de.xlf" />
