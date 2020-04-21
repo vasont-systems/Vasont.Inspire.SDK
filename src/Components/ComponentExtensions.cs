@@ -459,10 +459,11 @@ namespace Vasont.Inspire.SDK.Components
             string boundary = "componentsimport";
             var request = client.CreateRequest($"{client.Config.RoutePrefix}/Components/Import", HttpMethod.Post, contentType: "multipart/form-data; boundary=" + boundary);
 
+            
             // write data out to the request stream
             using (var postStream = request.GetRequestStream())
             {
-                postStream.WriteMultiPartFormData(importModel, filePaths, "importmodel", boundary);
+                postStream.WriteMultiPartFormData(importModel, filePaths, "model", boundary) ;
             }
 
             return client.RequestContent<MinimalWorkerStateModel<MinimalImportStateModel>>(request);

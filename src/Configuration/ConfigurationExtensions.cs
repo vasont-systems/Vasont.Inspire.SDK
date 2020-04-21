@@ -763,7 +763,7 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <returns>Returns a list of <see cref="LanguageModel"/> from the application.</returns>
         public static List<LanguageModel> GetLanguages(this InspireClient client, bool dictionaryOnly = false)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/Languages?dictionaryOnly={dictionaryOnly}");
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Languages?dictionaryOnly={dictionaryOnly}");
             return client.RequestContent<List<LanguageModel>>(request);
         }
 
