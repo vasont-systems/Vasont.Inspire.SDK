@@ -982,7 +982,7 @@
             This class contains static extensions for the Stream object.
             </summary>
         </member>
-        <member name="M:Vasont.Inspire.SDK.Extensions.StreamExtensions.WriteMultiPartFormData(System.IO.Stream,System.Object,System.Collections.Generic.List{System.String},System.String,System.String,System.Text.Encoding)">
+        <member name="M:Vasont.Inspire.SDK.Extensions.StreamExtensions.WriteMultiPartFormData(System.IO.Stream,Vasont.Inspire.Models.Transfers.ImportRequestModel,System.Collections.Generic.List{System.String},System.String,System.String,System.Text.Encoding)">
             <summary>
             This extension method is used to write a multi-part form post to a specified stream.
             </summary>
