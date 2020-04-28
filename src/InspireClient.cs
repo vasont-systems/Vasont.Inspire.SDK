@@ -456,12 +456,10 @@ namespace Vasont.Inspire.SDK
         {
             DiscoveryDocumentResponse result;
 
+            using (DiscoveryDocumentRequest documentRequest = new DiscoveryDocumentRequest { Address = authorityUri.ToString() })
             using (HttpClient client = new HttpClient())
             {
-                result = await client.GetDiscoveryDocumentAsync(new DiscoveryDocumentRequest
-                {
-                    Address = authorityUri.ToString()
-                },
+                result = await client.GetDiscoveryDocumentAsync(documentRequest,
                 cancellationToken)
                 .ConfigureAwait(false);
             }
