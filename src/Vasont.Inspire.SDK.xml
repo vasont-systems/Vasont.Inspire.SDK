@@ -1977,34 +1977,46 @@
         </member>
         <member name="T:Vasont.Inspire.SDK.Translations.TranslationsExtensions">
             <summary>
-            This class extends the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> class to include methods for calling 
-            user API endpoints.
+            This class extends the <see cref="T:Vasont.Inspire.SDK.InspireClient" /> class to include methods for calling user API endpoints.
             </summary>
+        </member>
+        <member name="M:Vasont.Inspire.SDK.Translations.TranslationsExtensions.GetTranslationJobStates(Vasont.Inspire.SDK.InspireClient)">
+            <summary>
+            Get all available translation job states.
+            </summary>
+            <param name="client">Contains the client.</param>
+            <returns>Returns a list of <see cref="T:Vasont.Inspire.Models.Translations.TranslationJobStateModel" /> objects.</returns>
         </member>
         <member name="M:Vasont.Inspire.SDK.Translations.TranslationsExtensions.GetTranslationVendors(Vasont.Inspire.SDK.InspireClient)">
             <summary>
             Gets all translation vendors.
             </summary>
             <param name="client">The client.</param>
-            <returns>Returns a List of <see cref="T:Vasont.Inspire.Models.Translations.TranslationVendorModel"/> objects.</returns>
+            <returns>Returns a List of <see cref="T:Vasont.Inspire.Models.Translations.TranslationVendorModel" /> objects.</returns>
         </member>
         <member name="M:Vasont.Inspire.SDK.Translations.TranslationsExtensions.GetTranslationJobById(Vasont.Inspire.SDK.InspireClient,System.Int64)">
-            <summary>Gets the translation job by identifier.</summary>
+            <summary>
+            Gets the translation job by identifier.
+            </summary>
             <param name="client">The client.</param>
             <param name="translationJobId">The translation job identifier.</param>
-            <returns>Returns the <see cref="T:Vasont.Inspire.Models.Translations.TranslationJobModel"/> object found for the requested Id.</returns>
+            <returns>Returns the <see cref="T:Vasont.Inspire.Models.Translations.TranslationJobModel" /> object found for the requested Id.</returns>
         </member>
         <member name="M:Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationJobs(Vasont.Inspire.SDK.InspireClient,System.Collections.Generic.List{System.Int64})">
-            <summary>Finds the translation jobs.</summary>
+            <summary>
+            Finds the translation jobs.
+            </summary>
             <param name="client">The client.</param>
             <param name="translationJobIds">The translation job ids.</param>
-            <returns>Returns a List of the requested <see cref="T:Vasont.Inspire.Models.Translations.TranslationJobModel"/> objects.</returns>
+            <returns>Returns a List of the requested <see cref="T:Vasont.Inspire.Models.Translations.TranslationJobModel" /> objects.</returns>
         </member>
         <member name="M:Vasont.Inspire.SDK.Translations.TranslationsExtensions.PutTranslationCancel(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Translations.TranslationJobModel)">
-            <summary>Cancels a Translation Job.</summary>
+            <summary>
+            Cancels a Translation Job.
+            </summary>
             <param name="client">The client.</param>
             <param name="model">The model.</param>
-            <returns>Returns the <see cref="T:Vasont.Inspire.Models.Translations.TranslationJobModel"/> object that was canceled.</returns>
+            <returns>Returns the <see cref="T:Vasont.Inspire.Models.Translations.TranslationJobModel" /> object that was canceled.</returns>
         </member>
         <member name="M:Vasont.Inspire.SDK.Translations.TranslationsExtensions.GetQueuedTranslationJobs(Vasont.Inspire.SDK.InspireClient,System.Int64)">
             <summary>
@@ -2020,9 +2032,7 @@
             </summary>
             <param name="client">The client.</param>
             <param name="workerKey">The worker key.</param>
-            <returns>
-            Returns a <see cref="T:Vasont.Inspire.Models.Worker.WorkerStateModel" /> of type <see cref="T:Vasont.Inspire.Models.Translations.TranslationExportStateModel" />.
-            </returns>
+            <returns>Returns a <see cref="T:Vasont.Inspire.Models.Worker.WorkerStateModel" /> of type <see cref="T:Vasont.Inspire.Models.Translations.TranslationExportStateModel" />.</returns>
         </member>
         <member name="M:Vasont.Inspire.SDK.Translations.TranslationsExtensions.ResetTranslationComponentsState(Vasont.Inspire.SDK.InspireClient,System.Collections.Generic.List{System.Int64})">
             <summary>
@@ -2030,19 +2040,23 @@
             </summary>
             <param name="client">The client.</param>
             <param name="translationComponentIds">The translation component ids to reset state to queued.</param>
-            <returns>Returns a List of <see cref="T:Vasont.Inspire.Models.Translations.MinimalTranslationJobComponentModel"/> objects.</returns>
+            <returns>Returns a List of <see cref="T:Vasont.Inspire.Models.Translations.MinimalTranslationJobComponentModel" /> objects.</returns>
         </member>
         <member name="M:Vasont.Inspire.SDK.Translations.TranslationsExtensions.GetTranslationExportJobs(Vasont.Inspire.SDK.InspireClient,System.Collections.Generic.List{System.Int64})">
-            <summary>Gets the translation export jobs.</summary>
+            <summary>
+            Gets the translation export jobs.
+            </summary>
             <param name="client">The client.</param>
             <param name="translationJobIds">The translation job ids.</param>
-            <returns>Returns a List of <see cref="T:Vasont.Inspire.Models.Translations.TranslationExportJobModel"/> objects.</returns>
+            <returns>Returns a List of <see cref="T:Vasont.Inspire.Models.Translations.TranslationExportJobModel" /> objects.</returns>
         </member>
         <member name="M:Vasont.Inspire.SDK.Translations.TranslationsExtensions.SetTranslationJobStatus(Vasont.Inspire.SDK.InspireClient,System.Collections.Generic.List{Vasont.Inspire.Models.Translations.TranslationExportJobModel})">
-            <summary>Sets the translation job status.</summary>
+            <summary>
+            Sets the translation job status.
+            </summary>
             <param name="client">The client.</param>
             <param name="models">The models.</param>
-            <returns>Returns a List of <see cref="T:Vasont.Inspire.Models.Translations.TranslationExportJobModel"/> objects.</returns>
+            <returns>Returns a List of <see cref="T:Vasont.Inspire.Models.Translations.TranslationExportJobModel" /> objects.</returns>
         </member>
     </members>
 </doc>

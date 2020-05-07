@@ -12,36 +12,50 @@ namespace Vasont.Inspire.SDK.Translations
     using Vasont.Inspire.Models.Worker;
 
     /// <summary>
-    /// This class extends the <see cref="InspireClient"/> class to include methods for calling 
-    /// user API endpoints.
+    /// This class extends the <see cref="InspireClient" /> class to include methods for calling user API endpoints.
     /// </summary>
     public static class TranslationsExtensions
     {
         /// <summary>
+        /// Get all available translation job states.
+        /// </summary>
+        /// <param name="client">Contains the client.</param>
+        /// <returns>Returns a list of <see cref="TranslationJobStateModel" /> objects.</returns>
+        public static List<TranslationJobStateModel> GetTranslationJobStates(this InspireClient client)
+        {
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Translations/States");
+            return client.RequestContent<List<TranslationJobStateModel>>(request);
+        }
+
+        /// <summary>
         /// Gets all translation vendors.
         /// </summary>
         /// <param name="client">The client.</param>
-        /// <returns>Returns a List of <see cref="TranslationVendorModel"/> objects.</returns>
+        /// <returns>Returns a List of <see cref="TranslationVendorModel" /> objects.</returns>
         public static List<TranslationVendorModel> GetTranslationVendors(this InspireClient client)
         {
             var request = client.CreateRequest($"{client.Config.RoutePrefix}/Translations/Vendors");
             return client.RequestContent<List<TranslationVendorModel>>(request);
         }
 
-        /// <summary>Gets the translation job by identifier.</summary>
+        /// <summary>
+        /// Gets the translation job by identifier.
+        /// </summary>
         /// <param name="client">The client.</param>
         /// <param name="translationJobId">The translation job identifier.</param>
-        /// <returns>Returns the <see cref="TranslationJobModel"/> object found for the requested Id.</returns>
+        /// <returns>Returns the <see cref="TranslationJobModel" /> object found for the requested Id.</returns>
         public static TranslationJobModel GetTranslationJobById(this InspireClient client, long translationJobId)
         {
             var request = client.CreateRequest($"{client.Config.RoutePrefix}/Translations/{translationJobId}");
             return client.RequestContent<TranslationJobModel>(request);
         }
 
-        /// <summary>Finds the translation jobs.</summary>
+        /// <summary>
+        /// Finds the translation jobs.
+        /// </summary>
         /// <param name="client">The client.</param>
         /// <param name="translationJobIds">The translation job ids.</param>
-        /// <returns>Returns a List of the requested <see cref="TranslationJobModel"/> objects.</returns>
+        /// <returns>Returns a List of the requested <see cref="TranslationJobModel" /> objects.</returns>
         public static List<MinimalTranslationJobModel> FindTranslationJobs(this InspireClient client, List<long> translationJobIds)
         {
             if (translationJobIds == null)
@@ -54,10 +68,12 @@ namespace Vasont.Inspire.SDK.Translations
             return client.RequestContent<List<long>, List<MinimalTranslationJobModel>>(request, translationJobIds);
         }
 
-        /// <summary>Cancels a Translation Job.</summary>
+        /// <summary>
+        /// Cancels a Translation Job.
+        /// </summary>
         /// <param name="client">The client.</param>
         /// <param name="model">The model.</param>
-        /// <returns>Returns the <see cref="TranslationJobModel"/> object that was canceled.</returns>
+        /// <returns>Returns the <see cref="TranslationJobModel" /> object that was canceled.</returns>
         public static TranslationJobModel PutTranslationCancel(this InspireClient client, TranslationJobModel model)
         {
             if (model == null)
@@ -98,9 +114,7 @@ namespace Vasont.Inspire.SDK.Translations
         /// </summary>
         /// <param name="client">The client.</param>
         /// <param name="workerKey">The worker key.</param>
-        /// <returns>
-        /// Returns a <see cref="WorkerStateModel" /> of type <see cref="TranslationExportStateModel" />.
-        /// </returns>
+        /// <returns>Returns a <see cref="WorkerStateModel" /> of type <see cref="TranslationExportStateModel" />.</returns>
         public static MinimalWorkerStateModel<TranslationExportStateModel> GetTranslationExportState(this InspireClient client, string workerKey)
         {
             if (string.IsNullOrEmpty(workerKey))
@@ -119,7 +133,7 @@ namespace Vasont.Inspire.SDK.Translations
         /// </summary>
         /// <param name="client">The client.</param>
         /// <param name="translationComponentIds">The translation component ids to reset state to queued.</param>
-        /// <returns>Returns a List of <see cref="MinimalTranslationJobComponentModel"/> objects.</returns>
+        /// <returns>Returns a List of <see cref="MinimalTranslationJobComponentModel" /> objects.</returns>
         public static List<MinimalTranslationJobComponentModel> ResetTranslationComponentsState(this InspireClient client, List<long> translationComponentIds)
         {
             if (translationComponentIds == null)
@@ -132,10 +146,12 @@ namespace Vasont.Inspire.SDK.Translations
             return client.RequestContent<List<long>, List<MinimalTranslationJobComponentModel>>(request, translationComponentIds);
         }
 
-        /// <summary>Gets the translation export jobs.</summary>
+        /// <summary>
+        /// Gets the translation export jobs.
+        /// </summary>
         /// <param name="client">The client.</param>
         /// <param name="translationJobIds">The translation job ids.</param>
-        /// <returns>Returns a List of <see cref="TranslationExportJobModel"/> objects.</returns>
+        /// <returns>Returns a List of <see cref="TranslationExportJobModel" /> objects.</returns>
         public static List<TranslationExportJobModel> GetTranslationExportJobs(this InspireClient client, List<long> translationJobIds)
         {
             if (translationJobIds == null)
@@ -148,10 +164,12 @@ namespace Vasont.Inspire.SDK.Translations
             return client.RequestContent<List<long>, List<TranslationExportJobModel>>(request, translationJobIds);
         }
 
-        /// <summary>Sets the translation job status.</summary>
+        /// <summary>
+        /// Sets the translation job status.
+        /// </summary>
         /// <param name="client">The client.</param>
         /// <param name="models">The models.</param>
-        /// <returns>Returns a List of <see cref="TranslationExportJobModel"/> objects.</returns>
+        /// <returns>Returns a List of <see cref="TranslationExportJobModel" /> objects.</returns>
         public static List<TranslationExportJobModel> SetTranslationJobStatus(this InspireClient client, List<TranslationExportJobModel> models)
         {
             if (models == null)
