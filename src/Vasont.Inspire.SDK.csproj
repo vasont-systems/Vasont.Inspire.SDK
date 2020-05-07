@@ -9,7 +9,7 @@
   <PropertyGroup>
     <TargetFrameworks>net461;net48;netstandard2.1</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.7.6</Version>
+    <Version>1.7.7</Version>
     <Authors>GlobalLink Vasont</Authors>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <RepositoryUrl>https://github.com/vasont-systems/Vasont.Inspire.SDK</RepositoryUrl>
@@ -44,7 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="IdentityModel" Version="4.2.0" />
-    <PackageReference Include="Vasont.Inspire.Models" Version="1.1.26" />
+    <PackageReference Include="Vasont.Inspire.Models" Version="1.1.27" />
   </ItemGroup>
   <ItemGroup>
     <XliffResource Include="MultilingualResources\Vasont.Inspire.SDK.de.xlf" />
