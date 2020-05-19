@@ -9,13 +9,13 @@
   <PropertyGroup>
     <TargetFrameworks>net461;net48;netstandard2.1</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.7.8</Version>
+    <Version>1.7.9</Version>
     <Authors>GlobalLink Vasont</Authors>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <RepositoryUrl>https://github.com/vasont-systems/Vasont.Inspire.SDK</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>CCMS</PackageTags>
-    <PackageReleaseNotes>Updated models and added new request to get available translation states. Added GetTranslationJobStates extension method.</PackageReleaseNotes>
+    <PackageReleaseNotes>Updated packages to latest models and identity versions.</PackageReleaseNotes>
     <PackageProjectUrl>https://dev.vasont.com/</PackageProjectUrl>
     <Description>Contains the Vasont Inspire SDK Client for integrating with Vasont Inspire CCMS REST Web API.</Description>
     <NeutralLanguage>en</NeutralLanguage>
@@ -43,8 +43,8 @@
     <None Remove="MultilingualResources\Vasont.Inspire.SDK.zh-Hans.xlf" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="IdentityModel" Version="4.2.0" />
-    <PackageReference Include="Vasont.Inspire.Models" Version="1.1.29" />
+    <PackageReference Include="IdentityModel" Version="4.3.0" />
+    <PackageReference Include="Vasont.Inspire.Models" Version="1.1.31" />
   </ItemGroup>
   <ItemGroup>
     <XliffResource Include="MultilingualResources\Vasont.Inspire.SDK.de.xlf" />
