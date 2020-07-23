@@ -645,7 +645,7 @@
             This method is used to retrieve a list of exports.
             </summary>
             <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
-            <returns>Returns a list of <see cref="!:ExportModel"/> from the application.</returns>
+            <returns>Returns a list of <see cref="T:Vasont.Inspire.Models.Transfers.ExportConfigurationModel"/> from the application.</returns>
         </member>
         <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetExport(Vasont.Inspire.SDK.InspireClient,System.Int64)">
             <summary>
@@ -653,7 +653,7 @@
             </summary>
             <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
             <param name="exportId">Contains the record identity to retrieve.</param>
-            <returns>Returns a specific <see cref="!:ExportModel"/> from the application.</returns>
+            <returns>Returns a specific <see cref="T:Vasont.Inspire.Models.Transfers.ExportConfigurationModel"/> from the application.</returns>
         </member>
         <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.UpdateExport(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Transfers.ExportConfigurationModel)">
             <summary>
@@ -661,7 +661,7 @@
             </summary>
             <param name="client">Contains the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> that is used for communication.</param>
             <param name="model">Contains the export model to update.</param>
-            <returns>Returns the updated <see cref="!:ExportModel"/> model from the application.</returns>
+            <returns>Returns the updated <see cref="T:Vasont.Inspire.Models.Transfers.ExportConfigurationModel"/> model from the application.</returns>
         </member>
         <member name="M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.CreateExport(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Transfers.ExportConfigurationModel)">
             <summary>

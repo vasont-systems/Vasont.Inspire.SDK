@@ -15,18 +15,29 @@
     <RepositoryUrl>https://github.com/vasont-systems/Vasont.Inspire.SDK</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>CCMS</PackageTags>
-    <PackageReleaseNotes>Updated packages to latest models and identity versions.</PackageReleaseNotes>
+    <PackageReleaseNotes>Added strong named Key File and signed the assembly.</PackageReleaseNotes>
     <PackageProjectUrl>https://dev.vasont.com/</PackageProjectUrl>
     <Description>Contains the Vasont Inspire SDK Client for integrating with Vasont Inspire CCMS REST Web API.</Description>
     <NeutralLanguage>en</NeutralLanguage>
     <Company>GlobalLink Vasont</Company>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
   </PropertyGroup>
   <PropertyGroup>
     <IncludeSymbols>FALSE</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>Vasont.Inspire.SDK.pfx</AssemblyOriginatorKeyFile>
+    <DelaySign>false</DelaySign>
+    <AssemblyVersion>1.7.9.0</AssemblyVersion>
+    <FileVersion>1.7.9.0</FileVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net461|AnyCPU'">
     <DocumentationFile>Vasont.Inspire.SDK.xml</DocumentationFile>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net461|AnyCPU'">
+    <DocumentationFile>.\Vasont.Inspire.SDK.xml</DocumentationFile>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.ResxResources.targets" Label="MultilingualAppToolkit" Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\v$(MultilingualAppToolkitVersion)\Microsoft.Multilingual.ResxResources.targets')" />
   <Target Name="MATPrerequisite" BeforeTargets="PrepareForBuild" Condition="!Exists('$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.ResxResources.targets')" Label="MultilingualAppToolkit">
@@ -44,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="IdentityModel" Version="4.3.0" />
+    <PackageReference Include="Vasont.Inspire.Core" Version="1.0.13" />
     <PackageReference Include="Vasont.Inspire.Models" Version="1.1.31" />
   </ItemGroup>
   <ItemGroup>
@@ -69,4 +81,7 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition="$(TargetFramework) == 'netstandard2.1'">
+    <Exec Command="docpal &quot;$(TargetPath)&quot; -out &quot;$(SolutionDir)\&quot; --mgtable --proptable -xml &quot;$(ProjectDir)\Vasont.Inspire.SDK.xml&quot;&#xD;&#xA;" />
+  </Target>
 </Project>
