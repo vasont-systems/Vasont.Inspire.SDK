@@ -351,7 +351,7 @@ namespace Vasont.Inspire.SDK.Configuration
         /// This method is used to retrieve a list of exports.
         /// </summary>
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
-        /// <returns>Returns a list of <see cref="ExportModel"/> from the application.</returns>
+        /// <returns>Returns a list of <see cref="ExportConfigurationModel"/> from the application.</returns>
         public static List<ExportConfigurationModel> GetExports(this InspireClient client)
         {
             var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/Exports");
@@ -363,7 +363,7 @@ namespace Vasont.Inspire.SDK.Configuration
         /// </summary>
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <param name="exportId">Contains the record identity to retrieve.</param>
-        /// <returns>Returns a specific <see cref="ExportModel"/> from the application.</returns>
+        /// <returns>Returns a specific <see cref="ExportConfigurationModel"/> from the application.</returns>
         public static ExportConfigurationModel GetExport(this InspireClient client, long exportId)
         {
             var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/Exports/{exportId}");
@@ -375,7 +375,7 @@ namespace Vasont.Inspire.SDK.Configuration
         /// </summary>
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <param name="model">Contains the export model to update.</param>
-        /// <returns>Returns the updated <see cref="ExportModel"/> model from the application.</returns>
+        /// <returns>Returns the updated <see cref="ExportConfigurationModel"/> model from the application.</returns>
         public static ExportConfigurationModel UpdateExport(this InspireClient client, ExportConfigurationModel model)
         {
             if (model == null)
