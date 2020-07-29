@@ -14,7 +14,7 @@ Live Inspire customers will work with [LTS](https://en.wikipedia.org/wiki/Long-t
 
 Check out the development quickstart guide.
 
-Check out the [SDK Documentation](Vasont/Inspire/SDK/InspireClient.md)
+Check out the [SDK Documentation](toc.md)
 
 #### Not A Developer?
 
