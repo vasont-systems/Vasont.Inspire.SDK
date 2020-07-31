@@ -1,0 +1,28 @@
+### YamlMime:ManagedReference
+items:
+- uid: Vasont.Inspire.SDK.Translations
+  commentId: N:Vasont.Inspire.SDK.Translations
+  id: Vasont.Inspire.SDK.Translations
+  children:
+  - Vasont.Inspire.SDK.Translations.TranslationsExtensions
+  langs:
+  - csharp
+  - vb
+  name: Vasont.Inspire.SDK.Translations
+  nameWithType: Vasont.Inspire.SDK.Translations
+  fullName: Vasont.Inspire.SDK.Translations
+  type: Namespace
+  assemblies:
+  - Vasont.Inspire.SDK
+references:
+- uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions
+  commentId: T:Vasont.Inspire.SDK.Translations.TranslationsExtensions
+  parent: Vasont.Inspire.SDK.Translations
+  name: TranslationsExtensions
+  nameWithType: TranslationsExtensions
+  fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions
+- uid: Vasont.Inspire.SDK.Translations
+  commentId: N:Vasont.Inspire.SDK.Translations
+  name: Vasont.Inspire.SDK.Translations
+  nameWithType: Vasont.Inspire.SDK.Translations
+  fullName: Vasont.Inspire.SDK.Translations

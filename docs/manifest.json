@@ -1,0 +1,397 @@
+{
+  "homepages": [],
+  "source_base_path": "E:/Projects/Vasont GIT/Vasont.Inspire.SDK/src",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "_sdk/Vasont.Inspire.SDK.Application.ApplicationExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "_sdk/Vasont.Inspire.SDK.Application.ApplicationExtensions.html",
+          "hash": "cnShxx2usLjrUlEisxU9tw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "_sdk/Vasont.Inspire.SDK.Application.yml",
+      "output": {
+        ".html": {
+          "relative_path": "_sdk/Vasont.Inspire.SDK.Application.html",
+          "hash": "BgJ6XwFubiobUvbd31aOFg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "_sdk/Vasont.Inspire.SDK.ClientAuthenticationMethods.yml",
+      "output": {
+        ".html": {
+          "relative_path": "_sdk/Vasont.Inspire.SDK.ClientAuthenticationMethods.html",
+          "hash": "3SKPmLQ61SYOPtBjg+uS5w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "_sdk/Vasont.Inspire.SDK.Components.ComponentExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "_sdk/Vasont.Inspire.SDK.Components.ComponentExtensions.html",
+          "hash": "0FlHp16rR6JrpUeydXbUnw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "_sdk/Vasont.Inspire.SDK.Components.EditorExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "_sdk/Vasont.Inspire.SDK.Components.EditorExtensions.html",
+          "hash": "am2ZIOY/jwY6PnFr9iLOqA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "_sdk/Vasont.Inspire.SDK.Components.yml",
+      "output": {
+        ".html": {
+          "relative_path": "_sdk/Vasont.Inspire.SDK.Components.html",
+          "hash": "gchYAzeVaC/p+Zs+CtGj5Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "_sdk/Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "_sdk/Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html",
+          "hash": "5jiJmHkos3PqTNGXMAbcHA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "_sdk/Vasont.Inspire.SDK.Configuration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "_sdk/Vasont.Inspire.SDK.Configuration.html",
+          "hash": "Rw/7IJPSSVve7m13U9Ac/Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "_sdk/Vasont.Inspire.SDK.Folders.FolderExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "_sdk/Vasont.Inspire.SDK.Folders.FolderExtensions.html",
+          "hash": "Nl6W/7qaIZCZ8kxfLKe+pw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "_sdk/Vasont.Inspire.SDK.Folders.yml",
+      "output": {
+        ".html": {
+          "relative_path": "_sdk/Vasont.Inspire.SDK.Folders.html",
+          "hash": "0ZRUfA2OkwqG3hKdM2C7+A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "_sdk/Vasont.Inspire.SDK.InspireClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "_sdk/Vasont.Inspire.SDK.InspireClient.html",
+          "hash": "7vH7EiI3gB9+pd9rNJgEIQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "_sdk/Vasont.Inspire.SDK.InspireClientConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "_sdk/Vasont.Inspire.SDK.InspireClientConfiguration.html",
+          "hash": "8e7R7XrM+JkwtGOZVciiiA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "_sdk/Vasont.Inspire.SDK.InspireClientException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "_sdk/Vasont.Inspire.SDK.InspireClientException.html",
+          "hash": "dcCsd2UdvYmbuvUy/TaJuA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "_sdk/Vasont.Inspire.SDK.Projects.ProjectExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "_sdk/Vasont.Inspire.SDK.Projects.ProjectExtensions.html",
+          "hash": "qUAQ0yqEjxwRqSoOrgCWqw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "_sdk/Vasont.Inspire.SDK.Projects.yml",
+      "output": {
+        ".html": {
+          "relative_path": "_sdk/Vasont.Inspire.SDK.Projects.html",
+          "hash": "feTVOTxGPexRmFyjhRJAxA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "_sdk/Vasont.Inspire.SDK.Review.ReviewExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "_sdk/Vasont.Inspire.SDK.Review.ReviewExtensions.html",
+          "hash": "pshl3xjtJRiLEbjXOFUeFA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "_sdk/Vasont.Inspire.SDK.Review.yml",
+      "output": {
+        ".html": {
+          "relative_path": "_sdk/Vasont.Inspire.SDK.Review.html",
+          "hash": "aqJOSathwc/ZGH7KqVguuA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "_sdk/Vasont.Inspire.SDK.Security.RoleExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "_sdk/Vasont.Inspire.SDK.Security.RoleExtensions.html",
+          "hash": "IjfWSVGPBJbZ7gQovEGp/w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "_sdk/Vasont.Inspire.SDK.Security.UserExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "_sdk/Vasont.Inspire.SDK.Security.UserExtensions.html",
+          "hash": "mukk3dlfDtMKwtG464uSCQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "_sdk/Vasont.Inspire.SDK.Security.yml",
+      "output": {
+        ".html": {
+          "relative_path": "_sdk/Vasont.Inspire.SDK.Security.html",
+          "hash": "eC2A82aZg+kVxX4Up9/xWw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "_sdk/Vasont.Inspire.SDK.Translations.TranslationsExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "_sdk/Vasont.Inspire.SDK.Translations.TranslationsExtensions.html",
+          "hash": "MQucuKv6NwgSdgjO0TjwVg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "_sdk/Vasont.Inspire.SDK.Translations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "_sdk/Vasont.Inspire.SDK.Translations.html",
+          "hash": "IqNPTQ/6EE93gt0BbudVeA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "_sdk/Vasont.Inspire.SDK.yml",
+      "output": {
+        ".html": {
+          "relative_path": "_sdk/Vasont.Inspire.SDK.html",
+          "hash": "kjgbXDEJPjhZHeYInJ41vw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "_sdk/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "_sdk/toc.html",
+          "hash": "jULdwALM9KfA00I8Gpc1Iw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/favicon.ico",
+      "output": {
+        "resource": {
+          "relative_path": "images/favicon.ico"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/gl_vasont_logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/gl_vasont_logo.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "/7k5E41SwtpospAMert+rw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "5rrO8tFHyllFURgt1evPbw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Disable incremental build by force rebuild option.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "ForceRebuild"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 1,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 23,
+          "skipped_file_count": 0
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: it's disabled.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

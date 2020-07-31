@@ -10,16 +10,16 @@ Developers who are working within the Inspire Preview environment (Sandbox, Demo
 
 Live Inspire customers will work with [LTS](https://en.wikipedia.org/wiki/Long-term_support) versions of the API and related SDK versions.
 
-#### Just Getting Started?
+## Just Getting Started?
 
 Check out the development quickstart guide.
 
-Check out the [SDK Documentation](toc.md)
+Check out the [SDK Documentation](/_sdk/Vasont.Inspire.SDK.html)
 
-#### Not A Developer?
+## Not A Developer?
 
 Use apps and connectors developed by our partners to get started integrating your instance of Inspire with your tools and applications.
 
-#### Available Library Platforms
+## Available Library Platforms
 
-[.NET â€“ Nuget.org](https://nuget.org/Vasont.Inspire.SDK)
+[.NET – Nuget.org](https://nuget.org/Vasont.Inspire.SDK)

@@ -1,0 +1,56 @@
+### YamlMime:TableOfContent
+- uid: Vasont.Inspire.SDK
+  name: Vasont.Inspire.SDK
+  items:
+  - uid: Vasont.Inspire.SDK.ClientAuthenticationMethods
+    name: ClientAuthenticationMethods
+  - uid: Vasont.Inspire.SDK.InspireClient
+    name: InspireClient
+  - uid: Vasont.Inspire.SDK.InspireClientConfiguration
+    name: InspireClientConfiguration
+  - uid: Vasont.Inspire.SDK.InspireClientException
+    name: InspireClientException
+- uid: Vasont.Inspire.SDK.Application
+  name: Vasont.Inspire.SDK.Application
+  items:
+  - uid: Vasont.Inspire.SDK.Application.ApplicationExtensions
+    name: ApplicationExtensions
+- uid: Vasont.Inspire.SDK.Components
+  name: Vasont.Inspire.SDK.Components
+  items:
+  - uid: Vasont.Inspire.SDK.Components.ComponentExtensions
+    name: ComponentExtensions
+  - uid: Vasont.Inspire.SDK.Components.EditorExtensions
+    name: EditorExtensions
+- uid: Vasont.Inspire.SDK.Configuration
+  name: Vasont.Inspire.SDK.Configuration
+  items:
+  - uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions
+    name: ConfigurationExtensions
+- uid: Vasont.Inspire.SDK.Folders
+  name: Vasont.Inspire.SDK.Folders
+  items:
+  - uid: Vasont.Inspire.SDK.Folders.FolderExtensions
+    name: FolderExtensions
+- uid: Vasont.Inspire.SDK.Projects
+  name: Vasont.Inspire.SDK.Projects
+  items:
+  - uid: Vasont.Inspire.SDK.Projects.ProjectExtensions
+    name: ProjectExtensions
+- uid: Vasont.Inspire.SDK.Review
+  name: Vasont.Inspire.SDK.Review
+  items:
+  - uid: Vasont.Inspire.SDK.Review.ReviewExtensions
+    name: ReviewExtensions
+- uid: Vasont.Inspire.SDK.Security
+  name: Vasont.Inspire.SDK.Security
+  items:
+  - uid: Vasont.Inspire.SDK.Security.RoleExtensions
+    name: RoleExtensions
+  - uid: Vasont.Inspire.SDK.Security.UserExtensions
+    name: UserExtensions
+- uid: Vasont.Inspire.SDK.Translations
+  name: Vasont.Inspire.SDK.Translations
+  items:
+  - uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions
+    name: TranslationsExtensions

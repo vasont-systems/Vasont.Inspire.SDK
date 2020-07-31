@@ -44,6 +44,11 @@
     <Warning Text="$(MSBuildProjectFile) is Multilingual build enabled, but the Multilingual App Toolkit is unavailable during the build. If building with Visual Studio, please check to ensure that toolkit is properly installed." />
   </Target>
   <ItemGroup>
+    <Compile Remove="_sdk\**" />
+    <EmbeddedResource Remove="_sdk\**" />
+    <None Remove="_sdk\**" />
+  </ItemGroup>
+  <ItemGroup>
     <None Remove="MultilingualResources\Vasont.Inspire.SDK.de.xlf" />
     <None Remove="MultilingualResources\Vasont.Inspire.SDK.es.xlf" />
     <None Remove="MultilingualResources\Vasont.Inspire.SDK.fr.xlf" />
@@ -54,6 +59,10 @@
     <None Remove="MultilingualResources\Vasont.Inspire.SDK.zh-Hans.xlf" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="docfx.console" Version="2.56.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="IdentityModel" Version="4.3.0" />
     <PackageReference Include="Vasont.Inspire.Core" Version="1.0.13" />
     <PackageReference Include="Vasont.Inspire.Models" Version="1.1.31" />
