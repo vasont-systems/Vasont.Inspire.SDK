@@ -1,0 +1,1863 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class InspireClient
+   | GlobalLink Vasont Inspire SDK </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class InspireClient
+   | GlobalLink Vasont Inspire SDK ">
+    <meta name="generator" content="docfx 2.56.2.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/gl_vasont_logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Vasont.Inspire.SDK.InspireClient">
+  
+  
+  <h1 id="Vasont_Inspire_SDK_InspireClient" data-uid="Vasont.Inspire.SDK.InspireClient" class="text-break">Class InspireClient
+  </h1>
+  <div class="markdown level0 summary"><p>This class is the primary client from which interaction to the Inspire Web API shall be made.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">InspireClient</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.IDisposable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Vasont.Inspire.SDK.html">Vasont.Inspire.SDK</a></h6>
+  <h6><strong>Assembly</strong>: Vasont.Inspire.SDK.dll</h6>
+  <h5 id="Vasont_Inspire_SDK_InspireClient_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class InspireClient : IDisposable</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/new/master/apiSpec/new?filename=Vasont_Inspire_SDK_InspireClient__ctor_Vasont_Inspire_SDK_InspireClientConfiguration_.md&amp;value=---%0Auid%3A%20Vasont.Inspire.SDK.InspireClient.%23ctor(Vasont.Inspire.SDK.InspireClientConfiguration)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/blob/develop/src/InspireClient.cs/#L62">View Source</a>
+  </span>
+  <a id="Vasont_Inspire_SDK_InspireClient__ctor_" data-uid="Vasont.Inspire.SDK.InspireClient.#ctor*"></a>
+  <h4 id="Vasont_Inspire_SDK_InspireClient__ctor_Vasont_Inspire_SDK_InspireClientConfiguration_" data-uid="Vasont.Inspire.SDK.InspireClient.#ctor(Vasont.Inspire.SDK.InspireClientConfiguration)">InspireClient(InspireClientConfiguration)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Vasont.Inspire.SDK.InspireClient.html">InspireClient</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InspireClient(InspireClientConfiguration config)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Vasont.Inspire.SDK.InspireClientConfiguration.html">InspireClientConfiguration</a></td>
+        <td><span class="parametername">config</span></td>
+        <td><p>Contains an instance of the <a class="xref" href="Vasont.Inspire.SDK.InspireClientConfiguration.html">InspireClientConfiguration</a> class that contains client configuration settings.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/new/master/apiSpec/new?filename=Vasont_Inspire_SDK_InspireClient_AccessToken.md&amp;value=---%0Auid%3A%20Vasont.Inspire.SDK.InspireClient.AccessToken%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/blob/develop/src/InspireClient.cs/#L112">View Source</a>
+  </span>
+  <a id="Vasont_Inspire_SDK_InspireClient_AccessToken_" data-uid="Vasont.Inspire.SDK.InspireClient.AccessToken*"></a>
+  <h4 id="Vasont_Inspire_SDK_InspireClient_AccessToken" data-uid="Vasont.Inspire.SDK.InspireClient.AccessToken">AccessToken</h4>
+  <div class="markdown level1 summary"><p>Gets the access token.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected string AccessToken { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>The access token.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/new/master/apiSpec/new?filename=Vasont_Inspire_SDK_InspireClient_Config.md&amp;value=---%0Auid%3A%20Vasont.Inspire.SDK.InspireClient.Config%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/blob/develop/src/InspireClient.cs/#L75">View Source</a>
+  </span>
+  <a id="Vasont_Inspire_SDK_InspireClient_Config_" data-uid="Vasont.Inspire.SDK.InspireClient.Config*"></a>
+  <h4 id="Vasont_Inspire_SDK_InspireClient_Config" data-uid="Vasont.Inspire.SDK.InspireClient.Config">Config</h4>
+  <div class="markdown level1 summary"><p>Gets the inspire client configuration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InspireClientConfiguration Config { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Vasont.Inspire.SDK.InspireClientConfiguration.html">InspireClientConfiguration</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/new/master/apiSpec/new?filename=Vasont_Inspire_SDK_InspireClient_HasAuthenticated.md&amp;value=---%0Auid%3A%20Vasont.Inspire.SDK.InspireClient.HasAuthenticated%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/blob/develop/src/InspireClient.cs/#L80">View Source</a>
+  </span>
+  <a id="Vasont_Inspire_SDK_InspireClient_HasAuthenticated_" data-uid="Vasont.Inspire.SDK.InspireClient.HasAuthenticated*"></a>
+  <h4 id="Vasont_Inspire_SDK_InspireClient_HasAuthenticated" data-uid="Vasont.Inspire.SDK.InspireClient.HasAuthenticated">HasAuthenticated</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether the client has authenticated with the server at some point</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasAuthenticated { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/new/master/apiSpec/new?filename=Vasont_Inspire_SDK_InspireClient_HasError.md&amp;value=---%0Auid%3A%20Vasont.Inspire.SDK.InspireClient.HasError%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/blob/develop/src/InspireClient.cs/#L85">View Source</a>
+  </span>
+  <a id="Vasont_Inspire_SDK_InspireClient_HasError_" data-uid="Vasont.Inspire.SDK.InspireClient.HasError*"></a>
+  <h4 id="Vasont_Inspire_SDK_InspireClient_HasError" data-uid="Vasont.Inspire.SDK.InspireClient.HasError">HasError</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether the client has an error.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasError { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/new/master/apiSpec/new?filename=Vasont_Inspire_SDK_InspireClient_LastErrorResponse.md&amp;value=---%0Auid%3A%20Vasont.Inspire.SDK.InspireClient.LastErrorResponse%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/blob/develop/src/InspireClient.cs/#L90">View Source</a>
+  </span>
+  <a id="Vasont_Inspire_SDK_InspireClient_LastErrorResponse_" data-uid="Vasont.Inspire.SDK.InspireClient.LastErrorResponse*"></a>
+  <h4 id="Vasont_Inspire_SDK_InspireClient_LastErrorResponse" data-uid="Vasont.Inspire.SDK.InspireClient.LastErrorResponse">LastErrorResponse</h4>
+  <div class="markdown level1 summary"><p>Gets the last error response model from an internal RequestContent call.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ErrorResponseModel LastErrorResponse { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vasont.Inspire.Models.Common.ErrorResponseModel</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/new/master/apiSpec/new?filename=Vasont_Inspire_SDK_InspireClient_LastException.md&amp;value=---%0Auid%3A%20Vasont.Inspire.SDK.InspireClient.LastException%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/blob/develop/src/InspireClient.cs/#L95">View Source</a>
+  </span>
+  <a id="Vasont_Inspire_SDK_InspireClient_LastException_" data-uid="Vasont.Inspire.SDK.InspireClient.LastException*"></a>
+  <h4 id="Vasont_Inspire_SDK_InspireClient_LastException" data-uid="Vasont.Inspire.SDK.InspireClient.LastException">LastException</h4>
+  <div class="markdown level1 summary"><p>Gets the last exception handled within the client.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Exception LastException { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Exception</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/new/master/apiSpec/new?filename=Vasont_Inspire_SDK_InspireClient_TokenEndpoint.md&amp;value=---%0Auid%3A%20Vasont.Inspire.SDK.InspireClient.TokenEndpoint%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/blob/develop/src/InspireClient.cs/#L117">View Source</a>
+  </span>
+  <a id="Vasont_Inspire_SDK_InspireClient_TokenEndpoint_" data-uid="Vasont.Inspire.SDK.InspireClient.TokenEndpoint*"></a>
+  <h4 id="Vasont_Inspire_SDK_InspireClient_TokenEndpoint" data-uid="Vasont.Inspire.SDK.InspireClient.TokenEndpoint">TokenEndpoint</h4>
+  <div class="markdown level1 summary"><p>Gets the token endpoint for the identity authority.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected string TokenEndpoint { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/new/master/apiSpec/new?filename=Vasont_Inspire_SDK_InspireClient_TokenResponse.md&amp;value=---%0Auid%3A%20Vasont.Inspire.SDK.InspireClient.TokenResponse%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/blob/develop/src/InspireClient.cs/#L104">View Source</a>
+  </span>
+  <a id="Vasont_Inspire_SDK_InspireClient_TokenResponse_" data-uid="Vasont.Inspire.SDK.InspireClient.TokenResponse*"></a>
+  <h4 id="Vasont_Inspire_SDK_InspireClient_TokenResponse" data-uid="Vasont.Inspire.SDK.InspireClient.TokenResponse">TokenResponse</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the client authentication token response.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected TokenResponse TokenResponse { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IdentityModel.Client.TokenResponse</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/new/master/apiSpec/new?filename=Vasont_Inspire_SDK_InspireClient_Authenticate_System_String_.md&amp;value=---%0Auid%3A%20Vasont.Inspire.SDK.InspireClient.Authenticate(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/blob/develop/src/InspireClient.cs/#L128">View Source</a>
+  </span>
+  <a id="Vasont_Inspire_SDK_InspireClient_Authenticate_" data-uid="Vasont.Inspire.SDK.InspireClient.Authenticate*"></a>
+  <h4 id="Vasont_Inspire_SDK_InspireClient_Authenticate_System_String_" data-uid="Vasont.Inspire.SDK.InspireClient.Authenticate(System.String)">Authenticate(String)</h4>
+  <div class="markdown level1 summary"><p>Authenticates the client with the specified scopes in a synchronous manor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Authenticate(string scopes = &quot;&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">scopes</span></td>
+        <td><p>The scopes to use.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>Returns the result of the authentication.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/new/master/apiSpec/new?filename=Vasont_Inspire_SDK_InspireClient_AuthenticateAsync_System_String_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Vasont.Inspire.SDK.InspireClient.AuthenticateAsync(System.String%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/blob/develop/src/InspireClient.cs/#L140">View Source</a>
+  </span>
+  <a id="Vasont_Inspire_SDK_InspireClient_AuthenticateAsync_" data-uid="Vasont.Inspire.SDK.InspireClient.AuthenticateAsync*"></a>
+  <h4 id="Vasont_Inspire_SDK_InspireClient_AuthenticateAsync_System_String_System_Threading_CancellationToken_" data-uid="Vasont.Inspire.SDK.InspireClient.AuthenticateAsync(System.String,System.Threading.CancellationToken)">AuthenticateAsync(String, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>This method is used to retrieve and authorize the client for back-channel communication to the Identity API.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; AuthenticateAsync(string scopes = &quot;&quot;, CancellationToken cancellationToken = default(CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">scopes</span></td>
+        <td><p>Contains the scopes that are requested for the client credentials authentication.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>Contains an optional cancellation token.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><p>Returns a value indicating whether the authentication was successful.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Vasont.Inspire.SDK.InspireClientException.html">InspireClientException</a></td>
+        <td><p>The exception is thrown if an issue occurs during discovery or client authentication.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/new/master/apiSpec/new?filename=Vasont_Inspire_SDK_InspireClient_CreateRequest_System_String_System_Net_Http_HttpMethod_System_Boolean_System_Net_ICredentials_System_String_.md&amp;value=---%0Auid%3A%20Vasont.Inspire.SDK.InspireClient.CreateRequest(System.String%2CSystem.Net.Http.HttpMethod%2CSystem.Boolean%2CSystem.Net.ICredentials%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/blob/develop/src/InspireClient.cs/#L206">View Source</a>
+  </span>
+  <a id="Vasont_Inspire_SDK_InspireClient_CreateRequest_" data-uid="Vasont.Inspire.SDK.InspireClient.CreateRequest*"></a>
+  <h4 id="Vasont_Inspire_SDK_InspireClient_CreateRequest_System_String_System_Net_Http_HttpMethod_System_Boolean_System_Net_ICredentials_System_String_" data-uid="Vasont.Inspire.SDK.InspireClient.CreateRequest(System.String,System.Net.Http.HttpMethod,System.Boolean,System.Net.ICredentials,System.String)">CreateRequest(String, HttpMethod, Boolean, ICredentials, String)</h4>
+  <div class="markdown level1 summary"><p>This method is used to easily create a new WebRequest object for the Web API.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public HttpWebRequest CreateRequest(string relativeUri, HttpMethod method = null, bool noCache = true, ICredentials credentials = null, string contentType = &quot;application/json&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">relativeUri</span></td>
+        <td><p>Contains the relative Uri path of the web request to make against the Web API.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Net.Http.HttpMethod</span></td>
+        <td><span class="parametername">method</span></td>
+        <td><p>Contains the HttpMethod request method object.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">noCache</span></td>
+        <td><p>Contains a value indicating whether the URL shall contain a parameter preventing the server from returning cached content.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Net.ICredentials</span></td>
+        <td><span class="parametername">credentials</span></td>
+        <td><p>Contains optional credentials</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">contentType</span></td>
+        <td><p>Contains optional content type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Net.HttpWebRequest</span></td>
+        <td><p>Returns a new WebRequest object to execute.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/new/master/apiSpec/new?filename=Vasont_Inspire_SDK_InspireClient_CreateRequest_System_String_System_String_System_Boolean_System_Net_ICredentials_System_String_.md&amp;value=---%0Auid%3A%20Vasont.Inspire.SDK.InspireClient.CreateRequest(System.String%2CSystem.String%2CSystem.Boolean%2CSystem.Net.ICredentials%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/blob/develop/src/InspireClient.cs/#L230">View Source</a>
+  </span>
+  <a id="Vasont_Inspire_SDK_InspireClient_CreateRequest_" data-uid="Vasont.Inspire.SDK.InspireClient.CreateRequest*"></a>
+  <h4 id="Vasont_Inspire_SDK_InspireClient_CreateRequest_System_String_System_String_System_Boolean_System_Net_ICredentials_System_String_" data-uid="Vasont.Inspire.SDK.InspireClient.CreateRequest(System.String,System.String,System.Boolean,System.Net.ICredentials,System.String)">CreateRequest(String, String, Boolean, ICredentials, String)</h4>
+  <div class="markdown level1 summary"><p>This method is used to easily create a new WebRequest object for the Web API.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public HttpWebRequest CreateRequest(string relativeUri, string method, bool noCache = true, ICredentials credentials = null, string contentType = &quot;application/json&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">relativeUri</span></td>
+        <td><p>Contains the relative Uri path of the web request to make against the Web API.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">method</span></td>
+        <td><p>Contains the request method as a string value.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">noCache</span></td>
+        <td><p>Contains a value indicating whether the URL shall contain a parameter preventing the server from returning cached content.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Net.ICredentials</span></td>
+        <td><span class="parametername">credentials</span></td>
+        <td><p>Contains optional credentials</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">contentType</span></td>
+        <td><p>Contains optional content type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Net.HttpWebRequest</span></td>
+        <td><p>Returns a new HttpWebRequest object to execute.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/new/master/apiSpec/new?filename=Vasont_Inspire_SDK_InspireClient_Dispose.md&amp;value=---%0Auid%3A%20Vasont.Inspire.SDK.InspireClient.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/blob/develop/src/InspireClient.cs/#L406">View Source</a>
+  </span>
+  <a id="Vasont_Inspire_SDK_InspireClient_Dispose_" data-uid="Vasont.Inspire.SDK.InspireClient.Dispose*"></a>
+  <h4 id="Vasont_Inspire_SDK_InspireClient_Dispose" data-uid="Vasont.Inspire.SDK.InspireClient.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"><p>This method is called upon disposal of the client class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/new/master/apiSpec/new?filename=Vasont_Inspire_SDK_InspireClient_Dispose_System_Boolean_.md&amp;value=---%0Auid%3A%20Vasont.Inspire.SDK.InspireClient.Dispose(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/blob/develop/src/InspireClient.cs/#L420">View Source</a>
+  </span>
+  <a id="Vasont_Inspire_SDK_InspireClient_Dispose_" data-uid="Vasont.Inspire.SDK.InspireClient.Dispose*"></a>
+  <h4 id="Vasont_Inspire_SDK_InspireClient_Dispose_System_Boolean_" data-uid="Vasont.Inspire.SDK.InspireClient.Dispose(System.Boolean)">Dispose(Boolean)</h4>
+  <div class="markdown level1 summary"><p>This method is called upon disposal of the client class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Dispose(bool disposing)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">disposing</span></td>
+        <td><p>Contains a value indicating whether the class is currently being disposed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/new/master/apiSpec/new?filename=Vasont_Inspire_SDK_InspireClient_RequestClientCredentialsAsync_System_String_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Vasont.Inspire.SDK.InspireClient.RequestClientCredentialsAsync(System.String%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/blob/develop/src/InspireClient.cs/#L476">View Source</a>
+  </span>
+  <a id="Vasont_Inspire_SDK_InspireClient_RequestClientCredentialsAsync_" data-uid="Vasont.Inspire.SDK.InspireClient.RequestClientCredentialsAsync*"></a>
+  <h4 id="Vasont_Inspire_SDK_InspireClient_RequestClientCredentialsAsync_System_String_System_Threading_CancellationToken_" data-uid="Vasont.Inspire.SDK.InspireClient.RequestClientCredentialsAsync(System.String,System.Threading.CancellationToken)">RequestClientCredentialsAsync(String, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Requests the client credentials.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Task&lt;TokenResponse&gt; RequestClientCredentialsAsync(string scopes, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">scopes</span></td>
+        <td><p>The scopes.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">IdentityModel.Client.TokenResponse</span>&gt;</td>
+        <td><p>Returns a <a class="xref" href="Vasont.Inspire.SDK.InspireClient.html#Vasont_Inspire_SDK_InspireClient_TokenResponse">TokenResponse</a> object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/new/master/apiSpec/new?filename=Vasont_Inspire_SDK_InspireClient_RequestContent_System_Net_HttpWebRequest_.md&amp;value=---%0Auid%3A%20Vasont.Inspire.SDK.InspireClient.RequestContent(System.Net.HttpWebRequest)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/blob/develop/src/InspireClient.cs/#L328">View Source</a>
+  </span>
+  <a id="Vasont_Inspire_SDK_InspireClient_RequestContent_" data-uid="Vasont.Inspire.SDK.InspireClient.RequestContent*"></a>
+  <h4 id="Vasont_Inspire_SDK_InspireClient_RequestContent_System_Net_HttpWebRequest_" data-uid="Vasont.Inspire.SDK.InspireClient.RequestContent(System.Net.HttpWebRequest)">RequestContent(HttpWebRequest)</h4>
+  <div class="markdown level1 summary"><p>This method is used to execute a web request and return the results of the request as a string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string RequestContent(HttpWebRequest request)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Net.HttpWebRequest</span></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>Contains the HttpWebRequest to execute.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>Returns the content of the request response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/new/master/apiSpec/new?filename=Vasont_Inspire_SDK_InspireClient_RequestContent__1_System_Net_HttpWebRequest_.md&amp;value=---%0Auid%3A%20Vasont.Inspire.SDK.InspireClient.RequestContent%60%601(System.Net.HttpWebRequest)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/blob/develop/src/InspireClient.cs/#L281">View Source</a>
+  </span>
+  <a id="Vasont_Inspire_SDK_InspireClient_RequestContent_" data-uid="Vasont.Inspire.SDK.InspireClient.RequestContent*"></a>
+  <h4 id="Vasont_Inspire_SDK_InspireClient_RequestContent__1_System_Net_HttpWebRequest_" data-uid="Vasont.Inspire.SDK.InspireClient.RequestContent``1(System.Net.HttpWebRequest)">RequestContent&lt;TOut&gt;(HttpWebRequest)</h4>
+  <div class="markdown level1 summary"><p>This method is used to execute a web request and return the results of the request as a defined object type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TOut RequestContent&lt;TOut&gt;(HttpWebRequest request)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Net.HttpWebRequest</span></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>Contains the HttpWebRequest to execute.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TOut</span></td>
+        <td><p>Returns the content of the request response as the specified object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TOut</span></td>
+        <td><p>Contains the type of object that is returned from the request.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/new/master/apiSpec/new?filename=Vasont_Inspire_SDK_InspireClient_RequestContent__1_System_Net_HttpWebRequest___0_.md&amp;value=---%0Auid%3A%20Vasont.Inspire.SDK.InspireClient.RequestContent%60%601(System.Net.HttpWebRequest%2C%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/blob/develop/src/InspireClient.cs/#L294">View Source</a>
+  </span>
+  <a id="Vasont_Inspire_SDK_InspireClient_RequestContent_" data-uid="Vasont.Inspire.SDK.InspireClient.RequestContent*"></a>
+  <h4 id="Vasont_Inspire_SDK_InspireClient_RequestContent__1_System_Net_HttpWebRequest___0_" data-uid="Vasont.Inspire.SDK.InspireClient.RequestContent``1(System.Net.HttpWebRequest,``0)">RequestContent&lt;T&gt;(HttpWebRequest, T)</h4>
+  <div class="markdown level1 summary"><p>This method is used to execute a web request and return the results of the request as a string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string RequestContent&lt;T&gt;(HttpWebRequest request, T requestBodyModel)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Net.HttpWebRequest</span></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>Contains the HttpWebRequest to execute.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">requestBodyModel</span></td>
+        <td><p>Contains the object to serialize and submit with the request.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>Returns the content of the request response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>Contains the type of the object that is to be sent with the request.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/new/master/apiSpec/new?filename=Vasont_Inspire_SDK_InspireClient_RequestContent__2_System_Net_HttpWebRequest___0_.md&amp;value=---%0Auid%3A%20Vasont.Inspire.SDK.InspireClient.RequestContent%60%602(System.Net.HttpWebRequest%2C%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/blob/develop/src/InspireClient.cs/#L269">View Source</a>
+  </span>
+  <a id="Vasont_Inspire_SDK_InspireClient_RequestContent_" data-uid="Vasont.Inspire.SDK.InspireClient.RequestContent*"></a>
+  <h4 id="Vasont_Inspire_SDK_InspireClient_RequestContent__2_System_Net_HttpWebRequest___0_" data-uid="Vasont.Inspire.SDK.InspireClient.RequestContent``2(System.Net.HttpWebRequest,``0)">RequestContent&lt;T, TOut&gt;(HttpWebRequest, T)</h4>
+  <div class="markdown level1 summary"><p>This method is used to execute a web request and return the results of the request as a defined object type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TOut RequestContent&lt;T, TOut&gt;(HttpWebRequest request, T requestBodyModel)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Net.HttpWebRequest</span></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>Contains the HttpWebRequest to execute.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">requestBodyModel</span></td>
+        <td><p>Contains the object to serialize and submit with the request.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TOut</span></td>
+        <td><p>Returns the content of the request response as the specified object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>Contains the type of the object that is to be sent with the request.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TOut</span></td>
+        <td><p>Contains the type of object that is returned from the request.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/new/master/apiSpec/new?filename=Vasont_Inspire_SDK_InspireClient_RequestDelegationAsync_System_String_System_String_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Vasont.Inspire.SDK.InspireClient.RequestDelegationAsync(System.String%2CSystem.String%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/blob/develop/src/InspireClient.cs/#L502">View Source</a>
+  </span>
+  <a id="Vasont_Inspire_SDK_InspireClient_RequestDelegationAsync_" data-uid="Vasont.Inspire.SDK.InspireClient.RequestDelegationAsync*"></a>
+  <h4 id="Vasont_Inspire_SDK_InspireClient_RequestDelegationAsync_System_String_System_String_System_Threading_CancellationToken_" data-uid="Vasont.Inspire.SDK.InspireClient.RequestDelegationAsync(System.String,System.String,System.Threading.CancellationToken)">RequestDelegationAsync(String, String, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>This method is used to request a delegation token from the identity server that supports the custom grant type of &quot;delegation&quot;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Task&lt;TokenResponse&gt; RequestDelegationAsync(string scopes, string delegatedAccessToken, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">scopes</span></td>
+        <td><p>The scopes.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">delegatedAccessToken</span></td>
+        <td><p>Contains the delegated access token.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">IdentityModel.Client.TokenResponse</span>&gt;</td>
+        <td><p>Returns a new token response from the request.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/new/master/apiSpec/new?filename=Vasont_Inspire_SDK_InspireClient_RequestDiscoveryAsync_System_Uri_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Vasont.Inspire.SDK.InspireClient.RequestDiscoveryAsync(System.Uri%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/blob/develop/src/InspireClient.cs/#L455">View Source</a>
+  </span>
+  <a id="Vasont_Inspire_SDK_InspireClient_RequestDiscoveryAsync_" data-uid="Vasont.Inspire.SDK.InspireClient.RequestDiscoveryAsync*"></a>
+  <h4 id="Vasont_Inspire_SDK_InspireClient_RequestDiscoveryAsync_System_Uri_System_Threading_CancellationToken_" data-uid="Vasont.Inspire.SDK.InspireClient.RequestDiscoveryAsync(System.Uri,System.Threading.CancellationToken)">RequestDiscoveryAsync(Uri, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>This method is used to contact an authority discovery endpoint for information for interacting with the authority.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Task&lt;DiscoveryDocumentResponse&gt; RequestDiscoveryAsync(Uri authorityUri, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Uri</span></td>
+        <td><span class="parametername">authorityUri</span></td>
+        <td><p>Contains the authority URI to contact.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>Contains a cancellation token.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">IdentityModel.Client.DiscoveryDocumentResponse</span>&gt;</td>
+        <td><p>Returns a <span class="xref">IdentityModel.Client.DiscoveryDocumentResponse</span> object when successful.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/new/master/apiSpec/new?filename=Vasont_Inspire_SDK_InspireClient_RequestResourceOwnerPasswordAsync_System_String_System_String_System_String_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Vasont.Inspire.SDK.InspireClient.RequestResourceOwnerPasswordAsync(System.String%2CSystem.String%2CSystem.String%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/blob/develop/src/InspireClient.cs/#L534">View Source</a>
+  </span>
+  <a id="Vasont_Inspire_SDK_InspireClient_RequestResourceOwnerPasswordAsync_" data-uid="Vasont.Inspire.SDK.InspireClient.RequestResourceOwnerPasswordAsync*"></a>
+  <h4 id="Vasont_Inspire_SDK_InspireClient_RequestResourceOwnerPasswordAsync_System_String_System_String_System_String_System_Threading_CancellationToken_" data-uid="Vasont.Inspire.SDK.InspireClient.RequestResourceOwnerPasswordAsync(System.String,System.String,System.String,System.Threading.CancellationToken)">RequestResourceOwnerPasswordAsync(String, String, String, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Request the resource owner credentials.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Task&lt;TokenResponse&gt; RequestResourceOwnerPasswordAsync(string userName, string password, string scopes, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">userName</span></td>
+        <td><p>Contains the user name.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">password</span></td>
+        <td><p>Contains the user password.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">scopes</span></td>
+        <td><p>Contains the scopes.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>Contains a cancellation token.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">IdentityModel.Client.TokenResponse</span>&gt;</td>
+        <td><p>Returns a <a class="xref" href="Vasont.Inspire.SDK.InspireClient.html#Vasont_Inspire_SDK_InspireClient_TokenResponse">TokenResponse</a> object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/new/master/apiSpec/new?filename=Vasont_Inspire_SDK_InspireClient_ResetErrors.md&amp;value=---%0Auid%3A%20Vasont.Inspire.SDK.InspireClient.ResetErrors%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/blob/develop/src/InspireClient.cs/#L437">View Source</a>
+  </span>
+  <a id="Vasont_Inspire_SDK_InspireClient_ResetErrors_" data-uid="Vasont.Inspire.SDK.InspireClient.ResetErrors*"></a>
+  <h4 id="Vasont_Inspire_SDK_InspireClient_ResetErrors" data-uid="Vasont.Inspire.SDK.InspireClient.ResetErrors">ResetErrors()</h4>
+  <div class="markdown level1 summary"><p>This method is used to clear any previous error objects.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void ResetErrors()</code></pre>
+  </div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.IDisposable</span>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Application.ApplicationExtensions.html#Vasont_Inspire_SDK_Application_ApplicationExtensions_GetAppInfo_Vasont_Inspire_SDK_InspireClient_">ApplicationExtensions.GetAppInfo(InspireClient)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Application.ApplicationExtensions.html#Vasont_Inspire_SDK_Application_ApplicationExtensions_RetrieveAppInfo_Vasont_Inspire_SDK_InspireClient_">ApplicationExtensions.RetrieveAppInfo(InspireClient)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Application.ApplicationExtensions.html#Vasont_Inspire_SDK_Application_ApplicationExtensions_KeepAlive_Vasont_Inspire_SDK_InspireClient_">ApplicationExtensions.KeepAlive(InspireClient)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_GetComponentTypes_Vasont_Inspire_SDK_InspireClient_">ComponentExtensions.GetComponentTypes(InspireClient)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_GetComponentWorkflowTemplates_Vasont_Inspire_SDK_InspireClient_">ComponentExtensions.GetComponentWorkflowTemplates(InspireClient)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_GetComponentWorkflowTemplate_Vasont_Inspire_SDK_InspireClient_System_Int64_">ComponentExtensions.GetComponentWorkflowTemplate(InspireClient, Int64)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_GetComponentTemplates_Vasont_Inspire_SDK_InspireClient_System_String_">ComponentExtensions.GetComponentTemplates(InspireClient, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_GetComponents_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Components_BatchComponentsRequestModel_">ComponentExtensions.GetComponents(InspireClient, BatchComponentsRequestModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_GetComponent_Vasont_Inspire_SDK_InspireClient_System_Int64_">ComponentExtensions.GetComponent(InspireClient, Int64)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_GetComponentDetail_Vasont_Inspire_SDK_InspireClient_System_Int64_">ComponentExtensions.GetComponentDetail(InspireClient, Int64)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_GetComponentContent_Vasont_Inspire_SDK_InspireClient_System_Int64_">ComponentExtensions.GetComponentContent(InspireClient, Int64)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_GetComponentPermissions_Vasont_Inspire_SDK_InspireClient_System_Int64_">ComponentExtensions.GetComponentPermissions(InspireClient, Int64)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_GetComponentElements_Vasont_Inspire_SDK_InspireClient_System_Int64_System_Collections_Generic_List_System_String__">ComponentExtensions.GetComponentElements(InspireClient, Int64, List&lt;String&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_ApproveComponents_Vasont_Inspire_SDK_InspireClient_System_Collections_Generic_List_System_Int64__">ComponentExtensions.ApproveComponents(InspireClient, List&lt;Int64&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_GetComponentConfiguration_Vasont_Inspire_SDK_InspireClient_System_Int64_System_Boolean_">ComponentExtensions.GetComponentConfiguration(InspireClient, Int64, Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_CreateComponent_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Components_CreateComponentFromTemplateModel_">ComponentExtensions.CreateComponent(InspireClient, CreateComponentFromTemplateModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_CreateComponentAs_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Components_SaveAsComponentModel_">ComponentExtensions.CreateComponentAs(InspireClient, SaveAsComponentModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_CreateComponentBranch_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Components_SaveAsBranchModel_">ComponentExtensions.CreateComponentBranch(InspireClient, SaveAsBranchModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_CreateComponentsExportRequest_Vasont_Inspire_SDK_InspireClient_System_Int64_Vasont_Inspire_Models_Transfers_ExportRequestModel_">ComponentExtensions.CreateComponentsExportRequest(InspireClient, Int64, ExportRequestModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_RenameComponent_Vasont_Inspire_SDK_InspireClient_System_Int64_Vasont_Inspire_Models_Components_MinimalComponentModel_">ComponentExtensions.RenameComponent(InspireClient, Int64, MinimalComponentModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_UpdateComponentPermissions_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Components_PermissionUpdateModel_">ComponentExtensions.UpdateComponentPermissions(InspireClient, PermissionUpdateModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_UpdateComponentPermissions_Vasont_Inspire_SDK_InspireClient_System_Int64_Vasont_Inspire_Models_Components_PermissionUpdateModel_">ComponentExtensions.UpdateComponentPermissions(InspireClient, Int64, PermissionUpdateModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_SetComponentPermissions_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Components_PermissionUpdateModel_">ComponentExtensions.SetComponentPermissions(InspireClient, PermissionUpdateModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_MoveComponentsToFolder_Vasont_Inspire_SDK_InspireClient_System_Collections_Generic_List_System_Int64__System_Int64_">ComponentExtensions.MoveComponentsToFolder(InspireClient, List&lt;Int64&gt;, Int64)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_LockComponent_Vasont_Inspire_SDK_InspireClient_System_Int64_">ComponentExtensions.LockComponent(InspireClient, Int64)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_LockComponents_Vasont_Inspire_SDK_InspireClient_System_Collections_Generic_List_System_Int64__">ComponentExtensions.LockComponents(InspireClient, List&lt;Int64&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_UnlockComponents_Vasont_Inspire_SDK_InspireClient_System_Collections_Generic_List_System_Int64__System_Boolean_">ComponentExtensions.UnlockComponents(InspireClient, List&lt;Int64&gt;, Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_UnlockComponent_Vasont_Inspire_SDK_InspireClient_System_Int64_System_Boolean_">ComponentExtensions.UnlockComponent(InspireClient, Int64, Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_DeleteComponent_Vasont_Inspire_SDK_InspireClient_System_Int64_">ComponentExtensions.DeleteComponent(InspireClient, Int64)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_DeleteComponents_Vasont_Inspire_SDK_InspireClient_System_Collections_Generic_List_System_Int64__">ComponentExtensions.DeleteComponents(InspireClient, List&lt;Int64&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_ImportComponents_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Transfers_ImportRequestModel_System_Collections_Generic_List_System_String__">ComponentExtensions.ImportComponents(InspireClient, ImportRequestModel, List&lt;String&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_GetImportState_Vasont_Inspire_SDK_InspireClient_System_String_">ComponentExtensions.GetImportState(InspireClient, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_GetImportState_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Worker_WorkerStateModel_">ComponentExtensions.GetImportState(InspireClient, WorkerStateModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_GetExportState_Vasont_Inspire_SDK_InspireClient_System_String_">ComponentExtensions.GetExportState(InspireClient, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_GetExportState_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Worker_WorkerStateModel_">ComponentExtensions.GetExportState(InspireClient, WorkerStateModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_UpdateComponentTags_Vasont_Inspire_SDK_InspireClient_System_Int64_Vasont_Inspire_Models_Components_ComponentTagModel_">ComponentExtensions.UpdateComponentTags(InspireClient, Int64, ComponentTagModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_PostComponentTags_Vasont_Inspire_SDK_InspireClient_System_Int64_Vasont_Inspire_Models_Components_ComponentTagModel_">ComponentExtensions.PostComponentTags(InspireClient, Int64, ComponentTagModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_RepairComponentRelationship_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Components_ComponentRelationModel_">ComponentExtensions.RepairComponentRelationship(InspireClient, ComponentRelationModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_AutoRepairComponentRelationships_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Components_ComponentAutoRepairRequestModel_">ComponentExtensions.AutoRepairComponentRelationships(InspireClient, ComponentAutoRepairRequestModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_GetComponentRelations_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Components_ComponentRelationsQueryModel_">ComponentExtensions.GetComponentRelations(InspireClient, ComponentRelationsQueryModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_GetComponentRelationsReport_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Components_ComponentRelationsQueryModel_">ComponentExtensions.GetComponentRelationsReport(InspireClient, ComponentRelationsQueryModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_GetComponentDependencies_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Components_ComponentRelationsQueryModel_">ComponentExtensions.GetComponentDependencies(InspireClient, ComponentRelationsQueryModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_GetComponentDependenciesReport_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Components_ComponentRelationsQueryModel_">ComponentExtensions.GetComponentDependenciesReport(InspireClient, ComponentRelationsQueryModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_GetComponentBranchRelations_Vasont_Inspire_SDK_InspireClient_System_Int64_">ComponentExtensions.GetComponentBranchRelations(InspireClient, Int64)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_GetComponentBranches_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Components_ComponentRelationsQueryModel_">ComponentExtensions.GetComponentBranches(InspireClient, ComponentRelationsQueryModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_GetComponentBranchesReport_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Components_ComponentRelationsQueryModel_">ComponentExtensions.GetComponentBranchesReport(InspireClient, ComponentRelationsQueryModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_GetComponentTranslations_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Components_ComponentRelationsQueryModel_">ComponentExtensions.GetComponentTranslations(InspireClient, ComponentRelationsQueryModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_GetComponentTranslationsReport_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Components_ComponentRelationsQueryModel_">ComponentExtensions.GetComponentTranslationsReport(InspireClient, ComponentRelationsQueryModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_GetComponentHistory_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Versioning_ComponentHistoryQueryModel_System_Boolean_">ComponentExtensions.GetComponentHistory(InspireClient, ComponentHistoryQueryModel, Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_GetComponentHistoryDetails_Vasont_Inspire_SDK_InspireClient_System_Int64_System_Guid_">ComponentExtensions.GetComponentHistoryDetails(InspireClient, Int64, Guid)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_RestoreComponentFromHistory_Vasont_Inspire_SDK_InspireClient_System_Int64_System_Guid_Vasont_Inspire_Models_Versioning_RestoreOptionsModel_">ComponentExtensions.RestoreComponentFromHistory(InspireClient, Int64, Guid, RestoreOptionsModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Components.EditorExtensions.html#Vasont_Inspire_SDK_Components_EditorExtensions_GetEditorComponent_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Components_EditorLoadModel_">EditorExtensions.GetEditorComponent(InspireClient, EditorLoadModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_GetAttributes_Vasont_Inspire_SDK_InspireClient_">ConfigurationExtensions.GetAttributes(InspireClient)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_GetAttribute_Vasont_Inspire_SDK_InspireClient_System_Int64_">ConfigurationExtensions.GetAttribute(InspireClient, Int64)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_UpdateAttribute_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Configuration_AttributeModel_">ConfigurationExtensions.UpdateAttribute(InspireClient, AttributeModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_CreateAttribute_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Configuration_AttributeModel_">ConfigurationExtensions.CreateAttribute(InspireClient, AttributeModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_RemoveAttribute_Vasont_Inspire_SDK_InspireClient_System_Int64_">ConfigurationExtensions.RemoveAttribute(InspireClient, Int64)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_GetProfileAttributes_Vasont_Inspire_SDK_InspireClient_">ConfigurationExtensions.GetProfileAttributes(InspireClient)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_GetProfileAttributeItems_Vasont_Inspire_SDK_InspireClient_">ConfigurationExtensions.GetProfileAttributeItems(InspireClient)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_GetProfileAttribute_Vasont_Inspire_SDK_InspireClient_System_Int64_">ConfigurationExtensions.GetProfileAttribute(InspireClient, Int64)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_UpdateProfileAttribute_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Components_Schema_ProfileAttributeModel_">ConfigurationExtensions.UpdateProfileAttribute(InspireClient, ProfileAttributeModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_CreateProfileAttribute_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Components_Schema_ProfileAttributeModel_">ConfigurationExtensions.CreateProfileAttribute(InspireClient, ProfileAttributeModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_RemoveProfileAttribute_Vasont_Inspire_SDK_InspireClient_System_Int64_">ConfigurationExtensions.RemoveProfileAttribute(InspireClient, Int64)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_GetSchemaStandards_Vasont_Inspire_SDK_InspireClient_">ConfigurationExtensions.GetSchemaStandards(InspireClient)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_GetComponentTypes_Vasont_Inspire_SDK_InspireClient_">ConfigurationExtensions.GetComponentTypes(InspireClient)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_GetComponentType_Vasont_Inspire_SDK_InspireClient_System_Int64_">ConfigurationExtensions.GetComponentType(InspireClient, Int64)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_UpdateComponentType_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Components_ComponentTypeModel_">ConfigurationExtensions.UpdateComponentType(InspireClient, ComponentTypeModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_CreateComponentType_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Components_ComponentTypeModel_">ConfigurationExtensions.CreateComponentType(InspireClient, ComponentTypeModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_RemoveComponentType_Vasont_Inspire_SDK_InspireClient_System_Int64_">ConfigurationExtensions.RemoveComponentType(InspireClient, Int64)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_GetElements_Vasont_Inspire_SDK_InspireClient_">ConfigurationExtensions.GetElements(InspireClient)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_GetElement_Vasont_Inspire_SDK_InspireClient_System_Int64_">ConfigurationExtensions.GetElement(InspireClient, Int64)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_UpdateElement_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Configuration_ElementModel_">ConfigurationExtensions.UpdateElement(InspireClient, ElementModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_CreateElement_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Configuration_ElementModel_">ConfigurationExtensions.CreateElement(InspireClient, ElementModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_RemoveElement_Vasont_Inspire_SDK_InspireClient_System_Int64_">ConfigurationExtensions.RemoveElement(InspireClient, Int64)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_GetExports_Vasont_Inspire_SDK_InspireClient_">ConfigurationExtensions.GetExports(InspireClient)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_GetExport_Vasont_Inspire_SDK_InspireClient_System_Int64_">ConfigurationExtensions.GetExport(InspireClient, Int64)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_UpdateExport_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Transfers_ExportConfigurationModel_">ConfigurationExtensions.UpdateExport(InspireClient, ExportConfigurationModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_CreateExport_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Transfers_ExportConfigurationModel_">ConfigurationExtensions.CreateExport(InspireClient, ExportConfigurationModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_RemoveExport_Vasont_Inspire_SDK_InspireClient_System_Int64_">ConfigurationExtensions.RemoveExport(InspireClient, Int64)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_GetExportPlugins_Vasont_Inspire_SDK_InspireClient_">ConfigurationExtensions.GetExportPlugins(InspireClient)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_GetExportPluginParameters_Vasont_Inspire_SDK_InspireClient_System_Int64_">ConfigurationExtensions.GetExportPluginParameters(InspireClient, Int64)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_GetExportComponentType_Vasont_Inspire_SDK_InspireClient_System_Int64_Vasont_Inspire_Models_Transfers_ExportType_">ConfigurationExtensions.GetExportComponentType(InspireClient, Int64, ExportType)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_GetLinkMethods_Vasont_Inspire_SDK_InspireClient_">ConfigurationExtensions.GetLinkMethods(InspireClient)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_GetXmlLinkTypes_Vasont_Inspire_SDK_InspireClient_">ConfigurationExtensions.GetXmlLinkTypes(InspireClient)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_GetXmlLinkType_Vasont_Inspire_SDK_InspireClient_System_Int64_">ConfigurationExtensions.GetXmlLinkType(InspireClient, Int64)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_UpdateXmlLinkType_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Configuration_XmlLinkTypeModel_">ConfigurationExtensions.UpdateXmlLinkType(InspireClient, XmlLinkTypeModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_CreateXmlLinkType_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Configuration_XmlLinkTypeModel_">ConfigurationExtensions.CreateXmlLinkType(InspireClient, XmlLinkTypeModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_RemoveXmlLinkType_Vasont_Inspire_SDK_InspireClient_System_Int64_">ConfigurationExtensions.RemoveXmlLinkType(InspireClient, Int64)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_GetRelations_Vasont_Inspire_SDK_InspireClient_">ConfigurationExtensions.GetRelations(InspireClient)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_GetRelation_Vasont_Inspire_SDK_InspireClient_System_Int64_">ConfigurationExtensions.GetRelation(InspireClient, Int64)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_UpdateRelation_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Configuration_RelationModel_">ConfigurationExtensions.UpdateRelation(InspireClient, RelationModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_CreateRelation_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Configuration_RelationModel_">ConfigurationExtensions.CreateRelation(InspireClient, RelationModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_RemoveRelation_Vasont_Inspire_SDK_InspireClient_System_Int64_">ConfigurationExtensions.RemoveRelation(InspireClient, Int64)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_GetTag_Vasont_Inspire_SDK_InspireClient_System_Int64_">ConfigurationExtensions.GetTag(InspireClient, Int64)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_UpdateTag_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Components_TagModel_">ConfigurationExtensions.UpdateTag(InspireClient, TagModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_CreateTag_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Components_TagModel_">ConfigurationExtensions.CreateTag(InspireClient, TagModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_RemoveTag_Vasont_Inspire_SDK_InspireClient_System_Int64_">ConfigurationExtensions.RemoveTag(InspireClient, Int64)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_GetProjectActivities_Vasont_Inspire_SDK_InspireClient_">ConfigurationExtensions.GetProjectActivities(InspireClient)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_GetProjectActivity_Vasont_Inspire_SDK_InspireClient_System_Int64_">ConfigurationExtensions.GetProjectActivity(InspireClient, Int64)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_UpdateProjectActivity_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Projects_ProjectActivityModel_">ConfigurationExtensions.UpdateProjectActivity(InspireClient, ProjectActivityModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_CreateProjectActivity_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Projects_ProjectActivityModel_">ConfigurationExtensions.CreateProjectActivity(InspireClient, ProjectActivityModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_RemoveProjectActivity_Vasont_Inspire_SDK_InspireClient_System_Int64_">ConfigurationExtensions.RemoveProjectActivity(InspireClient, Int64)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_GetLanguages_Vasont_Inspire_SDK_InspireClient_System_Boolean_">ConfigurationExtensions.GetLanguages(InspireClient, Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_GetLanguage_Vasont_Inspire_SDK_InspireClient_System_String_">ConfigurationExtensions.GetLanguage(InspireClient, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_UpdateLanguage_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Common_LanguageModel_">ConfigurationExtensions.UpdateLanguage(InspireClient, LanguageModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_CreateLanguage_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Common_LanguageModel_">ConfigurationExtensions.CreateLanguage(InspireClient, LanguageModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_RemoveLanguage_Vasont_Inspire_SDK_InspireClient_System_String_">ConfigurationExtensions.RemoveLanguage(InspireClient, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_GetWebHookConfigurations_Vasont_Inspire_SDK_InspireClient_">ConfigurationExtensions.GetWebHookConfigurations(InspireClient)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_GetWebHookConfiguration_Vasont_Inspire_SDK_InspireClient_System_Int64_">ConfigurationExtensions.GetWebHookConfiguration(InspireClient, Int64)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_UpdateWebHookConfiguration_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Webhooks_WebhookConfigurationModel_">ConfigurationExtensions.UpdateWebHookConfiguration(InspireClient, WebhookConfigurationModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_CreateWebHookConfiguration_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Webhooks_WebhookConfigurationModel_">ConfigurationExtensions.CreateWebHookConfiguration(InspireClient, WebhookConfigurationModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_RemoveWebHookConfiguration_Vasont_Inspire_SDK_InspireClient_System_String_">ConfigurationExtensions.RemoveWebHookConfiguration(InspireClient, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_GetFileExtensions_Vasont_Inspire_SDK_InspireClient_">ConfigurationExtensions.GetFileExtensions(InspireClient)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_GetFileExtension_Vasont_Inspire_SDK_InspireClient_System_Int64_">ConfigurationExtensions.GetFileExtension(InspireClient, Int64)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_UpdateFileExtension_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Common_FileExtensionModel_">ConfigurationExtensions.UpdateFileExtension(InspireClient, FileExtensionModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_CreateFileExtension_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Common_FileExtensionModel_">ConfigurationExtensions.CreateFileExtension(InspireClient, FileExtensionModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_RemoveFileExtension_Vasont_Inspire_SDK_InspireClient_System_Int64_">ConfigurationExtensions.RemoveFileExtension(InspireClient, Int64)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Folders.FolderExtensions.html#Vasont_Inspire_SDK_Folders_FolderExtensions_GetFoldersByFolderId_Vasont_Inspire_SDK_InspireClient_System_Int64_System_Boolean_Vasont_Inspire_Models_Security_PermissionFlags_">FolderExtensions.GetFoldersByFolderId(InspireClient, Int64, Boolean, PermissionFlags)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Folders.FolderExtensions.html#Vasont_Inspire_SDK_Folders_FolderExtensions_GetComponentsByFolderId_Vasont_Inspire_SDK_InspireClient_System_Int64_Vasont_Inspire_Models_Components_FolderComponentsQueryModel_">FolderExtensions.GetComponentsByFolderId(InspireClient, Int64, FolderComponentsQueryModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Folders.FolderExtensions.html#Vasont_Inspire_SDK_Folders_FolderExtensions_GetAncestorSiblingFoldersByFolderId_Vasont_Inspire_SDK_InspireClient_System_Int64_">FolderExtensions.GetAncestorSiblingFoldersByFolderId(InspireClient, Int64)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Folders.FolderExtensions.html#Vasont_Inspire_SDK_Folders_FolderExtensions_GetFolderPermissions_Vasont_Inspire_SDK_InspireClient_System_Int64_">FolderExtensions.GetFolderPermissions(InspireClient, Int64)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Folders.FolderExtensions.html#Vasont_Inspire_SDK_Folders_FolderExtensions_MoveFolder_Vasont_Inspire_SDK_InspireClient_System_Int64_System_Int64_">FolderExtensions.MoveFolder(InspireClient, Int64, Int64)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Folders.FolderExtensions.html#Vasont_Inspire_SDK_Folders_FolderExtensions_CreateFolder_Vasont_Inspire_SDK_InspireClient_System_Int64_Vasont_Inspire_Models_Components_FolderBrowseModel_">FolderExtensions.CreateFolder(InspireClient, Int64, FolderBrowseModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Folders.FolderExtensions.html#Vasont_Inspire_SDK_Folders_FolderExtensions_ExportFolder_Vasont_Inspire_SDK_InspireClient_System_Int64_System_Int64_System_Boolean_">FolderExtensions.ExportFolder(InspireClient, Int64, Int64, Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Folders.FolderExtensions.html#Vasont_Inspire_SDK_Folders_FolderExtensions_DeleteFolder_Vasont_Inspire_SDK_InspireClient_System_Int64_">FolderExtensions.DeleteFolder(InspireClient, Int64)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Folders.FolderExtensions.html#Vasont_Inspire_SDK_Folders_FolderExtensions_UpdateFolderPermissions_Vasont_Inspire_SDK_InspireClient_System_Int64_Vasont_Inspire_Models_Components_PermissionUpdateModel_">FolderExtensions.UpdateFolderPermissions(InspireClient, Int64, PermissionUpdateModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Folders.FolderExtensions.html#Vasont_Inspire_SDK_Folders_FolderExtensions_UpdateFolder_Vasont_Inspire_SDK_InspireClient_System_Int64_Vasont_Inspire_Models_Components_FolderBrowseModel_">FolderExtensions.UpdateFolder(InspireClient, Int64, FolderBrowseModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Folders.FolderExtensions.html#Vasont_Inspire_SDK_Folders_FolderExtensions_RenameFolder_Vasont_Inspire_SDK_InspireClient_System_Int64_Vasont_Inspire_Models_Components_FolderBrowseModel_">FolderExtensions.RenameFolder(InspireClient, Int64, FolderBrowseModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Projects.ProjectExtensions.html#Vasont_Inspire_SDK_Projects_ProjectExtensions_GetProjects_Vasont_Inspire_SDK_InspireClient_">ProjectExtensions.GetProjects(InspireClient)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Projects.ProjectExtensions.html#Vasont_Inspire_SDK_Projects_ProjectExtensions_GetProject_Vasont_Inspire_SDK_InspireClient_System_Int64_">ProjectExtensions.GetProject(InspireClient, Int64)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Projects.ProjectExtensions.html#Vasont_Inspire_SDK_Projects_ProjectExtensions_GetRecentlyOpenedProjects_Vasont_Inspire_SDK_InspireClient_System_Int32_">ProjectExtensions.GetRecentlyOpenedProjects(InspireClient, Int32)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Projects.ProjectExtensions.html#Vasont_Inspire_SDK_Projects_ProjectExtensions_GetAssignedProjects_Vasont_Inspire_SDK_InspireClient_">ProjectExtensions.GetAssignedProjects(InspireClient)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Projects.ProjectExtensions.html#Vasont_Inspire_SDK_Projects_ProjectExtensions_GetAvailableParticipants_Vasont_Inspire_SDK_InspireClient_System_Int64_">ProjectExtensions.GetAvailableParticipants(InspireClient, Int64)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Projects.ProjectExtensions.html#Vasont_Inspire_SDK_Projects_ProjectExtensions_GetActivities_Vasont_Inspire_SDK_InspireClient_">ProjectExtensions.GetActivities(InspireClient)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Projects.ProjectExtensions.html#Vasont_Inspire_SDK_Projects_ProjectExtensions_GetProjectAssignments_Vasont_Inspire_SDK_InspireClient_System_Int64_">ProjectExtensions.GetProjectAssignments(InspireClient, Int64)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Projects.ProjectExtensions.html#Vasont_Inspire_SDK_Projects_ProjectExtensions_DeleteProject_Vasont_Inspire_SDK_InspireClient_System_Int64_">ProjectExtensions.DeleteProject(InspireClient, Int64)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Projects.ProjectExtensions.html#Vasont_Inspire_SDK_Projects_ProjectExtensions_DeleteProjectParticipant_Vasont_Inspire_SDK_InspireClient_System_Int64_Vasont_Inspire_Models_Projects_ProjectParticipantModel_">ProjectExtensions.DeleteProjectParticipant(InspireClient, Int64, ProjectParticipantModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Projects.ProjectExtensions.html#Vasont_Inspire_SDK_Projects_ProjectExtensions_DeleteProjectAssignment_Vasont_Inspire_SDK_InspireClient_System_Int64_System_Int64_">ProjectExtensions.DeleteProjectAssignment(InspireClient, Int64, Int64)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Projects.ProjectExtensions.html#Vasont_Inspire_SDK_Projects_ProjectExtensions_DeleteProjectAssignmentComponent_Vasont_Inspire_SDK_InspireClient_System_Int64_System_Int64_System_Int64_">ProjectExtensions.DeleteProjectAssignmentComponent(InspireClient, Int64, Int64, Int64)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Projects.ProjectExtensions.html#Vasont_Inspire_SDK_Projects_ProjectExtensions_DeleteProjectFolder_Vasont_Inspire_SDK_InspireClient_System_Int64_Vasont_Inspire_Models_Projects_ProjectFolderItemModel_">ProjectExtensions.DeleteProjectFolder(InspireClient, Int64, ProjectFolderItemModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Projects.ProjectExtensions.html#Vasont_Inspire_SDK_Projects_ProjectExtensions_CreateProject_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Projects_ProjectModel_">ProjectExtensions.CreateProject(InspireClient, ProjectModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Projects.ProjectExtensions.html#Vasont_Inspire_SDK_Projects_ProjectExtensions_CreateProjectParticipants_Vasont_Inspire_SDK_InspireClient_System_Int64_System_Collections_Generic_List_Vasont_Inspire_Models_Projects_ProjectParticipantModel__">ProjectExtensions.CreateProjectParticipants(InspireClient, Int64, List&lt;ProjectParticipantModel&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Projects.ProjectExtensions.html#Vasont_Inspire_SDK_Projects_ProjectExtensions_CreateProjectAssignment_Vasont_Inspire_SDK_InspireClient_System_Int64_Vasont_Inspire_Models_Projects_ProjectAssignmentModel_">ProjectExtensions.CreateProjectAssignment(InspireClient, Int64, ProjectAssignmentModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Projects.ProjectExtensions.html#Vasont_Inspire_SDK_Projects_ProjectExtensions_CreateProjectFolder_Vasont_Inspire_SDK_InspireClient_System_Int64_Vasont_Inspire_Models_Projects_ProjectFolderItemModel_">ProjectExtensions.CreateProjectFolder(InspireClient, Int64, ProjectFolderItemModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Projects.ProjectExtensions.html#Vasont_Inspire_SDK_Projects_ProjectExtensions_AddComponentsToFolder_Vasont_Inspire_SDK_InspireClient_System_Int64_System_Int64_System_Collections_Generic_List_Vasont_Inspire_Models_Components_MinimalComponentModel__">ProjectExtensions.AddComponentsToFolder(InspireClient, Int64, Int64, List&lt;MinimalComponentModel&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Projects.ProjectExtensions.html#Vasont_Inspire_SDK_Projects_ProjectExtensions_ExportComponents_Vasont_Inspire_SDK_InspireClient_System_Int64_System_Int64_System_Boolean_System_Int64_">ProjectExtensions.ExportComponents(InspireClient, Int64, Int64, Boolean, Int64)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Projects.ProjectExtensions.html#Vasont_Inspire_SDK_Projects_ProjectExtensions_UpdateProject_Vasont_Inspire_SDK_InspireClient_System_Int64_Vasont_Inspire_Models_Projects_ProjectModel_">ProjectExtensions.UpdateProject(InspireClient, Int64, ProjectModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Projects.ProjectExtensions.html#Vasont_Inspire_SDK_Projects_ProjectExtensions_UpdateProjectParticipants_Vasont_Inspire_SDK_InspireClient_System_Int64_System_Collections_Generic_List_Vasont_Inspire_Models_Projects_ProjectParticipantModel__">ProjectExtensions.UpdateProjectParticipants(InspireClient, Int64, List&lt;ProjectParticipantModel&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Projects.ProjectExtensions.html#Vasont_Inspire_SDK_Projects_ProjectExtensions_UpdateProjectAssignment_Vasont_Inspire_SDK_InspireClient_System_Int64_System_Int64_Vasont_Inspire_Models_Projects_ProjectAssignmentModel_">ProjectExtensions.UpdateProjectAssignment(InspireClient, Int64, Int64, ProjectAssignmentModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Projects.ProjectExtensions.html#Vasont_Inspire_SDK_Projects_ProjectExtensions_UpdateProjectAssignmentCompletionStatus_Vasont_Inspire_SDK_InspireClient_System_Int64_System_Int64_Vasont_Inspire_Models_Projects_ProjectAssignmentModel_">ProjectExtensions.UpdateProjectAssignmentCompletionStatus(InspireClient, Int64, Int64, ProjectAssignmentModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Projects.ProjectExtensions.html#Vasont_Inspire_SDK_Projects_ProjectExtensions_RenameProjectFolder_Vasont_Inspire_SDK_InspireClient_System_Int64_System_String_Vasont_Inspire_Models_Projects_ProjectFolderItemModel_">ProjectExtensions.RenameProjectFolder(InspireClient, Int64, String, ProjectFolderItemModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Projects.ProjectExtensions.html#Vasont_Inspire_SDK_Projects_ProjectExtensions_MoveProjectFolder_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Projects_ProjectFolderItemModel_System_Int64_System_String_System_String_">ProjectExtensions.MoveProjectFolder(InspireClient, ProjectFolderItemModel, Int64, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Review.ReviewExtensions.html#Vasont_Inspire_SDK_Review_ReviewExtensions_GetReview_Vasont_Inspire_SDK_InspireClient_System_Int64_">ReviewExtensions.GetReview(InspireClient, Int64)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Review.ReviewExtensions.html#Vasont_Inspire_SDK_Review_ReviewExtensions_GetReviewEdit_Vasont_Inspire_SDK_InspireClient_System_Int64_">ReviewExtensions.GetReviewEdit(InspireClient, Int64)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Review.ReviewExtensions.html#Vasont_Inspire_SDK_Review_ReviewExtensions_GetReviewDetail_Vasont_Inspire_SDK_InspireClient_System_Int64_">ReviewExtensions.GetReviewDetail(InspireClient, Int64)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Review.ReviewExtensions.html#Vasont_Inspire_SDK_Review_ReviewExtensions_GetReviews_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Reviews_ReviewBrowseQueryModel_">ReviewExtensions.GetReviews(InspireClient, ReviewBrowseQueryModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Review.ReviewExtensions.html#Vasont_Inspire_SDK_Review_ReviewExtensions_GetReviewComponents_Vasont_Inspire_SDK_InspireClient_System_Int64_">ReviewExtensions.GetReviewComponents(InspireClient, Int64)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Review.ReviewExtensions.html#Vasont_Inspire_SDK_Review_ReviewExtensions_GetReviewComponent_Vasont_Inspire_SDK_InspireClient_System_Int64_System_Int64_">ReviewExtensions.GetReviewComponent(InspireClient, Int64, Int64)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Review.ReviewExtensions.html#Vasont_Inspire_SDK_Review_ReviewExtensions_GetUserReviewAssignments_Vasont_Inspire_SDK_InspireClient_">ReviewExtensions.GetUserReviewAssignments(InspireClient)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Review.ReviewExtensions.html#Vasont_Inspire_SDK_Review_ReviewExtensions_GetReviewCoordinators_Vasont_Inspire_SDK_InspireClient_">ReviewExtensions.GetReviewCoordinators(InspireClient)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Review.ReviewExtensions.html#Vasont_Inspire_SDK_Review_ReviewExtensions_UpdateReview_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Reviews_ReviewModel_">ReviewExtensions.UpdateReview(InspireClient, ReviewModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Review.ReviewExtensions.html#Vasont_Inspire_SDK_Review_ReviewExtensions_UpdateReviewComponents_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Reviews_ReviewChangedComponentQueryModel_">ReviewExtensions.UpdateReviewComponents(InspireClient, ReviewChangedComponentQueryModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Review.ReviewExtensions.html#Vasont_Inspire_SDK_Review_ReviewExtensions_UpdateReviewComponentState_Vasont_Inspire_SDK_InspireClient_System_Int64_System_Int64_System_Boolean_">ReviewExtensions.UpdateReviewComponentState(InspireClient, Int64, Int64, Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Review.ReviewExtensions.html#Vasont_Inspire_SDK_Review_ReviewExtensions_CreateReview_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Reviews_ReviewModel_">ReviewExtensions.CreateReview(InspireClient, ReviewModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Review.ReviewExtensions.html#Vasont_Inspire_SDK_Review_ReviewExtensions_CompleteReviewerSession_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Reviews_ReviewModel_">ReviewExtensions.CompleteReviewerSession(InspireClient, ReviewModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Review.ReviewExtensions.html#Vasont_Inspire_SDK_Review_ReviewExtensions_CompleteReview_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Reviews_ReviewModel_">ReviewExtensions.CompleteReview(InspireClient, ReviewModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Review.ReviewExtensions.html#Vasont_Inspire_SDK_Review_ReviewExtensions_CancelReview_Vasont_Inspire_SDK_InspireClient_System_Int64_Vasont_Inspire_Models_Reviews_ReviewCancellationModel_">ReviewExtensions.CancelReview(InspireClient, Int64, ReviewCancellationModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Review.ReviewExtensions.html#Vasont_Inspire_SDK_Review_ReviewExtensions_DeleteReview_Vasont_Inspire_SDK_InspireClient_System_Int64_Vasont_Inspire_Models_Reviews_ReviewCancellationModel_">ReviewExtensions.DeleteReview(InspireClient, Int64, ReviewCancellationModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Security.RoleExtensions.html#Vasont_Inspire_SDK_Security_RoleExtensions_GetAllRoles_Vasont_Inspire_SDK_InspireClient_System_Int64_">RoleExtensions.GetAllRoles(InspireClient, Int64)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Security.RoleExtensions.html#Vasont_Inspire_SDK_Security_RoleExtensions_GetRoles_Vasont_Inspire_SDK_InspireClient_System_String_System_String_System_String_">RoleExtensions.GetRoles(InspireClient, String, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Security.RoleExtensions.html#Vasont_Inspire_SDK_Security_RoleExtensions_CreateRole_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Security_RoleModel_">RoleExtensions.CreateRole(InspireClient, RoleModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Security.RoleExtensions.html#Vasont_Inspire_SDK_Security_RoleExtensions_UpdateRole_Vasont_Inspire_SDK_InspireClient_System_Int64_Vasont_Inspire_Models_Security_RoleModel_">RoleExtensions.UpdateRole(InspireClient, Int64, RoleModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Security.RoleExtensions.html#Vasont_Inspire_SDK_Security_RoleExtensions_DeleteRole_Vasont_Inspire_SDK_InspireClient_System_Int64_">RoleExtensions.DeleteRole(InspireClient, Int64)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Security.UserExtensions.html#Vasont_Inspire_SDK_Security_UserExtensions_GetAllUsers_Vasont_Inspire_SDK_InspireClient_">UserExtensions.GetAllUsers(InspireClient)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Security.UserExtensions.html#Vasont_Inspire_SDK_Security_UserExtensions_GetUser_Vasont_Inspire_SDK_InspireClient_System_Int64_">UserExtensions.GetUser(InspireClient, Int64)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Security.UserExtensions.html#Vasont_Inspire_SDK_Security_UserExtensions_GetUsers_Vasont_Inspire_SDK_InspireClient_System_String_System_String_System_String_System_String_System_String_">UserExtensions.GetUsers(InspireClient, String, String, String, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Security.UserExtensions.html#Vasont_Inspire_SDK_Security_UserExtensions_CreateUser_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Security_UserModel_">UserExtensions.CreateUser(InspireClient, UserModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Security.UserExtensions.html#Vasont_Inspire_SDK_Security_UserExtensions_UpdateUser_Vasont_Inspire_SDK_InspireClient_System_Int64_Vasont_Inspire_Models_Security_UserModel_">UserExtensions.UpdateUser(InspireClient, Int64, UserModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Security.UserExtensions.html#Vasont_Inspire_SDK_Security_UserExtensions_DeleteUser_Vasont_Inspire_SDK_InspireClient_System_Int64_">UserExtensions.DeleteUser(InspireClient, Int64)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Translations.TranslationsExtensions.html#Vasont_Inspire_SDK_Translations_TranslationsExtensions_GetTranslationJobStates_Vasont_Inspire_SDK_InspireClient_">TranslationsExtensions.GetTranslationJobStates(InspireClient)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Translations.TranslationsExtensions.html#Vasont_Inspire_SDK_Translations_TranslationsExtensions_GetTranslationVendors_Vasont_Inspire_SDK_InspireClient_">TranslationsExtensions.GetTranslationVendors(InspireClient)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Translations.TranslationsExtensions.html#Vasont_Inspire_SDK_Translations_TranslationsExtensions_GetTranslationJobById_Vasont_Inspire_SDK_InspireClient_System_Int64_">TranslationsExtensions.GetTranslationJobById(InspireClient, Int64)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Translations.TranslationsExtensions.html#Vasont_Inspire_SDK_Translations_TranslationsExtensions_FindTranslationJobs_Vasont_Inspire_SDK_InspireClient_System_Collections_Generic_List_System_Int64__">TranslationsExtensions.FindTranslationJobs(InspireClient, List&lt;Int64&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Translations.TranslationsExtensions.html#Vasont_Inspire_SDK_Translations_TranslationsExtensions_PutTranslationCancel_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Translations_TranslationJobModel_">TranslationsExtensions.PutTranslationCancel(InspireClient, TranslationJobModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Translations.TranslationsExtensions.html#Vasont_Inspire_SDK_Translations_TranslationsExtensions_GetQueuedTranslationJobs_Vasont_Inspire_SDK_InspireClient_System_Int64_">TranslationsExtensions.GetQueuedTranslationJobs(InspireClient, Int64)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Translations.TranslationsExtensions.html#Vasont_Inspire_SDK_Translations_TranslationsExtensions_GetTranslationExportState_Vasont_Inspire_SDK_InspireClient_System_String_">TranslationsExtensions.GetTranslationExportState(InspireClient, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Translations.TranslationsExtensions.html#Vasont_Inspire_SDK_Translations_TranslationsExtensions_ResetTranslationComponentsState_Vasont_Inspire_SDK_InspireClient_System_Collections_Generic_List_System_Int64__">TranslationsExtensions.ResetTranslationComponentsState(InspireClient, List&lt;Int64&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Translations.TranslationsExtensions.html#Vasont_Inspire_SDK_Translations_TranslationsExtensions_GetTranslationExportJobs_Vasont_Inspire_SDK_InspireClient_System_Collections_Generic_List_System_Int64__">TranslationsExtensions.GetTranslationExportJobs(InspireClient, List&lt;Int64&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Vasont.Inspire.SDK.Translations.TranslationsExtensions.html#Vasont_Inspire_SDK_Translations_TranslationsExtensions_SetTranslationJobStatus_Vasont_Inspire_SDK_InspireClient_System_Collections_Generic_List_Vasont_Inspire_Models_Translations_TranslationExportJobModel__">TranslationsExtensions.SetTranslationJobStatus(InspireClient, List&lt;TranslationExportJobModel&gt;)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/new/master/apiSpec/new?filename=Vasont_Inspire_SDK_InspireClient.md&amp;value=---%0Auid%3A%20Vasont.Inspire.SDK.InspireClient%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/blob/develop/src/InspireClient.cs/#L26" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2020 Transperfect Inc.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
