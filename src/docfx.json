@@ -9,7 +9,7 @@
           "src": ".."
         }
       ],
-      "dest": "_sdk",
+      "dest": "sdk",
       "disableGitFeatures": false,
       "disableDefaultFilter": false
     }
@@ -18,8 +18,8 @@
     "content": [
       {
         "files": [
-          "_sdk/**.yml",
-          "_sdk/index.md"
+          "sdk/**.yml",
+          "sdk/index.md"
         ]
       },
       {
