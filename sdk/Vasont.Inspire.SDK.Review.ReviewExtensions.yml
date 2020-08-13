@@ -1,0 +1,1539 @@
+### YamlMime:ManagedReference
+items:
+- uid: Vasont.Inspire.SDK.Review.ReviewExtensions
+  commentId: T:Vasont.Inspire.SDK.Review.ReviewExtensions
+  id: ReviewExtensions
+  parent: Vasont.Inspire.SDK.Review
+  children:
+  - Vasont.Inspire.SDK.Review.ReviewExtensions.CancelReview(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Reviews.ReviewCancellationModel)
+  - Vasont.Inspire.SDK.Review.ReviewExtensions.CompleteReview(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Reviews.ReviewModel)
+  - Vasont.Inspire.SDK.Review.ReviewExtensions.CompleteReviewerSession(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Reviews.ReviewModel)
+  - Vasont.Inspire.SDK.Review.ReviewExtensions.CreateReview(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Reviews.ReviewModel)
+  - Vasont.Inspire.SDK.Review.ReviewExtensions.DeleteReview(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Reviews.ReviewCancellationModel)
+  - Vasont.Inspire.SDK.Review.ReviewExtensions.GetReview(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  - Vasont.Inspire.SDK.Review.ReviewExtensions.GetReviewComponent(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Int64)
+  - Vasont.Inspire.SDK.Review.ReviewExtensions.GetReviewComponents(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  - Vasont.Inspire.SDK.Review.ReviewExtensions.GetReviewCoordinators(Vasont.Inspire.SDK.InspireClient)
+  - Vasont.Inspire.SDK.Review.ReviewExtensions.GetReviewDetail(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  - Vasont.Inspire.SDK.Review.ReviewExtensions.GetReviewEdit(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  - Vasont.Inspire.SDK.Review.ReviewExtensions.GetReviews(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Reviews.ReviewBrowseQueryModel)
+  - Vasont.Inspire.SDK.Review.ReviewExtensions.GetUserReviewAssignments(Vasont.Inspire.SDK.InspireClient)
+  - Vasont.Inspire.SDK.Review.ReviewExtensions.UpdateReview(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Reviews.ReviewModel)
+  - Vasont.Inspire.SDK.Review.ReviewExtensions.UpdateReviewComponents(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Reviews.ReviewChangedComponentQueryModel)
+  - Vasont.Inspire.SDK.Review.ReviewExtensions.UpdateReviewComponentState(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Int64,System.Boolean)
+  langs:
+  - csharp
+  - vb
+  name: ReviewExtensions
+  nameWithType: ReviewExtensions
+  fullName: Vasont.Inspire.SDK.Review.ReviewExtensions
+  type: Class
+  source:
+    remote:
+      path: src/Review/ReviewExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: ReviewExtensions
+    path: Review/ReviewExtensions.cs
+    startLine: 16
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Review
+  summary: "\nThis class contains extension methods for calling component review related API endpoints.\n"
+  example: []
+  syntax:
+    content: public static class ReviewExtensions
+    content.vb: Public Module ReviewExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: Vasont.Inspire.SDK.Review.ReviewExtensions.GetReview(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  commentId: M:Vasont.Inspire.SDK.Review.ReviewExtensions.GetReview(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  id: GetReview(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Review.ReviewExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetReview(InspireClient, Int64)
+  nameWithType: ReviewExtensions.GetReview(InspireClient, Int64)
+  fullName: Vasont.Inspire.SDK.Review.ReviewExtensions.GetReview(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  type: Method
+  source:
+    remote:
+      path: src/Review/ReviewExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: GetReview
+    path: Review/ReviewExtensions.cs
+    startLine: 24
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Review
+  summary: "\nThis method is used to retrieve a specific review model.\n"
+  example: []
+  syntax:
+    content: public static ReviewModel GetReview(this InspireClient client, long reviewId)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
+    - id: reviewId
+      type: System.Int64
+      description: Contains the unique identity of the review.
+    return:
+      type: Vasont.Inspire.Models.Reviews.ReviewModel
+      description: Returns a <xref href="Vasont.Inspire.Models.Reviews.ReviewModel" data-throw-if-not-resolved="false"></xref> model if found.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetReview(client As InspireClient, reviewId As Long) As ReviewModel
+  overload: Vasont.Inspire.SDK.Review.ReviewExtensions.GetReview*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Review.ReviewExtensions.GetReviewEdit(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  commentId: M:Vasont.Inspire.SDK.Review.ReviewExtensions.GetReviewEdit(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  id: GetReviewEdit(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Review.ReviewExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetReviewEdit(InspireClient, Int64)
+  nameWithType: ReviewExtensions.GetReviewEdit(InspireClient, Int64)
+  fullName: Vasont.Inspire.SDK.Review.ReviewExtensions.GetReviewEdit(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  type: Method
+  source:
+    remote:
+      path: src/Review/ReviewExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: GetReviewEdit
+    path: Review/ReviewExtensions.cs
+    startLine: 36
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Review
+  summary: "\nThis method is used to retrieve a specific edit review model.\n"
+  example: []
+  syntax:
+    content: public static ReviewerEditModel GetReviewEdit(this InspireClient client, long reviewId)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
+    - id: reviewId
+      type: System.Int64
+      description: Contains the unique identity of the review.
+    return:
+      type: Vasont.Inspire.Models.Reviews.ReviewerEditModel
+      description: Returns a <xref href="Vasont.Inspire.Models.Reviews.ReviewerEditModel" data-throw-if-not-resolved="false"></xref> model if found.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetReviewEdit(client As InspireClient, reviewId As Long) As ReviewerEditModel
+  overload: Vasont.Inspire.SDK.Review.ReviewExtensions.GetReviewEdit*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Review.ReviewExtensions.GetReviewDetail(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  commentId: M:Vasont.Inspire.SDK.Review.ReviewExtensions.GetReviewDetail(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  id: GetReviewDetail(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Review.ReviewExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetReviewDetail(InspireClient, Int64)
+  nameWithType: ReviewExtensions.GetReviewDetail(InspireClient, Int64)
+  fullName: Vasont.Inspire.SDK.Review.ReviewExtensions.GetReviewDetail(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  type: Method
+  source:
+    remote:
+      path: src/Review/ReviewExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: GetReviewDetail
+    path: Review/ReviewExtensions.cs
+    startLine: 48
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Review
+  summary: "\nThis method is used to retrieve a specific detailed review model.\n"
+  example: []
+  syntax:
+    content: public static ReviewDetailModel GetReviewDetail(this InspireClient client, long reviewId)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
+    - id: reviewId
+      type: System.Int64
+      description: Contains the unique identity of the review.
+    return:
+      type: Vasont.Inspire.Models.Reviews.ReviewDetailModel
+      description: Returns a <xref href="Vasont.Inspire.Models.Reviews.ReviewDetailModel" data-throw-if-not-resolved="false"></xref> model if found.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetReviewDetail(client As InspireClient, reviewId As Long) As ReviewDetailModel
+  overload: Vasont.Inspire.SDK.Review.ReviewExtensions.GetReviewDetail*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Review.ReviewExtensions.GetReviews(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Reviews.ReviewBrowseQueryModel)
+  commentId: M:Vasont.Inspire.SDK.Review.ReviewExtensions.GetReviews(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Reviews.ReviewBrowseQueryModel)
+  id: GetReviews(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Reviews.ReviewBrowseQueryModel)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Review.ReviewExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetReviews(InspireClient, ReviewBrowseQueryModel)
+  nameWithType: ReviewExtensions.GetReviews(InspireClient, ReviewBrowseQueryModel)
+  fullName: Vasont.Inspire.SDK.Review.ReviewExtensions.GetReviews(Vasont.Inspire.SDK.InspireClient, Vasont.Inspire.Models.Reviews.ReviewBrowseQueryModel)
+  type: Method
+  source:
+    remote:
+      path: src/Review/ReviewExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: GetReviews
+    path: Review/ReviewExtensions.cs
+    startLine: 60
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Review
+  summary: "\nThis method is used to retrieve a reviews browse result.\n"
+  example: []
+  syntax:
+    content: public static ReviewBrowseResultModel GetReviews(this InspireClient client, ReviewBrowseQueryModel model)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
+    - id: model
+      type: Vasont.Inspire.Models.Reviews.ReviewBrowseQueryModel
+      description: Contains the model for review browsing.
+    return:
+      type: Vasont.Inspire.Models.Reviews.ReviewBrowseResultModel
+      description: Returns a list of <xref href="Vasont.Inspire.Models.Reviews.ReviewBrowseResultModel" data-throw-if-not-resolved="false"></xref> objects.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetReviews(client As InspireClient, model As ReviewBrowseQueryModel) As ReviewBrowseResultModel
+  overload: Vasont.Inspire.SDK.Review.ReviewExtensions.GetReviews*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Review.ReviewExtensions.GetReviewComponents(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  commentId: M:Vasont.Inspire.SDK.Review.ReviewExtensions.GetReviewComponents(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  id: GetReviewComponents(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Review.ReviewExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetReviewComponents(InspireClient, Int64)
+  nameWithType: ReviewExtensions.GetReviewComponents(InspireClient, Int64)
+  fullName: Vasont.Inspire.SDK.Review.ReviewExtensions.GetReviewComponents(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  type: Method
+  source:
+    remote:
+      path: src/Review/ReviewExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: GetReviewComponents
+    path: Review/ReviewExtensions.cs
+    startLine: 72
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Review
+  summary: "\nThis method is used to retrieve a list of associated review components for the specified review.\n"
+  example: []
+  syntax:
+    content: public static List<ReviewComponentModel> GetReviewComponents(this InspireClient client, long reviewId)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
+    - id: reviewId
+      type: System.Int64
+      description: Contains the review identity.
+    return:
+      type: System.Collections.Generic.List{Vasont.Inspire.Models.Reviews.ReviewComponentModel}
+      description: Returns a list of <xref href="Vasont.Inspire.Models.Reviews.ReviewComponentModel" data-throw-if-not-resolved="false"></xref> objects.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetReviewComponents(client As InspireClient, reviewId As Long) As List(Of ReviewComponentModel)
+  overload: Vasont.Inspire.SDK.Review.ReviewExtensions.GetReviewComponents*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Review.ReviewExtensions.GetReviewComponent(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Int64)
+  commentId: M:Vasont.Inspire.SDK.Review.ReviewExtensions.GetReviewComponent(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Int64)
+  id: GetReviewComponent(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Int64)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Review.ReviewExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetReviewComponent(InspireClient, Int64, Int64)
+  nameWithType: ReviewExtensions.GetReviewComponent(InspireClient, Int64, Int64)
+  fullName: Vasont.Inspire.SDK.Review.ReviewExtensions.GetReviewComponent(Vasont.Inspire.SDK.InspireClient, System.Int64, System.Int64)
+  type: Method
+  source:
+    remote:
+      path: src/Review/ReviewExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: GetReviewComponent
+    path: Review/ReviewExtensions.cs
+    startLine: 85
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Review
+  summary: "\nThis method is used to retrieve a specific review component specified.\n"
+  example: []
+  syntax:
+    content: public static ReviewComponentModel GetReviewComponent(this InspireClient client, long reviewId, long reviewComponentId)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
+    - id: reviewId
+      type: System.Int64
+      description: Contains the review identity.
+    - id: reviewComponentId
+      type: System.Int64
+      description: Contains the review component identity to retrieve.
+    return:
+      type: Vasont.Inspire.Models.Reviews.ReviewComponentModel
+      description: Returns the review component <xref href="Vasont.Inspire.Models.Reviews.ReviewComponentModel" data-throw-if-not-resolved="false"></xref> object.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetReviewComponent(client As InspireClient, reviewId As Long, reviewComponentId As Long) As ReviewComponentModel
+  overload: Vasont.Inspire.SDK.Review.ReviewExtensions.GetReviewComponent*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Review.ReviewExtensions.GetUserReviewAssignments(Vasont.Inspire.SDK.InspireClient)
+  commentId: M:Vasont.Inspire.SDK.Review.ReviewExtensions.GetUserReviewAssignments(Vasont.Inspire.SDK.InspireClient)
+  id: GetUserReviewAssignments(Vasont.Inspire.SDK.InspireClient)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Review.ReviewExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetUserReviewAssignments(InspireClient)
+  nameWithType: ReviewExtensions.GetUserReviewAssignments(InspireClient)
+  fullName: Vasont.Inspire.SDK.Review.ReviewExtensions.GetUserReviewAssignments(Vasont.Inspire.SDK.InspireClient)
+  type: Method
+  source:
+    remote:
+      path: src/Review/ReviewExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: GetUserReviewAssignments
+    path: Review/ReviewExtensions.cs
+    startLine: 96
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Review
+  summary: "\nThis method is used to return active reviews within the system that are associated with the user.\n"
+  example: []
+  syntax:
+    content: public static List<ReviewAssignmentModel> GetUserReviewAssignments(this InspireClient client)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
+    return:
+      type: System.Collections.Generic.List{Vasont.Inspire.Models.Reviews.ReviewAssignmentModel}
+      description: Returns a list of <xref href="Vasont.Inspire.Models.Reviews.ReviewAssignmentModel" data-throw-if-not-resolved="false"></xref> models if found.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetUserReviewAssignments(client As InspireClient) As List(Of ReviewAssignmentModel)
+  overload: Vasont.Inspire.SDK.Review.ReviewExtensions.GetUserReviewAssignments*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Review.ReviewExtensions.GetReviewCoordinators(Vasont.Inspire.SDK.InspireClient)
+  commentId: M:Vasont.Inspire.SDK.Review.ReviewExtensions.GetReviewCoordinators(Vasont.Inspire.SDK.InspireClient)
+  id: GetReviewCoordinators(Vasont.Inspire.SDK.InspireClient)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Review.ReviewExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetReviewCoordinators(InspireClient)
+  nameWithType: ReviewExtensions.GetReviewCoordinators(InspireClient)
+  fullName: Vasont.Inspire.SDK.Review.ReviewExtensions.GetReviewCoordinators(Vasont.Inspire.SDK.InspireClient)
+  type: Method
+  source:
+    remote:
+      path: src/Review/ReviewExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: GetReviewCoordinators
+    path: Review/ReviewExtensions.cs
+    startLine: 107
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Review
+  summary: "\nThis REST endpoint retrieves the users that have the permissions to create reviews.\n"
+  example: []
+  syntax:
+    content: public static List<MinimalUserModel> GetReviewCoordinators(this InspireClient client)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
+    return:
+      type: System.Collections.Generic.List{Vasont.Inspire.Models.Security.MinimalUserModel}
+      description: Returns a <xref href="Vasont.Inspire.Models.Reviews.ReviewDetailModel" data-throw-if-not-resolved="false"></xref> model if found.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetReviewCoordinators(client As InspireClient) As List(Of MinimalUserModel)
+  overload: Vasont.Inspire.SDK.Review.ReviewExtensions.GetReviewCoordinators*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Review.ReviewExtensions.UpdateReview(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Reviews.ReviewModel)
+  commentId: M:Vasont.Inspire.SDK.Review.ReviewExtensions.UpdateReview(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Reviews.ReviewModel)
+  id: UpdateReview(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Reviews.ReviewModel)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Review.ReviewExtensions
+  langs:
+  - csharp
+  - vb
+  name: UpdateReview(InspireClient, ReviewModel)
+  nameWithType: ReviewExtensions.UpdateReview(InspireClient, ReviewModel)
+  fullName: Vasont.Inspire.SDK.Review.ReviewExtensions.UpdateReview(Vasont.Inspire.SDK.InspireClient, Vasont.Inspire.Models.Reviews.ReviewModel)
+  type: Method
+  source:
+    remote:
+      path: src/Review/ReviewExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: UpdateReview
+    path: Review/ReviewExtensions.cs
+    startLine: 119
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Review
+  summary: "\nThis method is used to update the review.\n"
+  example: []
+  syntax:
+    content: public static ReviewModel UpdateReview(this InspireClient client, ReviewModel model)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
+    - id: model
+      type: Vasont.Inspire.Models.Reviews.ReviewModel
+      description: Contains the review model to update.
+    return:
+      type: Vasont.Inspire.Models.Reviews.ReviewModel
+      description: Returns a list of <xref href="Vasont.Inspire.Models.Reviews.ReviewModel" data-throw-if-not-resolved="false"></xref> objects.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function UpdateReview(client As InspireClient, model As ReviewModel) As ReviewModel
+  overload: Vasont.Inspire.SDK.Review.ReviewExtensions.UpdateReview*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Review.ReviewExtensions.UpdateReviewComponents(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Reviews.ReviewChangedComponentQueryModel)
+  commentId: M:Vasont.Inspire.SDK.Review.ReviewExtensions.UpdateReviewComponents(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Reviews.ReviewChangedComponentQueryModel)
+  id: UpdateReviewComponents(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Reviews.ReviewChangedComponentQueryModel)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Review.ReviewExtensions
+  langs:
+  - csharp
+  - vb
+  name: UpdateReviewComponents(InspireClient, ReviewChangedComponentQueryModel)
+  nameWithType: ReviewExtensions.UpdateReviewComponents(InspireClient, ReviewChangedComponentQueryModel)
+  fullName: Vasont.Inspire.SDK.Review.ReviewExtensions.UpdateReviewComponents(Vasont.Inspire.SDK.InspireClient, Vasont.Inspire.Models.Reviews.ReviewChangedComponentQueryModel)
+  type: Method
+  source:
+    remote:
+      path: src/Review/ReviewExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: UpdateReviewComponents
+    path: Review/ReviewExtensions.cs
+    startLine: 131
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Review
+  summary: "\nThis method is used to return review components within a review that have been updated after a specified date.\n"
+  example: []
+  syntax:
+    content: public static List<ReviewerComponentModel> UpdateReviewComponents(this InspireClient client, ReviewChangedComponentQueryModel model)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
+    - id: model
+      type: Vasont.Inspire.Models.Reviews.ReviewChangedComponentQueryModel
+      description: Contains the changed components query model.
+    return:
+      type: System.Collections.Generic.List{Vasont.Inspire.Models.Reviews.ReviewerComponentModel}
+      description: Returns a list of <xref href="Vasont.Inspire.Models.Workflow.WorkflowTemplateModel" data-throw-if-not-resolved="false"></xref> objects.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function UpdateReviewComponents(client As InspireClient, model As ReviewChangedComponentQueryModel) As List(Of ReviewerComponentModel)
+  overload: Vasont.Inspire.SDK.Review.ReviewExtensions.UpdateReviewComponents*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Review.ReviewExtensions.UpdateReviewComponentState(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Int64,System.Boolean)
+  commentId: M:Vasont.Inspire.SDK.Review.ReviewExtensions.UpdateReviewComponentState(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Int64,System.Boolean)
+  id: UpdateReviewComponentState(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Int64,System.Boolean)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Review.ReviewExtensions
+  langs:
+  - csharp
+  - vb
+  name: UpdateReviewComponentState(InspireClient, Int64, Int64, Boolean)
+  nameWithType: ReviewExtensions.UpdateReviewComponentState(InspireClient, Int64, Int64, Boolean)
+  fullName: Vasont.Inspire.SDK.Review.ReviewExtensions.UpdateReviewComponentState(Vasont.Inspire.SDK.InspireClient, System.Int64, System.Int64, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: src/Review/ReviewExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: UpdateReviewComponentState
+    path: Review/ReviewExtensions.cs
+    startLine: 145
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Review
+  summary: "\nThis REST method is used to update a review component states.\n"
+  example: []
+  syntax:
+    content: public static ReviewerComponentModel UpdateReviewComponentState(this InspireClient client, long reviewId, long reviewComponentId, bool completed = true)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
+    - id: reviewId
+      type: System.Int64
+      description: Contains the identity of the review to update.
+    - id: reviewComponentId
+      type: System.Int64
+      description: Contains the identity of the review component.
+    - id: completed
+      type: System.Boolean
+      description: Contains a value indicating whether the review component should be completed.
+    return:
+      type: Vasont.Inspire.Models.Reviews.ReviewerComponentModel
+      description: Returns a list of <xref href="Vasont.Inspire.Models.Workflow.WorkflowTemplateModel" data-throw-if-not-resolved="false"></xref> objects.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function UpdateReviewComponentState(client As InspireClient, reviewId As Long, reviewComponentId As Long, completed As Boolean = True) As ReviewerComponentModel
+  overload: Vasont.Inspire.SDK.Review.ReviewExtensions.UpdateReviewComponentState*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Review.ReviewExtensions.CreateReview(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Reviews.ReviewModel)
+  commentId: M:Vasont.Inspire.SDK.Review.ReviewExtensions.CreateReview(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Reviews.ReviewModel)
+  id: CreateReview(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Reviews.ReviewModel)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Review.ReviewExtensions
+  langs:
+  - csharp
+  - vb
+  name: CreateReview(InspireClient, ReviewModel)
+  nameWithType: ReviewExtensions.CreateReview(InspireClient, ReviewModel)
+  fullName: Vasont.Inspire.SDK.Review.ReviewExtensions.CreateReview(Vasont.Inspire.SDK.InspireClient, Vasont.Inspire.Models.Reviews.ReviewModel)
+  type: Method
+  source:
+    remote:
+      path: src/Review/ReviewExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: CreateReview
+    path: Review/ReviewExtensions.cs
+    startLine: 157
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Review
+  summary: "\nThis method is used to create a new review.\n"
+  example: []
+  syntax:
+    content: public static ReviewModel CreateReview(this InspireClient client, ReviewModel model)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
+    - id: model
+      type: Vasont.Inspire.Models.Reviews.ReviewModel
+      description: Contains the review model to create the new review.
+    return:
+      type: Vasont.Inspire.Models.Reviews.ReviewModel
+      description: Returns a list of <xref href="Vasont.Inspire.Models.Workflow.WorkflowTemplateModel" data-throw-if-not-resolved="false"></xref> objects.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function CreateReview(client As InspireClient, model As ReviewModel) As ReviewModel
+  overload: Vasont.Inspire.SDK.Review.ReviewExtensions.CreateReview*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Review.ReviewExtensions.CompleteReviewerSession(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Reviews.ReviewModel)
+  commentId: M:Vasont.Inspire.SDK.Review.ReviewExtensions.CompleteReviewerSession(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Reviews.ReviewModel)
+  id: CompleteReviewerSession(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Reviews.ReviewModel)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Review.ReviewExtensions
+  langs:
+  - csharp
+  - vb
+  name: CompleteReviewerSession(InspireClient, ReviewModel)
+  nameWithType: ReviewExtensions.CompleteReviewerSession(InspireClient, ReviewModel)
+  fullName: Vasont.Inspire.SDK.Review.ReviewExtensions.CompleteReviewerSession(Vasont.Inspire.SDK.InspireClient, Vasont.Inspire.Models.Reviews.ReviewModel)
+  type: Method
+  source:
+    remote:
+      path: src/Review/ReviewExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: CompleteReviewerSession
+    path: Review/ReviewExtensions.cs
+    startLine: 169
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Review
+  summary: "\nThis method is used to complete a reviewer session.\n"
+  example: []
+  syntax:
+    content: public static ReviewModel CompleteReviewerSession(this InspireClient client, ReviewModel model)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
+    - id: model
+      type: Vasont.Inspire.Models.Reviews.ReviewModel
+      description: Contains the review model to create the new review.
+    return:
+      type: Vasont.Inspire.Models.Reviews.ReviewModel
+      description: Returns a list of <xref href="Vasont.Inspire.Models.Workflow.WorkflowTemplateModel" data-throw-if-not-resolved="false"></xref> objects.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function CompleteReviewerSession(client As InspireClient, model As ReviewModel) As ReviewModel
+  overload: Vasont.Inspire.SDK.Review.ReviewExtensions.CompleteReviewerSession*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Review.ReviewExtensions.CompleteReview(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Reviews.ReviewModel)
+  commentId: M:Vasont.Inspire.SDK.Review.ReviewExtensions.CompleteReview(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Reviews.ReviewModel)
+  id: CompleteReview(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Reviews.ReviewModel)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Review.ReviewExtensions
+  langs:
+  - csharp
+  - vb
+  name: CompleteReview(InspireClient, ReviewModel)
+  nameWithType: ReviewExtensions.CompleteReview(InspireClient, ReviewModel)
+  fullName: Vasont.Inspire.SDK.Review.ReviewExtensions.CompleteReview(Vasont.Inspire.SDK.InspireClient, Vasont.Inspire.Models.Reviews.ReviewModel)
+  type: Method
+  source:
+    remote:
+      path: src/Review/ReviewExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: CompleteReview
+    path: Review/ReviewExtensions.cs
+    startLine: 181
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Review
+  summary: "\nThis method is used to complete a review.\n"
+  example: []
+  syntax:
+    content: public static ReviewModel CompleteReview(this InspireClient client, ReviewModel model)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
+    - id: model
+      type: Vasont.Inspire.Models.Reviews.ReviewModel
+      description: Contains the review model to create the new review.
+    return:
+      type: Vasont.Inspire.Models.Reviews.ReviewModel
+      description: Returns a list of <xref href="Vasont.Inspire.Models.Workflow.WorkflowTemplateModel" data-throw-if-not-resolved="false"></xref> objects.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function CompleteReview(client As InspireClient, model As ReviewModel) As ReviewModel
+  overload: Vasont.Inspire.SDK.Review.ReviewExtensions.CompleteReview*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Review.ReviewExtensions.CancelReview(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Reviews.ReviewCancellationModel)
+  commentId: M:Vasont.Inspire.SDK.Review.ReviewExtensions.CancelReview(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Reviews.ReviewCancellationModel)
+  id: CancelReview(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Reviews.ReviewCancellationModel)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Review.ReviewExtensions
+  langs:
+  - csharp
+  - vb
+  name: CancelReview(InspireClient, Int64, ReviewCancellationModel)
+  nameWithType: ReviewExtensions.CancelReview(InspireClient, Int64, ReviewCancellationModel)
+  fullName: Vasont.Inspire.SDK.Review.ReviewExtensions.CancelReview(Vasont.Inspire.SDK.InspireClient, System.Int64, Vasont.Inspire.Models.Reviews.ReviewCancellationModel)
+  type: Method
+  source:
+    remote:
+      path: src/Review/ReviewExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: CancelReview
+    path: Review/ReviewExtensions.cs
+    startLine: 194
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Review
+  summary: "\nThis method is used to cancel a review.\n"
+  example: []
+  syntax:
+    content: public static bool CancelReview(this InspireClient client, long reviewId, ReviewCancellationModel model)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
+    - id: reviewId
+      type: System.Int64
+      description: Contains the identity of the review.
+    - id: model
+      type: Vasont.Inspire.Models.Reviews.ReviewCancellationModel
+      description: Contains the review model to create the new review.
+    return:
+      type: System.Boolean
+      description: Returns a list of <xref href="Vasont.Inspire.Models.Workflow.WorkflowTemplateModel" data-throw-if-not-resolved="false"></xref> objects.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function CancelReview(client As InspireClient, reviewId As Long, model As ReviewCancellationModel) As Boolean
+  overload: Vasont.Inspire.SDK.Review.ReviewExtensions.CancelReview*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Review.ReviewExtensions.DeleteReview(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Reviews.ReviewCancellationModel)
+  commentId: M:Vasont.Inspire.SDK.Review.ReviewExtensions.DeleteReview(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Reviews.ReviewCancellationModel)
+  id: DeleteReview(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Reviews.ReviewCancellationModel)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Review.ReviewExtensions
+  langs:
+  - csharp
+  - vb
+  name: DeleteReview(InspireClient, Int64, ReviewCancellationModel)
+  nameWithType: ReviewExtensions.DeleteReview(InspireClient, Int64, ReviewCancellationModel)
+  fullName: Vasont.Inspire.SDK.Review.ReviewExtensions.DeleteReview(Vasont.Inspire.SDK.InspireClient, System.Int64, Vasont.Inspire.Models.Reviews.ReviewCancellationModel)
+  type: Method
+  source:
+    remote:
+      path: src/Review/ReviewExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: DeleteReview
+    path: Review/ReviewExtensions.cs
+    startLine: 207
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Review
+  summary: "\nThis method is used to delete a review.\n"
+  example: []
+  syntax:
+    content: public static bool DeleteReview(this InspireClient client, long reviewId, ReviewCancellationModel model)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
+    - id: reviewId
+      type: System.Int64
+      description: Contains the identity of the review.
+    - id: model
+      type: Vasont.Inspire.Models.Reviews.ReviewCancellationModel
+      description: Contains the <xref href="Vasont.Inspire.Models.Reviews.ReviewCancellationModel" data-throw-if-not-resolved="false"></xref> to be used to cancel the review.
+    return:
+      type: System.Boolean
+      description: Returns a list of <xref href="Vasont.Inspire.Models.Workflow.WorkflowTemplateModel" data-throw-if-not-resolved="false"></xref> objects.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function DeleteReview(client As InspireClient, reviewId As Long, model As ReviewCancellationModel) As Boolean
+  overload: Vasont.Inspire.SDK.Review.ReviewExtensions.DeleteReview*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: Vasont.Inspire.SDK.Review
+  commentId: N:Vasont.Inspire.SDK.Review
+  name: Vasont.Inspire.SDK.Review
+  nameWithType: Vasont.Inspire.SDK.Review
+  fullName: Vasont.Inspire.SDK.Review
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Vasont.Inspire.SDK.InspireClient
+  commentId: T:Vasont.Inspire.SDK.InspireClient
+  parent: Vasont.Inspire.SDK
+  name: InspireClient
+  nameWithType: InspireClient
+  fullName: Vasont.Inspire.SDK.InspireClient
+- uid: Vasont.Inspire.Models.Reviews.ReviewModel
+  commentId: T:Vasont.Inspire.Models.Reviews.ReviewModel
+  parent: Vasont.Inspire.Models.Reviews
+  isExternal: true
+  name: ReviewModel
+  nameWithType: ReviewModel
+  fullName: Vasont.Inspire.Models.Reviews.ReviewModel
+- uid: Vasont.Inspire.SDK.Review.ReviewExtensions.GetReview*
+  commentId: Overload:Vasont.Inspire.SDK.Review.ReviewExtensions.GetReview
+  name: GetReview
+  nameWithType: ReviewExtensions.GetReview
+  fullName: Vasont.Inspire.SDK.Review.ReviewExtensions.GetReview
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  name: Int64
+  nameWithType: Int64
+  fullName: System.Int64
+- uid: Vasont.Inspire.SDK
+  commentId: N:Vasont.Inspire.SDK
+  name: Vasont.Inspire.SDK
+  nameWithType: Vasont.Inspire.SDK
+  fullName: Vasont.Inspire.SDK
+- uid: Vasont.Inspire.Models.Reviews
+  commentId: N:Vasont.Inspire.Models.Reviews
+  isExternal: true
+  name: Vasont.Inspire.Models.Reviews
+  nameWithType: Vasont.Inspire.Models.Reviews
+  fullName: Vasont.Inspire.Models.Reviews
+- uid: Vasont.Inspire.Models.Reviews.ReviewerEditModel
+  commentId: T:Vasont.Inspire.Models.Reviews.ReviewerEditModel
+  parent: Vasont.Inspire.Models.Reviews
+  isExternal: true
+  name: ReviewerEditModel
+  nameWithType: ReviewerEditModel
+  fullName: Vasont.Inspire.Models.Reviews.ReviewerEditModel
+- uid: Vasont.Inspire.SDK.Review.ReviewExtensions.GetReviewEdit*
+  commentId: Overload:Vasont.Inspire.SDK.Review.ReviewExtensions.GetReviewEdit
+  name: GetReviewEdit
+  nameWithType: ReviewExtensions.GetReviewEdit
+  fullName: Vasont.Inspire.SDK.Review.ReviewExtensions.GetReviewEdit
+- uid: Vasont.Inspire.Models.Reviews.ReviewDetailModel
+  commentId: T:Vasont.Inspire.Models.Reviews.ReviewDetailModel
+  parent: Vasont.Inspire.Models.Reviews
+  isExternal: true
+  name: ReviewDetailModel
+  nameWithType: ReviewDetailModel
+  fullName: Vasont.Inspire.Models.Reviews.ReviewDetailModel
+- uid: Vasont.Inspire.SDK.Review.ReviewExtensions.GetReviewDetail*
+  commentId: Overload:Vasont.Inspire.SDK.Review.ReviewExtensions.GetReviewDetail
+  name: GetReviewDetail
+  nameWithType: ReviewExtensions.GetReviewDetail
+  fullName: Vasont.Inspire.SDK.Review.ReviewExtensions.GetReviewDetail
+- uid: Vasont.Inspire.Models.Reviews.ReviewBrowseResultModel
+  commentId: T:Vasont.Inspire.Models.Reviews.ReviewBrowseResultModel
+  parent: Vasont.Inspire.Models.Reviews
+  isExternal: true
+  name: ReviewBrowseResultModel
+  nameWithType: ReviewBrowseResultModel
+  fullName: Vasont.Inspire.Models.Reviews.ReviewBrowseResultModel
+- uid: Vasont.Inspire.SDK.Review.ReviewExtensions.GetReviews*
+  commentId: Overload:Vasont.Inspire.SDK.Review.ReviewExtensions.GetReviews
+  name: GetReviews
+  nameWithType: ReviewExtensions.GetReviews
+  fullName: Vasont.Inspire.SDK.Review.ReviewExtensions.GetReviews
+- uid: Vasont.Inspire.Models.Reviews.ReviewBrowseQueryModel
+  commentId: T:Vasont.Inspire.Models.Reviews.ReviewBrowseQueryModel
+  parent: Vasont.Inspire.Models.Reviews
+  isExternal: true
+  name: ReviewBrowseQueryModel
+  nameWithType: ReviewBrowseQueryModel
+  fullName: Vasont.Inspire.Models.Reviews.ReviewBrowseQueryModel
+- uid: Vasont.Inspire.Models.Reviews.ReviewComponentModel
+  commentId: T:Vasont.Inspire.Models.Reviews.ReviewComponentModel
+  parent: Vasont.Inspire.Models.Reviews
+  isExternal: true
+  name: ReviewComponentModel
+  nameWithType: ReviewComponentModel
+  fullName: Vasont.Inspire.Models.Reviews.ReviewComponentModel
+- uid: Vasont.Inspire.SDK.Review.ReviewExtensions.GetReviewComponents*
+  commentId: Overload:Vasont.Inspire.SDK.Review.ReviewExtensions.GetReviewComponents
+  name: GetReviewComponents
+  nameWithType: ReviewExtensions.GetReviewComponents
+  fullName: Vasont.Inspire.SDK.Review.ReviewExtensions.GetReviewComponents
+- uid: System.Collections.Generic.List{Vasont.Inspire.Models.Reviews.ReviewComponentModel}
+  commentId: T:System.Collections.Generic.List{Vasont.Inspire.Models.Reviews.ReviewComponentModel}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<ReviewComponentModel>
+  nameWithType: List<ReviewComponentModel>
+  fullName: System.Collections.Generic.List<Vasont.Inspire.Models.Reviews.ReviewComponentModel>
+  nameWithType.vb: List(Of ReviewComponentModel)
+  fullName.vb: System.Collections.Generic.List(Of Vasont.Inspire.Models.Reviews.ReviewComponentModel)
+  name.vb: List(Of ReviewComponentModel)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Vasont.Inspire.Models.Reviews.ReviewComponentModel
+    name: ReviewComponentModel
+    nameWithType: ReviewComponentModel
+    fullName: Vasont.Inspire.Models.Reviews.ReviewComponentModel
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Vasont.Inspire.Models.Reviews.ReviewComponentModel
+    name: ReviewComponentModel
+    nameWithType: ReviewComponentModel
+    fullName: Vasont.Inspire.Models.Reviews.ReviewComponentModel
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: Vasont.Inspire.SDK.Review.ReviewExtensions.GetReviewComponent*
+  commentId: Overload:Vasont.Inspire.SDK.Review.ReviewExtensions.GetReviewComponent
+  name: GetReviewComponent
+  nameWithType: ReviewExtensions.GetReviewComponent
+  fullName: Vasont.Inspire.SDK.Review.ReviewExtensions.GetReviewComponent
+- uid: Vasont.Inspire.Models.Reviews.ReviewAssignmentModel
+  commentId: T:Vasont.Inspire.Models.Reviews.ReviewAssignmentModel
+  isExternal: true
+- uid: Vasont.Inspire.SDK.Review.ReviewExtensions.GetUserReviewAssignments*
+  commentId: Overload:Vasont.Inspire.SDK.Review.ReviewExtensions.GetUserReviewAssignments
+  name: GetUserReviewAssignments
+  nameWithType: ReviewExtensions.GetUserReviewAssignments
+  fullName: Vasont.Inspire.SDK.Review.ReviewExtensions.GetUserReviewAssignments
+- uid: System.Collections.Generic.List{Vasont.Inspire.Models.Reviews.ReviewAssignmentModel}
+  commentId: T:System.Collections.Generic.List{Vasont.Inspire.Models.Reviews.ReviewAssignmentModel}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<ReviewAssignmentModel>
+  nameWithType: List<ReviewAssignmentModel>
+  fullName: System.Collections.Generic.List<Vasont.Inspire.Models.Reviews.ReviewAssignmentModel>
+  nameWithType.vb: List(Of ReviewAssignmentModel)
+  fullName.vb: System.Collections.Generic.List(Of Vasont.Inspire.Models.Reviews.ReviewAssignmentModel)
+  name.vb: List(Of ReviewAssignmentModel)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Vasont.Inspire.Models.Reviews.ReviewAssignmentModel
+    name: ReviewAssignmentModel
+    nameWithType: ReviewAssignmentModel
+    fullName: Vasont.Inspire.Models.Reviews.ReviewAssignmentModel
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Vasont.Inspire.Models.Reviews.ReviewAssignmentModel
+    name: ReviewAssignmentModel
+    nameWithType: ReviewAssignmentModel
+    fullName: Vasont.Inspire.Models.Reviews.ReviewAssignmentModel
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vasont.Inspire.SDK.Review.ReviewExtensions.GetReviewCoordinators*
+  commentId: Overload:Vasont.Inspire.SDK.Review.ReviewExtensions.GetReviewCoordinators
+  name: GetReviewCoordinators
+  nameWithType: ReviewExtensions.GetReviewCoordinators
+  fullName: Vasont.Inspire.SDK.Review.ReviewExtensions.GetReviewCoordinators
+- uid: System.Collections.Generic.List{Vasont.Inspire.Models.Security.MinimalUserModel}
+  commentId: T:System.Collections.Generic.List{Vasont.Inspire.Models.Security.MinimalUserModel}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<MinimalUserModel>
+  nameWithType: List<MinimalUserModel>
+  fullName: System.Collections.Generic.List<Vasont.Inspire.Models.Security.MinimalUserModel>
+  nameWithType.vb: List(Of MinimalUserModel)
+  fullName.vb: System.Collections.Generic.List(Of Vasont.Inspire.Models.Security.MinimalUserModel)
+  name.vb: List(Of MinimalUserModel)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Vasont.Inspire.Models.Security.MinimalUserModel
+    name: MinimalUserModel
+    nameWithType: MinimalUserModel
+    fullName: Vasont.Inspire.Models.Security.MinimalUserModel
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Vasont.Inspire.Models.Security.MinimalUserModel
+    name: MinimalUserModel
+    nameWithType: MinimalUserModel
+    fullName: Vasont.Inspire.Models.Security.MinimalUserModel
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vasont.Inspire.SDK.Review.ReviewExtensions.UpdateReview*
+  commentId: Overload:Vasont.Inspire.SDK.Review.ReviewExtensions.UpdateReview
+  name: UpdateReview
+  nameWithType: ReviewExtensions.UpdateReview
+  fullName: Vasont.Inspire.SDK.Review.ReviewExtensions.UpdateReview
+- uid: Vasont.Inspire.Models.Workflow.WorkflowTemplateModel
+  commentId: T:Vasont.Inspire.Models.Workflow.WorkflowTemplateModel
+  isExternal: true
+- uid: Vasont.Inspire.SDK.Review.ReviewExtensions.UpdateReviewComponents*
+  commentId: Overload:Vasont.Inspire.SDK.Review.ReviewExtensions.UpdateReviewComponents
+  name: UpdateReviewComponents
+  nameWithType: ReviewExtensions.UpdateReviewComponents
+  fullName: Vasont.Inspire.SDK.Review.ReviewExtensions.UpdateReviewComponents
+- uid: Vasont.Inspire.Models.Reviews.ReviewChangedComponentQueryModel
+  commentId: T:Vasont.Inspire.Models.Reviews.ReviewChangedComponentQueryModel
+  parent: Vasont.Inspire.Models.Reviews
+  isExternal: true
+  name: ReviewChangedComponentQueryModel
+  nameWithType: ReviewChangedComponentQueryModel
+  fullName: Vasont.Inspire.Models.Reviews.ReviewChangedComponentQueryModel
+- uid: System.Collections.Generic.List{Vasont.Inspire.Models.Reviews.ReviewerComponentModel}
+  commentId: T:System.Collections.Generic.List{Vasont.Inspire.Models.Reviews.ReviewerComponentModel}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<ReviewerComponentModel>
+  nameWithType: List<ReviewerComponentModel>
+  fullName: System.Collections.Generic.List<Vasont.Inspire.Models.Reviews.ReviewerComponentModel>
+  nameWithType.vb: List(Of ReviewerComponentModel)
+  fullName.vb: System.Collections.Generic.List(Of Vasont.Inspire.Models.Reviews.ReviewerComponentModel)
+  name.vb: List(Of ReviewerComponentModel)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Vasont.Inspire.Models.Reviews.ReviewerComponentModel
+    name: ReviewerComponentModel
+    nameWithType: ReviewerComponentModel
+    fullName: Vasont.Inspire.Models.Reviews.ReviewerComponentModel
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Vasont.Inspire.Models.Reviews.ReviewerComponentModel
+    name: ReviewerComponentModel
+    nameWithType: ReviewerComponentModel
+    fullName: Vasont.Inspire.Models.Reviews.ReviewerComponentModel
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vasont.Inspire.SDK.Review.ReviewExtensions.UpdateReviewComponentState*
+  commentId: Overload:Vasont.Inspire.SDK.Review.ReviewExtensions.UpdateReviewComponentState
+  name: UpdateReviewComponentState
+  nameWithType: ReviewExtensions.UpdateReviewComponentState
+  fullName: Vasont.Inspire.SDK.Review.ReviewExtensions.UpdateReviewComponentState
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Vasont.Inspire.Models.Reviews.ReviewerComponentModel
+  commentId: T:Vasont.Inspire.Models.Reviews.ReviewerComponentModel
+  parent: Vasont.Inspire.Models.Reviews
+  isExternal: true
+  name: ReviewerComponentModel
+  nameWithType: ReviewerComponentModel
+  fullName: Vasont.Inspire.Models.Reviews.ReviewerComponentModel
+- uid: Vasont.Inspire.SDK.Review.ReviewExtensions.CreateReview*
+  commentId: Overload:Vasont.Inspire.SDK.Review.ReviewExtensions.CreateReview
+  name: CreateReview
+  nameWithType: ReviewExtensions.CreateReview
+  fullName: Vasont.Inspire.SDK.Review.ReviewExtensions.CreateReview
+- uid: Vasont.Inspire.SDK.Review.ReviewExtensions.CompleteReviewerSession*
+  commentId: Overload:Vasont.Inspire.SDK.Review.ReviewExtensions.CompleteReviewerSession
+  name: CompleteReviewerSession
+  nameWithType: ReviewExtensions.CompleteReviewerSession
+  fullName: Vasont.Inspire.SDK.Review.ReviewExtensions.CompleteReviewerSession
+- uid: Vasont.Inspire.SDK.Review.ReviewExtensions.CompleteReview*
+  commentId: Overload:Vasont.Inspire.SDK.Review.ReviewExtensions.CompleteReview
+  name: CompleteReview
+  nameWithType: ReviewExtensions.CompleteReview
+  fullName: Vasont.Inspire.SDK.Review.ReviewExtensions.CompleteReview
+- uid: Vasont.Inspire.SDK.Review.ReviewExtensions.CancelReview*
+  commentId: Overload:Vasont.Inspire.SDK.Review.ReviewExtensions.CancelReview
+  name: CancelReview
+  nameWithType: ReviewExtensions.CancelReview
+  fullName: Vasont.Inspire.SDK.Review.ReviewExtensions.CancelReview
+- uid: Vasont.Inspire.Models.Reviews.ReviewCancellationModel
+  commentId: T:Vasont.Inspire.Models.Reviews.ReviewCancellationModel
+  parent: Vasont.Inspire.Models.Reviews
+  isExternal: true
+  name: ReviewCancellationModel
+  nameWithType: ReviewCancellationModel
+  fullName: Vasont.Inspire.Models.Reviews.ReviewCancellationModel
+- uid: Vasont.Inspire.SDK.Review.ReviewExtensions.DeleteReview*
+  commentId: Overload:Vasont.Inspire.SDK.Review.ReviewExtensions.DeleteReview
+  name: DeleteReview
+  nameWithType: ReviewExtensions.DeleteReview
+  fullName: Vasont.Inspire.SDK.Review.ReviewExtensions.DeleteReview

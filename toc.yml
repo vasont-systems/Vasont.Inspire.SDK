@@ -1,0 +1,6 @@
+
+- name: SDK Documentation
+  href: sdk/
+  homepage: sdk/Vasont.Inspire.SDK.yml
+- name: Models Documentation
+  href: https://vasont-systems.github.io/Vasont.Inspire.Models/index.html

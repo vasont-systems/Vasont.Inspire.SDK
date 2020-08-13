@@ -1,0 +1,430 @@
+### YamlMime:ManagedReference
+items:
+- uid: Vasont.Inspire.SDK.Components.EditorExtensions
+  commentId: T:Vasont.Inspire.SDK.Components.EditorExtensions
+  id: EditorExtensions
+  parent: Vasont.Inspire.SDK.Components
+  children:
+  - Vasont.Inspire.SDK.Components.EditorExtensions.GetEditorComponent(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.EditorLoadModel)
+  langs:
+  - csharp
+  - vb
+  name: EditorExtensions
+  nameWithType: EditorExtensions
+  fullName: Vasont.Inspire.SDK.Components.EditorExtensions
+  type: Class
+  source:
+    remote:
+      path: src/Components/EditorExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: EditorExtensions
+    path: Components/EditorExtensions.cs
+    startLine: 15
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Components
+  summary: "\nThis extensions class contains methods for supporting and interacting with external-editor related API calls.\n"
+  example: []
+  syntax:
+    content: public static class EditorExtensions
+    content.vb: Public Module EditorExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: Vasont.Inspire.SDK.Components.EditorExtensions.GetEditorComponent(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.EditorLoadModel)
+  commentId: M:Vasont.Inspire.SDK.Components.EditorExtensions.GetEditorComponent(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.EditorLoadModel)
+  id: GetEditorComponent(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.EditorLoadModel)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Components.EditorExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetEditorComponent(InspireClient, EditorLoadModel)
+  nameWithType: EditorExtensions.GetEditorComponent(InspireClient, EditorLoadModel)
+  fullName: Vasont.Inspire.SDK.Components.EditorExtensions.GetEditorComponent(Vasont.Inspire.SDK.InspireClient, Vasont.Inspire.Models.Components.EditorLoadModel)
+  type: Method
+  source:
+    remote:
+      path: src/Components/EditorExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: GetEditorComponent
+    path: Components/EditorExtensions.cs
+    startLine: 24
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Components
+  summary: "\nThis method is used to create an Inspire Editor record and lock for editing the specified XML component.\n"
+  example: []
+  syntax:
+    content: public static MinimalEditorXmlModel GetEditorComponent(this InspireClient client, EditorLoadModel model)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
+    - id: model
+      type: Vasont.Inspire.Models.Components.EditorLoadModel
+      description: Contains the component load editor model.
+    return:
+      type: Vasont.Inspire.Models.Components.MinimalEditorXmlModel
+      description: Returns the <xref href="Vasont.Inspire.Models.Components.MinimalEditorXmlModel" data-throw-if-not-resolved="false"></xref> object that represents the editor record created.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetEditorComponent(client As InspireClient, model As EditorLoadModel) As MinimalEditorXmlModel
+  overload: Vasont.Inspire.SDK.Components.EditorExtensions.GetEditorComponent*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: Vasont.Inspire.SDK.Components
+  commentId: N:Vasont.Inspire.SDK.Components
+  name: Vasont.Inspire.SDK.Components
+  nameWithType: Vasont.Inspire.SDK.Components
+  fullName: Vasont.Inspire.SDK.Components
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Vasont.Inspire.SDK.InspireClient
+  commentId: T:Vasont.Inspire.SDK.InspireClient
+  parent: Vasont.Inspire.SDK
+  name: InspireClient
+  nameWithType: InspireClient
+  fullName: Vasont.Inspire.SDK.InspireClient
+- uid: Vasont.Inspire.Models.Components.MinimalEditorXmlModel
+  commentId: T:Vasont.Inspire.Models.Components.MinimalEditorXmlModel
+  parent: Vasont.Inspire.Models.Components
+  isExternal: true
+  name: MinimalEditorXmlModel
+  nameWithType: MinimalEditorXmlModel
+  fullName: Vasont.Inspire.Models.Components.MinimalEditorXmlModel
+- uid: Vasont.Inspire.SDK.Components.EditorExtensions.GetEditorComponent*
+  commentId: Overload:Vasont.Inspire.SDK.Components.EditorExtensions.GetEditorComponent
+  name: GetEditorComponent
+  nameWithType: EditorExtensions.GetEditorComponent
+  fullName: Vasont.Inspire.SDK.Components.EditorExtensions.GetEditorComponent
+- uid: Vasont.Inspire.Models.Components.EditorLoadModel
+  commentId: T:Vasont.Inspire.Models.Components.EditorLoadModel
+  parent: Vasont.Inspire.Models.Components
+  isExternal: true
+  name: EditorLoadModel
+  nameWithType: EditorLoadModel
+  fullName: Vasont.Inspire.Models.Components.EditorLoadModel
+- uid: Vasont.Inspire.SDK
+  commentId: N:Vasont.Inspire.SDK
+  name: Vasont.Inspire.SDK
+  nameWithType: Vasont.Inspire.SDK
+  fullName: Vasont.Inspire.SDK
+- uid: Vasont.Inspire.Models.Components
+  commentId: N:Vasont.Inspire.Models.Components
+  isExternal: true
+  name: Vasont.Inspire.Models.Components
+  nameWithType: Vasont.Inspire.Models.Components
+  fullName: Vasont.Inspire.Models.Components

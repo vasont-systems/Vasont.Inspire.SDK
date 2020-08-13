@@ -1129,6 +1129,16 @@
             Initializes a new instance of the <see cref="T:Vasont.Inspire.SDK.InspireClient"/> class.
             </summary>
             <param name="config">Contains an instance of the <see cref="T:Vasont.Inspire.SDK.InspireClientConfiguration"/> class that contains client configuration settings.</param>
+            <example>
+                <code>
+                    InspireClientConfiguration config = new InspireClientConfiguration
+                    {
+                      ... set your configuration properties
+                    };
+                
+                    InspireClient client = new InspireClient(config);
+                </code>
+            </example>
         </member>
         <member name="P:Vasont.Inspire.SDK.InspireClient.Config">
             <summary>
@@ -1152,7 +1162,7 @@
         </member>
         <member name="P:Vasont.Inspire.SDK.InspireClient.LastException">
             <summary>
-            Gets the last exception handled within the client.
+            Gets the last <see cref="T:System.Exception"/> handled within the client.
             </summary>
         </member>
         <member name="P:Vasont.Inspire.SDK.InspireClient.TokenResponse">
@@ -1178,6 +1188,13 @@
             Authenticates the client with the specified scopes in a synchronous manor.
             </summary>
             <param name="scopes">The scopes to use.</param>
+            <example>
+                <code>
+                    InspireClient client = new InspireClient(config)
+                    
+                    client.Authenticate();
+                </code>
+            </example>
             <returns>Returns the result of the authentication.</returns>
         </member>
         <member name="M:Vasont.Inspire.SDK.InspireClient.AuthenticateAsync(System.String,System.Threading.CancellationToken)">
@@ -1186,6 +1203,13 @@
             </summary>
             <param name="scopes">Contains the scopes that are requested for the client credentials authentication.</param>
             <param name="cancellationToken">Contains an optional cancellation token.</param>
+            <example>
+                <code>
+                    InspireClient client = new InspireClient(config)
+                    string scopes = string.Empty;
+                    client.AuthenticateAsync(scopes, cancellationToken);
+                </code>
+            </example>
             <returns>Returns a value indicating whether the authentication was successful.</returns>
             <exception cref="T:Vasont.Inspire.SDK.InspireClientException">The exception is thrown if an issue occurs during discovery or client authentication.</exception>
         </member>
@@ -1198,6 +1222,13 @@
             <param name="noCache">Contains a value indicating whether the URL shall contain a parameter preventing the server from returning cached content.</param>
             <param name="credentials">Contains optional credentials </param>
             <param name="contentType">Contains optional content type.</param>
+            <example>
+                <code>
+                    long projectId = 123;
+                    InspireClient client = new InspireClient(config)
+                    var request = client.CreateRequest($"/Projects/{projectId}");
+                </code>
+            </example>
             <returns>Returns a new WebRequest object to execute.</returns>
         </member>
         <member name="M:Vasont.Inspire.SDK.InspireClient.CreateRequest(System.String,System.String,System.Boolean,System.Net.ICredentials,System.String)">
@@ -1209,26 +1240,17 @@
             <param name="noCache">Contains a value indicating whether the URL shall contain a parameter preventing the server from returning cached content.</param>
             <param name="credentials">Contains optional credentials </param>
             <param name="contentType">Contains optional content type.</param>
+            <example>
+                <code>
+                    long projectId = 123;
+                    InspireClient client = new InspireClient(config)
+                    var request = client.CreateRequest($"/Projects/{projectId}", HttpMethod.Get, true, null, "application/json");
+                </code>
+            </example>
             <returns>Returns a new HttpWebRequest object to execute.</returns>
         </member>
-        <member name="M:Vasont.Inspire.SDK.InspireClient.RequestContent``2(System.Net.HttpWebRequest,``0)">
-            <summary>
-            This method is used to execute a web request and return the results of the request as a defined object type.
-            </summary>
-            <typeparam name="T">Contains the type of the object that is to be sent with the request.</typeparam>
-            <typeparam name="TOut">Contains the type of object that is returned from the request.</typeparam>
-            <param name="request">Contains the HttpWebRequest to execute.</param>
-            <param name="requestBodyModel">Contains the object to serialize and submit with the request.</param>
-            <returns>Returns the content of the request response as the specified object.</returns>
-        </member>
-        <member name="M:Vasont.Inspire.SDK.InspireClient.RequestContent``1(System.Net.HttpWebRequest)">
-            <summary>
-            This method is used to execute a web request and return the results of the request as a defined object type.
-            </summary>
-            <typeparam name="TOut">Contains the type of object that is returned from the request.</typeparam>
-            <param name="request">Contains the HttpWebRequest to execute.</param>
-            <returns>Returns the content of the request response as the specified object.</returns>
-        </member>
+        <!-- Badly formed XML comment ignored for member "M:Vasont.Inspire.SDK.InspireClient.RequestContent``2(System.Net.HttpWebRequest,``0)" -->
+        <!-- Badly formed XML comment ignored for member "M:Vasont.Inspire.SDK.InspireClient.RequestContent``1(System.Net.HttpWebRequest)" -->
         <member name="M:Vasont.Inspire.SDK.InspireClient.RequestContent``1(System.Net.HttpWebRequest,``0)">
             <summary>
             This method is used to execute a web request and return the results of the request as a string.
@@ -1236,6 +1258,15 @@
             <typeparam name="T">Contains the type of the object that is to be sent with the request.</typeparam>
             <param name="request">Contains the HttpWebRequest to execute.</param>
             <param name="requestBodyModel">Contains the object to serialize and submit with the request.</param>
+            <example>
+                <code>
+                    long targetFolderId = 32;
+                    
+                    InspireClient client = new InspireClient(config)
+                    var request = client.CreateRequest($"/Components/Move/{targetFolderId}", HttpMethod.Put);
+                    client.RequestContent(request, componentIds);
+                </code>
+            </example>
             <returns>Returns the content of the request response.</returns>
         </member>
         <member name="M:Vasont.Inspire.SDK.InspireClient.RequestContent(System.Net.HttpWebRequest)">
@@ -1243,12 +1274,27 @@
             This method is used to execute a web request and return the results of the request as a string.
             </summary>
             <param name="request">Contains the HttpWebRequest to execute.</param>
+            <example>
+                <code>
+                    long attributeId = 321;
+                    
+                    InspireClient client = new InspireClient(config)
+                    var request = client.CreateRequest($"/Configurations/Attributes/{attributeId}", HttpMethod.Delete);
+                    client.RequestContent(request);
+                </code>
+            </example>
             <returns>Returns the content of the request response.</returns>
         </member>
         <member name="M:Vasont.Inspire.SDK.InspireClient.Dispose">
             <summary>
             This method is called upon disposal of the client class.
             </summary>
+            <example>
+                <code>
+                    InspireClient client = new InspireClient(config)
+                    client.Dispose();
+                </code>
+            </example>
         </member>
         <member name="M:Vasont.Inspire.SDK.InspireClient.Dispose(System.Boolean)">
             <summary>

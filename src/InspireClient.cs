@@ -1,6 +1,6 @@
 ﻿//-------------------------------------------------------------
 // <copyright file="InspireClient.cs" company="Vasont Systems">
-// Copyright (c) 2017 Vasont Systems. All rights reserved.
+// Copyright (c) Vasont Systems. All rights reserved.
 // </copyright>
 //-------------------------------------------------------------
 namespace Vasont.Inspire.SDK
@@ -59,6 +59,16 @@ namespace Vasont.Inspire.SDK
         /// Initializes a new instance of the <see cref="InspireClient"/> class.
         /// </summary>
         /// <param name="config">Contains an instance of the <see cref="InspireClientConfiguration"/> class that contains client configuration settings.</param>
+        /// <example>
+        ///     <code>
+        ///         InspireClientConfiguration config = new InspireClientConfiguration
+        ///         {
+        ///           ... set your configuration properties
+        ///         };
+        ///     
+        ///         InspireClient client = new InspireClient(config);
+        ///     </code>
+        /// </example>
         public InspireClient(InspireClientConfiguration config)
         {
             this.Config = config;
@@ -90,7 +100,7 @@ namespace Vasont.Inspire.SDK
         public ErrorResponseModel LastErrorResponse { get; private set; }
 
         /// <summary>
-        /// Gets the last exception handled within the client.
+        /// Gets the last <see cref="Exception"/> handled within the client.
         /// </summary>
         public Exception LastException { get; private set; }
 
@@ -124,6 +134,13 @@ namespace Vasont.Inspire.SDK
         /// Authenticates the client with the specified scopes in a synchronous manor.
         /// </summary>
         /// <param name="scopes">The scopes to use.</param>
+        /// <example>
+        ///     <code>
+        ///         InspireClient client = new InspireClient(config)
+        ///         
+        ///         client.Authenticate();
+        ///     </code>
+        /// </example>
         /// <returns>Returns the result of the authentication.</returns>
         public bool Authenticate(string scopes = "")
         {
@@ -135,6 +152,13 @@ namespace Vasont.Inspire.SDK
         /// </summary>
         /// <param name="scopes">Contains the scopes that are requested for the client credentials authentication.</param>
         /// <param name="cancellationToken">Contains an optional cancellation token.</param>
+        /// <example>
+        ///     <code>
+        ///         InspireClient client = new InspireClient(config)
+        ///         string scopes = string.Empty;
+        ///         client.AuthenticateAsync(scopes, cancellationToken);
+        ///     </code>
+        /// </example>
         /// <returns>Returns a value indicating whether the authentication was successful.</returns>
         /// <exception cref="InspireClientException">The exception is thrown if an issue occurs during discovery or client authentication.</exception>
         public async Task<bool> AuthenticateAsync(string scopes = "", CancellationToken cancellationToken = default(CancellationToken))
@@ -202,6 +226,13 @@ namespace Vasont.Inspire.SDK
         /// <param name="noCache">Contains a value indicating whether the URL shall contain a parameter preventing the server from returning cached content.</param>
         /// <param name="credentials">Contains optional credentials </param>
         /// <param name="contentType">Contains optional content type.</param>
+        /// <example>
+        ///     <code>
+        ///         long projectId = 123;
+        ///         InspireClient client = new InspireClient(config)
+        ///         var request = client.CreateRequest($"/Projects/{projectId}");
+        ///     </code>
+        /// </example>
         /// <returns>Returns a new WebRequest object to execute.</returns>
         public HttpWebRequest CreateRequest(string relativeUri, HttpMethod method = null, bool noCache = true, ICredentials credentials = null, string contentType = "application/json")
         {
@@ -226,6 +257,13 @@ namespace Vasont.Inspire.SDK
         /// <param name="noCache">Contains a value indicating whether the URL shall contain a parameter preventing the server from returning cached content.</param>
         /// <param name="credentials">Contains optional credentials </param>
         /// <param name="contentType">Contains optional content type.</param>
+        /// <example>
+        ///     <code>
+        ///         long projectId = 123;
+        ///         InspireClient client = new InspireClient(config)
+        ///         var request = client.CreateRequest($"/Projects/{projectId}", HttpMethod.Get, true, null, "application/json");
+        ///     </code>
+        /// </example>
         /// <returns>Returns a new HttpWebRequest object to execute.</returns>
         public HttpWebRequest CreateRequest(string relativeUri, string method, bool noCache = true, ICredentials credentials = null, string contentType = "application/json")
         {
@@ -265,6 +303,16 @@ namespace Vasont.Inspire.SDK
         /// <typeparam name="TOut">Contains the type of object that is returned from the request.</typeparam>
         /// <param name="request">Contains the HttpWebRequest to execute.</param>
         /// <param name="requestBodyModel">Contains the object to serialize and submit with the request.</param>
+        /// <example>
+        ///     <code>
+        ///         List<long> componentIds = new List<long>();
+        ///         // fill list with component Ids;
+        ///         
+        ///         InspireClient client = new InspireClient(config)
+        ///         var request = client.CreateRequest($"/Components/Approve", HttpMethod.Post);
+        ///         bool approved = client.RequestContent<List<long>, bool>(request, componentIds);        
+        ///     </code>
+        /// </example>
         /// <returns>Returns the content of the request response as the specified object.</returns>
         public TOut RequestContent<T, TOut>(HttpWebRequest request, T requestBodyModel)
         {
@@ -277,6 +325,13 @@ namespace Vasont.Inspire.SDK
         /// </summary>
         /// <typeparam name="TOut">Contains the type of object that is returned from the request.</typeparam>
         /// <param name="request">Contains the HttpWebRequest to execute.</param>
+        /// <example>
+        ///     <code>
+        ///         InspireClient client = new InspireClient(config)
+        ///         var request = client.CreateRequest($"/Application/AppInfo");
+        ///         var tenantDetailModel = client.RequestContent<TenantDetailModel>(request);      
+        ///     </code>
+        /// </example>
         /// <returns>Returns the content of the request response as the specified object.</returns>
         public TOut RequestContent<TOut>(HttpWebRequest request)
         {
@@ -290,6 +345,15 @@ namespace Vasont.Inspire.SDK
         /// <typeparam name="T">Contains the type of the object that is to be sent with the request.</typeparam>
         /// <param name="request">Contains the HttpWebRequest to execute.</param>
         /// <param name="requestBodyModel">Contains the object to serialize and submit with the request.</param>
+        /// <example>
+        ///     <code>
+        ///         long targetFolderId = 32;
+        ///         
+        ///         InspireClient client = new InspireClient(config)
+        ///         var request = client.CreateRequest($"/Components/Move/{targetFolderId}", HttpMethod.Put);
+        ///         client.RequestContent(request, componentIds);
+        ///     </code>
+        /// </example>
         /// <returns>Returns the content of the request response.</returns>
         public string RequestContent<T>(HttpWebRequest request, T requestBodyModel)
         {
@@ -324,6 +388,15 @@ namespace Vasont.Inspire.SDK
         /// This method is used to execute a web request and return the results of the request as a string.
         /// </summary>
         /// <param name="request">Contains the HttpWebRequest to execute.</param>
+        /// <example>
+        ///     <code>
+        ///         long attributeId = 321;
+        ///         
+        ///         InspireClient client = new InspireClient(config)
+        ///         var request = client.CreateRequest($"/Configurations/Attributes/{attributeId}", HttpMethod.Delete);
+        ///         client.RequestContent(request);
+        ///     </code>
+        /// </example>
         /// <returns>Returns the content of the request response.</returns>
         public string RequestContent(HttpWebRequest request)
         {
@@ -398,11 +471,19 @@ namespace Vasont.Inspire.SDK
             return resultContent;
         }
 
+        #endregion Public Methods
+        
         #region IDispose Methods
 
         /// <summary>
         /// This method is called upon disposal of the client class.
         /// </summary>
+        /// <example>
+        ///     <code>
+        ///         InspireClient client = new InspireClient(config)
+        ///         client.Dispose();
+        ///     </code>
+        /// </example>
         public void Dispose()
         {
             this.Dispose(true);
@@ -441,8 +522,6 @@ namespace Vasont.Inspire.SDK
         }
 
         #endregion Protected Methods
-
-        #endregion Public Methods
 
         #region Protected Methods
 

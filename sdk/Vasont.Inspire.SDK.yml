@@ -1,0 +1,48 @@
+### YamlMime:ManagedReference
+items:
+- uid: Vasont.Inspire.SDK
+  commentId: N:Vasont.Inspire.SDK
+  id: Vasont.Inspire.SDK
+  children:
+  - Vasont.Inspire.SDK.ClientAuthenticationMethods
+  - Vasont.Inspire.SDK.InspireClient
+  - Vasont.Inspire.SDK.InspireClientConfiguration
+  - Vasont.Inspire.SDK.InspireClientException
+  langs:
+  - csharp
+  - vb
+  name: Vasont.Inspire.SDK
+  nameWithType: Vasont.Inspire.SDK
+  fullName: Vasont.Inspire.SDK
+  type: Namespace
+  assemblies:
+  - Vasont.Inspire.SDK
+references:
+- uid: Vasont.Inspire.SDK.InspireClient
+  commentId: T:Vasont.Inspire.SDK.InspireClient
+  parent: Vasont.Inspire.SDK
+  name: InspireClient
+  nameWithType: InspireClient
+  fullName: Vasont.Inspire.SDK.InspireClient
+- uid: Vasont.Inspire.SDK.ClientAuthenticationMethods
+  commentId: T:Vasont.Inspire.SDK.ClientAuthenticationMethods
+  parent: Vasont.Inspire.SDK
+  name: ClientAuthenticationMethods
+  nameWithType: ClientAuthenticationMethods
+  fullName: Vasont.Inspire.SDK.ClientAuthenticationMethods
+- uid: Vasont.Inspire.SDK.InspireClientConfiguration
+  commentId: T:Vasont.Inspire.SDK.InspireClientConfiguration
+  parent: Vasont.Inspire.SDK
+  name: InspireClientConfiguration
+  nameWithType: InspireClientConfiguration
+  fullName: Vasont.Inspire.SDK.InspireClientConfiguration
+- uid: Vasont.Inspire.SDK.InspireClientException
+  commentId: T:Vasont.Inspire.SDK.InspireClientException
+  name: InspireClientException
+  nameWithType: InspireClientException
+  fullName: Vasont.Inspire.SDK.InspireClientException
+- uid: Vasont.Inspire.SDK
+  commentId: N:Vasont.Inspire.SDK
+  name: Vasont.Inspire.SDK
+  nameWithType: Vasont.Inspire.SDK
+  fullName: Vasont.Inspire.SDK

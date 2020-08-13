@@ -4,8 +4,20 @@
   "xrefmap": "xrefmap.yml",
   "files": [
     {
+      "type": "Conceptual",
+      "source_relative_path": "../README.md",
+      "output": {
+        ".html": {
+          "relative_path": "README.html",
+          "hash": "9jX6w2ld04tczytGvxaOUw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Resource",
-      "source_relative_path": "images/favicon.ico",
+      "source_relative_path": "../images/favicon.ico",
       "output": {
         "resource": {
           "relative_path": "images/favicon.ico"
@@ -16,7 +28,7 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/gl_vasont_logo.png",
+      "source_relative_path": "../images/gl_vasont_logo.png",
       "output": {
         "resource": {
           "relative_path": "images/gl_vasont_logo.png"
@@ -26,15 +38,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
-      "source_relative_path": "index.md",
+      "source_relative_path": "../index.md",
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "uSkklR6Xjz/5K4QIXOZilg=="
+          "hash": "6Us1Od4JDqJK4lR+CDAyNQ=="
         }
       },
       "is_incremental": false,
@@ -42,11 +51,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "sdk/Vasont.Inspire.SDK.Application.ApplicationExtensions.yml",
+      "source_relative_path": "../sdk/Vasont.Inspire.SDK.Application.ApplicationExtensions.yml",
       "output": {
         ".html": {
           "relative_path": "sdk/Vasont.Inspire.SDK.Application.ApplicationExtensions.html",
-          "hash": "KnTBzUDZhJEP0t6qVsVe+A=="
+          "hash": "cPgKxZ0ITRZaZofSaz4zxw=="
         }
       },
       "is_incremental": false,
@@ -54,11 +63,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "sdk/Vasont.Inspire.SDK.Application.yml",
+      "source_relative_path": "../sdk/Vasont.Inspire.SDK.Application.yml",
       "output": {
         ".html": {
           "relative_path": "sdk/Vasont.Inspire.SDK.Application.html",
-          "hash": "3c7Lb3DP8ZXjSeCqoRVGnQ=="
+          "hash": "oNLA1zvJTcRRYKB0C2+CwQ=="
         }
       },
       "is_incremental": false,
@@ -66,11 +75,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "sdk/Vasont.Inspire.SDK.ClientAuthenticationMethods.yml",
+      "source_relative_path": "../sdk/Vasont.Inspire.SDK.ClientAuthenticationMethods.yml",
       "output": {
         ".html": {
           "relative_path": "sdk/Vasont.Inspire.SDK.ClientAuthenticationMethods.html",
-          "hash": "YG9iarEW+z/omn1A6w2VXg=="
+          "hash": "/wgQejW7Nkrph/mCpSA7iQ=="
         }
       },
       "is_incremental": false,
@@ -78,11 +87,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "sdk/Vasont.Inspire.SDK.Components.ComponentExtensions.yml",
+      "source_relative_path": "../sdk/Vasont.Inspire.SDK.Components.ComponentExtensions.yml",
       "output": {
         ".html": {
           "relative_path": "sdk/Vasont.Inspire.SDK.Components.ComponentExtensions.html",
-          "hash": "uogxq2DnHlbSI3MCjU94Bw=="
+          "hash": "nbZNx5DLtIceTJNCYbqN1A=="
         }
       },
       "is_incremental": false,
@@ -90,11 +99,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "sdk/Vasont.Inspire.SDK.Components.EditorExtensions.yml",
+      "source_relative_path": "../sdk/Vasont.Inspire.SDK.Components.EditorExtensions.yml",
       "output": {
         ".html": {
           "relative_path": "sdk/Vasont.Inspire.SDK.Components.EditorExtensions.html",
-          "hash": "w7kHHrxZAYsmGIu9TFrwuw=="
+          "hash": "3rDWLf15x7G++mOPRMgqmQ=="
         }
       },
       "is_incremental": false,
@@ -102,11 +111,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "sdk/Vasont.Inspire.SDK.Components.yml",
+      "source_relative_path": "../sdk/Vasont.Inspire.SDK.Components.yml",
       "output": {
         ".html": {
           "relative_path": "sdk/Vasont.Inspire.SDK.Components.html",
-          "hash": "AAkCzI3SiDFfekWTsbAz4Q=="
+          "hash": "cTb9UAuurY+87HCsPTKVoQ=="
         }
       },
       "is_incremental": false,
@@ -114,11 +123,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "sdk/Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.yml",
+      "source_relative_path": "../sdk/Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.yml",
       "output": {
         ".html": {
           "relative_path": "sdk/Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html",
-          "hash": "6fE8nDc5ABB/G53VkggZTQ=="
+          "hash": "+JPe5XDL7aFKQAMvdNDbpQ=="
         }
       },
       "is_incremental": false,
@@ -126,11 +135,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "sdk/Vasont.Inspire.SDK.Configuration.yml",
+      "source_relative_path": "../sdk/Vasont.Inspire.SDK.Configuration.yml",
       "output": {
         ".html": {
           "relative_path": "sdk/Vasont.Inspire.SDK.Configuration.html",
-          "hash": "uhT7zaX4xwYBuYb4XyM4Fg=="
+          "hash": "XqcgfKGD/5g7Wwn3NgrTcw=="
         }
       },
       "is_incremental": false,
@@ -138,11 +147,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "sdk/Vasont.Inspire.SDK.Folders.FolderExtensions.yml",
+      "source_relative_path": "../sdk/Vasont.Inspire.SDK.Folders.FolderExtensions.yml",
       "output": {
         ".html": {
           "relative_path": "sdk/Vasont.Inspire.SDK.Folders.FolderExtensions.html",
-          "hash": "eHghizMDRQmo+TaNXNpMFw=="
+          "hash": "SOYbpnYsNI5Xsj07nFtMMg=="
         }
       },
       "is_incremental": false,
@@ -150,11 +159,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "sdk/Vasont.Inspire.SDK.Folders.yml",
+      "source_relative_path": "../sdk/Vasont.Inspire.SDK.Folders.yml",
       "output": {
         ".html": {
           "relative_path": "sdk/Vasont.Inspire.SDK.Folders.html",
-          "hash": "6vDgaviT6d2xFaaxzhaaNQ=="
+          "hash": "TppMSJrLwQf6j+ykElLUPw=="
         }
       },
       "is_incremental": false,
@@ -162,11 +171,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "sdk/Vasont.Inspire.SDK.InspireClient.yml",
+      "source_relative_path": "../sdk/Vasont.Inspire.SDK.InspireClient.yml",
       "output": {
         ".html": {
           "relative_path": "sdk/Vasont.Inspire.SDK.InspireClient.html",
-          "hash": "Y0fVKC8Qs3kz5roibG3DSw=="
+          "hash": "8PDzZCcmCsuoxzvbnS9shw=="
         }
       },
       "is_incremental": false,
@@ -174,11 +183,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "sdk/Vasont.Inspire.SDK.InspireClientConfiguration.yml",
+      "source_relative_path": "../sdk/Vasont.Inspire.SDK.InspireClientConfiguration.yml",
       "output": {
         ".html": {
           "relative_path": "sdk/Vasont.Inspire.SDK.InspireClientConfiguration.html",
-          "hash": "d+DvJhCJDWALOFSQuuYjQw=="
+          "hash": "Ncd1eLdFLsr5WWPm1T8qTg=="
         }
       },
       "is_incremental": false,
@@ -186,11 +195,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "sdk/Vasont.Inspire.SDK.InspireClientException.yml",
+      "source_relative_path": "../sdk/Vasont.Inspire.SDK.InspireClientException.yml",
       "output": {
         ".html": {
           "relative_path": "sdk/Vasont.Inspire.SDK.InspireClientException.html",
-          "hash": "XttJVQwTy3vH89LCO4uvsA=="
+          "hash": "Nimf+Qv2uicYcxG0R/JDiQ=="
         }
       },
       "is_incremental": false,
@@ -198,11 +207,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "sdk/Vasont.Inspire.SDK.Projects.ProjectExtensions.yml",
+      "source_relative_path": "../sdk/Vasont.Inspire.SDK.Projects.ProjectExtensions.yml",
       "output": {
         ".html": {
           "relative_path": "sdk/Vasont.Inspire.SDK.Projects.ProjectExtensions.html",
-          "hash": "KysdgZpOMlAQvzndcinSlg=="
+          "hash": "PRLoOuveRdbNl2r97DMW3g=="
         }
       },
       "is_incremental": false,
@@ -210,11 +219,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "sdk/Vasont.Inspire.SDK.Projects.yml",
+      "source_relative_path": "../sdk/Vasont.Inspire.SDK.Projects.yml",
       "output": {
         ".html": {
           "relative_path": "sdk/Vasont.Inspire.SDK.Projects.html",
-          "hash": "Tk7UKSVlYzZA6pWI8h1vfg=="
+          "hash": "A2tI7+B4kWJZ5kgX7O5VbQ=="
         }
       },
       "is_incremental": false,
@@ -222,11 +231,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "sdk/Vasont.Inspire.SDK.Review.ReviewExtensions.yml",
+      "source_relative_path": "../sdk/Vasont.Inspire.SDK.Review.ReviewExtensions.yml",
       "output": {
         ".html": {
           "relative_path": "sdk/Vasont.Inspire.SDK.Review.ReviewExtensions.html",
-          "hash": "Z0u2tzgdY4D47E1X2hwD7A=="
+          "hash": "v9SanzPaFGJgCP/G7NhPDg=="
         }
       },
       "is_incremental": false,
@@ -234,11 +243,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "sdk/Vasont.Inspire.SDK.Review.yml",
+      "source_relative_path": "../sdk/Vasont.Inspire.SDK.Review.yml",
       "output": {
         ".html": {
           "relative_path": "sdk/Vasont.Inspire.SDK.Review.html",
-          "hash": "QN84zEpta+j7PDgGaMrSAQ=="
+          "hash": "qCioytF/Rl/DUCdMcItDTA=="
         }
       },
       "is_incremental": false,
@@ -246,11 +255,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "sdk/Vasont.Inspire.SDK.Security.RoleExtensions.yml",
+      "source_relative_path": "../sdk/Vasont.Inspire.SDK.Security.RoleExtensions.yml",
       "output": {
         ".html": {
           "relative_path": "sdk/Vasont.Inspire.SDK.Security.RoleExtensions.html",
-          "hash": "AGFNBRKJGu2BCwKoUFPK0A=="
+          "hash": "IDFLAiLec/8CTMEwvJx74w=="
         }
       },
       "is_incremental": false,
@@ -258,11 +267,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "sdk/Vasont.Inspire.SDK.Security.UserExtensions.yml",
+      "source_relative_path": "../sdk/Vasont.Inspire.SDK.Security.UserExtensions.yml",
       "output": {
         ".html": {
           "relative_path": "sdk/Vasont.Inspire.SDK.Security.UserExtensions.html",
-          "hash": "xtUkPbtfNRPbUhJNB0OroA=="
+          "hash": "9bWAJi7jIYEKcrxlJOHNyg=="
         }
       },
       "is_incremental": false,
@@ -270,11 +279,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "sdk/Vasont.Inspire.SDK.Security.yml",
+      "source_relative_path": "../sdk/Vasont.Inspire.SDK.Security.yml",
       "output": {
         ".html": {
           "relative_path": "sdk/Vasont.Inspire.SDK.Security.html",
-          "hash": "ScPWda07DRlB1Acmrx25bw=="
+          "hash": "iznPnRsAI5LZqyY6ywc6ew=="
         }
       },
       "is_incremental": false,
@@ -282,11 +291,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "sdk/Vasont.Inspire.SDK.Translations.TranslationsExtensions.yml",
+      "source_relative_path": "../sdk/Vasont.Inspire.SDK.Translations.TranslationsExtensions.yml",
       "output": {
         ".html": {
           "relative_path": "sdk/Vasont.Inspire.SDK.Translations.TranslationsExtensions.html",
-          "hash": "BMRsmSu/DVjm9E/z+db0CA=="
+          "hash": "d1Pq2GiybEFLvUQZxblREg=="
         }
       },
       "is_incremental": false,
@@ -294,11 +303,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "sdk/Vasont.Inspire.SDK.Translations.yml",
+      "source_relative_path": "../sdk/Vasont.Inspire.SDK.Translations.yml",
       "output": {
         ".html": {
           "relative_path": "sdk/Vasont.Inspire.SDK.Translations.html",
-          "hash": "+ouvusj9MvRaeRp2GdjCNA=="
+          "hash": "MevrcFLWQOAylYp7bHl85w=="
         }
       },
       "is_incremental": false,
@@ -306,11 +315,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "sdk/Vasont.Inspire.SDK.yml",
+      "source_relative_path": "../sdk/Vasont.Inspire.SDK.yml",
       "output": {
         ".html": {
           "relative_path": "sdk/Vasont.Inspire.SDK.html",
-          "hash": "G24pxteTrlxFgRlLKvk9VA=="
+          "hash": "cC2LrQ92xSUj7hPDErMA5w=="
         }
       },
       "is_incremental": false,
@@ -318,7 +327,7 @@
     },
     {
       "type": "Toc",
-      "source_relative_path": "sdk/toc.yml",
+      "source_relative_path": "../sdk/toc.yml",
       "output": {
         ".html": {
           "relative_path": "sdk/toc.html",
@@ -330,11 +339,11 @@
     },
     {
       "type": "Toc",
-      "source_relative_path": "toc.yml",
+      "source_relative_path": "../toc.yml",
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "Hii2yI+qMyzzn9ftrAjXZg=="
+          "hash": "K/bt0F3wujTA5eU2QtGUxw=="
         }
       },
       "is_incremental": false,
@@ -355,7 +364,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 1,
+          "total_file_count": 2,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {

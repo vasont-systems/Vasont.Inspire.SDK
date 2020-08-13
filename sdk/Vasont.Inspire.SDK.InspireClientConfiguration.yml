@@ -1,0 +1,1146 @@
+### YamlMime:ManagedReference
+items:
+- uid: Vasont.Inspire.SDK.InspireClientConfiguration
+  commentId: T:Vasont.Inspire.SDK.InspireClientConfiguration
+  id: InspireClientConfiguration
+  parent: Vasont.Inspire.SDK
+  children:
+  - Vasont.Inspire.SDK.InspireClientConfiguration.#ctor
+  - Vasont.Inspire.SDK.InspireClientConfiguration.#ctor(System.String,Vasont.Inspire.SDK.ClientAuthenticationMethods,System.String,System.String,System.String,System.String,System.String,System.Boolean,System.String)
+  - Vasont.Inspire.SDK.InspireClientConfiguration.#ctor(System.String,Vasont.Inspire.SDK.ClientAuthenticationMethods,System.Uri,System.Uri,System.String,System.String,System.String,System.Boolean,System.String)
+  - Vasont.Inspire.SDK.InspireClientConfiguration.AuthenticationMethod
+  - Vasont.Inspire.SDK.InspireClientConfiguration.AuthorityUri
+  - Vasont.Inspire.SDK.InspireClientConfiguration.ClientId
+  - Vasont.Inspire.SDK.InspireClientConfiguration.ClientSecret
+  - Vasont.Inspire.SDK.InspireClientConfiguration.DefaultAuthorityUrl
+  - Vasont.Inspire.SDK.InspireClientConfiguration.DefaultClientId
+  - Vasont.Inspire.SDK.InspireClientConfiguration.DefaultTargetResourceScope
+  - Vasont.Inspire.SDK.InspireClientConfiguration.DelegatedAccessToken
+  - Vasont.Inspire.SDK.InspireClientConfiguration.Password
+  - Vasont.Inspire.SDK.InspireClientConfiguration.ResourceUri
+  - Vasont.Inspire.SDK.InspireClientConfiguration.RoutePrefix
+  - Vasont.Inspire.SDK.InspireClientConfiguration.TargetResourceScopes
+  - Vasont.Inspire.SDK.InspireClientConfiguration.UseDiscovery
+  - Vasont.Inspire.SDK.InspireClientConfiguration.UserId
+  langs:
+  - csharp
+  - vb
+  name: InspireClientConfiguration
+  nameWithType: InspireClientConfiguration
+  fullName: Vasont.Inspire.SDK.InspireClientConfiguration
+  type: Class
+  source:
+    remote:
+      path: src/InspireClientConfiguration.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: InspireClientConfiguration
+    path: InspireClientConfiguration.cs
+    startLine: 36
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK
+  summary: "\nThis class contains inspire client SDK configuration options.\n"
+  example: []
+  syntax:
+    content: public class InspireClientConfiguration
+    content.vb: Public Class InspireClientConfiguration
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Vasont.Inspire.SDK.InspireClientConfiguration.DefaultClientId
+  commentId: F:Vasont.Inspire.SDK.InspireClientConfiguration.DefaultClientId
+  id: DefaultClientId
+  parent: Vasont.Inspire.SDK.InspireClientConfiguration
+  langs:
+  - csharp
+  - vb
+  name: DefaultClientId
+  nameWithType: InspireClientConfiguration.DefaultClientId
+  fullName: Vasont.Inspire.SDK.InspireClientConfiguration.DefaultClientId
+  type: Field
+  source:
+    remote:
+      path: src/InspireClientConfiguration.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: DefaultClientId
+    path: InspireClientConfiguration.cs
+    startLine: 43
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK
+  summary: "\nContains the default inspire SDK client id.\n"
+  example: []
+  syntax:
+    content: public const string DefaultClientId = "inspiresdk"
+    return:
+      type: System.String
+    content.vb: Public Const DefaultClientId As String = "inspiresdk"
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Vasont.Inspire.SDK.InspireClientConfiguration.DefaultAuthorityUrl
+  commentId: F:Vasont.Inspire.SDK.InspireClientConfiguration.DefaultAuthorityUrl
+  id: DefaultAuthorityUrl
+  parent: Vasont.Inspire.SDK.InspireClientConfiguration
+  langs:
+  - csharp
+  - vb
+  name: DefaultAuthorityUrl
+  nameWithType: InspireClientConfiguration.DefaultAuthorityUrl
+  fullName: Vasont.Inspire.SDK.InspireClientConfiguration.DefaultAuthorityUrl
+  type: Field
+  source:
+    remote:
+      path: src/InspireClientConfiguration.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: DefaultAuthorityUrl
+    path: InspireClientConfiguration.cs
+    startLine: 50
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK
+  summary: "\nContains the default authority URL.\n"
+  example: []
+  syntax:
+    content: public const string DefaultAuthorityUrl = "https://identity.vasont.com/"
+    return:
+      type: System.String
+    content.vb: Public Const DefaultAuthorityUrl As String = "https://identity.vasont.com/"
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Vasont.Inspire.SDK.InspireClientConfiguration.DefaultTargetResourceScope
+  commentId: F:Vasont.Inspire.SDK.InspireClientConfiguration.DefaultTargetResourceScope
+  id: DefaultTargetResourceScope
+  parent: Vasont.Inspire.SDK.InspireClientConfiguration
+  langs:
+  - csharp
+  - vb
+  name: DefaultTargetResourceScope
+  nameWithType: InspireClientConfiguration.DefaultTargetResourceScope
+  fullName: Vasont.Inspire.SDK.InspireClientConfiguration.DefaultTargetResourceScope
+  type: Field
+  source:
+    remote:
+      path: src/InspireClientConfiguration.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: DefaultTargetResourceScope
+    path: InspireClientConfiguration.cs
+    startLine: 57
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK
+  summary: "\nContains the default inspire resource scope name.\n"
+  example: []
+  syntax:
+    content: public const string DefaultTargetResourceScope = "inspireapi"
+    return:
+      type: System.String
+    content.vb: Public Const DefaultTargetResourceScope As String = "inspireapi"
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Vasont.Inspire.SDK.InspireClientConfiguration.#ctor
+  commentId: M:Vasont.Inspire.SDK.InspireClientConfiguration.#ctor
+  id: '#ctor'
+  parent: Vasont.Inspire.SDK.InspireClientConfiguration
+  langs:
+  - csharp
+  - vb
+  name: InspireClientConfiguration()
+  nameWithType: InspireClientConfiguration.InspireClientConfiguration()
+  fullName: Vasont.Inspire.SDK.InspireClientConfiguration.InspireClientConfiguration()
+  type: Constructor
+  source:
+    remote:
+      path: src/InspireClientConfiguration.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: .ctor
+    path: InspireClientConfiguration.cs
+    startLine: 66
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK
+  summary: "\nInitializes a new instance of the <xref href=\"Vasont.Inspire.SDK.InspireClientConfiguration\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public InspireClientConfiguration()
+    content.vb: Public Sub New
+  overload: Vasont.Inspire.SDK.InspireClientConfiguration.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Vasont.Inspire.SDK.InspireClientConfiguration.#ctor(System.String,Vasont.Inspire.SDK.ClientAuthenticationMethods,System.String,System.String,System.String,System.String,System.String,System.Boolean,System.String)
+  commentId: M:Vasont.Inspire.SDK.InspireClientConfiguration.#ctor(System.String,Vasont.Inspire.SDK.ClientAuthenticationMethods,System.String,System.String,System.String,System.String,System.String,System.Boolean,System.String)
+  id: '#ctor(System.String,Vasont.Inspire.SDK.ClientAuthenticationMethods,System.String,System.String,System.String,System.String,System.String,System.Boolean,System.String)'
+  parent: Vasont.Inspire.SDK.InspireClientConfiguration
+  langs:
+  - csharp
+  - vb
+  name: InspireClientConfiguration(String, ClientAuthenticationMethods, String, String, String, String, String, Boolean, String)
+  nameWithType: InspireClientConfiguration.InspireClientConfiguration(String, ClientAuthenticationMethods, String, String, String, String, String, Boolean, String)
+  fullName: Vasont.Inspire.SDK.InspireClientConfiguration.InspireClientConfiguration(System.String, Vasont.Inspire.SDK.ClientAuthenticationMethods, System.String, System.String, System.String, System.String, System.String, System.Boolean, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: src/InspireClientConfiguration.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: .ctor
+    path: InspireClientConfiguration.cs
+    startLine: 83
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK
+  summary: "\nInitializes a new instance of the <xref href=\"Vasont.Inspire.SDK.InspireClientConfiguration\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public InspireClientConfiguration(string clientId, ClientAuthenticationMethods clientAuthenticationMethod, string authorityUri, string resourceUri, string clientSecret = "", string userId = "", string password = "", bool useDiscovery = true, string delegatedAccessToken = "")
+    parameters:
+    - id: clientId
+      type: System.String
+      description: Contains the client identity to use for authentication.
+    - id: clientAuthenticationMethod
+      type: Vasont.Inspire.SDK.ClientAuthenticationMethods
+      description: Contains an optional client authentication method.
+    - id: authorityUri
+      type: System.String
+      description: Contains the authority URI that will validate the client credentials and produce access token.
+    - id: resourceUri
+      type: System.String
+      description: Contains the API resource URI that will be accessed by the client.
+    - id: clientSecret
+      type: System.String
+      description: Contains an optional client secret key for client credential authentication method.
+    - id: userId
+      type: System.String
+      description: Contains the user id used for password authentication method.
+    - id: password
+      type: System.String
+      description: Contains the user password used for password authentication method.
+    - id: useDiscovery
+      type: System.Boolean
+      description: Contains a value indicating whether the authority discovery endpoint will be used for token endpoint lookup.
+    - id: delegatedAccessToken
+      type: System.String
+      description: Contains an optional access token passed from the client software to be used in communication with the backchannel created within the SDK library.
+    content.vb: Public Sub New(clientId As String, clientAuthenticationMethod As ClientAuthenticationMethods, authorityUri As String, resourceUri As String, clientSecret As String = "", userId As String = "", password As String = "", useDiscovery As Boolean = True, delegatedAccessToken As String = "")
+  overload: Vasont.Inspire.SDK.InspireClientConfiguration.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Vasont.Inspire.SDK.InspireClientConfiguration.#ctor(System.String,Vasont.Inspire.SDK.ClientAuthenticationMethods,System.Uri,System.Uri,System.String,System.String,System.String,System.Boolean,System.String)
+  commentId: M:Vasont.Inspire.SDK.InspireClientConfiguration.#ctor(System.String,Vasont.Inspire.SDK.ClientAuthenticationMethods,System.Uri,System.Uri,System.String,System.String,System.String,System.Boolean,System.String)
+  id: '#ctor(System.String,Vasont.Inspire.SDK.ClientAuthenticationMethods,System.Uri,System.Uri,System.String,System.String,System.String,System.Boolean,System.String)'
+  parent: Vasont.Inspire.SDK.InspireClientConfiguration
+  langs:
+  - csharp
+  - vb
+  name: InspireClientConfiguration(String, ClientAuthenticationMethods, Uri, Uri, String, String, String, Boolean, String)
+  nameWithType: InspireClientConfiguration.InspireClientConfiguration(String, ClientAuthenticationMethods, Uri, Uri, String, String, String, Boolean, String)
+  fullName: Vasont.Inspire.SDK.InspireClientConfiguration.InspireClientConfiguration(System.String, Vasont.Inspire.SDK.ClientAuthenticationMethods, System.Uri, System.Uri, System.String, System.String, System.String, System.Boolean, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: src/InspireClientConfiguration.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: .ctor
+    path: InspireClientConfiguration.cs
+    startLine: 101
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK
+  summary: "\nInitializes a new instance of the <xref href=\"Vasont.Inspire.SDK.InspireClientConfiguration\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public InspireClientConfiguration(string clientId, ClientAuthenticationMethods clientAuthenticationMethod, Uri authorityUri, Uri resourceUri, string clientSecret = "", string userId = "", string password = "", bool useDiscovery = true, string delegatedAccessToken = "")
+    parameters:
+    - id: clientId
+      type: System.String
+      description: Contains the client identity to use for authentication.
+    - id: clientAuthenticationMethod
+      type: Vasont.Inspire.SDK.ClientAuthenticationMethods
+      description: Contains an optional client authentication method.
+    - id: authorityUri
+      type: System.Uri
+      description: Contains the authority URI that will validate the client credentials and produce access token.
+    - id: resourceUri
+      type: System.Uri
+      description: Contains the API resource URI that will be accessed by the client.
+    - id: clientSecret
+      type: System.String
+      description: Contains an optional client secret key for client credential authentication method.
+    - id: userId
+      type: System.String
+      description: Contains the user id used for password authentication method.
+    - id: password
+      type: System.String
+      description: Contains the user password used for password authentication method.
+    - id: useDiscovery
+      type: System.Boolean
+      description: Contains a value indicating whether the authority discovery endpoint will be used for token endpoint lookup.
+    - id: delegatedAccessToken
+      type: System.String
+      description: Contains an optional access token passed from the client software to be used in communication with the backchannel created within the SDK library.
+    content.vb: Public Sub New(clientId As String, clientAuthenticationMethod As ClientAuthenticationMethods, authorityUri As Uri, resourceUri As Uri, clientSecret As String = "", userId As String = "", password As String = "", useDiscovery As Boolean = True, delegatedAccessToken As String = "")
+  overload: Vasont.Inspire.SDK.InspireClientConfiguration.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Vasont.Inspire.SDK.InspireClientConfiguration.ClientId
+  commentId: P:Vasont.Inspire.SDK.InspireClientConfiguration.ClientId
+  id: ClientId
+  parent: Vasont.Inspire.SDK.InspireClientConfiguration
+  langs:
+  - csharp
+  - vb
+  name: ClientId
+  nameWithType: InspireClientConfiguration.ClientId
+  fullName: Vasont.Inspire.SDK.InspireClientConfiguration.ClientId
+  type: Property
+  source:
+    remote:
+      path: src/InspireClientConfiguration.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: ClientId
+    path: InspireClientConfiguration.cs
+    startLine: 123
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK
+  summary: "\nGets or sets the SDK client identity.\n"
+  example: []
+  syntax:
+    content: public string ClientId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ClientId As String
+  overload: Vasont.Inspire.SDK.InspireClientConfiguration.ClientId*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Vasont.Inspire.SDK.InspireClientConfiguration.AuthenticationMethod
+  commentId: P:Vasont.Inspire.SDK.InspireClientConfiguration.AuthenticationMethod
+  id: AuthenticationMethod
+  parent: Vasont.Inspire.SDK.InspireClientConfiguration
+  langs:
+  - csharp
+  - vb
+  name: AuthenticationMethod
+  nameWithType: InspireClientConfiguration.AuthenticationMethod
+  fullName: Vasont.Inspire.SDK.InspireClientConfiguration.AuthenticationMethod
+  type: Property
+  source:
+    remote:
+      path: src/InspireClientConfiguration.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: AuthenticationMethod
+    path: InspireClientConfiguration.cs
+    startLine: 128
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK
+  summary: "\nGets or sets the client authentication method used.\n"
+  example: []
+  syntax:
+    content: public ClientAuthenticationMethods AuthenticationMethod { get; set; }
+    parameters: []
+    return:
+      type: Vasont.Inspire.SDK.ClientAuthenticationMethods
+    content.vb: Public Property AuthenticationMethod As ClientAuthenticationMethods
+  overload: Vasont.Inspire.SDK.InspireClientConfiguration.AuthenticationMethod*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Vasont.Inspire.SDK.InspireClientConfiguration.AuthorityUri
+  commentId: P:Vasont.Inspire.SDK.InspireClientConfiguration.AuthorityUri
+  id: AuthorityUri
+  parent: Vasont.Inspire.SDK.InspireClientConfiguration
+  langs:
+  - csharp
+  - vb
+  name: AuthorityUri
+  nameWithType: InspireClientConfiguration.AuthorityUri
+  fullName: Vasont.Inspire.SDK.InspireClientConfiguration.AuthorityUri
+  type: Property
+  source:
+    remote:
+      path: src/InspireClientConfiguration.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: AuthorityUri
+    path: InspireClientConfiguration.cs
+    startLine: 133
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK
+  summary: "\nGets or sets the SSO Authority URI.\n"
+  example: []
+  syntax:
+    content: public Uri AuthorityUri { get; set; }
+    parameters: []
+    return:
+      type: System.Uri
+    content.vb: Public Property AuthorityUri As Uri
+  overload: Vasont.Inspire.SDK.InspireClientConfiguration.AuthorityUri*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Vasont.Inspire.SDK.InspireClientConfiguration.UseDiscovery
+  commentId: P:Vasont.Inspire.SDK.InspireClientConfiguration.UseDiscovery
+  id: UseDiscovery
+  parent: Vasont.Inspire.SDK.InspireClientConfiguration
+  langs:
+  - csharp
+  - vb
+  name: UseDiscovery
+  nameWithType: InspireClientConfiguration.UseDiscovery
+  fullName: Vasont.Inspire.SDK.InspireClientConfiguration.UseDiscovery
+  type: Property
+  source:
+    remote:
+      path: src/InspireClientConfiguration.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: UseDiscovery
+    path: InspireClientConfiguration.cs
+    startLine: 138
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK
+  summary: "\nGets or sets a value indicating whether the authority discovery endpoint will be used for token endpoint lookup.\n"
+  example: []
+  syntax:
+    content: public bool UseDiscovery { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property UseDiscovery As Boolean
+  overload: Vasont.Inspire.SDK.InspireClientConfiguration.UseDiscovery*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Vasont.Inspire.SDK.InspireClientConfiguration.ResourceUri
+  commentId: P:Vasont.Inspire.SDK.InspireClientConfiguration.ResourceUri
+  id: ResourceUri
+  parent: Vasont.Inspire.SDK.InspireClientConfiguration
+  langs:
+  - csharp
+  - vb
+  name: ResourceUri
+  nameWithType: InspireClientConfiguration.ResourceUri
+  fullName: Vasont.Inspire.SDK.InspireClientConfiguration.ResourceUri
+  type: Property
+  source:
+    remote:
+      path: src/InspireClientConfiguration.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: ResourceUri
+    path: InspireClientConfiguration.cs
+    startLine: 143
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK
+  summary: "\nGets or sets the API resource URI.\n"
+  example: []
+  syntax:
+    content: public Uri ResourceUri { get; set; }
+    parameters: []
+    return:
+      type: System.Uri
+    content.vb: Public Property ResourceUri As Uri
+  overload: Vasont.Inspire.SDK.InspireClientConfiguration.ResourceUri*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Vasont.Inspire.SDK.InspireClientConfiguration.TargetResourceScopes
+  commentId: P:Vasont.Inspire.SDK.InspireClientConfiguration.TargetResourceScopes
+  id: TargetResourceScopes
+  parent: Vasont.Inspire.SDK.InspireClientConfiguration
+  langs:
+  - csharp
+  - vb
+  name: TargetResourceScopes
+  nameWithType: InspireClientConfiguration.TargetResourceScopes
+  fullName: Vasont.Inspire.SDK.InspireClientConfiguration.TargetResourceScopes
+  type: Property
+  source:
+    remote:
+      path: src/InspireClientConfiguration.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: TargetResourceScopes
+    path: InspireClientConfiguration.cs
+    startLine: 148
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK
+  summary: "\nGets a list of target resource scopes.\n"
+  example: []
+  syntax:
+    content: public string[] TargetResourceScopes { get; }
+    parameters: []
+    return:
+      type: System.String[]
+    content.vb: Public ReadOnly Property TargetResourceScopes As String()
+  overload: Vasont.Inspire.SDK.InspireClientConfiguration.TargetResourceScopes*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Vasont.Inspire.SDK.InspireClientConfiguration.ClientSecret
+  commentId: P:Vasont.Inspire.SDK.InspireClientConfiguration.ClientSecret
+  id: ClientSecret
+  parent: Vasont.Inspire.SDK.InspireClientConfiguration
+  langs:
+  - csharp
+  - vb
+  name: ClientSecret
+  nameWithType: InspireClientConfiguration.ClientSecret
+  fullName: Vasont.Inspire.SDK.InspireClientConfiguration.ClientSecret
+  type: Property
+  source:
+    remote:
+      path: src/InspireClientConfiguration.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: ClientSecret
+    path: InspireClientConfiguration.cs
+    startLine: 153
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK
+  summary: "\nGets or sets the client secret value used for client credential authentication.\n"
+  example: []
+  syntax:
+    content: public string ClientSecret { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ClientSecret As String
+  overload: Vasont.Inspire.SDK.InspireClientConfiguration.ClientSecret*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Vasont.Inspire.SDK.InspireClientConfiguration.UserId
+  commentId: P:Vasont.Inspire.SDK.InspireClientConfiguration.UserId
+  id: UserId
+  parent: Vasont.Inspire.SDK.InspireClientConfiguration
+  langs:
+  - csharp
+  - vb
+  name: UserId
+  nameWithType: InspireClientConfiguration.UserId
+  fullName: Vasont.Inspire.SDK.InspireClientConfiguration.UserId
+  type: Property
+  source:
+    remote:
+      path: src/InspireClientConfiguration.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: UserId
+    path: InspireClientConfiguration.cs
+    startLine: 158
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK
+  summary: "\nGets or sets the user name used for password client authentication.\n"
+  example: []
+  syntax:
+    content: public string UserId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property UserId As String
+  overload: Vasont.Inspire.SDK.InspireClientConfiguration.UserId*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Vasont.Inspire.SDK.InspireClientConfiguration.Password
+  commentId: P:Vasont.Inspire.SDK.InspireClientConfiguration.Password
+  id: Password
+  parent: Vasont.Inspire.SDK.InspireClientConfiguration
+  langs:
+  - csharp
+  - vb
+  name: Password
+  nameWithType: InspireClientConfiguration.Password
+  fullName: Vasont.Inspire.SDK.InspireClientConfiguration.Password
+  type: Property
+  source:
+    remote:
+      path: src/InspireClientConfiguration.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: Password
+    path: InspireClientConfiguration.cs
+    startLine: 163
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK
+  summary: "\nGets or sets the password used for password client authentication.\n"
+  example: []
+  syntax:
+    content: public string Password { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Password As String
+  overload: Vasont.Inspire.SDK.InspireClientConfiguration.Password*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Vasont.Inspire.SDK.InspireClientConfiguration.DelegatedAccessToken
+  commentId: P:Vasont.Inspire.SDK.InspireClientConfiguration.DelegatedAccessToken
+  id: DelegatedAccessToken
+  parent: Vasont.Inspire.SDK.InspireClientConfiguration
+  langs:
+  - csharp
+  - vb
+  name: DelegatedAccessToken
+  nameWithType: InspireClientConfiguration.DelegatedAccessToken
+  fullName: Vasont.Inspire.SDK.InspireClientConfiguration.DelegatedAccessToken
+  type: Property
+  source:
+    remote:
+      path: src/InspireClientConfiguration.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: DelegatedAccessToken
+    path: InspireClientConfiguration.cs
+    startLine: 171
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK
+  summary: "\nGets or sets the client access token.\n"
+  example: []
+  syntax:
+    content: public string DelegatedAccessToken { get; set; }
+    parameters: []
+    return:
+      type: System.String
+      description: "\nThe client access token.\n"
+    content.vb: Public Property DelegatedAccessToken As String
+  overload: Vasont.Inspire.SDK.InspireClientConfiguration.DelegatedAccessToken*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Vasont.Inspire.SDK.InspireClientConfiguration.RoutePrefix
+  commentId: P:Vasont.Inspire.SDK.InspireClientConfiguration.RoutePrefix
+  id: RoutePrefix
+  parent: Vasont.Inspire.SDK.InspireClientConfiguration
+  langs:
+  - csharp
+  - vb
+  name: RoutePrefix
+  nameWithType: InspireClientConfiguration.RoutePrefix
+  fullName: Vasont.Inspire.SDK.InspireClientConfiguration.RoutePrefix
+  type: Property
+  source:
+    remote:
+      path: src/InspireClientConfiguration.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: RoutePrefix
+    path: InspireClientConfiguration.cs
+    startLine: 177
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK
+  summary: "\nGets or sets an optional URI route prefix to add to all requests. \n"
+  remarks: This was added for backwards compatibility and may not remain in future releases.
+  example: []
+  syntax:
+    content: public string RoutePrefix { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property RoutePrefix As String
+  overload: Vasont.Inspire.SDK.InspireClientConfiguration.RoutePrefix*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Vasont.Inspire.SDK
+  commentId: N:Vasont.Inspire.SDK
+  name: Vasont.Inspire.SDK
+  nameWithType: Vasont.Inspire.SDK
+  fullName: Vasont.Inspire.SDK
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Vasont.Inspire.SDK.InspireClientConfiguration
+  commentId: T:Vasont.Inspire.SDK.InspireClientConfiguration
+  parent: Vasont.Inspire.SDK
+  name: InspireClientConfiguration
+  nameWithType: InspireClientConfiguration
+  fullName: Vasont.Inspire.SDK.InspireClientConfiguration
+- uid: Vasont.Inspire.SDK.InspireClientConfiguration.#ctor*
+  commentId: Overload:Vasont.Inspire.SDK.InspireClientConfiguration.#ctor
+  name: InspireClientConfiguration
+  nameWithType: InspireClientConfiguration.InspireClientConfiguration
+  fullName: Vasont.Inspire.SDK.InspireClientConfiguration.InspireClientConfiguration
+- uid: Vasont.Inspire.SDK.ClientAuthenticationMethods
+  commentId: T:Vasont.Inspire.SDK.ClientAuthenticationMethods
+  parent: Vasont.Inspire.SDK
+  name: ClientAuthenticationMethods
+  nameWithType: ClientAuthenticationMethods
+  fullName: Vasont.Inspire.SDK.ClientAuthenticationMethods
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.Uri
+  commentId: T:System.Uri
+  parent: System
+  isExternal: true
+  name: Uri
+  nameWithType: Uri
+  fullName: System.Uri
+- uid: Vasont.Inspire.SDK.InspireClientConfiguration.ClientId*
+  commentId: Overload:Vasont.Inspire.SDK.InspireClientConfiguration.ClientId
+  name: ClientId
+  nameWithType: InspireClientConfiguration.ClientId
+  fullName: Vasont.Inspire.SDK.InspireClientConfiguration.ClientId
+- uid: Vasont.Inspire.SDK.InspireClientConfiguration.AuthenticationMethod*
+  commentId: Overload:Vasont.Inspire.SDK.InspireClientConfiguration.AuthenticationMethod
+  name: AuthenticationMethod
+  nameWithType: InspireClientConfiguration.AuthenticationMethod
+  fullName: Vasont.Inspire.SDK.InspireClientConfiguration.AuthenticationMethod
+- uid: Vasont.Inspire.SDK.InspireClientConfiguration.AuthorityUri*
+  commentId: Overload:Vasont.Inspire.SDK.InspireClientConfiguration.AuthorityUri
+  name: AuthorityUri
+  nameWithType: InspireClientConfiguration.AuthorityUri
+  fullName: Vasont.Inspire.SDK.InspireClientConfiguration.AuthorityUri
+- uid: Vasont.Inspire.SDK.InspireClientConfiguration.UseDiscovery*
+  commentId: Overload:Vasont.Inspire.SDK.InspireClientConfiguration.UseDiscovery
+  name: UseDiscovery
+  nameWithType: InspireClientConfiguration.UseDiscovery
+  fullName: Vasont.Inspire.SDK.InspireClientConfiguration.UseDiscovery
+- uid: Vasont.Inspire.SDK.InspireClientConfiguration.ResourceUri*
+  commentId: Overload:Vasont.Inspire.SDK.InspireClientConfiguration.ResourceUri
+  name: ResourceUri
+  nameWithType: InspireClientConfiguration.ResourceUri
+  fullName: Vasont.Inspire.SDK.InspireClientConfiguration.ResourceUri
+- uid: Vasont.Inspire.SDK.InspireClientConfiguration.TargetResourceScopes*
+  commentId: Overload:Vasont.Inspire.SDK.InspireClientConfiguration.TargetResourceScopes
+  name: TargetResourceScopes
+  nameWithType: InspireClientConfiguration.TargetResourceScopes
+  fullName: Vasont.Inspire.SDK.InspireClientConfiguration.TargetResourceScopes
+- uid: System.String[]
+  isExternal: true
+  name: String[]
+  nameWithType: String[]
+  fullName: System.String[]
+  nameWithType.vb: String()
+  fullName.vb: System.String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: Vasont.Inspire.SDK.InspireClientConfiguration.ClientSecret*
+  commentId: Overload:Vasont.Inspire.SDK.InspireClientConfiguration.ClientSecret
+  name: ClientSecret
+  nameWithType: InspireClientConfiguration.ClientSecret
+  fullName: Vasont.Inspire.SDK.InspireClientConfiguration.ClientSecret
+- uid: Vasont.Inspire.SDK.InspireClientConfiguration.UserId*
+  commentId: Overload:Vasont.Inspire.SDK.InspireClientConfiguration.UserId
+  name: UserId
+  nameWithType: InspireClientConfiguration.UserId
+  fullName: Vasont.Inspire.SDK.InspireClientConfiguration.UserId
+- uid: Vasont.Inspire.SDK.InspireClientConfiguration.Password*
+  commentId: Overload:Vasont.Inspire.SDK.InspireClientConfiguration.Password
+  name: Password
+  nameWithType: InspireClientConfiguration.Password
+  fullName: Vasont.Inspire.SDK.InspireClientConfiguration.Password
+- uid: Vasont.Inspire.SDK.InspireClientConfiguration.DelegatedAccessToken*
+  commentId: Overload:Vasont.Inspire.SDK.InspireClientConfiguration.DelegatedAccessToken
+  name: DelegatedAccessToken
+  nameWithType: InspireClientConfiguration.DelegatedAccessToken
+  fullName: Vasont.Inspire.SDK.InspireClientConfiguration.DelegatedAccessToken
+- uid: Vasont.Inspire.SDK.InspireClientConfiguration.RoutePrefix*
+  commentId: Overload:Vasont.Inspire.SDK.InspireClientConfiguration.RoutePrefix
+  name: RoutePrefix
+  nameWithType: InspireClientConfiguration.RoutePrefix
+  fullName: Vasont.Inspire.SDK.InspireClientConfiguration.RoutePrefix

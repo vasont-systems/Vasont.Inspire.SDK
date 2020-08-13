@@ -1,0 +1,35 @@
+### YamlMime:ManagedReference
+items:
+- uid: Vasont.Inspire.SDK.Security
+  commentId: N:Vasont.Inspire.SDK.Security
+  id: Vasont.Inspire.SDK.Security
+  children:
+  - Vasont.Inspire.SDK.Security.RoleExtensions
+  - Vasont.Inspire.SDK.Security.UserExtensions
+  langs:
+  - csharp
+  - vb
+  name: Vasont.Inspire.SDK.Security
+  nameWithType: Vasont.Inspire.SDK.Security
+  fullName: Vasont.Inspire.SDK.Security
+  type: Namespace
+  assemblies:
+  - Vasont.Inspire.SDK
+references:
+- uid: Vasont.Inspire.SDK.Security.RoleExtensions
+  commentId: T:Vasont.Inspire.SDK.Security.RoleExtensions
+  parent: Vasont.Inspire.SDK.Security
+  name: RoleExtensions
+  nameWithType: RoleExtensions
+  fullName: Vasont.Inspire.SDK.Security.RoleExtensions
+- uid: Vasont.Inspire.SDK.Security.UserExtensions
+  commentId: T:Vasont.Inspire.SDK.Security.UserExtensions
+  parent: Vasont.Inspire.SDK.Security
+  name: UserExtensions
+  nameWithType: UserExtensions
+  fullName: Vasont.Inspire.SDK.Security.UserExtensions
+- uid: Vasont.Inspire.SDK.Security
+  commentId: N:Vasont.Inspire.SDK.Security
+  name: Vasont.Inspire.SDK.Security
+  nameWithType: Vasont.Inspire.SDK.Security
+  fullName: Vasont.Inspire.SDK.Security

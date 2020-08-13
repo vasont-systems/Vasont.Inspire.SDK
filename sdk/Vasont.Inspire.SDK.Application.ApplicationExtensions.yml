@@ -1,0 +1,540 @@
+### YamlMime:ManagedReference
+items:
+- uid: Vasont.Inspire.SDK.Application.ApplicationExtensions
+  commentId: T:Vasont.Inspire.SDK.Application.ApplicationExtensions
+  id: ApplicationExtensions
+  parent: Vasont.Inspire.SDK.Application
+  children:
+  - Vasont.Inspire.SDK.Application.ApplicationExtensions.GetAppInfo(Vasont.Inspire.SDK.InspireClient)
+  - Vasont.Inspire.SDK.Application.ApplicationExtensions.KeepAlive(Vasont.Inspire.SDK.InspireClient)
+  - Vasont.Inspire.SDK.Application.ApplicationExtensions.RetrieveAppInfo(Vasont.Inspire.SDK.InspireClient)
+  langs:
+  - csharp
+  - vb
+  name: ApplicationExtensions
+  nameWithType: ApplicationExtensions
+  fullName: Vasont.Inspire.SDK.Application.ApplicationExtensions
+  type: Class
+  source:
+    remote:
+      path: src/Application/ApplicationExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: ApplicationExtensions
+    path: Application/ApplicationExtensions.cs
+    startLine: 14
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Application
+  summary: "\nThis class extends the <xref href=\"Vasont.Inspire.SDK.InspireClient\" data-throw-if-not-resolved=\"false\"></xref> class to include methods for calling \napplication API endpoints.\n"
+  example: []
+  syntax:
+    content: public static class ApplicationExtensions
+    content.vb: Public Module ApplicationExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: Vasont.Inspire.SDK.Application.ApplicationExtensions.GetAppInfo(Vasont.Inspire.SDK.InspireClient)
+  commentId: M:Vasont.Inspire.SDK.Application.ApplicationExtensions.GetAppInfo(Vasont.Inspire.SDK.InspireClient)
+  id: GetAppInfo(Vasont.Inspire.SDK.InspireClient)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Application.ApplicationExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetAppInfo(InspireClient)
+  nameWithType: ApplicationExtensions.GetAppInfo(InspireClient)
+  fullName: Vasont.Inspire.SDK.Application.ApplicationExtensions.GetAppInfo(Vasont.Inspire.SDK.InspireClient)
+  type: Method
+  source:
+    remote:
+      path: src/Application/ApplicationExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: GetAppInfo
+    path: Application/ApplicationExtensions.cs
+    startLine: 21
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Application
+  summary: "\nThis method is used to return the tenant information for the application instance.\n"
+  example: []
+  syntax:
+    content: >-
+      [Obsolete("This call uses legacy route. Please use RetrieveAppInfo() going forward. This method will be removed in a future release.")]
+
+      public static TenantDetailModel GetAppInfo(this InspireClient client)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
+    return:
+      type: Vasont.Inspire.Models.Common.TenantDetailModel
+      description: Returns a <xref href="Vasont.Inspire.Models.Common.TenantDetailModel" data-throw-if-not-resolved="false"></xref> object if found.
+    content.vb: >-
+      <Obsolete("This call uses legacy route. Please use RetrieveAppInfo() going forward. This method will be removed in a future release.")>
+
+      <ExtensionAttribute>
+
+      Public Shared Function GetAppInfo(client As InspireClient) As TenantDetailModel
+  overload: Vasont.Inspire.SDK.Application.ApplicationExtensions.GetAppInfo*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This call uses legacy route. Please use RetrieveAppInfo() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Application.ApplicationExtensions.RetrieveAppInfo(Vasont.Inspire.SDK.InspireClient)
+  commentId: M:Vasont.Inspire.SDK.Application.ApplicationExtensions.RetrieveAppInfo(Vasont.Inspire.SDK.InspireClient)
+  id: RetrieveAppInfo(Vasont.Inspire.SDK.InspireClient)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Application.ApplicationExtensions
+  langs:
+  - csharp
+  - vb
+  name: RetrieveAppInfo(InspireClient)
+  nameWithType: ApplicationExtensions.RetrieveAppInfo(InspireClient)
+  fullName: Vasont.Inspire.SDK.Application.ApplicationExtensions.RetrieveAppInfo(Vasont.Inspire.SDK.InspireClient)
+  type: Method
+  source:
+    remote:
+      path: src/Application/ApplicationExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: RetrieveAppInfo
+    path: Application/ApplicationExtensions.cs
+    startLine: 33
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Application
+  summary: "\nThis method is used to return the tenant information for the application instance.\n"
+  example: []
+  syntax:
+    content: public static TenantDetailModel RetrieveAppInfo(this InspireClient client)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
+    return:
+      type: Vasont.Inspire.Models.Common.TenantDetailModel
+      description: Returns a <xref href="Vasont.Inspire.Models.Common.TenantDetailModel" data-throw-if-not-resolved="false"></xref> object if found.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function RetrieveAppInfo(client As InspireClient) As TenantDetailModel
+  overload: Vasont.Inspire.SDK.Application.ApplicationExtensions.RetrieveAppInfo*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Application.ApplicationExtensions.KeepAlive(Vasont.Inspire.SDK.InspireClient)
+  commentId: M:Vasont.Inspire.SDK.Application.ApplicationExtensions.KeepAlive(Vasont.Inspire.SDK.InspireClient)
+  id: KeepAlive(Vasont.Inspire.SDK.InspireClient)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Application.ApplicationExtensions
+  langs:
+  - csharp
+  - vb
+  name: KeepAlive(InspireClient)
+  nameWithType: ApplicationExtensions.KeepAlive(InspireClient)
+  fullName: Vasont.Inspire.SDK.Application.ApplicationExtensions.KeepAlive(Vasont.Inspire.SDK.InspireClient)
+  type: Method
+  source:
+    remote:
+      path: src/Application/ApplicationExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: KeepAlive
+    path: Application/ApplicationExtensions.cs
+    startLine: 44
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Application
+  summary: "\nThis method is used to simply return OK to test and keep the server alive.\n"
+  example: []
+  syntax:
+    content: public static string KeepAlive(this InspireClient client)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
+    return:
+      type: System.String
+      description: Returns a string OK if the server responded.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function KeepAlive(client As InspireClient) As String
+  overload: Vasont.Inspire.SDK.Application.ApplicationExtensions.KeepAlive*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: Vasont.Inspire.SDK.InspireClient
+  commentId: T:Vasont.Inspire.SDK.InspireClient
+  parent: Vasont.Inspire.SDK
+  name: InspireClient
+  nameWithType: InspireClient
+  fullName: Vasont.Inspire.SDK.InspireClient
+- uid: Vasont.Inspire.SDK.Application
+  commentId: N:Vasont.Inspire.SDK.Application
+  name: Vasont.Inspire.SDK.Application
+  nameWithType: Vasont.Inspire.SDK.Application
+  fullName: Vasont.Inspire.SDK.Application
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vasont.Inspire.SDK
+  commentId: N:Vasont.Inspire.SDK
+  name: Vasont.Inspire.SDK
+  nameWithType: Vasont.Inspire.SDK
+  fullName: Vasont.Inspire.SDK
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Vasont.Inspire.Models.Common.TenantDetailModel
+  commentId: T:Vasont.Inspire.Models.Common.TenantDetailModel
+  parent: Vasont.Inspire.Models.Common
+  isExternal: true
+  name: TenantDetailModel
+  nameWithType: TenantDetailModel
+  fullName: Vasont.Inspire.Models.Common.TenantDetailModel
+- uid: Vasont.Inspire.SDK.Application.ApplicationExtensions.GetAppInfo*
+  commentId: Overload:Vasont.Inspire.SDK.Application.ApplicationExtensions.GetAppInfo
+  name: GetAppInfo
+  nameWithType: ApplicationExtensions.GetAppInfo
+  fullName: Vasont.Inspire.SDK.Application.ApplicationExtensions.GetAppInfo
+- uid: Vasont.Inspire.Models.Common
+  commentId: N:Vasont.Inspire.Models.Common
+  isExternal: true
+  name: Vasont.Inspire.Models.Common
+  nameWithType: Vasont.Inspire.Models.Common
+  fullName: Vasont.Inspire.Models.Common
+- uid: Vasont.Inspire.SDK.Application.ApplicationExtensions.RetrieveAppInfo*
+  commentId: Overload:Vasont.Inspire.SDK.Application.ApplicationExtensions.RetrieveAppInfo
+  name: RetrieveAppInfo
+  nameWithType: ApplicationExtensions.RetrieveAppInfo
+  fullName: Vasont.Inspire.SDK.Application.ApplicationExtensions.RetrieveAppInfo
+- uid: Vasont.Inspire.SDK.Application.ApplicationExtensions.KeepAlive*
+  commentId: Overload:Vasont.Inspire.SDK.Application.ApplicationExtensions.KeepAlive
+  name: KeepAlive
+  nameWithType: ApplicationExtensions.KeepAlive
+  fullName: Vasont.Inspire.SDK.Application.ApplicationExtensions.KeepAlive
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
