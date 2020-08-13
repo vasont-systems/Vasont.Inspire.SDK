@@ -6,12 +6,15 @@
           "files": [
             "**.csproj"
           ],
-          "src": ".."
+          "src": "../src"
         }
       ],
-      "dest": "sdk",
+      "dest": "../sdk",
       "disableGitFeatures": false,
-      "disableDefaultFilter": false
+      "disableDefaultFilter": false,
+      "properties": {
+        "TargetFramework": "netstandard2.1"
+      }
     }
   ],
   "build": {
@@ -20,7 +23,8 @@
         "files": [
           "sdk/**.yml",
           "sdk/index.md"
-        ]
+        ],
+        "src": "../"
       },
       {
         "files": [
@@ -29,25 +33,28 @@
           "articles/toc.yml",
           "toc.yml",
           "*.md"
-        ]
+        ],
+        "src": "../"
       }
     ],
     "resource": [
       {
         "files": [
           "images/**"
-        ]
+        ],
+        "src": "../"
       }
     ],
     "overwrite": [
       {
         "files": [
-          "apidoc/**.md"
+          "sdkdoc/**.md"
         ],
         "exclude": [
           "obj/**",
           "_site/**"
-        ]
+        ],
+        "src": "../"
       }
     ],
     "dest": "../docs",
@@ -62,9 +69,6 @@
     "keepFileLink": false,
     "cleanupCacheHistory": false,
     "disableGitFeatures": false,
-    "properties": {
-      "TargetFramework": "netstandard2.1"
-    },
     "globalMetadata": {
       "_appTitle": "GlobalLink Vasont Inspire SDK",
       "_appFooter": "Copyright 2020 Transperfect Inc.",
@@ -74,6 +78,9 @@
         "repo": "https://github.com/vasont-systems/Vasont.Inspire.SDK",
         "branch": "master"
       }
+    },
+    "properties": {
+      "TargetFramework": "netstandard2.1"
     }
   }
 }

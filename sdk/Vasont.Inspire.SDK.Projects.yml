@@ -1,0 +1,28 @@
+### YamlMime:ManagedReference
+items:
+- uid: Vasont.Inspire.SDK.Projects
+  commentId: N:Vasont.Inspire.SDK.Projects
+  id: Vasont.Inspire.SDK.Projects
+  children:
+  - Vasont.Inspire.SDK.Projects.ProjectExtensions
+  langs:
+  - csharp
+  - vb
+  name: Vasont.Inspire.SDK.Projects
+  nameWithType: Vasont.Inspire.SDK.Projects
+  fullName: Vasont.Inspire.SDK.Projects
+  type: Namespace
+  assemblies:
+  - Vasont.Inspire.SDK
+references:
+- uid: Vasont.Inspire.SDK.Projects.ProjectExtensions
+  commentId: T:Vasont.Inspire.SDK.Projects.ProjectExtensions
+  parent: Vasont.Inspire.SDK.Projects
+  name: ProjectExtensions
+  nameWithType: ProjectExtensions
+  fullName: Vasont.Inspire.SDK.Projects.ProjectExtensions
+- uid: Vasont.Inspire.SDK.Projects
+  commentId: N:Vasont.Inspire.SDK.Projects
+  name: Vasont.Inspire.SDK.Projects
+  nameWithType: Vasont.Inspire.SDK.Projects
+  fullName: Vasont.Inspire.SDK.Projects

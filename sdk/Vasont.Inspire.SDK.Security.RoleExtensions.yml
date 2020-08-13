@@ -1,0 +1,758 @@
+### YamlMime:ManagedReference
+items:
+- uid: Vasont.Inspire.SDK.Security.RoleExtensions
+  commentId: T:Vasont.Inspire.SDK.Security.RoleExtensions
+  id: RoleExtensions
+  parent: Vasont.Inspire.SDK.Security
+  children:
+  - Vasont.Inspire.SDK.Security.RoleExtensions.CreateRole(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Security.RoleModel)
+  - Vasont.Inspire.SDK.Security.RoleExtensions.DeleteRole(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  - Vasont.Inspire.SDK.Security.RoleExtensions.GetAllRoles(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  - Vasont.Inspire.SDK.Security.RoleExtensions.GetRoles(Vasont.Inspire.SDK.InspireClient,System.String,System.String,System.String)
+  - Vasont.Inspire.SDK.Security.RoleExtensions.UpdateRole(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Security.RoleModel)
+  langs:
+  - csharp
+  - vb
+  name: RoleExtensions
+  nameWithType: RoleExtensions
+  fullName: Vasont.Inspire.SDK.Security.RoleExtensions
+  type: Class
+  source:
+    remote:
+      path: src/Security/RoleExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: RoleExtensions
+    path: Security/RoleExtensions.cs
+    startLine: 16
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Security
+  summary: "\nThis class extends the <xref href=\"Vasont.Inspire.SDK.InspireClient\" data-throw-if-not-resolved=\"false\"></xref> class to include methods for calling \nrole API endpoints.\n"
+  example: []
+  syntax:
+    content: public static class RoleExtensions
+    content.vb: Public Module RoleExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: Vasont.Inspire.SDK.Security.RoleExtensions.GetAllRoles(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  commentId: M:Vasont.Inspire.SDK.Security.RoleExtensions.GetAllRoles(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  id: GetAllRoles(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Security.RoleExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetAllRoles(InspireClient, Int64)
+  nameWithType: RoleExtensions.GetAllRoles(InspireClient, Int64)
+  fullName: Vasont.Inspire.SDK.Security.RoleExtensions.GetAllRoles(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  type: Method
+  source:
+    remote:
+      path: src/Security/RoleExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: GetAllRoles
+    path: Security/RoleExtensions.cs
+    startLine: 26
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Security
+  summary: "\nThis method is used to retrieve a specific role model from the system.\n"
+  example: []
+  syntax:
+    content: public static RoleModel GetAllRoles(this InspireClient client, long roleId)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
+    - id: roleId
+      type: System.Int64
+      description: The role identity.
+    return:
+      type: Vasont.Inspire.Models.Security.RoleModel
+      description: Returns <xref href="Vasont.Inspire.Models.Security.RoleModel" data-throw-if-not-resolved="false"></xref> object if found.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetAllRoles(client As InspireClient, roleId As Long) As RoleModel
+  overload: Vasont.Inspire.SDK.Security.RoleExtensions.GetAllRoles*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Security.RoleExtensions.GetRoles(Vasont.Inspire.SDK.InspireClient,System.String,System.String,System.String)
+  commentId: M:Vasont.Inspire.SDK.Security.RoleExtensions.GetRoles(Vasont.Inspire.SDK.InspireClient,System.String,System.String,System.String)
+  id: GetRoles(Vasont.Inspire.SDK.InspireClient,System.String,System.String,System.String)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Security.RoleExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetRoles(InspireClient, String, String, String)
+  nameWithType: RoleExtensions.GetRoles(InspireClient, String, String, String)
+  fullName: Vasont.Inspire.SDK.Security.RoleExtensions.GetRoles(Vasont.Inspire.SDK.InspireClient, System.String, System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: src/Security/RoleExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: GetRoles
+    path: Security/RoleExtensions.cs
+    startLine: 40
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Security
+  summary: "\nThis method is used to retrieve roles that match the search criteria.\n"
+  example: []
+  syntax:
+    content: public static List<RoleModel> GetRoles(this InspireClient client, string roleName = "", string orderBy = "", string direction = "")
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
+    - id: roleName
+      type: System.String
+      description: Name of the role.
+    - id: orderBy
+      type: System.String
+      description: The field to order by the list of roles.
+    - id: direction
+      type: System.String
+      description: The direction of the order by, ascending or descending.
+    return:
+      type: System.Collections.Generic.List{Vasont.Inspire.Models.Security.RoleModel}
+      description: Returns <xref href="Vasont.Inspire.Models.Security.RoleModel" data-throw-if-not-resolved="false"></xref> object if found.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetRoles(client As InspireClient, roleName As String = "", orderBy As String = "", direction As String = "") As List(Of RoleModel)
+  overload: Vasont.Inspire.SDK.Security.RoleExtensions.GetRoles*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Security.RoleExtensions.CreateRole(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Security.RoleModel)
+  commentId: M:Vasont.Inspire.SDK.Security.RoleExtensions.CreateRole(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Security.RoleModel)
+  id: CreateRole(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Security.RoleModel)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Security.RoleExtensions
+  langs:
+  - csharp
+  - vb
+  name: CreateRole(InspireClient, RoleModel)
+  nameWithType: RoleExtensions.CreateRole(InspireClient, RoleModel)
+  fullName: Vasont.Inspire.SDK.Security.RoleExtensions.CreateRole(Vasont.Inspire.SDK.InspireClient, Vasont.Inspire.Models.Security.RoleModel)
+  type: Method
+  source:
+    remote:
+      path: src/Security/RoleExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: CreateRole
+    path: Security/RoleExtensions.cs
+    startLine: 52
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Security
+  summary: "\nThis method is used to create a new role, and return the new RoleModel.\n"
+  example: []
+  syntax:
+    content: public static RoleModel CreateRole(this InspireClient client, RoleModel inputModel)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
+    - id: inputModel
+      type: Vasont.Inspire.Models.Security.RoleModel
+      description: Contains the <xref href="Vasont.Inspire.Models.Security.RoleModel" data-throw-if-not-resolved="false"></xref> input.
+    return:
+      type: Vasont.Inspire.Models.Security.RoleModel
+      description: Returns the newly created <xref href="Vasont.Inspire.Models.Security.RoleModel" data-throw-if-not-resolved="false"></xref> object.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function CreateRole(client As InspireClient, inputModel As RoleModel) As RoleModel
+  overload: Vasont.Inspire.SDK.Security.RoleExtensions.CreateRole*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Security.RoleExtensions.UpdateRole(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Security.RoleModel)
+  commentId: M:Vasont.Inspire.SDK.Security.RoleExtensions.UpdateRole(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Security.RoleModel)
+  id: UpdateRole(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Security.RoleModel)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Security.RoleExtensions
+  langs:
+  - csharp
+  - vb
+  name: UpdateRole(InspireClient, Int64, RoleModel)
+  nameWithType: RoleExtensions.UpdateRole(InspireClient, Int64, RoleModel)
+  fullName: Vasont.Inspire.SDK.Security.RoleExtensions.UpdateRole(Vasont.Inspire.SDK.InspireClient, System.Int64, Vasont.Inspire.Models.Security.RoleModel)
+  type: Method
+  source:
+    remote:
+      path: src/Security/RoleExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: UpdateRole
+    path: Security/RoleExtensions.cs
+    startLine: 70
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Security
+  summary: "\nThis method is used to update an existing role, and return the updated RoleModel.\n"
+  example: []
+  syntax:
+    content: public static RoleModel UpdateRole(this InspireClient client, long roleId, RoleModel inputModel)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
+    - id: roleId
+      type: System.Int64
+      description: Contains the role identity.
+    - id: inputModel
+      type: Vasont.Inspire.Models.Security.RoleModel
+      description: Contains the <xref href="Vasont.Inspire.Models.Security.RoleModel" data-throw-if-not-resolved="false"></xref> input.
+    return:
+      type: Vasont.Inspire.Models.Security.RoleModel
+      description: Returns the updated <xref href="Vasont.Inspire.Models.Security.RoleModel" data-throw-if-not-resolved="false"></xref> object.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function UpdateRole(client As InspireClient, roleId As Long, inputModel As RoleModel) As RoleModel
+  overload: Vasont.Inspire.SDK.Security.RoleExtensions.UpdateRole*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Security.RoleExtensions.DeleteRole(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  commentId: M:Vasont.Inspire.SDK.Security.RoleExtensions.DeleteRole(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  id: DeleteRole(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Security.RoleExtensions
+  langs:
+  - csharp
+  - vb
+  name: DeleteRole(InspireClient, Int64)
+  nameWithType: RoleExtensions.DeleteRole(InspireClient, Int64)
+  fullName: Vasont.Inspire.SDK.Security.RoleExtensions.DeleteRole(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  type: Method
+  source:
+    remote:
+      path: src/Security/RoleExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: DeleteRole
+    path: Security/RoleExtensions.cs
+    startLine: 87
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Security
+  summary: "\nThis method is used to delete an existing role.\n"
+  example: []
+  syntax:
+    content: public static bool DeleteRole(this InspireClient client, long roleId)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
+    - id: roleId
+      type: System.Int64
+      description: Contains the role identity to delete.
+    return:
+      type: System.Boolean
+      description: Returns a value indicating whether the delete request was successful.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function DeleteRole(client As InspireClient, roleId As Long) As Boolean
+  overload: Vasont.Inspire.SDK.Security.RoleExtensions.DeleteRole*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: Vasont.Inspire.SDK.InspireClient
+  commentId: T:Vasont.Inspire.SDK.InspireClient
+  parent: Vasont.Inspire.SDK
+  name: InspireClient
+  nameWithType: InspireClient
+  fullName: Vasont.Inspire.SDK.InspireClient
+- uid: Vasont.Inspire.SDK.Security
+  commentId: N:Vasont.Inspire.SDK.Security
+  name: Vasont.Inspire.SDK.Security
+  nameWithType: Vasont.Inspire.SDK.Security
+  fullName: Vasont.Inspire.SDK.Security
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vasont.Inspire.SDK
+  commentId: N:Vasont.Inspire.SDK
+  name: Vasont.Inspire.SDK
+  nameWithType: Vasont.Inspire.SDK
+  fullName: Vasont.Inspire.SDK
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Vasont.Inspire.Models.Security.RoleModel
+  commentId: T:Vasont.Inspire.Models.Security.RoleModel
+  parent: Vasont.Inspire.Models.Security
+  isExternal: true
+  name: RoleModel
+  nameWithType: RoleModel
+  fullName: Vasont.Inspire.Models.Security.RoleModel
+- uid: Vasont.Inspire.SDK.Security.RoleExtensions.GetAllRoles*
+  commentId: Overload:Vasont.Inspire.SDK.Security.RoleExtensions.GetAllRoles
+  name: GetAllRoles
+  nameWithType: RoleExtensions.GetAllRoles
+  fullName: Vasont.Inspire.SDK.Security.RoleExtensions.GetAllRoles
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  name: Int64
+  nameWithType: Int64
+  fullName: System.Int64
+- uid: Vasont.Inspire.Models.Security
+  commentId: N:Vasont.Inspire.Models.Security
+  isExternal: true
+  name: Vasont.Inspire.Models.Security
+  nameWithType: Vasont.Inspire.Models.Security
+  fullName: Vasont.Inspire.Models.Security
+- uid: Vasont.Inspire.SDK.Security.RoleExtensions.GetRoles*
+  commentId: Overload:Vasont.Inspire.SDK.Security.RoleExtensions.GetRoles
+  name: GetRoles
+  nameWithType: RoleExtensions.GetRoles
+  fullName: Vasont.Inspire.SDK.Security.RoleExtensions.GetRoles
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Collections.Generic.List{Vasont.Inspire.Models.Security.RoleModel}
+  commentId: T:System.Collections.Generic.List{Vasont.Inspire.Models.Security.RoleModel}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<RoleModel>
+  nameWithType: List<RoleModel>
+  fullName: System.Collections.Generic.List<Vasont.Inspire.Models.Security.RoleModel>
+  nameWithType.vb: List(Of RoleModel)
+  fullName.vb: System.Collections.Generic.List(Of Vasont.Inspire.Models.Security.RoleModel)
+  name.vb: List(Of RoleModel)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Vasont.Inspire.Models.Security.RoleModel
+    name: RoleModel
+    nameWithType: RoleModel
+    fullName: Vasont.Inspire.Models.Security.RoleModel
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Vasont.Inspire.Models.Security.RoleModel
+    name: RoleModel
+    nameWithType: RoleModel
+    fullName: Vasont.Inspire.Models.Security.RoleModel
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: Vasont.Inspire.SDK.Security.RoleExtensions.CreateRole*
+  commentId: Overload:Vasont.Inspire.SDK.Security.RoleExtensions.CreateRole
+  name: CreateRole
+  nameWithType: RoleExtensions.CreateRole
+  fullName: Vasont.Inspire.SDK.Security.RoleExtensions.CreateRole
+- uid: Vasont.Inspire.SDK.Security.RoleExtensions.UpdateRole*
+  commentId: Overload:Vasont.Inspire.SDK.Security.RoleExtensions.UpdateRole
+  name: UpdateRole
+  nameWithType: RoleExtensions.UpdateRole
+  fullName: Vasont.Inspire.SDK.Security.RoleExtensions.UpdateRole
+- uid: Vasont.Inspire.SDK.Security.RoleExtensions.DeleteRole*
+  commentId: Overload:Vasont.Inspire.SDK.Security.RoleExtensions.DeleteRole
+  name: DeleteRole
+  nameWithType: RoleExtensions.DeleteRole
+  fullName: Vasont.Inspire.SDK.Security.RoleExtensions.DeleteRole
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean

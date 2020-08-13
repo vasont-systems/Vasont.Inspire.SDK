@@ -1,0 +1,154 @@
+### YamlMime:ManagedReference
+items:
+- uid: Vasont.Inspire.SDK.ClientAuthenticationMethods
+  commentId: T:Vasont.Inspire.SDK.ClientAuthenticationMethods
+  id: ClientAuthenticationMethods
+  parent: Vasont.Inspire.SDK
+  children:
+  - Vasont.Inspire.SDK.ClientAuthenticationMethods.ClientCredentials
+  - Vasont.Inspire.SDK.ClientAuthenticationMethods.Delegation
+  - Vasont.Inspire.SDK.ClientAuthenticationMethods.ResourceOwnerPassword
+  langs:
+  - csharp
+  - vb
+  name: ClientAuthenticationMethods
+  nameWithType: ClientAuthenticationMethods
+  fullName: Vasont.Inspire.SDK.ClientAuthenticationMethods
+  type: Enum
+  source:
+    remote:
+      path: src/InspireClientConfiguration.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: ClientAuthenticationMethods
+    path: InspireClientConfiguration.cs
+    startLine: 12
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK
+  summary: "\nContains an enumerated list of SDK client authentication methods.\n"
+  example: []
+  syntax:
+    content: public enum ClientAuthenticationMethods
+    content.vb: Public Enum ClientAuthenticationMethods
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: Vasont.Inspire.SDK.ClientAuthenticationMethods.ClientCredentials
+  commentId: F:Vasont.Inspire.SDK.ClientAuthenticationMethods.ClientCredentials
+  id: ClientCredentials
+  parent: Vasont.Inspire.SDK.ClientAuthenticationMethods
+  langs:
+  - csharp
+  - vb
+  name: ClientCredentials
+  nameWithType: ClientAuthenticationMethods.ClientCredentials
+  fullName: Vasont.Inspire.SDK.ClientAuthenticationMethods.ClientCredentials
+  type: Field
+  source:
+    remote:
+      path: src/InspireClientConfiguration.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: ClientCredentials
+    path: InspireClientConfiguration.cs
+    startLine: 17
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK
+  summary: "\nThe client shall authenticate with a client secret.\n"
+  example: []
+  syntax:
+    content: ClientCredentials = 0
+    return:
+      type: Vasont.Inspire.SDK.ClientAuthenticationMethods
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Vasont.Inspire.SDK.ClientAuthenticationMethods.ResourceOwnerPassword
+  commentId: F:Vasont.Inspire.SDK.ClientAuthenticationMethods.ResourceOwnerPassword
+  id: ResourceOwnerPassword
+  parent: Vasont.Inspire.SDK.ClientAuthenticationMethods
+  langs:
+  - csharp
+  - vb
+  name: ResourceOwnerPassword
+  nameWithType: ClientAuthenticationMethods.ResourceOwnerPassword
+  fullName: Vasont.Inspire.SDK.ClientAuthenticationMethods.ResourceOwnerPassword
+  type: Field
+  source:
+    remote:
+      path: src/InspireClientConfiguration.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: ResourceOwnerPassword
+    path: InspireClientConfiguration.cs
+    startLine: 25
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK
+  summary: "\nThe client shall authenticate with the resource owner using a user id and password.\n"
+  remarks: "\nThe spec recommends using the resource owner password grant only for &quot;trusted&quot; (or legacy) applications.\n"
+  example: []
+  syntax:
+    content: ResourceOwnerPassword = 1
+    return:
+      type: Vasont.Inspire.SDK.ClientAuthenticationMethods
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Vasont.Inspire.SDK.ClientAuthenticationMethods.Delegation
+  commentId: F:Vasont.Inspire.SDK.ClientAuthenticationMethods.Delegation
+  id: Delegation
+  parent: Vasont.Inspire.SDK.ClientAuthenticationMethods
+  langs:
+  - csharp
+  - vb
+  name: Delegation
+  nameWithType: ClientAuthenticationMethods.Delegation
+  fullName: Vasont.Inspire.SDK.ClientAuthenticationMethods.Delegation
+  type: Field
+  source:
+    remote:
+      path: src/InspireClientConfiguration.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: Delegation
+    path: InspireClientConfiguration.cs
+    startLine: 30
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK
+  summary: "\nThis method shall allow a client token to be exchanged for another from the authority for client delegation with another API.\n"
+  example: []
+  syntax:
+    content: Delegation = 2
+    return:
+      type: Vasont.Inspire.SDK.ClientAuthenticationMethods
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Vasont.Inspire.SDK
+  commentId: N:Vasont.Inspire.SDK
+  name: Vasont.Inspire.SDK
+  nameWithType: Vasont.Inspire.SDK
+  fullName: Vasont.Inspire.SDK
+- uid: Vasont.Inspire.SDK.ClientAuthenticationMethods
+  commentId: T:Vasont.Inspire.SDK.ClientAuthenticationMethods
+  parent: Vasont.Inspire.SDK
+  name: ClientAuthenticationMethods
+  nameWithType: ClientAuthenticationMethods
+  fullName: Vasont.Inspire.SDK.ClientAuthenticationMethods

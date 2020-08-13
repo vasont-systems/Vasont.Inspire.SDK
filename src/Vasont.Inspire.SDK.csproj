@@ -37,7 +37,10 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net461|AnyCPU'">
-    <DocumentationFile>.\Vasont.Inspire.SDK.xml</DocumentationFile>
+    <DocumentationFile></DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <BuildDocFx Condition="$(TargetFramework) != 'netstandard2.1' OR '$(Configuration)' != 'Release'">false</BuildDocFx>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.ResxResources.targets" Label="MultilingualAppToolkit" Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\v$(MultilingualAppToolkitVersion)\Microsoft.Multilingual.ResxResources.targets')" />
   <Target Name="MATPrerequisite" BeforeTargets="PrepareForBuild" Condition="!Exists('$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.ResxResources.targets')" Label="MultilingualAppToolkit">
@@ -49,6 +52,7 @@
     <None Remove="_sdk\**" />
   </ItemGroup>
   <ItemGroup>
+    <None Remove="log.txt" />
     <None Remove="MultilingualResources\Vasont.Inspire.SDK.de.xlf" />
     <None Remove="MultilingualResources\Vasont.Inspire.SDK.es.xlf" />
     <None Remove="MultilingualResources\Vasont.Inspire.SDK.fr.xlf" />
@@ -57,6 +61,7 @@
     <None Remove="MultilingualResources\Vasont.Inspire.SDK.ko.xlf" />
     <None Remove="MultilingualResources\Vasont.Inspire.SDK.ru.xlf" />
     <None Remove="MultilingualResources\Vasont.Inspire.SDK.zh-Hans.xlf" />
+    <None Remove="Vasont.Inspire.SDK.xml" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="docfx.console" Version="2.56.2">
@@ -90,7 +95,4 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition="$(TargetFramework) == 'netstandard2.1'">
-    <Exec Command="docpal &quot;$(TargetPath)&quot; -out &quot;$(SolutionDir)\&quot; --mgtable --proptable -xml &quot;$(ProjectDir)\Vasont.Inspire.SDK.xml&quot;&#xD;&#xA;" />
-  </Target>
 </Project>

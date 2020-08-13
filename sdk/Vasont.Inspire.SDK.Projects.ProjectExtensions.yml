@@ -1,0 +1,2131 @@
+### YamlMime:ManagedReference
+items:
+- uid: Vasont.Inspire.SDK.Projects.ProjectExtensions
+  commentId: T:Vasont.Inspire.SDK.Projects.ProjectExtensions
+  id: ProjectExtensions
+  parent: Vasont.Inspire.SDK.Projects
+  children:
+  - Vasont.Inspire.SDK.Projects.ProjectExtensions.AddComponentsToFolder(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Int64,System.Collections.Generic.List{Vasont.Inspire.Models.Components.MinimalComponentModel})
+  - Vasont.Inspire.SDK.Projects.ProjectExtensions.CreateProject(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Projects.ProjectModel)
+  - Vasont.Inspire.SDK.Projects.ProjectExtensions.CreateProjectAssignment(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Projects.ProjectAssignmentModel)
+  - Vasont.Inspire.SDK.Projects.ProjectExtensions.CreateProjectFolder(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Projects.ProjectFolderItemModel)
+  - Vasont.Inspire.SDK.Projects.ProjectExtensions.CreateProjectParticipants(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Collections.Generic.List{Vasont.Inspire.Models.Projects.ProjectParticipantModel})
+  - Vasont.Inspire.SDK.Projects.ProjectExtensions.DeleteProject(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  - Vasont.Inspire.SDK.Projects.ProjectExtensions.DeleteProjectAssignment(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Int64)
+  - Vasont.Inspire.SDK.Projects.ProjectExtensions.DeleteProjectAssignmentComponent(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Int64,System.Int64)
+  - Vasont.Inspire.SDK.Projects.ProjectExtensions.DeleteProjectFolder(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Projects.ProjectFolderItemModel)
+  - Vasont.Inspire.SDK.Projects.ProjectExtensions.DeleteProjectParticipant(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Projects.ProjectParticipantModel)
+  - Vasont.Inspire.SDK.Projects.ProjectExtensions.ExportComponents(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Int64,System.Boolean,System.Int64)
+  - Vasont.Inspire.SDK.Projects.ProjectExtensions.GetActivities(Vasont.Inspire.SDK.InspireClient)
+  - Vasont.Inspire.SDK.Projects.ProjectExtensions.GetAssignedProjects(Vasont.Inspire.SDK.InspireClient)
+  - Vasont.Inspire.SDK.Projects.ProjectExtensions.GetAvailableParticipants(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  - Vasont.Inspire.SDK.Projects.ProjectExtensions.GetProject(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  - Vasont.Inspire.SDK.Projects.ProjectExtensions.GetProjectAssignments(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  - Vasont.Inspire.SDK.Projects.ProjectExtensions.GetProjects(Vasont.Inspire.SDK.InspireClient)
+  - Vasont.Inspire.SDK.Projects.ProjectExtensions.GetRecentlyOpenedProjects(Vasont.Inspire.SDK.InspireClient,System.Int32)
+  - Vasont.Inspire.SDK.Projects.ProjectExtensions.MoveProjectFolder(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Projects.ProjectFolderItemModel,System.Int64,System.String,System.String)
+  - Vasont.Inspire.SDK.Projects.ProjectExtensions.RenameProjectFolder(Vasont.Inspire.SDK.InspireClient,System.Int64,System.String,Vasont.Inspire.Models.Projects.ProjectFolderItemModel)
+  - Vasont.Inspire.SDK.Projects.ProjectExtensions.UpdateProject(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Projects.ProjectModel)
+  - Vasont.Inspire.SDK.Projects.ProjectExtensions.UpdateProjectAssignment(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Int64,Vasont.Inspire.Models.Projects.ProjectAssignmentModel)
+  - Vasont.Inspire.SDK.Projects.ProjectExtensions.UpdateProjectAssignmentCompletionStatus(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Int64,Vasont.Inspire.Models.Projects.ProjectAssignmentModel)
+  - Vasont.Inspire.SDK.Projects.ProjectExtensions.UpdateProjectParticipants(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Collections.Generic.List{Vasont.Inspire.Models.Projects.ProjectParticipantModel})
+  langs:
+  - csharp
+  - vb
+  name: ProjectExtensions
+  nameWithType: ProjectExtensions
+  fullName: Vasont.Inspire.SDK.Projects.ProjectExtensions
+  type: Class
+  source:
+    remote:
+      path: src/Projects/ProjectExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: ProjectExtensions
+    path: Projects/ProjectExtensions.cs
+    startLine: 19
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Projects
+  summary: "\nThis class extends the <xref href=\"Vasont.Inspire.SDK.InspireClient\" data-throw-if-not-resolved=\"false\"></xref> class to include methods for calling \nproject API endpoints.\n"
+  example: []
+  syntax:
+    content: public static class ProjectExtensions
+    content.vb: Public Module ProjectExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: Vasont.Inspire.SDK.Projects.ProjectExtensions.GetProjects(Vasont.Inspire.SDK.InspireClient)
+  commentId: M:Vasont.Inspire.SDK.Projects.ProjectExtensions.GetProjects(Vasont.Inspire.SDK.InspireClient)
+  id: GetProjects(Vasont.Inspire.SDK.InspireClient)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Projects.ProjectExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetProjects(InspireClient)
+  nameWithType: ProjectExtensions.GetProjects(InspireClient)
+  fullName: Vasont.Inspire.SDK.Projects.ProjectExtensions.GetProjects(Vasont.Inspire.SDK.InspireClient)
+  type: Method
+  source:
+    remote:
+      path: src/Projects/ProjectExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: GetProjects
+    path: Projects/ProjectExtensions.cs
+    startLine: 26
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Projects
+  summary: "\nThis method retrieves the projects that the specified user is assigned membership and/or ownership.\n"
+  example: []
+  syntax:
+    content: public static List<ProjectModel> GetProjects(this InspireClient client)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
+    return:
+      type: System.Collections.Generic.List{Vasont.Inspire.Models.Projects.ProjectModel}
+      description: Returns a list of <xref href="Vasont.Inspire.Models.Projects.ProjectModel" data-throw-if-not-resolved="false"></xref> models.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetProjects(client As InspireClient) As List(Of ProjectModel)
+  overload: Vasont.Inspire.SDK.Projects.ProjectExtensions.GetProjects*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Projects.ProjectExtensions.GetProject(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  commentId: M:Vasont.Inspire.SDK.Projects.ProjectExtensions.GetProject(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  id: GetProject(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Projects.ProjectExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetProject(InspireClient, Int64)
+  nameWithType: ProjectExtensions.GetProject(InspireClient, Int64)
+  fullName: Vasont.Inspire.SDK.Projects.ProjectExtensions.GetProject(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  type: Method
+  source:
+    remote:
+      path: src/Projects/ProjectExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: GetProject
+    path: Projects/ProjectExtensions.cs
+    startLine: 38
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Projects
+  summary: "\nThis method is used to return a project within the system.\n"
+  example: []
+  syntax:
+    content: public static ProjectModel GetProject(this InspireClient client, long projectId)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
+    - id: projectId
+      type: System.Int64
+      description: Contains the identity for a project to find.
+    return:
+      type: Vasont.Inspire.Models.Projects.ProjectModel
+      description: Returns a <xref href="Vasont.Inspire.Models.Projects.ProjectModel" data-throw-if-not-resolved="false"></xref> if found.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetProject(client As InspireClient, projectId As Long) As ProjectModel
+  overload: Vasont.Inspire.SDK.Projects.ProjectExtensions.GetProject*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Projects.ProjectExtensions.GetRecentlyOpenedProjects(Vasont.Inspire.SDK.InspireClient,System.Int32)
+  commentId: M:Vasont.Inspire.SDK.Projects.ProjectExtensions.GetRecentlyOpenedProjects(Vasont.Inspire.SDK.InspireClient,System.Int32)
+  id: GetRecentlyOpenedProjects(Vasont.Inspire.SDK.InspireClient,System.Int32)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Projects.ProjectExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetRecentlyOpenedProjects(InspireClient, Int32)
+  nameWithType: ProjectExtensions.GetRecentlyOpenedProjects(InspireClient, Int32)
+  fullName: Vasont.Inspire.SDK.Projects.ProjectExtensions.GetRecentlyOpenedProjects(Vasont.Inspire.SDK.InspireClient, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/Projects/ProjectExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: GetRecentlyOpenedProjects
+    path: Projects/ProjectExtensions.cs
+    startLine: 50
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Projects
+  summary: "\nThis method retrieves the projects that the specified user has recently opened.\n"
+  example: []
+  syntax:
+    content: public static List<ProjectModel> GetRecentlyOpenedProjects(this InspireClient client, int maximumResults)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
+    - id: maximumResults
+      type: System.Int32
+      description: A value indicating the maximum number of results to return
+    return:
+      type: System.Collections.Generic.List{Vasont.Inspire.Models.Projects.ProjectModel}
+      description: Returns a list of <xref href="Vasont.Inspire.Models.Projects.ProjectModel" data-throw-if-not-resolved="false"></xref> models.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetRecentlyOpenedProjects(client As InspireClient, maximumResults As Integer) As List(Of ProjectModel)
+  overload: Vasont.Inspire.SDK.Projects.ProjectExtensions.GetRecentlyOpenedProjects*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Projects.ProjectExtensions.GetAssignedProjects(Vasont.Inspire.SDK.InspireClient)
+  commentId: M:Vasont.Inspire.SDK.Projects.ProjectExtensions.GetAssignedProjects(Vasont.Inspire.SDK.InspireClient)
+  id: GetAssignedProjects(Vasont.Inspire.SDK.InspireClient)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Projects.ProjectExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetAssignedProjects(InspireClient)
+  nameWithType: ProjectExtensions.GetAssignedProjects(InspireClient)
+  fullName: Vasont.Inspire.SDK.Projects.ProjectExtensions.GetAssignedProjects(Vasont.Inspire.SDK.InspireClient)
+  type: Method
+  source:
+    remote:
+      path: src/Projects/ProjectExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: GetAssignedProjects
+    path: Projects/ProjectExtensions.cs
+    startLine: 61
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Projects
+  summary: "\nThis method is used to return projects within the system where the given userId is a member.\n"
+  example: []
+  syntax:
+    content: public static List<ProjectModel> GetAssignedProjects(this InspireClient client)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
+    return:
+      type: System.Collections.Generic.List{Vasont.Inspire.Models.Projects.ProjectModel}
+      description: Returns a list of <xref href="Vasont.Inspire.Models.Projects.ProjectModel" data-throw-if-not-resolved="false"></xref> models.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetAssignedProjects(client As InspireClient) As List(Of ProjectModel)
+  overload: Vasont.Inspire.SDK.Projects.ProjectExtensions.GetAssignedProjects*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Projects.ProjectExtensions.GetAvailableParticipants(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  commentId: M:Vasont.Inspire.SDK.Projects.ProjectExtensions.GetAvailableParticipants(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  id: GetAvailableParticipants(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Projects.ProjectExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetAvailableParticipants(InspireClient, Int64)
+  nameWithType: ProjectExtensions.GetAvailableParticipants(InspireClient, Int64)
+  fullName: Vasont.Inspire.SDK.Projects.ProjectExtensions.GetAvailableParticipants(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  type: Method
+  source:
+    remote:
+      path: src/Projects/ProjectExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: GetAvailableParticipants
+    path: Projects/ProjectExtensions.cs
+    startLine: 73
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Projects
+  summary: "\nThis method is used to return a list of available participants.\n"
+  example: []
+  syntax:
+    content: public static List<MinimalUserModel> GetAvailableParticipants(this InspireClient client, long projectId)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
+    - id: projectId
+      type: System.Int64
+      description: Contains the identity for a project to find.
+    return:
+      type: System.Collections.Generic.List{Vasont.Inspire.Models.Security.MinimalUserModel}
+      description: Returns a list of <xref href="Vasont.Inspire.Models.Security.MinimalUserModel" data-throw-if-not-resolved="false"></xref> models.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetAvailableParticipants(client As InspireClient, projectId As Long) As List(Of MinimalUserModel)
+  overload: Vasont.Inspire.SDK.Projects.ProjectExtensions.GetAvailableParticipants*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Projects.ProjectExtensions.GetActivities(Vasont.Inspire.SDK.InspireClient)
+  commentId: M:Vasont.Inspire.SDK.Projects.ProjectExtensions.GetActivities(Vasont.Inspire.SDK.InspireClient)
+  id: GetActivities(Vasont.Inspire.SDK.InspireClient)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Projects.ProjectExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetActivities(InspireClient)
+  nameWithType: ProjectExtensions.GetActivities(InspireClient)
+  fullName: Vasont.Inspire.SDK.Projects.ProjectExtensions.GetActivities(Vasont.Inspire.SDK.InspireClient)
+  type: Method
+  source:
+    remote:
+      path: src/Projects/ProjectExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: GetActivities
+    path: Projects/ProjectExtensions.cs
+    startLine: 84
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Projects
+  summary: "\nThis method is used to retrieve all the available project activities.\n"
+  example: []
+  syntax:
+    content: public static List<ProjectActivityModel> GetActivities(this InspireClient client)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
+    return:
+      type: System.Collections.Generic.List{Vasont.Inspire.Models.Projects.ProjectActivityModel}
+      description: Returns a list of <xref href="Vasont.Inspire.Models.Projects.ProjectActivityModel" data-throw-if-not-resolved="false"></xref> models.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetActivities(client As InspireClient) As List(Of ProjectActivityModel)
+  overload: Vasont.Inspire.SDK.Projects.ProjectExtensions.GetActivities*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Projects.ProjectExtensions.GetProjectAssignments(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  commentId: M:Vasont.Inspire.SDK.Projects.ProjectExtensions.GetProjectAssignments(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  id: GetProjectAssignments(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Projects.ProjectExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetProjectAssignments(InspireClient, Int64)
+  nameWithType: ProjectExtensions.GetProjectAssignments(InspireClient, Int64)
+  fullName: Vasont.Inspire.SDK.Projects.ProjectExtensions.GetProjectAssignments(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  type: Method
+  source:
+    remote:
+      path: src/Projects/ProjectExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: GetProjectAssignments
+    path: Projects/ProjectExtensions.cs
+    startLine: 96
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Projects
+  summary: "\nThis method is used to return project assignments within the system that are associated with a project.\n"
+  example: []
+  syntax:
+    content: public static List<ProjectAssignmentModel> GetProjectAssignments(this InspireClient client, long projectId)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
+    - id: projectId
+      type: System.Int64
+      description: Contains the identity of the project that is being searched for assignments.
+    return:
+      type: System.Collections.Generic.List{Vasont.Inspire.Models.Projects.ProjectAssignmentModel}
+      description: Returns a list of <xref href="Vasont.Inspire.Models.Projects.ProjectAssignmentModel" data-throw-if-not-resolved="false"></xref> models.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetProjectAssignments(client As InspireClient, projectId As Long) As List(Of ProjectAssignmentModel)
+  overload: Vasont.Inspire.SDK.Projects.ProjectExtensions.GetProjectAssignments*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Projects.ProjectExtensions.DeleteProject(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  commentId: M:Vasont.Inspire.SDK.Projects.ProjectExtensions.DeleteProject(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  id: DeleteProject(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Projects.ProjectExtensions
+  langs:
+  - csharp
+  - vb
+  name: DeleteProject(InspireClient, Int64)
+  nameWithType: ProjectExtensions.DeleteProject(InspireClient, Int64)
+  fullName: Vasont.Inspire.SDK.Projects.ProjectExtensions.DeleteProject(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  type: Method
+  source:
+    remote:
+      path: src/Projects/ProjectExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: DeleteProject
+    path: Projects/ProjectExtensions.cs
+    startLine: 108
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Projects
+  summary: "\nThis method is used to delete an existing project.\n"
+  example: []
+  syntax:
+    content: public static bool DeleteProject(this InspireClient client, long projectId)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
+    - id: projectId
+      type: System.Int64
+      description: Contains the project identity.
+    return:
+      type: System.Boolean
+      description: Returns a boolean value indicating whether the action succeeded or not.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function DeleteProject(client As InspireClient, projectId As Long) As Boolean
+  overload: Vasont.Inspire.SDK.Projects.ProjectExtensions.DeleteProject*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Projects.ProjectExtensions.DeleteProjectParticipant(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Projects.ProjectParticipantModel)
+  commentId: M:Vasont.Inspire.SDK.Projects.ProjectExtensions.DeleteProjectParticipant(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Projects.ProjectParticipantModel)
+  id: DeleteProjectParticipant(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Projects.ProjectParticipantModel)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Projects.ProjectExtensions
+  langs:
+  - csharp
+  - vb
+  name: DeleteProjectParticipant(InspireClient, Int64, ProjectParticipantModel)
+  nameWithType: ProjectExtensions.DeleteProjectParticipant(InspireClient, Int64, ProjectParticipantModel)
+  fullName: Vasont.Inspire.SDK.Projects.ProjectExtensions.DeleteProjectParticipant(Vasont.Inspire.SDK.InspireClient, System.Int64, Vasont.Inspire.Models.Projects.ProjectParticipantModel)
+  type: Method
+  source:
+    remote:
+      path: src/Projects/ProjectExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: DeleteProjectParticipant
+    path: Projects/ProjectExtensions.cs
+    startLine: 127
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Projects
+  summary: "\nThis method is used to delete a project participant.\n"
+  example: []
+  syntax:
+    content: public static bool DeleteProjectParticipant(this InspireClient client, long projectId, ProjectParticipantModel model)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
+    - id: projectId
+      type: System.Int64
+      description: Contains the project identity.
+    - id: model
+      type: Vasont.Inspire.Models.Projects.ProjectParticipantModel
+      description: Contains the <xref href="Vasont.Inspire.Models.Projects.ProjectParticipantModel" data-throw-if-not-resolved="false"></xref> that will identify which participant to delete.
+    return:
+      type: System.Boolean
+      description: Returns a boolean value indicating whether the action succeeded or not.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function DeleteProjectParticipant(client As InspireClient, projectId As Long, model As ProjectParticipantModel) As Boolean
+  overload: Vasont.Inspire.SDK.Projects.ProjectExtensions.DeleteProjectParticipant*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Projects.ProjectExtensions.DeleteProjectAssignment(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Int64)
+  commentId: M:Vasont.Inspire.SDK.Projects.ProjectExtensions.DeleteProjectAssignment(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Int64)
+  id: DeleteProjectAssignment(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Int64)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Projects.ProjectExtensions
+  langs:
+  - csharp
+  - vb
+  name: DeleteProjectAssignment(InspireClient, Int64, Int64)
+  nameWithType: ProjectExtensions.DeleteProjectAssignment(InspireClient, Int64, Int64)
+  fullName: Vasont.Inspire.SDK.Projects.ProjectExtensions.DeleteProjectAssignment(Vasont.Inspire.SDK.InspireClient, System.Int64, System.Int64)
+  type: Method
+  source:
+    remote:
+      path: src/Projects/ProjectExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: DeleteProjectAssignment
+    path: Projects/ProjectExtensions.cs
+    startLine: 151
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Projects
+  summary: "\nThis method is used to delete a project assignment.\n"
+  example: []
+  syntax:
+    content: public static bool DeleteProjectAssignment(this InspireClient client, long projectId, long projectAssignmentId)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
+    - id: projectId
+      type: System.Int64
+      description: Contains the identity of the project in which the assignment will be deleted.
+    - id: projectAssignmentId
+      type: System.Int64
+      description: Contains the project assignment identity to delete.
+    return:
+      type: System.Boolean
+      description: Returns a boolean value indicating whether the action succeeded or not.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function DeleteProjectAssignment(client As InspireClient, projectId As Long, projectAssignmentId As Long) As Boolean
+  overload: Vasont.Inspire.SDK.Projects.ProjectExtensions.DeleteProjectAssignment*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Projects.ProjectExtensions.DeleteProjectAssignmentComponent(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Int64,System.Int64)
+  commentId: M:Vasont.Inspire.SDK.Projects.ProjectExtensions.DeleteProjectAssignmentComponent(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Int64,System.Int64)
+  id: DeleteProjectAssignmentComponent(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Int64,System.Int64)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Projects.ProjectExtensions
+  langs:
+  - csharp
+  - vb
+  name: DeleteProjectAssignmentComponent(InspireClient, Int64, Int64, Int64)
+  nameWithType: ProjectExtensions.DeleteProjectAssignmentComponent(InspireClient, Int64, Int64, Int64)
+  fullName: Vasont.Inspire.SDK.Projects.ProjectExtensions.DeleteProjectAssignmentComponent(Vasont.Inspire.SDK.InspireClient, System.Int64, System.Int64, System.Int64)
+  type: Method
+  source:
+    remote:
+      path: src/Projects/ProjectExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: DeleteProjectAssignmentComponent
+    path: Projects/ProjectExtensions.cs
+    startLine: 176
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Projects
+  summary: "\nThis method is used to remove a component from a project assignment.\n"
+  example: []
+  syntax:
+    content: public static bool DeleteProjectAssignmentComponent(this InspireClient client, long projectId, long projectAssignmentId, long componentId)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
+    - id: projectId
+      type: System.Int64
+      description: Contains the identity of the project.
+    - id: projectAssignmentId
+      type: System.Int64
+      description: Contains the identity of the project assignment.
+    - id: componentId
+      type: System.Int64
+      description: Contains the identity of the component that will be removed from the assignment.
+    return:
+      type: System.Boolean
+      description: Returns a boolean value indicating whether the action succeeded or not.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function DeleteProjectAssignmentComponent(client As InspireClient, projectId As Long, projectAssignmentId As Long, componentId As Long) As Boolean
+  overload: Vasont.Inspire.SDK.Projects.ProjectExtensions.DeleteProjectAssignmentComponent*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Projects.ProjectExtensions.DeleteProjectFolder(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Projects.ProjectFolderItemModel)
+  commentId: M:Vasont.Inspire.SDK.Projects.ProjectExtensions.DeleteProjectFolder(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Projects.ProjectFolderItemModel)
+  id: DeleteProjectFolder(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Projects.ProjectFolderItemModel)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Projects.ProjectExtensions
+  langs:
+  - csharp
+  - vb
+  name: DeleteProjectFolder(InspireClient, Int64, ProjectFolderItemModel)
+  nameWithType: ProjectExtensions.DeleteProjectFolder(InspireClient, Int64, ProjectFolderItemModel)
+  fullName: Vasont.Inspire.SDK.Projects.ProjectExtensions.DeleteProjectFolder(Vasont.Inspire.SDK.InspireClient, System.Int64, Vasont.Inspire.Models.Projects.ProjectFolderItemModel)
+  type: Method
+  source:
+    remote:
+      path: src/Projects/ProjectExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: DeleteProjectFolder
+    path: Projects/ProjectExtensions.cs
+    startLine: 205
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Projects
+  summary: "\nThis method is used to delete a project folder item model.\n"
+  example: []
+  syntax:
+    content: public static bool DeleteProjectFolder(this InspireClient client, long projectId, ProjectFolderItemModel model)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
+    - id: projectId
+      type: System.Int64
+      description: Contains the identity of the parent project.
+    - id: model
+      type: Vasont.Inspire.Models.Projects.ProjectFolderItemModel
+      description: Contains the existing <xref href="Vasont.Inspire.Models.Projects.ProjectFolderItemModel" data-throw-if-not-resolved="false"></xref> to delete.
+    return:
+      type: System.Boolean
+      description: Returns a boolean value indicating whether the action succeeded or not.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function DeleteProjectFolder(client As InspireClient, projectId As Long, model As ProjectFolderItemModel) As Boolean
+  overload: Vasont.Inspire.SDK.Projects.ProjectExtensions.DeleteProjectFolder*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Projects.ProjectExtensions.CreateProject(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Projects.ProjectModel)
+  commentId: M:Vasont.Inspire.SDK.Projects.ProjectExtensions.CreateProject(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Projects.ProjectModel)
+  id: CreateProject(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Projects.ProjectModel)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Projects.ProjectExtensions
+  langs:
+  - csharp
+  - vb
+  name: CreateProject(InspireClient, ProjectModel)
+  nameWithType: ProjectExtensions.CreateProject(InspireClient, ProjectModel)
+  fullName: Vasont.Inspire.SDK.Projects.ProjectExtensions.CreateProject(Vasont.Inspire.SDK.InspireClient, Vasont.Inspire.Models.Projects.ProjectModel)
+  type: Method
+  source:
+    remote:
+      path: src/Projects/ProjectExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: CreateProject
+    path: Projects/ProjectExtensions.cs
+    startLine: 228
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Projects
+  summary: "\nThis method is used to create a new project.\n"
+  example: []
+  syntax:
+    content: public static ProjectModel CreateProject(this InspireClient client, ProjectModel inputModel)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
+    - id: inputModel
+      type: Vasont.Inspire.Models.Projects.ProjectModel
+      description: Contains the <xref href="Vasont.Inspire.Models.Projects.ProjectModel" data-throw-if-not-resolved="false"></xref> input.
+    return:
+      type: Vasont.Inspire.Models.Projects.ProjectModel
+      description: Returns the <xref href="Vasont.Inspire.Models.Projects.ProjectModel" data-throw-if-not-resolved="false"></xref> object if found.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function CreateProject(client As InspireClient, inputModel As ProjectModel) As ProjectModel
+  overload: Vasont.Inspire.SDK.Projects.ProjectExtensions.CreateProject*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Projects.ProjectExtensions.CreateProjectParticipants(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Collections.Generic.List{Vasont.Inspire.Models.Projects.ProjectParticipantModel})
+  commentId: M:Vasont.Inspire.SDK.Projects.ProjectExtensions.CreateProjectParticipants(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Collections.Generic.List{Vasont.Inspire.Models.Projects.ProjectParticipantModel})
+  id: CreateProjectParticipants(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Collections.Generic.List{Vasont.Inspire.Models.Projects.ProjectParticipantModel})
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Projects.ProjectExtensions
+  langs:
+  - csharp
+  - vb
+  name: CreateProjectParticipants(InspireClient, Int64, List<ProjectParticipantModel>)
+  nameWithType: ProjectExtensions.CreateProjectParticipants(InspireClient, Int64, List<ProjectParticipantModel>)
+  fullName: Vasont.Inspire.SDK.Projects.ProjectExtensions.CreateProjectParticipants(Vasont.Inspire.SDK.InspireClient, System.Int64, System.Collections.Generic.List<Vasont.Inspire.Models.Projects.ProjectParticipantModel>)
+  type: Method
+  source:
+    remote:
+      path: src/Projects/ProjectExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: CreateProjectParticipants
+    path: Projects/ProjectExtensions.cs
+    startLine: 246
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Projects
+  summary: "\nThis method is used to add project participants.\n"
+  example: []
+  syntax:
+    content: public static List<ProjectParticipantModel> CreateProjectParticipants(this InspireClient client, long projectId, List<ProjectParticipantModel> models)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
+    - id: projectId
+      type: System.Int64
+      description: Contains the identity of the project that will have its participants added.
+    - id: models
+      type: System.Collections.Generic.List{Vasont.Inspire.Models.Projects.ProjectParticipantModel}
+      description: Contains a list of <xref href="Vasont.Inspire.Models.Projects.ProjectParticipantModel" data-throw-if-not-resolved="false"></xref> related to the project that will be added.
+    return:
+      type: System.Collections.Generic.List{Vasont.Inspire.Models.Projects.ProjectParticipantModel}
+      description: Returns a list of newly created <xref href="Vasont.Inspire.Models.Projects.ProjectParticipantModel" data-throw-if-not-resolved="false"></xref> objects.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function CreateProjectParticipants(client As InspireClient, projectId As Long, models As List(Of ProjectParticipantModel)) As List(Of ProjectParticipantModel)
+  overload: Vasont.Inspire.SDK.Projects.ProjectExtensions.CreateProjectParticipants*
+  nameWithType.vb: ProjectExtensions.CreateProjectParticipants(InspireClient, Int64, List(Of ProjectParticipantModel))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Vasont.Inspire.SDK.Projects.ProjectExtensions.CreateProjectParticipants(Vasont.Inspire.SDK.InspireClient, System.Int64, System.Collections.Generic.List(Of Vasont.Inspire.Models.Projects.ProjectParticipantModel))
+  name.vb: CreateProjectParticipants(InspireClient, Int64, List(Of ProjectParticipantModel))
+- uid: Vasont.Inspire.SDK.Projects.ProjectExtensions.CreateProjectAssignment(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Projects.ProjectAssignmentModel)
+  commentId: M:Vasont.Inspire.SDK.Projects.ProjectExtensions.CreateProjectAssignment(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Projects.ProjectAssignmentModel)
+  id: CreateProjectAssignment(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Projects.ProjectAssignmentModel)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Projects.ProjectExtensions
+  langs:
+  - csharp
+  - vb
+  name: CreateProjectAssignment(InspireClient, Int64, ProjectAssignmentModel)
+  nameWithType: ProjectExtensions.CreateProjectAssignment(InspireClient, Int64, ProjectAssignmentModel)
+  fullName: Vasont.Inspire.SDK.Projects.ProjectExtensions.CreateProjectAssignment(Vasont.Inspire.SDK.InspireClient, System.Int64, Vasont.Inspire.Models.Projects.ProjectAssignmentModel)
+  type: Method
+  source:
+    remote:
+      path: src/Projects/ProjectExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: CreateProjectAssignment
+    path: Projects/ProjectExtensions.cs
+    startLine: 269
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Projects
+  summary: "\nThis method is used to create a new project assignment.\n"
+  example: []
+  syntax:
+    content: public static ProjectAssignmentModel CreateProjectAssignment(this InspireClient client, long projectId, ProjectAssignmentModel model)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
+    - id: projectId
+      type: System.Int64
+      description: Contains the identity of the project in which the assignment will be created.
+    - id: model
+      type: Vasont.Inspire.Models.Projects.ProjectAssignmentModel
+      description: Contains a <xref href="Vasont.Inspire.Models.Projects.ProjectAssignmentModel" data-throw-if-not-resolved="false"></xref> with details about project assignments.
+    return:
+      type: Vasont.Inspire.Models.Projects.ProjectAssignmentModel
+      description: Returns the newly created <xref href="Vasont.Inspire.Models.Projects.ProjectAssignmentModel" data-throw-if-not-resolved="false"></xref> object.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function CreateProjectAssignment(client As InspireClient, projectId As Long, model As ProjectAssignmentModel) As ProjectAssignmentModel
+  overload: Vasont.Inspire.SDK.Projects.ProjectExtensions.CreateProjectAssignment*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Projects.ProjectExtensions.CreateProjectFolder(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Projects.ProjectFolderItemModel)
+  commentId: M:Vasont.Inspire.SDK.Projects.ProjectExtensions.CreateProjectFolder(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Projects.ProjectFolderItemModel)
+  id: CreateProjectFolder(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Projects.ProjectFolderItemModel)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Projects.ProjectExtensions
+  langs:
+  - csharp
+  - vb
+  name: CreateProjectFolder(InspireClient, Int64, ProjectFolderItemModel)
+  nameWithType: ProjectExtensions.CreateProjectFolder(InspireClient, Int64, ProjectFolderItemModel)
+  fullName: Vasont.Inspire.SDK.Projects.ProjectExtensions.CreateProjectFolder(Vasont.Inspire.SDK.InspireClient, System.Int64, Vasont.Inspire.Models.Projects.ProjectFolderItemModel)
+  type: Method
+  source:
+    remote:
+      path: src/Projects/ProjectExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: CreateProjectFolder
+    path: Projects/ProjectExtensions.cs
+    startLine: 292
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Projects
+  summary: "\nThis method is used to create a project folder item model.\n"
+  example: []
+  syntax:
+    content: public static ProjectFolderItemModel CreateProjectFolder(this InspireClient client, long projectId, ProjectFolderItemModel model)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
+    - id: projectId
+      type: System.Int64
+      description: Contains the identity of the parent project.
+    - id: model
+      type: Vasont.Inspire.Models.Projects.ProjectFolderItemModel
+      description: Contains a <xref href="Vasont.Inspire.Models.Projects.ProjectFolderItemModel" data-throw-if-not-resolved="false"></xref> to create.
+    return:
+      type: Vasont.Inspire.Models.Projects.ProjectFolderItemModel
+      description: Returns the newly created <xref href="Vasont.Inspire.Models.Projects.ProjectFolderItemModel" data-throw-if-not-resolved="false"></xref> object.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function CreateProjectFolder(client As InspireClient, projectId As Long, model As ProjectFolderItemModel) As ProjectFolderItemModel
+  overload: Vasont.Inspire.SDK.Projects.ProjectExtensions.CreateProjectFolder*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Projects.ProjectExtensions.AddComponentsToFolder(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Int64,System.Collections.Generic.List{Vasont.Inspire.Models.Components.MinimalComponentModel})
+  commentId: M:Vasont.Inspire.SDK.Projects.ProjectExtensions.AddComponentsToFolder(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Int64,System.Collections.Generic.List{Vasont.Inspire.Models.Components.MinimalComponentModel})
+  id: AddComponentsToFolder(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Int64,System.Collections.Generic.List{Vasont.Inspire.Models.Components.MinimalComponentModel})
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Projects.ProjectExtensions
+  langs:
+  - csharp
+  - vb
+  name: AddComponentsToFolder(InspireClient, Int64, Int64, List<MinimalComponentModel>)
+  nameWithType: ProjectExtensions.AddComponentsToFolder(InspireClient, Int64, Int64, List<MinimalComponentModel>)
+  fullName: Vasont.Inspire.SDK.Projects.ProjectExtensions.AddComponentsToFolder(Vasont.Inspire.SDK.InspireClient, System.Int64, System.Int64, System.Collections.Generic.List<Vasont.Inspire.Models.Components.MinimalComponentModel>)
+  type: Method
+  source:
+    remote:
+      path: src/Projects/ProjectExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: AddComponentsToFolder
+    path: Projects/ProjectExtensions.cs
+    startLine: 316
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Projects
+  summary: "\nThis method is used to add components to an existing folder.\n"
+  example: []
+  syntax:
+    content: public static List<MinimalComponentModel> AddComponentsToFolder(this InspireClient client, long projectId, long folderId, List<MinimalComponentModel> models)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
+    - id: projectId
+      type: System.Int64
+      description: Contains the identity of the parent project.
+    - id: folderId
+      type: System.Int64
+      description: Contains the identity of the project folder.
+    - id: models
+      type: System.Collections.Generic.List{Vasont.Inspire.Models.Components.MinimalComponentModel}
+      description: A list of <xref href="Vasont.Inspire.Models.Components.MinimalComponentModel" data-throw-if-not-resolved="false"></xref> objects.
+    return:
+      type: System.Collections.Generic.List{Vasont.Inspire.Models.Components.MinimalComponentModel}
+      description: Returns a list of <xref href="Vasont.Inspire.Models.Components.MinimalComponentModel" data-throw-if-not-resolved="false"></xref> objects.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function AddComponentsToFolder(client As InspireClient, projectId As Long, folderId As Long, models As List(Of MinimalComponentModel)) As List(Of MinimalComponentModel)
+  overload: Vasont.Inspire.SDK.Projects.ProjectExtensions.AddComponentsToFolder*
+  nameWithType.vb: ProjectExtensions.AddComponentsToFolder(InspireClient, Int64, Int64, List(Of MinimalComponentModel))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Vasont.Inspire.SDK.Projects.ProjectExtensions.AddComponentsToFolder(Vasont.Inspire.SDK.InspireClient, System.Int64, System.Int64, System.Collections.Generic.List(Of Vasont.Inspire.Models.Components.MinimalComponentModel))
+  name.vb: AddComponentsToFolder(InspireClient, Int64, Int64, List(Of MinimalComponentModel))
+- uid: Vasont.Inspire.SDK.Projects.ProjectExtensions.ExportComponents(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Int64,System.Boolean,System.Int64)
+  commentId: M:Vasont.Inspire.SDK.Projects.ProjectExtensions.ExportComponents(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Int64,System.Boolean,System.Int64)
+  id: ExportComponents(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Int64,System.Boolean,System.Int64)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Projects.ProjectExtensions
+  langs:
+  - csharp
+  - vb
+  name: ExportComponents(InspireClient, Int64, Int64, Boolean, Int64)
+  nameWithType: ProjectExtensions.ExportComponents(InspireClient, Int64, Int64, Boolean, Int64)
+  fullName: Vasont.Inspire.SDK.Projects.ProjectExtensions.ExportComponents(Vasont.Inspire.SDK.InspireClient, System.Int64, System.Int64, System.Boolean, System.Int64)
+  type: Method
+  source:
+    remote:
+      path: src/Projects/ProjectExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: ExportComponents
+    path: Projects/ProjectExtensions.cs
+    startLine: 346
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Projects
+  summary: "\nThis method is used to request an export process for one or more components.\n"
+  example: []
+  syntax:
+    content: public static ExportRequestModel ExportComponents(this InspireClient client, long projectId, long folderId, bool includeSubFolders, long exportId = 0L)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
+    - id: projectId
+      type: System.Int64
+      description: Contains the identity of the project.
+    - id: folderId
+      type: System.Int64
+      description: Contains the identity of the project folder.
+    - id: includeSubFolders
+      type: System.Boolean
+      description: Contains a value indicating whether components in descendant sub-folders should be exported.
+    - id: exportId
+      type: System.Int64
+      description: Contains the export identity.
+    return:
+      type: Vasont.Inspire.Models.Transfers.ExportRequestModel
+      description: The <xref href="Vasont.Inspire.Models.Transfers.ExportRequestModel" data-throw-if-not-resolved="false"></xref> object with information about the export process.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ExportComponents(client As InspireClient, projectId As Long, folderId As Long, includeSubFolders As Boolean, exportId As Long = 0L) As ExportRequestModel
+  overload: Vasont.Inspire.SDK.Projects.ProjectExtensions.ExportComponents*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Projects.ProjectExtensions.UpdateProject(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Projects.ProjectModel)
+  commentId: M:Vasont.Inspire.SDK.Projects.ProjectExtensions.UpdateProject(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Projects.ProjectModel)
+  id: UpdateProject(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Projects.ProjectModel)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Projects.ProjectExtensions
+  langs:
+  - csharp
+  - vb
+  name: UpdateProject(InspireClient, Int64, ProjectModel)
+  nameWithType: ProjectExtensions.UpdateProject(InspireClient, Int64, ProjectModel)
+  fullName: Vasont.Inspire.SDK.Projects.ProjectExtensions.UpdateProject(Vasont.Inspire.SDK.InspireClient, System.Int64, Vasont.Inspire.Models.Projects.ProjectModel)
+  type: Method
+  source:
+    remote:
+      path: src/Projects/ProjectExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: UpdateProject
+    path: Projects/ProjectExtensions.cs
+    startLine: 369
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Projects
+  summary: "\nThis method is used to update an existing project.\n"
+  example: []
+  syntax:
+    content: public static ProjectModel UpdateProject(this InspireClient client, long projectId, ProjectModel inputModel)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
+    - id: projectId
+      type: System.Int64
+      description: Contains the identity of the project to update.
+    - id: inputModel
+      type: Vasont.Inspire.Models.Projects.ProjectModel
+      description: Contains the <xref href="Vasont.Inspire.Models.Projects.ProjectModel" data-throw-if-not-resolved="false"></xref> input.
+    return:
+      type: Vasont.Inspire.Models.Projects.ProjectModel
+      description: Returns the updated <xref href="Vasont.Inspire.Models.Projects.ProjectModel" data-throw-if-not-resolved="false"></xref> object.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function UpdateProject(client As InspireClient, projectId As Long, inputModel As ProjectModel) As ProjectModel
+  overload: Vasont.Inspire.SDK.Projects.ProjectExtensions.UpdateProject*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Projects.ProjectExtensions.UpdateProjectParticipants(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Collections.Generic.List{Vasont.Inspire.Models.Projects.ProjectParticipantModel})
+  commentId: M:Vasont.Inspire.SDK.Projects.ProjectExtensions.UpdateProjectParticipants(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Collections.Generic.List{Vasont.Inspire.Models.Projects.ProjectParticipantModel})
+  id: UpdateProjectParticipants(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Collections.Generic.List{Vasont.Inspire.Models.Projects.ProjectParticipantModel})
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Projects.ProjectExtensions
+  langs:
+  - csharp
+  - vb
+  name: UpdateProjectParticipants(InspireClient, Int64, List<ProjectParticipantModel>)
+  nameWithType: ProjectExtensions.UpdateProjectParticipants(InspireClient, Int64, List<ProjectParticipantModel>)
+  fullName: Vasont.Inspire.SDK.Projects.ProjectExtensions.UpdateProjectParticipants(Vasont.Inspire.SDK.InspireClient, System.Int64, System.Collections.Generic.List<Vasont.Inspire.Models.Projects.ProjectParticipantModel>)
+  type: Method
+  source:
+    remote:
+      path: src/Projects/ProjectExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: UpdateProjectParticipants
+    path: Projects/ProjectExtensions.cs
+    startLine: 392
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Projects
+  summary: "\nThis method is used to update project participants.\n"
+  example: []
+  syntax:
+    content: public static List<ProjectParticipantModel> UpdateProjectParticipants(this InspireClient client, long projectId, List<ProjectParticipantModel> models)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
+    - id: projectId
+      type: System.Int64
+      description: Contains the identity of the project that will have its participants updated.
+    - id: models
+      type: System.Collections.Generic.List{Vasont.Inspire.Models.Projects.ProjectParticipantModel}
+      description: Contains a list of <xref href="Vasont.Inspire.Models.Projects.ProjectParticipantModel" data-throw-if-not-resolved="false"></xref> related to the project.
+    return:
+      type: System.Collections.Generic.List{Vasont.Inspire.Models.Projects.ProjectParticipantModel}
+      description: Returns a list of <xref href="Vasont.Inspire.Models.Projects.ProjectParticipantModel" data-throw-if-not-resolved="false"></xref> objects.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function UpdateProjectParticipants(client As InspireClient, projectId As Long, models As List(Of ProjectParticipantModel)) As List(Of ProjectParticipantModel)
+  overload: Vasont.Inspire.SDK.Projects.ProjectExtensions.UpdateProjectParticipants*
+  nameWithType.vb: ProjectExtensions.UpdateProjectParticipants(InspireClient, Int64, List(Of ProjectParticipantModel))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Vasont.Inspire.SDK.Projects.ProjectExtensions.UpdateProjectParticipants(Vasont.Inspire.SDK.InspireClient, System.Int64, System.Collections.Generic.List(Of Vasont.Inspire.Models.Projects.ProjectParticipantModel))
+  name.vb: UpdateProjectParticipants(InspireClient, Int64, List(Of ProjectParticipantModel))
+- uid: Vasont.Inspire.SDK.Projects.ProjectExtensions.UpdateProjectAssignment(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Int64,Vasont.Inspire.Models.Projects.ProjectAssignmentModel)
+  commentId: M:Vasont.Inspire.SDK.Projects.ProjectExtensions.UpdateProjectAssignment(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Int64,Vasont.Inspire.Models.Projects.ProjectAssignmentModel)
+  id: UpdateProjectAssignment(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Int64,Vasont.Inspire.Models.Projects.ProjectAssignmentModel)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Projects.ProjectExtensions
+  langs:
+  - csharp
+  - vb
+  name: UpdateProjectAssignment(InspireClient, Int64, Int64, ProjectAssignmentModel)
+  nameWithType: ProjectExtensions.UpdateProjectAssignment(InspireClient, Int64, Int64, ProjectAssignmentModel)
+  fullName: Vasont.Inspire.SDK.Projects.ProjectExtensions.UpdateProjectAssignment(Vasont.Inspire.SDK.InspireClient, System.Int64, System.Int64, Vasont.Inspire.Models.Projects.ProjectAssignmentModel)
+  type: Method
+  source:
+    remote:
+      path: src/Projects/ProjectExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: UpdateProjectAssignment
+    path: Projects/ProjectExtensions.cs
+    startLine: 416
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Projects
+  summary: "\nThis method is used to update a project assignment.\n"
+  example: []
+  syntax:
+    content: public static ProjectAssignmentModel UpdateProjectAssignment(this InspireClient client, long projectId, long projectAssignmentId, ProjectAssignmentModel model)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
+    - id: projectId
+      type: System.Int64
+      description: Contains the identity of the project.
+    - id: projectAssignmentId
+      type: System.Int64
+      description: Contains the identity of the project assignment to update.
+    - id: model
+      type: Vasont.Inspire.Models.Projects.ProjectAssignmentModel
+      description: Contains the <xref href="Vasont.Inspire.Models.Projects.ProjectAssignmentModel" data-throw-if-not-resolved="false"></xref> object.
+    return:
+      type: Vasont.Inspire.Models.Projects.ProjectAssignmentModel
+      description: Returns the <xref href="Vasont.Inspire.Models.Projects.ProjectAssignmentModel" data-throw-if-not-resolved="false"></xref> object.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function UpdateProjectAssignment(client As InspireClient, projectId As Long, projectAssignmentId As Long, model As ProjectAssignmentModel) As ProjectAssignmentModel
+  overload: Vasont.Inspire.SDK.Projects.ProjectExtensions.UpdateProjectAssignment*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Projects.ProjectExtensions.UpdateProjectAssignmentCompletionStatus(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Int64,Vasont.Inspire.Models.Projects.ProjectAssignmentModel)
+  commentId: M:Vasont.Inspire.SDK.Projects.ProjectExtensions.UpdateProjectAssignmentCompletionStatus(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Int64,Vasont.Inspire.Models.Projects.ProjectAssignmentModel)
+  id: UpdateProjectAssignmentCompletionStatus(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Int64,Vasont.Inspire.Models.Projects.ProjectAssignmentModel)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Projects.ProjectExtensions
+  langs:
+  - csharp
+  - vb
+  name: UpdateProjectAssignmentCompletionStatus(InspireClient, Int64, Int64, ProjectAssignmentModel)
+  nameWithType: ProjectExtensions.UpdateProjectAssignmentCompletionStatus(InspireClient, Int64, Int64, ProjectAssignmentModel)
+  fullName: Vasont.Inspire.SDK.Projects.ProjectExtensions.UpdateProjectAssignmentCompletionStatus(Vasont.Inspire.SDK.InspireClient, System.Int64, System.Int64, Vasont.Inspire.Models.Projects.ProjectAssignmentModel)
+  type: Method
+  source:
+    remote:
+      path: src/Projects/ProjectExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: UpdateProjectAssignmentCompletionStatus
+    path: Projects/ProjectExtensions.cs
+    startLine: 445
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Projects
+  summary: "\nThis method is used to update a project assignment completion status.\n"
+  example: []
+  syntax:
+    content: public static ProjectAssignmentModel UpdateProjectAssignmentCompletionStatus(this InspireClient client, long projectId, long projectAssignmentId, ProjectAssignmentModel model)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
+    - id: projectId
+      type: System.Int64
+      description: Contains the identity of the project.
+    - id: projectAssignmentId
+      type: System.Int64
+      description: Contains the identity of the project assignment to update.
+    - id: model
+      type: Vasont.Inspire.Models.Projects.ProjectAssignmentModel
+      description: Contains the <xref href="Vasont.Inspire.Models.Projects.ProjectAssignmentModel" data-throw-if-not-resolved="false"></xref> object.
+    return:
+      type: Vasont.Inspire.Models.Projects.ProjectAssignmentModel
+      description: Returns the <xref href="Vasont.Inspire.Models.Projects.ProjectAssignmentModel" data-throw-if-not-resolved="false"></xref> object.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function UpdateProjectAssignmentCompletionStatus(client As InspireClient, projectId As Long, projectAssignmentId As Long, model As ProjectAssignmentModel) As ProjectAssignmentModel
+  overload: Vasont.Inspire.SDK.Projects.ProjectExtensions.UpdateProjectAssignmentCompletionStatus*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Projects.ProjectExtensions.RenameProjectFolder(Vasont.Inspire.SDK.InspireClient,System.Int64,System.String,Vasont.Inspire.Models.Projects.ProjectFolderItemModel)
+  commentId: M:Vasont.Inspire.SDK.Projects.ProjectExtensions.RenameProjectFolder(Vasont.Inspire.SDK.InspireClient,System.Int64,System.String,Vasont.Inspire.Models.Projects.ProjectFolderItemModel)
+  id: RenameProjectFolder(Vasont.Inspire.SDK.InspireClient,System.Int64,System.String,Vasont.Inspire.Models.Projects.ProjectFolderItemModel)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Projects.ProjectExtensions
+  langs:
+  - csharp
+  - vb
+  name: RenameProjectFolder(InspireClient, Int64, String, ProjectFolderItemModel)
+  nameWithType: ProjectExtensions.RenameProjectFolder(InspireClient, Int64, String, ProjectFolderItemModel)
+  fullName: Vasont.Inspire.SDK.Projects.ProjectExtensions.RenameProjectFolder(Vasont.Inspire.SDK.InspireClient, System.Int64, System.String, Vasont.Inspire.Models.Projects.ProjectFolderItemModel)
+  type: Method
+  source:
+    remote:
+      path: src/Projects/ProjectExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: RenameProjectFolder
+    path: Projects/ProjectExtensions.cs
+    startLine: 474
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Projects
+  summary: "\nThis method is used to rename a project folder.\n"
+  example: []
+  syntax:
+    content: public static ProjectFolderItemModel RenameProjectFolder(this InspireClient client, long projectId, string itemId, ProjectFolderItemModel model)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
+    - id: projectId
+      type: System.Int64
+      description: Contains the identity of the project.
+    - id: itemId
+      type: System.String
+      description: Contains the identity of the folder item object.
+    - id: model
+      type: Vasont.Inspire.Models.Projects.ProjectFolderItemModel
+      description: Contains the <xref href="Vasont.Inspire.Models.Projects.ProjectFolderItemModel" data-throw-if-not-resolved="false"></xref> object.
+    return:
+      type: Vasont.Inspire.Models.Projects.ProjectFolderItemModel
+      description: Returns the <xref href="Vasont.Inspire.Models.Projects.ProjectFolderItemModel" data-throw-if-not-resolved="false"></xref> object.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function RenameProjectFolder(client As InspireClient, projectId As Long, itemId As String, model As ProjectFolderItemModel) As ProjectFolderItemModel
+  overload: Vasont.Inspire.SDK.Projects.ProjectExtensions.RenameProjectFolder*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Projects.ProjectExtensions.MoveProjectFolder(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Projects.ProjectFolderItemModel,System.Int64,System.String,System.String)
+  commentId: M:Vasont.Inspire.SDK.Projects.ProjectExtensions.MoveProjectFolder(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Projects.ProjectFolderItemModel,System.Int64,System.String,System.String)
+  id: MoveProjectFolder(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Projects.ProjectFolderItemModel,System.Int64,System.String,System.String)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Projects.ProjectExtensions
+  langs:
+  - csharp
+  - vb
+  name: MoveProjectFolder(InspireClient, ProjectFolderItemModel, Int64, String, String)
+  nameWithType: ProjectExtensions.MoveProjectFolder(InspireClient, ProjectFolderItemModel, Int64, String, String)
+  fullName: Vasont.Inspire.SDK.Projects.ProjectExtensions.MoveProjectFolder(Vasont.Inspire.SDK.InspireClient, Vasont.Inspire.Models.Projects.ProjectFolderItemModel, System.Int64, System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: src/Projects/ProjectExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: MoveProjectFolder
+    path: Projects/ProjectExtensions.cs
+    startLine: 504
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Projects
+  summary: "\nThis method is used to move a project folder to another target folder.\n"
+  example: []
+  syntax:
+    content: public static ProjectFolderItemModel MoveProjectFolder(this InspireClient client, ProjectFolderItemModel model, long projectId, string itemId, string targetFolderId = "")
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
+    - id: model
+      type: Vasont.Inspire.Models.Projects.ProjectFolderItemModel
+      description: Contains the existing project folder item model to move.
+    - id: projectId
+      type: System.Int64
+      description: Contains the identity of the parent project.
+    - id: itemId
+      type: System.String
+      description: Contains the identity of the folder item object.
+    - id: targetFolderId
+      type: System.String
+      description: Contains the new target folder of the folder item.
+    return:
+      type: Vasont.Inspire.Models.Projects.ProjectFolderItemModel
+      description: Returns the <xref href="Vasont.Inspire.Models.Projects.ProjectFolderItemModel" data-throw-if-not-resolved="false"></xref> object.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function MoveProjectFolder(client As InspireClient, model As ProjectFolderItemModel, projectId As Long, itemId As String, targetFolderId As String = "") As ProjectFolderItemModel
+  overload: Vasont.Inspire.SDK.Projects.ProjectExtensions.MoveProjectFolder*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: Vasont.Inspire.SDK.InspireClient
+  commentId: T:Vasont.Inspire.SDK.InspireClient
+  parent: Vasont.Inspire.SDK
+  name: InspireClient
+  nameWithType: InspireClient
+  fullName: Vasont.Inspire.SDK.InspireClient
+- uid: Vasont.Inspire.SDK.Projects
+  commentId: N:Vasont.Inspire.SDK.Projects
+  name: Vasont.Inspire.SDK.Projects
+  nameWithType: Vasont.Inspire.SDK.Projects
+  fullName: Vasont.Inspire.SDK.Projects
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vasont.Inspire.SDK
+  commentId: N:Vasont.Inspire.SDK
+  name: Vasont.Inspire.SDK
+  nameWithType: Vasont.Inspire.SDK
+  fullName: Vasont.Inspire.SDK
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Vasont.Inspire.Models.Projects.ProjectModel
+  commentId: T:Vasont.Inspire.Models.Projects.ProjectModel
+  parent: Vasont.Inspire.Models.Projects
+  isExternal: true
+  name: ProjectModel
+  nameWithType: ProjectModel
+  fullName: Vasont.Inspire.Models.Projects.ProjectModel
+- uid: Vasont.Inspire.SDK.Projects.ProjectExtensions.GetProjects*
+  commentId: Overload:Vasont.Inspire.SDK.Projects.ProjectExtensions.GetProjects
+  name: GetProjects
+  nameWithType: ProjectExtensions.GetProjects
+  fullName: Vasont.Inspire.SDK.Projects.ProjectExtensions.GetProjects
+- uid: System.Collections.Generic.List{Vasont.Inspire.Models.Projects.ProjectModel}
+  commentId: T:System.Collections.Generic.List{Vasont.Inspire.Models.Projects.ProjectModel}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<ProjectModel>
+  nameWithType: List<ProjectModel>
+  fullName: System.Collections.Generic.List<Vasont.Inspire.Models.Projects.ProjectModel>
+  nameWithType.vb: List(Of ProjectModel)
+  fullName.vb: System.Collections.Generic.List(Of Vasont.Inspire.Models.Projects.ProjectModel)
+  name.vb: List(Of ProjectModel)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Vasont.Inspire.Models.Projects.ProjectModel
+    name: ProjectModel
+    nameWithType: ProjectModel
+    fullName: Vasont.Inspire.Models.Projects.ProjectModel
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Vasont.Inspire.Models.Projects.ProjectModel
+    name: ProjectModel
+    nameWithType: ProjectModel
+    fullName: Vasont.Inspire.Models.Projects.ProjectModel
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vasont.Inspire.Models.Projects
+  commentId: N:Vasont.Inspire.Models.Projects
+  isExternal: true
+  name: Vasont.Inspire.Models.Projects
+  nameWithType: Vasont.Inspire.Models.Projects
+  fullName: Vasont.Inspire.Models.Projects
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: Vasont.Inspire.SDK.Projects.ProjectExtensions.GetProject*
+  commentId: Overload:Vasont.Inspire.SDK.Projects.ProjectExtensions.GetProject
+  name: GetProject
+  nameWithType: ProjectExtensions.GetProject
+  fullName: Vasont.Inspire.SDK.Projects.ProjectExtensions.GetProject
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  name: Int64
+  nameWithType: Int64
+  fullName: System.Int64
+- uid: Vasont.Inspire.SDK.Projects.ProjectExtensions.GetRecentlyOpenedProjects*
+  commentId: Overload:Vasont.Inspire.SDK.Projects.ProjectExtensions.GetRecentlyOpenedProjects
+  name: GetRecentlyOpenedProjects
+  nameWithType: ProjectExtensions.GetRecentlyOpenedProjects
+  fullName: Vasont.Inspire.SDK.Projects.ProjectExtensions.GetRecentlyOpenedProjects
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Vasont.Inspire.SDK.Projects.ProjectExtensions.GetAssignedProjects*
+  commentId: Overload:Vasont.Inspire.SDK.Projects.ProjectExtensions.GetAssignedProjects
+  name: GetAssignedProjects
+  nameWithType: ProjectExtensions.GetAssignedProjects
+  fullName: Vasont.Inspire.SDK.Projects.ProjectExtensions.GetAssignedProjects
+- uid: Vasont.Inspire.Models.Security.MinimalUserModel
+  commentId: T:Vasont.Inspire.Models.Security.MinimalUserModel
+  isExternal: true
+- uid: Vasont.Inspire.SDK.Projects.ProjectExtensions.GetAvailableParticipants*
+  commentId: Overload:Vasont.Inspire.SDK.Projects.ProjectExtensions.GetAvailableParticipants
+  name: GetAvailableParticipants
+  nameWithType: ProjectExtensions.GetAvailableParticipants
+  fullName: Vasont.Inspire.SDK.Projects.ProjectExtensions.GetAvailableParticipants
+- uid: System.Collections.Generic.List{Vasont.Inspire.Models.Security.MinimalUserModel}
+  commentId: T:System.Collections.Generic.List{Vasont.Inspire.Models.Security.MinimalUserModel}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<MinimalUserModel>
+  nameWithType: List<MinimalUserModel>
+  fullName: System.Collections.Generic.List<Vasont.Inspire.Models.Security.MinimalUserModel>
+  nameWithType.vb: List(Of MinimalUserModel)
+  fullName.vb: System.Collections.Generic.List(Of Vasont.Inspire.Models.Security.MinimalUserModel)
+  name.vb: List(Of MinimalUserModel)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Vasont.Inspire.Models.Security.MinimalUserModel
+    name: MinimalUserModel
+    nameWithType: MinimalUserModel
+    fullName: Vasont.Inspire.Models.Security.MinimalUserModel
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Vasont.Inspire.Models.Security.MinimalUserModel
+    name: MinimalUserModel
+    nameWithType: MinimalUserModel
+    fullName: Vasont.Inspire.Models.Security.MinimalUserModel
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vasont.Inspire.Models.Projects.ProjectActivityModel
+  commentId: T:Vasont.Inspire.Models.Projects.ProjectActivityModel
+  parent: Vasont.Inspire.Models.Projects
+  isExternal: true
+  name: ProjectActivityModel
+  nameWithType: ProjectActivityModel
+  fullName: Vasont.Inspire.Models.Projects.ProjectActivityModel
+- uid: Vasont.Inspire.SDK.Projects.ProjectExtensions.GetActivities*
+  commentId: Overload:Vasont.Inspire.SDK.Projects.ProjectExtensions.GetActivities
+  name: GetActivities
+  nameWithType: ProjectExtensions.GetActivities
+  fullName: Vasont.Inspire.SDK.Projects.ProjectExtensions.GetActivities
+- uid: System.Collections.Generic.List{Vasont.Inspire.Models.Projects.ProjectActivityModel}
+  commentId: T:System.Collections.Generic.List{Vasont.Inspire.Models.Projects.ProjectActivityModel}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<ProjectActivityModel>
+  nameWithType: List<ProjectActivityModel>
+  fullName: System.Collections.Generic.List<Vasont.Inspire.Models.Projects.ProjectActivityModel>
+  nameWithType.vb: List(Of ProjectActivityModel)
+  fullName.vb: System.Collections.Generic.List(Of Vasont.Inspire.Models.Projects.ProjectActivityModel)
+  name.vb: List(Of ProjectActivityModel)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Vasont.Inspire.Models.Projects.ProjectActivityModel
+    name: ProjectActivityModel
+    nameWithType: ProjectActivityModel
+    fullName: Vasont.Inspire.Models.Projects.ProjectActivityModel
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Vasont.Inspire.Models.Projects.ProjectActivityModel
+    name: ProjectActivityModel
+    nameWithType: ProjectActivityModel
+    fullName: Vasont.Inspire.Models.Projects.ProjectActivityModel
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vasont.Inspire.Models.Projects.ProjectAssignmentModel
+  commentId: T:Vasont.Inspire.Models.Projects.ProjectAssignmentModel
+  parent: Vasont.Inspire.Models.Projects
+  isExternal: true
+  name: ProjectAssignmentModel
+  nameWithType: ProjectAssignmentModel
+  fullName: Vasont.Inspire.Models.Projects.ProjectAssignmentModel
+- uid: Vasont.Inspire.SDK.Projects.ProjectExtensions.GetProjectAssignments*
+  commentId: Overload:Vasont.Inspire.SDK.Projects.ProjectExtensions.GetProjectAssignments
+  name: GetProjectAssignments
+  nameWithType: ProjectExtensions.GetProjectAssignments
+  fullName: Vasont.Inspire.SDK.Projects.ProjectExtensions.GetProjectAssignments
+- uid: System.Collections.Generic.List{Vasont.Inspire.Models.Projects.ProjectAssignmentModel}
+  commentId: T:System.Collections.Generic.List{Vasont.Inspire.Models.Projects.ProjectAssignmentModel}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<ProjectAssignmentModel>
+  nameWithType: List<ProjectAssignmentModel>
+  fullName: System.Collections.Generic.List<Vasont.Inspire.Models.Projects.ProjectAssignmentModel>
+  nameWithType.vb: List(Of ProjectAssignmentModel)
+  fullName.vb: System.Collections.Generic.List(Of Vasont.Inspire.Models.Projects.ProjectAssignmentModel)
+  name.vb: List(Of ProjectAssignmentModel)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Vasont.Inspire.Models.Projects.ProjectAssignmentModel
+    name: ProjectAssignmentModel
+    nameWithType: ProjectAssignmentModel
+    fullName: Vasont.Inspire.Models.Projects.ProjectAssignmentModel
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Vasont.Inspire.Models.Projects.ProjectAssignmentModel
+    name: ProjectAssignmentModel
+    nameWithType: ProjectAssignmentModel
+    fullName: Vasont.Inspire.Models.Projects.ProjectAssignmentModel
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vasont.Inspire.SDK.Projects.ProjectExtensions.DeleteProject*
+  commentId: Overload:Vasont.Inspire.SDK.Projects.ProjectExtensions.DeleteProject
+  name: DeleteProject
+  nameWithType: ProjectExtensions.DeleteProject
+  fullName: Vasont.Inspire.SDK.Projects.ProjectExtensions.DeleteProject
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Vasont.Inspire.Models.Projects.ProjectParticipantModel
+  commentId: T:Vasont.Inspire.Models.Projects.ProjectParticipantModel
+  parent: Vasont.Inspire.Models.Projects
+  isExternal: true
+  name: ProjectParticipantModel
+  nameWithType: ProjectParticipantModel
+  fullName: Vasont.Inspire.Models.Projects.ProjectParticipantModel
+- uid: Vasont.Inspire.SDK.Projects.ProjectExtensions.DeleteProjectParticipant*
+  commentId: Overload:Vasont.Inspire.SDK.Projects.ProjectExtensions.DeleteProjectParticipant
+  name: DeleteProjectParticipant
+  nameWithType: ProjectExtensions.DeleteProjectParticipant
+  fullName: Vasont.Inspire.SDK.Projects.ProjectExtensions.DeleteProjectParticipant
+- uid: Vasont.Inspire.SDK.Projects.ProjectExtensions.DeleteProjectAssignment*
+  commentId: Overload:Vasont.Inspire.SDK.Projects.ProjectExtensions.DeleteProjectAssignment
+  name: DeleteProjectAssignment
+  nameWithType: ProjectExtensions.DeleteProjectAssignment
+  fullName: Vasont.Inspire.SDK.Projects.ProjectExtensions.DeleteProjectAssignment
+- uid: Vasont.Inspire.SDK.Projects.ProjectExtensions.DeleteProjectAssignmentComponent*
+  commentId: Overload:Vasont.Inspire.SDK.Projects.ProjectExtensions.DeleteProjectAssignmentComponent
+  name: DeleteProjectAssignmentComponent
+  nameWithType: ProjectExtensions.DeleteProjectAssignmentComponent
+  fullName: Vasont.Inspire.SDK.Projects.ProjectExtensions.DeleteProjectAssignmentComponent
+- uid: Vasont.Inspire.Models.Projects.ProjectFolderItemModel
+  commentId: T:Vasont.Inspire.Models.Projects.ProjectFolderItemModel
+  parent: Vasont.Inspire.Models.Projects
+  isExternal: true
+  name: ProjectFolderItemModel
+  nameWithType: ProjectFolderItemModel
+  fullName: Vasont.Inspire.Models.Projects.ProjectFolderItemModel
+- uid: Vasont.Inspire.SDK.Projects.ProjectExtensions.DeleteProjectFolder*
+  commentId: Overload:Vasont.Inspire.SDK.Projects.ProjectExtensions.DeleteProjectFolder
+  name: DeleteProjectFolder
+  nameWithType: ProjectExtensions.DeleteProjectFolder
+  fullName: Vasont.Inspire.SDK.Projects.ProjectExtensions.DeleteProjectFolder
+- uid: Vasont.Inspire.SDK.Projects.ProjectExtensions.CreateProject*
+  commentId: Overload:Vasont.Inspire.SDK.Projects.ProjectExtensions.CreateProject
+  name: CreateProject
+  nameWithType: ProjectExtensions.CreateProject
+  fullName: Vasont.Inspire.SDK.Projects.ProjectExtensions.CreateProject
+- uid: Vasont.Inspire.SDK.Projects.ProjectExtensions.CreateProjectParticipants*
+  commentId: Overload:Vasont.Inspire.SDK.Projects.ProjectExtensions.CreateProjectParticipants
+  name: CreateProjectParticipants
+  nameWithType: ProjectExtensions.CreateProjectParticipants
+  fullName: Vasont.Inspire.SDK.Projects.ProjectExtensions.CreateProjectParticipants
+- uid: System.Collections.Generic.List{Vasont.Inspire.Models.Projects.ProjectParticipantModel}
+  commentId: T:System.Collections.Generic.List{Vasont.Inspire.Models.Projects.ProjectParticipantModel}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<ProjectParticipantModel>
+  nameWithType: List<ProjectParticipantModel>
+  fullName: System.Collections.Generic.List<Vasont.Inspire.Models.Projects.ProjectParticipantModel>
+  nameWithType.vb: List(Of ProjectParticipantModel)
+  fullName.vb: System.Collections.Generic.List(Of Vasont.Inspire.Models.Projects.ProjectParticipantModel)
+  name.vb: List(Of ProjectParticipantModel)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Vasont.Inspire.Models.Projects.ProjectParticipantModel
+    name: ProjectParticipantModel
+    nameWithType: ProjectParticipantModel
+    fullName: Vasont.Inspire.Models.Projects.ProjectParticipantModel
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Vasont.Inspire.Models.Projects.ProjectParticipantModel
+    name: ProjectParticipantModel
+    nameWithType: ProjectParticipantModel
+    fullName: Vasont.Inspire.Models.Projects.ProjectParticipantModel
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vasont.Inspire.SDK.Projects.ProjectExtensions.CreateProjectAssignment*
+  commentId: Overload:Vasont.Inspire.SDK.Projects.ProjectExtensions.CreateProjectAssignment
+  name: CreateProjectAssignment
+  nameWithType: ProjectExtensions.CreateProjectAssignment
+  fullName: Vasont.Inspire.SDK.Projects.ProjectExtensions.CreateProjectAssignment
+- uid: Vasont.Inspire.SDK.Projects.ProjectExtensions.CreateProjectFolder*
+  commentId: Overload:Vasont.Inspire.SDK.Projects.ProjectExtensions.CreateProjectFolder
+  name: CreateProjectFolder
+  nameWithType: ProjectExtensions.CreateProjectFolder
+  fullName: Vasont.Inspire.SDK.Projects.ProjectExtensions.CreateProjectFolder
+- uid: Vasont.Inspire.Models.Components.MinimalComponentModel
+  commentId: T:Vasont.Inspire.Models.Components.MinimalComponentModel
+  parent: Vasont.Inspire.Models.Components
+  isExternal: true
+  name: MinimalComponentModel
+  nameWithType: MinimalComponentModel
+  fullName: Vasont.Inspire.Models.Components.MinimalComponentModel
+- uid: Vasont.Inspire.SDK.Projects.ProjectExtensions.AddComponentsToFolder*
+  commentId: Overload:Vasont.Inspire.SDK.Projects.ProjectExtensions.AddComponentsToFolder
+  name: AddComponentsToFolder
+  nameWithType: ProjectExtensions.AddComponentsToFolder
+  fullName: Vasont.Inspire.SDK.Projects.ProjectExtensions.AddComponentsToFolder
+- uid: System.Collections.Generic.List{Vasont.Inspire.Models.Components.MinimalComponentModel}
+  commentId: T:System.Collections.Generic.List{Vasont.Inspire.Models.Components.MinimalComponentModel}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<MinimalComponentModel>
+  nameWithType: List<MinimalComponentModel>
+  fullName: System.Collections.Generic.List<Vasont.Inspire.Models.Components.MinimalComponentModel>
+  nameWithType.vb: List(Of MinimalComponentModel)
+  fullName.vb: System.Collections.Generic.List(Of Vasont.Inspire.Models.Components.MinimalComponentModel)
+  name.vb: List(Of MinimalComponentModel)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Vasont.Inspire.Models.Components.MinimalComponentModel
+    name: MinimalComponentModel
+    nameWithType: MinimalComponentModel
+    fullName: Vasont.Inspire.Models.Components.MinimalComponentModel
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Vasont.Inspire.Models.Components.MinimalComponentModel
+    name: MinimalComponentModel
+    nameWithType: MinimalComponentModel
+    fullName: Vasont.Inspire.Models.Components.MinimalComponentModel
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vasont.Inspire.Models.Components
+  commentId: N:Vasont.Inspire.Models.Components
+  isExternal: true
+  name: Vasont.Inspire.Models.Components
+  nameWithType: Vasont.Inspire.Models.Components
+  fullName: Vasont.Inspire.Models.Components
+- uid: Vasont.Inspire.Models.Transfers.ExportRequestModel
+  commentId: T:Vasont.Inspire.Models.Transfers.ExportRequestModel
+  parent: Vasont.Inspire.Models.Transfers
+  isExternal: true
+  name: ExportRequestModel
+  nameWithType: ExportRequestModel
+  fullName: Vasont.Inspire.Models.Transfers.ExportRequestModel
+- uid: Vasont.Inspire.SDK.Projects.ProjectExtensions.ExportComponents*
+  commentId: Overload:Vasont.Inspire.SDK.Projects.ProjectExtensions.ExportComponents
+  name: ExportComponents
+  nameWithType: ProjectExtensions.ExportComponents
+  fullName: Vasont.Inspire.SDK.Projects.ProjectExtensions.ExportComponents
+- uid: Vasont.Inspire.Models.Transfers
+  commentId: N:Vasont.Inspire.Models.Transfers
+  isExternal: true
+  name: Vasont.Inspire.Models.Transfers
+  nameWithType: Vasont.Inspire.Models.Transfers
+  fullName: Vasont.Inspire.Models.Transfers
+- uid: Vasont.Inspire.SDK.Projects.ProjectExtensions.UpdateProject*
+  commentId: Overload:Vasont.Inspire.SDK.Projects.ProjectExtensions.UpdateProject
+  name: UpdateProject
+  nameWithType: ProjectExtensions.UpdateProject
+  fullName: Vasont.Inspire.SDK.Projects.ProjectExtensions.UpdateProject
+- uid: Vasont.Inspire.SDK.Projects.ProjectExtensions.UpdateProjectParticipants*
+  commentId: Overload:Vasont.Inspire.SDK.Projects.ProjectExtensions.UpdateProjectParticipants
+  name: UpdateProjectParticipants
+  nameWithType: ProjectExtensions.UpdateProjectParticipants
+  fullName: Vasont.Inspire.SDK.Projects.ProjectExtensions.UpdateProjectParticipants
+- uid: Vasont.Inspire.SDK.Projects.ProjectExtensions.UpdateProjectAssignment*
+  commentId: Overload:Vasont.Inspire.SDK.Projects.ProjectExtensions.UpdateProjectAssignment
+  name: UpdateProjectAssignment
+  nameWithType: ProjectExtensions.UpdateProjectAssignment
+  fullName: Vasont.Inspire.SDK.Projects.ProjectExtensions.UpdateProjectAssignment
+- uid: Vasont.Inspire.SDK.Projects.ProjectExtensions.UpdateProjectAssignmentCompletionStatus*
+  commentId: Overload:Vasont.Inspire.SDK.Projects.ProjectExtensions.UpdateProjectAssignmentCompletionStatus
+  name: UpdateProjectAssignmentCompletionStatus
+  nameWithType: ProjectExtensions.UpdateProjectAssignmentCompletionStatus
+  fullName: Vasont.Inspire.SDK.Projects.ProjectExtensions.UpdateProjectAssignmentCompletionStatus
+- uid: Vasont.Inspire.SDK.Projects.ProjectExtensions.RenameProjectFolder*
+  commentId: Overload:Vasont.Inspire.SDK.Projects.ProjectExtensions.RenameProjectFolder
+  name: RenameProjectFolder
+  nameWithType: ProjectExtensions.RenameProjectFolder
+  fullName: Vasont.Inspire.SDK.Projects.ProjectExtensions.RenameProjectFolder
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Vasont.Inspire.SDK.Projects.ProjectExtensions.MoveProjectFolder*
+  commentId: Overload:Vasont.Inspire.SDK.Projects.ProjectExtensions.MoveProjectFolder
+  name: MoveProjectFolder
+  nameWithType: ProjectExtensions.MoveProjectFolder
+  fullName: Vasont.Inspire.SDK.Projects.ProjectExtensions.MoveProjectFolder
