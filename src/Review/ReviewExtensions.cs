@@ -53,11 +53,11 @@ namespace Vasont.Inspire.SDK.Review
         }
 
         /// <summary>
-        /// This method is used to retrieve a reviews browse result.
+        /// This method is used to retrieve a review browse result.
         /// </summary>
         /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
         /// <param name="model">Contains the model for review browsing.</param>
-        /// <returns>Returns a list of <see cref="ReviewBrowseResultModel"/> objects.</returns>
+        /// <returns>Returns a <see cref="ReviewBrowseResultModel"/> object.</returns>
         public static ReviewBrowseResultModel GetReviews(this InspireClient client, ReviewBrowseQueryModel model)
         {
             var request = client.CreateRequest($"{client.Config.RoutePrefix}/Reviews/Browse", HttpMethod.Post);
@@ -101,10 +101,10 @@ namespace Vasont.Inspire.SDK.Review
         }
 
         /// <summary>
-        /// This REST endpoint retrieves the users that have the permissions to create reviews.
+        /// This method retrieves the users that that are coordinators.
         /// </summary>
         /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
-        /// <returns>Returns a <see cref="ReviewDetailModel"/> model if found.</returns>
+        /// <returns>Returns a list of <see cref="MinimalUserModel"/> objects if found.</returns>
         public static List<MinimalUserModel> GetReviewCoordinators(this InspireClient client)
         {
             var request = client.CreateRequest($"{client.Config.RoutePrefix}/Reviews/Coordinators");
@@ -116,7 +116,7 @@ namespace Vasont.Inspire.SDK.Review
         /// </summary>
         /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
         /// <param name="model">Contains the review model to update.</param>
-        /// <returns>Returns a list of <see cref="ReviewModel"/> objects.</returns>
+        /// <returns>Returns the updated <see cref="ReviewModel"/> object.</returns>
         public static ReviewModel UpdateReview(this InspireClient client, ReviewModel model)
         {
             var request = client.CreateRequest($"{client.Config.RoutePrefix}/Reviews/{model.ReviewId}", HttpMethod.Put);
@@ -128,7 +128,7 @@ namespace Vasont.Inspire.SDK.Review
         /// </summary>
         /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
         /// <param name="model">Contains the changed components query model.</param>
-        /// <returns>Returns a list of <see cref="WorkflowTemplateModel"/> objects.</returns>
+        /// <returns>Returns a list of <see cref="ReviewerComponentModel"/> objects.</returns>
         public static List<ReviewerComponentModel> UpdateReviewComponents(this InspireClient client, ReviewChangedComponentQueryModel model)
         {
             var request = client.CreateRequest($"{client.Config.RoutePrefix}/Reviews/{model.ReviewId}/Changed", HttpMethod.Post);
@@ -136,13 +136,13 @@ namespace Vasont.Inspire.SDK.Review
         }
 
         /// <summary>
-        /// This REST method is used to update a review component states.
+        /// This method is used to update a specified review component state.
         /// </summary>
         /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
         /// <param name="reviewId">Contains the identity of the review to update.</param>
         /// <param name="reviewComponentId">Contains the identity of the review component.</param>
         /// <param name="completed">Contains a value indicating whether the review component should be completed.</param>
-        /// <returns>Returns a list of <see cref="WorkflowTemplateModel"/> objects.</returns>
+        /// <returns>Returns the updated <see cref="ReviewerComponentModel"/> object.</returns>
         public static ReviewerComponentModel UpdateReviewComponentState(this InspireClient client, long reviewId, long reviewComponentId, bool completed = true)
         {
             var request = client.CreateRequest($"{client.Config.RoutePrefix}/Reviews/{reviewId}/Components/{reviewComponentId}/State?completed={completed}", HttpMethod.Put);
@@ -154,7 +154,7 @@ namespace Vasont.Inspire.SDK.Review
         /// </summary>
         /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
         /// <param name="model">Contains the review model to create the new review.</param>
-        /// <returns>Returns a list of <see cref="WorkflowTemplateModel"/> objects.</returns>
+        /// <returns>Returns the new <see cref="ReviewModel"/> object.</returns>
         public static ReviewModel CreateReview(this InspireClient client, ReviewModel model)
         {
             var request = client.CreateRequest($"{client.Config.RoutePrefix}/Reviews", HttpMethod.Post);
@@ -165,8 +165,8 @@ namespace Vasont.Inspire.SDK.Review
         /// This method is used to complete a reviewer session.
         /// </summary>
         /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
-        /// <param name="model">Contains the review model to create the new review.</param>
-        /// <returns>Returns a list of <see cref="WorkflowTemplateModel"/> objects.</returns>
+        /// <param name="model">Contains the review model to complete the session.</param>
+        /// <returns>Returns the completed <see cref="ReviewModel"/> object.</returns>
         public static ReviewModel CompleteReviewerSession(this InspireClient client, ReviewModel model)
         {
             var request = client.CreateRequest($"{client.Config.RoutePrefix}/Reviews/{model.ReviewId}/CompleteReviewing", HttpMethod.Put);
@@ -177,8 +177,8 @@ namespace Vasont.Inspire.SDK.Review
         /// This method is used to complete a review.
         /// </summary>
         /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
-        /// <param name="model">Contains the review model to create the new review.</param>
-        /// <returns>Returns a list of <see cref="WorkflowTemplateModel"/> objects.</returns>
+        /// <param name="model">Contains the review model to complete.</param>
+        /// <returns>Returns the completed <see cref="ReviewModel"/> object.</returns>
         public static ReviewModel CompleteReview(this InspireClient client, ReviewModel model)
         {
             var request = client.CreateRequest($"{client.Config.RoutePrefix}/Reviews/{model.ReviewId}/Complete", HttpMethod.Put);
@@ -190,8 +190,8 @@ namespace Vasont.Inspire.SDK.Review
         /// </summary>
         /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
         /// <param name="reviewId">Contains the identity of the review.</param>
-        /// <param name="model">Contains the review model to create the new review.</param>
-        /// <returns>Returns a list of <see cref="WorkflowTemplateModel"/> objects.</returns>
+        /// <param name="model">Contains the <see cref="ReviewCancellationModel"/> to be used to cancel the review.</param>
+        /// <returns>Returns a boolean value indicating if the review was canceled successfully.</returns>
         public static bool CancelReview(this InspireClient client, long reviewId, ReviewCancellationModel model)
         {
             var request = client.CreateRequest($"{client.Config.RoutePrefix}/Reviews/{reviewId}/Cancel", HttpMethod.Put);
@@ -203,8 +203,8 @@ namespace Vasont.Inspire.SDK.Review
         /// </summary>
         /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
         /// <param name="reviewId">Contains the identity of the review.</param>
-        /// <param name="model">Contains the <see cref="ReviewCancellationModel"/> to be used to cancel the review.</param>
-        /// <returns>Returns a list of <see cref="WorkflowTemplateModel"/> objects.</returns>
+        /// <param name="model">Contains the <see cref="ReviewCancellationModel"/> to be used to delete the review.</param>
+        /// <returns>Returns a boolean value indicating if the review was deleted successfully.</returns>
         public static bool DeleteReview(this InspireClient client, long reviewId, ReviewCancellationModel model)
         {
             var request = client.CreateRequest($"{client.Config.RoutePrefix}/Reviews/{reviewId}", HttpMethod.Delete);

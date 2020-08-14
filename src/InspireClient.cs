@@ -114,11 +114,8 @@ namespace Vasont.Inspire.SDK
         protected TokenResponse TokenResponse { get; set; }
 
         /// <summary>
-        /// Gets the access token.
+        /// Gets the value of the access token.
         /// </summary>
-        /// <value>
-        /// The access token.
-        /// </value>
         protected string AccessToken => this.TokenResponse?.AccessToken ?? string.Empty;
 
         /// <summary>

@@ -19,7 +19,7 @@ namespace Vasont.Inspire.SDK.Security
         #region Public Extension Methods
 
         /// <summary>
-        /// This method is used to retrieve a specific role model from the system.
+        /// This method is used to retrieve a specific <see cref="RoleModel"/> from the system.
         /// </summary>
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <param name="roleId">The role identity.</param>
@@ -45,7 +45,7 @@ namespace Vasont.Inspire.SDK.Security
         }
 
         /// <summary>
-        /// This method is used to create a new role, and return the new RoleModel.
+        /// This method is used to create a new role.
         /// </summary>
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <param name="inputModel">Contains the <see cref="RoleModel"/> input.</param>
@@ -62,7 +62,7 @@ namespace Vasont.Inspire.SDK.Security
         }
 
         /// <summary>
-        /// This method is used to update an existing role, and return the updated RoleModel.
+        /// This method is used to update an existing role.
         /// </summary>
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <param name="roleId">Contains the role identity.</param>

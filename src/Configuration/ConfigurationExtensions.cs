@@ -19,7 +19,7 @@ namespace Vasont.Inspire.SDK.Configuration
 
     /// <summary>
     /// This class extends the <see cref="InspireClient"/> class to include methods for calling
-    /// application API endpoints.
+    /// configuration API endpoints.
     /// </summary>
     public static class ConfigurationExtensions
     {
@@ -83,11 +83,11 @@ namespace Vasont.Inspire.SDK.Configuration
         }
 
         /// <summary>
-        /// This Method is used to create a new attribute.
+        /// This Method is used to delete the specified attribute.
         /// </summary>
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <param name="attributeId">Contains the attribute identity to delete.</param>
-        /// <returns>Returns the results of the action.</returns>
+        /// <returns>Returns a boolean value indicating whether the action succeeded or not.</returns>
         public static bool RemoveAttribute(this InspireClient client, long attributeId)
         {
             var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/Attributes/{attributeId}", HttpMethod.Delete);
@@ -168,11 +168,11 @@ namespace Vasont.Inspire.SDK.Configuration
         }
 
         /// <summary>
-        /// This Method is used to create a new attribute.
+        /// This Method is used to delete the specified attribute.
         /// </summary>
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <param name="attributeId">Contains the attribute identity to delete.</param>
-        /// <returns>Returns the results of the action.</returns>
+        /// <returns>Returns a boolean value indicating whether the action succeeded or not.</returns>
         public static bool RemoveProfileAttribute(this InspireClient client, long attributeId)
         {
             var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/ProfileAttributes/{attributeId}", HttpMethod.Delete);
@@ -257,11 +257,11 @@ namespace Vasont.Inspire.SDK.Configuration
         }
 
         /// <summary>
-        /// This Method is used to remove a component type.
+        /// This Method is used to delete the specified component type.
         /// </summary>
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <param name="componentTypeId">Contains the component type identity to delete.</param>
-        /// <returns>Returns the results of the action.</returns>
+        /// <returns>Returns a boolean value indicating whether the action succeeded or not.</returns>
         public static bool RemoveComponentType(this InspireClient client, long componentTypeId)
         {
             var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/ComponentTypes/{componentTypeId}", HttpMethod.Delete);
@@ -331,11 +331,11 @@ namespace Vasont.Inspire.SDK.Configuration
         }
 
         /// <summary>
-        /// This Method is used to create a new attribute.
+        /// This Method is used to delete the specified attribute.
         /// </summary>
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <param name="elementId">Contains the element identity to delete.</param>
-        /// <returns>Returns the results of the action.</returns>
+        /// <returns>Returns a boolean value indicating whether the action succeeded or not.</returns>
         public static bool RemoveElement(this InspireClient client, long elementId)
         {
             var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/Elements/{elementId}", HttpMethod.Delete);
@@ -351,7 +351,7 @@ namespace Vasont.Inspire.SDK.Configuration
         /// This method is used to retrieve a list of exports.
         /// </summary>
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
-        /// <returns>Returns a list of <see cref="ExportConfigurationModel"/> from the application.</returns>
+        /// <returns>Returns a list of <see cref="ExportConfigurationModel"/> objects from the application.</returns>
         public static List<ExportConfigurationModel> GetExports(this InspireClient client)
         {
             var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/Exports");
@@ -391,8 +391,8 @@ namespace Vasont.Inspire.SDK.Configuration
         /// This Method is used to create a new export.
         /// </summary>
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
-        /// <param name="model">Contains the export model to create.</param>
-        /// <returns>Returns a specific <see cref="ElementModel"/> that was created.</returns>
+        /// <param name="model">Contains the <see cref="ExportConfigurationModel"/> to create.</param>
+        /// <returns>Returns the new <see cref="ExportConfigurationModel"/> that was created.</returns>
         public static ExportConfigurationModel CreateExport(this InspireClient client, ExportConfigurationModel model)
         {
             if (model == null)
@@ -405,11 +405,11 @@ namespace Vasont.Inspire.SDK.Configuration
         }
 
         /// <summary>
-        /// This Method is used to create remove a export.
+        /// This Method is used to delete a specified export.
         /// </summary>
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <param name="exportId">Contains the export identity to delete.</param>
-        /// <returns>Returns the results of the action.</returns>
+        /// <returns>Returns a boolean value indicating whether the action succeeded or not.</returns>
         public static bool RemoveExport(this InspireClient client, long exportId)
         {
             var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/Exports/{exportId}", HttpMethod.Delete);
@@ -421,7 +421,7 @@ namespace Vasont.Inspire.SDK.Configuration
         /// This method is used to retrieve a list of export plugins.
         /// </summary>
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
-        /// <returns>Returns a list of <see cref="PluginModel"/> from the application.</returns>
+        /// <returns>Returns a list of <see cref="PluginModel"/> objects from the application.</returns>
         public static List<PluginModel> GetExportPlugins(this InspireClient client)
         {
             var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/Exports/Plugins");
@@ -429,11 +429,11 @@ namespace Vasont.Inspire.SDK.Configuration
         }
 
         /// <summary>
-        /// This method is used to retrieve a list of export plugin parameters.
+        /// This method is used to retrieve a list of export plugin parameters for a specified plugin.
         /// </summary>
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <param name="pluginId">Contains the plugin identity to retrieve metadata for.</param>
-        /// <returns>Returns a list of <see cref="PluginParameterModel"/> from the application.</returns>
+        /// <returns>Returns a list of <see cref="PluginParameterModel"/> objects from the application.</returns>
         public static List<PluginParameterModel> GetExportPluginParameters(this InspireClient client, long pluginId)
         {
             var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/Exports/Plugins/{pluginId}/Parameters");
@@ -446,7 +446,7 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <param name="componentTypeId">Contains the specific export component type.</param>
         /// <param name="exportType">Contains the <see cref="ExportType"/> type that will be retrieved, Standard is default.</param>
-        /// <returns>Returns a list of <see cref="PluginParameterModel"/> from the application.</returns>
+        /// <returns>Returns a list of <see cref="ExportSelectionModel"/> objects from the application.</returns>
         public static ExportSelectionModel GetExportComponentType(this InspireClient client, long componentTypeId, ExportType exportType = ExportType.Standard)
         {
             var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/Exports/ComponentTypes/{componentTypeId}?exportType={exportType}");
@@ -530,11 +530,11 @@ namespace Vasont.Inspire.SDK.Configuration
         }
 
         /// <summary>
-        /// This Method is used to remove a XML link type.
+        /// This Method is used to remove the specified XML link type.
         /// </summary>
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <param name="xmlLinkTypeId">Contains the identity of record to delete.</param>
-        /// <returns>Returns the results of the action.</returns>
+        /// <returns>Returns a boolean value indicating whether the action succeeded or not.</returns>
         public static bool RemoveXmlLinkType(this InspireClient client, long xmlLinkTypeId)
         {
             var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/XmlLinkTypes/{xmlLinkTypeId}", HttpMethod.Delete);
@@ -547,7 +547,7 @@ namespace Vasont.Inspire.SDK.Configuration
         #region Public Relation Methods
 
         /// <summary>
-        /// This method is used to retrieve a list of Relation types.
+        /// This method is used to retrieve a list of Relation.
         /// </summary>
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <returns>Returns a list of <see cref="RelationModel"/> from the application.</returns>
@@ -558,11 +558,11 @@ namespace Vasont.Inspire.SDK.Configuration
         }
 
         /// <summary>
-        /// This method is used to retrieve a specific Relation type.
+        /// This method is used to retrieve a specific Relation.
         /// </summary>
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <param name="relationId">Contains the record identity to retrieve.</param>
-        /// <returns>Returns a specific <see cref="XmlLinkTypeModel"/> from the application.</returns>
+        /// <returns>Returns a specific <see cref="RelationModel"/> from the application.</returns>
         public static RelationModel GetRelation(this InspireClient client, long relationId)
         {
             var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/Relations/{relationId}");
@@ -604,11 +604,11 @@ namespace Vasont.Inspire.SDK.Configuration
         }
 
         /// <summary>
-        /// This Method is used to remove a relation.
+        /// This Method is used to remove the specified relation.
         /// </summary>
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <param name="relationId">Contains the identity of record to delete.</param>
-        /// <returns>Returns the results of the action.</returns>
+        /// <returns>Returns a boolean value indicating whether the action succeeded or not.</returns>
         public static bool RemoveRelation(this InspireClient client, long relationId)
         {
             var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/Relations/{relationId}", HttpMethod.Delete);
@@ -666,11 +666,11 @@ namespace Vasont.Inspire.SDK.Configuration
         }
 
         /// <summary>
-        /// This Method is used to remove a tag.
+        /// This Method is used to remove the specified tag.
         /// </summary>
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <param name="tagId">Contains the identity of record to delete.</param>
-        /// <returns>Returns the results of the action.</returns>
+        /// <returns>Returns a boolean value indicating whether the action succeeded or not.</returns>
         public static bool RemoveTag(this InspireClient client, long tagId)
         {
             var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/Tags/{tagId}", HttpMethod.Delete);
@@ -740,11 +740,11 @@ namespace Vasont.Inspire.SDK.Configuration
         }
 
         /// <summary>
-        /// This Method is used to remove a project activity.
+        /// This Method is used to remove the specified project activity.
         /// </summary>
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <param name="projectActivityId">Contains the identity of record to delete.</param>
-        /// <returns>Returns the results of the action.</returns>
+        /// <returns>Returns a boolean value indicating whether the action succeeded or not.</returns>
         public static bool RemoveProjectActivity(this InspireClient client, long projectActivityId)
         {
             var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/ProjectActivities/{projectActivityId}", HttpMethod.Delete);
@@ -814,11 +814,11 @@ namespace Vasont.Inspire.SDK.Configuration
         }
 
         /// <summary>
-        /// This Method is used to remove a language.
+        /// This Method is used to remove the specified language.
         /// </summary>
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <param name="languageCode">Contains the identity of record to delete.</param>
-        /// <returns>Returns the results of the action.</returns>
+        /// <returns>Returns a boolean value indicating whether the action succeeded or not.</returns>
         public static bool RemoveLanguage(this InspireClient client, string languageCode)
         {
             var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/Languages/{languageCode}", HttpMethod.Delete);
@@ -875,7 +875,7 @@ namespace Vasont.Inspire.SDK.Configuration
         /// </summary>
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <param name="model">Contains the model to create.</param>
-        /// <returns>Returns a specific <see cref="LanguageModel"/> that was created.</returns>
+        /// <returns>Returns a specific <see cref="WebhookConfigurationModel"/> that was created.</returns>
         public static WebhookConfigurationModel CreateWebHookConfiguration(this InspireClient client, WebhookConfigurationModel model)
         {
             if (model == null)
@@ -888,11 +888,11 @@ namespace Vasont.Inspire.SDK.Configuration
         }
 
         /// <summary>
-        /// This Method is used to remove a web hook configuration.
+        /// This Method is used to remove the specified web hook configuration.
         /// </summary>
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <param name="name">Contains the identity of record to delete.</param>
-        /// <returns>Returns the results of the action.</returns>
+        /// <returns>Returns a boolean value indicating whether the action succeeded or not.</returns>
         public static bool RemoveWebHookConfiguration(this InspireClient client, string name)
         {
             var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/WebhookConfigurations/{name}", HttpMethod.Delete);
@@ -902,7 +902,7 @@ namespace Vasont.Inspire.SDK.Configuration
 
         #endregion Public Webhook Configurations Methods
 
-        #region Public Extension Blacklist Methods
+        #region Public File Extension Methods
 
         /// <summary>
         /// This method is used to retrieve a list of file extensions.
@@ -962,11 +962,11 @@ namespace Vasont.Inspire.SDK.Configuration
         }
 
         /// <summary>
-        /// This Method is used to remove a file extension configuration.
+        /// This Method is used to remove the specified file extension configuration.
         /// </summary>
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <param name="extensionId">Contains the identity of record to delete.</param>
-        /// <returns>Returns the results of the action.</returns>
+        /// <returns>Returns a boolean value indicating whether the action succeeded or not.</returns>
         public static bool RemoveFileExtension(this InspireClient client, long extensionId)
         {
             var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/FileExtensions/{extensionId}", HttpMethod.Delete);
@@ -974,6 +974,6 @@ namespace Vasont.Inspire.SDK.Configuration
             return !client.HasError;
         }
 
-        #endregion Public Extension Blacklist Methods
+        #endregion Public File Extension Methods
     }
 }

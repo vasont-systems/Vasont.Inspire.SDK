@@ -56,7 +56,7 @@ namespace Vasont.Inspire.SDK.Components
         /// </summary>
         /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
         /// <param name="componentId">Contains the unique identity of the component.</param>
-        /// <returns>Returns a list of <see cref="WorkflowTemplateModel"/> objects.</returns>
+        /// <returns>Returns a list of <see cref="WorkflowModel"/> objects.</returns>
         public static WorkflowModel GetComponentWorkflowTemplate(this InspireClient client, long componentId)
         {
             var request = client.CreateRequest($"{client.Config.RoutePrefix}/Components/{componentId}/WorkflowTemplate");
@@ -68,7 +68,7 @@ namespace Vasont.Inspire.SDK.Components
         /// </summary>
         /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
         /// <param name="documentTypes">Contains a comma delimited list of document types that will be used to filter the results.</param>
-        /// <returns>Returns the <see cref="MinimalComponentModel"/> object.</returns>
+        /// <returns>Returns the a list of <see cref="MinimalComponentModel"/> objects.</returns>
         public static List<MinimalComponentModel> GetComponentTemplates(this InspireClient client, string documentTypes = "")
         {
             var request = client.CreateRequest($"{client.Config.RoutePrefix}/Components/Templates/{documentTypes}");
@@ -76,7 +76,7 @@ namespace Vasont.Inspire.SDK.Components
         }
 
         /// <summary>
-        /// This method is used to retrieve a batch of requested components.
+        /// This method is used to retrieve a specified batch of requested components.
         /// </summary>
         /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
         /// <param name="componentIds">The list of component identifiers.</param>
@@ -104,7 +104,7 @@ namespace Vasont.Inspire.SDK.Components
         /// </summary>
         /// <param name="client">The client.</param>
         /// <param name="componentId">The component identifier.</param>
-        /// <returns>Returns the detailed component model.</returns>
+        /// <returns>Returns the <see cref="DetailedComponentModel"/> object.</returns>
         public static DetailedComponentModel GetComponentDetail(this InspireClient client, long componentId)
         {
             var request = client.CreateRequest($"{client.Config.RoutePrefix}/Components/{componentId}/Details");
@@ -153,7 +153,7 @@ namespace Vasont.Inspire.SDK.Components
         /// </summary>
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <param name="componentIds">Contains the component identities.</param>
-        /// <returns>Returns a value indicating success.</returns>
+        /// <returns>Returns a boolean value indicating whether the action succeeded or not.</returns>
         public static bool ApproveComponents(this InspireClient client, List<long> componentIds)
         {
             if (componentIds == null)
@@ -183,7 +183,7 @@ namespace Vasont.Inspire.SDK.Components
         /// </summary>
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <param name="inputModel">Contains the <see cref="CreateComponentFromTemplateModel"/> input.</param>
-        /// <returns>Returns a <see cref="MinimalComponentModel"/> object if found.</returns>
+        /// <returns>Returns the new <see cref="MinimalComponentModel"/> object that was created.</returns>
         public static MinimalComponentModel CreateComponent(this InspireClient client, CreateComponentFromTemplateModel inputModel)
         {
             if (inputModel == null)
@@ -235,7 +235,7 @@ namespace Vasont.Inspire.SDK.Components
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <param name="exportId">Contains the export identity.</param>
         /// <param name="inputModel">Contains the <see cref="ExportRequestModel"/> input.</param>
-        /// <returns>Returns a <see cref="ExportRequestModel"/> object if found.</returns>
+        /// <returns>Returns the new <see cref="MinimalExportStateModel"/> object that was created.</returns>
         public static WorkerStateModel<MinimalExportStateModel> CreateComponentsExportRequest(this InspireClient client, long exportId, ExportRequestModel inputModel)
         {
             if (inputModel == null)
@@ -352,12 +352,12 @@ namespace Vasont.Inspire.SDK.Components
         }
 
         /// <summary>
-        /// Locks the components asynchronous.
+        /// This method is used to Lock the specified components.
         /// </summary>
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <param name="componentIds">Contains a list of component identifiers.</param>
         /// <returns>Returns a List of <see cref="BatchComponentLockModel"/> objects of the components that have been locked.</returns>
-        /// <exception cref="ArgumentNullException">componentIds is required</exception>
+        /// <exception cref="ArgumentNullException">The list of component identifiers is required</exception>
         public static List<BatchComponentLockModel> LockComponents(this InspireClient client, List<long> componentIds)
         {
             if (componentIds == null)
@@ -371,13 +371,13 @@ namespace Vasont.Inspire.SDK.Components
         }
 
         /// <summary>
-        /// Unlocks the components.
+        /// This method is used to Unlock the specified components.
         /// </summary>
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <param name="componentIds">Contains a list of component identifiers.</param>
         /// <param name="confirmPendingEdits">Contains a boolean value if set to <c>true</c> [confirm pending edits].</param>
         /// <returns>Returns a List of <see cref="UnlockResultModel"/> objects.</returns>
-        /// <exception cref="ArgumentNullException">componentIds is required</exception>
+        /// <exception cref="ArgumentNullException">The list of component identifiers is required</exception>
         public static List<UnlockResultModel> UnlockComponents(this InspireClient client, List<long> componentIds, bool confirmPendingEdits = false)
         {
             if (componentIds == null)
@@ -390,7 +390,7 @@ namespace Vasont.Inspire.SDK.Components
         }
 
         /// <summary>
-        /// This method is used to unlock a component.
+        /// This method is used to unlock the specified component.
         /// </summary>
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <param name="componenttId">Contains the component identity.</param>
@@ -420,12 +420,12 @@ namespace Vasont.Inspire.SDK.Components
         }
 
         /// <summary>
-        /// Deletes the specified components.
+        /// This method is used to delete the specified components.
         /// </summary>
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <param name="componentIds">Contains a list of component identifiers.</param>
         /// <returns>Returns a value indicating the success of the deletion action.</returns>
-        /// <exception cref="ArgumentNullException">componentIds is required</exception>
+        /// <exception cref="ArgumentNullException">The list of component identifiers is required</exception>
         public static bool DeleteComponents(this InspireClient client, List<long> componentIds)
         {
             if (componentIds == null)
@@ -439,15 +439,13 @@ namespace Vasont.Inspire.SDK.Components
         }
 
         /// <summary>
-        /// This REST method is used to import components from one or more files.
+        /// This method is used to import components from one or more files.
         /// </summary>
         /// <param name="client">Contains the <see cref="InspireClient" /> that is used for communication.</param>
         /// <param name="importModel">The import model.</param>
         /// <param name="filePaths">Contains a list of local file paths that will be submitted for synchronization import.</param>
-        /// <returns>
-        /// Returns a <see cref="WorkerStateModel" /> of type <see cref="MinimalImportStateModel" />.
-        /// </returns>
-        /// <exception cref="ArgumentNullException">Thrown if the import model is null.</exception>
+        /// <returns>Returns a <see cref="MinimalWorkerStateModel" /> of type <see cref="MinimalImportStateModel" />.</returns>
+        /// <exception cref="ArgumentNullException">Thrown if the <see cref="ImportRequestModel"/> is null.</exception>
         public static MinimalWorkerStateModel<MinimalImportStateModel> ImportComponents(this InspireClient client, ImportRequestModel importModel, List<string> filePaths)
         {
             if (importModel == null)
@@ -459,22 +457,21 @@ namespace Vasont.Inspire.SDK.Components
             string boundary = "componentsimport";
             var request = client.CreateRequest($"{client.Config.RoutePrefix}/Components/Import", HttpMethod.Post, contentType: "multipart/form-data; boundary=" + boundary);
 
-            
             // write data out to the request stream
             using (var postStream = request.GetRequestStream())
             {
-                postStream.WriteMultiPartFormData(importModel, filePaths, "model", boundary) ;
+                postStream.WriteMultiPartFormData(importModel, filePaths, "model", boundary);
             }
 
             return client.RequestContent<MinimalWorkerStateModel<MinimalImportStateModel>>(request);
         }
 
         /// <summary>
-        /// This method is called to get the state of an import worker process.
+        /// This method is used to get the state of an import worker process.
         /// </summary>
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <param name="workerKey">Contains the import worker key to find.</param>
-        /// <returns>Returns a <see cref="WorkerStateModel"/> of type <see cref="MinimalImportStateModel"/>.</returns>
+        /// <returns>Returns a <see cref="MinimalWorkerStateModel"/> of type <see cref="MinimalImportStateModel"/>.</returns>
         public static MinimalWorkerStateModel<MinimalImportStateModel> GetImportState(this InspireClient client, string workerKey)
         {
             if (string.IsNullOrEmpty(workerKey))
@@ -489,11 +486,11 @@ namespace Vasont.Inspire.SDK.Components
         }
 
         /// <summary>
-        /// This method is called to get the state of an import worker process.
+        /// This method is used to get the state of an import worker process.
         /// </summary>
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <param name="inputModel">Contains the <see cref="WorkerStateModel"/> input.</param>
-        /// <returns>Returns a <see cref="WorkerStateModel"/> of type <see cref="MinimalImportStateModel"/>.</returns>
+        /// <returns>Returns a <see cref="MinimalWorkerStateModel"/> of type <see cref="MinimalImportStateModel"/>.</returns>
         public static MinimalWorkerStateModel<MinimalImportStateModel> GetImportState(this InspireClient client, WorkerStateModel inputModel)
         {
             if (inputModel == null)
@@ -508,11 +505,11 @@ namespace Vasont.Inspire.SDK.Components
         }
 
         /// <summary>
-        /// This method is called to get the state of an export worker process.
+        /// This method is used to get the state of an export worker process.
         /// </summary>
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <param name="workerKey">Contains the export worker key to find.</param>
-        /// <returns>Returns a <see cref="WorkerStateModel"/> of type <see cref="MinimalExportStateModel"/>.</returns>
+        /// <returns>Returns a <see cref="MinimalWorkerStateModel"/> of type <see cref="MinimalExportStateModel"/>.</returns>
         public static MinimalWorkerStateModel<MinimalExportStateModel> GetExportState(this InspireClient client, string workerKey)
         {
             if (string.IsNullOrEmpty(workerKey))
@@ -527,11 +524,11 @@ namespace Vasont.Inspire.SDK.Components
         }
 
         /// <summary>
-        /// This method is called to get the state of an export worker process.
+        /// This method is used to get the state of an export worker process.
         /// </summary>
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <param name="inputModel">Contains the <see cref="WorkerStateModel"/> input.</param>
-        /// <returns>Returns a <see cref="WorkerStateModel"/> of type <see cref="MinimalExportStateModel"/>.</returns>
+        /// <returns>Returns a <see cref="MinimalWorkerStateModel"/> of type <see cref="MinimalExportStateModel"/>.</returns>
         public static MinimalWorkerStateModel<MinimalExportStateModel> GetExportState(this InspireClient client, WorkerStateModel inputModel)
         {
             if (inputModel == null)
@@ -550,7 +547,7 @@ namespace Vasont.Inspire.SDK.Components
         #region Public Tag Related Methods
 
         /// <summary>
-        /// Posts the component tags.
+        /// This method is used to update the specified component tags.
         /// </summary>
         /// <param name="client">The client.</param>
         /// <param name="componentId">The component identifier.</param>
@@ -568,7 +565,7 @@ namespace Vasont.Inspire.SDK.Components
         }
 
         /// <summary>
-        /// Posts the component tags.
+        /// This method is used to update the specified component tags.
         /// </summary>
         /// <param name="client">The client.</param>
         /// <param name="componentId">The component identifier.</param>
@@ -588,9 +585,9 @@ namespace Vasont.Inspire.SDK.Components
         /// This method is used to repair an invalid component relationship.
         /// </summary>
         /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
-        /// <param name="inputModel">The <see cref="ComponentRelationsQueryModel"/> input model.</param>
-        /// <returns>Returns a <see cref="ComponentRelationsResultModel"/> model.</returns>
-        /// <exception cref="ArgumentNullException">thrown if the model is not set.</exception>
+        /// <param name="inputModel">The <see cref="ComponentRelationModel"/> input model.</param>
+        /// <returns>Returns a <see cref="ComponentRelationsRepairResultModel"/> model.</returns>
+        /// <exception cref="ArgumentNullException">Thrown if the <see cref="ComponentRelationModel"/> is not set.</exception>
         public static ComponentRelationsRepairResultModel RepairComponentRelationship(this InspireClient client, ComponentRelationModel inputModel)
         {
             if (inputModel == null)
@@ -608,7 +605,7 @@ namespace Vasont.Inspire.SDK.Components
         /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
         /// <param name="inputModel">The <see cref="ComponentAutoRepairRequestModel"/> input model.</param>
         /// <returns>Returns a <see cref="MinimalWorkerStateModel{ComponentAutoRepairStateModel}"/> model.</returns>
-        /// <exception cref="ArgumentNullException">thrown if the model is not set.</exception>
+        /// <exception cref="ArgumentNullException">Thrown if the <see cref="ComponentAutoRepairRequestModel"/> is not set.</exception>
         public static MinimalWorkerStateModel<ComponentAutoRepairStateModel> AutoRepairComponentRelationships(this InspireClient client, ComponentAutoRepairRequestModel inputModel)
         {
             if (inputModel == null)
@@ -621,12 +618,12 @@ namespace Vasont.Inspire.SDK.Components
         }
 
         /// <summary>
-        /// Gets the component relations.
+        /// This method is used to retrieve the requested component relations.
         /// </summary>
         /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
         /// <param name="inputModel">The <see cref="ComponentRelationsQueryModel"/> input model.</param>
         /// <returns>Returns a <see cref="ComponentRelationsResultModel"/> model.</returns>
-        /// <exception cref="ArgumentNullException">thrown if the model is not set.</exception>
+        /// <exception cref="ArgumentNullException">Thrown if the <see cref="ComponentRelationsQueryModel"/> is not set.</exception>
         public static ComponentRelationsResultModel GetComponentRelations(this InspireClient client, ComponentRelationsQueryModel inputModel)
         {
             if (inputModel == null)
@@ -639,12 +636,12 @@ namespace Vasont.Inspire.SDK.Components
         }
 
         /// <summary>
-        /// This method is used to get the relations for the specified component and return as a CSV formatted report file contents.
+        /// This method is used to retrieve the relations report for the specified component and return as a CSV formatted report file contents.
         /// </summary>
         /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
         /// <param name="inputModel">The <see cref="ComponentRelationsQueryModel"/> input model.</param>
-        /// <returns>Returns a <see cref="ComponentRelationsResultModel"/> model.</returns>
-        /// <exception cref="ArgumentNullException">thrown if the model is not set.</exception>
+        /// <returns>Returns an array of bytes that represent the content of the component relation report.</returns>
+        /// <exception cref="ArgumentNullException">Thrown if the <see cref="ComponentRelationsQueryModel"/> is not set.</exception>
         public static byte[] GetComponentRelationsReport(this InspireClient client, ComponentRelationsQueryModel inputModel)
         {
             if (inputModel == null)
@@ -657,12 +654,12 @@ namespace Vasont.Inspire.SDK.Components
         }
 
         /// <summary>
-        /// Gets the component dependencies.
+        /// This method is used to retrieve the requested component dependencies.
         /// </summary>
         /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
         /// <param name="inputModel">The <see cref="ComponentRelationsQueryModel"/> input model.</param>
         /// <returns>Returns a <see cref="ComponentDependenciesResultModel"/> model.</returns>
-        /// <exception cref="ArgumentNullException">thrown if the model is not set.</exception>
+        /// <exception cref="ArgumentNullException">Thrown if the <see cref="ComponentRelationsQueryModel"/> is not set.</exception>
         public static ComponentDependenciesResultModel GetComponentDependencies(this InspireClient client, ComponentRelationsQueryModel inputModel)
         {
             if (inputModel == null)
@@ -675,12 +672,12 @@ namespace Vasont.Inspire.SDK.Components
         }
 
         /// <summary>
-        /// This method is used to get the dependencies for the specified component and return as a CSV formatted report file contents.
+        /// This method is used to retrieve the dependencies for the specified component and return as a CSV formatted report file contents.
         /// </summary>
         /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
         /// <param name="inputModel">The <see cref="ComponentRelationsQueryModel"/> input model.</param>
-        /// <returns>Returns a <see cref="ComponentRelationsResultModel"/> model.</returns>
-        /// <exception cref="ArgumentNullException">thrown if the model is not set.</exception>
+        /// <returns>Returns an array of bytes that represent the content of the component dependency report.</returns>
+        /// <exception cref="ArgumentNullException">Thrown if the <see cref="ComponentRelationsQueryModel"/> is not set.</exception>
         public static byte[] GetComponentDependenciesReport(this InspireClient client, ComponentRelationsQueryModel inputModel)
         {
             if (inputModel == null)
@@ -710,7 +707,7 @@ namespace Vasont.Inspire.SDK.Components
         /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
         /// <param name="inputModel">The <see cref="ComponentRelationsQueryModel"/> input model.</param>
         /// <returns>Returns a <see cref="ComponentRelationsResultModel"/> model.</returns>
-        /// <exception cref="ArgumentNullException">thrown if the model is not set.</exception>
+        /// <exception cref="ArgumentNullException">Thrown if the <see cref="ComponentRelationsQueryModel"/> is not set.</exception>
         public static ComponentRelationsResultModel GetComponentBranches(this InspireClient client, ComponentRelationsQueryModel inputModel)
         {
             if (inputModel == null)
@@ -723,12 +720,12 @@ namespace Vasont.Inspire.SDK.Components
         }
 
         /// <summary>
-        /// This method is used to get the branches for the specified component and return as a CSV formatted report file contents.
+        /// This method is used to retrieve the branches for the specified component and return as a CSV formatted report file contents.
         /// </summary>
         /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
         /// <param name="inputModel">The <see cref="ComponentRelationsQueryModel"/> input model.</param>
-        /// <returns>Returns a <see cref="ComponentRelationsResultModel"/> model.</returns>
-        /// <exception cref="ArgumentNullException">thrown if the model is not set.</exception>
+        /// <returns>Returns an array of bytes that represent the content of the component branches report.</returns>
+        /// <exception cref="ArgumentNullException">Thrown if the <see cref="ComponentRelationsQueryModel"/> is not set.</exception>
         public static byte[] GetComponentBranchesReport(this InspireClient client, ComponentRelationsQueryModel inputModel)
         {
             if (inputModel == null)
@@ -745,12 +742,12 @@ namespace Vasont.Inspire.SDK.Components
         #region Translation Related Extension Methods
 
         /// <summary>
-        /// This method is used to get the translations for the specified component.
+        /// This method is used to retrieve the translations for the specified component.
         /// </summary>
         /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
         /// <param name="inputModel">The <see cref="ComponentRelationsQueryModel"/> input model.</param>
         /// <returns>Returns a <see cref="ComponentRelationsResultModel"/> model.</returns>
-        /// <exception cref="ArgumentNullException">thrown if the model is not set.</exception>
+        /// <exception cref="ArgumentNullException">thrown if the <see cref="ComponentRelationsQueryModel"/> is not set.</exception>
         public static ComponentRelationsResultModel GetComponentTranslations(this InspireClient client, ComponentRelationsQueryModel inputModel)
         {
             if (inputModel == null)
@@ -767,8 +764,8 @@ namespace Vasont.Inspire.SDK.Components
         /// </summary>
         /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
         /// <param name="inputModel">The <see cref="ComponentRelationsQueryModel"/> input model.</param>
-        /// <returns>Returns a <see cref="ComponentRelationsResultModel"/> model.</returns>
-        /// <exception cref="ArgumentNullException">thrown if the model is not set.</exception>
+        /// <returns>Returns an array of bytes that represent the content of the component translations report.</returns>
+        /// <exception cref="ArgumentNullException">Thrown if the <see cref="ComponentRelationsQueryModel"/> is not set.</exception>
         public static byte[] GetComponentTranslationsReport(this InspireClient client, ComponentRelationsQueryModel inputModel)
         {
             if (inputModel == null)
@@ -785,13 +782,13 @@ namespace Vasont.Inspire.SDK.Components
         #region History Relation Extension Methods
 
         /// <summary>
-        /// This method is used to get the history for the specified component.
+        /// This method is used to retrieve the history for the specified component.
         /// </summary>
         /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
         /// <param name="inputModel">The <see cref="ComponentHistoryQueryModel"/> input model.</param>
         /// <param name="usePostMethod">Contains a value indicating whether the POST method is used in query.</param>
         /// <returns>Returns a <see cref="ComponentHistoryResultModel"/> model.</returns>
-        /// <exception cref="ArgumentNullException">thrown if the model is not set.</exception>
+        /// <exception cref="ArgumentNullException">Thrown if the <see cref="ComponentHistoryQueryModel"/> is not set.</exception>
         public static ComponentHistoryResultModel GetComponentHistory(this InspireClient client, ComponentHistoryQueryModel inputModel, bool usePostMethod = false)
         {
             if (inputModel == null)
@@ -804,12 +801,12 @@ namespace Vasont.Inspire.SDK.Components
         }
 
         /// <summary>
-        /// This method is used to get the history for the specified component.
+        /// This method is used to retrieve the history for the specified component.
         /// </summary>
         /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
         /// <param name="componentId">Contains the component identity.</param>
         /// <param name="changesetId">Contains the specific history changeset record identity.</param>
-        /// <returns>Returns a <see cref="ComponentHistoryResultModel"/> model.</returns>
+        /// <returns>Returns a <see cref="MinimalComponentHistoryModel"/> model.</returns>
         public static MinimalComponentHistoryModel GetComponentHistoryDetails(this InspireClient client, long componentId, Guid changesetId)
         {
             var request = client.CreateRequest($"{client.Config.RoutePrefix}/Components/{componentId}/History/{changesetId}");
@@ -817,13 +814,13 @@ namespace Vasont.Inspire.SDK.Components
         }
 
         /// <summary>
-        /// This method is used to get the history for the specified component.
+        /// This method is used to restore the specified component from the specified history changeset record.
         /// </summary>
         /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
         /// <param name="componentId">Contains the component identity.</param>
         /// <param name="changesetId">Contains the specific history changeset record identity.</param>
         /// <param name="inputModel">Contains the <see cref="RestoreOptionsModel"/> model.</param>
-        /// <returns>Returns a <see cref="ComponentHistoryResultModel"/> model.</returns>
+        /// <returns>Returns a <see cref="ChangesetModel"/> model.</returns>
         public static ChangesetModel RestoreComponentFromHistory(this InspireClient client, long componentId, Guid changesetId, RestoreOptionsModel inputModel)
         {
             var request = client.CreateRequest($"{client.Config.RoutePrefix}/Components/{componentId}/Restore/{changesetId}", HttpMethod.Post);

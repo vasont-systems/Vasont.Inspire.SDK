@@ -12,7 +12,7 @@ namespace Vasont.Inspire.SDK.Translations
     using Vasont.Inspire.Models.Worker;
 
     /// <summary>
-    /// This class extends the <see cref="InspireClient" /> class to include methods for calling user API endpoints.
+    /// This class extends the <see cref="InspireClient" /> class to include methods for calling translation API endpoints.
     /// </summary>
     public static class TranslationsExtensions
     {
@@ -51,11 +51,11 @@ namespace Vasont.Inspire.SDK.Translations
         }
 
         /// <summary>
-        /// Finds the translation jobs.
+        /// Finds the translation jobs for the requested translation job Ids.
         /// </summary>
         /// <param name="client">The client.</param>
         /// <param name="translationJobIds">The translation job ids.</param>
-        /// <returns>Returns a List of the requested <see cref="TranslationJobModel" /> objects.</returns>
+        /// <returns>Returns a List of the requested <see cref="MinimalTranslationJobModel" /> objects.</returns>
         public static List<MinimalTranslationJobModel> FindTranslationJobs(this InspireClient client, List<long> translationJobIds)
         {
             if (translationJobIds == null)
@@ -129,7 +129,7 @@ namespace Vasont.Inspire.SDK.Translations
         }
 
         /// <summary>
-        /// Resets the state of the translation components to queued.
+        /// Resets the state of the requested translation components to queued.
         /// </summary>
         /// <param name="client">The client.</param>
         /// <param name="translationComponentIds">The translation component ids to reset state to queued.</param>
@@ -147,7 +147,7 @@ namespace Vasont.Inspire.SDK.Translations
         }
 
         /// <summary>
-        /// Gets the translation export jobs.
+        /// Gets all of the translation export jobs ready to be processed.
         /// </summary>
         /// <param name="client">The client.</param>
         /// <param name="translationJobIds">The translation job ids.</param>
@@ -165,7 +165,7 @@ namespace Vasont.Inspire.SDK.Translations
         }
 
         /// <summary>
-        /// Sets the translation job status.
+        /// Sets the translation job statuses for each requested <see cref="TranslationExportJobModel"/>.
         /// </summary>
         /// <param name="client">The client.</param>
         /// <param name="models">The models.</param>
