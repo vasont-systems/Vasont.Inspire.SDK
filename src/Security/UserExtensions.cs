@@ -43,7 +43,7 @@ namespace Vasont.Inspire.SDK.Security
         }
 
         /// <summary>
-        /// This method is used to retrieve information about a specific user.
+        /// This method is used to find users based on the search criteria.
         /// </summary>
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <param name="userName">Contains the name of the user.</param>
@@ -51,7 +51,7 @@ namespace Vasont.Inspire.SDK.Security
         /// <param name="phone">Contains the phone number of the user.</param>
         /// <param name="orderBy">Contains the order by field.</param>
         /// <param name="direction">Contains the direction of sort, "ascending" by default.</param>
-        /// <returns>Returns <see cref="UserModel"/> object if found.</returns>
+        /// <returns>Returns a list of <see cref="UserModel"/> objects if found.</returns>
         public static List<UserModel> GetUsers(this InspireClient client, string userName = "", string email = "", string phone = "", string orderBy = "UserName", string direction = "ascending")
         {
             var request = client.CreateRequest($"{client.Config.RoutePrefix}/Users?userName={userName}&email={email}&phone={phone}&orderBy={orderBy}&direction={direction}");
@@ -59,7 +59,7 @@ namespace Vasont.Inspire.SDK.Security
         }
 
         /// <summary>
-        /// This method is used to create a new user, and return the new UserModel.
+        /// This method is used to create a new user.
         /// </summary>
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <param name="inputModel">Contains the <see cref="UserModel"/> input.</param>
@@ -76,7 +76,7 @@ namespace Vasont.Inspire.SDK.Security
         }
 
         /// <summary>
-        /// This method is used to update an existing user, and return the updated UserModel.
+        /// This method is used to update an existing user.
         /// </summary>
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <param name="userId">Contains the user identity.</param>

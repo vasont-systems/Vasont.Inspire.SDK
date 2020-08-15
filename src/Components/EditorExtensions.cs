@@ -17,7 +17,7 @@ namespace Vasont.Inspire.SDK.Components
     {
         #region Editor Related Extension Methods
         /// <summary>
-        /// This method is used to create an Inspire Editor record and lock for editing the specified XML component.
+        /// This method is used to retrieve the specified Editor Xml Model.
         /// </summary>
         /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
         /// <param name="model">Contains the component load editor model.</param>
