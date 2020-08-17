@@ -38,12 +38,12 @@ namespace CoreTestClient
         /// <param name="args">Contains an array of command line arguments.</param>
         public static void Main(string[] args)
         {
-            string resourceUrl = "https://inspire-veritas-api.vasont.com/";
-            string authorityUri = "https://identity.vasont.com";
-            string userName = "VRM.VRTS.DevTools@veritas.com";
-            string password = "NewP@ssw0rd";
-            string clientSecret = "wgWhZVDsuPqF7haDSGIt";
-            string clientId = "WuraOWZCQp.inspire-veritas.vasont.com";
+            string resourceUrl = "resourceUrl.vasont.com";
+            string authorityUri = "identity.vasont.com";
+            string userName = "userid@somewhere.com";
+            string password = "userPassword";
+            string clientSecret = "secret";
+            string clientId = "unique.clientid";
 
             string zipFile = CommandLine.Parameters.ContainsKey("zipfile") ? CommandLine.Parameters["zipfile"].ConvertToString() : string.Empty;
             long folderId = CommandLine.Parameters.ContainsKey("folderid") ? CommandLine.Parameters["folderid"].ToLong() : 0;
