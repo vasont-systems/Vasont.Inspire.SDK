@@ -170,12 +170,6 @@ namespace Vasont.Inspire.SDK
         /// The client access token.
         /// </value>
         public string DelegatedAccessToken { get; set; }
-
-        /// <summary>
-        /// Gets or sets an optional URI route prefix to add to all requests. 
-        /// </summary>
-        /// <remarks>This was added for backwards compatibility and may not remain in future releases.</remarks>
-        public string RoutePrefix { get; set; }
         #endregion Public Properties
     }
 }
