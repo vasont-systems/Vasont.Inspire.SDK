@@ -24,7 +24,7 @@ namespace Vasont.Inspire.SDK.Review
         /// <returns>Returns a <see cref="ReviewModel"/> model if found.</returns>
         public static ReviewModel GetReview(this InspireClient client, long reviewId)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Reviews/{reviewId}");
+            var request = client.CreateRequest($"/Reviews/{reviewId}");
             return client.RequestContent<ReviewModel>(request);
         }
 
@@ -36,7 +36,7 @@ namespace Vasont.Inspire.SDK.Review
         /// <returns>Returns a <see cref="ReviewerEditModel"/> model if found.</returns>
         public static ReviewerEditModel GetReviewEdit(this InspireClient client, long reviewId)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Reviews/{reviewId}/Edit");
+            var request = client.CreateRequest($"/Reviews/{reviewId}/Edit");
             return client.RequestContent<ReviewerEditModel>(request);
         }
 
@@ -48,7 +48,7 @@ namespace Vasont.Inspire.SDK.Review
         /// <returns>Returns a <see cref="ReviewDetailModel"/> model if found.</returns>
         public static ReviewDetailModel GetReviewDetail(this InspireClient client, long reviewId)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Reviews/{reviewId}/Detail");
+            var request = client.CreateRequest($"/Reviews/{reviewId}/Detail");
             return client.RequestContent<ReviewDetailModel>(request);
         }
 
@@ -60,7 +60,7 @@ namespace Vasont.Inspire.SDK.Review
         /// <returns>Returns a <see cref="ReviewBrowseResultModel"/> object.</returns>
         public static ReviewBrowseResultModel GetReviews(this InspireClient client, ReviewBrowseQueryModel model)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Reviews/Browse", HttpMethod.Post);
+            var request = client.CreateRequest($"/Reviews/Browse", HttpMethod.Post);
             return client.RequestContent<ReviewBrowseQueryModel, ReviewBrowseResultModel>(request, model);
         }
 
@@ -72,7 +72,7 @@ namespace Vasont.Inspire.SDK.Review
         /// <returns>Returns a list of <see cref="ReviewComponentModel"/> objects.</returns>
         public static List<ReviewComponentModel> GetReviewComponents(this InspireClient client, long reviewId)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Reviews/{reviewId}/Components", HttpMethod.Get);
+            var request = client.CreateRequest($"/Reviews/{reviewId}/Components", HttpMethod.Get);
             return client.RequestContent<List<ReviewComponentModel>>(request);
         }
 
@@ -85,7 +85,7 @@ namespace Vasont.Inspire.SDK.Review
         /// <returns>Returns the review component <see cref="ReviewComponentModel"/> object.</returns>
         public static ReviewComponentModel GetReviewComponent(this InspireClient client, long reviewId, long reviewComponentId)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Reviews/{reviewId}/Components/{reviewComponentId}", HttpMethod.Get);
+            var request = client.CreateRequest($"/Reviews/{reviewId}/Components/{reviewComponentId}", HttpMethod.Get);
             return client.RequestContent<ReviewComponentModel>(request);
         }
 
@@ -96,7 +96,7 @@ namespace Vasont.Inspire.SDK.Review
         /// <returns>Returns a list of <see cref="ReviewAssignmentModel"/> models if found.</returns>
         public static List<ReviewAssignmentModel> GetUserReviewAssignments(this InspireClient client)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Reviews/Assignments");
+            var request = client.CreateRequest($"/Reviews/Assignments");
             return client.RequestContent<List<ReviewAssignmentModel>>(request);
         }
 
@@ -107,7 +107,7 @@ namespace Vasont.Inspire.SDK.Review
         /// <returns>Returns a list of <see cref="MinimalUserModel"/> objects if found.</returns>
         public static List<MinimalUserModel> GetReviewCoordinators(this InspireClient client)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Reviews/Coordinators");
+            var request = client.CreateRequest($"/Reviews/Coordinators");
             return client.RequestContent<List<MinimalUserModel>>(request);
         }
 
@@ -119,7 +119,7 @@ namespace Vasont.Inspire.SDK.Review
         /// <returns>Returns the updated <see cref="ReviewModel"/> object.</returns>
         public static ReviewModel UpdateReview(this InspireClient client, ReviewModel model)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Reviews/{model.ReviewId}", HttpMethod.Put);
+            var request = client.CreateRequest($"/Reviews/{model.ReviewId}", HttpMethod.Put);
             return client.RequestContent<ReviewModel, ReviewModel>(request, model);
         }
 
@@ -131,7 +131,7 @@ namespace Vasont.Inspire.SDK.Review
         /// <returns>Returns a list of <see cref="ReviewerComponentModel"/> objects.</returns>
         public static List<ReviewerComponentModel> UpdateReviewComponents(this InspireClient client, ReviewChangedComponentQueryModel model)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Reviews/{model.ReviewId}/Changed", HttpMethod.Post);
+            var request = client.CreateRequest($"/Reviews/{model.ReviewId}/Changed", HttpMethod.Post);
             return client.RequestContent<ReviewChangedComponentQueryModel, List<ReviewerComponentModel>>(request, model);
         }
 
@@ -145,7 +145,7 @@ namespace Vasont.Inspire.SDK.Review
         /// <returns>Returns the updated <see cref="ReviewerComponentModel"/> object.</returns>
         public static ReviewerComponentModel UpdateReviewComponentState(this InspireClient client, long reviewId, long reviewComponentId, bool completed = true)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Reviews/{reviewId}/Components/{reviewComponentId}/State?completed={completed}", HttpMethod.Put);
+            var request = client.CreateRequest($"/Reviews/{reviewId}/Components/{reviewComponentId}/State?completed={completed}", HttpMethod.Put);
             return client.RequestContent<ReviewerComponentModel>(request);
         }
 
@@ -157,7 +157,7 @@ namespace Vasont.Inspire.SDK.Review
         /// <returns>Returns the new <see cref="ReviewModel"/> object.</returns>
         public static ReviewModel CreateReview(this InspireClient client, ReviewModel model)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Reviews", HttpMethod.Post);
+            var request = client.CreateRequest($"/Reviews", HttpMethod.Post);
             return client.RequestContent<ReviewModel, ReviewModel>(request, model);
         }
 
@@ -169,7 +169,7 @@ namespace Vasont.Inspire.SDK.Review
         /// <returns>Returns the completed <see cref="ReviewModel"/> object.</returns>
         public static ReviewModel CompleteReviewerSession(this InspireClient client, ReviewModel model)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Reviews/{model.ReviewId}/CompleteReviewing", HttpMethod.Put);
+            var request = client.CreateRequest($"/Reviews/{model.ReviewId}/CompleteReviewing", HttpMethod.Put);
             return client.RequestContent<ReviewModel, ReviewModel>(request, model);
         }
 
@@ -181,7 +181,7 @@ namespace Vasont.Inspire.SDK.Review
         /// <returns>Returns the completed <see cref="ReviewModel"/> object.</returns>
         public static ReviewModel CompleteReview(this InspireClient client, ReviewModel model)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Reviews/{model.ReviewId}/Complete", HttpMethod.Put);
+            var request = client.CreateRequest($"/Reviews/{model.ReviewId}/Complete", HttpMethod.Put);
             return client.RequestContent<ReviewModel, ReviewModel>(request, model);
         }
 
@@ -194,7 +194,7 @@ namespace Vasont.Inspire.SDK.Review
         /// <returns>Returns a boolean value indicating if the review was canceled successfully.</returns>
         public static bool CancelReview(this InspireClient client, long reviewId, ReviewCancellationModel model)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Reviews/{reviewId}/Cancel", HttpMethod.Put);
+            var request = client.CreateRequest($"/Reviews/{reviewId}/Cancel", HttpMethod.Put);
             return client.RequestContent<ReviewCancellationModel, bool>(request, model);
         }
 
@@ -207,7 +207,7 @@ namespace Vasont.Inspire.SDK.Review
         /// <returns>Returns a boolean value indicating if the review was deleted successfully.</returns>
         public static bool DeleteReview(this InspireClient client, long reviewId, ReviewCancellationModel model)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Reviews/{reviewId}", HttpMethod.Delete);
+            var request = client.CreateRequest($"/Reviews/{reviewId}", HttpMethod.Delete);
             return client.RequestContent<ReviewCancellationModel, bool>(request, model);
         }
     }
