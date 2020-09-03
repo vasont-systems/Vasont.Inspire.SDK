@@ -32,7 +32,7 @@ namespace Vasont.Inspire.SDK.Components
         /// <returns>Returns a list of <see cref="MinimalComponentTypeModel"/> minimal component type models.</returns>
         public static List<MinimalComponentTypeModel> GetComponentTypes(this InspireClient client)
         {
-            var request = client.CreateRequest($"/ComponentTypes");
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/ComponentTypes");
             return client.RequestContent<List<MinimalComponentTypeModel>>(request);
         }
 
@@ -47,7 +47,7 @@ namespace Vasont.Inspire.SDK.Components
         /// <returns>Returns a list of <see cref="WorkflowTemplateModel"/> objects.</returns>
         public static List<WorkflowTemplateModel> GetComponentWorkflowTemplates(this InspireClient client)
         {
-            var request = client.CreateRequest($"/Components/WorkflowTemplates");
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Components/WorkflowTemplates");
             return client.RequestContent<List<WorkflowTemplateModel>>(request);
         }
 
@@ -59,7 +59,7 @@ namespace Vasont.Inspire.SDK.Components
         /// <returns>Returns a list of <see cref="WorkflowModel"/> objects.</returns>
         public static WorkflowModel GetComponentWorkflowTemplate(this InspireClient client, long componentId)
         {
-            var request = client.CreateRequest($"/Components/{componentId}/WorkflowTemplate");
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Components/{componentId}/WorkflowTemplate");
             return client.RequestContent<WorkflowModel>(request);
         }
 
@@ -71,7 +71,7 @@ namespace Vasont.Inspire.SDK.Components
         /// <returns>Returns the a list of <see cref="MinimalComponentModel"/> objects.</returns>
         public static List<MinimalComponentModel> GetComponentTemplates(this InspireClient client, string documentTypes = "")
         {
-            var request = client.CreateRequest($"/Components/Templates/{documentTypes}");
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Components/Templates/{documentTypes}");
             return client.RequestContent<List<MinimalComponentModel>>(request);
         }
 
@@ -83,7 +83,7 @@ namespace Vasont.Inspire.SDK.Components
         /// <returns>Returns a <see cref="BatchComponentsResultModel"/> object containing a list of requested components.</returns>
         public static BatchComponentsResultModel GetComponents(this InspireClient client, BatchComponentsRequestModel componentIds)
         {
-            var request = client.CreateRequest($"/Components/Batch", HttpMethod.Post);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Components/Batch", HttpMethod.Post);
             return client.RequestContent<BatchComponentsRequestModel, BatchComponentsResultModel>(request, componentIds);
         }
 
@@ -95,7 +95,7 @@ namespace Vasont.Inspire.SDK.Components
         /// <returns>Returns a list of <see cref="MinimalComponentModel"/> objects.</returns>
         public static MinimalComponentModel GetComponent(this InspireClient client, long componentId)
         {
-            var request = client.CreateRequest($"/Components/{componentId}");
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Components/{componentId}");
             return client.RequestContent<MinimalComponentModel>(request);
         }
 
@@ -107,7 +107,7 @@ namespace Vasont.Inspire.SDK.Components
         /// <returns>Returns the <see cref="DetailedComponentModel"/> object.</returns>
         public static DetailedComponentModel GetComponentDetail(this InspireClient client, long componentId)
         {
-            var request = client.CreateRequest($"/Components/{componentId}/Details");
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Components/{componentId}/Details");
             return client.RequestContent<DetailedComponentModel>(request);
         }
 
@@ -119,7 +119,7 @@ namespace Vasont.Inspire.SDK.Components
         /// <returns>Returns an array of bytes that represent the content of the component.</returns>
         public static byte[] GetComponentContent(this InspireClient client, long componentId)
         {
-            var request = client.CreateRequest($"/Components/{componentId}/Content");
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Components/{componentId}/Content");
             return client.RequestContent<byte[]>(request);
         }
 
@@ -131,7 +131,7 @@ namespace Vasont.Inspire.SDK.Components
         /// <returns>Returns the <see cref="PermissionUpdateModel"/> object.</returns>
         public static PermissionUpdateModel GetComponentPermissions(this InspireClient client, long componentId)
         {
-            var request = client.CreateRequest($"/Components/{componentId}/Permissions");
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Components/{componentId}/Permissions");
             return client.RequestContent<PermissionUpdateModel>(request);
         }
 
@@ -144,7 +144,7 @@ namespace Vasont.Inspire.SDK.Components
         /// <returns>Returns a <see cref="BatchComponentsResultModel"/> object containing a list of requested components.</returns>
         public static List<XmlComponentElementModel> GetComponentElements(this InspireClient client, long componentId, List<string> allowedElements)
         {
-            var request = client.CreateRequest($"/Components/{componentId}/Elements", HttpMethod.Post);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Components/{componentId}/Elements", HttpMethod.Post);
             return client.RequestContent<List<string>, List<XmlComponentElementModel>>(request, allowedElements);
         }
 
@@ -161,7 +161,7 @@ namespace Vasont.Inspire.SDK.Components
                 throw new ArgumentNullException(nameof(componentIds));
             }
 
-            var request = client.CreateRequest($"/Components/Approve", HttpMethod.Post);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Components/Approve", HttpMethod.Post);
             return client.RequestContent<List<long>, bool>(request, componentIds);
         }
 
@@ -174,7 +174,7 @@ namespace Vasont.Inspire.SDK.Components
         /// <returns>Returns the <see cref="ComponentConfigurationModel"/> object.</returns>
         public static ComponentConfigurationModel GetComponentConfiguration(this InspireClient client, long componentId, bool forceReload = false)
         {
-            var request = client.CreateRequest($"/Components/{componentId}/Configuration?force={forceReload}");
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Components/{componentId}/Configuration?force={forceReload}");
             return client.RequestContent<ComponentConfigurationModel>(request);
         }
 
@@ -191,7 +191,7 @@ namespace Vasont.Inspire.SDK.Components
                 throw new ArgumentNullException(nameof(inputModel));
             }
 
-            var request = client.CreateRequest($"/Components", HttpMethod.Post);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Components", HttpMethod.Post);
             return client.RequestContent<CreateComponentFromTemplateModel, MinimalComponentModel>(request, inputModel);
         }
 
@@ -208,7 +208,7 @@ namespace Vasont.Inspire.SDK.Components
                 throw new ArgumentNullException(nameof(inputModel));
             }
 
-            var request = client.CreateRequest($"/Components/SaveAs", HttpMethod.Post);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Components/SaveAs", HttpMethod.Post);
             return client.RequestContent<SaveAsComponentModel, MinimalComponentModel>(request, inputModel);
         }
 
@@ -225,7 +225,7 @@ namespace Vasont.Inspire.SDK.Components
                 throw new ArgumentNullException(nameof(inputModel));
             }
 
-            var request = client.CreateRequest($"/Components/Branch", HttpMethod.Post);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Components/Branch", HttpMethod.Post);
             return client.RequestContent<SaveAsBranchModel, MinimalComponentModel>(request, inputModel);
         }
 
@@ -243,7 +243,7 @@ namespace Vasont.Inspire.SDK.Components
                 throw new ArgumentNullException(nameof(inputModel));
             }
 
-            var request = client.CreateRequest($"/Components/Export/{exportId}", HttpMethod.Post);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Components/Export/{exportId}", HttpMethod.Post);
             return client.RequestContent<ExportRequestModel, WorkerStateModel<MinimalExportStateModel>>(request, inputModel);
         }
 
@@ -261,7 +261,7 @@ namespace Vasont.Inspire.SDK.Components
                 throw new ArgumentNullException(nameof(inputModel));
             }
 
-            var request = client.CreateRequest($"/Components/{componentId}/Rename", HttpMethod.Put);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Components/{componentId}/Rename", HttpMethod.Put);
             return client.RequestContent<MinimalComponentModel, MinimalComponentModel>(request, inputModel);
         }
 
@@ -278,7 +278,7 @@ namespace Vasont.Inspire.SDK.Components
                 throw new ArgumentNullException(nameof(inputModel));
             }
 
-            var request = client.CreateRequest($"/Components/Permissions", HttpMethod.Put);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Components/Permissions", HttpMethod.Put);
             return client.RequestContent<PermissionUpdateModel, PermissionUpdateModel>(request, inputModel);
         }
 
@@ -296,7 +296,7 @@ namespace Vasont.Inspire.SDK.Components
                 throw new ArgumentNullException(nameof(inputModel));
             }
 
-            var request = client.CreateRequest($"/Components/{componentId}/Permissions", HttpMethod.Put);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Components/{componentId}/Permissions", HttpMethod.Put);
             return client.RequestContent<PermissionUpdateModel, PermissionUpdateModel>(request, inputModel);
         }
 
@@ -326,7 +326,7 @@ namespace Vasont.Inspire.SDK.Components
                 throw new ArgumentNullException(nameof(componentIds));
             }
 
-            var request = client.CreateRequest($"/Components/Move/{targetFolderId}", HttpMethod.Put);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Components/Move/{targetFolderId}", HttpMethod.Put);
 
             client.RequestContent(request, componentIds);
             return client.HasError;
@@ -347,7 +347,7 @@ namespace Vasont.Inspire.SDK.Components
 
             ComponentLockModel emptyModel = new ComponentLockModel();   // pass an empty model as input since the ContentLength need to be >= 0 for POST
 
-            var request = client.CreateRequest($"/Components/{componenttId}/Lock", HttpMethod.Post);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Components/{componenttId}/Lock", HttpMethod.Post);
             return client.RequestContent<ComponentLockModel, ComponentLockModel>(request, emptyModel);
         }
 
@@ -365,7 +365,7 @@ namespace Vasont.Inspire.SDK.Components
                 throw new ArgumentNullException(nameof(componentIds));
             }
 
-            var request = client.CreateRequest($"/Components/Lock", HttpMethod.Post);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Components/Lock", HttpMethod.Post);
 
             return client.RequestContent<List<long>, List<BatchComponentLockModel>>(request, componentIds);
         }
@@ -385,7 +385,7 @@ namespace Vasont.Inspire.SDK.Components
                 throw new ArgumentNullException(nameof(componentIds));
             }
 
-            var request = client.CreateRequest($"/Components/UnLock?confirmPendingEdits={confirmPendingEdits}", HttpMethod.Post);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Components/UnLock?confirmPendingEdits={confirmPendingEdits}", HttpMethod.Post);
             return client.RequestContent<List<long>, List<UnlockResultModel>>(request, componentIds);
         }
 
@@ -403,7 +403,7 @@ namespace Vasont.Inspire.SDK.Components
                 throw new ArgumentNullException(nameof(componenttId));
             }
 
-            var request = client.CreateRequest($"/Components/{componenttId}/Unlock?confirmPendingEdits={confirmPendingEdits}", HttpMethod.Post);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Components/{componenttId}/Unlock?confirmPendingEdits={confirmPendingEdits}", HttpMethod.Post);
             return client.RequestContent<string, UnlockResultModel>(request, string.Empty);
         }
 
@@ -415,7 +415,7 @@ namespace Vasont.Inspire.SDK.Components
         /// <returns>Returns a <see cref="DeleteResultModel"/> object.</returns>
         public static DeleteResultModel DeleteComponent(this InspireClient client, long componentId)
         {
-            var request = client.CreateRequest($"/Components/{componentId}", HttpMethod.Delete);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Components/{componentId}", HttpMethod.Delete);
             return client.RequestContent<DeleteResultModel>(request);
         }
 
@@ -433,7 +433,7 @@ namespace Vasont.Inspire.SDK.Components
                 throw new ArgumentNullException(nameof(componentIds));
             }
 
-            var request = client.CreateRequest($"/Components", HttpMethod.Delete);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Components", HttpMethod.Delete);
             client.RequestContent<List<long>, List<UnlockResultModel>>(request, componentIds);
             return !client.HasError;
         }
@@ -455,7 +455,7 @@ namespace Vasont.Inspire.SDK.Components
 
             // additional modifications the to request to support multi-part form posting
             string boundary = "componentsimport";
-            var request = client.CreateRequest($"/Components/Import", HttpMethod.Post, contentType: "multipart/form-data; boundary=" + boundary);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Components/Import", HttpMethod.Post, contentType: "multipart/form-data; boundary=" + boundary);
 
             // write data out to the request stream
             using (var postStream = request.GetRequestStream())
@@ -480,7 +480,7 @@ namespace Vasont.Inspire.SDK.Components
             }
 
             string encodedWorkerKey = Uri.EscapeUriString(workerKey);
-            var request = client.CreateRequest($"/Components/Import?workerKey={encodedWorkerKey}", HttpMethod.Get);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Components/Import?workerKey={encodedWorkerKey}", HttpMethod.Get);
 
             return client.RequestContent<MinimalWorkerStateModel<MinimalImportStateModel>>(request);
         }
@@ -499,7 +499,7 @@ namespace Vasont.Inspire.SDK.Components
             }
 
             string encodedWorkerKey = Uri.EscapeUriString(inputModel.Key);
-            var request = client.CreateRequest($"/Components/Import?workerKey={encodedWorkerKey}", HttpMethod.Get);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Components/Import?workerKey={encodedWorkerKey}", HttpMethod.Get);
 
             return client.RequestContent<MinimalWorkerStateModel<MinimalImportStateModel>>(request);
         }
@@ -518,7 +518,7 @@ namespace Vasont.Inspire.SDK.Components
             }
 
             string encodedWorkerKey = Uri.EscapeUriString(workerKey);
-            var request = client.CreateRequest($"/Components/Export?workerKey={encodedWorkerKey}", HttpMethod.Get);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Components/Export?workerKey={encodedWorkerKey}", HttpMethod.Get);
 
             return client.RequestContent<MinimalWorkerStateModel<MinimalExportStateModel>>(request);
         }
@@ -537,7 +537,7 @@ namespace Vasont.Inspire.SDK.Components
             }
 
             string encodedWorkerKey = Uri.EscapeUriString(inputModel.Key);
-            var request = client.CreateRequest($"/Components/Export?workerKey={encodedWorkerKey}", HttpMethod.Get);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Components/Export?workerKey={encodedWorkerKey}", HttpMethod.Get);
 
             return client.RequestContent<MinimalWorkerStateModel<MinimalExportStateModel>>(request);
         }
@@ -560,7 +560,7 @@ namespace Vasont.Inspire.SDK.Components
                 throw new ArgumentNullException(nameof(inputModel));
             }
 
-            var request = client.CreateRequest($"/Components/{componentId}/Tags", HttpMethod.Post);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Components/{componentId}/Tags", HttpMethod.Post);
             return client.RequestContent<ComponentTagModel, ComponentTagModel>(request, inputModel);
         }
 
@@ -595,7 +595,7 @@ namespace Vasont.Inspire.SDK.Components
                 throw new ArgumentNullException(nameof(inputModel));
             }
 
-            var request = client.CreateRequest($"/Components/{inputModel.SourceComponent.ComponentId}/RepairRelationship", HttpMethod.Post);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Components/{inputModel.SourceComponent.ComponentId}/RepairRelationship", HttpMethod.Post);
             return client.RequestContent<ComponentRelationModel, ComponentRelationsRepairResultModel>(request, inputModel);
         }
 
@@ -613,7 +613,7 @@ namespace Vasont.Inspire.SDK.Components
                 throw new ArgumentNullException(nameof(inputModel));
             }
 
-            var request = client.CreateRequest($"/Components/AutoRepairRelationships", HttpMethod.Post);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Components/AutoRepairRelationships", HttpMethod.Post);
             return client.RequestContent<ComponentAutoRepairRequestModel, MinimalWorkerStateModel<ComponentAutoRepairStateModel>>(request, inputModel);
         }
 
@@ -631,7 +631,7 @@ namespace Vasont.Inspire.SDK.Components
                 throw new ArgumentNullException(nameof(inputModel));
             }
 
-            var request = client.CreateRequest($"/Components/ComponentRelations", HttpMethod.Post);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Components/ComponentRelations", HttpMethod.Post);
             return client.RequestContent<ComponentRelationsQueryModel, ComponentRelationsResultModel>(request, inputModel);
         }
 
@@ -649,7 +649,7 @@ namespace Vasont.Inspire.SDK.Components
                 throw new ArgumentNullException(nameof(inputModel));
             }
 
-            var request = client.CreateRequest($"/Components/ComponentRelations/Export", HttpMethod.Post);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Components/ComponentRelations/Export", HttpMethod.Post);
             return client.RequestContent<ComponentRelationsQueryModel, byte[]>(request, inputModel);
         }
 
@@ -667,7 +667,7 @@ namespace Vasont.Inspire.SDK.Components
                 throw new ArgumentNullException(nameof(inputModel));
             }
 
-            var request = client.CreateRequest($"/Components/ComponentDependencies", HttpMethod.Post);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Components/ComponentDependencies", HttpMethod.Post);
             return client.RequestContent<ComponentRelationsQueryModel, ComponentDependenciesResultModel>(request, inputModel);
         }
 
@@ -685,7 +685,7 @@ namespace Vasont.Inspire.SDK.Components
                 throw new ArgumentNullException(nameof(inputModel));
             }
 
-            var request = client.CreateRequest($"/Components/ComponentDependencies/Export", HttpMethod.Post);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Components/ComponentDependencies/Export", HttpMethod.Post);
             return client.RequestContent<ComponentRelationsQueryModel, byte[]>(request, inputModel);
         }
 
@@ -697,7 +697,7 @@ namespace Vasont.Inspire.SDK.Components
         /// <returns>Returns a <see cref="List{BranchReferenceModel}"/> model.</returns>
         public static List<BranchReferenceModel> GetComponentBranchRelations(this InspireClient client, long sourceComponentId)
         {
-            var request = client.CreateRequest($"/Components/{sourceComponentId}/BranchRelations", HttpMethod.Get);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Components/{sourceComponentId}/BranchRelations", HttpMethod.Get);
             return client.RequestContent<List<BranchReferenceModel>>(request);
         }
 
@@ -715,7 +715,7 @@ namespace Vasont.Inspire.SDK.Components
                 throw new ArgumentNullException(nameof(inputModel));
             }
 
-            var request = client.CreateRequest($"/Components/ComponentBranches", HttpMethod.Post);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Components/ComponentBranches", HttpMethod.Post);
             return client.RequestContent<ComponentRelationsQueryModel, ComponentRelationsResultModel>(request, inputModel);
         }
 
@@ -733,7 +733,7 @@ namespace Vasont.Inspire.SDK.Components
                 throw new ArgumentNullException(nameof(inputModel));
             }
 
-            var request = client.CreateRequest($"/Components/ComponentBranches/Export", HttpMethod.Post);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Components/ComponentBranches/Export", HttpMethod.Post);
             return client.RequestContent<ComponentRelationsQueryModel, byte[]>(request, inputModel);
         }
 
@@ -755,7 +755,7 @@ namespace Vasont.Inspire.SDK.Components
                 throw new ArgumentNullException(nameof(inputModel));
             }
 
-            var request = client.CreateRequest($"/Components/ComponentTranslations", HttpMethod.Post);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Components/ComponentTranslations", HttpMethod.Post);
             return client.RequestContent<ComponentRelationsQueryModel, ComponentRelationsResultModel>(request, inputModel);
         }
 
@@ -773,7 +773,7 @@ namespace Vasont.Inspire.SDK.Components
                 throw new ArgumentNullException(nameof(inputModel));
             }
 
-            var request = client.CreateRequest($"/Components/ComponentTranslations/Export", HttpMethod.Post);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Components/ComponentTranslations/Export", HttpMethod.Post);
             return client.RequestContent<ComponentRelationsQueryModel, byte[]>(request, inputModel);
         }
 
@@ -796,7 +796,7 @@ namespace Vasont.Inspire.SDK.Components
                 throw new ArgumentNullException(nameof(inputModel));
             }
 
-            var request = client.CreateRequest($"/Components/{inputModel.ComponentId}/History", usePostMethod ? HttpMethod.Post : HttpMethod.Get);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Components/{inputModel.ComponentId}/History", usePostMethod ? HttpMethod.Post : HttpMethod.Get);
             return client.RequestContent<ComponentHistoryQueryModel, ComponentHistoryResultModel>(request, inputModel);
         }
 
@@ -809,7 +809,7 @@ namespace Vasont.Inspire.SDK.Components
         /// <returns>Returns a <see cref="MinimalComponentHistoryModel"/> model.</returns>
         public static MinimalComponentHistoryModel GetComponentHistoryDetails(this InspireClient client, long componentId, Guid changesetId)
         {
-            var request = client.CreateRequest($"/Components/{componentId}/History/{changesetId}");
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Components/{componentId}/History/{changesetId}");
             return client.RequestContent<MinimalComponentHistoryModel>(request);
         }
 
@@ -823,7 +823,7 @@ namespace Vasont.Inspire.SDK.Components
         /// <returns>Returns a <see cref="ChangesetModel"/> model.</returns>
         public static ChangesetModel RestoreComponentFromHistory(this InspireClient client, long componentId, Guid changesetId, RestoreOptionsModel inputModel)
         {
-            var request = client.CreateRequest($"/Components/{componentId}/Restore/{changesetId}", HttpMethod.Post);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Components/{componentId}/Restore/{changesetId}", HttpMethod.Post);
             return client.RequestContent<RestoreOptionsModel, ChangesetModel>(request, inputModel);
         }
 
