@@ -26,7 +26,7 @@ namespace Vasont.Inspire.SDK.Security
         /// <returns>Returns <see cref="RoleModel"/> object if found.</returns>
         public static RoleModel GetAllRoles(this InspireClient client, long roleId)
         {
-            var request = client.CreateRequest($"/Roles/{roleId}");
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Roles/{roleId}");
             return client.RequestContent<RoleModel>(request);
         }
 
@@ -40,7 +40,7 @@ namespace Vasont.Inspire.SDK.Security
         /// <returns>Returns <see cref="RoleModel"/> object if found.</returns>
         public static List<RoleModel> GetRoles(this InspireClient client, string roleName = "", string orderBy = "", string direction = "")
         {
-            var request = client.CreateRequest($"/Roles?roleName={roleName}&orderBy={orderBy}&direction={direction}");
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Roles?roleName={roleName}&orderBy={orderBy}&direction={direction}");
             return client.RequestContent<List<RoleModel>>(request);
         }
 
@@ -57,7 +57,7 @@ namespace Vasont.Inspire.SDK.Security
                 throw new ArgumentNullException(nameof(inputModel));
             }
 
-            var request = client.CreateRequest($"/Roles", HttpMethod.Post);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Roles", HttpMethod.Post);
             return client.RequestContent<RoleModel, RoleModel>(request, inputModel);
         }
 
@@ -75,7 +75,7 @@ namespace Vasont.Inspire.SDK.Security
                 throw new ArgumentNullException(nameof(inputModel));
             }
 
-            var request = client.CreateRequest($"/Roles/{roleId}", HttpMethod.Put);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Roles/{roleId}", HttpMethod.Put);
             return client.RequestContent<RoleModel, RoleModel>(request, inputModel);
         }
 
@@ -92,7 +92,7 @@ namespace Vasont.Inspire.SDK.Security
                 throw new ArgumentNullException(nameof(roleId));
             }
 
-            var request = client.CreateRequest($"/Roles/{roleId}", HttpMethod.Delete);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Roles/{roleId}", HttpMethod.Delete);
             client.RequestContent(request);
             return client.HasError;
         }

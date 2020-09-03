@@ -26,7 +26,7 @@ namespace Vasont.Inspire.SDK.Security
         /// <returns>Returns a list of <see cref="SelectUserRoleModel"/> objects if found.</returns>
         public static List<SelectUserRoleModel> GetAllUsers(this InspireClient client)
         {
-            var request = client.CreateRequest($"/UserRoles/Users");
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/UserRoles/Users");
             return client.RequestContent<List<SelectUserRoleModel>>(request);
         }
 
@@ -38,7 +38,7 @@ namespace Vasont.Inspire.SDK.Security
         /// <returns>Returns <see cref="UserModel"/> object if found.</returns>
         public static UserModel GetUser(this InspireClient client, long userId)
         {
-            var request = client.CreateRequest($"/Users/{userId}");
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Users/{userId}");
             return client.RequestContent<UserModel>(request);
         }
 
@@ -54,7 +54,7 @@ namespace Vasont.Inspire.SDK.Security
         /// <returns>Returns a list of <see cref="UserModel"/> objects if found.</returns>
         public static List<UserModel> GetUsers(this InspireClient client, string userName = "", string email = "", string phone = "", string orderBy = "UserName", string direction = "ascending")
         {
-            var request = client.CreateRequest($"/Users?userName={userName}&email={email}&phone={phone}&orderBy={orderBy}&direction={direction}");
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Users?userName={userName}&email={email}&phone={phone}&orderBy={orderBy}&direction={direction}");
             return client.RequestContent<List<UserModel>>(request);
         }
 
@@ -71,7 +71,7 @@ namespace Vasont.Inspire.SDK.Security
                 throw new ArgumentNullException(nameof(inputModel));
             }
 
-            var request = client.CreateRequest($"/Users", HttpMethod.Post);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Users", HttpMethod.Post);
             return client.RequestContent<UserModel, UserModel>(request, inputModel);
         }
 
@@ -89,7 +89,7 @@ namespace Vasont.Inspire.SDK.Security
                 throw new ArgumentNullException(nameof(inputModel));
             }
 
-            var request = client.CreateRequest($"/Users/{userId}", HttpMethod.Put);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Users/{userId}", HttpMethod.Put);
             return client.RequestContent<UserModel, UserModel>(request, inputModel);
         }
 
@@ -106,7 +106,7 @@ namespace Vasont.Inspire.SDK.Security
                 throw new ArgumentNullException(nameof(userId));
             }
 
-            var request = client.CreateRequest($"/Users/{userId}", HttpMethod.Delete);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Users/{userId}", HttpMethod.Delete);
             client.RequestContent(request);
             return client.HasError;
         }
