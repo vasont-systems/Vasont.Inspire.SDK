@@ -118,6 +118,38 @@ namespace CoreTestClient
                     }
                 }
             }
+            else
+            {
+                using (InspireClient client = new InspireClient(config))
+                {
+                    if (AsyncHelper.RunSync(() => client.AuthenticateAsync()))
+                    {
+                        Console.WriteLine("Attempt to test Import with No Files");
+                        ImportRequestModel model = new ImportRequestModel
+                        {
+                            Files = new List<IFormFile>(),
+                            ImportFiles = new List<ImportRequestFileModel>(),
+                            FolderId = 0,
+                            ProjectFolderId = 0
+                        };
+
+                        MinimalWorkerStateModel<MinimalImportStateModel> importState = client.ImportComponents(model, new List<string>());
+
+                        WorkerStatus status = importState.Status;
+
+                        while (status != WorkerStatus.Complete && status != WorkerStatus.Failed)
+                        {
+                            MinimalWorkerStateModel<MinimalImportStateModel> importState2 = client.GetImportState(importState.Key);
+                            status = importState2.Status;
+                            Console.WriteLine(" status: {0}, {1}", status, importState2.Message);
+                            Thread.Sleep(10000);
+                        }
+
+                        var errorMessage = importState.Issues.FirstOrDefault();
+                        Console.WriteLine(" status: {0}, {1}", status, errorMessage.Message);
+                    }
+                }
+            }
 
             // create a new inspire client which will authenticate automatically.
             using (InspireClient client = new InspireClient(config))
