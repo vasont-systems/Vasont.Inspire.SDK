@@ -124,7 +124,7 @@ namespace CoreTestClient
                 {
                     if (AsyncHelper.RunSync(() => client.AuthenticateAsync()))
                     {
-                        Console.WriteLine($"Attempt to import the no files");
+                        Console.WriteLine("Attempt to test Import with No Files");
                         ImportRequestModel model = new ImportRequestModel
                         {
                             Files = new List<IFormFile>(),
@@ -136,6 +136,7 @@ namespace CoreTestClient
                         MinimalWorkerStateModel<MinimalImportStateModel> importState = client.ImportComponents(model, new List<string>());
 
                         WorkerStatus status = importState.Status;
+
                         while (status != WorkerStatus.Complete && status != WorkerStatus.Failed)
                         {
                             MinimalWorkerStateModel<MinimalImportStateModel> importState2 = client.GetImportState(importState.Key);
@@ -143,6 +144,7 @@ namespace CoreTestClient
                             Console.WriteLine(" status: {0}, {1}", status, importState2.Message);
                             Thread.Sleep(10000);
                         }
+
                         var errorMessage = importState.Issues.FirstOrDefault();
                         Console.WriteLine(" status: {0}, {1}", status, errorMessage.Message);
                     }
