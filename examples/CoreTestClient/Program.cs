@@ -135,18 +135,34 @@ namespace CoreTestClient
 
                         MinimalWorkerStateModel<MinimalImportStateModel> importState = client.ImportComponents(model, new List<string>());
 
-                        WorkerStatus status = importState.Status;
-
-                        while (status != WorkerStatus.Complete && status != WorkerStatus.Failed)
+                        if (importState == null)
                         {
-                            MinimalWorkerStateModel<MinimalImportStateModel> importState2 = client.GetImportState(importState.Key);
-                            status = importState2.Status;
-                            Console.WriteLine(" status: {0}, {1}", status, importState2.Message);
-                            Thread.Sleep(10000);
+                            var errorModel = client.LastErrorResponse;
+                            if (errorModel != null)
+                            {
+                                var errorMessages = errorModel.Messages.FirstOrDefault();
+                                Console.WriteLine(" status: {0}, {1}", "Failed", errorMessages.Message);
+                            }
+                            else
+                            {
+                                Console.WriteLine(" status: {0}, {1}", "Failed", "Last Error Response is Null");
+                            }
                         }
+                        else
+                        {
+                            WorkerStatus status = importState.Status;
 
-                        var errorMessage = importState.Issues.FirstOrDefault();
-                        Console.WriteLine(" status: {0}, {1}", status, errorMessage.Message);
+                            while (status != WorkerStatus.Complete && status != WorkerStatus.Failed)
+                            {
+                                MinimalWorkerStateModel<MinimalImportStateModel> importState2 = client.GetImportState(importState.Key);
+                                status = importState2.Status;
+                                Console.WriteLine(" status: {0}, {1}", status, importState2.Message);
+                                Thread.Sleep(10000);
+                            }
+
+                            var errorMessage = importState.Issues.FirstOrDefault();
+                            Console.WriteLine(" status: {0}, {1}", status, errorMessage.Message);
+                        }
                     }
                 }
             }
