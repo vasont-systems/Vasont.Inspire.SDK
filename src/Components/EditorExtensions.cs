@@ -70,7 +70,7 @@ namespace Vasont.Inspire.SDK.Components
             }
 
             query = (model.ComponentId > 0 ? "componentId=" + model.ComponentId.ToString() : "href=" + model.Href) + query;
-            var request = client.CreateRequest($"/Editor?{query}");
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Editor?{query}");
             return client.RequestContent<MinimalEditorXmlModel>(request);
         }
         #endregion

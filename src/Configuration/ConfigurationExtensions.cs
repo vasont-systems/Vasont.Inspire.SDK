@@ -84,7 +84,7 @@ namespace Vasont.Inspire.SDK.Configuration
                 throw new ArgumentNullException(nameof(model));
             }
 
-            var request = client.CreateRequest($"/Configurations/Attributes/{model.AttributeId}", HttpMethod.Put);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/Attributes/{model.AttributeId}", HttpMethod.Put);
             return client.RequestContent<AttributeModel, AttributeModel>(request, model);
         }
 
@@ -101,7 +101,7 @@ namespace Vasont.Inspire.SDK.Configuration
                 throw new ArgumentNullException(nameof(model));
             }
 
-            var request = client.CreateRequest($"/Configurations/Attributes", HttpMethod.Post);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/Attributes", HttpMethod.Post);
             return client.RequestContent<AttributeModel, AttributeModel>(request, model);
         }
 
@@ -113,7 +113,7 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <returns>Returns a boolean value indicating whether the action succeeded or not.</returns>
         public static bool RemoveAttribute(this InspireClient client, long attributeId)
         {
-            var request = client.CreateRequest($"/Configurations/Attributes/{attributeId}", HttpMethod.Delete);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/Attributes/{attributeId}", HttpMethod.Delete);
             client.RequestContent(request);
             return !client.HasError;
         }
@@ -203,7 +203,7 @@ namespace Vasont.Inspire.SDK.Configuration
                 throw new ArgumentNullException(nameof(model));
             }
 
-            var request = client.CreateRequest($"/Configurations/ProfileAttributes/{model.AttributeId}", HttpMethod.Put);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/ProfileAttributes/{model.AttributeId}", HttpMethod.Put);
             return client.RequestContent<ProfileAttributeModel, ProfileAttributeModel>(request, model);
         }
 
@@ -220,7 +220,7 @@ namespace Vasont.Inspire.SDK.Configuration
                 throw new ArgumentNullException(nameof(model));
             }
 
-            var request = client.CreateRequest($"/Configurations/ProfileAttributes", HttpMethod.Post);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/ProfileAttributes", HttpMethod.Post);
             return client.RequestContent<ProfileAttributeModel, ProfileAttributeModel>(request, model);
         }
 
@@ -232,7 +232,7 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <returns>Returns a boolean value indicating whether the action succeeded or not.</returns>
         public static bool RemoveProfileAttribute(this InspireClient client, long attributeId)
         {
-            var request = client.CreateRequest($"/Configurations/ProfileAttributes/{attributeId}", HttpMethod.Delete);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/ProfileAttributes/{attributeId}", HttpMethod.Delete);
             client.RequestContent(request);
             return !client.HasError;
         }
@@ -326,7 +326,7 @@ namespace Vasont.Inspire.SDK.Configuration
                 throw new ArgumentNullException(nameof(model));
             }
 
-            var request = client.CreateRequest($"/Configurations/ComponentTypes/{model.ComponentTypeId}", HttpMethod.Put);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/ComponentTypes/{model.ComponentTypeId}", HttpMethod.Put);
             return client.RequestContent<ComponentTypeModel, ComponentTypeModel>(request, model);
         }
 
@@ -343,7 +343,7 @@ namespace Vasont.Inspire.SDK.Configuration
                 throw new ArgumentNullException(nameof(model));
             }
 
-            var request = client.CreateRequest($"/Configurations/ComponentTypes", HttpMethod.Post);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/ComponentTypes", HttpMethod.Post);
             return client.RequestContent<ComponentTypeModel, ComponentTypeModel>(request, model);
         }
 
@@ -355,7 +355,7 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <returns>Returns a boolean value indicating whether the action succeeded or not.</returns>
         public static bool RemoveComponentType(this InspireClient client, long componentTypeId)
         {
-            var request = client.CreateRequest($"/Configurations/ComponentTypes/{componentTypeId}", HttpMethod.Delete);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/ComponentTypes/{componentTypeId}", HttpMethod.Delete);
             client.RequestContent(request);
             return !client.HasError;
         }
@@ -423,7 +423,7 @@ namespace Vasont.Inspire.SDK.Configuration
                 throw new ArgumentNullException(nameof(model));
             }
 
-            var request = client.CreateRequest($"/Configurations/Elements/{model.ElementId}", HttpMethod.Put);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/Elements/{model.ElementId}", HttpMethod.Put);
             return client.RequestContent<ElementModel, ElementModel>(request, model);
         }
 
@@ -440,7 +440,7 @@ namespace Vasont.Inspire.SDK.Configuration
                 throw new ArgumentNullException(nameof(model));
             }
 
-            var request = client.CreateRequest($"/Configurations/Elements", HttpMethod.Post);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/Elements", HttpMethod.Post);
             return client.RequestContent<ElementModel, ElementModel>(request, model);
         }
 
@@ -452,7 +452,7 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <returns>Returns a boolean value indicating whether the action succeeded or not.</returns>
         public static bool RemoveElement(this InspireClient client, long elementId)
         {
-            var request = client.CreateRequest($"/Configurations/Elements/{elementId}", HttpMethod.Delete);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/Elements/{elementId}", HttpMethod.Delete);
             client.RequestContent(request);
             return !client.HasError;
         }
@@ -520,7 +520,7 @@ namespace Vasont.Inspire.SDK.Configuration
                 throw new ArgumentNullException(nameof(model));
             }
 
-            var request = client.CreateRequest($"/Configurations/Exports/{model.ExportId}", HttpMethod.Put);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/Exports/{model.ExportId}", HttpMethod.Put);
             return client.RequestContent<ExportConfigurationModel, ExportConfigurationModel>(request, model);
         }
 
@@ -537,7 +537,7 @@ namespace Vasont.Inspire.SDK.Configuration
                 throw new ArgumentNullException(nameof(model));
             }
 
-            var request = client.CreateRequest($"/Configurations/Exports", HttpMethod.Post);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/Exports", HttpMethod.Post);
             return client.RequestContent<ExportConfigurationModel, ExportConfigurationModel>(request, model);
         }
 
@@ -549,7 +549,7 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <returns>Returns a boolean value indicating whether the action succeeded or not.</returns>
         public static bool RemoveExport(this InspireClient client, long exportId)
         {
-            var request = client.CreateRequest($"/Configurations/Exports/{exportId}", HttpMethod.Delete);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/Exports/{exportId}", HttpMethod.Delete);
             client.RequestContent(request);
             return !client.HasError;
         }
@@ -715,7 +715,7 @@ namespace Vasont.Inspire.SDK.Configuration
                 throw new ArgumentNullException(nameof(model));
             }
 
-            var request = client.CreateRequest($"/Configurations/XmlLinkTypes/{model.XmlLinkTypeId}", HttpMethod.Put);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/XmlLinkTypes/{model.XmlLinkTypeId}", HttpMethod.Put);
             return client.RequestContent<XmlLinkTypeModel, XmlLinkTypeModel>(request, model);
         }
 
@@ -732,7 +732,7 @@ namespace Vasont.Inspire.SDK.Configuration
                 throw new ArgumentNullException(nameof(model));
             }
 
-            var request = client.CreateRequest($"/Configurations/XmlLinkTypes", HttpMethod.Post);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/XmlLinkTypes", HttpMethod.Post);
             return client.RequestContent<XmlLinkTypeModel, XmlLinkTypeModel>(request, model);
         }
 
@@ -744,7 +744,7 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <returns>Returns a boolean value indicating whether the action succeeded or not.</returns>
         public static bool RemoveXmlLinkType(this InspireClient client, long xmlLinkTypeId)
         {
-            var request = client.CreateRequest($"/Configurations/XmlLinkTypes/{xmlLinkTypeId}", HttpMethod.Delete);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/XmlLinkTypes/{xmlLinkTypeId}", HttpMethod.Delete);
             client.RequestContent(request);
             return !client.HasError;
         }
@@ -812,7 +812,7 @@ namespace Vasont.Inspire.SDK.Configuration
                 throw new ArgumentNullException(nameof(model));
             }
 
-            var request = client.CreateRequest($"/Configurations/Relations/{model.RelationId}", HttpMethod.Put);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/Relations/{model.RelationId}", HttpMethod.Put);
             return client.RequestContent<RelationModel, RelationModel>(request, model);
         }
 
@@ -829,7 +829,7 @@ namespace Vasont.Inspire.SDK.Configuration
                 throw new ArgumentNullException(nameof(model));
             }
 
-            var request = client.CreateRequest($"/Configurations/Relations", HttpMethod.Post);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/Relations", HttpMethod.Post);
             return client.RequestContent<RelationModel, RelationModel>(request, model);
         }
 
@@ -841,7 +841,7 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <returns>Returns a boolean value indicating whether the action succeeded or not.</returns>
         public static bool RemoveRelation(this InspireClient client, long relationId)
         {
-            var request = client.CreateRequest($"/Configurations/Relations/{relationId}", HttpMethod.Delete);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/Relations/{relationId}", HttpMethod.Delete);
             client.RequestContent(request);
             return !client.HasError;
         }
@@ -886,7 +886,7 @@ namespace Vasont.Inspire.SDK.Configuration
                 throw new ArgumentNullException(nameof(model));
             }
 
-            var request = client.CreateRequest($"/Configurations/Tags/{model.TagId}", HttpMethod.Put);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/Tags/{model.TagId}", HttpMethod.Put);
             return client.RequestContent<TagModel, TagModel>(request, model);
         }
 
@@ -903,7 +903,7 @@ namespace Vasont.Inspire.SDK.Configuration
                 throw new ArgumentNullException(nameof(model));
             }
 
-            var request = client.CreateRequest($"/Configurations/Tags", HttpMethod.Post);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/Tags", HttpMethod.Post);
             return client.RequestContent<TagModel, TagModel>(request, model);
         }
 
@@ -915,7 +915,7 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <returns>Returns a boolean value indicating whether the action succeeded or not.</returns>
         public static bool RemoveTag(this InspireClient client, long tagId)
         {
-            var request = client.CreateRequest($"/Configurations/Tags/{tagId}", HttpMethod.Delete);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/Tags/{tagId}", HttpMethod.Delete);
             client.RequestContent(request);
             return !client.HasError;
         }
@@ -983,7 +983,7 @@ namespace Vasont.Inspire.SDK.Configuration
                 throw new ArgumentNullException(nameof(model));
             }
 
-            var request = client.CreateRequest($"/Configurations/ProjectActivities/{model.ProjectActivityId}", HttpMethod.Put);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/ProjectActivities/{model.ProjectActivityId}", HttpMethod.Put);
             return client.RequestContent<ProjectActivityModel, ProjectActivityModel>(request, model);
         }
 
@@ -1000,7 +1000,7 @@ namespace Vasont.Inspire.SDK.Configuration
                 throw new ArgumentNullException(nameof(model));
             }
 
-            var request = client.CreateRequest($"/Configurations/ProjectActivities", HttpMethod.Post);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/ProjectActivities", HttpMethod.Post);
             return client.RequestContent<ProjectActivityModel, ProjectActivityModel>(request, model);
         }
 
@@ -1012,7 +1012,7 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <returns>Returns a boolean value indicating whether the action succeeded or not.</returns>
         public static bool RemoveProjectActivity(this InspireClient client, long projectActivityId)
         {
-            var request = client.CreateRequest($"/Configurations/ProjectActivities/{projectActivityId}", HttpMethod.Delete);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/ProjectActivities/{projectActivityId}", HttpMethod.Delete);
             client.RequestContent(request);
             return !client.HasError;
         }
@@ -1081,7 +1081,7 @@ namespace Vasont.Inspire.SDK.Configuration
                 throw new ArgumentNullException(nameof(model));
             }
 
-            var request = client.CreateRequest($"/Configurations/Languages/{model.LanguageCode}", HttpMethod.Put);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/Languages/{model.LanguageCode}", HttpMethod.Put);
             return client.RequestContent<LanguageModel, LanguageModel>(request, model);
         }
 
@@ -1098,7 +1098,7 @@ namespace Vasont.Inspire.SDK.Configuration
                 throw new ArgumentNullException(nameof(model));
             }
 
-            var request = client.CreateRequest($"/Configurations/Languages", HttpMethod.Post);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/Languages", HttpMethod.Post);
             return client.RequestContent<LanguageModel, LanguageModel>(request, model);
         }
 
@@ -1110,7 +1110,7 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <returns>Returns a boolean value indicating whether the action succeeded or not.</returns>
         public static bool RemoveLanguage(this InspireClient client, string languageCode)
         {
-            var request = client.CreateRequest($"/Configurations/Languages/{languageCode}", HttpMethod.Delete);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/Languages/{languageCode}", HttpMethod.Delete);
             client.RequestContent(request);
             return !client.HasError;
         }
@@ -1178,7 +1178,7 @@ namespace Vasont.Inspire.SDK.Configuration
                 throw new ArgumentNullException(nameof(model));
             }
 
-            var request = client.CreateRequest($"/Configurations/WebhookConfigurations/{model.Name}", HttpMethod.Put);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/WebhookConfigurations/{model.Name}", HttpMethod.Put);
             return client.RequestContent<WebhookConfigurationModel, WebhookConfigurationModel>(request, model);
         }
 
@@ -1195,7 +1195,7 @@ namespace Vasont.Inspire.SDK.Configuration
                 throw new ArgumentNullException(nameof(model));
             }
 
-            var request = client.CreateRequest($"/Configurations/WebhookConfigurations", HttpMethod.Post);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/WebhookConfigurations", HttpMethod.Post);
             return client.RequestContent<WebhookConfigurationModel, WebhookConfigurationModel>(request, model);
         }
 
@@ -1207,7 +1207,7 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <returns>Returns a boolean value indicating whether the action succeeded or not.</returns>
         public static bool RemoveWebHookConfiguration(this InspireClient client, string name)
         {
-            var request = client.CreateRequest($"/Configurations/WebhookConfigurations/{name}", HttpMethod.Delete);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/WebhookConfigurations/{name}", HttpMethod.Delete);
             client.RequestContent(request);
             return !client.HasError;
         }
@@ -1275,7 +1275,7 @@ namespace Vasont.Inspire.SDK.Configuration
                 throw new ArgumentNullException(nameof(model));
             }
 
-            var request = client.CreateRequest($"/Configurations/FileExtensions/{model.FileExtensionId}", HttpMethod.Put);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/FileExtensions/{model.FileExtensionId}", HttpMethod.Put);
             return client.RequestContent<FileExtensionModel, FileExtensionModel>(request, model);
         }
 
@@ -1292,7 +1292,7 @@ namespace Vasont.Inspire.SDK.Configuration
                 throw new ArgumentNullException(nameof(model));
             }
 
-            var request = client.CreateRequest($"/Configurations/FileExtensions", HttpMethod.Post);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/FileExtensions", HttpMethod.Post);
             return client.RequestContent<FileExtensionModel, FileExtensionModel>(request, model);
         }
 
@@ -1304,7 +1304,7 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <returns>Returns a boolean value indicating whether the action succeeded or not.</returns>
         public static bool RemoveFileExtension(this InspireClient client, long extensionId)
         {
-            var request = client.CreateRequest($"/Configurations/FileExtensions/{extensionId}", HttpMethod.Delete);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/FileExtensions/{extensionId}", HttpMethod.Delete);
             client.RequestContent(request);
             return !client.HasError;
         }

@@ -216,7 +216,7 @@ namespace Vasont.Inspire.SDK.Review
         /// <returns>Returns the updated <see cref="ReviewModel"/> object.</returns>
         public static ReviewModel UpdateReview(this InspireClient client, ReviewModel model)
         {
-            var request = client.CreateRequest($"/Reviews/{model.ReviewId}", HttpMethod.Put);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Reviews/{model.ReviewId}", HttpMethod.Put);
             return client.RequestContent<ReviewModel, ReviewModel>(request, model);
         }
 
@@ -254,7 +254,7 @@ namespace Vasont.Inspire.SDK.Review
         /// <returns>Returns the updated <see cref="ReviewerComponentModel"/> object.</returns>
         public static ReviewerComponentModel UpdateReviewComponentState(this InspireClient client, long reviewId, long reviewComponentId, bool completed = true)
         {
-            var request = client.CreateRequest($"/Reviews/{reviewId}/Components/{reviewComponentId}/State?completed={completed}", HttpMethod.Put);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Reviews/{reviewId}/Components/{reviewComponentId}/State?completed={completed}", HttpMethod.Put);
             return client.RequestContent<ReviewerComponentModel>(request);
         }
 
@@ -266,7 +266,7 @@ namespace Vasont.Inspire.SDK.Review
         /// <returns>Returns the new <see cref="ReviewModel"/> object.</returns>
         public static ReviewModel CreateReview(this InspireClient client, ReviewModel model)
         {
-            var request = client.CreateRequest($"/Reviews", HttpMethod.Post);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Reviews", HttpMethod.Post);
             return client.RequestContent<ReviewModel, ReviewModel>(request, model);
         }
 
@@ -278,7 +278,7 @@ namespace Vasont.Inspire.SDK.Review
         /// <returns>Returns the completed <see cref="ReviewModel"/> object.</returns>
         public static ReviewModel CompleteReviewerSession(this InspireClient client, ReviewModel model)
         {
-            var request = client.CreateRequest($"/Reviews/{model.ReviewId}/CompleteReviewing", HttpMethod.Put);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Reviews/{model.ReviewId}/CompleteReviewing", HttpMethod.Put);
             return client.RequestContent<ReviewModel, ReviewModel>(request, model);
         }
 
@@ -290,7 +290,7 @@ namespace Vasont.Inspire.SDK.Review
         /// <returns>Returns the completed <see cref="ReviewModel"/> object.</returns>
         public static ReviewModel CompleteReview(this InspireClient client, ReviewModel model)
         {
-            var request = client.CreateRequest($"/Reviews/{model.ReviewId}/Complete", HttpMethod.Put);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Reviews/{model.ReviewId}/Complete", HttpMethod.Put);
             return client.RequestContent<ReviewModel, ReviewModel>(request, model);
         }
 
@@ -303,7 +303,7 @@ namespace Vasont.Inspire.SDK.Review
         /// <returns>Returns a boolean value indicating if the review was canceled successfully.</returns>
         public static bool CancelReview(this InspireClient client, long reviewId, ReviewCancellationModel model)
         {
-            var request = client.CreateRequest($"/Reviews/{reviewId}/Cancel", HttpMethod.Put);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Reviews/{reviewId}/Cancel", HttpMethod.Put);
             return client.RequestContent<ReviewCancellationModel, bool>(request, model);
         }
 
@@ -316,7 +316,7 @@ namespace Vasont.Inspire.SDK.Review
         /// <returns>Returns a boolean value indicating if the review was deleted successfully.</returns>
         public static bool DeleteReview(this InspireClient client, long reviewId, ReviewCancellationModel model)
         {
-            var request = client.CreateRequest($"/Reviews/{reviewId}", HttpMethod.Delete);
+            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Reviews/{reviewId}", HttpMethod.Delete);
             return client.RequestContent<ReviewCancellationModel, bool>(request, model);
         }
     }
