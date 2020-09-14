@@ -22,7 +22,19 @@ namespace Vasont.Inspire.SDK.Components
         /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
         /// <param name="model">Contains the component load editor model.</param>
         /// <returns>Returns the <see cref="MinimalEditorXmlModel"/> object that represents the editor record created.</returns>
+        [Obsolete("This method is obsolete. Please use FindEditorComponent() going forward. This method will be removed in a future release.")]
         public static MinimalEditorXmlModel GetEditorComponent(this InspireClient client, EditorLoadModel model)
+        {
+            return FindEditorComponent(client, model);
+        }
+
+        /// <summary>
+        /// This method is used to retrieve the specified Editor Xml Model.
+        /// </summary>
+        /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
+        /// <param name="model">Contains the component load editor model.</param>
+        /// <returns>Returns the <see cref="MinimalEditorXmlModel"/> object that represents the editor record created.</returns>
+        public static MinimalEditorXmlModel FindEditorComponent(this InspireClient client, EditorLoadModel model)
         {
             if (model == null)
             {

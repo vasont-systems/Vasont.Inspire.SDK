@@ -19,29 +19,55 @@ namespace Vasont.Inspire.SDK.Security
         #region Public Extension Methods
 
         /// <summary>
-        /// This method is used to retrieve a specific <see cref="RoleModel"/> from the system.
+        /// This method is used to retrieve a list of <see cref="RoleModel"/> from the specified query.
         /// </summary>
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
-        /// <param name="roleId">The role identity.</param>
-        /// <returns>Returns <see cref="RoleModel"/> object if found.</returns>
-        public static RoleModel GetAllRoles(this InspireClient client, long roleId)
+        /// <param name="roleName">Contains an optional value used to filter results by role name.</param>
+        /// <param name="orderBy">Contains an optional value used to specify which model property results will be ordered by.</param>
+        /// <param name="direction">Contains an optional value used to specify which direction results will be ordered.</param>
+        /// <returns>Returns a list of <see cref="RoleModel"/> containing the results of the specified query.</returns>
+        [Obsolete("This method is obsolete. Please use FindRoles() going forward. This method will be removed in a future release.")]
+        public static List<RoleModel> GetRoles(this InspireClient client, string roleName = "", string orderBy = "Name", string direction = "asc")
         {
-            var request = client.CreateRequest($"/Roles/{roleId}");
-            return client.RequestContent<RoleModel>(request);
+            return FindRoles(client, roleName, orderBy, direction);
         }
 
         /// <summary>
-        /// This method is used to retrieve roles that match the search criteria.
+        /// This method is used to retrieve a list of <see cref="RoleModel"/> from the specified query.
         /// </summary>
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
-        /// <param name="roleName">Name of the role.</param>
-        /// <param name="orderBy">The field to order by the list of roles.</param>
-        /// <param name="direction">The direction of the order by, ascending or descending.</param>
-        /// <returns>Returns <see cref="RoleModel"/> object if found.</returns>
-        public static List<RoleModel> GetRoles(this InspireClient client, string roleName = "", string orderBy = "", string direction = "")
+        /// <param name="roleName">Contains an optional value used to filter results by role name.</param>
+        /// <param name="orderBy">Contains an optional value used to specify which model property results will be ordered by.</param>
+        /// <param name="direction">Contains an optional value used to specify which direction results will be ordered.</param>
+        /// <returns>Returns a list of <see cref="RoleModel"/> containing the results of the specified query.</returns>
+        public static List<RoleModel> FindRoles(this InspireClient client, string roleName = "", string orderBy = "Name", string direction = "asc")
         {
-            var request = client.CreateRequest($"/Roles?roleName={roleName}&orderBy={orderBy}&direction={direction}");
+            var request = client.CreateRequest($"/Roles/{roleName}/{orderBy}/{direction}");
             return client.RequestContent<List<RoleModel>>(request);
+        }
+
+        /// <summary>
+        /// Gets the specified <see cref="RoleModel"/>.
+        /// </summary>
+        /// <param name="client">The client.</param>
+        /// <param name="roleId">The role identifier.</param>
+        /// <returns>Returns the <see cref="RoleModel"/> record of the specified role</returns>
+        [Obsolete("This method is obsolete. Please use FindRole() going forward. This method will be removed in a future release.")]
+        public static RoleModel GetRole(this InspireClient client, long roleId)
+        {
+            return FindRole(client, roleId);
+        }
+
+        /// <summary>
+        /// Gets the specified <see cref="RoleModel"/>.
+        /// </summary>
+        /// <param name="client">The client.</param>
+        /// <param name="roleId">The role identifier.</param>
+        /// <returns>Returns the <see cref="RoleModel"/> record of the specified role</returns>
+        public static RoleModel FindRole(this InspireClient client, long roleId)
+        {
+            var request = client.CreateRequest($"/Roles/{roleId}");
+            return client.RequestContent<RoleModel>(request);
         }
 
         /// <summary>

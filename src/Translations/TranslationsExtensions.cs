@@ -21,7 +21,18 @@ namespace Vasont.Inspire.SDK.Translations
         /// </summary>
         /// <param name="client">Contains the client.</param>
         /// <returns>Returns a list of <see cref="TranslationJobStateModel" /> objects.</returns>
+        [Obsolete("This method is obsolete. Please use RetrieveTranslationJobStates() going forward. This method will be removed in a future release.")]
         public static List<TranslationJobStateModel> GetTranslationJobStates(this InspireClient client)
+        {
+            return RetrieveTranslationJobStates(client);
+        }
+
+        /// <summary>
+        /// Get all available translation job states.
+        /// </summary>
+        /// <param name="client">Contains the client.</param>
+        /// <returns>Returns a list of <see cref="TranslationJobStateModel" /> objects.</returns>
+        public static List<TranslationJobStateModel> RetrieveTranslationJobStates(this InspireClient client)
         {
             var request = client.CreateRequest($"/Translations/States");
             return client.RequestContent<List<TranslationJobStateModel>>(request);
@@ -32,7 +43,18 @@ namespace Vasont.Inspire.SDK.Translations
         /// </summary>
         /// <param name="client">The client.</param>
         /// <returns>Returns a List of <see cref="TranslationVendorModel" /> objects.</returns>
+        [Obsolete("This method is obsolete. Please use RetrieveTranslationVendors() going forward. This method will be removed in a future release.")]
         public static List<TranslationVendorModel> GetTranslationVendors(this InspireClient client)
+        {
+            return RetrieveTranslationVendors(client);
+        }
+
+        /// <summary>
+        /// Gets all translation vendors.
+        /// </summary>
+        /// <param name="client">The client.</param>
+        /// <returns>Returns a List of <see cref="TranslationVendorModel" /> objects.</returns>
+        public static List<TranslationVendorModel> RetrieveTranslationVendors(this InspireClient client)
         {
             var request = client.CreateRequest($"/Translations/Vendors");
             return client.RequestContent<List<TranslationVendorModel>>(request);
@@ -44,7 +66,19 @@ namespace Vasont.Inspire.SDK.Translations
         /// <param name="client">The client.</param>
         /// <param name="translationJobId">The translation job identifier.</param>
         /// <returns>Returns the <see cref="TranslationJobModel" /> object found for the requested Id.</returns>
+        [Obsolete("This method is obsolete. Please use FindTranslationJob() going forward. This method will be removed in a future release.")]
         public static TranslationJobModel GetTranslationJobById(this InspireClient client, long translationJobId)
+        {
+            return FindTranslationJob(client, translationJobId);
+        }
+
+        /// <summary>
+        /// Gets the translation job by identifier.
+        /// </summary>
+        /// <param name="client">The client.</param>
+        /// <param name="translationJobId">The translation job identifier.</param>
+        /// <returns>Returns the <see cref="TranslationJobModel" /> object found for the requested Id.</returns>
+        public static TranslationJobModel FindTranslationJob(this InspireClient client, long translationJobId)
         {
             var request = client.CreateRequest($"/Translations/{translationJobId}");
             return client.RequestContent<TranslationJobModel>(request);
@@ -91,7 +125,19 @@ namespace Vasont.Inspire.SDK.Translations
         /// <param name="client">The client.</param>
         /// <param name="translationVendorId">The translation vendor identifier.</param>
         /// <returns>Returns a <see cref="WorkerStateModel" /> of type <see cref="TranslationExportStateModel" />.</returns>
+        [Obsolete("This method is obsolete. Please use FindQueuedTranslationJobs() going forward. This method will be removed in a future release.")]
         public static WorkerStateModel<TranslationExportStateModel> GetQueuedTranslationJobs(this InspireClient client, long translationVendorId)
+        {
+            return FindQueuedTranslationJobs(client, translationVendorId);
+        }
+
+        /// <summary>
+        /// Gets the queued translation jobs.
+        /// </summary>
+        /// <param name="client">The client.</param>
+        /// <param name="translationVendorId">The translation vendor identifier.</param>
+        /// <returns>Returns a <see cref="WorkerStateModel" /> of type <see cref="TranslationExportStateModel" />.</returns>
+        public static WorkerStateModel<TranslationExportStateModel> FindQueuedTranslationJobs(this InspireClient client, long translationVendorId)
         {
             if (translationVendorId <= 0)
             {
@@ -115,7 +161,19 @@ namespace Vasont.Inspire.SDK.Translations
         /// <param name="client">The client.</param>
         /// <param name="workerKey">The worker key.</param>
         /// <returns>Returns a <see cref="WorkerStateModel" /> of type <see cref="TranslationExportStateModel" />.</returns>
+        [Obsolete("This method is obsolete. Please use FindTranslationExportState() going forward. This method will be removed in a future release.")]
         public static MinimalWorkerStateModel<TranslationExportStateModel> GetTranslationExportState(this InspireClient client, string workerKey)
+        {
+            return FindTranslationExportState(client, workerKey);
+        }
+
+        /// <summary>
+        /// Gets the translation export state.
+        /// </summary>
+        /// <param name="client">The client.</param>
+        /// <param name="workerKey">The worker key.</param>
+        /// <returns>Returns a <see cref="WorkerStateModel" /> of type <see cref="TranslationExportStateModel" />.</returns>
+        public static MinimalWorkerStateModel<TranslationExportStateModel> FindTranslationExportState(this InspireClient client, string workerKey)
         {
             if (string.IsNullOrEmpty(workerKey))
             {
@@ -152,7 +210,19 @@ namespace Vasont.Inspire.SDK.Translations
         /// <param name="client">The client.</param>
         /// <param name="translationJobIds">The translation job ids.</param>
         /// <returns>Returns a List of <see cref="TranslationExportJobModel" /> objects.</returns>
+        [Obsolete("This method is obsolete. Please use FindTranslationExportJobs() going forward. This method will be removed in a future release.")]
         public static List<TranslationExportJobModel> GetTranslationExportJobs(this InspireClient client, List<long> translationJobIds)
+        {
+            return FindTranslationExportJobs(client, translationJobIds);
+        }
+
+        /// <summary>
+        /// Gets all of the translation export jobs ready to be processed.
+        /// </summary>
+        /// <param name="client">The client.</param>
+        /// <param name="translationJobIds">The translation job ids.</param>
+        /// <returns>Returns a List of <see cref="TranslationExportJobModel" /> objects.</returns>
+        public static List<TranslationExportJobModel> FindTranslationExportJobs(this InspireClient client, List<long> translationJobIds)
         {
             if (translationJobIds == null)
             {
