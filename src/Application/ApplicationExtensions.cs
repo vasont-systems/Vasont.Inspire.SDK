@@ -22,7 +22,7 @@ namespace Vasont.Inspire.SDK.Application
         [Obsolete("This call uses legacy route. Please use RetrieveAppInfo() going forward. This method will be removed in a future release.")]
         public static TenantDetailModel GetAppInfo(this InspireClient client)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/AppInfo");
+            var request = client.CreateRequest($"/AppInfo");
             return client.RequestContent<TenantDetailModel>(request);
         }
 
@@ -33,7 +33,7 @@ namespace Vasont.Inspire.SDK.Application
         /// <returns>Returns a <see cref="TenantDetailModel"/> object if found.</returns>
         public static TenantDetailModel RetrieveAppInfo(this InspireClient client)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Application/AppInfo");
+            var request = client.CreateRequest($"/Application/AppInfo");
             return client.RequestContent<TenantDetailModel>(request);
         }
 
@@ -44,7 +44,7 @@ namespace Vasont.Inspire.SDK.Application
         /// <returns>Returns a string OK if the server responded.</returns>
         public static string KeepAlive(this InspireClient client)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Misc/KeepAlive");
+            var request = client.CreateRequest($"/Misc/KeepAlive");
             return client.RequestContent<string>(request);
         }
     }

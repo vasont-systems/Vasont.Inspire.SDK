@@ -83,7 +83,7 @@ namespace Vasont.Inspire.SDK.Security
                 throw new ArgumentNullException(nameof(inputModel));
             }
 
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Roles", HttpMethod.Post);
+            var request = client.CreateRequest($"/Roles", HttpMethod.Post);
             return client.RequestContent<RoleModel, RoleModel>(request, inputModel);
         }
 
@@ -101,7 +101,7 @@ namespace Vasont.Inspire.SDK.Security
                 throw new ArgumentNullException(nameof(inputModel));
             }
 
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Roles/{roleId}", HttpMethod.Put);
+            var request = client.CreateRequest($"/Roles/{roleId}", HttpMethod.Put);
             return client.RequestContent<RoleModel, RoleModel>(request, inputModel);
         }
 
@@ -118,7 +118,7 @@ namespace Vasont.Inspire.SDK.Security
                 throw new ArgumentNullException(nameof(roleId));
             }
 
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Roles/{roleId}", HttpMethod.Delete);
+            var request = client.CreateRequest($"/Roles/{roleId}", HttpMethod.Delete);
             client.RequestContent(request);
             return client.HasError;
         }

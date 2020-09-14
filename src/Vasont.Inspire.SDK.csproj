@@ -7,7 +7,7 @@
     <SuppressPseudoWarning Condition="'$(Configuration)' == 'Debug'">true</SuppressPseudoWarning>
   </PropertyGroup>
   <PropertyGroup>
-    <TargetFrameworks>net461;net48;netstandard2.1</TargetFrameworks>
+    <TargetFrameworks>net48;netstandard2.1</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Version>1.7.9</Version>
     <Authors>GlobalLink Vasont</Authors>
