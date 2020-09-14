@@ -49,7 +49,7 @@ namespace Vasont.Inspire.SDK.Folders
                 throw new ArgumentNullException(nameof(folderId));
             }
 
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Folders/{folderId}?allDescendants={includeAllDescendantFolders}&permissionFlag={permissionFlag}");
+            var request = client.CreateRequest($"/Folders/{folderId}?allDescendants={includeAllDescendantFolders}&permissionFlag={permissionFlag}");
             return client.RequestContent<List<FolderBrowseModel>>(request);
         }
 
@@ -80,7 +80,7 @@ namespace Vasont.Inspire.SDK.Folders
                 throw new ArgumentNullException(nameof(folderId));
             }
 
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Folders/{folderId}/Components", HttpMethod.Post);
+            var request = client.CreateRequest($"/Folders/{folderId}/Components", HttpMethod.Post);
             return client.RequestContent<FolderComponentsQueryModel, FolderComponentsResultModel>(request, inputModel);
         }
 
@@ -111,7 +111,7 @@ namespace Vasont.Inspire.SDK.Folders
                 throw new ArgumentNullException(nameof(folderId));
             }
 
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Folders/{folderId}/AncestorsSiblings");
+            var request = client.CreateRequest($"/Folders/{folderId}/AncestorsSiblings");
             return client.RequestContent<List<FolderBrowseModel>>(request);
         }
 
@@ -140,7 +140,7 @@ namespace Vasont.Inspire.SDK.Folders
                 throw new ArgumentNullException(nameof(folderId));
             }
 
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Folders/{folderId}/Permissions");
+            var request = client.CreateRequest($"/Folders/{folderId}/Permissions");
             return client.RequestContent<PermissionUpdateModel>(request);
         }
 
@@ -158,7 +158,7 @@ namespace Vasont.Inspire.SDK.Folders
                 throw new ArgumentNullException(nameof(sourceFolderId));
             }
 
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Folders/{sourceFolderId}/Move/{targetFolderId}");
+            var request = client.CreateRequest($"/Folders/{sourceFolderId}/Move/{targetFolderId}");
             return client.RequestContent<FolderBrowseModel>(request);
         }
 
@@ -176,7 +176,7 @@ namespace Vasont.Inspire.SDK.Folders
                 throw new ArgumentNullException(nameof(inputModel));
             }
 
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Folders/{targetFolderId}", HttpMethod.Post);
+            var request = client.CreateRequest($"/Folders/{targetFolderId}", HttpMethod.Post);
             return client.RequestContent<FolderBrowseModel, FolderBrowseModel>(request, inputModel);
         }
 
@@ -195,7 +195,7 @@ namespace Vasont.Inspire.SDK.Folders
                 throw new ArgumentNullException(nameof(targetFolderId));
             }
 
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Folders/{targetFolderId}/Export/{exportId}/?includeSubFolders={includeSubFolders}", HttpMethod.Post);
+            var request = client.CreateRequest($"/Folders/{targetFolderId}/Export/{exportId}/?includeSubFolders={includeSubFolders}", HttpMethod.Post);
             return client.RequestContent<ExportRequestModel, ExportRequestModel>(request, new ExportRequestModel());
         }
 
@@ -212,7 +212,7 @@ namespace Vasont.Inspire.SDK.Folders
                 throw new ArgumentNullException(nameof(folderId));
             }
 
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Folders/{folderId}", HttpMethod.Delete);
+            var request = client.CreateRequest($"/Folders/{folderId}", HttpMethod.Delete);
             client.RequestContent(request);
             return client.HasError;
         }
@@ -231,7 +231,7 @@ namespace Vasont.Inspire.SDK.Folders
                 throw new ArgumentNullException(nameof(inputModel));
             }
 
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Folders/{folderId}/Permissions", HttpMethod.Put);
+            var request = client.CreateRequest($"/Folders/{folderId}/Permissions", HttpMethod.Put);
             return client.RequestContent<PermissionUpdateModel, PermissionUpdateModel>(request, inputModel);
         }
 
@@ -249,7 +249,7 @@ namespace Vasont.Inspire.SDK.Folders
                 throw new ArgumentNullException(nameof(inputModel));
             }
 
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Folders/{folderId}", HttpMethod.Put);
+            var request = client.CreateRequest($"/Folders/{folderId}", HttpMethod.Put);
             return client.RequestContent<FolderBrowseModel, FolderBrowseModel>(request, inputModel);
         }
 
@@ -267,7 +267,7 @@ namespace Vasont.Inspire.SDK.Folders
                 throw new ArgumentNullException(nameof(inputModel));
             }
 
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Folders/{folderId}/Rename", HttpMethod.Put);
+            var request = client.CreateRequest($"/Folders/{folderId}/Rename", HttpMethod.Put);
             return client.RequestContent<FolderBrowseModel, FolderBrowseModel>(request, inputModel);
         }
     }
