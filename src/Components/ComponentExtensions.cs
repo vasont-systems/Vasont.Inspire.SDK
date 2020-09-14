@@ -30,9 +30,20 @@ namespace Vasont.Inspire.SDK.Components
         /// </summary>
         /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
         /// <returns>Returns a list of <see cref="MinimalComponentTypeModel"/> minimal component type models.</returns>
+        [Obsolete("This method is obsolete. Please use RetrieveComponentTypes() going forward. This method will be removed in a future release.")]
         public static List<MinimalComponentTypeModel> GetComponentTypes(this InspireClient client)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/ComponentTypes");
+            return RetrieveComponentTypes(client);
+        }
+
+        /// <summary>
+        /// This method is used to retrieve and return minimal models for component types.
+        /// </summary>
+        /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
+        /// <returns>Returns a list of <see cref="MinimalComponentTypeModel"/> minimal component type models.</returns>
+        public static List<MinimalComponentTypeModel> RetrieveComponentTypes(this InspireClient client)
+        {
+            var request = client.CreateRequest($"/ComponentTypes");
             return client.RequestContent<List<MinimalComponentTypeModel>>(request);
         }
 
@@ -45,9 +56,20 @@ namespace Vasont.Inspire.SDK.Components
         /// </summary>
         /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
         /// <returns>Returns a list of <see cref="WorkflowTemplateModel"/> objects.</returns>
+        [Obsolete("This method is obsolete. Please use RetrieveComponentWorkflowTemplates() going forward. This method will be removed in a future release.")]
         public static List<WorkflowTemplateModel> GetComponentWorkflowTemplates(this InspireClient client)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Components/WorkflowTemplates");
+            return RetrieveComponentWorkflowTemplates(client);
+        }
+
+        /// <summary>
+        /// This method is used to retrieve the component workflow templates.
+        /// </summary>
+        /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
+        /// <returns>Returns a list of <see cref="WorkflowTemplateModel"/> objects.</returns>
+        public static List<WorkflowTemplateModel> RetrieveComponentWorkflowTemplates(this InspireClient client)
+        {
+            var request = client.CreateRequest($"/Components/WorkflowTemplates");
             return client.RequestContent<List<WorkflowTemplateModel>>(request);
         }
 
@@ -57,9 +79,21 @@ namespace Vasont.Inspire.SDK.Components
         /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
         /// <param name="componentId">Contains the unique identity of the component.</param>
         /// <returns>Returns a list of <see cref="WorkflowModel"/> objects.</returns>
+        [Obsolete("This method is obsolete. Please use FindComponentWorkflowTemplate() going forward. This method will be removed in a future release.")]
         public static WorkflowModel GetComponentWorkflowTemplate(this InspireClient client, long componentId)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Components/{componentId}/WorkflowTemplate");
+            return FindComponentWorkflowTemplate(client, componentId);
+        }
+
+        /// <summary>
+        /// This method is used to retrieve a specific component's workflow templates.
+        /// </summary>
+        /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
+        /// <param name="componentId">Contains the unique identity of the component.</param>
+        /// <returns>Returns a list of <see cref="WorkflowModel"/> objects.</returns>
+        public static WorkflowModel FindComponentWorkflowTemplate(this InspireClient client, long componentId)
+        {
+            var request = client.CreateRequest($"/Components/{componentId}/WorkflowTemplate");
             return client.RequestContent<WorkflowModel>(request);
         }
 
@@ -69,9 +103,21 @@ namespace Vasont.Inspire.SDK.Components
         /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
         /// <param name="documentTypes">Contains a comma delimited list of document types that will be used to filter the results.</param>
         /// <returns>Returns the a list of <see cref="MinimalComponentModel"/> objects.</returns>
+        [Obsolete("This method is obsolete. Please use FindComponentTemplates() going forward. This method will be removed in a future release.")]
         public static List<MinimalComponentModel> GetComponentTemplates(this InspireClient client, string documentTypes = "")
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Components/Templates/{documentTypes}");
+            return FindComponentTemplates(client, documentTypes);
+        }
+
+        /// <summary>
+        /// This method is used to retrieve the component templates based on the supplied document types.
+        /// </summary>
+        /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
+        /// <param name="documentTypes">Contains a comma delimited list of document types that will be used to filter the results.</param>
+        /// <returns>Returns the a list of <see cref="MinimalComponentModel"/> objects.</returns>
+        public static List<MinimalComponentModel> FindComponentTemplates(this InspireClient client, string documentTypes = "")
+        {
+            var request = client.CreateRequest($"/Components/Templates/{documentTypes}");
             return client.RequestContent<List<MinimalComponentModel>>(request);
         }
 
@@ -81,9 +127,21 @@ namespace Vasont.Inspire.SDK.Components
         /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
         /// <param name="componentIds">The list of component identifiers.</param>
         /// <returns>Returns a <see cref="BatchComponentsResultModel"/> object containing a list of requested components.</returns>
+        [Obsolete("This method is obsolete. Please use FindComponents() going forward. This method will be removed in a future release.")]
         public static BatchComponentsResultModel GetComponents(this InspireClient client, BatchComponentsRequestModel componentIds)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Components/Batch", HttpMethod.Post);
+            return FindComponents(client, componentIds);
+        }
+
+        /// <summary>
+        /// This method is used to retrieve a specified batch of requested components.
+        /// </summary>
+        /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
+        /// <param name="componentIds">The list of component identifiers.</param>
+        /// <returns>Returns a <see cref="BatchComponentsResultModel"/> object containing a list of requested components.</returns>
+        public static BatchComponentsResultModel FindComponents(this InspireClient client, BatchComponentsRequestModel componentIds)
+        {
+            var request = client.CreateRequest($"/Components/Batch", HttpMethod.Post);
             return client.RequestContent<BatchComponentsRequestModel, BatchComponentsResultModel>(request, componentIds);
         }
 
@@ -93,21 +151,45 @@ namespace Vasont.Inspire.SDK.Components
         /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
         /// <param name="componentId">The component identity.</param>
         /// <returns>Returns a list of <see cref="MinimalComponentModel"/> objects.</returns>
+        [Obsolete("This method is obsolete. Please use FindComponent() going forward. This method will be removed in a future release.")]
         public static MinimalComponentModel GetComponent(this InspireClient client, long componentId)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Components/{componentId}");
+            return FindComponent(client, componentId);
+        }
+
+        /// <summary>
+        /// This method is used to retrieve minimal detail about a specific component.
+        /// </summary>
+        /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
+        /// <param name="componentId">The component identity.</param>
+        /// <returns>Returns a list of <see cref="MinimalComponentModel"/> objects.</returns>
+        public static MinimalComponentModel FindComponent(this InspireClient client, long componentId)
+        {
+            var request = client.CreateRequest($"/Components/{componentId}");
             return client.RequestContent<MinimalComponentModel>(request);
         }
 
         /// <summary>
         /// This method is used to retrieve the detail of the specific component.
         /// </summary>
-        /// <param name="client">The client.</param>
+        /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
         /// <param name="componentId">The component identifier.</param>
         /// <returns>Returns the <see cref="DetailedComponentModel"/> object.</returns>
+        [Obsolete("This method is obsolete. Please use FindComponentDetail() going forward. This method will be removed in a future release.")]
         public static DetailedComponentModel GetComponentDetail(this InspireClient client, long componentId)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Components/{componentId}/Details");
+            return FindComponentDetail(client, componentId);
+        }
+
+        /// <summary>
+        /// This method is used to retrieve the detail of the specific component.
+        /// </summary>
+        /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
+        /// <param name="componentId">The component identifier.</param>
+        /// <returns>Returns the <see cref="DetailedComponentModel"/> object.</returns>
+        public static DetailedComponentModel FindComponentDetail(this InspireClient client, long componentId)
+        {
+            var request = client.CreateRequest($"/Components/{componentId}/Details");
             return client.RequestContent<DetailedComponentModel>(request);
         }
 
@@ -117,9 +199,21 @@ namespace Vasont.Inspire.SDK.Components
         /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
         /// <param name="componentId">The component identity.</param>
         /// <returns>Returns an array of bytes that represent the content of the component.</returns>
+        [Obsolete("This method is obsolete. Please use FindComponentContent() going forward. This method will be removed in a future release.")]
         public static byte[] GetComponentContent(this InspireClient client, long componentId)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Components/{componentId}/Content");
+            return FindComponentContent(client, componentId);
+        }
+
+        /// <summary>
+        /// This method is used to retrieve the content from a specific component.
+        /// </summary>
+        /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
+        /// <param name="componentId">The component identity.</param>
+        /// <returns>Returns an array of bytes that represent the content of the component.</returns>
+        public static byte[] FindComponentContent(this InspireClient client, long componentId)
+        {
+            var request = client.CreateRequest($"/Components/{componentId}/Content");
             return client.RequestContent<byte[]>(request);
         }
 
@@ -129,9 +223,21 @@ namespace Vasont.Inspire.SDK.Components
         /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
         /// <param name="componentId">The component identity.</param>
         /// <returns>Returns the <see cref="PermissionUpdateModel"/> object.</returns>
+        [Obsolete("This method is obsolete. Please use FindComponentPermissions() going forward. This method will be removed in a future release.")]
         public static PermissionUpdateModel GetComponentPermissions(this InspireClient client, long componentId)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Components/{componentId}/Permissions");
+            return FindComponentPermissions(client, componentId);
+        }
+
+        /// <summary>
+        /// This method is used to retrieve the permission details for a specific component.
+        /// </summary>
+        /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
+        /// <param name="componentId">The component identity.</param>
+        /// <returns>Returns the <see cref="PermissionUpdateModel"/> object.</returns>
+        public static PermissionUpdateModel FindComponentPermissions(this InspireClient client, long componentId)
+        {
+            var request = client.CreateRequest($"/Components/{componentId}/Permissions");
             return client.RequestContent<PermissionUpdateModel>(request);
         }
 
@@ -142,9 +248,22 @@ namespace Vasont.Inspire.SDK.Components
         /// <param name="componentId">The list of component identifier.</param>
         /// <param name="allowedElements">Contains an optional list of allowed element names.</param>
         /// <returns>Returns a <see cref="BatchComponentsResultModel"/> object containing a list of requested components.</returns>
+        [Obsolete("This method is obsolete. Please use FindComponentElements() going forward. This method will be removed in a future release.")]
         public static List<XmlComponentElementModel> GetComponentElements(this InspireClient client, long componentId, List<string> allowedElements)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Components/{componentId}/Elements", HttpMethod.Post);
+            return FindComponentElements(client, componentId, allowedElements);
+        }
+
+        /// <summary>
+        /// This method is used to retrieve the specified components elements.
+        /// </summary>
+        /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
+        /// <param name="componentId">The list of component identifier.</param>
+        /// <param name="allowedElements">Contains an optional list of allowed element names.</param>
+        /// <returns>Returns a <see cref="BatchComponentsResultModel"/> object containing a list of requested components.</returns>
+        public static List<XmlComponentElementModel> FindComponentElements(this InspireClient client, long componentId, List<string> allowedElements)
+        {
+            var request = client.CreateRequest($"/Components/{componentId}/Elements", HttpMethod.Post);
             return client.RequestContent<List<string>, List<XmlComponentElementModel>>(request, allowedElements);
         }
 
@@ -172,9 +291,22 @@ namespace Vasont.Inspire.SDK.Components
         /// <param name="componentId">Contains the component identity.</param>
         /// <param name="forceReload">Contains a value indicating whether the configuration cache is bypassed and reloaded.</param>
         /// <returns>Returns the <see cref="ComponentConfigurationModel"/> object.</returns>
+        [Obsolete("This method is obsolete. Please use FindComponentConfiguration() going forward. This method will be removed in a future release.")]
         public static ComponentConfigurationModel GetComponentConfiguration(this InspireClient client, long componentId, bool forceReload = false)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Components/{componentId}/Configuration?force={forceReload}");
+            return FindComponentConfiguration(client, componentId, forceReload);
+        }
+
+        /// <summary>
+        /// This method is used to retrieve a component configuration for a specified component
+        /// </summary>
+        /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
+        /// <param name="componentId">Contains the component identity.</param>
+        /// <param name="forceReload">Contains a value indicating whether the configuration cache is bypassed and reloaded.</param>
+        /// <returns>Returns the <see cref="ComponentConfigurationModel"/> object.</returns>
+        public static ComponentConfigurationModel FindComponentConfiguration(this InspireClient client, long componentId, bool forceReload = false)
+        {
+            var request = client.CreateRequest($"/Components/{componentId}/Configuration?force={forceReload}");
             return client.RequestContent<ComponentConfigurationModel>(request);
         }
 
@@ -472,7 +604,19 @@ namespace Vasont.Inspire.SDK.Components
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <param name="workerKey">Contains the import worker key to find.</param>
         /// <returns>Returns a <see cref="MinimalWorkerStateModel"/> of type <see cref="MinimalImportStateModel"/>.</returns>
+        [Obsolete("This method is obsolete. Please use FindImportState() going forward. This method will be removed in a future release.")]
         public static MinimalWorkerStateModel<MinimalImportStateModel> GetImportState(this InspireClient client, string workerKey)
+        {
+            return FindImportState(client, workerKey);
+        }
+
+        /// <summary>
+        /// This method is used to get the state of an import worker process.
+        /// </summary>
+        /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
+        /// <param name="workerKey">Contains the import worker key to find.</param>
+        /// <returns>Returns a <see cref="MinimalWorkerStateModel"/> of type <see cref="MinimalImportStateModel"/>.</returns>
+        public static MinimalWorkerStateModel<MinimalImportStateModel> FindImportState(this InspireClient client, string workerKey)
         {
             if (string.IsNullOrEmpty(workerKey))
             {
@@ -491,17 +635,27 @@ namespace Vasont.Inspire.SDK.Components
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <param name="inputModel">Contains the <see cref="WorkerStateModel"/> input.</param>
         /// <returns>Returns a <see cref="MinimalWorkerStateModel"/> of type <see cref="MinimalImportStateModel"/>.</returns>
+        [Obsolete("This method is obsolete. Please use FindImportState() going forward. This method will be removed in a future release.")]
         public static MinimalWorkerStateModel<MinimalImportStateModel> GetImportState(this InspireClient client, WorkerStateModel inputModel)
+        {
+            return FindImportState(client, inputModel);
+        }
+
+        /// <summary>
+        /// This method is used to get the state of an import worker process.
+        /// </summary>
+        /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
+        /// <param name="inputModel">Contains the <see cref="WorkerStateModel"/> input.</param>
+        /// <returns>Returns a <see cref="MinimalWorkerStateModel"/> of type <see cref="MinimalImportStateModel"/>.</returns>
+        public static MinimalWorkerStateModel<MinimalImportStateModel> FindImportState(this InspireClient client, WorkerStateModel inputModel)
         {
             if (inputModel == null)
             {
                 throw new ArgumentNullException(nameof(inputModel));
             }
-
-            string encodedWorkerKey = Uri.EscapeUriString(inputModel.Key);
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Components/Import?workerKey={encodedWorkerKey}", HttpMethod.Get);
-
-            return client.RequestContent<MinimalWorkerStateModel<MinimalImportStateModel>>(request);
+            
+            // Call existing FindImportState using the Key from the model
+            return FindImportState(client, inputModel.Key);
         }
 
         /// <summary>
@@ -510,7 +664,19 @@ namespace Vasont.Inspire.SDK.Components
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <param name="workerKey">Contains the export worker key to find.</param>
         /// <returns>Returns a <see cref="MinimalWorkerStateModel"/> of type <see cref="MinimalExportStateModel"/>.</returns>
+        [Obsolete("This method is obsolete. Please use FindExportState() going forward. This method will be removed in a future release.")]
         public static MinimalWorkerStateModel<MinimalExportStateModel> GetExportState(this InspireClient client, string workerKey)
+        {
+            return FindExportState(client, workerKey);
+        }
+
+        /// <summary>
+        /// This method is used to get the state of an export worker process.
+        /// </summary>
+        /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
+        /// <param name="workerKey">Contains the export worker key to find.</param>
+        /// <returns>Returns a <see cref="MinimalWorkerStateModel"/> of type <see cref="MinimalExportStateModel"/>.</returns>
+        public static MinimalWorkerStateModel<MinimalExportStateModel> FindExportState(this InspireClient client, string workerKey)
         {
             if (string.IsNullOrEmpty(workerKey))
             {
@@ -529,17 +695,27 @@ namespace Vasont.Inspire.SDK.Components
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <param name="inputModel">Contains the <see cref="WorkerStateModel"/> input.</param>
         /// <returns>Returns a <see cref="MinimalWorkerStateModel"/> of type <see cref="MinimalExportStateModel"/>.</returns>
+        [Obsolete("This method is obsolete. Please use FindExportState() going forward. This method will be removed in a future release.")]
         public static MinimalWorkerStateModel<MinimalExportStateModel> GetExportState(this InspireClient client, WorkerStateModel inputModel)
+        {
+            return FindExportState(client, inputModel);
+        }
+
+        /// <summary>
+        /// This method is used to get the state of an export worker process.
+        /// </summary>
+        /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
+        /// <param name="inputModel">Contains the <see cref="WorkerStateModel"/> input.</param>
+        /// <returns>Returns a <see cref="MinimalWorkerStateModel"/> of type <see cref="MinimalExportStateModel"/>.</returns>
+        public static MinimalWorkerStateModel<MinimalExportStateModel> FindExportState(this InspireClient client, WorkerStateModel inputModel)
         {
             if (inputModel == null)
             {
                 throw new ArgumentNullException(nameof(inputModel));
             }
 
-            string encodedWorkerKey = Uri.EscapeUriString(inputModel.Key);
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Components/Export?workerKey={encodedWorkerKey}", HttpMethod.Get);
-
-            return client.RequestContent<MinimalWorkerStateModel<MinimalExportStateModel>>(request);
+            // Call existing FindExportState using the Key from the model
+            return FindExportState(client, inputModel.Key);
         }
 
         #endregion Public Component Extension Methods
@@ -549,7 +725,7 @@ namespace Vasont.Inspire.SDK.Components
         /// <summary>
         /// This method is used to update the specified component tags.
         /// </summary>
-        /// <param name="client">The client.</param>
+        /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
         /// <param name="componentId">The component identifier.</param>
         /// <param name="inputModel">The input model.</param>
         /// <returns>Returns the updated <see cref="ComponentTagModel"/> object.</returns>
@@ -567,7 +743,7 @@ namespace Vasont.Inspire.SDK.Components
         /// <summary>
         /// This method is used to update the specified component tags.
         /// </summary>
-        /// <param name="client">The client.</param>
+        /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
         /// <param name="componentId">The component identifier.</param>
         /// <param name="inputModel">The input model.</param>
         /// <returns>Returns the updated <see cref="ComponentTagModel"/> object.</returns>
@@ -624,7 +800,20 @@ namespace Vasont.Inspire.SDK.Components
         /// <param name="inputModel">The <see cref="ComponentRelationsQueryModel"/> input model.</param>
         /// <returns>Returns a <see cref="ComponentRelationsResultModel"/> model.</returns>
         /// <exception cref="ArgumentNullException">Thrown if the <see cref="ComponentRelationsQueryModel"/> is not set.</exception>
+        [Obsolete("This method is obsolete. Please use FindComponentRelations() going forward. This method will be removed in a future release.")]
         public static ComponentRelationsResultModel GetComponentRelations(this InspireClient client, ComponentRelationsQueryModel inputModel)
+        {
+            return FindComponentRelations(client, inputModel);
+        }
+
+        /// <summary>
+        /// This method is used to retrieve the requested component relations.
+        /// </summary>
+        /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
+        /// <param name="inputModel">The <see cref="ComponentRelationsQueryModel"/> input model.</param>
+        /// <returns>Returns a <see cref="ComponentRelationsResultModel"/> model.</returns>
+        /// <exception cref="ArgumentNullException">Thrown if the <see cref="ComponentRelationsQueryModel"/> is not set.</exception>
+        public static ComponentRelationsResultModel FindComponentRelations(this InspireClient client, ComponentRelationsQueryModel inputModel)
         {
             if (inputModel == null)
             {
@@ -642,7 +831,20 @@ namespace Vasont.Inspire.SDK.Components
         /// <param name="inputModel">The <see cref="ComponentRelationsQueryModel"/> input model.</param>
         /// <returns>Returns an array of bytes that represent the content of the component relation report.</returns>
         /// <exception cref="ArgumentNullException">Thrown if the <see cref="ComponentRelationsQueryModel"/> is not set.</exception>
+        [Obsolete("This method is obsolete. Please use FindComponentRelationsReport() going forward. This method will be removed in a future release.")]
         public static byte[] GetComponentRelationsReport(this InspireClient client, ComponentRelationsQueryModel inputModel)
+        {
+            return FindComponentRelationsReport(client, inputModel);
+        }
+
+        /// <summary>
+        /// This method is used to retrieve the relations report for the specified component and return as a CSV formatted report file contents.
+        /// </summary>
+        /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
+        /// <param name="inputModel">The <see cref="ComponentRelationsQueryModel"/> input model.</param>
+        /// <returns>Returns an array of bytes that represent the content of the component relation report.</returns>
+        /// <exception cref="ArgumentNullException">Thrown if the <see cref="ComponentRelationsQueryModel"/> is not set.</exception>
+        public static byte[] FindComponentRelationsReport(this InspireClient client, ComponentRelationsQueryModel inputModel)
         {
             if (inputModel == null)
             {
@@ -660,7 +862,20 @@ namespace Vasont.Inspire.SDK.Components
         /// <param name="inputModel">The <see cref="ComponentRelationsQueryModel"/> input model.</param>
         /// <returns>Returns a <see cref="ComponentDependenciesResultModel"/> model.</returns>
         /// <exception cref="ArgumentNullException">Thrown if the <see cref="ComponentRelationsQueryModel"/> is not set.</exception>
+        [Obsolete("This method is obsolete. Please use FindComponentDependencies() going forward. This method will be removed in a future release.")]
         public static ComponentDependenciesResultModel GetComponentDependencies(this InspireClient client, ComponentRelationsQueryModel inputModel)
+        {
+            return FindComponentDependencies(client, inputModel);
+        }
+
+        /// <summary>
+        /// This method is used to retrieve the requested component dependencies.
+        /// </summary>
+        /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
+        /// <param name="inputModel">The <see cref="ComponentRelationsQueryModel"/> input model.</param>
+        /// <returns>Returns a <see cref="ComponentDependenciesResultModel"/> model.</returns>
+        /// <exception cref="ArgumentNullException">Thrown if the <see cref="ComponentRelationsQueryModel"/> is not set.</exception>
+        public static ComponentDependenciesResultModel FindComponentDependencies(this InspireClient client, ComponentRelationsQueryModel inputModel)
         {
             if (inputModel == null)
             {
@@ -678,7 +893,20 @@ namespace Vasont.Inspire.SDK.Components
         /// <param name="inputModel">The <see cref="ComponentRelationsQueryModel"/> input model.</param>
         /// <returns>Returns an array of bytes that represent the content of the component dependency report.</returns>
         /// <exception cref="ArgumentNullException">Thrown if the <see cref="ComponentRelationsQueryModel"/> is not set.</exception>
+        [Obsolete("This method is obsolete. Please use FIndComponentDependenciesReport() going forward. This method will be removed in a future release.")]
         public static byte[] GetComponentDependenciesReport(this InspireClient client, ComponentRelationsQueryModel inputModel)
+        {
+            return FIndComponentDependenciesReport(client, inputModel);
+        }
+
+        /// <summary>
+        /// This method is used to retrieve the dependencies for the specified component and return as a CSV formatted report file contents.
+        /// </summary>
+        /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
+        /// <param name="inputModel">The <see cref="ComponentRelationsQueryModel"/> input model.</param>
+        /// <returns>Returns an array of bytes that represent the content of the component dependency report.</returns>
+        /// <exception cref="ArgumentNullException">Thrown if the <see cref="ComponentRelationsQueryModel"/> is not set.</exception>
+        public static byte[] FIndComponentDependenciesReport(this InspireClient client, ComponentRelationsQueryModel inputModel)
         {
             if (inputModel == null)
             {
@@ -695,9 +923,21 @@ namespace Vasont.Inspire.SDK.Components
         /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
         /// <param name="sourceComponentId">Contains the source component identity to retrieve branch relations.</param>
         /// <returns>Returns a <see cref="List{BranchReferenceModel}"/> model.</returns>
+        [Obsolete("This method is obsolete. Please use FindComponentBranchRelations() going forward. This method will be removed in a future release.")]
         public static List<BranchReferenceModel> GetComponentBranchRelations(this InspireClient client, long sourceComponentId)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Components/{sourceComponentId}/BranchRelations", HttpMethod.Get);
+            return FindComponentBranchRelations(client, sourceComponentId);
+        }
+
+        /// <summary>
+        /// This method is used to retrieve the branch relations for the specified component.
+        /// </summary>
+        /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
+        /// <param name="sourceComponentId">Contains the source component identity to retrieve branch relations.</param>
+        /// <returns>Returns a <see cref="List{BranchReferenceModel}"/> model.</returns>
+        public static List<BranchReferenceModel> FindComponentBranchRelations(this InspireClient client, long sourceComponentId)
+        {
+            var request = client.CreateRequest($"/Components/{sourceComponentId}/BranchRelations", HttpMethod.Get);
             return client.RequestContent<List<BranchReferenceModel>>(request);
         }
 
@@ -708,7 +948,20 @@ namespace Vasont.Inspire.SDK.Components
         /// <param name="inputModel">The <see cref="ComponentRelationsQueryModel"/> input model.</param>
         /// <returns>Returns a <see cref="ComponentRelationsResultModel"/> model.</returns>
         /// <exception cref="ArgumentNullException">Thrown if the <see cref="ComponentRelationsQueryModel"/> is not set.</exception>
+        [Obsolete("This method is obsolete. Please use FindComponentBranches() going forward. This method will be removed in a future release.")]
         public static ComponentRelationsResultModel GetComponentBranches(this InspireClient client, ComponentRelationsQueryModel inputModel)
+        {
+            return FindComponentBranches(client, inputModel);
+        }
+
+        /// <summary>
+        /// This method is used to get the branches for the specified component.
+        /// </summary>
+        /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
+        /// <param name="inputModel">The <see cref="ComponentRelationsQueryModel"/> input model.</param>
+        /// <returns>Returns a <see cref="ComponentRelationsResultModel"/> model.</returns>
+        /// <exception cref="ArgumentNullException">Thrown if the <see cref="ComponentRelationsQueryModel"/> is not set.</exception>
+        public static ComponentRelationsResultModel FindComponentBranches(this InspireClient client, ComponentRelationsQueryModel inputModel)
         {
             if (inputModel == null)
             {
@@ -726,7 +979,20 @@ namespace Vasont.Inspire.SDK.Components
         /// <param name="inputModel">The <see cref="ComponentRelationsQueryModel"/> input model.</param>
         /// <returns>Returns an array of bytes that represent the content of the component branches report.</returns>
         /// <exception cref="ArgumentNullException">Thrown if the <see cref="ComponentRelationsQueryModel"/> is not set.</exception>
+        [Obsolete("This method is obsolete. Please use FindComponentBranchesReport() going forward. This method will be removed in a future release.")]
         public static byte[] GetComponentBranchesReport(this InspireClient client, ComponentRelationsQueryModel inputModel)
+        {
+            return FindComponentBranchesReport(client, inputModel);
+        }
+
+        /// <summary>
+        /// This method is used to retrieve the branches for the specified component and return as a CSV formatted report file contents.
+        /// </summary>
+        /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
+        /// <param name="inputModel">The <see cref="ComponentRelationsQueryModel"/> input model.</param>
+        /// <returns>Returns an array of bytes that represent the content of the component branches report.</returns>
+        /// <exception cref="ArgumentNullException">Thrown if the <see cref="ComponentRelationsQueryModel"/> is not set.</exception>
+        public static byte[] FindComponentBranchesReport(this InspireClient client, ComponentRelationsQueryModel inputModel)
         {
             if (inputModel == null)
             {
@@ -748,7 +1014,20 @@ namespace Vasont.Inspire.SDK.Components
         /// <param name="inputModel">The <see cref="ComponentRelationsQueryModel"/> input model.</param>
         /// <returns>Returns a <see cref="ComponentRelationsResultModel"/> model.</returns>
         /// <exception cref="ArgumentNullException">thrown if the <see cref="ComponentRelationsQueryModel"/> is not set.</exception>
+        [Obsolete("This method is obsolete. Please use RetrieveComponentTypes() going forward. This method will be removed in a future release.")]
         public static ComponentRelationsResultModel GetComponentTranslations(this InspireClient client, ComponentRelationsQueryModel inputModel)
+        {
+            return FindComponentTranslations(client, inputModel);
+        }
+
+        /// <summary>
+        /// This method is used to retrieve the translations for the specified component.
+        /// </summary>
+        /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
+        /// <param name="inputModel">The <see cref="ComponentRelationsQueryModel"/> input model.</param>
+        /// <returns>Returns a <see cref="ComponentRelationsResultModel"/> model.</returns>
+        /// <exception cref="ArgumentNullException">thrown if the <see cref="ComponentRelationsQueryModel"/> is not set.</exception>
+        public static ComponentRelationsResultModel FindComponentTranslations(this InspireClient client, ComponentRelationsQueryModel inputModel)
         {
             if (inputModel == null)
             {
@@ -766,7 +1045,20 @@ namespace Vasont.Inspire.SDK.Components
         /// <param name="inputModel">The <see cref="ComponentRelationsQueryModel"/> input model.</param>
         /// <returns>Returns an array of bytes that represent the content of the component translations report.</returns>
         /// <exception cref="ArgumentNullException">Thrown if the <see cref="ComponentRelationsQueryModel"/> is not set.</exception>
+        [Obsolete("This method is obsolete. Please use FindComponentTranslationsReport() going forward. This method will be removed in a future release.")]
         public static byte[] GetComponentTranslationsReport(this InspireClient client, ComponentRelationsQueryModel inputModel)
+        {
+            return FindComponentTranslationsReport(client, inputModel);
+        }
+
+        /// <summary>
+        /// This method is used to get the translations for the specified component and return as a CSV formatted report file contents.
+        /// </summary>
+        /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
+        /// <param name="inputModel">The <see cref="ComponentRelationsQueryModel"/> input model.</param>
+        /// <returns>Returns an array of bytes that represent the content of the component translations report.</returns>
+        /// <exception cref="ArgumentNullException">Thrown if the <see cref="ComponentRelationsQueryModel"/> is not set.</exception>
+        public static byte[] FindComponentTranslationsReport(this InspireClient client, ComponentRelationsQueryModel inputModel)
         {
             if (inputModel == null)
             {
@@ -789,7 +1081,21 @@ namespace Vasont.Inspire.SDK.Components
         /// <param name="usePostMethod">Contains a value indicating whether the POST method is used in query.</param>
         /// <returns>Returns a <see cref="ComponentHistoryResultModel"/> model.</returns>
         /// <exception cref="ArgumentNullException">Thrown if the <see cref="ComponentHistoryQueryModel"/> is not set.</exception>
+        [Obsolete("This method is obsolete. Please use FindComponentHistory() going forward. This method will be removed in a future release.")]
         public static ComponentHistoryResultModel GetComponentHistory(this InspireClient client, ComponentHistoryQueryModel inputModel, bool usePostMethod = false)
+        {
+            return FindComponentHistory(client, inputModel, usePostMethod);
+        }
+
+        /// <summary>
+        /// This method is used to retrieve the history for the specified component.
+        /// </summary>
+        /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
+        /// <param name="inputModel">The <see cref="ComponentHistoryQueryModel"/> input model.</param>
+        /// <param name="usePostMethod">Contains a value indicating whether the POST method is used in query.</param>
+        /// <returns>Returns a <see cref="ComponentHistoryResultModel"/> model.</returns>
+        /// <exception cref="ArgumentNullException">Thrown if the <see cref="ComponentHistoryQueryModel"/> is not set.</exception>
+        public static ComponentHistoryResultModel FindComponentHistory(this InspireClient client, ComponentHistoryQueryModel inputModel, bool usePostMethod = false)
         {
             if (inputModel == null)
             {
@@ -807,9 +1113,22 @@ namespace Vasont.Inspire.SDK.Components
         /// <param name="componentId">Contains the component identity.</param>
         /// <param name="changesetId">Contains the specific history changeset record identity.</param>
         /// <returns>Returns a <see cref="MinimalComponentHistoryModel"/> model.</returns>
+        [Obsolete("This method is obsolete. Please use FindComponentHistoryDetails() going forward. This method will be removed in a future release.")]
         public static MinimalComponentHistoryModel GetComponentHistoryDetails(this InspireClient client, long componentId, Guid changesetId)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Components/{componentId}/History/{changesetId}");
+            return FindComponentHistoryDetails(client, componentId, changesetId);
+        }
+
+        /// <summary>
+        /// This method is used to retrieve the history for the specified component.
+        /// </summary>
+        /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
+        /// <param name="componentId">Contains the component identity.</param>
+        /// <param name="changesetId">Contains the specific history changeset record identity.</param>
+        /// <returns>Returns a <see cref="MinimalComponentHistoryModel"/> model.</returns>
+        public static MinimalComponentHistoryModel FindComponentHistoryDetails(this InspireClient client, long componentId, Guid changesetId)
+        {
+            var request = client.CreateRequest($"/Components/{componentId}/History/{changesetId}");
             return client.RequestContent<MinimalComponentHistoryModel>(request);
         }
 

@@ -30,9 +30,20 @@ namespace Vasont.Inspire.SDK.Configuration
         /// </summary>
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <returns>Returns a list of <see cref="AttributeModel"/> from the application.</returns>
+        [Obsolete("This method is obsolete. Please use RetrieveAttributes() going forward. This method will be removed in a future release.")]
         public static List<AttributeModel> GetAttributes(this InspireClient client)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/Attributes");
+            return RetrieveAttributes(client);
+        }
+
+        /// <summary>
+        /// This method is used to retrieve and return attributes.
+        /// </summary>
+        /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
+        /// <returns>Returns a list of <see cref="AttributeModel"/> from the application.</returns>
+        public static List<AttributeModel> RetrieveAttributes(this InspireClient client)
+        {
+            var request = client.CreateRequest($"/Configurations/Attributes");
             return client.RequestContent<List<AttributeModel>>(request);
         }
 
@@ -42,9 +53,21 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <param name="attributeId">Contains the attribute identity to retrieve metadata for.</param>
         /// <returns>Returns a specific <see cref="AttributeModel"/> from the application.</returns>
+        [Obsolete("This method is obsolete. Please use FindAttribute() going forward. This method will be removed in a future release.")]
         public static AttributeModel GetAttribute(this InspireClient client, long attributeId)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/Attributes/{attributeId}");
+            return FindAttribute(client, attributeId);
+        }
+
+        /// <summary>
+        /// This Method used to retrieve and return a specific attribute.
+        /// </summary>
+        /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
+        /// <param name="attributeId">Contains the attribute identity to retrieve metadata for.</param>
+        /// <returns>Returns a specific <see cref="AttributeModel"/> from the application.</returns>
+        public static AttributeModel FindAttribute(this InspireClient client, long attributeId)
+        {
+            var request = client.CreateRequest($"/Configurations/Attributes/{attributeId}");
             return client.RequestContent<AttributeModel>(request);
         }
 
@@ -104,9 +127,20 @@ namespace Vasont.Inspire.SDK.Configuration
         /// </summary>
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <returns>Returns a list of <see cref="MinimalProfileAttributeModel"/> from the application.</returns>
+        [Obsolete("This method is obsolete. Please use RetrieveProfileAttributes() going forward. This method will be removed in a future release.")]
         public static List<MinimalProfileAttributeModel> GetProfileAttributes(this InspireClient client)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/ProfileAttributes");
+            return RetrieveProfileAttributes(client);
+        }
+
+        /// <summary>
+        /// This method is used to retrieve a list of minimal profile attributes.
+        /// </summary>
+        /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
+        /// <returns>Returns a list of <see cref="MinimalProfileAttributeModel"/> from the application.</returns>
+        public static List<MinimalProfileAttributeModel> RetrieveProfileAttributes(this InspireClient client)
+        {
+            var request = client.CreateRequest($"/Configurations/ProfileAttributes");
             return client.RequestContent<List<MinimalProfileAttributeModel>>(request);
         }
 
@@ -115,9 +149,20 @@ namespace Vasont.Inspire.SDK.Configuration
         /// </summary>
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <returns>Returns a list of <see cref="ProfileAttributeItemModel"/> from the application.</returns>
+        [Obsolete("This method is obsolete. Please use RetrieveProfileAttributeItems() going forward. This method will be removed in a future release.")]
         public static List<ProfileAttributeItemModel> GetProfileAttributeItems(this InspireClient client)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/ProfileAttributes/Selector/Items");
+            return RetrieveProfileAttributeItems(client);
+        }
+
+        /// <summary>
+        /// This method is used to retrieve a list of profile attribute items.
+        /// </summary>
+        /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
+        /// <returns>Returns a list of <see cref="ProfileAttributeItemModel"/> from the application.</returns>
+        public static List<ProfileAttributeItemModel> RetrieveProfileAttributeItems(this InspireClient client)
+        {
+            var request = client.CreateRequest($"/Configurations/ProfileAttributes/Selector/Items");
             return client.RequestContent<List<ProfileAttributeItemModel>>(request);
         }
 
@@ -127,9 +172,21 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <param name="attributeId">Contains the attribute identity to retrieve metadata for.</param>
         /// <returns>Returns a specific <see cref="ProfileAttributeModel"/> from the application.</returns>
+        [Obsolete("This method is obsolete. Please use FindProfileAttribute() going forward. This method will be removed in a future release.")]
         public static ProfileAttributeModel GetProfileAttribute(this InspireClient client, long attributeId)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/ProfileAttributes/{attributeId}");
+            return FindProfileAttribute(client, attributeId);
+        }
+
+        /// <summary>
+        /// This method is used to retrieve a specific profile attributes.
+        /// </summary>
+        /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
+        /// <param name="attributeId">Contains the attribute identity to retrieve metadata for.</param>
+        /// <returns>Returns a specific <see cref="ProfileAttributeModel"/> from the application.</returns>
+        public static ProfileAttributeModel FindProfileAttribute(this InspireClient client, long attributeId)
+        {
+            var request = client.CreateRequest($"/Configurations/ProfileAttributes/{attributeId}");
             return client.RequestContent<ProfileAttributeModel>(request);
         }
 
@@ -189,9 +246,20 @@ namespace Vasont.Inspire.SDK.Configuration
         /// </summary>
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <returns>Returns a list of schema standards from the application.</returns>
+        [Obsolete("This method is obsolete. Please use RetrieveSchemaStandards() going forward. This method will be removed in a future release.")]
         public static List<string> GetSchemaStandards(this InspireClient client)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/SchemaStandards");
+            return RetrieveSchemaStandards(client);
+        }
+
+        /// <summary>
+        /// This method is used to retrieve a list of schema standards.
+        /// </summary>
+        /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
+        /// <returns>Returns a list of schema standards from the application.</returns>
+        public static List<string> RetrieveSchemaStandards(this InspireClient client)
+        {
+            var request = client.CreateRequest($"/Configurations/SchemaStandards");
             return client.RequestContent<List<string>>(request);
         }
 
@@ -204,9 +272,20 @@ namespace Vasont.Inspire.SDK.Configuration
         /// </summary>
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <returns>Returns a list of <see cref="ComponentTypeModel"/> from the application.</returns>
+        [Obsolete("This method is obsolete. Please use RetrieveComponentTypes() going forward. This method will be removed in a future release.")]
         public static List<ComponentTypeModel> GetComponentTypes(this InspireClient client)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/ComponentTypes");
+            return RetrieveComponentTypes(client);
+        }
+
+        /// <summary>
+        /// This method is used to retrieve a list of component types.
+        /// </summary>
+        /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
+        /// <returns>Returns a list of <see cref="ComponentTypeModel"/> from the application.</returns>
+        public static List<ComponentTypeModel> RetrieveComponentTypes(this InspireClient client)
+        {
+            var request = client.CreateRequest($"/Configurations/ComponentTypes");
             return client.RequestContent<List<ComponentTypeModel>>(request);
         }
 
@@ -216,9 +295,21 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <param name="componentTypeId">Contains the component type identity to retrieve metadata for.</param>
         /// <returns>Returns a specific <see cref="ComponentTypeModel"/> from the application.</returns>
+        [Obsolete("This method is obsolete. Please use FindComponentType() going forward. This method will be removed in a future release.")]
         public static ComponentTypeModel GetComponentType(this InspireClient client, long componentTypeId)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/ComponentTypes/{componentTypeId}");
+            return FindComponentType(client, componentTypeId);
+        }
+
+        /// <summary>
+        /// This method is used to retrieve a specific component type.
+        /// </summary>
+        /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
+        /// <param name="componentTypeId">Contains the component type identity to retrieve metadata for.</param>
+        /// <returns>Returns a specific <see cref="ComponentTypeModel"/> from the application.</returns>
+        public static ComponentTypeModel FindComponentType(this InspireClient client, long componentTypeId)
+        {
+            var request = client.CreateRequest($"/Configurations/ComponentTypes/{componentTypeId}");
             return client.RequestContent<ComponentTypeModel>(request);
         }
 
@@ -278,9 +369,20 @@ namespace Vasont.Inspire.SDK.Configuration
         /// </summary>
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <returns>Returns a list of <see cref="ElementModel"/> from the application.</returns>
+        [Obsolete("This method is obsolete. Please use RetrieveElements() going forward. This method will be removed in a future release.")]
         public static List<ElementModel> GetElements(this InspireClient client)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/Elements");
+            return RetrieveElements(client);
+        }
+
+        /// <summary>
+        /// This method is used to retrieve a list of elements.
+        /// </summary>
+        /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
+        /// <returns>Returns a list of <see cref="ElementModel"/> from the application.</returns>
+        public static List<ElementModel> RetrieveElements(this InspireClient client)
+        {
+            var request = client.CreateRequest($"/Configurations/Elements");
             return client.RequestContent<List<ElementModel>>(request);
         }
 
@@ -290,9 +392,21 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <param name="elementId">Contains the record identity to retrieve.</param>
         /// <returns>Returns a specific <see cref="ElementModel"/> from the application.</returns>
+        [Obsolete("This method is obsolete. Please use FindElement() going forward. This method will be removed in a future release.")]
         public static ElementModel GetElement(this InspireClient client, long elementId)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/Elements/{elementId}");
+            return FindElement(client, elementId);
+        }
+
+        /// <summary>
+        /// This method is used to retrieve a specific element.
+        /// </summary>
+        /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
+        /// <param name="elementId">Contains the record identity to retrieve.</param>
+        /// <returns>Returns a specific <see cref="ElementModel"/> from the application.</returns>
+        public static ElementModel FindElement(this InspireClient client, long elementId)
+        {
+            var request = client.CreateRequest($"/Configurations/Elements/{elementId}");
             return client.RequestContent<ElementModel>(request);
         }
 
@@ -352,9 +466,20 @@ namespace Vasont.Inspire.SDK.Configuration
         /// </summary>
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <returns>Returns a list of <see cref="ExportConfigurationModel"/> objects from the application.</returns>
+        [Obsolete("This method is obsolete. Please use RetrieveExports() going forward. This method will be removed in a future release.")]
         public static List<ExportConfigurationModel> GetExports(this InspireClient client)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/Exports");
+            return RetrieveExports(client);
+        }
+
+        /// <summary>
+        /// This method is used to retrieve a list of exports.
+        /// </summary>
+        /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
+        /// <returns>Returns a list of <see cref="ExportConfigurationModel"/> objects from the application.</returns>
+        public static List<ExportConfigurationModel> RetrieveExports(this InspireClient client)
+        {
+            var request = client.CreateRequest($"/Configurations/Exports");
             return client.RequestContent<List<ExportConfigurationModel>>(request);
         }
 
@@ -364,9 +489,21 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <param name="exportId">Contains the record identity to retrieve.</param>
         /// <returns>Returns a specific <see cref="ExportConfigurationModel"/> from the application.</returns>
+        [Obsolete("This method is obsolete. Please use FindExport() going forward. This method will be removed in a future release.")]
         public static ExportConfigurationModel GetExport(this InspireClient client, long exportId)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/Exports/{exportId}");
+            return FindExport(client, exportId);
+        }
+
+        /// <summary>
+        /// This method is used to retrieve a specific export.
+        /// </summary>
+        /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
+        /// <param name="exportId">Contains the record identity to retrieve.</param>
+        /// <returns>Returns a specific <see cref="ExportConfigurationModel"/> from the application.</returns>
+        public static ExportConfigurationModel FindExport(this InspireClient client, long exportId)
+        {
+            var request = client.CreateRequest($"/Configurations/Exports/{exportId}");
             return client.RequestContent<ExportConfigurationModel>(request);
         }
 
@@ -422,9 +559,20 @@ namespace Vasont.Inspire.SDK.Configuration
         /// </summary>
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <returns>Returns a list of <see cref="PluginModel"/> objects from the application.</returns>
+        [Obsolete("This method is obsolete. Please use RetrieveExportPlugins() going forward. This method will be removed in a future release.")]
         public static List<PluginModel> GetExportPlugins(this InspireClient client)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/Exports/Plugins");
+            return RetrieveExportPlugins(client);
+        }
+
+        /// <summary>
+        /// This method is used to retrieve a list of export plugins.
+        /// </summary>
+        /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
+        /// <returns>Returns a list of <see cref="PluginModel"/> objects from the application.</returns>
+        public static List<PluginModel> RetrieveExportPlugins(this InspireClient client)
+        {
+            var request = client.CreateRequest($"/Configurations/Exports/Plugins");
             return client.RequestContent<List<PluginModel>>(request);
         }
 
@@ -434,9 +582,21 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <param name="pluginId">Contains the plugin identity to retrieve metadata for.</param>
         /// <returns>Returns a list of <see cref="PluginParameterModel"/> objects from the application.</returns>
+        [Obsolete("This method is obsolete. Please use FindExportPluginParameters() going forward. This method will be removed in a future release.")]
         public static List<PluginParameterModel> GetExportPluginParameters(this InspireClient client, long pluginId)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/Exports/Plugins/{pluginId}/Parameters");
+            return FindExportPluginParameters(client, pluginId);
+        }
+
+        /// <summary>
+        /// This method is used to retrieve a list of export plugin parameters for a specified plugin.
+        /// </summary>
+        /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
+        /// <param name="pluginId">Contains the plugin identity to retrieve metadata for.</param>
+        /// <returns>Returns a list of <see cref="PluginParameterModel"/> objects from the application.</returns>
+        public static List<PluginParameterModel> FindExportPluginParameters(this InspireClient client, long pluginId)
+        {
+            var request = client.CreateRequest($"/Configurations/Exports/Plugins/{pluginId}/Parameters");
             return client.RequestContent<List<PluginParameterModel>>(request);
         }
 
@@ -447,9 +607,22 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <param name="componentTypeId">Contains the specific export component type.</param>
         /// <param name="exportType">Contains the <see cref="ExportType"/> type that will be retrieved, Standard is default.</param>
         /// <returns>Returns a list of <see cref="ExportSelectionModel"/> objects from the application.</returns>
+        [Obsolete("This method is obsolete. Please use FindExportComponentType() going forward. This method will be removed in a future release.")]
         public static ExportSelectionModel GetExportComponentType(this InspireClient client, long componentTypeId, ExportType exportType = ExportType.Standard)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/Exports/ComponentTypes/{componentTypeId}?exportType={exportType}");
+            return FindExportComponentType(client, componentTypeId, exportType);
+        }
+
+        /// <summary>
+        /// This method is used to retrieve a specific export component type selection model.
+        /// </summary>
+        /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
+        /// <param name="componentTypeId">Contains the specific export component type.</param>
+        /// <param name="exportType">Contains the <see cref="ExportType"/> type that will be retrieved, Standard is default.</param>
+        /// <returns>Returns a list of <see cref="ExportSelectionModel"/> objects from the application.</returns>
+        public static ExportSelectionModel FindExportComponentType(this InspireClient client, long componentTypeId, ExportType exportType = ExportType.Standard)
+        {
+            var request = client.CreateRequest($"/Configurations/Exports/ComponentTypes/{componentTypeId}?exportType={exportType}");
             return client.RequestContent<ExportSelectionModel>(request);
         }
 
@@ -462,9 +635,20 @@ namespace Vasont.Inspire.SDK.Configuration
         /// </summary>
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <returns>Returns a list of <see cref="LinkMethodModel"/> from the application.</returns>
+        [Obsolete("This method is obsolete. Please use RetrieveLinkMethods() going forward. This method will be removed in a future release.")]
         public static List<LinkMethodModel> GetLinkMethods(this InspireClient client)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/LinkMethods");
+            return RetrieveLinkMethods(client);
+        }
+
+        /// <summary>
+        /// This method is used to retrieve a list of link methods.
+        /// </summary>
+        /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
+        /// <returns>Returns a list of <see cref="LinkMethodModel"/> from the application.</returns>
+        public static List<LinkMethodModel> RetrieveLinkMethods(this InspireClient client)
+        {
+            var request = client.CreateRequest($"/Configurations/LinkMethods");
             return client.RequestContent<List<LinkMethodModel>>(request);
         }
 
@@ -477,9 +661,20 @@ namespace Vasont.Inspire.SDK.Configuration
         /// </summary>
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <returns>Returns a list of <see cref="XmlLinkTypeModel"/> from the application.</returns>
+        [Obsolete("This method is obsolete. Please use RetrieveXmlLinkTypes() going forward. This method will be removed in a future release.")]
         public static List<XmlLinkTypeModel> GetXmlLinkTypes(this InspireClient client)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/XmlLinkTypes");
+            return RetrieveXmlLinkTypes(client);
+        }
+
+        /// <summary>
+        /// This method is used to retrieve a list of XML link types.
+        /// </summary>
+        /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
+        /// <returns>Returns a list of <see cref="XmlLinkTypeModel"/> from the application.</returns>
+        public static List<XmlLinkTypeModel> RetrieveXmlLinkTypes(this InspireClient client)
+        {
+            var request = client.CreateRequest($"/Configurations/XmlLinkTypes");
             return client.RequestContent<List<XmlLinkTypeModel>>(request);
         }
 
@@ -489,9 +684,21 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <param name="xmlLinkTypeId">Contains the record identity to retrieve.</param>
         /// <returns>Returns a specific <see cref="XmlLinkTypeModel"/> from the application.</returns>
+        [Obsolete("This method is obsolete. Please use FindXmlLinkType() going forward. This method will be removed in a future release.")]
         public static XmlLinkTypeModel GetXmlLinkType(this InspireClient client, long xmlLinkTypeId)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/XmlLinkTypes/{xmlLinkTypeId}");
+            return FindXmlLinkType(client, xmlLinkTypeId);
+        }
+
+        /// <summary>
+        /// This method is used to retrieve a specific XML link type.
+        /// </summary>
+        /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
+        /// <param name="xmlLinkTypeId">Contains the record identity to retrieve.</param>
+        /// <returns>Returns a specific <see cref="XmlLinkTypeModel"/> from the application.</returns>
+        public static XmlLinkTypeModel FindXmlLinkType(this InspireClient client, long xmlLinkTypeId)
+        {
+            var request = client.CreateRequest($"/Configurations/XmlLinkTypes/{xmlLinkTypeId}");
             return client.RequestContent<XmlLinkTypeModel>(request);
         }
 
@@ -551,9 +758,20 @@ namespace Vasont.Inspire.SDK.Configuration
         /// </summary>
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <returns>Returns a list of <see cref="RelationModel"/> from the application.</returns>
+        [Obsolete("This method is obsolete. Please use RetrieveRelations() going forward. This method will be removed in a future release.")]
         public static List<RelationModel> GetRelations(this InspireClient client)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/Relations");
+            return RetrieveRelations(client);
+        }
+
+        /// <summary>
+        /// This method is used to retrieve a list of Relation.
+        /// </summary>
+        /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
+        /// <returns>Returns a list of <see cref="RelationModel"/> from the application.</returns>
+        public static List<RelationModel> RetrieveRelations(this InspireClient client)
+        {
+            var request = client.CreateRequest($"/Configurations/Relations");
             return client.RequestContent<List<RelationModel>>(request);
         }
 
@@ -563,9 +781,21 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <param name="relationId">Contains the record identity to retrieve.</param>
         /// <returns>Returns a specific <see cref="RelationModel"/> from the application.</returns>
+        [Obsolete("This method is obsolete. Please use FindRelation() going forward. This method will be removed in a future release.")]
         public static RelationModel GetRelation(this InspireClient client, long relationId)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/Relations/{relationId}");
+            return FindRelation(client, relationId);
+        }
+
+        /// <summary>
+        /// This method is used to retrieve a specific Relation.
+        /// </summary>
+        /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
+        /// <param name="relationId">Contains the record identity to retrieve.</param>
+        /// <returns>Returns a specific <see cref="RelationModel"/> from the application.</returns>
+        public static RelationModel FindRelation(this InspireClient client, long relationId)
+        {
+            var request = client.CreateRequest($"/Configurations/Relations/{relationId}");
             return client.RequestContent<RelationModel>(request);
         }
 
@@ -625,9 +855,21 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <param name="tagId">Contains the record identity to retrieve.</param>
         /// <returns>Returns a specific <see cref="TagModel"/> from the application.</returns>
+        [Obsolete("This method is obsolete. Please use FindTag() going forward. This method will be removed in a future release.")]
         public static TagModel GetTag(this InspireClient client, long tagId)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/Tags/{tagId}");
+            return FindTag(client, tagId);
+        }
+
+        /// <summary>
+        /// This method is used to retrieve a specific tag.
+        /// </summary>
+        /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
+        /// <param name="tagId">Contains the record identity to retrieve.</param>
+        /// <returns>Returns a specific <see cref="TagModel"/> from the application.</returns>
+        public static TagModel FindTag(this InspireClient client, long tagId)
+        {
+            var request = client.CreateRequest($"/Configurations/Tags/{tagId}");
             return client.RequestContent<TagModel>(request);
         }
 
@@ -687,9 +929,20 @@ namespace Vasont.Inspire.SDK.Configuration
         /// </summary>
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <returns>Returns a list of <see cref="ProjectActivityModel"/> from the application.</returns>
+        [Obsolete("This method is obsolete. Please use RetrieveProjectActivities() going forward. This method will be removed in a future release.")]
         public static List<ProjectActivityModel> GetProjectActivities(this InspireClient client)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/ProjectActivities");
+            return RetrieveProjectActivities(client);
+        }
+
+        /// <summary>
+        /// This method is used to retrieve a list of project activities.
+        /// </summary>
+        /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
+        /// <returns>Returns a list of <see cref="ProjectActivityModel"/> from the application.</returns>
+        public static List<ProjectActivityModel> RetrieveProjectActivities(this InspireClient client)
+        {
+            var request = client.CreateRequest($"/Configurations/ProjectActivities");
             return client.RequestContent<List<ProjectActivityModel>>(request);
         }
 
@@ -699,9 +952,21 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <param name="projectActivityId">Contains the record identity to retrieve.</param>
         /// <returns>Returns a specific <see cref="ProjectActivityModel"/> from the application.</returns>
+        [Obsolete("This method is obsolete. Please use FindProjectActivity() going forward. This method will be removed in a future release.")]
         public static ProjectActivityModel GetProjectActivity(this InspireClient client, long projectActivityId)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/ProjectActivities/{projectActivityId}");
+            return FindProjectActivity(client, projectActivityId);
+        }
+
+        /// <summary>
+        /// This method is used to retrieve a specific project activity.
+        /// </summary>
+        /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
+        /// <param name="projectActivityId">Contains the record identity to retrieve.</param>
+        /// <returns>Returns a specific <see cref="ProjectActivityModel"/> from the application.</returns>
+        public static ProjectActivityModel FindProjectActivity(this InspireClient client, long projectActivityId)
+        {
+            var request = client.CreateRequest($"/Configurations/ProjectActivities/{projectActivityId}");
             return client.RequestContent<ProjectActivityModel>(request);
         }
 
@@ -761,9 +1026,21 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <param name="dictionaryOnly">Contains a value indicating whether the languages that are for editor dictionary only are returned.</param>
         /// <returns>Returns a list of <see cref="LanguageModel"/> from the application.</returns>
+        [Obsolete("This method is obsolete. Please use FindLanguages() going forward. This method will be removed in a future release.")]
         public static List<LanguageModel> GetLanguages(this InspireClient client, bool dictionaryOnly = false)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Languages?dictionaryOnly={dictionaryOnly}");
+            return FindLanguages(client, dictionaryOnly);
+        }
+
+        /// <summary>
+        /// This method is used to retrieve a list of languages.
+        /// </summary>
+        /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
+        /// <param name="dictionaryOnly">Contains a value indicating whether the languages that are for editor dictionary only are returned.</param>
+        /// <returns>Returns a list of <see cref="LanguageModel"/> from the application.</returns>
+        public static List<LanguageModel> FindLanguages(this InspireClient client, bool dictionaryOnly = false)
+        {
+            var request = client.CreateRequest($"/Languages?dictionaryOnly={dictionaryOnly}");
             return client.RequestContent<List<LanguageModel>>(request);
         }
 
@@ -773,9 +1050,21 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <param name="languageCode">Contains the record identity to retrieve.</param>
         /// <returns>Returns a specific <see cref="LanguageModel"/> from the application.</returns>
+        [Obsolete("This method is obsolete. Please use FindLanguage() going forward. This method will be removed in a future release.")]
         public static LanguageModel GetLanguage(this InspireClient client, string languageCode)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/Languages/{languageCode}");
+            return FindLanguage(client, languageCode);
+        }
+
+        /// <summary>
+        /// This method is used to retrieve a specific language.
+        /// </summary>
+        /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
+        /// <param name="languageCode">Contains the record identity to retrieve.</param>
+        /// <returns>Returns a specific <see cref="LanguageModel"/> from the application.</returns>
+        public static LanguageModel FindLanguage(this InspireClient client, string languageCode)
+        {
+            var request = client.CreateRequest($"/Configurations/Languages/{languageCode}");
             return client.RequestContent<LanguageModel>(request);
         }
 
@@ -835,9 +1124,20 @@ namespace Vasont.Inspire.SDK.Configuration
         /// </summary>
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <returns>Returns a list of <see cref="WebhookConfigurationModel"/> from the application.</returns>
+        [Obsolete("This method is obsolete. Please use RetrieveWebHookConfigurations() going forward. This method will be removed in a future release.")]
         public static List<WebhookConfigurationModel> GetWebHookConfigurations(this InspireClient client)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/WebhookConfigurations");
+            return RetrieveWebHookConfigurations(client);
+        }
+
+        /// <summary>
+        /// This method is used to retrieve a list of web hook configurations.
+        /// </summary>
+        /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
+        /// <returns>Returns a list of <see cref="WebhookConfigurationModel"/> from the application.</returns>
+        public static List<WebhookConfigurationModel> RetrieveWebHookConfigurations(this InspireClient client)
+        {
+            var request = client.CreateRequest($"/Configurations/WebhookConfigurations");
             return client.RequestContent<List<WebhookConfigurationModel>>(request);
         }
 
@@ -847,9 +1147,21 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <param name="webHookConfigurationId">Contains the record identity to retrieve.</param>
         /// <returns>Returns a specific <see cref="WebhookConfigurationModel"/> from the application.</returns>
+        [Obsolete("This method is obsolete. Please use FindWebHookConfiguration() going forward. This method will be removed in a future release.")]
         public static WebhookConfigurationModel GetWebHookConfiguration(this InspireClient client, long webHookConfigurationId)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/WebhookConfigurations/{webHookConfigurationId}");
+            return FindWebHookConfiguration(client, webHookConfigurationId);
+        }
+
+        /// <summary>
+        /// This method is used to retrieve a specific web hook configuration.
+        /// </summary>
+        /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
+        /// <param name="webHookConfigurationId">Contains the record identity to retrieve.</param>
+        /// <returns>Returns a specific <see cref="WebhookConfigurationModel"/> from the application.</returns>
+        public static WebhookConfigurationModel FindWebHookConfiguration(this InspireClient client, long webHookConfigurationId)
+        {
+            var request = client.CreateRequest($"/Configurations/WebhookConfigurations/{webHookConfigurationId}");
             return client.RequestContent<WebhookConfigurationModel>(request);
         }
 
@@ -909,9 +1221,20 @@ namespace Vasont.Inspire.SDK.Configuration
         /// </summary>
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <returns>Returns a list of <see cref="FileExtensionModel"/> from the application.</returns>
+        [Obsolete("This method is obsolete. Please use RetrieveFileExtensions() going forward. This method will be removed in a future release.")]
         public static List<FileExtensionModel> GetFileExtensions(this InspireClient client)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/FileExtensions");
+            return RetrieveFileExtensions(client);
+        }
+
+        /// <summary>
+        /// This method is used to retrieve a list of file extensions.
+        /// </summary>
+        /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
+        /// <returns>Returns a list of <see cref="FileExtensionModel"/> from the application.</returns>
+        public static List<FileExtensionModel> RetrieveFileExtensions(this InspireClient client)
+        {
+            var request = client.CreateRequest($"/Configurations/FileExtensions");
             return client.RequestContent<List<FileExtensionModel>>(request);
         }
 
@@ -921,9 +1244,21 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <param name="extensionId">Contains the record identity to retrieve.</param>
         /// <returns>Returns a specific <see cref="FileExtensionModel"/> from the application.</returns>
+        [Obsolete("This method is obsolete. Please use FindFileExtension() going forward. This method will be removed in a future release.")]
         public static FileExtensionModel GetFileExtension(this InspireClient client, long extensionId)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Configurations/FileExtensions/{extensionId}");
+            return FindFileExtension(client, extensionId);
+        }
+
+        /// <summary>
+        /// This method is used to retrieve a specific file extension configuration.
+        /// </summary>
+        /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
+        /// <param name="extensionId">Contains the record identity to retrieve.</param>
+        /// <returns>Returns a specific <see cref="FileExtensionModel"/> from the application.</returns>
+        public static FileExtensionModel FindFileExtension(this InspireClient client, long extensionId)
+        {
+            var request = client.CreateRequest($"/Configurations/FileExtensions/{extensionId}");
             return client.RequestContent<FileExtensionModel>(request);
         }
 

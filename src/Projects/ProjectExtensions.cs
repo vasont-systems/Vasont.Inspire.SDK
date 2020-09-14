@@ -24,9 +24,20 @@ namespace Vasont.Inspire.SDK.Projects
         /// </summary>
         /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
         /// <returns>Returns a list of <see cref="ProjectModel"/> models.</returns>
+        [Obsolete("This method is obsolete. Please use RetrieveProjects() going forward. This method will be removed in a future release.")]
         public static List<ProjectModel> GetProjects(this InspireClient client)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Projects");
+            return RetrieveProjects(client);
+        }
+
+        /// <summary>
+        /// This method retrieves the projects that the specified user is assigned membership and/or ownership.
+        /// </summary>
+        /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
+        /// <returns>Returns a list of <see cref="ProjectModel"/> models.</returns>
+        public static List<ProjectModel> RetrieveProjects(this InspireClient client)
+        {
+            var request = client.CreateRequest($"/Projects");
             return client.RequestContent<List<ProjectModel>>(request);
         }
 
@@ -36,9 +47,21 @@ namespace Vasont.Inspire.SDK.Projects
         /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
         /// <param name="projectId">Contains the identity for a project to find.</param>
         /// <returns>Returns a <see cref="ProjectModel"/> if found.</returns>
+        [Obsolete("This method is obsolete. Please use FindProject() going forward. This method will be removed in a future release.")]
         public static ProjectModel GetProject(this InspireClient client, long projectId)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Projects/{projectId}");
+            return FindProject(client, projectId);
+        }
+
+        /// <summary>
+        /// This method is used to return a project within the system.
+        /// </summary>
+        /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
+        /// <param name="projectId">Contains the identity for a project to find.</param>
+        /// <returns>Returns a <see cref="ProjectModel"/> if found.</returns>
+        public static ProjectModel FindProject(this InspireClient client, long projectId)
+        {
+            var request = client.CreateRequest($"/Projects/{projectId}");
             return client.RequestContent<ProjectModel>(request);
         }
 
@@ -48,9 +71,21 @@ namespace Vasont.Inspire.SDK.Projects
         /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
         /// <param name="maximumResults">A value indicating the maximum number of results to return</param>
         /// <returns>Returns a list of <see cref="ProjectModel"/> models.</returns>
+        [Obsolete("This method is obsolete. Please use FindRecentlyOpenedProjects() going forward. This method will be removed in a future release.")]
         public static List<ProjectModel> GetRecentlyOpenedProjects(this InspireClient client, int maximumResults)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Projects/Recent?maximumResults={maximumResults}");
+            return FindRecentlyOpenedProjects(client, maximumResults);
+        }
+
+        /// <summary>
+        /// This method retrieves the projects that the specified user has recently opened.
+        /// </summary>
+        /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
+        /// <param name="maximumResults">A value indicating the maximum number of results to return</param>
+        /// <returns>Returns a list of <see cref="ProjectModel"/> models.</returns>
+        public static List<ProjectModel> FindRecentlyOpenedProjects(this InspireClient client, int maximumResults)
+        {
+            var request = client.CreateRequest($"/Projects/Recent?maximumResults={maximumResults}");
             return client.RequestContent<List<ProjectModel>>(request);
         }
 
@@ -59,9 +94,20 @@ namespace Vasont.Inspire.SDK.Projects
         /// </summary>
         /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
         /// <returns>Returns a list of <see cref="ProjectModel"/> models.</returns>
+        [Obsolete("This method is obsolete. Please use RetrieveAssignedProjects() going forward. This method will be removed in a future release.")]
         public static List<ProjectModel> GetAssignedProjects(this InspireClient client)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Projects/Assignments");
+            return RetrieveAssignedProjects(client);
+        }
+
+        /// <summary>
+        /// This method is used to return projects within the system where the given userId is a member.
+        /// </summary>
+        /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
+        /// <returns>Returns a list of <see cref="ProjectModel"/> models.</returns>
+        public static List<ProjectModel> RetrieveAssignedProjects(this InspireClient client)
+        {
+            var request = client.CreateRequest($"/Projects/Assignments");
             return client.RequestContent<List<ProjectModel>>(request);
         }
 
@@ -71,9 +117,21 @@ namespace Vasont.Inspire.SDK.Projects
         /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
         /// <param name="projectId">Contains the identity for a project to find.</param>
         /// <returns>Returns a list of <see cref="MinimalUserModel"/> models.</returns>
+        [Obsolete("This method is obsolete. Please use FindAvailableParticipants() going forward. This method will be removed in a future release.")]
         public static List<MinimalUserModel> GetAvailableParticipants(this InspireClient client, long projectId)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Projects/{projectId}/AvailableParticipants");
+            return FindAvailableParticipants(client, projectId);
+        }
+
+        /// <summary>
+        /// This method is used to return a list of available participants.
+        /// </summary>
+        /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
+        /// <param name="projectId">Contains the identity for a project to find.</param>
+        /// <returns>Returns a list of <see cref="MinimalUserModel"/> models.</returns>
+        public static List<MinimalUserModel> FindAvailableParticipants(this InspireClient client, long projectId)
+        {
+            var request = client.CreateRequest($"/Projects/{projectId}/AvailableParticipants");
             return client.RequestContent<List<MinimalUserModel>>(request);
         }
 
@@ -82,9 +140,20 @@ namespace Vasont.Inspire.SDK.Projects
         /// </summary>
         /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
         /// <returns>Returns a list of <see cref="ProjectActivityModel"/> models.</returns>
+        [Obsolete("This method is obsolete. Please use RetrieveActivities() going forward. This method will be removed in a future release.")]
         public static List<ProjectActivityModel> GetActivities(this InspireClient client)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Projects/Activities");
+            return RetrieveActivities(client);
+        }
+
+        /// <summary>
+        /// This method is used to retrieve all the available project activities.
+        /// </summary>
+        /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
+        /// <returns>Returns a list of <see cref="ProjectActivityModel"/> models.</returns>
+        public static List<ProjectActivityModel> RetrieveActivities(this InspireClient client)
+        {
+            var request = client.CreateRequest($"/Projects/Activities");
             return client.RequestContent<List<ProjectActivityModel>>(request);
         }
 
@@ -94,9 +163,21 @@ namespace Vasont.Inspire.SDK.Projects
         /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
         /// <param name="projectId">Contains the identity of the project that is being searched for assignments.</param>
         /// <returns>Returns a list of <see cref="ProjectAssignmentModel"/> models.</returns>
+        [Obsolete("This method is obsolete. Please use FindProjectAssignments() going forward. This method will be removed in a future release.")]
         public static List<ProjectAssignmentModel> GetProjectAssignments(this InspireClient client, long projectId)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Projects/{projectId}/Assignments");
+            return FindProjectAssignments(client, projectId);
+        }
+
+        /// <summary>
+        /// This method is used to return project assignments within the system that are associated with a project.
+        /// </summary>
+        /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
+        /// <param name="projectId">Contains the identity of the project that is being searched for assignments.</param>
+        /// <returns>Returns a list of <see cref="ProjectAssignmentModel"/> models.</returns>
+        public static List<ProjectAssignmentModel> FindProjectAssignments(this InspireClient client, long projectId)
+        {
+            var request = client.CreateRequest($"/Projects/{projectId}/Assignments");
             return client.RequestContent<List<ProjectAssignmentModel>>(request);
         }
 

@@ -27,7 +27,22 @@ namespace Vasont.Inspire.SDK.Folders
         /// <param name="includeAllDescendantFolders">Contains a value to indicate whether or not to include all descendant folders.</param>
         /// <param name="permissionFlag">Contains an optional <see cref="PermissionFlags"/> that will be used to filter the results of the query.</param>
         /// <returns>Returns a list of <see cref="FolderBrowseModel"/> objects if found.</returns>
+        [Obsolete("This method is obsolete. Please use FindFoldersByFolderId() going forward. This method will be removed in a future release.")]
         public static List<FolderBrowseModel> GetFoldersByFolderId(this InspireClient client, long folderId, bool includeAllDescendantFolders, PermissionFlags permissionFlag)
+        {
+            return FindFoldersByFolderId(client, folderId, includeAllDescendantFolders, permissionFlag);
+        }
+
+        /// <summary>
+        /// This method is used to return a list of folders that are children of the specified parent folder. 
+        /// If parent folder is not specified, a list of root folders will be returned.
+        /// </summary>
+        /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
+        /// <param name="folderId">Contains the folder identity to retrieve child folders from, pass a value of zero to retrieve all folders.</param>
+        /// <param name="includeAllDescendantFolders">Contains a value to indicate whether or not to include all descendant folders.</param>
+        /// <param name="permissionFlag">Contains an optional <see cref="PermissionFlags"/> that will be used to filter the results of the query.</param>
+        /// <returns>Returns a list of <see cref="FolderBrowseModel"/> objects if found.</returns>
+        public static List<FolderBrowseModel> FindFoldersByFolderId(this InspireClient client, long folderId, bool includeAllDescendantFolders, PermissionFlags permissionFlag)
         {
             if (folderId < 0)
             {
@@ -45,7 +60,20 @@ namespace Vasont.Inspire.SDK.Folders
         /// <param name="folderId">Contains the folder identity to retrieve components from, pass a value of zero to retrieve all components.</param>
         /// <param name="inputModel">Contains the <see cref="FolderComponentsQueryModel"/> input.</param>
         /// <returns>Returns a <see cref="FolderComponentsResultModel"/> object if found.</returns>
+        [Obsolete("This method is obsolete. Please use FindComponentsByFolderId() going forward. This method will be removed in a future release.")]
         public static FolderComponentsResultModel GetComponentsByFolderId(this InspireClient client, long folderId, FolderComponentsQueryModel inputModel)
+        {
+            return FindComponentsByFolderId(client, folderId, inputModel);
+        }
+
+        /// <summary>
+        /// This method is used to return components that are stored within a specific folder matching a specific search criteria.
+        /// </summary>
+        /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
+        /// <param name="folderId">Contains the folder identity to retrieve components from, pass a value of zero to retrieve all components.</param>
+        /// <param name="inputModel">Contains the <see cref="FolderComponentsQueryModel"/> input.</param>
+        /// <returns>Returns a <see cref="FolderComponentsResultModel"/> object if found.</returns>
+        public static FolderComponentsResultModel FindComponentsByFolderId(this InspireClient client, long folderId, FolderComponentsQueryModel inputModel)
         {
             if (folderId < 0)
             {
@@ -63,7 +91,20 @@ namespace Vasont.Inspire.SDK.Folders
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <param name="folderId">Contains the folder identity.</param>
         /// <returns>Returns a list of <see cref="FolderBrowseModel"/> objects if found.</returns>
+        [Obsolete("This method is obsolete. Please use FindAncestorSiblingFoldersByFolderId() going forward. This method will be removed in a future release.")]
         public static List<FolderBrowseModel> GetAncestorSiblingFoldersByFolderId(this InspireClient client, long folderId)
+        {
+            return FindAncestorSiblingFoldersByFolderId(client, folderId);
+        }
+
+        /// <summary>
+        /// This method is used to return a list of folders including the specified folder, 
+        /// its ancestor folders, and corresponding sibling folders.
+        /// </summary>
+        /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
+        /// <param name="folderId">Contains the folder identity.</param>
+        /// <returns>Returns a list of <see cref="FolderBrowseModel"/> objects if found.</returns>
+        public static List<FolderBrowseModel> FindAncestorSiblingFoldersByFolderId(this InspireClient client, long folderId)
         {
             if (folderId <= 0)
             {
@@ -80,7 +121,19 @@ namespace Vasont.Inspire.SDK.Folders
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <param name="folderId">Contains the folder identity.</param>
         /// <returns>Returns a <see cref="PermissionUpdateModel"/> object if found.</returns>
+        [Obsolete("This method is obsolete. Please use FindFolderPermissions() going forward. This method will be removed in a future release.")]
         public static PermissionUpdateModel GetFolderPermissions(this InspireClient client, long folderId)
+        {
+            return FindFolderPermissions(client, folderId);
+        }
+
+        /// <summary>
+        /// This method is used to return folder permission details.
+        /// </summary>
+        /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
+        /// <param name="folderId">Contains the folder identity.</param>
+        /// <returns>Returns a <see cref="PermissionUpdateModel"/> object if found.</returns>
+        public static PermissionUpdateModel FindFolderPermissions(this InspireClient client, long folderId)
         {
             if (folderId <= 0)
             {

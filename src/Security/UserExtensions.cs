@@ -24,9 +24,20 @@ namespace Vasont.Inspire.SDK.Security
         /// </summary>
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <returns>Returns a list of <see cref="SelectUserRoleModel"/> objects if found.</returns>
+        [Obsolete("This method is obsolete. Please use RetrieveUsers() going forward. This method will be removed in a future release.")]
         public static List<SelectUserRoleModel> GetAllUsers(this InspireClient client)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/UserRoles/Users");
+            return RetrieveUsers(client);
+        }
+
+        /// <summary>
+        /// This method is used to retrieve a list of users from the system.
+        /// </summary>
+        /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
+        /// <returns>Returns a list of <see cref="SelectUserRoleModel"/> objects if found.</returns>
+        public static List<SelectUserRoleModel> RetrieveUsers(this InspireClient client)
+        {
+            var request = client.CreateRequest($"/UserRoles/Users");
             return client.RequestContent<List<SelectUserRoleModel>>(request);
         }
 
@@ -36,9 +47,21 @@ namespace Vasont.Inspire.SDK.Security
         /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
         /// <param name="userId">Contains the user identity.</param>
         /// <returns>Returns <see cref="UserModel"/> object if found.</returns>
+        [Obsolete("This method is obsolete. Please use FindUser() going forward. This method will be removed in a future release.")]
         public static UserModel GetUser(this InspireClient client, long userId)
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Users/{userId}");
+            return FindUser(client, userId);
+        }
+
+        /// <summary>
+        /// This method is used to retrieve information about a specific user.
+        /// </summary>
+        /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
+        /// <param name="userId">Contains the user identity.</param>
+        /// <returns>Returns <see cref="UserModel"/> object if found.</returns>
+        public static UserModel FindUser(this InspireClient client, long userId)
+        {
+            var request = client.CreateRequest($"/Users/{userId}");
             return client.RequestContent<UserModel>(request);
         }
 
@@ -52,9 +75,25 @@ namespace Vasont.Inspire.SDK.Security
         /// <param name="orderBy">Contains the order by field.</param>
         /// <param name="direction">Contains the direction of sort, "ascending" by default.</param>
         /// <returns>Returns a list of <see cref="UserModel"/> objects if found.</returns>
+        [Obsolete("This method is obsolete. Please use FindUsers() going forward. This method will be removed in a future release.")]
         public static List<UserModel> GetUsers(this InspireClient client, string userName = "", string email = "", string phone = "", string orderBy = "UserName", string direction = "ascending")
         {
-            var request = client.CreateRequest($"{client.Config.RoutePrefix}/Users?userName={userName}&email={email}&phone={phone}&orderBy={orderBy}&direction={direction}");
+            return FindUsers(client, userName, email, phone, orderBy, direction);
+        }
+
+        /// <summary>
+        /// This method is used to find users based on the search criteria.
+        /// </summary>
+        /// <param name="client">Contains the <see cref="InspireClient"/> that is used for communication.</param>
+        /// <param name="userName">Contains the name of the user.</param>
+        /// <param name="email">Contains the email of the user.</param>
+        /// <param name="phone">Contains the phone number of the user.</param>
+        /// <param name="orderBy">Contains the order by field.</param>
+        /// <param name="direction">Contains the direction of sort, "ascending" by default.</param>
+        /// <returns>Returns a list of <see cref="UserModel"/> objects if found.</returns>
+        public static List<UserModel> FindUsers(this InspireClient client, string userName = "", string email = "", string phone = "", string orderBy = "UserName", string direction = "ascending")
+        {
+            var request = client.CreateRequest($"/Users?userName={userName}&email={email}&phone={phone}&orderBy={orderBy}&direction={direction}");
             return client.RequestContent<List<UserModel>>(request);
         }
 
