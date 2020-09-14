@@ -187,7 +187,7 @@ namespace Vasont.Inspire.SDK.Review
         }
 
         /// <summary>
-        /// This method retrieves the users that that are coordinators.
+        /// This method retrieves the users that are coordinators.
         /// </summary>
         /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
         /// <returns>Returns a list of <see cref="MinimalUserModel"/> objects if found.</returns>
@@ -198,7 +198,7 @@ namespace Vasont.Inspire.SDK.Review
         }
 
         /// <summary>
-        /// This method retrieves the users that that are coordinators.
+        /// This method retrieves the users that are coordinators.
         /// </summary>
         /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
         /// <returns>Returns a list of <see cref="MinimalUserModel"/> objects if found.</returns>
@@ -235,8 +235,8 @@ namespace Vasont.Inspire.SDK.Review
         /// <summary>
         /// This method is used to return review components within a review that have been updated after a specified date.
         /// </summary>
-        /// <param name="client">The client.</param>
-        /// <param name="model">The model.</param>
+        /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
+        /// <param name="model">The <see cref="ReviewChangedComponentQueryModel"/> used to Find Changed Review Components.</param>
         /// <returns>Returns a list of <see cref="ReviewerComponentModel"/> objects.</returns>
         public static List<ReviewerComponentModel> FindChangedReviewComponents(this InspireClient client, ReviewChangedComponentQueryModel model)
         {

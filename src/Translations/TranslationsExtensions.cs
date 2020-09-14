@@ -19,7 +19,7 @@ namespace Vasont.Inspire.SDK.Translations
         /// <summary>
         /// Get all available translation job states.
         /// </summary>
-        /// <param name="client">Contains the client.</param>
+        /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
         /// <returns>Returns a list of <see cref="TranslationJobStateModel" /> objects.</returns>
         [Obsolete("This method is obsolete. Please use RetrieveTranslationJobStates() going forward. This method will be removed in a future release.")]
         public static List<TranslationJobStateModel> GetTranslationJobStates(this InspireClient client)
@@ -30,7 +30,7 @@ namespace Vasont.Inspire.SDK.Translations
         /// <summary>
         /// Get all available translation job states.
         /// </summary>
-        /// <param name="client">Contains the client.</param>
+        /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
         /// <returns>Returns a list of <see cref="TranslationJobStateModel" /> objects.</returns>
         public static List<TranslationJobStateModel> RetrieveTranslationJobStates(this InspireClient client)
         {
@@ -41,7 +41,7 @@ namespace Vasont.Inspire.SDK.Translations
         /// <summary>
         /// Gets all translation vendors.
         /// </summary>
-        /// <param name="client">The client.</param>
+        /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
         /// <returns>Returns a List of <see cref="TranslationVendorModel" /> objects.</returns>
         [Obsolete("This method is obsolete. Please use RetrieveTranslationVendors() going forward. This method will be removed in a future release.")]
         public static List<TranslationVendorModel> GetTranslationVendors(this InspireClient client)
@@ -52,7 +52,7 @@ namespace Vasont.Inspire.SDK.Translations
         /// <summary>
         /// Gets all translation vendors.
         /// </summary>
-        /// <param name="client">The client.</param>
+        /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
         /// <returns>Returns a List of <see cref="TranslationVendorModel" /> objects.</returns>
         public static List<TranslationVendorModel> RetrieveTranslationVendors(this InspireClient client)
         {
@@ -63,7 +63,7 @@ namespace Vasont.Inspire.SDK.Translations
         /// <summary>
         /// Gets the translation job by identifier.
         /// </summary>
-        /// <param name="client">The client.</param>
+        /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
         /// <param name="translationJobId">The translation job identifier.</param>
         /// <returns>Returns the <see cref="TranslationJobModel" /> object found for the requested Id.</returns>
         [Obsolete("This method is obsolete. Please use FindTranslationJob() going forward. This method will be removed in a future release.")]
@@ -75,7 +75,7 @@ namespace Vasont.Inspire.SDK.Translations
         /// <summary>
         /// Gets the translation job by identifier.
         /// </summary>
-        /// <param name="client">The client.</param>
+        /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
         /// <param name="translationJobId">The translation job identifier.</param>
         /// <returns>Returns the <see cref="TranslationJobModel" /> object found for the requested Id.</returns>
         public static TranslationJobModel FindTranslationJob(this InspireClient client, long translationJobId)
@@ -87,7 +87,7 @@ namespace Vasont.Inspire.SDK.Translations
         /// <summary>
         /// Finds the translation jobs for the requested translation job Ids.
         /// </summary>
-        /// <param name="client">The client.</param>
+        /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
         /// <param name="translationJobIds">The translation job ids.</param>
         /// <returns>Returns a List of the requested <see cref="MinimalTranslationJobModel" /> objects.</returns>
         public static List<MinimalTranslationJobModel> FindTranslationJobs(this InspireClient client, List<long> translationJobIds)
@@ -105,8 +105,8 @@ namespace Vasont.Inspire.SDK.Translations
         /// <summary>
         /// Cancels a Translation Job.
         /// </summary>
-        /// <param name="client">The client.</param>
-        /// <param name="model">The model.</param>
+        /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
+        /// <param name="model">The <see cref="TranslationJobModel"/> used to Cancel the Translation Job.</param>
         /// <returns>Returns the <see cref="TranslationJobModel" /> object that was canceled.</returns>
         public static TranslationJobModel PutTranslationCancel(this InspireClient client, TranslationJobModel model)
         {
@@ -122,7 +122,7 @@ namespace Vasont.Inspire.SDK.Translations
         /// <summary>
         /// Gets the queued translation jobs.
         /// </summary>
-        /// <param name="client">The client.</param>
+        /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
         /// <param name="translationVendorId">The translation vendor identifier.</param>
         /// <returns>Returns a <see cref="WorkerStateModel" /> of type <see cref="TranslationExportStateModel" />.</returns>
         [Obsolete("This method is obsolete. Please use FindQueuedTranslationJobs() going forward. This method will be removed in a future release.")]
@@ -134,7 +134,7 @@ namespace Vasont.Inspire.SDK.Translations
         /// <summary>
         /// Gets the queued translation jobs.
         /// </summary>
-        /// <param name="client">The client.</param>
+        /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
         /// <param name="translationVendorId">The translation vendor identifier.</param>
         /// <returns>Returns a <see cref="WorkerStateModel" /> of type <see cref="TranslationExportStateModel" />.</returns>
         public static WorkerStateModel<TranslationExportStateModel> FindQueuedTranslationJobs(this InspireClient client, long translationVendorId)
@@ -158,7 +158,7 @@ namespace Vasont.Inspire.SDK.Translations
         /// <summary>
         /// Gets the translation export state.
         /// </summary>
-        /// <param name="client">The client.</param>
+        /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
         /// <param name="workerKey">The worker key.</param>
         /// <returns>Returns a <see cref="WorkerStateModel" /> of type <see cref="TranslationExportStateModel" />.</returns>
         [Obsolete("This method is obsolete. Please use FindTranslationExportState() going forward. This method will be removed in a future release.")]
@@ -170,7 +170,7 @@ namespace Vasont.Inspire.SDK.Translations
         /// <summary>
         /// Gets the translation export state.
         /// </summary>
-        /// <param name="client">The client.</param>
+        /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
         /// <param name="workerKey">The worker key.</param>
         /// <returns>Returns a <see cref="WorkerStateModel" /> of type <see cref="TranslationExportStateModel" />.</returns>
         public static MinimalWorkerStateModel<TranslationExportStateModel> FindTranslationExportState(this InspireClient client, string workerKey)
@@ -189,7 +189,7 @@ namespace Vasont.Inspire.SDK.Translations
         /// <summary>
         /// Resets the state of the requested translation components to queued.
         /// </summary>
-        /// <param name="client">The client.</param>
+        /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
         /// <param name="translationComponentIds">The translation component ids to reset state to queued.</param>
         /// <returns>Returns a List of <see cref="MinimalTranslationJobComponentModel" /> objects.</returns>
         public static List<MinimalTranslationJobComponentModel> ResetTranslationComponentsState(this InspireClient client, List<long> translationComponentIds)
@@ -207,7 +207,7 @@ namespace Vasont.Inspire.SDK.Translations
         /// <summary>
         /// Gets all of the translation export jobs ready to be processed.
         /// </summary>
-        /// <param name="client">The client.</param>
+        /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
         /// <param name="translationJobIds">The translation job ids.</param>
         /// <returns>Returns a List of <see cref="TranslationExportJobModel" /> objects.</returns>
         [Obsolete("This method is obsolete. Please use FindTranslationExportJobs() going forward. This method will be removed in a future release.")]
@@ -219,7 +219,7 @@ namespace Vasont.Inspire.SDK.Translations
         /// <summary>
         /// Gets all of the translation export jobs ready to be processed.
         /// </summary>
-        /// <param name="client">The client.</param>
+        /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
         /// <param name="translationJobIds">The translation job ids.</param>
         /// <returns>Returns a List of <see cref="TranslationExportJobModel" /> objects.</returns>
         public static List<TranslationExportJobModel> FindTranslationExportJobs(this InspireClient client, List<long> translationJobIds)
@@ -237,8 +237,8 @@ namespace Vasont.Inspire.SDK.Translations
         /// <summary>
         /// Sets the translation job statuses for each requested <see cref="TranslationExportJobModel"/>.
         /// </summary>
-        /// <param name="client">The client.</param>
-        /// <param name="models">The models.</param>
+        /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
+        /// <param name="models">The List of <see cref="TranslationExportJobModel"/> objects used to set translation job statuses.</param>
         /// <returns>Returns a List of <see cref="TranslationExportJobModel" /> objects.</returns>
         public static List<TranslationExportJobModel> SetTranslationJobStatus(this InspireClient client, List<TranslationExportJobModel> models)
         {

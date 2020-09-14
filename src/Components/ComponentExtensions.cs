@@ -172,7 +172,7 @@ namespace Vasont.Inspire.SDK.Components
         /// <summary>
         /// This method is used to retrieve the detail of the specific component.
         /// </summary>
-        /// <param name="client">The client.</param>
+        /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
         /// <param name="componentId">The component identifier.</param>
         /// <returns>Returns the <see cref="DetailedComponentModel"/> object.</returns>
         [Obsolete("This method is obsolete. Please use FindComponentDetail() going forward. This method will be removed in a future release.")]
@@ -184,7 +184,7 @@ namespace Vasont.Inspire.SDK.Components
         /// <summary>
         /// This method is used to retrieve the detail of the specific component.
         /// </summary>
-        /// <param name="client">The client.</param>
+        /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
         /// <param name="componentId">The component identifier.</param>
         /// <returns>Returns the <see cref="DetailedComponentModel"/> object.</returns>
         public static DetailedComponentModel FindComponentDetail(this InspireClient client, long componentId)
@@ -725,7 +725,7 @@ namespace Vasont.Inspire.SDK.Components
         /// <summary>
         /// This method is used to update the specified component tags.
         /// </summary>
-        /// <param name="client">The client.</param>
+        /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
         /// <param name="componentId">The component identifier.</param>
         /// <param name="inputModel">The input model.</param>
         /// <returns>Returns the updated <see cref="ComponentTagModel"/> object.</returns>
@@ -743,7 +743,7 @@ namespace Vasont.Inspire.SDK.Components
         /// <summary>
         /// This method is used to update the specified component tags.
         /// </summary>
-        /// <param name="client">The client.</param>
+        /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
         /// <param name="componentId">The component identifier.</param>
         /// <param name="inputModel">The input model.</param>
         /// <returns>Returns the updated <see cref="ComponentTagModel"/> object.</returns>

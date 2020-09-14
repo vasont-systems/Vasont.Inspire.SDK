@@ -607,6 +607,7 @@ namespace Vasont.Inspire.SDK.Configuration
         /// <param name="componentTypeId">Contains the specific export component type.</param>
         /// <param name="exportType">Contains the <see cref="ExportType"/> type that will be retrieved, Standard is default.</param>
         /// <returns>Returns a list of <see cref="ExportSelectionModel"/> objects from the application.</returns>
+        [Obsolete("This method is obsolete. Please use FindExportComponentType() going forward. This method will be removed in a future release.")]
         public static ExportSelectionModel GetExportComponentType(this InspireClient client, long componentTypeId, ExportType exportType = ExportType.Standard)
         {
             return FindExportComponentType(client, componentTypeId, exportType);

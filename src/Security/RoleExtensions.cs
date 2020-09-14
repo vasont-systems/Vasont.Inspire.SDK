@@ -49,7 +49,7 @@ namespace Vasont.Inspire.SDK.Security
         /// <summary>
         /// Gets the specified <see cref="RoleModel"/>.
         /// </summary>
-        /// <param name="client">The client.</param>
+        /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
         /// <param name="roleId">The role identifier.</param>
         /// <returns>Returns the <see cref="RoleModel"/> record of the specified role</returns>
         [Obsolete("This method is obsolete. Please use FindRole() going forward. This method will be removed in a future release.")]
@@ -61,7 +61,7 @@ namespace Vasont.Inspire.SDK.Security
         /// <summary>
         /// Gets the specified <see cref="RoleModel"/>.
         /// </summary>
-        /// <param name="client">The client.</param>
+        /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
         /// <param name="roleId">The role identifier.</param>
         /// <returns>Returns the <see cref="RoleModel"/> record of the specified role</returns>
         public static RoleModel FindRole(this InspireClient client, long roleId)
