@@ -5,6 +5,10 @@ items:
   id: TranslationsExtensions
   parent: Vasont.Inspire.SDK.Translations
   children:
+  - Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindQueuedTranslationJobs(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  - Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationExportJobs(Vasont.Inspire.SDK.InspireClient,System.Collections.Generic.List{System.Int64})
+  - Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationExportState(Vasont.Inspire.SDK.InspireClient,System.String)
+  - Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationJob(Vasont.Inspire.SDK.InspireClient,System.Int64)
   - Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationJobs(Vasont.Inspire.SDK.InspireClient,System.Collections.Generic.List{System.Int64})
   - Vasont.Inspire.SDK.Translations.TranslationsExtensions.GetQueuedTranslationJobs(Vasont.Inspire.SDK.InspireClient,System.Int64)
   - Vasont.Inspire.SDK.Translations.TranslationsExtensions.GetTranslationExportJobs(Vasont.Inspire.SDK.InspireClient,System.Collections.Generic.List{System.Int64})
@@ -14,6 +18,8 @@ items:
   - Vasont.Inspire.SDK.Translations.TranslationsExtensions.GetTranslationVendors(Vasont.Inspire.SDK.InspireClient)
   - Vasont.Inspire.SDK.Translations.TranslationsExtensions.PutTranslationCancel(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Translations.TranslationJobModel)
   - Vasont.Inspire.SDK.Translations.TranslationsExtensions.ResetTranslationComponentsState(Vasont.Inspire.SDK.InspireClient,System.Collections.Generic.List{System.Int64})
+  - Vasont.Inspire.SDK.Translations.TranslationsExtensions.RetrieveTranslationJobStates(Vasont.Inspire.SDK.InspireClient)
+  - Vasont.Inspire.SDK.Translations.TranslationsExtensions.RetrieveTranslationVendors(Vasont.Inspire.SDK.InspireClient)
   - Vasont.Inspire.SDK.Translations.TranslationsExtensions.SetTranslationJobStatus(Vasont.Inspire.SDK.InspireClient,System.Collections.Generic.List{Vasont.Inspire.Models.Translations.TranslationExportJobModel})
   langs:
   - csharp
@@ -33,7 +39,7 @@ items:
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Translations
-  summary: "\nThis class extends the <xref href=\"Vasont.Inspire.SDK.InspireClient\" data-throw-if-not-resolved=\"false\"></xref> class to include methods for calling user API endpoints.\n"
+  summary: "\nThis class extends the <xref href=\"Vasont.Inspire.SDK.InspireClient\" data-throw-if-not-resolved=\"false\"></xref> class to include methods for calling translation API endpoints.\n"
   example: []
   syntax:
     content: public static class TranslationsExtensions
@@ -81,19 +87,75 @@ items:
   summary: "\nGet all available translation job states.\n"
   example: []
   syntax:
-    content: public static List<TranslationJobStateModel> GetTranslationJobStates(this InspireClient client)
+    content: >-
+      [Obsolete("This method is obsolete. Please use RetrieveTranslationJobStates() going forward. This method will be removed in a future release.")]
+
+      public static List<TranslationJobStateModel> GetTranslationJobStates(this InspireClient client)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
-      description: Contains the client.
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
+    return:
+      type: System.Collections.Generic.List{Vasont.Inspire.Models.Translations.TranslationJobStateModel}
+      description: Returns a list of <xref href="Vasont.Inspire.Models.Translations.TranslationJobStateModel" data-throw-if-not-resolved="false"></xref> objects.
+    content.vb: >-
+      <Obsolete("This method is obsolete. Please use RetrieveTranslationJobStates() going forward. This method will be removed in a future release.")>
+
+      <ExtensionAttribute>
+
+      Public Shared Function GetTranslationJobStates(client As InspireClient) As List(Of TranslationJobStateModel)
+  overload: Vasont.Inspire.SDK.Translations.TranslationsExtensions.GetTranslationJobStates*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use RetrieveTranslationJobStates() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.RetrieveTranslationJobStates(Vasont.Inspire.SDK.InspireClient)
+  commentId: M:Vasont.Inspire.SDK.Translations.TranslationsExtensions.RetrieveTranslationJobStates(Vasont.Inspire.SDK.InspireClient)
+  id: RetrieveTranslationJobStates(Vasont.Inspire.SDK.InspireClient)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Translations.TranslationsExtensions
+  langs:
+  - csharp
+  - vb
+  name: RetrieveTranslationJobStates(InspireClient)
+  nameWithType: TranslationsExtensions.RetrieveTranslationJobStates(InspireClient)
+  fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.RetrieveTranslationJobStates(Vasont.Inspire.SDK.InspireClient)
+  type: Method
+  source:
+    remote:
+      path: src/Translations/TranslationsExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: RetrieveTranslationJobStates
+    path: Translations/TranslationsExtensions.cs
+    startLine: 34
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Translations
+  summary: "\nGet all available translation job states.\n"
+  example: []
+  syntax:
+    content: public static List<TranslationJobStateModel> RetrieveTranslationJobStates(this InspireClient client)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
     return:
       type: System.Collections.Generic.List{Vasont.Inspire.Models.Translations.TranslationJobStateModel}
       description: Returns a list of <xref href="Vasont.Inspire.Models.Translations.TranslationJobStateModel" data-throw-if-not-resolved="false"></xref> objects.
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Function GetTranslationJobStates(client As InspireClient) As List(Of TranslationJobStateModel)
-  overload: Vasont.Inspire.SDK.Translations.TranslationsExtensions.GetTranslationJobStates*
+      Public Shared Function RetrieveTranslationJobStates(client As InspireClient) As List(Of TranslationJobStateModel)
+  overload: Vasont.Inspire.SDK.Translations.TranslationsExtensions.RetrieveTranslationJobStates*
   modifiers.csharp:
   - public
   - static
@@ -119,26 +181,82 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetTranslationVendors
     path: Translations/TranslationsExtensions.cs
-    startLine: 34
+    startLine: 45
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Translations
   summary: "\nGets all translation vendors.\n"
   example: []
   syntax:
-    content: public static List<TranslationVendorModel> GetTranslationVendors(this InspireClient client)
+    content: >-
+      [Obsolete("This method is obsolete. Please use RetrieveTranslationVendors() going forward. This method will be removed in a future release.")]
+
+      public static List<TranslationVendorModel> GetTranslationVendors(this InspireClient client)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
-      description: The client.
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
+    return:
+      type: System.Collections.Generic.List{Vasont.Inspire.Models.Translations.TranslationVendorModel}
+      description: Returns a List of <xref href="Vasont.Inspire.Models.Translations.TranslationVendorModel" data-throw-if-not-resolved="false"></xref> objects.
+    content.vb: >-
+      <Obsolete("This method is obsolete. Please use RetrieveTranslationVendors() going forward. This method will be removed in a future release.")>
+
+      <ExtensionAttribute>
+
+      Public Shared Function GetTranslationVendors(client As InspireClient) As List(Of TranslationVendorModel)
+  overload: Vasont.Inspire.SDK.Translations.TranslationsExtensions.GetTranslationVendors*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use RetrieveTranslationVendors() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.RetrieveTranslationVendors(Vasont.Inspire.SDK.InspireClient)
+  commentId: M:Vasont.Inspire.SDK.Translations.TranslationsExtensions.RetrieveTranslationVendors(Vasont.Inspire.SDK.InspireClient)
+  id: RetrieveTranslationVendors(Vasont.Inspire.SDK.InspireClient)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Translations.TranslationsExtensions
+  langs:
+  - csharp
+  - vb
+  name: RetrieveTranslationVendors(InspireClient)
+  nameWithType: TranslationsExtensions.RetrieveTranslationVendors(InspireClient)
+  fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.RetrieveTranslationVendors(Vasont.Inspire.SDK.InspireClient)
+  type: Method
+  source:
+    remote:
+      path: src/Translations/TranslationsExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: RetrieveTranslationVendors
+    path: Translations/TranslationsExtensions.cs
+    startLine: 56
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Translations
+  summary: "\nGets all translation vendors.\n"
+  example: []
+  syntax:
+    content: public static List<TranslationVendorModel> RetrieveTranslationVendors(this InspireClient client)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
     return:
       type: System.Collections.Generic.List{Vasont.Inspire.Models.Translations.TranslationVendorModel}
       description: Returns a List of <xref href="Vasont.Inspire.Models.Translations.TranslationVendorModel" data-throw-if-not-resolved="false"></xref> objects.
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Function GetTranslationVendors(client As InspireClient) As List(Of TranslationVendorModel)
-  overload: Vasont.Inspire.SDK.Translations.TranslationsExtensions.GetTranslationVendors*
+      Public Shared Function RetrieveTranslationVendors(client As InspireClient) As List(Of TranslationVendorModel)
+  overload: Vasont.Inspire.SDK.Translations.TranslationsExtensions.RetrieveTranslationVendors*
   modifiers.csharp:
   - public
   - static
@@ -164,18 +282,77 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetTranslationJobById
     path: Translations/TranslationsExtensions.cs
-    startLine: 46
+    startLine: 68
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Translations
   summary: "\nGets the translation job by identifier.\n"
   example: []
   syntax:
-    content: public static TranslationJobModel GetTranslationJobById(this InspireClient client, long translationJobId)
+    content: >-
+      [Obsolete("This method is obsolete. Please use FindTranslationJob() going forward. This method will be removed in a future release.")]
+
+      public static TranslationJobModel GetTranslationJobById(this InspireClient client, long translationJobId)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
-      description: The client.
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
+    - id: translationJobId
+      type: System.Int64
+      description: The translation job identifier.
+    return:
+      type: Vasont.Inspire.Models.Translations.TranslationJobModel
+      description: Returns the <xref href="Vasont.Inspire.Models.Translations.TranslationJobModel" data-throw-if-not-resolved="false"></xref> object found for the requested Id.
+    content.vb: >-
+      <Obsolete("This method is obsolete. Please use FindTranslationJob() going forward. This method will be removed in a future release.")>
+
+      <ExtensionAttribute>
+
+      Public Shared Function GetTranslationJobById(client As InspireClient, translationJobId As Long) As TranslationJobModel
+  overload: Vasont.Inspire.SDK.Translations.TranslationsExtensions.GetTranslationJobById*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use FindTranslationJob() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationJob(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  commentId: M:Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationJob(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  id: FindTranslationJob(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Translations.TranslationsExtensions
+  langs:
+  - csharp
+  - vb
+  name: FindTranslationJob(InspireClient, Int64)
+  nameWithType: TranslationsExtensions.FindTranslationJob(InspireClient, Int64)
+  fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationJob(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  type: Method
+  source:
+    remote:
+      path: src/Translations/TranslationsExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: FindTranslationJob
+    path: Translations/TranslationsExtensions.cs
+    startLine: 80
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Translations
+  summary: "\nGets the translation job by identifier.\n"
+  example: []
+  syntax:
+    content: public static TranslationJobModel FindTranslationJob(this InspireClient client, long translationJobId)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
     - id: translationJobId
       type: System.Int64
       description: The translation job identifier.
@@ -185,8 +362,8 @@ items:
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Function GetTranslationJobById(client As InspireClient, translationJobId As Long) As TranslationJobModel
-  overload: Vasont.Inspire.SDK.Translations.TranslationsExtensions.GetTranslationJobById*
+      Public Shared Function FindTranslationJob(client As InspireClient, translationJobId As Long) As TranslationJobModel
+  overload: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationJob*
   modifiers.csharp:
   - public
   - static
@@ -212,24 +389,24 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FindTranslationJobs
     path: Translations/TranslationsExtensions.cs
-    startLine: 58
+    startLine: 92
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Translations
-  summary: "\nFinds the translation jobs.\n"
+  summary: "\nFinds the translation jobs for the requested translation job Ids.\n"
   example: []
   syntax:
     content: public static List<MinimalTranslationJobModel> FindTranslationJobs(this InspireClient client, List<long> translationJobIds)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
-      description: The client.
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
     - id: translationJobIds
       type: System.Collections.Generic.List{System.Int64}
       description: The translation job ids.
     return:
       type: System.Collections.Generic.List{Vasont.Inspire.Models.Translations.MinimalTranslationJobModel}
-      description: Returns a List of the requested <xref href="Vasont.Inspire.Models.Translations.TranslationJobModel" data-throw-if-not-resolved="false"></xref> objects.
+      description: Returns a List of the requested <xref href="Vasont.Inspire.Models.Translations.MinimalTranslationJobModel" data-throw-if-not-resolved="false"></xref> objects.
     content.vb: >-
       <ExtensionAttribute>
 
@@ -263,7 +440,7 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: PutTranslationCancel
     path: Translations/TranslationsExtensions.cs
-    startLine: 76
+    startLine: 110
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Translations
@@ -274,10 +451,10 @@ items:
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
-      description: The client.
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
     - id: model
       type: Vasont.Inspire.Models.Translations.TranslationJobModel
-      description: The model.
+      description: The <xref href="Vasont.Inspire.Models.Translations.TranslationJobModel" data-throw-if-not-resolved="false"></xref> used to Cancel the Translation Job.
     return:
       type: Vasont.Inspire.Models.Translations.TranslationJobModel
       description: Returns the <xref href="Vasont.Inspire.Models.Translations.TranslationJobModel" data-throw-if-not-resolved="false"></xref> object that was canceled.
@@ -311,18 +488,77 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetQueuedTranslationJobs
     path: Translations/TranslationsExtensions.cs
-    startLine: 93
+    startLine: 127
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Translations
   summary: "\nGets the queued translation jobs.\n"
   example: []
   syntax:
-    content: public static WorkerStateModel<TranslationExportStateModel> GetQueuedTranslationJobs(this InspireClient client, long translationVendorId)
+    content: >-
+      [Obsolete("This method is obsolete. Please use FindQueuedTranslationJobs() going forward. This method will be removed in a future release.")]
+
+      public static WorkerStateModel<TranslationExportStateModel> GetQueuedTranslationJobs(this InspireClient client, long translationVendorId)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
-      description: The client.
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
+    - id: translationVendorId
+      type: System.Int64
+      description: The translation vendor identifier.
+    return:
+      type: Vasont.Inspire.Models.Worker.WorkerStateModel{Vasont.Inspire.Models.Translations.TranslationExportStateModel}
+      description: Returns a <xref href="Vasont.Inspire.Models.Worker.WorkerStateModel" data-throw-if-not-resolved="false"></xref> of type <xref href="Vasont.Inspire.Models.Translations.TranslationExportStateModel" data-throw-if-not-resolved="false"></xref>.
+    content.vb: >-
+      <Obsolete("This method is obsolete. Please use FindQueuedTranslationJobs() going forward. This method will be removed in a future release.")>
+
+      <ExtensionAttribute>
+
+      Public Shared Function GetQueuedTranslationJobs(client As InspireClient, translationVendorId As Long) As WorkerStateModel(Of TranslationExportStateModel)
+  overload: Vasont.Inspire.SDK.Translations.TranslationsExtensions.GetQueuedTranslationJobs*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use FindQueuedTranslationJobs() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindQueuedTranslationJobs(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  commentId: M:Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindQueuedTranslationJobs(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  id: FindQueuedTranslationJobs(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Translations.TranslationsExtensions
+  langs:
+  - csharp
+  - vb
+  name: FindQueuedTranslationJobs(InspireClient, Int64)
+  nameWithType: TranslationsExtensions.FindQueuedTranslationJobs(InspireClient, Int64)
+  fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindQueuedTranslationJobs(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  type: Method
+  source:
+    remote:
+      path: src/Translations/TranslationsExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: FindQueuedTranslationJobs
+    path: Translations/TranslationsExtensions.cs
+    startLine: 139
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Translations
+  summary: "\nGets the queued translation jobs.\n"
+  example: []
+  syntax:
+    content: public static WorkerStateModel<TranslationExportStateModel> FindQueuedTranslationJobs(this InspireClient client, long translationVendorId)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
     - id: translationVendorId
       type: System.Int64
       description: The translation vendor identifier.
@@ -332,8 +568,8 @@ items:
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Function GetQueuedTranslationJobs(client As InspireClient, translationVendorId As Long) As WorkerStateModel(Of TranslationExportStateModel)
-  overload: Vasont.Inspire.SDK.Translations.TranslationsExtensions.GetQueuedTranslationJobs*
+      Public Shared Function FindQueuedTranslationJobs(client As InspireClient, translationVendorId As Long) As WorkerStateModel(Of TranslationExportStateModel)
+  overload: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindQueuedTranslationJobs*
   modifiers.csharp:
   - public
   - static
@@ -359,18 +595,77 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetTranslationExportState
     path: Translations/TranslationsExtensions.cs
-    startLine: 117
+    startLine: 163
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Translations
   summary: "\nGets the translation export state.\n"
   example: []
   syntax:
-    content: public static MinimalWorkerStateModel<TranslationExportStateModel> GetTranslationExportState(this InspireClient client, string workerKey)
+    content: >-
+      [Obsolete("This method is obsolete. Please use FindTranslationExportState() going forward. This method will be removed in a future release.")]
+
+      public static MinimalWorkerStateModel<TranslationExportStateModel> GetTranslationExportState(this InspireClient client, string workerKey)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
-      description: The client.
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
+    - id: workerKey
+      type: System.String
+      description: The worker key.
+    return:
+      type: Vasont.Inspire.Models.Worker.MinimalWorkerStateModel{Vasont.Inspire.Models.Translations.TranslationExportStateModel}
+      description: Returns a <xref href="Vasont.Inspire.Models.Worker.WorkerStateModel" data-throw-if-not-resolved="false"></xref> of type <xref href="Vasont.Inspire.Models.Translations.TranslationExportStateModel" data-throw-if-not-resolved="false"></xref>.
+    content.vb: >-
+      <Obsolete("This method is obsolete. Please use FindTranslationExportState() going forward. This method will be removed in a future release.")>
+
+      <ExtensionAttribute>
+
+      Public Shared Function GetTranslationExportState(client As InspireClient, workerKey As String) As MinimalWorkerStateModel(Of TranslationExportStateModel)
+  overload: Vasont.Inspire.SDK.Translations.TranslationsExtensions.GetTranslationExportState*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use FindTranslationExportState() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationExportState(Vasont.Inspire.SDK.InspireClient,System.String)
+  commentId: M:Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationExportState(Vasont.Inspire.SDK.InspireClient,System.String)
+  id: FindTranslationExportState(Vasont.Inspire.SDK.InspireClient,System.String)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Translations.TranslationsExtensions
+  langs:
+  - csharp
+  - vb
+  name: FindTranslationExportState(InspireClient, String)
+  nameWithType: TranslationsExtensions.FindTranslationExportState(InspireClient, String)
+  fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationExportState(Vasont.Inspire.SDK.InspireClient, System.String)
+  type: Method
+  source:
+    remote:
+      path: src/Translations/TranslationsExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: FindTranslationExportState
+    path: Translations/TranslationsExtensions.cs
+    startLine: 175
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Translations
+  summary: "\nGets the translation export state.\n"
+  example: []
+  syntax:
+    content: public static MinimalWorkerStateModel<TranslationExportStateModel> FindTranslationExportState(this InspireClient client, string workerKey)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
     - id: workerKey
       type: System.String
       description: The worker key.
@@ -380,8 +675,8 @@ items:
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Function GetTranslationExportState(client As InspireClient, workerKey As String) As MinimalWorkerStateModel(Of TranslationExportStateModel)
-  overload: Vasont.Inspire.SDK.Translations.TranslationsExtensions.GetTranslationExportState*
+      Public Shared Function FindTranslationExportState(client As InspireClient, workerKey As String) As MinimalWorkerStateModel(Of TranslationExportStateModel)
+  overload: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationExportState*
   modifiers.csharp:
   - public
   - static
@@ -407,18 +702,18 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: ResetTranslationComponentsState
     path: Translations/TranslationsExtensions.cs
-    startLine: 136
+    startLine: 194
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Translations
-  summary: "\nResets the state of the translation components to queued.\n"
+  summary: "\nResets the state of the requested translation components to queued.\n"
   example: []
   syntax:
     content: public static List<MinimalTranslationJobComponentModel> ResetTranslationComponentsState(this InspireClient client, List<long> translationComponentIds)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
-      description: The client.
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
     - id: translationComponentIds
       type: System.Collections.Generic.List{System.Int64}
       description: The translation component ids to reset state to queued.
@@ -458,18 +753,21 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetTranslationExportJobs
     path: Translations/TranslationsExtensions.cs
-    startLine: 154
+    startLine: 212
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Translations
-  summary: "\nGets the translation export jobs.\n"
+  summary: "\nGets all of the translation export jobs ready to be processed.\n"
   example: []
   syntax:
-    content: public static List<TranslationExportJobModel> GetTranslationExportJobs(this InspireClient client, List<long> translationJobIds)
+    content: >-
+      [Obsolete("This method is obsolete. Please use FindTranslationExportJobs() going forward. This method will be removed in a future release.")]
+
+      public static List<TranslationExportJobModel> GetTranslationExportJobs(this InspireClient client, List<long> translationJobIds)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
-      description: The client.
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
     - id: translationJobIds
       type: System.Collections.Generic.List{System.Int64}
       description: The translation job ids.
@@ -477,10 +775,18 @@ items:
       type: System.Collections.Generic.List{Vasont.Inspire.Models.Translations.TranslationExportJobModel}
       description: Returns a List of <xref href="Vasont.Inspire.Models.Translations.TranslationExportJobModel" data-throw-if-not-resolved="false"></xref> objects.
     content.vb: >-
+      <Obsolete("This method is obsolete. Please use FindTranslationExportJobs() going forward. This method will be removed in a future release.")>
+
       <ExtensionAttribute>
 
       Public Shared Function GetTranslationExportJobs(client As InspireClient, translationJobIds As List(Of Long)) As List(Of TranslationExportJobModel)
   overload: Vasont.Inspire.SDK.Translations.TranslationsExtensions.GetTranslationExportJobs*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use FindTranslationExportJobs() going forward. This method will be removed in a future release.
   nameWithType.vb: TranslationsExtensions.GetTranslationExportJobs(InspireClient, List(Of Int64))
   modifiers.csharp:
   - public
@@ -490,6 +796,57 @@ items:
   - Shared
   fullName.vb: Vasont.Inspire.SDK.Translations.TranslationsExtensions.GetTranslationExportJobs(Vasont.Inspire.SDK.InspireClient, System.Collections.Generic.List(Of System.Int64))
   name.vb: GetTranslationExportJobs(InspireClient, List(Of Int64))
+- uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationExportJobs(Vasont.Inspire.SDK.InspireClient,System.Collections.Generic.List{System.Int64})
+  commentId: M:Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationExportJobs(Vasont.Inspire.SDK.InspireClient,System.Collections.Generic.List{System.Int64})
+  id: FindTranslationExportJobs(Vasont.Inspire.SDK.InspireClient,System.Collections.Generic.List{System.Int64})
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Translations.TranslationsExtensions
+  langs:
+  - csharp
+  - vb
+  name: FindTranslationExportJobs(InspireClient, List<Int64>)
+  nameWithType: TranslationsExtensions.FindTranslationExportJobs(InspireClient, List<Int64>)
+  fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationExportJobs(Vasont.Inspire.SDK.InspireClient, System.Collections.Generic.List<System.Int64>)
+  type: Method
+  source:
+    remote:
+      path: src/Translations/TranslationsExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: FindTranslationExportJobs
+    path: Translations/TranslationsExtensions.cs
+    startLine: 224
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Translations
+  summary: "\nGets all of the translation export jobs ready to be processed.\n"
+  example: []
+  syntax:
+    content: public static List<TranslationExportJobModel> FindTranslationExportJobs(this InspireClient client, List<long> translationJobIds)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
+    - id: translationJobIds
+      type: System.Collections.Generic.List{System.Int64}
+      description: The translation job ids.
+    return:
+      type: System.Collections.Generic.List{Vasont.Inspire.Models.Translations.TranslationExportJobModel}
+      description: Returns a List of <xref href="Vasont.Inspire.Models.Translations.TranslationExportJobModel" data-throw-if-not-resolved="false"></xref> objects.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function FindTranslationExportJobs(client As InspireClient, translationJobIds As List(Of Long)) As List(Of TranslationExportJobModel)
+  overload: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationExportJobs*
+  nameWithType.vb: TranslationsExtensions.FindTranslationExportJobs(InspireClient, List(Of Int64))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationExportJobs(Vasont.Inspire.SDK.InspireClient, System.Collections.Generic.List(Of System.Int64))
+  name.vb: FindTranslationExportJobs(InspireClient, List(Of Int64))
 - uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.SetTranslationJobStatus(Vasont.Inspire.SDK.InspireClient,System.Collections.Generic.List{Vasont.Inspire.Models.Translations.TranslationExportJobModel})
   commentId: M:Vasont.Inspire.SDK.Translations.TranslationsExtensions.SetTranslationJobStatus(Vasont.Inspire.SDK.InspireClient,System.Collections.Generic.List{Vasont.Inspire.Models.Translations.TranslationExportJobModel})
   id: SetTranslationJobStatus(Vasont.Inspire.SDK.InspireClient,System.Collections.Generic.List{Vasont.Inspire.Models.Translations.TranslationExportJobModel})
@@ -509,21 +866,21 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: SetTranslationJobStatus
     path: Translations/TranslationsExtensions.cs
-    startLine: 172
+    startLine: 242
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Translations
-  summary: "\nSets the translation job status.\n"
+  summary: "\nSets the translation job statuses for each requested <xref href=\"Vasont.Inspire.Models.Translations.TranslationExportJobModel\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public static List<TranslationExportJobModel> SetTranslationJobStatus(this InspireClient client, List<TranslationExportJobModel> models)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
-      description: The client.
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
     - id: models
       type: System.Collections.Generic.List{Vasont.Inspire.Models.Translations.TranslationExportJobModel}
-      description: The models.
+      description: The List of <xref href="Vasont.Inspire.Models.Translations.TranslationExportJobModel" data-throw-if-not-resolved="false"></xref> objects used to set translation job statuses.
     return:
       type: System.Collections.Generic.List{Vasont.Inspire.Models.Translations.TranslationExportJobModel}
       description: Returns a List of <xref href="Vasont.Inspire.Models.Translations.TranslationExportJobModel" data-throw-if-not-resolved="false"></xref> objects.
@@ -947,6 +1304,11 @@ references:
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
+- uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.RetrieveTranslationJobStates*
+  commentId: Overload:Vasont.Inspire.SDK.Translations.TranslationsExtensions.RetrieveTranslationJobStates
+  name: RetrieveTranslationJobStates
+  nameWithType: TranslationsExtensions.RetrieveTranslationJobStates
+  fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.RetrieveTranslationJobStates
 - uid: Vasont.Inspire.Models.Translations.TranslationVendorModel
   commentId: T:Vasont.Inspire.Models.Translations.TranslationVendorModel
   isExternal: true
@@ -999,6 +1361,11 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.RetrieveTranslationVendors*
+  commentId: Overload:Vasont.Inspire.SDK.Translations.TranslationsExtensions.RetrieveTranslationVendors
+  name: RetrieveTranslationVendors
+  nameWithType: TranslationsExtensions.RetrieveTranslationVendors
+  fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.RetrieveTranslationVendors
 - uid: Vasont.Inspire.Models.Translations.TranslationJobModel
   commentId: T:Vasont.Inspire.Models.Translations.TranslationJobModel
   parent: Vasont.Inspire.Models.Translations
@@ -1024,6 +1391,14 @@ references:
   name: Vasont.Inspire.Models.Translations
   nameWithType: Vasont.Inspire.Models.Translations
   fullName: Vasont.Inspire.Models.Translations
+- uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationJob*
+  commentId: Overload:Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationJob
+  name: FindTranslationJob
+  nameWithType: TranslationsExtensions.FindTranslationJob
+  fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationJob
+- uid: Vasont.Inspire.Models.Translations.MinimalTranslationJobModel
+  commentId: T:Vasont.Inspire.Models.Translations.MinimalTranslationJobModel
+  isExternal: true
 - uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationJobs*
   commentId: Overload:Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationJobs
   name: FindTranslationJobs
@@ -1226,6 +1601,11 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindQueuedTranslationJobs*
+  commentId: Overload:Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindQueuedTranslationJobs
+  name: FindQueuedTranslationJobs
+  nameWithType: TranslationsExtensions.FindQueuedTranslationJobs
+  fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindQueuedTranslationJobs
 - uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.GetTranslationExportState*
   commentId: Overload:Vasont.Inspire.SDK.Translations.TranslationsExtensions.GetTranslationExportState
   name: GetTranslationExportState
@@ -1321,6 +1701,11 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationExportState*
+  commentId: Overload:Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationExportState
+  name: FindTranslationExportState
+  nameWithType: TranslationsExtensions.FindTranslationExportState
+  fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationExportState
 - uid: Vasont.Inspire.Models.Translations.MinimalTranslationJobComponentModel
   commentId: T:Vasont.Inspire.Models.Translations.MinimalTranslationJobComponentModel
   isExternal: true
@@ -1425,6 +1810,11 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationExportJobs*
+  commentId: Overload:Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationExportJobs
+  name: FindTranslationExportJobs
+  nameWithType: TranslationsExtensions.FindTranslationExportJobs
+  fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationExportJobs
 - uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.SetTranslationJobStatus*
   commentId: Overload:Vasont.Inspire.SDK.Translations.TranslationsExtensions.SetTranslationJobStatus
   name: SetTranslationJobStatus

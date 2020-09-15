@@ -13,6 +13,30 @@ items:
   - Vasont.Inspire.SDK.Components.ComponentExtensions.CreateComponentsExportRequest(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Transfers.ExportRequestModel)
   - Vasont.Inspire.SDK.Components.ComponentExtensions.DeleteComponent(Vasont.Inspire.SDK.InspireClient,System.Int64)
   - Vasont.Inspire.SDK.Components.ComponentExtensions.DeleteComponents(Vasont.Inspire.SDK.InspireClient,System.Collections.Generic.List{System.Int64})
+  - Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponent(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  - Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentBranches(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)
+  - Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentBranchesReport(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)
+  - Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentBranchRelations(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  - Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentConfiguration(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Boolean)
+  - Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentContent(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  - Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentDependencies(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)
+  - Vasont.Inspire.SDK.Components.ComponentExtensions.FIndComponentDependenciesReport(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)
+  - Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentDetail(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  - Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentElements(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Collections.Generic.List{System.String})
+  - Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentHistory(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Versioning.ComponentHistoryQueryModel,System.Boolean)
+  - Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentHistoryDetails(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Guid)
+  - Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentPermissions(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  - Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentRelations(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)
+  - Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentRelationsReport(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)
+  - Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponents(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.BatchComponentsRequestModel)
+  - Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentTemplates(Vasont.Inspire.SDK.InspireClient,System.String)
+  - Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentTranslations(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)
+  - Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentTranslationsReport(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)
+  - Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentWorkflowTemplate(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  - Vasont.Inspire.SDK.Components.ComponentExtensions.FindExportState(Vasont.Inspire.SDK.InspireClient,System.String)
+  - Vasont.Inspire.SDK.Components.ComponentExtensions.FindExportState(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Worker.WorkerStateModel)
+  - Vasont.Inspire.SDK.Components.ComponentExtensions.FindImportState(Vasont.Inspire.SDK.InspireClient,System.String)
+  - Vasont.Inspire.SDK.Components.ComponentExtensions.FindImportState(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Worker.WorkerStateModel)
   - Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponent(Vasont.Inspire.SDK.InspireClient,System.Int64)
   - Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentBranches(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)
   - Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentBranchesReport(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)
@@ -47,6 +71,8 @@ items:
   - Vasont.Inspire.SDK.Components.ComponentExtensions.RenameComponent(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Components.MinimalComponentModel)
   - Vasont.Inspire.SDK.Components.ComponentExtensions.RepairComponentRelationship(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.ComponentRelationModel)
   - Vasont.Inspire.SDK.Components.ComponentExtensions.RestoreComponentFromHistory(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Guid,Vasont.Inspire.Models.Versioning.RestoreOptionsModel)
+  - Vasont.Inspire.SDK.Components.ComponentExtensions.RetrieveComponentTypes(Vasont.Inspire.SDK.InspireClient)
+  - Vasont.Inspire.SDK.Components.ComponentExtensions.RetrieveComponentWorkflowTemplates(Vasont.Inspire.SDK.InspireClient)
   - Vasont.Inspire.SDK.Components.ComponentExtensions.SetComponentPermissions(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.PermissionUpdateModel)
   - Vasont.Inspire.SDK.Components.ComponentExtensions.UnlockComponent(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Boolean)
   - Vasont.Inspire.SDK.Components.ComponentExtensions.UnlockComponents(Vasont.Inspire.SDK.InspireClient,System.Collections.Generic.List{System.Int64},System.Boolean)
@@ -119,7 +145,63 @@ items:
   summary: "\nThis method is used to retrieve and return minimal models for component types.\n"
   example: []
   syntax:
-    content: public static List<MinimalComponentTypeModel> GetComponentTypes(this InspireClient client)
+    content: >-
+      [Obsolete("This method is obsolete. Please use RetrieveComponentTypes() going forward. This method will be removed in a future release.")]
+
+      public static List<MinimalComponentTypeModel> GetComponentTypes(this InspireClient client)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
+    return:
+      type: System.Collections.Generic.List{Vasont.Inspire.Models.Components.MinimalComponentTypeModel}
+      description: Returns a list of <xref href="Vasont.Inspire.Models.Components.MinimalComponentTypeModel" data-throw-if-not-resolved="false"></xref> minimal component type models.
+    content.vb: >-
+      <Obsolete("This method is obsolete. Please use RetrieveComponentTypes() going forward. This method will be removed in a future release.")>
+
+      <ExtensionAttribute>
+
+      Public Shared Function GetComponentTypes(client As InspireClient) As List(Of MinimalComponentTypeModel)
+  overload: Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentTypes*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use RetrieveComponentTypes() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.RetrieveComponentTypes(Vasont.Inspire.SDK.InspireClient)
+  commentId: M:Vasont.Inspire.SDK.Components.ComponentExtensions.RetrieveComponentTypes(Vasont.Inspire.SDK.InspireClient)
+  id: RetrieveComponentTypes(Vasont.Inspire.SDK.InspireClient)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Components.ComponentExtensions
+  langs:
+  - csharp
+  - vb
+  name: RetrieveComponentTypes(InspireClient)
+  nameWithType: ComponentExtensions.RetrieveComponentTypes(InspireClient)
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.RetrieveComponentTypes(Vasont.Inspire.SDK.InspireClient)
+  type: Method
+  source:
+    remote:
+      path: src/Components/ComponentExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: RetrieveComponentTypes
+    path: Components/ComponentExtensions.cs
+    startLine: 43
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Components
+  summary: "\nThis method is used to retrieve and return minimal models for component types.\n"
+  example: []
+  syntax:
+    content: public static List<MinimalComponentTypeModel> RetrieveComponentTypes(this InspireClient client)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
@@ -130,8 +212,8 @@ items:
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Function GetComponentTypes(client As InspireClient) As List(Of MinimalComponentTypeModel)
-  overload: Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentTypes*
+      Public Shared Function RetrieveComponentTypes(client As InspireClient) As List(Of MinimalComponentTypeModel)
+  overload: Vasont.Inspire.SDK.Components.ComponentExtensions.RetrieveComponentTypes*
   modifiers.csharp:
   - public
   - static
@@ -157,14 +239,70 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetComponentWorkflowTemplates
     path: Components/ComponentExtensions.cs
-    startLine: 47
+    startLine: 58
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Components
   summary: "\nThis method is used to retrieve the component workflow templates.\n"
   example: []
   syntax:
-    content: public static List<WorkflowTemplateModel> GetComponentWorkflowTemplates(this InspireClient client)
+    content: >-
+      [Obsolete("This method is obsolete. Please use RetrieveComponentWorkflowTemplates() going forward. This method will be removed in a future release.")]
+
+      public static List<WorkflowTemplateModel> GetComponentWorkflowTemplates(this InspireClient client)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
+    return:
+      type: System.Collections.Generic.List{Vasont.Inspire.Models.Workflow.WorkflowTemplateModel}
+      description: Returns a list of <xref href="Vasont.Inspire.Models.Workflow.WorkflowTemplateModel" data-throw-if-not-resolved="false"></xref> objects.
+    content.vb: >-
+      <Obsolete("This method is obsolete. Please use RetrieveComponentWorkflowTemplates() going forward. This method will be removed in a future release.")>
+
+      <ExtensionAttribute>
+
+      Public Shared Function GetComponentWorkflowTemplates(client As InspireClient) As List(Of WorkflowTemplateModel)
+  overload: Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentWorkflowTemplates*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use RetrieveComponentWorkflowTemplates() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.RetrieveComponentWorkflowTemplates(Vasont.Inspire.SDK.InspireClient)
+  commentId: M:Vasont.Inspire.SDK.Components.ComponentExtensions.RetrieveComponentWorkflowTemplates(Vasont.Inspire.SDK.InspireClient)
+  id: RetrieveComponentWorkflowTemplates(Vasont.Inspire.SDK.InspireClient)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Components.ComponentExtensions
+  langs:
+  - csharp
+  - vb
+  name: RetrieveComponentWorkflowTemplates(InspireClient)
+  nameWithType: ComponentExtensions.RetrieveComponentWorkflowTemplates(InspireClient)
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.RetrieveComponentWorkflowTemplates(Vasont.Inspire.SDK.InspireClient)
+  type: Method
+  source:
+    remote:
+      path: src/Components/ComponentExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: RetrieveComponentWorkflowTemplates
+    path: Components/ComponentExtensions.cs
+    startLine: 69
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Components
+  summary: "\nThis method is used to retrieve the component workflow templates.\n"
+  example: []
+  syntax:
+    content: public static List<WorkflowTemplateModel> RetrieveComponentWorkflowTemplates(this InspireClient client)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
@@ -175,8 +313,8 @@ items:
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Function GetComponentWorkflowTemplates(client As InspireClient) As List(Of WorkflowTemplateModel)
-  overload: Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentWorkflowTemplates*
+      Public Shared Function RetrieveComponentWorkflowTemplates(client As InspireClient) As List(Of WorkflowTemplateModel)
+  overload: Vasont.Inspire.SDK.Components.ComponentExtensions.RetrieveComponentWorkflowTemplates*
   modifiers.csharp:
   - public
   - static
@@ -202,14 +340,17 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetComponentWorkflowTemplate
     path: Components/ComponentExtensions.cs
-    startLine: 59
+    startLine: 81
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Components
   summary: "\nThis method is used to retrieve a specific component&apos;s workflow templates.\n"
   example: []
   syntax:
-    content: public static WorkflowModel GetComponentWorkflowTemplate(this InspireClient client, long componentId)
+    content: >-
+      [Obsolete("This method is obsolete. Please use FindComponentWorkflowTemplate() going forward. This method will be removed in a future release.")]
+
+      public static WorkflowModel GetComponentWorkflowTemplate(this InspireClient client, long componentId)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
@@ -219,12 +360,68 @@ items:
       description: Contains the unique identity of the component.
     return:
       type: Vasont.Inspire.Models.Workflow.WorkflowModel
-      description: Returns a list of <xref href="Vasont.Inspire.Models.Workflow.WorkflowTemplateModel" data-throw-if-not-resolved="false"></xref> objects.
+      description: Returns a list of <xref href="Vasont.Inspire.Models.Workflow.WorkflowModel" data-throw-if-not-resolved="false"></xref> objects.
     content.vb: >-
+      <Obsolete("This method is obsolete. Please use FindComponentWorkflowTemplate() going forward. This method will be removed in a future release.")>
+
       <ExtensionAttribute>
 
       Public Shared Function GetComponentWorkflowTemplate(client As InspireClient, componentId As Long) As WorkflowModel
   overload: Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentWorkflowTemplate*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use FindComponentWorkflowTemplate() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentWorkflowTemplate(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  commentId: M:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentWorkflowTemplate(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  id: FindComponentWorkflowTemplate(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Components.ComponentExtensions
+  langs:
+  - csharp
+  - vb
+  name: FindComponentWorkflowTemplate(InspireClient, Int64)
+  nameWithType: ComponentExtensions.FindComponentWorkflowTemplate(InspireClient, Int64)
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentWorkflowTemplate(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  type: Method
+  source:
+    remote:
+      path: src/Components/ComponentExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: FindComponentWorkflowTemplate
+    path: Components/ComponentExtensions.cs
+    startLine: 93
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Components
+  summary: "\nThis method is used to retrieve a specific component&apos;s workflow templates.\n"
+  example: []
+  syntax:
+    content: public static WorkflowModel FindComponentWorkflowTemplate(this InspireClient client, long componentId)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
+    - id: componentId
+      type: System.Int64
+      description: Contains the unique identity of the component.
+    return:
+      type: Vasont.Inspire.Models.Workflow.WorkflowModel
+      description: Returns a list of <xref href="Vasont.Inspire.Models.Workflow.WorkflowModel" data-throw-if-not-resolved="false"></xref> objects.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function FindComponentWorkflowTemplate(client As InspireClient, componentId As Long) As WorkflowModel
+  overload: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentWorkflowTemplate*
   modifiers.csharp:
   - public
   - static
@@ -250,14 +447,17 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetComponentTemplates
     path: Components/ComponentExtensions.cs
-    startLine: 71
+    startLine: 105
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Components
   summary: "\nThis method is used to retrieve the component templates based on the supplied document types.\n"
   example: []
   syntax:
-    content: public static List<MinimalComponentModel> GetComponentTemplates(this InspireClient client, string documentTypes = "")
+    content: >-
+      [Obsolete("This method is obsolete. Please use FindComponentTemplates() going forward. This method will be removed in a future release.")]
+
+      public static List<MinimalComponentModel> GetComponentTemplates(this InspireClient client, string documentTypes = "")
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
@@ -267,12 +467,68 @@ items:
       description: Contains a comma delimited list of document types that will be used to filter the results.
     return:
       type: System.Collections.Generic.List{Vasont.Inspire.Models.Components.MinimalComponentModel}
-      description: Returns the <xref href="Vasont.Inspire.Models.Components.MinimalComponentModel" data-throw-if-not-resolved="false"></xref> object.
+      description: Returns the a list of <xref href="Vasont.Inspire.Models.Components.MinimalComponentModel" data-throw-if-not-resolved="false"></xref> objects.
     content.vb: >-
+      <Obsolete("This method is obsolete. Please use FindComponentTemplates() going forward. This method will be removed in a future release.")>
+
       <ExtensionAttribute>
 
       Public Shared Function GetComponentTemplates(client As InspireClient, documentTypes As String = "") As List(Of MinimalComponentModel)
   overload: Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentTemplates*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use FindComponentTemplates() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentTemplates(Vasont.Inspire.SDK.InspireClient,System.String)
+  commentId: M:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentTemplates(Vasont.Inspire.SDK.InspireClient,System.String)
+  id: FindComponentTemplates(Vasont.Inspire.SDK.InspireClient,System.String)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Components.ComponentExtensions
+  langs:
+  - csharp
+  - vb
+  name: FindComponentTemplates(InspireClient, String)
+  nameWithType: ComponentExtensions.FindComponentTemplates(InspireClient, String)
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentTemplates(Vasont.Inspire.SDK.InspireClient, System.String)
+  type: Method
+  source:
+    remote:
+      path: src/Components/ComponentExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: FindComponentTemplates
+    path: Components/ComponentExtensions.cs
+    startLine: 117
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Components
+  summary: "\nThis method is used to retrieve the component templates based on the supplied document types.\n"
+  example: []
+  syntax:
+    content: public static List<MinimalComponentModel> FindComponentTemplates(this InspireClient client, string documentTypes = "")
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
+    - id: documentTypes
+      type: System.String
+      description: Contains a comma delimited list of document types that will be used to filter the results.
+    return:
+      type: System.Collections.Generic.List{Vasont.Inspire.Models.Components.MinimalComponentModel}
+      description: Returns the a list of <xref href="Vasont.Inspire.Models.Components.MinimalComponentModel" data-throw-if-not-resolved="false"></xref> objects.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function FindComponentTemplates(client As InspireClient, documentTypes As String = "") As List(Of MinimalComponentModel)
+  overload: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentTemplates*
   modifiers.csharp:
   - public
   - static
@@ -298,14 +554,73 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetComponents
     path: Components/ComponentExtensions.cs
-    startLine: 83
+    startLine: 129
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Components
-  summary: "\nThis method is used to retrieve a batch of requested components.\n"
+  summary: "\nThis method is used to retrieve a specified batch of requested components.\n"
   example: []
   syntax:
-    content: public static BatchComponentsResultModel GetComponents(this InspireClient client, BatchComponentsRequestModel componentIds)
+    content: >-
+      [Obsolete("This method is obsolete. Please use FindComponents() going forward. This method will be removed in a future release.")]
+
+      public static BatchComponentsResultModel GetComponents(this InspireClient client, BatchComponentsRequestModel componentIds)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
+    - id: componentIds
+      type: Vasont.Inspire.Models.Components.BatchComponentsRequestModel
+      description: The list of component identifiers.
+    return:
+      type: Vasont.Inspire.Models.Components.BatchComponentsResultModel
+      description: Returns a <xref href="Vasont.Inspire.Models.Components.BatchComponentsResultModel" data-throw-if-not-resolved="false"></xref> object containing a list of requested components.
+    content.vb: >-
+      <Obsolete("This method is obsolete. Please use FindComponents() going forward. This method will be removed in a future release.")>
+
+      <ExtensionAttribute>
+
+      Public Shared Function GetComponents(client As InspireClient, componentIds As BatchComponentsRequestModel) As BatchComponentsResultModel
+  overload: Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponents*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use FindComponents() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponents(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.BatchComponentsRequestModel)
+  commentId: M:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponents(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.BatchComponentsRequestModel)
+  id: FindComponents(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.BatchComponentsRequestModel)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Components.ComponentExtensions
+  langs:
+  - csharp
+  - vb
+  name: FindComponents(InspireClient, BatchComponentsRequestModel)
+  nameWithType: ComponentExtensions.FindComponents(InspireClient, BatchComponentsRequestModel)
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponents(Vasont.Inspire.SDK.InspireClient, Vasont.Inspire.Models.Components.BatchComponentsRequestModel)
+  type: Method
+  source:
+    remote:
+      path: src/Components/ComponentExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: FindComponents
+    path: Components/ComponentExtensions.cs
+    startLine: 141
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Components
+  summary: "\nThis method is used to retrieve a specified batch of requested components.\n"
+  example: []
+  syntax:
+    content: public static BatchComponentsResultModel FindComponents(this InspireClient client, BatchComponentsRequestModel componentIds)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
@@ -319,8 +634,8 @@ items:
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Function GetComponents(client As InspireClient, componentIds As BatchComponentsRequestModel) As BatchComponentsResultModel
-  overload: Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponents*
+      Public Shared Function FindComponents(client As InspireClient, componentIds As BatchComponentsRequestModel) As BatchComponentsResultModel
+  overload: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponents*
   modifiers.csharp:
   - public
   - static
@@ -346,14 +661,73 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetComponent
     path: Components/ComponentExtensions.cs
-    startLine: 95
+    startLine: 153
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Components
   summary: "\nThis method is used to retrieve minimal detail about a specific component.\n"
   example: []
   syntax:
-    content: public static MinimalComponentModel GetComponent(this InspireClient client, long componentId)
+    content: >-
+      [Obsolete("This method is obsolete. Please use FindComponent() going forward. This method will be removed in a future release.")]
+
+      public static MinimalComponentModel GetComponent(this InspireClient client, long componentId)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
+    - id: componentId
+      type: System.Int64
+      description: The component identity.
+    return:
+      type: Vasont.Inspire.Models.Components.MinimalComponentModel
+      description: Returns a list of <xref href="Vasont.Inspire.Models.Components.MinimalComponentModel" data-throw-if-not-resolved="false"></xref> objects.
+    content.vb: >-
+      <Obsolete("This method is obsolete. Please use FindComponent() going forward. This method will be removed in a future release.")>
+
+      <ExtensionAttribute>
+
+      Public Shared Function GetComponent(client As InspireClient, componentId As Long) As MinimalComponentModel
+  overload: Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponent*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use FindComponent() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponent(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  commentId: M:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponent(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  id: FindComponent(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Components.ComponentExtensions
+  langs:
+  - csharp
+  - vb
+  name: FindComponent(InspireClient, Int64)
+  nameWithType: ComponentExtensions.FindComponent(InspireClient, Int64)
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponent(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  type: Method
+  source:
+    remote:
+      path: src/Components/ComponentExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: FindComponent
+    path: Components/ComponentExtensions.cs
+    startLine: 165
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Components
+  summary: "\nThis method is used to retrieve minimal detail about a specific component.\n"
+  example: []
+  syntax:
+    content: public static MinimalComponentModel FindComponent(this InspireClient client, long componentId)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
@@ -367,8 +741,8 @@ items:
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Function GetComponent(client As InspireClient, componentId As Long) As MinimalComponentModel
-  overload: Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponent*
+      Public Shared Function FindComponent(client As InspireClient, componentId As Long) As MinimalComponentModel
+  overload: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponent*
   modifiers.csharp:
   - public
   - static
@@ -394,29 +768,88 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetComponentDetail
     path: Components/ComponentExtensions.cs
-    startLine: 107
+    startLine: 177
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Components
   summary: "\nThis method is used to retrieve the detail of the specific component.\n"
   example: []
   syntax:
-    content: public static DetailedComponentModel GetComponentDetail(this InspireClient client, long componentId)
+    content: >-
+      [Obsolete("This method is obsolete. Please use FindComponentDetail() going forward. This method will be removed in a future release.")]
+
+      public static DetailedComponentModel GetComponentDetail(this InspireClient client, long componentId)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
-      description: The client.
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
     - id: componentId
       type: System.Int64
       description: The component identifier.
     return:
       type: Vasont.Inspire.Models.Components.DetailedComponentModel
-      description: Returns the detailed component model.
+      description: Returns the <xref href="Vasont.Inspire.Models.Components.DetailedComponentModel" data-throw-if-not-resolved="false"></xref> object.
     content.vb: >-
+      <Obsolete("This method is obsolete. Please use FindComponentDetail() going forward. This method will be removed in a future release.")>
+
       <ExtensionAttribute>
 
       Public Shared Function GetComponentDetail(client As InspireClient, componentId As Long) As DetailedComponentModel
   overload: Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentDetail*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use FindComponentDetail() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentDetail(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  commentId: M:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentDetail(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  id: FindComponentDetail(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Components.ComponentExtensions
+  langs:
+  - csharp
+  - vb
+  name: FindComponentDetail(InspireClient, Int64)
+  nameWithType: ComponentExtensions.FindComponentDetail(InspireClient, Int64)
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentDetail(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  type: Method
+  source:
+    remote:
+      path: src/Components/ComponentExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: FindComponentDetail
+    path: Components/ComponentExtensions.cs
+    startLine: 189
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Components
+  summary: "\nThis method is used to retrieve the detail of the specific component.\n"
+  example: []
+  syntax:
+    content: public static DetailedComponentModel FindComponentDetail(this InspireClient client, long componentId)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
+    - id: componentId
+      type: System.Int64
+      description: The component identifier.
+    return:
+      type: Vasont.Inspire.Models.Components.DetailedComponentModel
+      description: Returns the <xref href="Vasont.Inspire.Models.Components.DetailedComponentModel" data-throw-if-not-resolved="false"></xref> object.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function FindComponentDetail(client As InspireClient, componentId As Long) As DetailedComponentModel
+  overload: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentDetail*
   modifiers.csharp:
   - public
   - static
@@ -442,14 +875,73 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetComponentContent
     path: Components/ComponentExtensions.cs
-    startLine: 119
+    startLine: 201
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Components
   summary: "\nThis method is used to retrieve the content from a specific component.\n"
   example: []
   syntax:
-    content: public static byte[] GetComponentContent(this InspireClient client, long componentId)
+    content: >-
+      [Obsolete("This method is obsolete. Please use FindComponentContent() going forward. This method will be removed in a future release.")]
+
+      public static byte[] GetComponentContent(this InspireClient client, long componentId)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
+    - id: componentId
+      type: System.Int64
+      description: The component identity.
+    return:
+      type: System.Byte[]
+      description: Returns an array of bytes that represent the content of the component.
+    content.vb: >-
+      <Obsolete("This method is obsolete. Please use FindComponentContent() going forward. This method will be removed in a future release.")>
+
+      <ExtensionAttribute>
+
+      Public Shared Function GetComponentContent(client As InspireClient, componentId As Long) As Byte()
+  overload: Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentContent*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use FindComponentContent() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentContent(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  commentId: M:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentContent(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  id: FindComponentContent(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Components.ComponentExtensions
+  langs:
+  - csharp
+  - vb
+  name: FindComponentContent(InspireClient, Int64)
+  nameWithType: ComponentExtensions.FindComponentContent(InspireClient, Int64)
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentContent(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  type: Method
+  source:
+    remote:
+      path: src/Components/ComponentExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: FindComponentContent
+    path: Components/ComponentExtensions.cs
+    startLine: 213
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Components
+  summary: "\nThis method is used to retrieve the content from a specific component.\n"
+  example: []
+  syntax:
+    content: public static byte[] FindComponentContent(this InspireClient client, long componentId)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
@@ -463,8 +955,8 @@ items:
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Function GetComponentContent(client As InspireClient, componentId As Long) As Byte()
-  overload: Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentContent*
+      Public Shared Function FindComponentContent(client As InspireClient, componentId As Long) As Byte()
+  overload: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentContent*
   modifiers.csharp:
   - public
   - static
@@ -490,14 +982,73 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetComponentPermissions
     path: Components/ComponentExtensions.cs
-    startLine: 131
+    startLine: 225
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Components
   summary: "\nThis method is used to retrieve the permission details for a specific component.\n"
   example: []
   syntax:
-    content: public static PermissionUpdateModel GetComponentPermissions(this InspireClient client, long componentId)
+    content: >-
+      [Obsolete("This method is obsolete. Please use FindComponentPermissions() going forward. This method will be removed in a future release.")]
+
+      public static PermissionUpdateModel GetComponentPermissions(this InspireClient client, long componentId)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
+    - id: componentId
+      type: System.Int64
+      description: The component identity.
+    return:
+      type: Vasont.Inspire.Models.Components.PermissionUpdateModel
+      description: Returns the <xref href="Vasont.Inspire.Models.Components.PermissionUpdateModel" data-throw-if-not-resolved="false"></xref> object.
+    content.vb: >-
+      <Obsolete("This method is obsolete. Please use FindComponentPermissions() going forward. This method will be removed in a future release.")>
+
+      <ExtensionAttribute>
+
+      Public Shared Function GetComponentPermissions(client As InspireClient, componentId As Long) As PermissionUpdateModel
+  overload: Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentPermissions*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use FindComponentPermissions() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentPermissions(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  commentId: M:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentPermissions(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  id: FindComponentPermissions(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Components.ComponentExtensions
+  langs:
+  - csharp
+  - vb
+  name: FindComponentPermissions(InspireClient, Int64)
+  nameWithType: ComponentExtensions.FindComponentPermissions(InspireClient, Int64)
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentPermissions(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  type: Method
+  source:
+    remote:
+      path: src/Components/ComponentExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: FindComponentPermissions
+    path: Components/ComponentExtensions.cs
+    startLine: 237
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Components
+  summary: "\nThis method is used to retrieve the permission details for a specific component.\n"
+  example: []
+  syntax:
+    content: public static PermissionUpdateModel FindComponentPermissions(this InspireClient client, long componentId)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
@@ -511,8 +1062,8 @@ items:
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Function GetComponentPermissions(client As InspireClient, componentId As Long) As PermissionUpdateModel
-  overload: Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentPermissions*
+      Public Shared Function FindComponentPermissions(client As InspireClient, componentId As Long) As PermissionUpdateModel
+  overload: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentPermissions*
   modifiers.csharp:
   - public
   - static
@@ -538,14 +1089,79 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetComponentElements
     path: Components/ComponentExtensions.cs
-    startLine: 144
+    startLine: 250
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Components
   summary: "\nThis method is used to retrieve the specified components elements.\n"
   example: []
   syntax:
-    content: public static List<XmlComponentElementModel> GetComponentElements(this InspireClient client, long componentId, List<string> allowedElements)
+    content: >-
+      [Obsolete("This method is obsolete. Please use FindComponentElements() going forward. This method will be removed in a future release.")]
+
+      public static List<XmlComponentElementModel> GetComponentElements(this InspireClient client, long componentId, List<string> allowedElements)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
+    - id: componentId
+      type: System.Int64
+      description: The list of component identifier.
+    - id: allowedElements
+      type: System.Collections.Generic.List{System.String}
+      description: Contains an optional list of allowed element names.
+    return:
+      type: System.Collections.Generic.List{Vasont.Inspire.Models.Components.XmlComponentElementModel}
+      description: Returns a <xref href="Vasont.Inspire.Models.Components.BatchComponentsResultModel" data-throw-if-not-resolved="false"></xref> object containing a list of requested components.
+    content.vb: >-
+      <Obsolete("This method is obsolete. Please use FindComponentElements() going forward. This method will be removed in a future release.")>
+
+      <ExtensionAttribute>
+
+      Public Shared Function GetComponentElements(client As InspireClient, componentId As Long, allowedElements As List(Of String)) As List(Of XmlComponentElementModel)
+  overload: Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentElements*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use FindComponentElements() going forward. This method will be removed in a future release.
+  nameWithType.vb: ComponentExtensions.GetComponentElements(InspireClient, Int64, List(Of String))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentElements(Vasont.Inspire.SDK.InspireClient, System.Int64, System.Collections.Generic.List(Of System.String))
+  name.vb: GetComponentElements(InspireClient, Int64, List(Of String))
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentElements(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Collections.Generic.List{System.String})
+  commentId: M:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentElements(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Collections.Generic.List{System.String})
+  id: FindComponentElements(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Collections.Generic.List{System.String})
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Components.ComponentExtensions
+  langs:
+  - csharp
+  - vb
+  name: FindComponentElements(InspireClient, Int64, List<String>)
+  nameWithType: ComponentExtensions.FindComponentElements(InspireClient, Int64, List<String>)
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentElements(Vasont.Inspire.SDK.InspireClient, System.Int64, System.Collections.Generic.List<System.String>)
+  type: Method
+  source:
+    remote:
+      path: src/Components/ComponentExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: FindComponentElements
+    path: Components/ComponentExtensions.cs
+    startLine: 263
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Components
+  summary: "\nThis method is used to retrieve the specified components elements.\n"
+  example: []
+  syntax:
+    content: public static List<XmlComponentElementModel> FindComponentElements(this InspireClient client, long componentId, List<string> allowedElements)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
@@ -562,17 +1178,17 @@ items:
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Function GetComponentElements(client As InspireClient, componentId As Long, allowedElements As List(Of String)) As List(Of XmlComponentElementModel)
-  overload: Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentElements*
-  nameWithType.vb: ComponentExtensions.GetComponentElements(InspireClient, Int64, List(Of String))
+      Public Shared Function FindComponentElements(client As InspireClient, componentId As Long, allowedElements As List(Of String)) As List(Of XmlComponentElementModel)
+  overload: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentElements*
+  nameWithType.vb: ComponentExtensions.FindComponentElements(InspireClient, Int64, List(Of String))
   modifiers.csharp:
   - public
   - static
   modifiers.vb:
   - Public
   - Shared
-  fullName.vb: Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentElements(Vasont.Inspire.SDK.InspireClient, System.Int64, System.Collections.Generic.List(Of System.String))
-  name.vb: GetComponentElements(InspireClient, Int64, List(Of String))
+  fullName.vb: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentElements(Vasont.Inspire.SDK.InspireClient, System.Int64, System.Collections.Generic.List(Of System.String))
+  name.vb: FindComponentElements(InspireClient, Int64, List(Of String))
 - uid: Vasont.Inspire.SDK.Components.ComponentExtensions.ApproveComponents(Vasont.Inspire.SDK.InspireClient,System.Collections.Generic.List{System.Int64})
   commentId: M:Vasont.Inspire.SDK.Components.ComponentExtensions.ApproveComponents(Vasont.Inspire.SDK.InspireClient,System.Collections.Generic.List{System.Int64})
   id: ApproveComponents(Vasont.Inspire.SDK.InspireClient,System.Collections.Generic.List{System.Int64})
@@ -592,7 +1208,7 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: ApproveComponents
     path: Components/ComponentExtensions.cs
-    startLine: 156
+    startLine: 275
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Components
@@ -609,7 +1225,7 @@ items:
       description: Contains the component identities.
     return:
       type: System.Boolean
-      description: Returns a value indicating success.
+      description: Returns a boolean value indicating whether the action succeeded or not.
     content.vb: >-
       <ExtensionAttribute>
 
@@ -643,14 +1259,76 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetComponentConfiguration
     path: Components/ComponentExtensions.cs
-    startLine: 174
+    startLine: 293
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Components
   summary: "\nThis method is used to retrieve a component configuration for a specified component\n"
   example: []
   syntax:
-    content: public static ComponentConfigurationModel GetComponentConfiguration(this InspireClient client, long componentId, bool forceReload = false)
+    content: >-
+      [Obsolete("This method is obsolete. Please use FindComponentConfiguration() going forward. This method will be removed in a future release.")]
+
+      public static ComponentConfigurationModel GetComponentConfiguration(this InspireClient client, long componentId, bool forceReload = false)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
+    - id: componentId
+      type: System.Int64
+      description: Contains the component identity.
+    - id: forceReload
+      type: System.Boolean
+      description: Contains a value indicating whether the configuration cache is bypassed and reloaded.
+    return:
+      type: Vasont.Inspire.Models.Components.Schema.ComponentConfigurationModel
+      description: Returns the <xref href="Vasont.Inspire.Models.Components.Schema.ComponentConfigurationModel" data-throw-if-not-resolved="false"></xref> object.
+    content.vb: >-
+      <Obsolete("This method is obsolete. Please use FindComponentConfiguration() going forward. This method will be removed in a future release.")>
+
+      <ExtensionAttribute>
+
+      Public Shared Function GetComponentConfiguration(client As InspireClient, componentId As Long, forceReload As Boolean = False) As ComponentConfigurationModel
+  overload: Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentConfiguration*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use FindComponentConfiguration() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentConfiguration(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Boolean)
+  commentId: M:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentConfiguration(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Boolean)
+  id: FindComponentConfiguration(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Boolean)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Components.ComponentExtensions
+  langs:
+  - csharp
+  - vb
+  name: FindComponentConfiguration(InspireClient, Int64, Boolean)
+  nameWithType: ComponentExtensions.FindComponentConfiguration(InspireClient, Int64, Boolean)
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentConfiguration(Vasont.Inspire.SDK.InspireClient, System.Int64, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: src/Components/ComponentExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: FindComponentConfiguration
+    path: Components/ComponentExtensions.cs
+    startLine: 306
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Components
+  summary: "\nThis method is used to retrieve a component configuration for a specified component\n"
+  example: []
+  syntax:
+    content: public static ComponentConfigurationModel FindComponentConfiguration(this InspireClient client, long componentId, bool forceReload = false)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
@@ -667,8 +1345,8 @@ items:
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Function GetComponentConfiguration(client As InspireClient, componentId As Long, forceReload As Boolean = False) As ComponentConfigurationModel
-  overload: Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentConfiguration*
+      Public Shared Function FindComponentConfiguration(client As InspireClient, componentId As Long, forceReload As Boolean = False) As ComponentConfigurationModel
+  overload: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentConfiguration*
   modifiers.csharp:
   - public
   - static
@@ -694,7 +1372,7 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: CreateComponent
     path: Components/ComponentExtensions.cs
-    startLine: 186
+    startLine: 318
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Components
@@ -711,7 +1389,7 @@ items:
       description: Contains the <xref href="Vasont.Inspire.Models.Components.CreateComponentFromTemplateModel" data-throw-if-not-resolved="false"></xref> input.
     return:
       type: Vasont.Inspire.Models.Components.MinimalComponentModel
-      description: Returns a <xref href="Vasont.Inspire.Models.Components.MinimalComponentModel" data-throw-if-not-resolved="false"></xref> object if found.
+      description: Returns the new <xref href="Vasont.Inspire.Models.Components.MinimalComponentModel" data-throw-if-not-resolved="false"></xref> object that was created.
     content.vb: >-
       <ExtensionAttribute>
 
@@ -742,7 +1420,7 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: CreateComponentAs
     path: Components/ComponentExtensions.cs
-    startLine: 203
+    startLine: 335
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Components
@@ -790,7 +1468,7 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: CreateComponentBranch
     path: Components/ComponentExtensions.cs
-    startLine: 220
+    startLine: 352
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Components
@@ -838,7 +1516,7 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: CreateComponentsExportRequest
     path: Components/ComponentExtensions.cs
-    startLine: 238
+    startLine: 370
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Components
@@ -858,7 +1536,7 @@ items:
       description: Contains the <xref href="Vasont.Inspire.Models.Transfers.ExportRequestModel" data-throw-if-not-resolved="false"></xref> input.
     return:
       type: Vasont.Inspire.Models.Worker.WorkerStateModel{Vasont.Inspire.Models.Transfers.MinimalExportStateModel}
-      description: Returns a <xref href="Vasont.Inspire.Models.Transfers.ExportRequestModel" data-throw-if-not-resolved="false"></xref> object if found.
+      description: Returns the new <xref href="Vasont.Inspire.Models.Transfers.MinimalExportStateModel" data-throw-if-not-resolved="false"></xref> object that was created.
     content.vb: >-
       <ExtensionAttribute>
 
@@ -889,7 +1567,7 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RenameComponent
     path: Components/ComponentExtensions.cs
-    startLine: 256
+    startLine: 388
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Components
@@ -940,7 +1618,7 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: UpdateComponentPermissions
     path: Components/ComponentExtensions.cs
-    startLine: 273
+    startLine: 405
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Components
@@ -988,7 +1666,7 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: UpdateComponentPermissions
     path: Components/ComponentExtensions.cs
-    startLine: 291
+    startLine: 423
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Components
@@ -1039,7 +1717,7 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: SetComponentPermissions
     path: Components/ComponentExtensions.cs
-    startLine: 308
+    startLine: 440
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Components
@@ -1098,7 +1776,7 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: MoveComponentsToFolder
     path: Components/ComponentExtensions.cs
-    startLine: 321
+    startLine: 453
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Components
@@ -1152,7 +1830,7 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: LockComponent
     path: Components/ComponentExtensions.cs
-    startLine: 340
+    startLine: 472
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Components
@@ -1200,11 +1878,11 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: LockComponents
     path: Components/ComponentExtensions.cs
-    startLine: 360
+    startLine: 492
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Components
-  summary: "\nLocks the components asynchronous.\n"
+  summary: "\nThis method is used to Lock the specified components.\n"
   example: []
   syntax:
     content: public static List<BatchComponentLockModel> LockComponents(this InspireClient client, List<long> componentIds)
@@ -1226,7 +1904,7 @@ items:
   exceptions:
   - type: System.ArgumentNullException
     commentId: T:System.ArgumentNullException
-    description: componentIds is required
+    description: The list of component identifiers is required
   nameWithType.vb: ComponentExtensions.LockComponents(InspireClient, List(Of Int64))
   modifiers.csharp:
   - public
@@ -1255,11 +1933,11 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: UnlockComponents
     path: Components/ComponentExtensions.cs
-    startLine: 380
+    startLine: 512
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Components
-  summary: "\nUnlocks the components.\n"
+  summary: "\nThis method is used to Unlock the specified components.\n"
   example: []
   syntax:
     content: public static List<UnlockResultModel> UnlockComponents(this InspireClient client, List<long> componentIds, bool confirmPendingEdits = false)
@@ -1284,7 +1962,7 @@ items:
   exceptions:
   - type: System.ArgumentNullException
     commentId: T:System.ArgumentNullException
-    description: componentIds is required
+    description: The list of component identifiers is required
   nameWithType.vb: ComponentExtensions.UnlockComponents(InspireClient, List(Of Int64), Boolean)
   modifiers.csharp:
   - public
@@ -1313,11 +1991,11 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: UnlockComponent
     path: Components/ComponentExtensions.cs
-    startLine: 398
+    startLine: 530
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Components
-  summary: "\nThis method is used to unlock a component.\n"
+  summary: "\nThis method is used to unlock the specified component.\n"
   example: []
   syntax:
     content: public static UnlockResultModel UnlockComponent(this InspireClient client, long componenttId, bool confirmPendingEdits)
@@ -1364,7 +2042,7 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: DeleteComponent
     path: Components/ComponentExtensions.cs
-    startLine: 415
+    startLine: 547
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Components
@@ -1412,11 +2090,11 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: DeleteComponents
     path: Components/ComponentExtensions.cs
-    startLine: 428
+    startLine: 560
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Components
-  summary: "\nDeletes the specified components.\n"
+  summary: "\nThis method is used to delete the specified components.\n"
   example: []
   syntax:
     content: public static bool DeleteComponents(this InspireClient client, List<long> componentIds)
@@ -1438,7 +2116,7 @@ items:
   exceptions:
   - type: System.ArgumentNullException
     commentId: T:System.ArgumentNullException
-    description: componentIds is required
+    description: The list of component identifiers is required
   nameWithType.vb: ComponentExtensions.DeleteComponents(InspireClient, List(Of Int64))
   modifiers.csharp:
   - public
@@ -1467,11 +2145,11 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: ImportComponents
     path: Components/ComponentExtensions.cs
-    startLine: 450
+    startLine: 580
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Components
-  summary: "\nThis REST method is used to import components from one or more files.\n"
+  summary: "\nThis method is used to import components from one or more files.\n"
   example: []
   syntax:
     content: public static MinimalWorkerStateModel<MinimalImportStateModel> ImportComponents(this InspireClient client, ImportRequestModel importModel, List<string> filePaths)
@@ -1487,7 +2165,7 @@ items:
       description: Contains a list of local file paths that will be submitted for synchronization import.
     return:
       type: Vasont.Inspire.Models.Worker.MinimalWorkerStateModel{Vasont.Inspire.Models.Transfers.MinimalImportStateModel}
-      description: "\nReturns a <xref href=\"Vasont.Inspire.Models.Worker.WorkerStateModel\" data-throw-if-not-resolved=\"false\"></xref> of type <xref href=\"Vasont.Inspire.Models.Transfers.MinimalImportStateModel\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+      description: Returns a <xref href="Vasont.Inspire.Models.Worker.MinimalWorkerStateModel" data-throw-if-not-resolved="false"></xref> of type <xref href="Vasont.Inspire.Models.Transfers.MinimalImportStateModel" data-throw-if-not-resolved="false"></xref>.
     content.vb: >-
       <ExtensionAttribute>
 
@@ -1496,7 +2174,7 @@ items:
   exceptions:
   - type: System.ArgumentNullException
     commentId: T:System.ArgumentNullException
-    description: Thrown if the import model is null.
+    description: Thrown if the <xref href="Vasont.Inspire.Models.Transfers.ImportRequestModel" data-throw-if-not-resolved="false"></xref> is null.
   nameWithType.vb: ComponentExtensions.ImportComponents(InspireClient, ImportRequestModel, List(Of String))
   modifiers.csharp:
   - public
@@ -1525,14 +2203,17 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetImportState
     path: Components/ComponentExtensions.cs
-    startLine: 477
+    startLine: 606
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Components
-  summary: "\nThis method is called to get the state of an import worker process.\n"
+  summary: "\nThis method is used to get the state of an import worker process.\n"
   example: []
   syntax:
-    content: public static MinimalWorkerStateModel<MinimalImportStateModel> GetImportState(this InspireClient client, string workerKey)
+    content: >-
+      [Obsolete("This method is obsolete. Please use FindImportState() going forward. This method will be removed in a future release.")]
+
+      public static MinimalWorkerStateModel<MinimalImportStateModel> GetImportState(this InspireClient client, string workerKey)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
@@ -1542,12 +2223,68 @@ items:
       description: Contains the import worker key to find.
     return:
       type: Vasont.Inspire.Models.Worker.MinimalWorkerStateModel{Vasont.Inspire.Models.Transfers.MinimalImportStateModel}
-      description: Returns a <xref href="Vasont.Inspire.Models.Worker.WorkerStateModel" data-throw-if-not-resolved="false"></xref> of type <xref href="Vasont.Inspire.Models.Transfers.MinimalImportStateModel" data-throw-if-not-resolved="false"></xref>.
+      description: Returns a <xref href="Vasont.Inspire.Models.Worker.MinimalWorkerStateModel" data-throw-if-not-resolved="false"></xref> of type <xref href="Vasont.Inspire.Models.Transfers.MinimalImportStateModel" data-throw-if-not-resolved="false"></xref>.
     content.vb: >-
+      <Obsolete("This method is obsolete. Please use FindImportState() going forward. This method will be removed in a future release.")>
+
       <ExtensionAttribute>
 
       Public Shared Function GetImportState(client As InspireClient, workerKey As String) As MinimalWorkerStateModel(Of MinimalImportStateModel)
   overload: Vasont.Inspire.SDK.Components.ComponentExtensions.GetImportState*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use FindImportState() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindImportState(Vasont.Inspire.SDK.InspireClient,System.String)
+  commentId: M:Vasont.Inspire.SDK.Components.ComponentExtensions.FindImportState(Vasont.Inspire.SDK.InspireClient,System.String)
+  id: FindImportState(Vasont.Inspire.SDK.InspireClient,System.String)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Components.ComponentExtensions
+  langs:
+  - csharp
+  - vb
+  name: FindImportState(InspireClient, String)
+  nameWithType: ComponentExtensions.FindImportState(InspireClient, String)
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindImportState(Vasont.Inspire.SDK.InspireClient, System.String)
+  type: Method
+  source:
+    remote:
+      path: src/Components/ComponentExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: FindImportState
+    path: Components/ComponentExtensions.cs
+    startLine: 618
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Components
+  summary: "\nThis method is used to get the state of an import worker process.\n"
+  example: []
+  syntax:
+    content: public static MinimalWorkerStateModel<MinimalImportStateModel> FindImportState(this InspireClient client, string workerKey)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
+    - id: workerKey
+      type: System.String
+      description: Contains the import worker key to find.
+    return:
+      type: Vasont.Inspire.Models.Worker.MinimalWorkerStateModel{Vasont.Inspire.Models.Transfers.MinimalImportStateModel}
+      description: Returns a <xref href="Vasont.Inspire.Models.Worker.MinimalWorkerStateModel" data-throw-if-not-resolved="false"></xref> of type <xref href="Vasont.Inspire.Models.Transfers.MinimalImportStateModel" data-throw-if-not-resolved="false"></xref>.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function FindImportState(client As InspireClient, workerKey As String) As MinimalWorkerStateModel(Of MinimalImportStateModel)
+  overload: Vasont.Inspire.SDK.Components.ComponentExtensions.FindImportState*
   modifiers.csharp:
   - public
   - static
@@ -1573,14 +2310,17 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetImportState
     path: Components/ComponentExtensions.cs
-    startLine: 496
+    startLine: 637
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Components
-  summary: "\nThis method is called to get the state of an import worker process.\n"
+  summary: "\nThis method is used to get the state of an import worker process.\n"
   example: []
   syntax:
-    content: public static MinimalWorkerStateModel<MinimalImportStateModel> GetImportState(this InspireClient client, WorkerStateModel inputModel)
+    content: >-
+      [Obsolete("This method is obsolete. Please use FindImportState() going forward. This method will be removed in a future release.")]
+
+      public static MinimalWorkerStateModel<MinimalImportStateModel> GetImportState(this InspireClient client, WorkerStateModel inputModel)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
@@ -1590,12 +2330,68 @@ items:
       description: Contains the <xref href="Vasont.Inspire.Models.Worker.WorkerStateModel" data-throw-if-not-resolved="false"></xref> input.
     return:
       type: Vasont.Inspire.Models.Worker.MinimalWorkerStateModel{Vasont.Inspire.Models.Transfers.MinimalImportStateModel}
-      description: Returns a <xref href="Vasont.Inspire.Models.Worker.WorkerStateModel" data-throw-if-not-resolved="false"></xref> of type <xref href="Vasont.Inspire.Models.Transfers.MinimalImportStateModel" data-throw-if-not-resolved="false"></xref>.
+      description: Returns a <xref href="Vasont.Inspire.Models.Worker.MinimalWorkerStateModel" data-throw-if-not-resolved="false"></xref> of type <xref href="Vasont.Inspire.Models.Transfers.MinimalImportStateModel" data-throw-if-not-resolved="false"></xref>.
     content.vb: >-
+      <Obsolete("This method is obsolete. Please use FindImportState() going forward. This method will be removed in a future release.")>
+
       <ExtensionAttribute>
 
       Public Shared Function GetImportState(client As InspireClient, inputModel As WorkerStateModel) As MinimalWorkerStateModel(Of MinimalImportStateModel)
   overload: Vasont.Inspire.SDK.Components.ComponentExtensions.GetImportState*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use FindImportState() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindImportState(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Worker.WorkerStateModel)
+  commentId: M:Vasont.Inspire.SDK.Components.ComponentExtensions.FindImportState(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Worker.WorkerStateModel)
+  id: FindImportState(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Worker.WorkerStateModel)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Components.ComponentExtensions
+  langs:
+  - csharp
+  - vb
+  name: FindImportState(InspireClient, WorkerStateModel)
+  nameWithType: ComponentExtensions.FindImportState(InspireClient, WorkerStateModel)
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindImportState(Vasont.Inspire.SDK.InspireClient, Vasont.Inspire.Models.Worker.WorkerStateModel)
+  type: Method
+  source:
+    remote:
+      path: src/Components/ComponentExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: FindImportState
+    path: Components/ComponentExtensions.cs
+    startLine: 649
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Components
+  summary: "\nThis method is used to get the state of an import worker process.\n"
+  example: []
+  syntax:
+    content: public static MinimalWorkerStateModel<MinimalImportStateModel> FindImportState(this InspireClient client, WorkerStateModel inputModel)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
+    - id: inputModel
+      type: Vasont.Inspire.Models.Worker.WorkerStateModel
+      description: Contains the <xref href="Vasont.Inspire.Models.Worker.WorkerStateModel" data-throw-if-not-resolved="false"></xref> input.
+    return:
+      type: Vasont.Inspire.Models.Worker.MinimalWorkerStateModel{Vasont.Inspire.Models.Transfers.MinimalImportStateModel}
+      description: Returns a <xref href="Vasont.Inspire.Models.Worker.MinimalWorkerStateModel" data-throw-if-not-resolved="false"></xref> of type <xref href="Vasont.Inspire.Models.Transfers.MinimalImportStateModel" data-throw-if-not-resolved="false"></xref>.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function FindImportState(client As InspireClient, inputModel As WorkerStateModel) As MinimalWorkerStateModel(Of MinimalImportStateModel)
+  overload: Vasont.Inspire.SDK.Components.ComponentExtensions.FindImportState*
   modifiers.csharp:
   - public
   - static
@@ -1621,14 +2417,17 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetExportState
     path: Components/ComponentExtensions.cs
-    startLine: 515
+    startLine: 666
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Components
-  summary: "\nThis method is called to get the state of an export worker process.\n"
+  summary: "\nThis method is used to get the state of an export worker process.\n"
   example: []
   syntax:
-    content: public static MinimalWorkerStateModel<MinimalExportStateModel> GetExportState(this InspireClient client, string workerKey)
+    content: >-
+      [Obsolete("This method is obsolete. Please use FindExportState() going forward. This method will be removed in a future release.")]
+
+      public static MinimalWorkerStateModel<MinimalExportStateModel> GetExportState(this InspireClient client, string workerKey)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
@@ -1638,12 +2437,68 @@ items:
       description: Contains the export worker key to find.
     return:
       type: Vasont.Inspire.Models.Worker.MinimalWorkerStateModel{Vasont.Inspire.Models.Transfers.MinimalExportStateModel}
-      description: Returns a <xref href="Vasont.Inspire.Models.Worker.WorkerStateModel" data-throw-if-not-resolved="false"></xref> of type <xref href="Vasont.Inspire.Models.Transfers.MinimalExportStateModel" data-throw-if-not-resolved="false"></xref>.
+      description: Returns a <xref href="Vasont.Inspire.Models.Worker.MinimalWorkerStateModel" data-throw-if-not-resolved="false"></xref> of type <xref href="Vasont.Inspire.Models.Transfers.MinimalExportStateModel" data-throw-if-not-resolved="false"></xref>.
     content.vb: >-
+      <Obsolete("This method is obsolete. Please use FindExportState() going forward. This method will be removed in a future release.")>
+
       <ExtensionAttribute>
 
       Public Shared Function GetExportState(client As InspireClient, workerKey As String) As MinimalWorkerStateModel(Of MinimalExportStateModel)
   overload: Vasont.Inspire.SDK.Components.ComponentExtensions.GetExportState*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use FindExportState() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindExportState(Vasont.Inspire.SDK.InspireClient,System.String)
+  commentId: M:Vasont.Inspire.SDK.Components.ComponentExtensions.FindExportState(Vasont.Inspire.SDK.InspireClient,System.String)
+  id: FindExportState(Vasont.Inspire.SDK.InspireClient,System.String)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Components.ComponentExtensions
+  langs:
+  - csharp
+  - vb
+  name: FindExportState(InspireClient, String)
+  nameWithType: ComponentExtensions.FindExportState(InspireClient, String)
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindExportState(Vasont.Inspire.SDK.InspireClient, System.String)
+  type: Method
+  source:
+    remote:
+      path: src/Components/ComponentExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: FindExportState
+    path: Components/ComponentExtensions.cs
+    startLine: 678
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Components
+  summary: "\nThis method is used to get the state of an export worker process.\n"
+  example: []
+  syntax:
+    content: public static MinimalWorkerStateModel<MinimalExportStateModel> FindExportState(this InspireClient client, string workerKey)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
+    - id: workerKey
+      type: System.String
+      description: Contains the export worker key to find.
+    return:
+      type: Vasont.Inspire.Models.Worker.MinimalWorkerStateModel{Vasont.Inspire.Models.Transfers.MinimalExportStateModel}
+      description: Returns a <xref href="Vasont.Inspire.Models.Worker.MinimalWorkerStateModel" data-throw-if-not-resolved="false"></xref> of type <xref href="Vasont.Inspire.Models.Transfers.MinimalExportStateModel" data-throw-if-not-resolved="false"></xref>.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function FindExportState(client As InspireClient, workerKey As String) As MinimalWorkerStateModel(Of MinimalExportStateModel)
+  overload: Vasont.Inspire.SDK.Components.ComponentExtensions.FindExportState*
   modifiers.csharp:
   - public
   - static
@@ -1669,14 +2524,17 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetExportState
     path: Components/ComponentExtensions.cs
-    startLine: 534
+    startLine: 697
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Components
-  summary: "\nThis method is called to get the state of an export worker process.\n"
+  summary: "\nThis method is used to get the state of an export worker process.\n"
   example: []
   syntax:
-    content: public static MinimalWorkerStateModel<MinimalExportStateModel> GetExportState(this InspireClient client, WorkerStateModel inputModel)
+    content: >-
+      [Obsolete("This method is obsolete. Please use FindExportState() going forward. This method will be removed in a future release.")]
+
+      public static MinimalWorkerStateModel<MinimalExportStateModel> GetExportState(this InspireClient client, WorkerStateModel inputModel)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
@@ -1686,12 +2544,68 @@ items:
       description: Contains the <xref href="Vasont.Inspire.Models.Worker.WorkerStateModel" data-throw-if-not-resolved="false"></xref> input.
     return:
       type: Vasont.Inspire.Models.Worker.MinimalWorkerStateModel{Vasont.Inspire.Models.Transfers.MinimalExportStateModel}
-      description: Returns a <xref href="Vasont.Inspire.Models.Worker.WorkerStateModel" data-throw-if-not-resolved="false"></xref> of type <xref href="Vasont.Inspire.Models.Transfers.MinimalExportStateModel" data-throw-if-not-resolved="false"></xref>.
+      description: Returns a <xref href="Vasont.Inspire.Models.Worker.MinimalWorkerStateModel" data-throw-if-not-resolved="false"></xref> of type <xref href="Vasont.Inspire.Models.Transfers.MinimalExportStateModel" data-throw-if-not-resolved="false"></xref>.
     content.vb: >-
+      <Obsolete("This method is obsolete. Please use FindExportState() going forward. This method will be removed in a future release.")>
+
       <ExtensionAttribute>
 
       Public Shared Function GetExportState(client As InspireClient, inputModel As WorkerStateModel) As MinimalWorkerStateModel(Of MinimalExportStateModel)
   overload: Vasont.Inspire.SDK.Components.ComponentExtensions.GetExportState*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use FindExportState() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindExportState(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Worker.WorkerStateModel)
+  commentId: M:Vasont.Inspire.SDK.Components.ComponentExtensions.FindExportState(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Worker.WorkerStateModel)
+  id: FindExportState(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Worker.WorkerStateModel)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Components.ComponentExtensions
+  langs:
+  - csharp
+  - vb
+  name: FindExportState(InspireClient, WorkerStateModel)
+  nameWithType: ComponentExtensions.FindExportState(InspireClient, WorkerStateModel)
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindExportState(Vasont.Inspire.SDK.InspireClient, Vasont.Inspire.Models.Worker.WorkerStateModel)
+  type: Method
+  source:
+    remote:
+      path: src/Components/ComponentExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: FindExportState
+    path: Components/ComponentExtensions.cs
+    startLine: 709
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Components
+  summary: "\nThis method is used to get the state of an export worker process.\n"
+  example: []
+  syntax:
+    content: public static MinimalWorkerStateModel<MinimalExportStateModel> FindExportState(this InspireClient client, WorkerStateModel inputModel)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
+    - id: inputModel
+      type: Vasont.Inspire.Models.Worker.WorkerStateModel
+      description: Contains the <xref href="Vasont.Inspire.Models.Worker.WorkerStateModel" data-throw-if-not-resolved="false"></xref> input.
+    return:
+      type: Vasont.Inspire.Models.Worker.MinimalWorkerStateModel{Vasont.Inspire.Models.Transfers.MinimalExportStateModel}
+      description: Returns a <xref href="Vasont.Inspire.Models.Worker.MinimalWorkerStateModel" data-throw-if-not-resolved="false"></xref> of type <xref href="Vasont.Inspire.Models.Transfers.MinimalExportStateModel" data-throw-if-not-resolved="false"></xref>.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function FindExportState(client As InspireClient, inputModel As WorkerStateModel) As MinimalWorkerStateModel(Of MinimalExportStateModel)
+  overload: Vasont.Inspire.SDK.Components.ComponentExtensions.FindExportState*
   modifiers.csharp:
   - public
   - static
@@ -1717,18 +2631,18 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: UpdateComponentTags
     path: Components/ComponentExtensions.cs
-    startLine: 558
+    startLine: 731
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Components
-  summary: "\nPosts the component tags.\n"
+  summary: "\nThis method is used to update the specified component tags.\n"
   example: []
   syntax:
     content: public static ComponentTagModel UpdateComponentTags(this InspireClient client, long componentId, ComponentTagModel inputModel)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
-      description: The client.
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
     - id: componentId
       type: System.Int64
       description: The component identifier.
@@ -1768,11 +2682,11 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: PostComponentTags
     path: Components/ComponentExtensions.cs
-    startLine: 576
+    startLine: 749
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Components
-  summary: "\nPosts the component tags.\n"
+  summary: "\nThis method is used to update the specified component tags.\n"
   example: []
   syntax:
     content: >-
@@ -1782,7 +2696,7 @@ items:
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
-      description: The client.
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
     - id: componentId
       type: System.Int64
       description: The component identifier.
@@ -1830,7 +2744,7 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RepairComponentRelationship
     path: Components/ComponentExtensions.cs
-    startLine: 593
+    startLine: 766
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Components
@@ -1844,10 +2758,10 @@ items:
       description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
     - id: inputModel
       type: Vasont.Inspire.Models.Components.ComponentRelationModel
-      description: The <xref href="Vasont.Inspire.Models.Components.ComponentRelationsQueryModel" data-throw-if-not-resolved="false"></xref> input model.
+      description: The <xref href="Vasont.Inspire.Models.Components.ComponentRelationModel" data-throw-if-not-resolved="false"></xref> input model.
     return:
       type: Vasont.Inspire.Models.Components.ComponentRelationsRepairResultModel
-      description: Returns a <xref href="Vasont.Inspire.Models.Components.ComponentRelationsResultModel" data-throw-if-not-resolved="false"></xref> model.
+      description: Returns a <xref href="Vasont.Inspire.Models.Components.ComponentRelationsRepairResultModel" data-throw-if-not-resolved="false"></xref> model.
     content.vb: >-
       <ExtensionAttribute>
 
@@ -1856,7 +2770,7 @@ items:
   exceptions:
   - type: System.ArgumentNullException
     commentId: T:System.ArgumentNullException
-    description: thrown if the model is not set.
+    description: Thrown if the <xref href="Vasont.Inspire.Models.Components.ComponentRelationModel" data-throw-if-not-resolved="false"></xref> is not set.
   modifiers.csharp:
   - public
   - static
@@ -1882,7 +2796,7 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: AutoRepairComponentRelationships
     path: Components/ComponentExtensions.cs
-    startLine: 611
+    startLine: 784
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Components
@@ -1908,7 +2822,7 @@ items:
   exceptions:
   - type: System.ArgumentNullException
     commentId: T:System.ArgumentNullException
-    description: thrown if the model is not set.
+    description: Thrown if the <xref href="Vasont.Inspire.Models.Components.ComponentAutoRepairRequestModel" data-throw-if-not-resolved="false"></xref> is not set.
   modifiers.csharp:
   - public
   - static
@@ -1934,14 +2848,77 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetComponentRelations
     path: Components/ComponentExtensions.cs
-    startLine: 629
+    startLine: 802
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Components
-  summary: "\nGets the component relations.\n"
+  summary: "\nThis method is used to retrieve the requested component relations.\n"
   example: []
   syntax:
-    content: public static ComponentRelationsResultModel GetComponentRelations(this InspireClient client, ComponentRelationsQueryModel inputModel)
+    content: >-
+      [Obsolete("This method is obsolete. Please use FindComponentRelations() going forward. This method will be removed in a future release.")]
+
+      public static ComponentRelationsResultModel GetComponentRelations(this InspireClient client, ComponentRelationsQueryModel inputModel)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
+    - id: inputModel
+      type: Vasont.Inspire.Models.Components.ComponentRelationsQueryModel
+      description: The <xref href="Vasont.Inspire.Models.Components.ComponentRelationsQueryModel" data-throw-if-not-resolved="false"></xref> input model.
+    return:
+      type: Vasont.Inspire.Models.Components.ComponentRelationsResultModel
+      description: Returns a <xref href="Vasont.Inspire.Models.Components.ComponentRelationsResultModel" data-throw-if-not-resolved="false"></xref> model.
+    content.vb: >-
+      <Obsolete("This method is obsolete. Please use FindComponentRelations() going forward. This method will be removed in a future release.")>
+
+      <ExtensionAttribute>
+
+      Public Shared Function GetComponentRelations(client As InspireClient, inputModel As ComponentRelationsQueryModel) As ComponentRelationsResultModel
+  overload: Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentRelations*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: Thrown if the <xref href="Vasont.Inspire.Models.Components.ComponentRelationsQueryModel" data-throw-if-not-resolved="false"></xref> is not set.
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use FindComponentRelations() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentRelations(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)
+  commentId: M:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentRelations(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)
+  id: FindComponentRelations(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Components.ComponentExtensions
+  langs:
+  - csharp
+  - vb
+  name: FindComponentRelations(InspireClient, ComponentRelationsQueryModel)
+  nameWithType: ComponentExtensions.FindComponentRelations(InspireClient, ComponentRelationsQueryModel)
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentRelations(Vasont.Inspire.SDK.InspireClient, Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)
+  type: Method
+  source:
+    remote:
+      path: src/Components/ComponentExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: FindComponentRelations
+    path: Components/ComponentExtensions.cs
+    startLine: 815
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Components
+  summary: "\nThis method is used to retrieve the requested component relations.\n"
+  example: []
+  syntax:
+    content: public static ComponentRelationsResultModel FindComponentRelations(this InspireClient client, ComponentRelationsQueryModel inputModel)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
@@ -1955,12 +2932,12 @@ items:
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Function GetComponentRelations(client As InspireClient, inputModel As ComponentRelationsQueryModel) As ComponentRelationsResultModel
-  overload: Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentRelations*
+      Public Shared Function FindComponentRelations(client As InspireClient, inputModel As ComponentRelationsQueryModel) As ComponentRelationsResultModel
+  overload: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentRelations*
   exceptions:
   - type: System.ArgumentNullException
     commentId: T:System.ArgumentNullException
-    description: thrown if the model is not set.
+    description: Thrown if the <xref href="Vasont.Inspire.Models.Components.ComponentRelationsQueryModel" data-throw-if-not-resolved="false"></xref> is not set.
   modifiers.csharp:
   - public
   - static
@@ -1986,14 +2963,17 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetComponentRelationsReport
     path: Components/ComponentExtensions.cs
-    startLine: 647
+    startLine: 833
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Components
-  summary: "\nThis method is used to get the relations for the specified component and return as a CSV formatted report file contents.\n"
+  summary: "\nThis method is used to retrieve the relations report for the specified component and return as a CSV formatted report file contents.\n"
   example: []
   syntax:
-    content: public static byte[] GetComponentRelationsReport(this InspireClient client, ComponentRelationsQueryModel inputModel)
+    content: >-
+      [Obsolete("This method is obsolete. Please use FindComponentRelationsReport() going forward. This method will be removed in a future release.")]
+
+      public static byte[] GetComponentRelationsReport(this InspireClient client, ComponentRelationsQueryModel inputModel)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
@@ -2003,8 +2983,10 @@ items:
       description: The <xref href="Vasont.Inspire.Models.Components.ComponentRelationsQueryModel" data-throw-if-not-resolved="false"></xref> input model.
     return:
       type: System.Byte[]
-      description: Returns a <xref href="Vasont.Inspire.Models.Components.ComponentRelationsResultModel" data-throw-if-not-resolved="false"></xref> model.
+      description: Returns an array of bytes that represent the content of the component relation report.
     content.vb: >-
+      <Obsolete("This method is obsolete. Please use FindComponentRelationsReport() going forward. This method will be removed in a future release.")>
+
       <ExtensionAttribute>
 
       Public Shared Function GetComponentRelationsReport(client As InspireClient, inputModel As ComponentRelationsQueryModel) As Byte()
@@ -2012,7 +2994,65 @@ items:
   exceptions:
   - type: System.ArgumentNullException
     commentId: T:System.ArgumentNullException
-    description: thrown if the model is not set.
+    description: Thrown if the <xref href="Vasont.Inspire.Models.Components.ComponentRelationsQueryModel" data-throw-if-not-resolved="false"></xref> is not set.
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use FindComponentRelationsReport() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentRelationsReport(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)
+  commentId: M:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentRelationsReport(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)
+  id: FindComponentRelationsReport(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Components.ComponentExtensions
+  langs:
+  - csharp
+  - vb
+  name: FindComponentRelationsReport(InspireClient, ComponentRelationsQueryModel)
+  nameWithType: ComponentExtensions.FindComponentRelationsReport(InspireClient, ComponentRelationsQueryModel)
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentRelationsReport(Vasont.Inspire.SDK.InspireClient, Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)
+  type: Method
+  source:
+    remote:
+      path: src/Components/ComponentExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: FindComponentRelationsReport
+    path: Components/ComponentExtensions.cs
+    startLine: 846
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Components
+  summary: "\nThis method is used to retrieve the relations report for the specified component and return as a CSV formatted report file contents.\n"
+  example: []
+  syntax:
+    content: public static byte[] FindComponentRelationsReport(this InspireClient client, ComponentRelationsQueryModel inputModel)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
+    - id: inputModel
+      type: Vasont.Inspire.Models.Components.ComponentRelationsQueryModel
+      description: The <xref href="Vasont.Inspire.Models.Components.ComponentRelationsQueryModel" data-throw-if-not-resolved="false"></xref> input model.
+    return:
+      type: System.Byte[]
+      description: Returns an array of bytes that represent the content of the component relation report.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function FindComponentRelationsReport(client As InspireClient, inputModel As ComponentRelationsQueryModel) As Byte()
+  overload: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentRelationsReport*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: Thrown if the <xref href="Vasont.Inspire.Models.Components.ComponentRelationsQueryModel" data-throw-if-not-resolved="false"></xref> is not set.
   modifiers.csharp:
   - public
   - static
@@ -2038,14 +3078,77 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetComponentDependencies
     path: Components/ComponentExtensions.cs
-    startLine: 665
+    startLine: 864
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Components
-  summary: "\nGets the component dependencies.\n"
+  summary: "\nThis method is used to retrieve the requested component dependencies.\n"
   example: []
   syntax:
-    content: public static ComponentDependenciesResultModel GetComponentDependencies(this InspireClient client, ComponentRelationsQueryModel inputModel)
+    content: >-
+      [Obsolete("This method is obsolete. Please use FindComponentDependencies() going forward. This method will be removed in a future release.")]
+
+      public static ComponentDependenciesResultModel GetComponentDependencies(this InspireClient client, ComponentRelationsQueryModel inputModel)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
+    - id: inputModel
+      type: Vasont.Inspire.Models.Components.ComponentRelationsQueryModel
+      description: The <xref href="Vasont.Inspire.Models.Components.ComponentRelationsQueryModel" data-throw-if-not-resolved="false"></xref> input model.
+    return:
+      type: Vasont.Inspire.Models.Components.ComponentDependenciesResultModel
+      description: Returns a <xref href="Vasont.Inspire.Models.Components.ComponentDependenciesResultModel" data-throw-if-not-resolved="false"></xref> model.
+    content.vb: >-
+      <Obsolete("This method is obsolete. Please use FindComponentDependencies() going forward. This method will be removed in a future release.")>
+
+      <ExtensionAttribute>
+
+      Public Shared Function GetComponentDependencies(client As InspireClient, inputModel As ComponentRelationsQueryModel) As ComponentDependenciesResultModel
+  overload: Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentDependencies*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: Thrown if the <xref href="Vasont.Inspire.Models.Components.ComponentRelationsQueryModel" data-throw-if-not-resolved="false"></xref> is not set.
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use FindComponentDependencies() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentDependencies(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)
+  commentId: M:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentDependencies(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)
+  id: FindComponentDependencies(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Components.ComponentExtensions
+  langs:
+  - csharp
+  - vb
+  name: FindComponentDependencies(InspireClient, ComponentRelationsQueryModel)
+  nameWithType: ComponentExtensions.FindComponentDependencies(InspireClient, ComponentRelationsQueryModel)
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentDependencies(Vasont.Inspire.SDK.InspireClient, Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)
+  type: Method
+  source:
+    remote:
+      path: src/Components/ComponentExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: FindComponentDependencies
+    path: Components/ComponentExtensions.cs
+    startLine: 877
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Components
+  summary: "\nThis method is used to retrieve the requested component dependencies.\n"
+  example: []
+  syntax:
+    content: public static ComponentDependenciesResultModel FindComponentDependencies(this InspireClient client, ComponentRelationsQueryModel inputModel)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
@@ -2059,12 +3162,12 @@ items:
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Function GetComponentDependencies(client As InspireClient, inputModel As ComponentRelationsQueryModel) As ComponentDependenciesResultModel
-  overload: Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentDependencies*
+      Public Shared Function FindComponentDependencies(client As InspireClient, inputModel As ComponentRelationsQueryModel) As ComponentDependenciesResultModel
+  overload: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentDependencies*
   exceptions:
   - type: System.ArgumentNullException
     commentId: T:System.ArgumentNullException
-    description: thrown if the model is not set.
+    description: Thrown if the <xref href="Vasont.Inspire.Models.Components.ComponentRelationsQueryModel" data-throw-if-not-resolved="false"></xref> is not set.
   modifiers.csharp:
   - public
   - static
@@ -2090,14 +3193,17 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetComponentDependenciesReport
     path: Components/ComponentExtensions.cs
-    startLine: 683
+    startLine: 895
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Components
-  summary: "\nThis method is used to get the dependencies for the specified component and return as a CSV formatted report file contents.\n"
+  summary: "\nThis method is used to retrieve the dependencies for the specified component and return as a CSV formatted report file contents.\n"
   example: []
   syntax:
-    content: public static byte[] GetComponentDependenciesReport(this InspireClient client, ComponentRelationsQueryModel inputModel)
+    content: >-
+      [Obsolete("This method is obsolete. Please use FIndComponentDependenciesReport() going forward. This method will be removed in a future release.")]
+
+      public static byte[] GetComponentDependenciesReport(this InspireClient client, ComponentRelationsQueryModel inputModel)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
@@ -2107,8 +3213,10 @@ items:
       description: The <xref href="Vasont.Inspire.Models.Components.ComponentRelationsQueryModel" data-throw-if-not-resolved="false"></xref> input model.
     return:
       type: System.Byte[]
-      description: Returns a <xref href="Vasont.Inspire.Models.Components.ComponentRelationsResultModel" data-throw-if-not-resolved="false"></xref> model.
+      description: Returns an array of bytes that represent the content of the component dependency report.
     content.vb: >-
+      <Obsolete("This method is obsolete. Please use FIndComponentDependenciesReport() going forward. This method will be removed in a future release.")>
+
       <ExtensionAttribute>
 
       Public Shared Function GetComponentDependenciesReport(client As InspireClient, inputModel As ComponentRelationsQueryModel) As Byte()
@@ -2116,7 +3224,65 @@ items:
   exceptions:
   - type: System.ArgumentNullException
     commentId: T:System.ArgumentNullException
-    description: thrown if the model is not set.
+    description: Thrown if the <xref href="Vasont.Inspire.Models.Components.ComponentRelationsQueryModel" data-throw-if-not-resolved="false"></xref> is not set.
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use FIndComponentDependenciesReport() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FIndComponentDependenciesReport(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)
+  commentId: M:Vasont.Inspire.SDK.Components.ComponentExtensions.FIndComponentDependenciesReport(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)
+  id: FIndComponentDependenciesReport(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Components.ComponentExtensions
+  langs:
+  - csharp
+  - vb
+  name: FIndComponentDependenciesReport(InspireClient, ComponentRelationsQueryModel)
+  nameWithType: ComponentExtensions.FIndComponentDependenciesReport(InspireClient, ComponentRelationsQueryModel)
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FIndComponentDependenciesReport(Vasont.Inspire.SDK.InspireClient, Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)
+  type: Method
+  source:
+    remote:
+      path: src/Components/ComponentExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: FIndComponentDependenciesReport
+    path: Components/ComponentExtensions.cs
+    startLine: 908
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Components
+  summary: "\nThis method is used to retrieve the dependencies for the specified component and return as a CSV formatted report file contents.\n"
+  example: []
+  syntax:
+    content: public static byte[] FIndComponentDependenciesReport(this InspireClient client, ComponentRelationsQueryModel inputModel)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
+    - id: inputModel
+      type: Vasont.Inspire.Models.Components.ComponentRelationsQueryModel
+      description: The <xref href="Vasont.Inspire.Models.Components.ComponentRelationsQueryModel" data-throw-if-not-resolved="false"></xref> input model.
+    return:
+      type: System.Byte[]
+      description: Returns an array of bytes that represent the content of the component dependency report.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function FIndComponentDependenciesReport(client As InspireClient, inputModel As ComponentRelationsQueryModel) As Byte()
+  overload: Vasont.Inspire.SDK.Components.ComponentExtensions.FIndComponentDependenciesReport*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: Thrown if the <xref href="Vasont.Inspire.Models.Components.ComponentRelationsQueryModel" data-throw-if-not-resolved="false"></xref> is not set.
   modifiers.csharp:
   - public
   - static
@@ -2142,14 +3308,73 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetComponentBranchRelations
     path: Components/ComponentExtensions.cs
-    startLine: 700
+    startLine: 925
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Components
   summary: "\nThis method is used to retrieve the branch relations for the specified component.\n"
   example: []
   syntax:
-    content: public static List<BranchReferenceModel> GetComponentBranchRelations(this InspireClient client, long sourceComponentId)
+    content: >-
+      [Obsolete("This method is obsolete. Please use FindComponentBranchRelations() going forward. This method will be removed in a future release.")]
+
+      public static List<BranchReferenceModel> GetComponentBranchRelations(this InspireClient client, long sourceComponentId)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
+    - id: sourceComponentId
+      type: System.Int64
+      description: Contains the source component identity to retrieve branch relations.
+    return:
+      type: System.Collections.Generic.List{Vasont.Inspire.Models.Components.BranchReferenceModel}
+      description: Returns a <xref href="System.Collections.Generic.List%601" data-throw-if-not-resolved="false"></xref> model.
+    content.vb: >-
+      <Obsolete("This method is obsolete. Please use FindComponentBranchRelations() going forward. This method will be removed in a future release.")>
+
+      <ExtensionAttribute>
+
+      Public Shared Function GetComponentBranchRelations(client As InspireClient, sourceComponentId As Long) As List(Of BranchReferenceModel)
+  overload: Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentBranchRelations*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use FindComponentBranchRelations() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentBranchRelations(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  commentId: M:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentBranchRelations(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  id: FindComponentBranchRelations(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Components.ComponentExtensions
+  langs:
+  - csharp
+  - vb
+  name: FindComponentBranchRelations(InspireClient, Int64)
+  nameWithType: ComponentExtensions.FindComponentBranchRelations(InspireClient, Int64)
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentBranchRelations(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  type: Method
+  source:
+    remote:
+      path: src/Components/ComponentExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: FindComponentBranchRelations
+    path: Components/ComponentExtensions.cs
+    startLine: 937
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Components
+  summary: "\nThis method is used to retrieve the branch relations for the specified component.\n"
+  example: []
+  syntax:
+    content: public static List<BranchReferenceModel> FindComponentBranchRelations(this InspireClient client, long sourceComponentId)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
@@ -2163,8 +3388,8 @@ items:
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Function GetComponentBranchRelations(client As InspireClient, sourceComponentId As Long) As List(Of BranchReferenceModel)
-  overload: Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentBranchRelations*
+      Public Shared Function FindComponentBranchRelations(client As InspireClient, sourceComponentId As Long) As List(Of BranchReferenceModel)
+  overload: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentBranchRelations*
   modifiers.csharp:
   - public
   - static
@@ -2190,14 +3415,77 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetComponentBranches
     path: Components/ComponentExtensions.cs
-    startLine: 713
+    startLine: 950
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Components
   summary: "\nThis method is used to get the branches for the specified component.\n"
   example: []
   syntax:
-    content: public static ComponentRelationsResultModel GetComponentBranches(this InspireClient client, ComponentRelationsQueryModel inputModel)
+    content: >-
+      [Obsolete("This method is obsolete. Please use FindComponentBranches() going forward. This method will be removed in a future release.")]
+
+      public static ComponentRelationsResultModel GetComponentBranches(this InspireClient client, ComponentRelationsQueryModel inputModel)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
+    - id: inputModel
+      type: Vasont.Inspire.Models.Components.ComponentRelationsQueryModel
+      description: The <xref href="Vasont.Inspire.Models.Components.ComponentRelationsQueryModel" data-throw-if-not-resolved="false"></xref> input model.
+    return:
+      type: Vasont.Inspire.Models.Components.ComponentRelationsResultModel
+      description: Returns a <xref href="Vasont.Inspire.Models.Components.ComponentRelationsResultModel" data-throw-if-not-resolved="false"></xref> model.
+    content.vb: >-
+      <Obsolete("This method is obsolete. Please use FindComponentBranches() going forward. This method will be removed in a future release.")>
+
+      <ExtensionAttribute>
+
+      Public Shared Function GetComponentBranches(client As InspireClient, inputModel As ComponentRelationsQueryModel) As ComponentRelationsResultModel
+  overload: Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentBranches*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: Thrown if the <xref href="Vasont.Inspire.Models.Components.ComponentRelationsQueryModel" data-throw-if-not-resolved="false"></xref> is not set.
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use FindComponentBranches() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentBranches(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)
+  commentId: M:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentBranches(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)
+  id: FindComponentBranches(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Components.ComponentExtensions
+  langs:
+  - csharp
+  - vb
+  name: FindComponentBranches(InspireClient, ComponentRelationsQueryModel)
+  nameWithType: ComponentExtensions.FindComponentBranches(InspireClient, ComponentRelationsQueryModel)
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentBranches(Vasont.Inspire.SDK.InspireClient, Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)
+  type: Method
+  source:
+    remote:
+      path: src/Components/ComponentExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: FindComponentBranches
+    path: Components/ComponentExtensions.cs
+    startLine: 963
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Components
+  summary: "\nThis method is used to get the branches for the specified component.\n"
+  example: []
+  syntax:
+    content: public static ComponentRelationsResultModel FindComponentBranches(this InspireClient client, ComponentRelationsQueryModel inputModel)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
@@ -2211,12 +3499,12 @@ items:
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Function GetComponentBranches(client As InspireClient, inputModel As ComponentRelationsQueryModel) As ComponentRelationsResultModel
-  overload: Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentBranches*
+      Public Shared Function FindComponentBranches(client As InspireClient, inputModel As ComponentRelationsQueryModel) As ComponentRelationsResultModel
+  overload: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentBranches*
   exceptions:
   - type: System.ArgumentNullException
     commentId: T:System.ArgumentNullException
-    description: thrown if the model is not set.
+    description: Thrown if the <xref href="Vasont.Inspire.Models.Components.ComponentRelationsQueryModel" data-throw-if-not-resolved="false"></xref> is not set.
   modifiers.csharp:
   - public
   - static
@@ -2242,14 +3530,17 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetComponentBranchesReport
     path: Components/ComponentExtensions.cs
-    startLine: 731
+    startLine: 981
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Components
-  summary: "\nThis method is used to get the branches for the specified component and return as a CSV formatted report file contents.\n"
+  summary: "\nThis method is used to retrieve the branches for the specified component and return as a CSV formatted report file contents.\n"
   example: []
   syntax:
-    content: public static byte[] GetComponentBranchesReport(this InspireClient client, ComponentRelationsQueryModel inputModel)
+    content: >-
+      [Obsolete("This method is obsolete. Please use FindComponentBranchesReport() going forward. This method will be removed in a future release.")]
+
+      public static byte[] GetComponentBranchesReport(this InspireClient client, ComponentRelationsQueryModel inputModel)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
@@ -2259,8 +3550,10 @@ items:
       description: The <xref href="Vasont.Inspire.Models.Components.ComponentRelationsQueryModel" data-throw-if-not-resolved="false"></xref> input model.
     return:
       type: System.Byte[]
-      description: Returns a <xref href="Vasont.Inspire.Models.Components.ComponentRelationsResultModel" data-throw-if-not-resolved="false"></xref> model.
+      description: Returns an array of bytes that represent the content of the component branches report.
     content.vb: >-
+      <Obsolete("This method is obsolete. Please use FindComponentBranchesReport() going forward. This method will be removed in a future release.")>
+
       <ExtensionAttribute>
 
       Public Shared Function GetComponentBranchesReport(client As InspireClient, inputModel As ComponentRelationsQueryModel) As Byte()
@@ -2268,7 +3561,65 @@ items:
   exceptions:
   - type: System.ArgumentNullException
     commentId: T:System.ArgumentNullException
-    description: thrown if the model is not set.
+    description: Thrown if the <xref href="Vasont.Inspire.Models.Components.ComponentRelationsQueryModel" data-throw-if-not-resolved="false"></xref> is not set.
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use FindComponentBranchesReport() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentBranchesReport(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)
+  commentId: M:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentBranchesReport(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)
+  id: FindComponentBranchesReport(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Components.ComponentExtensions
+  langs:
+  - csharp
+  - vb
+  name: FindComponentBranchesReport(InspireClient, ComponentRelationsQueryModel)
+  nameWithType: ComponentExtensions.FindComponentBranchesReport(InspireClient, ComponentRelationsQueryModel)
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentBranchesReport(Vasont.Inspire.SDK.InspireClient, Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)
+  type: Method
+  source:
+    remote:
+      path: src/Components/ComponentExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: FindComponentBranchesReport
+    path: Components/ComponentExtensions.cs
+    startLine: 994
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Components
+  summary: "\nThis method is used to retrieve the branches for the specified component and return as a CSV formatted report file contents.\n"
+  example: []
+  syntax:
+    content: public static byte[] FindComponentBranchesReport(this InspireClient client, ComponentRelationsQueryModel inputModel)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
+    - id: inputModel
+      type: Vasont.Inspire.Models.Components.ComponentRelationsQueryModel
+      description: The <xref href="Vasont.Inspire.Models.Components.ComponentRelationsQueryModel" data-throw-if-not-resolved="false"></xref> input model.
+    return:
+      type: System.Byte[]
+      description: Returns an array of bytes that represent the content of the component branches report.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function FindComponentBranchesReport(client As InspireClient, inputModel As ComponentRelationsQueryModel) As Byte()
+  overload: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentBranchesReport*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: Thrown if the <xref href="Vasont.Inspire.Models.Components.ComponentRelationsQueryModel" data-throw-if-not-resolved="false"></xref> is not set.
   modifiers.csharp:
   - public
   - static
@@ -2294,14 +3645,77 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetComponentTranslations
     path: Components/ComponentExtensions.cs
-    startLine: 753
+    startLine: 1016
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Components
-  summary: "\nThis method is used to get the translations for the specified component.\n"
+  summary: "\nThis method is used to retrieve the translations for the specified component.\n"
   example: []
   syntax:
-    content: public static ComponentRelationsResultModel GetComponentTranslations(this InspireClient client, ComponentRelationsQueryModel inputModel)
+    content: >-
+      [Obsolete("This method is obsolete. Please use RetrieveComponentTypes() going forward. This method will be removed in a future release.")]
+
+      public static ComponentRelationsResultModel GetComponentTranslations(this InspireClient client, ComponentRelationsQueryModel inputModel)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
+    - id: inputModel
+      type: Vasont.Inspire.Models.Components.ComponentRelationsQueryModel
+      description: The <xref href="Vasont.Inspire.Models.Components.ComponentRelationsQueryModel" data-throw-if-not-resolved="false"></xref> input model.
+    return:
+      type: Vasont.Inspire.Models.Components.ComponentRelationsResultModel
+      description: Returns a <xref href="Vasont.Inspire.Models.Components.ComponentRelationsResultModel" data-throw-if-not-resolved="false"></xref> model.
+    content.vb: >-
+      <Obsolete("This method is obsolete. Please use RetrieveComponentTypes() going forward. This method will be removed in a future release.")>
+
+      <ExtensionAttribute>
+
+      Public Shared Function GetComponentTranslations(client As InspireClient, inputModel As ComponentRelationsQueryModel) As ComponentRelationsResultModel
+  overload: Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentTranslations*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: thrown if the <xref href="Vasont.Inspire.Models.Components.ComponentRelationsQueryModel" data-throw-if-not-resolved="false"></xref> is not set.
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use RetrieveComponentTypes() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentTranslations(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)
+  commentId: M:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentTranslations(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)
+  id: FindComponentTranslations(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Components.ComponentExtensions
+  langs:
+  - csharp
+  - vb
+  name: FindComponentTranslations(InspireClient, ComponentRelationsQueryModel)
+  nameWithType: ComponentExtensions.FindComponentTranslations(InspireClient, ComponentRelationsQueryModel)
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentTranslations(Vasont.Inspire.SDK.InspireClient, Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)
+  type: Method
+  source:
+    remote:
+      path: src/Components/ComponentExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: FindComponentTranslations
+    path: Components/ComponentExtensions.cs
+    startLine: 1029
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Components
+  summary: "\nThis method is used to retrieve the translations for the specified component.\n"
+  example: []
+  syntax:
+    content: public static ComponentRelationsResultModel FindComponentTranslations(this InspireClient client, ComponentRelationsQueryModel inputModel)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
@@ -2315,12 +3729,12 @@ items:
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Function GetComponentTranslations(client As InspireClient, inputModel As ComponentRelationsQueryModel) As ComponentRelationsResultModel
-  overload: Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentTranslations*
+      Public Shared Function FindComponentTranslations(client As InspireClient, inputModel As ComponentRelationsQueryModel) As ComponentRelationsResultModel
+  overload: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentTranslations*
   exceptions:
   - type: System.ArgumentNullException
     commentId: T:System.ArgumentNullException
-    description: thrown if the model is not set.
+    description: thrown if the <xref href="Vasont.Inspire.Models.Components.ComponentRelationsQueryModel" data-throw-if-not-resolved="false"></xref> is not set.
   modifiers.csharp:
   - public
   - static
@@ -2346,14 +3760,17 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetComponentTranslationsReport
     path: Components/ComponentExtensions.cs
-    startLine: 771
+    startLine: 1047
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Components
   summary: "\nThis method is used to get the translations for the specified component and return as a CSV formatted report file contents.\n"
   example: []
   syntax:
-    content: public static byte[] GetComponentTranslationsReport(this InspireClient client, ComponentRelationsQueryModel inputModel)
+    content: >-
+      [Obsolete("This method is obsolete. Please use FindComponentTranslationsReport() going forward. This method will be removed in a future release.")]
+
+      public static byte[] GetComponentTranslationsReport(this InspireClient client, ComponentRelationsQueryModel inputModel)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
@@ -2363,8 +3780,10 @@ items:
       description: The <xref href="Vasont.Inspire.Models.Components.ComponentRelationsQueryModel" data-throw-if-not-resolved="false"></xref> input model.
     return:
       type: System.Byte[]
-      description: Returns a <xref href="Vasont.Inspire.Models.Components.ComponentRelationsResultModel" data-throw-if-not-resolved="false"></xref> model.
+      description: Returns an array of bytes that represent the content of the component translations report.
     content.vb: >-
+      <Obsolete("This method is obsolete. Please use FindComponentTranslationsReport() going forward. This method will be removed in a future release.")>
+
       <ExtensionAttribute>
 
       Public Shared Function GetComponentTranslationsReport(client As InspireClient, inputModel As ComponentRelationsQueryModel) As Byte()
@@ -2372,7 +3791,65 @@ items:
   exceptions:
   - type: System.ArgumentNullException
     commentId: T:System.ArgumentNullException
-    description: thrown if the model is not set.
+    description: Thrown if the <xref href="Vasont.Inspire.Models.Components.ComponentRelationsQueryModel" data-throw-if-not-resolved="false"></xref> is not set.
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use FindComponentTranslationsReport() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentTranslationsReport(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)
+  commentId: M:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentTranslationsReport(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)
+  id: FindComponentTranslationsReport(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Components.ComponentExtensions
+  langs:
+  - csharp
+  - vb
+  name: FindComponentTranslationsReport(InspireClient, ComponentRelationsQueryModel)
+  nameWithType: ComponentExtensions.FindComponentTranslationsReport(InspireClient, ComponentRelationsQueryModel)
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentTranslationsReport(Vasont.Inspire.SDK.InspireClient, Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)
+  type: Method
+  source:
+    remote:
+      path: src/Components/ComponentExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: FindComponentTranslationsReport
+    path: Components/ComponentExtensions.cs
+    startLine: 1060
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Components
+  summary: "\nThis method is used to get the translations for the specified component and return as a CSV formatted report file contents.\n"
+  example: []
+  syntax:
+    content: public static byte[] FindComponentTranslationsReport(this InspireClient client, ComponentRelationsQueryModel inputModel)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
+    - id: inputModel
+      type: Vasont.Inspire.Models.Components.ComponentRelationsQueryModel
+      description: The <xref href="Vasont.Inspire.Models.Components.ComponentRelationsQueryModel" data-throw-if-not-resolved="false"></xref> input model.
+    return:
+      type: System.Byte[]
+      description: Returns an array of bytes that represent the content of the component translations report.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function FindComponentTranslationsReport(client As InspireClient, inputModel As ComponentRelationsQueryModel) As Byte()
+  overload: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentTranslationsReport*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: Thrown if the <xref href="Vasont.Inspire.Models.Components.ComponentRelationsQueryModel" data-throw-if-not-resolved="false"></xref> is not set.
   modifiers.csharp:
   - public
   - static
@@ -2398,14 +3875,80 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetComponentHistory
     path: Components/ComponentExtensions.cs
-    startLine: 794
+    startLine: 1083
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Components
-  summary: "\nThis method is used to get the history for the specified component.\n"
+  summary: "\nThis method is used to retrieve the history for the specified component.\n"
   example: []
   syntax:
-    content: public static ComponentHistoryResultModel GetComponentHistory(this InspireClient client, ComponentHistoryQueryModel inputModel, bool usePostMethod = false)
+    content: >-
+      [Obsolete("This method is obsolete. Please use FindComponentHistory() going forward. This method will be removed in a future release.")]
+
+      public static ComponentHistoryResultModel GetComponentHistory(this InspireClient client, ComponentHistoryQueryModel inputModel, bool usePostMethod = false)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
+    - id: inputModel
+      type: Vasont.Inspire.Models.Versioning.ComponentHistoryQueryModel
+      description: The <xref href="Vasont.Inspire.Models.Versioning.ComponentHistoryQueryModel" data-throw-if-not-resolved="false"></xref> input model.
+    - id: usePostMethod
+      type: System.Boolean
+      description: Contains a value indicating whether the POST method is used in query.
+    return:
+      type: Vasont.Inspire.Models.Versioning.ComponentHistoryResultModel
+      description: Returns a <xref href="Vasont.Inspire.Models.Versioning.ComponentHistoryResultModel" data-throw-if-not-resolved="false"></xref> model.
+    content.vb: >-
+      <Obsolete("This method is obsolete. Please use FindComponentHistory() going forward. This method will be removed in a future release.")>
+
+      <ExtensionAttribute>
+
+      Public Shared Function GetComponentHistory(client As InspireClient, inputModel As ComponentHistoryQueryModel, usePostMethod As Boolean = False) As ComponentHistoryResultModel
+  overload: Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentHistory*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: Thrown if the <xref href="Vasont.Inspire.Models.Versioning.ComponentHistoryQueryModel" data-throw-if-not-resolved="false"></xref> is not set.
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use FindComponentHistory() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentHistory(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Versioning.ComponentHistoryQueryModel,System.Boolean)
+  commentId: M:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentHistory(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Versioning.ComponentHistoryQueryModel,System.Boolean)
+  id: FindComponentHistory(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Versioning.ComponentHistoryQueryModel,System.Boolean)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Components.ComponentExtensions
+  langs:
+  - csharp
+  - vb
+  name: FindComponentHistory(InspireClient, ComponentHistoryQueryModel, Boolean)
+  nameWithType: ComponentExtensions.FindComponentHistory(InspireClient, ComponentHistoryQueryModel, Boolean)
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentHistory(Vasont.Inspire.SDK.InspireClient, Vasont.Inspire.Models.Versioning.ComponentHistoryQueryModel, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: src/Components/ComponentExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: FindComponentHistory
+    path: Components/ComponentExtensions.cs
+    startLine: 1097
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Components
+  summary: "\nThis method is used to retrieve the history for the specified component.\n"
+  example: []
+  syntax:
+    content: public static ComponentHistoryResultModel FindComponentHistory(this InspireClient client, ComponentHistoryQueryModel inputModel, bool usePostMethod = false)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
@@ -2422,12 +3965,12 @@ items:
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Function GetComponentHistory(client As InspireClient, inputModel As ComponentHistoryQueryModel, usePostMethod As Boolean = False) As ComponentHistoryResultModel
-  overload: Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentHistory*
+      Public Shared Function FindComponentHistory(client As InspireClient, inputModel As ComponentHistoryQueryModel, usePostMethod As Boolean = False) As ComponentHistoryResultModel
+  overload: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentHistory*
   exceptions:
   - type: System.ArgumentNullException
     commentId: T:System.ArgumentNullException
-    description: thrown if the model is not set.
+    description: Thrown if the <xref href="Vasont.Inspire.Models.Versioning.ComponentHistoryQueryModel" data-throw-if-not-resolved="false"></xref> is not set.
   modifiers.csharp:
   - public
   - static
@@ -2453,14 +3996,17 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetComponentHistoryDetails
     path: Components/ComponentExtensions.cs
-    startLine: 812
+    startLine: 1115
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Components
-  summary: "\nThis method is used to get the history for the specified component.\n"
+  summary: "\nThis method is used to retrieve the history for the specified component.\n"
   example: []
   syntax:
-    content: public static MinimalComponentHistoryModel GetComponentHistoryDetails(this InspireClient client, long componentId, Guid changesetId)
+    content: >-
+      [Obsolete("This method is obsolete. Please use FindComponentHistoryDetails() going forward. This method will be removed in a future release.")]
+
+      public static MinimalComponentHistoryModel GetComponentHistoryDetails(this InspireClient client, long componentId, Guid changesetId)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
@@ -2473,12 +4019,71 @@ items:
       description: Contains the specific history changeset record identity.
     return:
       type: Vasont.Inspire.Models.Versioning.MinimalComponentHistoryModel
-      description: Returns a <xref href="Vasont.Inspire.Models.Versioning.ComponentHistoryResultModel" data-throw-if-not-resolved="false"></xref> model.
+      description: Returns a <xref href="Vasont.Inspire.Models.Versioning.MinimalComponentHistoryModel" data-throw-if-not-resolved="false"></xref> model.
     content.vb: >-
+      <Obsolete("This method is obsolete. Please use FindComponentHistoryDetails() going forward. This method will be removed in a future release.")>
+
       <ExtensionAttribute>
 
       Public Shared Function GetComponentHistoryDetails(client As InspireClient, componentId As Long, changesetId As Guid) As MinimalComponentHistoryModel
   overload: Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentHistoryDetails*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use FindComponentHistoryDetails() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentHistoryDetails(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Guid)
+  commentId: M:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentHistoryDetails(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Guid)
+  id: FindComponentHistoryDetails(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Guid)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Components.ComponentExtensions
+  langs:
+  - csharp
+  - vb
+  name: FindComponentHistoryDetails(InspireClient, Int64, Guid)
+  nameWithType: ComponentExtensions.FindComponentHistoryDetails(InspireClient, Int64, Guid)
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentHistoryDetails(Vasont.Inspire.SDK.InspireClient, System.Int64, System.Guid)
+  type: Method
+  source:
+    remote:
+      path: src/Components/ComponentExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: FindComponentHistoryDetails
+    path: Components/ComponentExtensions.cs
+    startLine: 1128
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Components
+  summary: "\nThis method is used to retrieve the history for the specified component.\n"
+  example: []
+  syntax:
+    content: public static MinimalComponentHistoryModel FindComponentHistoryDetails(this InspireClient client, long componentId, Guid changesetId)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
+    - id: componentId
+      type: System.Int64
+      description: Contains the component identity.
+    - id: changesetId
+      type: System.Guid
+      description: Contains the specific history changeset record identity.
+    return:
+      type: Vasont.Inspire.Models.Versioning.MinimalComponentHistoryModel
+      description: Returns a <xref href="Vasont.Inspire.Models.Versioning.MinimalComponentHistoryModel" data-throw-if-not-resolved="false"></xref> model.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function FindComponentHistoryDetails(client As InspireClient, componentId As Long, changesetId As Guid) As MinimalComponentHistoryModel
+  overload: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentHistoryDetails*
   modifiers.csharp:
   - public
   - static
@@ -2504,11 +4109,11 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RestoreComponentFromHistory
     path: Components/ComponentExtensions.cs
-    startLine: 826
+    startLine: 1142
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Components
-  summary: "\nThis method is used to get the history for the specified component.\n"
+  summary: "\nThis method is used to restore the specified component from the specified history changeset record.\n"
   example: []
   syntax:
     content: public static ChangesetModel RestoreComponentFromHistory(this InspireClient client, long componentId, Guid changesetId, RestoreOptionsModel inputModel)
@@ -2527,7 +4132,7 @@ items:
       description: Contains the <xref href="Vasont.Inspire.Models.Versioning.RestoreOptionsModel" data-throw-if-not-resolved="false"></xref> model.
     return:
       type: Vasont.Inspire.Models.Versioning.ChangesetModel
-      description: Returns a <xref href="Vasont.Inspire.Models.Versioning.ComponentHistoryResultModel" data-throw-if-not-resolved="false"></xref> model.
+      description: Returns a <xref href="Vasont.Inspire.Models.Versioning.ChangesetModel" data-throw-if-not-resolved="false"></xref> model.
     content.vb: >-
       <ExtensionAttribute>
 
@@ -2945,6 +4550,11 @@ references:
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.RetrieveComponentTypes*
+  commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.RetrieveComponentTypes
+  name: RetrieveComponentTypes
+  nameWithType: ComponentExtensions.RetrieveComponentTypes
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.RetrieveComponentTypes
 - uid: Vasont.Inspire.Models.Workflow.WorkflowTemplateModel
   commentId: T:Vasont.Inspire.Models.Workflow.WorkflowTemplateModel
   isExternal: true
@@ -2997,6 +4607,18 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.RetrieveComponentWorkflowTemplates*
+  commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.RetrieveComponentWorkflowTemplates
+  name: RetrieveComponentWorkflowTemplates
+  nameWithType: ComponentExtensions.RetrieveComponentWorkflowTemplates
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.RetrieveComponentWorkflowTemplates
+- uid: Vasont.Inspire.Models.Workflow.WorkflowModel
+  commentId: T:Vasont.Inspire.Models.Workflow.WorkflowModel
+  parent: Vasont.Inspire.Models.Workflow
+  isExternal: true
+  name: WorkflowModel
+  nameWithType: WorkflowModel
+  fullName: Vasont.Inspire.Models.Workflow.WorkflowModel
 - uid: Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentWorkflowTemplate*
   commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentWorkflowTemplate
   name: GetComponentWorkflowTemplate
@@ -3009,19 +4631,17 @@ references:
   name: Int64
   nameWithType: Int64
   fullName: System.Int64
-- uid: Vasont.Inspire.Models.Workflow.WorkflowModel
-  commentId: T:Vasont.Inspire.Models.Workflow.WorkflowModel
-  parent: Vasont.Inspire.Models.Workflow
-  isExternal: true
-  name: WorkflowModel
-  nameWithType: WorkflowModel
-  fullName: Vasont.Inspire.Models.Workflow.WorkflowModel
 - uid: Vasont.Inspire.Models.Workflow
   commentId: N:Vasont.Inspire.Models.Workflow
   isExternal: true
   name: Vasont.Inspire.Models.Workflow
   nameWithType: Vasont.Inspire.Models.Workflow
   fullName: Vasont.Inspire.Models.Workflow
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentWorkflowTemplate*
+  commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentWorkflowTemplate
+  name: FindComponentWorkflowTemplate
+  nameWithType: ComponentExtensions.FindComponentWorkflowTemplate
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentWorkflowTemplate
 - uid: Vasont.Inspire.Models.Components.MinimalComponentModel
   commentId: T:Vasont.Inspire.Models.Components.MinimalComponentModel
   parent: Vasont.Inspire.Models.Components
@@ -3091,6 +4711,11 @@ references:
   name: Vasont.Inspire.Models.Components
   nameWithType: Vasont.Inspire.Models.Components
   fullName: Vasont.Inspire.Models.Components
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentTemplates*
+  commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentTemplates
+  name: FindComponentTemplates
+  nameWithType: ComponentExtensions.FindComponentTemplates
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentTemplates
 - uid: Vasont.Inspire.Models.Components.BatchComponentsResultModel
   commentId: T:Vasont.Inspire.Models.Components.BatchComponentsResultModel
   parent: Vasont.Inspire.Models.Components
@@ -3110,16 +4735,21 @@ references:
   name: BatchComponentsRequestModel
   nameWithType: BatchComponentsRequestModel
   fullName: Vasont.Inspire.Models.Components.BatchComponentsRequestModel
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponents*
+  commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponents
+  name: FindComponents
+  nameWithType: ComponentExtensions.FindComponents
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponents
 - uid: Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponent*
   commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponent
   name: GetComponent
   nameWithType: ComponentExtensions.GetComponent
   fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponent
-- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentDetail*
-  commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentDetail
-  name: GetComponentDetail
-  nameWithType: ComponentExtensions.GetComponentDetail
-  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentDetail
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponent*
+  commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponent
+  name: FindComponent
+  nameWithType: ComponentExtensions.FindComponent
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponent
 - uid: Vasont.Inspire.Models.Components.DetailedComponentModel
   commentId: T:Vasont.Inspire.Models.Components.DetailedComponentModel
   parent: Vasont.Inspire.Models.Components
@@ -3127,6 +4757,16 @@ references:
   name: DetailedComponentModel
   nameWithType: DetailedComponentModel
   fullName: Vasont.Inspire.Models.Components.DetailedComponentModel
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentDetail*
+  commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentDetail
+  name: GetComponentDetail
+  nameWithType: ComponentExtensions.GetComponentDetail
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentDetail
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentDetail*
+  commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentDetail
+  name: FindComponentDetail
+  nameWithType: ComponentExtensions.FindComponentDetail
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentDetail
 - uid: Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentContent*
   commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentContent
   name: GetComponentContent
@@ -3158,6 +4798,11 @@ references:
   - name: ()
     nameWithType: ()
     fullName: ()
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentContent*
+  commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentContent
+  name: FindComponentContent
+  nameWithType: ComponentExtensions.FindComponentContent
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentContent
 - uid: Vasont.Inspire.Models.Components.PermissionUpdateModel
   commentId: T:Vasont.Inspire.Models.Components.PermissionUpdateModel
   parent: Vasont.Inspire.Models.Components
@@ -3170,6 +4815,11 @@ references:
   name: GetComponentPermissions
   nameWithType: ComponentExtensions.GetComponentPermissions
   fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentPermissions
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentPermissions*
+  commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentPermissions
+  name: FindComponentPermissions
+  nameWithType: ComponentExtensions.FindComponentPermissions
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentPermissions
 - uid: Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentElements*
   commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentElements
   name: GetComponentElements
@@ -3263,6 +4913,11 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentElements*
+  commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentElements
+  name: FindComponentElements
+  nameWithType: ComponentExtensions.FindComponentElements
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentElements
 - uid: Vasont.Inspire.SDK.Components.ComponentExtensions.ApproveComponents*
   commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.ApproveComponents
   name: ApproveComponents
@@ -3337,6 +4992,11 @@ references:
   name: Vasont.Inspire.Models.Components.Schema
   nameWithType: Vasont.Inspire.Models.Components.Schema
   fullName: Vasont.Inspire.Models.Components.Schema
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentConfiguration*
+  commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentConfiguration
+  name: FindComponentConfiguration
+  nameWithType: ComponentExtensions.FindComponentConfiguration
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentConfiguration
 - uid: Vasont.Inspire.Models.Components.CreateComponentFromTemplateModel
   commentId: T:Vasont.Inspire.Models.Components.CreateComponentFromTemplateModel
   parent: Vasont.Inspire.Models.Components
@@ -3380,6 +5040,9 @@ references:
   name: ExportRequestModel
   nameWithType: ExportRequestModel
   fullName: Vasont.Inspire.Models.Transfers.ExportRequestModel
+- uid: Vasont.Inspire.Models.Transfers.MinimalExportStateModel
+  commentId: T:Vasont.Inspire.Models.Transfers.MinimalExportStateModel
+  isExternal: true
 - uid: Vasont.Inspire.SDK.Components.ComponentExtensions.CreateComponentsExportRequest*
   commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.CreateComponentsExportRequest
   name: CreateComponentsExportRequest
@@ -3645,21 +5308,12 @@ references:
   name: DeleteComponents
   nameWithType: ComponentExtensions.DeleteComponents
   fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.DeleteComponents
-- uid: Vasont.Inspire.Models.Worker.WorkerStateModel
-  commentId: T:Vasont.Inspire.Models.Worker.WorkerStateModel
-  parent: Vasont.Inspire.Models.Worker
+- uid: Vasont.Inspire.Models.Worker.MinimalWorkerStateModel
+  commentId: T:Vasont.Inspire.Models.Worker.MinimalWorkerStateModel
   isExternal: true
-  name: WorkerStateModel
-  nameWithType: WorkerStateModel
-  fullName: Vasont.Inspire.Models.Worker.WorkerStateModel
 - uid: Vasont.Inspire.Models.Transfers.MinimalImportStateModel
   commentId: T:Vasont.Inspire.Models.Transfers.MinimalImportStateModel
   isExternal: true
-- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.ImportComponents*
-  commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.ImportComponents
-  name: ImportComponents
-  nameWithType: ComponentExtensions.ImportComponents
-  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.ImportComponents
 - uid: Vasont.Inspire.Models.Transfers.ImportRequestModel
   commentId: T:Vasont.Inspire.Models.Transfers.ImportRequestModel
   parent: Vasont.Inspire.Models.Transfers
@@ -3667,6 +5321,11 @@ references:
   name: ImportRequestModel
   nameWithType: ImportRequestModel
   fullName: Vasont.Inspire.Models.Transfers.ImportRequestModel
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.ImportComponents*
+  commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.ImportComponents
+  name: ImportComponents
+  nameWithType: ComponentExtensions.ImportComponents
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.ImportComponents
 - uid: Vasont.Inspire.Models.Worker.MinimalWorkerStateModel{Vasont.Inspire.Models.Transfers.MinimalImportStateModel}
   commentId: T:Vasont.Inspire.Models.Worker.MinimalWorkerStateModel{Vasont.Inspire.Models.Transfers.MinimalImportStateModel}
   parent: Vasont.Inspire.Models.Worker
@@ -3755,9 +5414,18 @@ references:
   name: GetImportState
   nameWithType: ComponentExtensions.GetImportState
   fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.GetImportState
-- uid: Vasont.Inspire.Models.Transfers.MinimalExportStateModel
-  commentId: T:Vasont.Inspire.Models.Transfers.MinimalExportStateModel
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindImportState*
+  commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.FindImportState
+  name: FindImportState
+  nameWithType: ComponentExtensions.FindImportState
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindImportState
+- uid: Vasont.Inspire.Models.Worker.WorkerStateModel
+  commentId: T:Vasont.Inspire.Models.Worker.WorkerStateModel
+  parent: Vasont.Inspire.Models.Worker
   isExternal: true
+  name: WorkerStateModel
+  nameWithType: WorkerStateModel
+  fullName: Vasont.Inspire.Models.Worker.WorkerStateModel
 - uid: Vasont.Inspire.SDK.Components.ComponentExtensions.GetExportState*
   commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.GetExportState
   name: GetExportState
@@ -3807,6 +5475,11 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindExportState*
+  commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.FindExportState
+  name: FindExportState
+  nameWithType: ComponentExtensions.FindExportState
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindExportState
 - uid: Vasont.Inspire.Models.Components.ComponentTagModel
   commentId: T:Vasont.Inspire.Models.Components.ComponentTagModel
   parent: Vasont.Inspire.Models.Components
@@ -3824,25 +5497,6 @@ references:
   name: PostComponentTags
   nameWithType: ComponentExtensions.PostComponentTags
   fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.PostComponentTags
-- uid: Vasont.Inspire.Models.Components.ComponentRelationsQueryModel
-  commentId: T:Vasont.Inspire.Models.Components.ComponentRelationsQueryModel
-  parent: Vasont.Inspire.Models.Components
-  isExternal: true
-  name: ComponentRelationsQueryModel
-  nameWithType: ComponentRelationsQueryModel
-  fullName: Vasont.Inspire.Models.Components.ComponentRelationsQueryModel
-- uid: Vasont.Inspire.Models.Components.ComponentRelationsResultModel
-  commentId: T:Vasont.Inspire.Models.Components.ComponentRelationsResultModel
-  parent: Vasont.Inspire.Models.Components
-  isExternal: true
-  name: ComponentRelationsResultModel
-  nameWithType: ComponentRelationsResultModel
-  fullName: Vasont.Inspire.Models.Components.ComponentRelationsResultModel
-- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.RepairComponentRelationship*
-  commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.RepairComponentRelationship
-  name: RepairComponentRelationship
-  nameWithType: ComponentExtensions.RepairComponentRelationship
-  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.RepairComponentRelationship
 - uid: Vasont.Inspire.Models.Components.ComponentRelationModel
   commentId: T:Vasont.Inspire.Models.Components.ComponentRelationModel
   parent: Vasont.Inspire.Models.Components
@@ -3857,6 +5511,11 @@ references:
   name: ComponentRelationsRepairResultModel
   nameWithType: ComponentRelationsRepairResultModel
   fullName: Vasont.Inspire.Models.Components.ComponentRelationsRepairResultModel
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.RepairComponentRelationship*
+  commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.RepairComponentRelationship
+  name: RepairComponentRelationship
+  nameWithType: ComponentExtensions.RepairComponentRelationship
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.RepairComponentRelationship
 - uid: Vasont.Inspire.Models.Components.ComponentAutoRepairRequestModel
   commentId: T:Vasont.Inspire.Models.Components.ComponentAutoRepairRequestModel
   parent: Vasont.Inspire.Models.Components
@@ -3913,16 +5572,40 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: Vasont.Inspire.Models.Components.ComponentRelationsQueryModel
+  commentId: T:Vasont.Inspire.Models.Components.ComponentRelationsQueryModel
+  parent: Vasont.Inspire.Models.Components
+  isExternal: true
+  name: ComponentRelationsQueryModel
+  nameWithType: ComponentRelationsQueryModel
+  fullName: Vasont.Inspire.Models.Components.ComponentRelationsQueryModel
+- uid: Vasont.Inspire.Models.Components.ComponentRelationsResultModel
+  commentId: T:Vasont.Inspire.Models.Components.ComponentRelationsResultModel
+  parent: Vasont.Inspire.Models.Components
+  isExternal: true
+  name: ComponentRelationsResultModel
+  nameWithType: ComponentRelationsResultModel
+  fullName: Vasont.Inspire.Models.Components.ComponentRelationsResultModel
 - uid: Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentRelations*
   commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentRelations
   name: GetComponentRelations
   nameWithType: ComponentExtensions.GetComponentRelations
   fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentRelations
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentRelations*
+  commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentRelations
+  name: FindComponentRelations
+  nameWithType: ComponentExtensions.FindComponentRelations
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentRelations
 - uid: Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentRelationsReport*
   commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentRelationsReport
   name: GetComponentRelationsReport
   nameWithType: ComponentExtensions.GetComponentRelationsReport
   fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentRelationsReport
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentRelationsReport*
+  commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentRelationsReport
+  name: FindComponentRelationsReport
+  nameWithType: ComponentExtensions.FindComponentRelationsReport
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentRelationsReport
 - uid: Vasont.Inspire.Models.Components.ComponentDependenciesResultModel
   commentId: T:Vasont.Inspire.Models.Components.ComponentDependenciesResultModel
   parent: Vasont.Inspire.Models.Components
@@ -3935,11 +5618,21 @@ references:
   name: GetComponentDependencies
   nameWithType: ComponentExtensions.GetComponentDependencies
   fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentDependencies
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentDependencies*
+  commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentDependencies
+  name: FindComponentDependencies
+  nameWithType: ComponentExtensions.FindComponentDependencies
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentDependencies
 - uid: Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentDependenciesReport*
   commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentDependenciesReport
   name: GetComponentDependenciesReport
   nameWithType: ComponentExtensions.GetComponentDependenciesReport
   fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentDependenciesReport
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FIndComponentDependenciesReport*
+  commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.FIndComponentDependenciesReport
+  name: FIndComponentDependenciesReport
+  nameWithType: ComponentExtensions.FIndComponentDependenciesReport
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FIndComponentDependenciesReport
 - uid: Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentBranchRelations*
   commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentBranchRelations
   name: GetComponentBranchRelations
@@ -3989,26 +5682,51 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentBranchRelations*
+  commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentBranchRelations
+  name: FindComponentBranchRelations
+  nameWithType: ComponentExtensions.FindComponentBranchRelations
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentBranchRelations
 - uid: Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentBranches*
   commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentBranches
   name: GetComponentBranches
   nameWithType: ComponentExtensions.GetComponentBranches
   fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentBranches
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentBranches*
+  commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentBranches
+  name: FindComponentBranches
+  nameWithType: ComponentExtensions.FindComponentBranches
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentBranches
 - uid: Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentBranchesReport*
   commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentBranchesReport
   name: GetComponentBranchesReport
   nameWithType: ComponentExtensions.GetComponentBranchesReport
   fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentBranchesReport
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentBranchesReport*
+  commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentBranchesReport
+  name: FindComponentBranchesReport
+  nameWithType: ComponentExtensions.FindComponentBranchesReport
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentBranchesReport
 - uid: Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentTranslations*
   commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentTranslations
   name: GetComponentTranslations
   nameWithType: ComponentExtensions.GetComponentTranslations
   fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentTranslations
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentTranslations*
+  commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentTranslations
+  name: FindComponentTranslations
+  nameWithType: ComponentExtensions.FindComponentTranslations
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentTranslations
 - uid: Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentTranslationsReport*
   commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentTranslationsReport
   name: GetComponentTranslationsReport
   nameWithType: ComponentExtensions.GetComponentTranslationsReport
   fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentTranslationsReport
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentTranslationsReport*
+  commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentTranslationsReport
+  name: FindComponentTranslationsReport
+  nameWithType: ComponentExtensions.FindComponentTranslationsReport
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentTranslationsReport
 - uid: Vasont.Inspire.Models.Versioning.ComponentHistoryQueryModel
   commentId: T:Vasont.Inspire.Models.Versioning.ComponentHistoryQueryModel
   parent: Vasont.Inspire.Models.Versioning
@@ -4034,6 +5752,18 @@ references:
   name: Vasont.Inspire.Models.Versioning
   nameWithType: Vasont.Inspire.Models.Versioning
   fullName: Vasont.Inspire.Models.Versioning
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentHistory*
+  commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentHistory
+  name: FindComponentHistory
+  nameWithType: ComponentExtensions.FindComponentHistory
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentHistory
+- uid: Vasont.Inspire.Models.Versioning.MinimalComponentHistoryModel
+  commentId: T:Vasont.Inspire.Models.Versioning.MinimalComponentHistoryModel
+  parent: Vasont.Inspire.Models.Versioning
+  isExternal: true
+  name: MinimalComponentHistoryModel
+  nameWithType: MinimalComponentHistoryModel
+  fullName: Vasont.Inspire.Models.Versioning.MinimalComponentHistoryModel
 - uid: Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentHistoryDetails*
   commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponentHistoryDetails
   name: GetComponentHistoryDetails
@@ -4046,13 +5776,11 @@ references:
   name: Guid
   nameWithType: Guid
   fullName: System.Guid
-- uid: Vasont.Inspire.Models.Versioning.MinimalComponentHistoryModel
-  commentId: T:Vasont.Inspire.Models.Versioning.MinimalComponentHistoryModel
-  parent: Vasont.Inspire.Models.Versioning
-  isExternal: true
-  name: MinimalComponentHistoryModel
-  nameWithType: MinimalComponentHistoryModel
-  fullName: Vasont.Inspire.Models.Versioning.MinimalComponentHistoryModel
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentHistoryDetails*
+  commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentHistoryDetails
+  name: FindComponentHistoryDetails
+  nameWithType: ComponentExtensions.FindComponentHistoryDetails
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentHistoryDetails
 - uid: Vasont.Inspire.Models.Versioning.RestoreOptionsModel
   commentId: T:Vasont.Inspire.Models.Versioning.RestoreOptionsModel
   parent: Vasont.Inspire.Models.Versioning
@@ -4060,11 +5788,6 @@ references:
   name: RestoreOptionsModel
   nameWithType: RestoreOptionsModel
   fullName: Vasont.Inspire.Models.Versioning.RestoreOptionsModel
-- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.RestoreComponentFromHistory*
-  commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.RestoreComponentFromHistory
-  name: RestoreComponentFromHistory
-  nameWithType: ComponentExtensions.RestoreComponentFromHistory
-  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.RestoreComponentFromHistory
 - uid: Vasont.Inspire.Models.Versioning.ChangesetModel
   commentId: T:Vasont.Inspire.Models.Versioning.ChangesetModel
   parent: Vasont.Inspire.Models.Versioning
@@ -4072,3 +5795,8 @@ references:
   name: ChangesetModel
   nameWithType: ChangesetModel
   fullName: Vasont.Inspire.Models.Versioning.ChangesetModel
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.RestoreComponentFromHistory*
+  commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.RestoreComponentFromHistory
+  name: RestoreComponentFromHistory
+  nameWithType: ComponentExtensions.RestoreComponentFromHistory
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.RestoreComponentFromHistory

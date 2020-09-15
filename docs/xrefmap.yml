@@ -204,6 +204,307 @@ references:
   isSpec: "True"
   fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.DeleteComponents
   nameWithType: ComponentExtensions.DeleteComponents
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponent(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  name: FindComponent(InspireClient, Int64)
+  href: sdk/Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_FindComponent_Vasont_Inspire_SDK_InspireClient_System_Int64_
+  commentId: M:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponent(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponent(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  nameWithType: ComponentExtensions.FindComponent(InspireClient, Int64)
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponent*
+  name: FindComponent
+  href: sdk/Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_FindComponent_
+  commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponent
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponent
+  nameWithType: ComponentExtensions.FindComponent
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentBranches(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)
+  name: FindComponentBranches(InspireClient, ComponentRelationsQueryModel)
+  href: sdk/Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_FindComponentBranches_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Components_ComponentRelationsQueryModel_
+  commentId: M:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentBranches(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentBranches(Vasont.Inspire.SDK.InspireClient, Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)
+  nameWithType: ComponentExtensions.FindComponentBranches(InspireClient, ComponentRelationsQueryModel)
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentBranches*
+  name: FindComponentBranches
+  href: sdk/Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_FindComponentBranches_
+  commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentBranches
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentBranches
+  nameWithType: ComponentExtensions.FindComponentBranches
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentBranchesReport(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)
+  name: FindComponentBranchesReport(InspireClient, ComponentRelationsQueryModel)
+  href: sdk/Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_FindComponentBranchesReport_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Components_ComponentRelationsQueryModel_
+  commentId: M:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentBranchesReport(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentBranchesReport(Vasont.Inspire.SDK.InspireClient, Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)
+  nameWithType: ComponentExtensions.FindComponentBranchesReport(InspireClient, ComponentRelationsQueryModel)
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentBranchesReport*
+  name: FindComponentBranchesReport
+  href: sdk/Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_FindComponentBranchesReport_
+  commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentBranchesReport
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentBranchesReport
+  nameWithType: ComponentExtensions.FindComponentBranchesReport
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentBranchRelations(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  name: FindComponentBranchRelations(InspireClient, Int64)
+  href: sdk/Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_FindComponentBranchRelations_Vasont_Inspire_SDK_InspireClient_System_Int64_
+  commentId: M:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentBranchRelations(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentBranchRelations(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  nameWithType: ComponentExtensions.FindComponentBranchRelations(InspireClient, Int64)
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentBranchRelations*
+  name: FindComponentBranchRelations
+  href: sdk/Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_FindComponentBranchRelations_
+  commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentBranchRelations
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentBranchRelations
+  nameWithType: ComponentExtensions.FindComponentBranchRelations
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentConfiguration(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Boolean)
+  name: FindComponentConfiguration(InspireClient, Int64, Boolean)
+  href: sdk/Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_FindComponentConfiguration_Vasont_Inspire_SDK_InspireClient_System_Int64_System_Boolean_
+  commentId: M:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentConfiguration(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Boolean)
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentConfiguration(Vasont.Inspire.SDK.InspireClient, System.Int64, System.Boolean)
+  nameWithType: ComponentExtensions.FindComponentConfiguration(InspireClient, Int64, Boolean)
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentConfiguration*
+  name: FindComponentConfiguration
+  href: sdk/Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_FindComponentConfiguration_
+  commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentConfiguration
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentConfiguration
+  nameWithType: ComponentExtensions.FindComponentConfiguration
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentContent(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  name: FindComponentContent(InspireClient, Int64)
+  href: sdk/Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_FindComponentContent_Vasont_Inspire_SDK_InspireClient_System_Int64_
+  commentId: M:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentContent(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentContent(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  nameWithType: ComponentExtensions.FindComponentContent(InspireClient, Int64)
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentContent*
+  name: FindComponentContent
+  href: sdk/Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_FindComponentContent_
+  commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentContent
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentContent
+  nameWithType: ComponentExtensions.FindComponentContent
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentDependencies(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)
+  name: FindComponentDependencies(InspireClient, ComponentRelationsQueryModel)
+  href: sdk/Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_FindComponentDependencies_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Components_ComponentRelationsQueryModel_
+  commentId: M:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentDependencies(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentDependencies(Vasont.Inspire.SDK.InspireClient, Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)
+  nameWithType: ComponentExtensions.FindComponentDependencies(InspireClient, ComponentRelationsQueryModel)
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentDependencies*
+  name: FindComponentDependencies
+  href: sdk/Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_FindComponentDependencies_
+  commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentDependencies
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentDependencies
+  nameWithType: ComponentExtensions.FindComponentDependencies
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FIndComponentDependenciesReport(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)
+  name: FIndComponentDependenciesReport(InspireClient, ComponentRelationsQueryModel)
+  href: sdk/Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_FIndComponentDependenciesReport_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Components_ComponentRelationsQueryModel_
+  commentId: M:Vasont.Inspire.SDK.Components.ComponentExtensions.FIndComponentDependenciesReport(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FIndComponentDependenciesReport(Vasont.Inspire.SDK.InspireClient, Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)
+  nameWithType: ComponentExtensions.FIndComponentDependenciesReport(InspireClient, ComponentRelationsQueryModel)
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FIndComponentDependenciesReport*
+  name: FIndComponentDependenciesReport
+  href: sdk/Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_FIndComponentDependenciesReport_
+  commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.FIndComponentDependenciesReport
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FIndComponentDependenciesReport
+  nameWithType: ComponentExtensions.FIndComponentDependenciesReport
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentDetail(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  name: FindComponentDetail(InspireClient, Int64)
+  href: sdk/Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_FindComponentDetail_Vasont_Inspire_SDK_InspireClient_System_Int64_
+  commentId: M:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentDetail(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentDetail(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  nameWithType: ComponentExtensions.FindComponentDetail(InspireClient, Int64)
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentDetail*
+  name: FindComponentDetail
+  href: sdk/Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_FindComponentDetail_
+  commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentDetail
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentDetail
+  nameWithType: ComponentExtensions.FindComponentDetail
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentElements(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Collections.Generic.List{System.String})
+  name: FindComponentElements(InspireClient, Int64, List<String>)
+  href: sdk/Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_FindComponentElements_Vasont_Inspire_SDK_InspireClient_System_Int64_System_Collections_Generic_List_System_String__
+  commentId: M:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentElements(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Collections.Generic.List{System.String})
+  name.vb: FindComponentElements(InspireClient, Int64, List(Of String))
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentElements(Vasont.Inspire.SDK.InspireClient, System.Int64, System.Collections.Generic.List<System.String>)
+  fullName.vb: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentElements(Vasont.Inspire.SDK.InspireClient, System.Int64, System.Collections.Generic.List(Of System.String))
+  nameWithType: ComponentExtensions.FindComponentElements(InspireClient, Int64, List<String>)
+  nameWithType.vb: ComponentExtensions.FindComponentElements(InspireClient, Int64, List(Of String))
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentElements*
+  name: FindComponentElements
+  href: sdk/Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_FindComponentElements_
+  commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentElements
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentElements
+  nameWithType: ComponentExtensions.FindComponentElements
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentHistory(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Versioning.ComponentHistoryQueryModel,System.Boolean)
+  name: FindComponentHistory(InspireClient, ComponentHistoryQueryModel, Boolean)
+  href: sdk/Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_FindComponentHistory_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Versioning_ComponentHistoryQueryModel_System_Boolean_
+  commentId: M:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentHistory(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Versioning.ComponentHistoryQueryModel,System.Boolean)
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentHistory(Vasont.Inspire.SDK.InspireClient, Vasont.Inspire.Models.Versioning.ComponentHistoryQueryModel, System.Boolean)
+  nameWithType: ComponentExtensions.FindComponentHistory(InspireClient, ComponentHistoryQueryModel, Boolean)
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentHistory*
+  name: FindComponentHistory
+  href: sdk/Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_FindComponentHistory_
+  commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentHistory
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentHistory
+  nameWithType: ComponentExtensions.FindComponentHistory
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentHistoryDetails(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Guid)
+  name: FindComponentHistoryDetails(InspireClient, Int64, Guid)
+  href: sdk/Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_FindComponentHistoryDetails_Vasont_Inspire_SDK_InspireClient_System_Int64_System_Guid_
+  commentId: M:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentHistoryDetails(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Guid)
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentHistoryDetails(Vasont.Inspire.SDK.InspireClient, System.Int64, System.Guid)
+  nameWithType: ComponentExtensions.FindComponentHistoryDetails(InspireClient, Int64, Guid)
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentHistoryDetails*
+  name: FindComponentHistoryDetails
+  href: sdk/Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_FindComponentHistoryDetails_
+  commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentHistoryDetails
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentHistoryDetails
+  nameWithType: ComponentExtensions.FindComponentHistoryDetails
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentPermissions(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  name: FindComponentPermissions(InspireClient, Int64)
+  href: sdk/Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_FindComponentPermissions_Vasont_Inspire_SDK_InspireClient_System_Int64_
+  commentId: M:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentPermissions(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentPermissions(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  nameWithType: ComponentExtensions.FindComponentPermissions(InspireClient, Int64)
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentPermissions*
+  name: FindComponentPermissions
+  href: sdk/Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_FindComponentPermissions_
+  commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentPermissions
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentPermissions
+  nameWithType: ComponentExtensions.FindComponentPermissions
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentRelations(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)
+  name: FindComponentRelations(InspireClient, ComponentRelationsQueryModel)
+  href: sdk/Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_FindComponentRelations_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Components_ComponentRelationsQueryModel_
+  commentId: M:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentRelations(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentRelations(Vasont.Inspire.SDK.InspireClient, Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)
+  nameWithType: ComponentExtensions.FindComponentRelations(InspireClient, ComponentRelationsQueryModel)
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentRelations*
+  name: FindComponentRelations
+  href: sdk/Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_FindComponentRelations_
+  commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentRelations
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentRelations
+  nameWithType: ComponentExtensions.FindComponentRelations
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentRelationsReport(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)
+  name: FindComponentRelationsReport(InspireClient, ComponentRelationsQueryModel)
+  href: sdk/Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_FindComponentRelationsReport_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Components_ComponentRelationsQueryModel_
+  commentId: M:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentRelationsReport(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentRelationsReport(Vasont.Inspire.SDK.InspireClient, Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)
+  nameWithType: ComponentExtensions.FindComponentRelationsReport(InspireClient, ComponentRelationsQueryModel)
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentRelationsReport*
+  name: FindComponentRelationsReport
+  href: sdk/Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_FindComponentRelationsReport_
+  commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentRelationsReport
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentRelationsReport
+  nameWithType: ComponentExtensions.FindComponentRelationsReport
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponents(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.BatchComponentsRequestModel)
+  name: FindComponents(InspireClient, BatchComponentsRequestModel)
+  href: sdk/Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_FindComponents_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Components_BatchComponentsRequestModel_
+  commentId: M:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponents(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.BatchComponentsRequestModel)
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponents(Vasont.Inspire.SDK.InspireClient, Vasont.Inspire.Models.Components.BatchComponentsRequestModel)
+  nameWithType: ComponentExtensions.FindComponents(InspireClient, BatchComponentsRequestModel)
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponents*
+  name: FindComponents
+  href: sdk/Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_FindComponents_
+  commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponents
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponents
+  nameWithType: ComponentExtensions.FindComponents
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentTemplates(Vasont.Inspire.SDK.InspireClient,System.String)
+  name: FindComponentTemplates(InspireClient, String)
+  href: sdk/Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_FindComponentTemplates_Vasont_Inspire_SDK_InspireClient_System_String_
+  commentId: M:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentTemplates(Vasont.Inspire.SDK.InspireClient,System.String)
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentTemplates(Vasont.Inspire.SDK.InspireClient, System.String)
+  nameWithType: ComponentExtensions.FindComponentTemplates(InspireClient, String)
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentTemplates*
+  name: FindComponentTemplates
+  href: sdk/Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_FindComponentTemplates_
+  commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentTemplates
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentTemplates
+  nameWithType: ComponentExtensions.FindComponentTemplates
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentTranslations(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)
+  name: FindComponentTranslations(InspireClient, ComponentRelationsQueryModel)
+  href: sdk/Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_FindComponentTranslations_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Components_ComponentRelationsQueryModel_
+  commentId: M:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentTranslations(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentTranslations(Vasont.Inspire.SDK.InspireClient, Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)
+  nameWithType: ComponentExtensions.FindComponentTranslations(InspireClient, ComponentRelationsQueryModel)
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentTranslations*
+  name: FindComponentTranslations
+  href: sdk/Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_FindComponentTranslations_
+  commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentTranslations
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentTranslations
+  nameWithType: ComponentExtensions.FindComponentTranslations
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentTranslationsReport(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)
+  name: FindComponentTranslationsReport(InspireClient, ComponentRelationsQueryModel)
+  href: sdk/Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_FindComponentTranslationsReport_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Components_ComponentRelationsQueryModel_
+  commentId: M:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentTranslationsReport(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentTranslationsReport(Vasont.Inspire.SDK.InspireClient, Vasont.Inspire.Models.Components.ComponentRelationsQueryModel)
+  nameWithType: ComponentExtensions.FindComponentTranslationsReport(InspireClient, ComponentRelationsQueryModel)
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentTranslationsReport*
+  name: FindComponentTranslationsReport
+  href: sdk/Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_FindComponentTranslationsReport_
+  commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentTranslationsReport
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentTranslationsReport
+  nameWithType: ComponentExtensions.FindComponentTranslationsReport
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentWorkflowTemplate(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  name: FindComponentWorkflowTemplate(InspireClient, Int64)
+  href: sdk/Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_FindComponentWorkflowTemplate_Vasont_Inspire_SDK_InspireClient_System_Int64_
+  commentId: M:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentWorkflowTemplate(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentWorkflowTemplate(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  nameWithType: ComponentExtensions.FindComponentWorkflowTemplate(InspireClient, Int64)
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentWorkflowTemplate*
+  name: FindComponentWorkflowTemplate
+  href: sdk/Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_FindComponentWorkflowTemplate_
+  commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentWorkflowTemplate
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindComponentWorkflowTemplate
+  nameWithType: ComponentExtensions.FindComponentWorkflowTemplate
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindExportState(Vasont.Inspire.SDK.InspireClient,System.String)
+  name: FindExportState(InspireClient, String)
+  href: sdk/Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_FindExportState_Vasont_Inspire_SDK_InspireClient_System_String_
+  commentId: M:Vasont.Inspire.SDK.Components.ComponentExtensions.FindExportState(Vasont.Inspire.SDK.InspireClient,System.String)
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindExportState(Vasont.Inspire.SDK.InspireClient, System.String)
+  nameWithType: ComponentExtensions.FindExportState(InspireClient, String)
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindExportState(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Worker.WorkerStateModel)
+  name: FindExportState(InspireClient, WorkerStateModel)
+  href: sdk/Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_FindExportState_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Worker_WorkerStateModel_
+  commentId: M:Vasont.Inspire.SDK.Components.ComponentExtensions.FindExportState(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Worker.WorkerStateModel)
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindExportState(Vasont.Inspire.SDK.InspireClient, Vasont.Inspire.Models.Worker.WorkerStateModel)
+  nameWithType: ComponentExtensions.FindExportState(InspireClient, WorkerStateModel)
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindExportState*
+  name: FindExportState
+  href: sdk/Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_FindExportState_
+  commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.FindExportState
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindExportState
+  nameWithType: ComponentExtensions.FindExportState
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindImportState(Vasont.Inspire.SDK.InspireClient,System.String)
+  name: FindImportState(InspireClient, String)
+  href: sdk/Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_FindImportState_Vasont_Inspire_SDK_InspireClient_System_String_
+  commentId: M:Vasont.Inspire.SDK.Components.ComponentExtensions.FindImportState(Vasont.Inspire.SDK.InspireClient,System.String)
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindImportState(Vasont.Inspire.SDK.InspireClient, System.String)
+  nameWithType: ComponentExtensions.FindImportState(InspireClient, String)
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindImportState(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Worker.WorkerStateModel)
+  name: FindImportState(InspireClient, WorkerStateModel)
+  href: sdk/Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_FindImportState_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Worker_WorkerStateModel_
+  commentId: M:Vasont.Inspire.SDK.Components.ComponentExtensions.FindImportState(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Worker.WorkerStateModel)
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindImportState(Vasont.Inspire.SDK.InspireClient, Vasont.Inspire.Models.Worker.WorkerStateModel)
+  nameWithType: ComponentExtensions.FindImportState(InspireClient, WorkerStateModel)
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.FindImportState*
+  name: FindImportState
+  href: sdk/Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_FindImportState_
+  commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.FindImportState
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.FindImportState
+  nameWithType: ComponentExtensions.FindImportState
 - uid: Vasont.Inspire.SDK.Components.ComponentExtensions.GetComponent(Vasont.Inspire.SDK.InspireClient,System.Int64)
   name: GetComponent(InspireClient, Int64)
   href: sdk/Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_GetComponent_Vasont_Inspire_SDK_InspireClient_System_Int64_
@@ -644,6 +945,32 @@ references:
   isSpec: "True"
   fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.RestoreComponentFromHistory
   nameWithType: ComponentExtensions.RestoreComponentFromHistory
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.RetrieveComponentTypes(Vasont.Inspire.SDK.InspireClient)
+  name: RetrieveComponentTypes(InspireClient)
+  href: sdk/Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_RetrieveComponentTypes_Vasont_Inspire_SDK_InspireClient_
+  commentId: M:Vasont.Inspire.SDK.Components.ComponentExtensions.RetrieveComponentTypes(Vasont.Inspire.SDK.InspireClient)
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.RetrieveComponentTypes(Vasont.Inspire.SDK.InspireClient)
+  nameWithType: ComponentExtensions.RetrieveComponentTypes(InspireClient)
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.RetrieveComponentTypes*
+  name: RetrieveComponentTypes
+  href: sdk/Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_RetrieveComponentTypes_
+  commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.RetrieveComponentTypes
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.RetrieveComponentTypes
+  nameWithType: ComponentExtensions.RetrieveComponentTypes
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.RetrieveComponentWorkflowTemplates(Vasont.Inspire.SDK.InspireClient)
+  name: RetrieveComponentWorkflowTemplates(InspireClient)
+  href: sdk/Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_RetrieveComponentWorkflowTemplates_Vasont_Inspire_SDK_InspireClient_
+  commentId: M:Vasont.Inspire.SDK.Components.ComponentExtensions.RetrieveComponentWorkflowTemplates(Vasont.Inspire.SDK.InspireClient)
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.RetrieveComponentWorkflowTemplates(Vasont.Inspire.SDK.InspireClient)
+  nameWithType: ComponentExtensions.RetrieveComponentWorkflowTemplates(InspireClient)
+- uid: Vasont.Inspire.SDK.Components.ComponentExtensions.RetrieveComponentWorkflowTemplates*
+  name: RetrieveComponentWorkflowTemplates
+  href: sdk/Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_RetrieveComponentWorkflowTemplates_
+  commentId: Overload:Vasont.Inspire.SDK.Components.ComponentExtensions.RetrieveComponentWorkflowTemplates
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Components.ComponentExtensions.RetrieveComponentWorkflowTemplates
+  nameWithType: ComponentExtensions.RetrieveComponentWorkflowTemplates
 - uid: Vasont.Inspire.SDK.Components.ComponentExtensions.SetComponentPermissions(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.PermissionUpdateModel)
   name: SetComponentPermissions(InspireClient, PermissionUpdateModel)
   href: sdk/Vasont.Inspire.SDK.Components.ComponentExtensions.html#Vasont_Inspire_SDK_Components_ComponentExtensions_SetComponentPermissions_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Components_PermissionUpdateModel_
@@ -724,6 +1051,19 @@ references:
   commentId: T:Vasont.Inspire.SDK.Components.EditorExtensions
   fullName: Vasont.Inspire.SDK.Components.EditorExtensions
   nameWithType: EditorExtensions
+- uid: Vasont.Inspire.SDK.Components.EditorExtensions.FindEditorComponent(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.EditorLoadModel)
+  name: FindEditorComponent(InspireClient, EditorLoadModel)
+  href: sdk/Vasont.Inspire.SDK.Components.EditorExtensions.html#Vasont_Inspire_SDK_Components_EditorExtensions_FindEditorComponent_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Components_EditorLoadModel_
+  commentId: M:Vasont.Inspire.SDK.Components.EditorExtensions.FindEditorComponent(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.EditorLoadModel)
+  fullName: Vasont.Inspire.SDK.Components.EditorExtensions.FindEditorComponent(Vasont.Inspire.SDK.InspireClient, Vasont.Inspire.Models.Components.EditorLoadModel)
+  nameWithType: EditorExtensions.FindEditorComponent(InspireClient, EditorLoadModel)
+- uid: Vasont.Inspire.SDK.Components.EditorExtensions.FindEditorComponent*
+  name: FindEditorComponent
+  href: sdk/Vasont.Inspire.SDK.Components.EditorExtensions.html#Vasont_Inspire_SDK_Components_EditorExtensions_FindEditorComponent_
+  commentId: Overload:Vasont.Inspire.SDK.Components.EditorExtensions.FindEditorComponent
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Components.EditorExtensions.FindEditorComponent
+  nameWithType: EditorExtensions.FindEditorComponent
 - uid: Vasont.Inspire.SDK.Components.EditorExtensions.GetEditorComponent(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.EditorLoadModel)
   name: GetEditorComponent(InspireClient, EditorLoadModel)
   href: sdk/Vasont.Inspire.SDK.Components.EditorExtensions.html#Vasont_Inspire_SDK_Components_EditorExtensions_GetEditorComponent_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Components_EditorLoadModel_
@@ -905,6 +1245,201 @@ references:
   isSpec: "True"
   fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.CreateXmlLinkType
   nameWithType: ConfigurationExtensions.CreateXmlLinkType
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindAttribute(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  name: FindAttribute(InspireClient, Int64)
+  href: sdk/Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_FindAttribute_Vasont_Inspire_SDK_InspireClient_System_Int64_
+  commentId: M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindAttribute(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindAttribute(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  nameWithType: ConfigurationExtensions.FindAttribute(InspireClient, Int64)
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindAttribute*
+  name: FindAttribute
+  href: sdk/Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_FindAttribute_
+  commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindAttribute
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindAttribute
+  nameWithType: ConfigurationExtensions.FindAttribute
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindComponentType(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  name: FindComponentType(InspireClient, Int64)
+  href: sdk/Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_FindComponentType_Vasont_Inspire_SDK_InspireClient_System_Int64_
+  commentId: M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindComponentType(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindComponentType(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  nameWithType: ConfigurationExtensions.FindComponentType(InspireClient, Int64)
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindComponentType*
+  name: FindComponentType
+  href: sdk/Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_FindComponentType_
+  commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindComponentType
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindComponentType
+  nameWithType: ConfigurationExtensions.FindComponentType
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindElement(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  name: FindElement(InspireClient, Int64)
+  href: sdk/Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_FindElement_Vasont_Inspire_SDK_InspireClient_System_Int64_
+  commentId: M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindElement(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindElement(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  nameWithType: ConfigurationExtensions.FindElement(InspireClient, Int64)
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindElement*
+  name: FindElement
+  href: sdk/Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_FindElement_
+  commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindElement
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindElement
+  nameWithType: ConfigurationExtensions.FindElement
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindExport(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  name: FindExport(InspireClient, Int64)
+  href: sdk/Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_FindExport_Vasont_Inspire_SDK_InspireClient_System_Int64_
+  commentId: M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindExport(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindExport(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  nameWithType: ConfigurationExtensions.FindExport(InspireClient, Int64)
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindExport*
+  name: FindExport
+  href: sdk/Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_FindExport_
+  commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindExport
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindExport
+  nameWithType: ConfigurationExtensions.FindExport
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindExportComponentType(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Transfers.ExportType)
+  name: FindExportComponentType(InspireClient, Int64, ExportType)
+  href: sdk/Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_FindExportComponentType_Vasont_Inspire_SDK_InspireClient_System_Int64_Vasont_Inspire_Models_Transfers_ExportType_
+  commentId: M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindExportComponentType(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Transfers.ExportType)
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindExportComponentType(Vasont.Inspire.SDK.InspireClient, System.Int64, Vasont.Inspire.Models.Transfers.ExportType)
+  nameWithType: ConfigurationExtensions.FindExportComponentType(InspireClient, Int64, ExportType)
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindExportComponentType*
+  name: FindExportComponentType
+  href: sdk/Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_FindExportComponentType_
+  commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindExportComponentType
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindExportComponentType
+  nameWithType: ConfigurationExtensions.FindExportComponentType
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindExportPluginParameters(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  name: FindExportPluginParameters(InspireClient, Int64)
+  href: sdk/Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_FindExportPluginParameters_Vasont_Inspire_SDK_InspireClient_System_Int64_
+  commentId: M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindExportPluginParameters(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindExportPluginParameters(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  nameWithType: ConfigurationExtensions.FindExportPluginParameters(InspireClient, Int64)
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindExportPluginParameters*
+  name: FindExportPluginParameters
+  href: sdk/Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_FindExportPluginParameters_
+  commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindExportPluginParameters
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindExportPluginParameters
+  nameWithType: ConfigurationExtensions.FindExportPluginParameters
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindFileExtension(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  name: FindFileExtension(InspireClient, Int64)
+  href: sdk/Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_FindFileExtension_Vasont_Inspire_SDK_InspireClient_System_Int64_
+  commentId: M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindFileExtension(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindFileExtension(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  nameWithType: ConfigurationExtensions.FindFileExtension(InspireClient, Int64)
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindFileExtension*
+  name: FindFileExtension
+  href: sdk/Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_FindFileExtension_
+  commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindFileExtension
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindFileExtension
+  nameWithType: ConfigurationExtensions.FindFileExtension
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindLanguage(Vasont.Inspire.SDK.InspireClient,System.String)
+  name: FindLanguage(InspireClient, String)
+  href: sdk/Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_FindLanguage_Vasont_Inspire_SDK_InspireClient_System_String_
+  commentId: M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindLanguage(Vasont.Inspire.SDK.InspireClient,System.String)
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindLanguage(Vasont.Inspire.SDK.InspireClient, System.String)
+  nameWithType: ConfigurationExtensions.FindLanguage(InspireClient, String)
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindLanguage*
+  name: FindLanguage
+  href: sdk/Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_FindLanguage_
+  commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindLanguage
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindLanguage
+  nameWithType: ConfigurationExtensions.FindLanguage
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindLanguages(Vasont.Inspire.SDK.InspireClient,System.Boolean)
+  name: FindLanguages(InspireClient, Boolean)
+  href: sdk/Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_FindLanguages_Vasont_Inspire_SDK_InspireClient_System_Boolean_
+  commentId: M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindLanguages(Vasont.Inspire.SDK.InspireClient,System.Boolean)
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindLanguages(Vasont.Inspire.SDK.InspireClient, System.Boolean)
+  nameWithType: ConfigurationExtensions.FindLanguages(InspireClient, Boolean)
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindLanguages*
+  name: FindLanguages
+  href: sdk/Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_FindLanguages_
+  commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindLanguages
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindLanguages
+  nameWithType: ConfigurationExtensions.FindLanguages
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindProfileAttribute(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  name: FindProfileAttribute(InspireClient, Int64)
+  href: sdk/Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_FindProfileAttribute_Vasont_Inspire_SDK_InspireClient_System_Int64_
+  commentId: M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindProfileAttribute(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindProfileAttribute(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  nameWithType: ConfigurationExtensions.FindProfileAttribute(InspireClient, Int64)
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindProfileAttribute*
+  name: FindProfileAttribute
+  href: sdk/Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_FindProfileAttribute_
+  commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindProfileAttribute
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindProfileAttribute
+  nameWithType: ConfigurationExtensions.FindProfileAttribute
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindProjectActivity(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  name: FindProjectActivity(InspireClient, Int64)
+  href: sdk/Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_FindProjectActivity_Vasont_Inspire_SDK_InspireClient_System_Int64_
+  commentId: M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindProjectActivity(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindProjectActivity(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  nameWithType: ConfigurationExtensions.FindProjectActivity(InspireClient, Int64)
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindProjectActivity*
+  name: FindProjectActivity
+  href: sdk/Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_FindProjectActivity_
+  commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindProjectActivity
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindProjectActivity
+  nameWithType: ConfigurationExtensions.FindProjectActivity
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindRelation(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  name: FindRelation(InspireClient, Int64)
+  href: sdk/Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_FindRelation_Vasont_Inspire_SDK_InspireClient_System_Int64_
+  commentId: M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindRelation(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindRelation(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  nameWithType: ConfigurationExtensions.FindRelation(InspireClient, Int64)
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindRelation*
+  name: FindRelation
+  href: sdk/Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_FindRelation_
+  commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindRelation
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindRelation
+  nameWithType: ConfigurationExtensions.FindRelation
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindTag(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  name: FindTag(InspireClient, Int64)
+  href: sdk/Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_FindTag_Vasont_Inspire_SDK_InspireClient_System_Int64_
+  commentId: M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindTag(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindTag(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  nameWithType: ConfigurationExtensions.FindTag(InspireClient, Int64)
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindTag*
+  name: FindTag
+  href: sdk/Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_FindTag_
+  commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindTag
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindTag
+  nameWithType: ConfigurationExtensions.FindTag
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindWebHookConfiguration(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  name: FindWebHookConfiguration(InspireClient, Int64)
+  href: sdk/Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_FindWebHookConfiguration_Vasont_Inspire_SDK_InspireClient_System_Int64_
+  commentId: M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindWebHookConfiguration(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindWebHookConfiguration(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  nameWithType: ConfigurationExtensions.FindWebHookConfiguration(InspireClient, Int64)
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindWebHookConfiguration*
+  name: FindWebHookConfiguration
+  href: sdk/Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_FindWebHookConfiguration_
+  commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindWebHookConfiguration
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindWebHookConfiguration
+  nameWithType: ConfigurationExtensions.FindWebHookConfiguration
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindXmlLinkType(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  name: FindXmlLinkType(InspireClient, Int64)
+  href: sdk/Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_FindXmlLinkType_Vasont_Inspire_SDK_InspireClient_System_Int64_
+  commentId: M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindXmlLinkType(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindXmlLinkType(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  nameWithType: ConfigurationExtensions.FindXmlLinkType(InspireClient, Int64)
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindXmlLinkType*
+  name: FindXmlLinkType
+  href: sdk/Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_FindXmlLinkType_
+  commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindXmlLinkType
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindXmlLinkType
+  nameWithType: ConfigurationExtensions.FindXmlLinkType
 - uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetAttribute(Vasont.Inspire.SDK.InspireClient,System.Int64)
   name: GetAttribute(InspireClient, Int64)
   href: sdk/Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_GetAttribute_Vasont_Inspire_SDK_InspireClient_System_Int64_
@@ -1438,6 +1973,188 @@ references:
   isSpec: "True"
   fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RemoveXmlLinkType
   nameWithType: ConfigurationExtensions.RemoveXmlLinkType
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveAttributes(Vasont.Inspire.SDK.InspireClient)
+  name: RetrieveAttributes(InspireClient)
+  href: sdk/Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_RetrieveAttributes_Vasont_Inspire_SDK_InspireClient_
+  commentId: M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveAttributes(Vasont.Inspire.SDK.InspireClient)
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveAttributes(Vasont.Inspire.SDK.InspireClient)
+  nameWithType: ConfigurationExtensions.RetrieveAttributes(InspireClient)
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveAttributes*
+  name: RetrieveAttributes
+  href: sdk/Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_RetrieveAttributes_
+  commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveAttributes
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveAttributes
+  nameWithType: ConfigurationExtensions.RetrieveAttributes
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveComponentTypes(Vasont.Inspire.SDK.InspireClient)
+  name: RetrieveComponentTypes(InspireClient)
+  href: sdk/Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_RetrieveComponentTypes_Vasont_Inspire_SDK_InspireClient_
+  commentId: M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveComponentTypes(Vasont.Inspire.SDK.InspireClient)
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveComponentTypes(Vasont.Inspire.SDK.InspireClient)
+  nameWithType: ConfigurationExtensions.RetrieveComponentTypes(InspireClient)
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveComponentTypes*
+  name: RetrieveComponentTypes
+  href: sdk/Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_RetrieveComponentTypes_
+  commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveComponentTypes
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveComponentTypes
+  nameWithType: ConfigurationExtensions.RetrieveComponentTypes
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveElements(Vasont.Inspire.SDK.InspireClient)
+  name: RetrieveElements(InspireClient)
+  href: sdk/Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_RetrieveElements_Vasont_Inspire_SDK_InspireClient_
+  commentId: M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveElements(Vasont.Inspire.SDK.InspireClient)
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveElements(Vasont.Inspire.SDK.InspireClient)
+  nameWithType: ConfigurationExtensions.RetrieveElements(InspireClient)
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveElements*
+  name: RetrieveElements
+  href: sdk/Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_RetrieveElements_
+  commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveElements
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveElements
+  nameWithType: ConfigurationExtensions.RetrieveElements
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveExportPlugins(Vasont.Inspire.SDK.InspireClient)
+  name: RetrieveExportPlugins(InspireClient)
+  href: sdk/Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_RetrieveExportPlugins_Vasont_Inspire_SDK_InspireClient_
+  commentId: M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveExportPlugins(Vasont.Inspire.SDK.InspireClient)
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveExportPlugins(Vasont.Inspire.SDK.InspireClient)
+  nameWithType: ConfigurationExtensions.RetrieveExportPlugins(InspireClient)
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveExportPlugins*
+  name: RetrieveExportPlugins
+  href: sdk/Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_RetrieveExportPlugins_
+  commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveExportPlugins
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveExportPlugins
+  nameWithType: ConfigurationExtensions.RetrieveExportPlugins
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveExports(Vasont.Inspire.SDK.InspireClient)
+  name: RetrieveExports(InspireClient)
+  href: sdk/Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_RetrieveExports_Vasont_Inspire_SDK_InspireClient_
+  commentId: M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveExports(Vasont.Inspire.SDK.InspireClient)
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveExports(Vasont.Inspire.SDK.InspireClient)
+  nameWithType: ConfigurationExtensions.RetrieveExports(InspireClient)
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveExports*
+  name: RetrieveExports
+  href: sdk/Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_RetrieveExports_
+  commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveExports
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveExports
+  nameWithType: ConfigurationExtensions.RetrieveExports
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveFileExtensions(Vasont.Inspire.SDK.InspireClient)
+  name: RetrieveFileExtensions(InspireClient)
+  href: sdk/Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_RetrieveFileExtensions_Vasont_Inspire_SDK_InspireClient_
+  commentId: M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveFileExtensions(Vasont.Inspire.SDK.InspireClient)
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveFileExtensions(Vasont.Inspire.SDK.InspireClient)
+  nameWithType: ConfigurationExtensions.RetrieveFileExtensions(InspireClient)
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveFileExtensions*
+  name: RetrieveFileExtensions
+  href: sdk/Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_RetrieveFileExtensions_
+  commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveFileExtensions
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveFileExtensions
+  nameWithType: ConfigurationExtensions.RetrieveFileExtensions
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveLinkMethods(Vasont.Inspire.SDK.InspireClient)
+  name: RetrieveLinkMethods(InspireClient)
+  href: sdk/Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_RetrieveLinkMethods_Vasont_Inspire_SDK_InspireClient_
+  commentId: M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveLinkMethods(Vasont.Inspire.SDK.InspireClient)
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveLinkMethods(Vasont.Inspire.SDK.InspireClient)
+  nameWithType: ConfigurationExtensions.RetrieveLinkMethods(InspireClient)
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveLinkMethods*
+  name: RetrieveLinkMethods
+  href: sdk/Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_RetrieveLinkMethods_
+  commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveLinkMethods
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveLinkMethods
+  nameWithType: ConfigurationExtensions.RetrieveLinkMethods
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveProfileAttributeItems(Vasont.Inspire.SDK.InspireClient)
+  name: RetrieveProfileAttributeItems(InspireClient)
+  href: sdk/Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_RetrieveProfileAttributeItems_Vasont_Inspire_SDK_InspireClient_
+  commentId: M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveProfileAttributeItems(Vasont.Inspire.SDK.InspireClient)
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveProfileAttributeItems(Vasont.Inspire.SDK.InspireClient)
+  nameWithType: ConfigurationExtensions.RetrieveProfileAttributeItems(InspireClient)
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveProfileAttributeItems*
+  name: RetrieveProfileAttributeItems
+  href: sdk/Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_RetrieveProfileAttributeItems_
+  commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveProfileAttributeItems
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveProfileAttributeItems
+  nameWithType: ConfigurationExtensions.RetrieveProfileAttributeItems
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveProfileAttributes(Vasont.Inspire.SDK.InspireClient)
+  name: RetrieveProfileAttributes(InspireClient)
+  href: sdk/Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_RetrieveProfileAttributes_Vasont_Inspire_SDK_InspireClient_
+  commentId: M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveProfileAttributes(Vasont.Inspire.SDK.InspireClient)
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveProfileAttributes(Vasont.Inspire.SDK.InspireClient)
+  nameWithType: ConfigurationExtensions.RetrieveProfileAttributes(InspireClient)
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveProfileAttributes*
+  name: RetrieveProfileAttributes
+  href: sdk/Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_RetrieveProfileAttributes_
+  commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveProfileAttributes
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveProfileAttributes
+  nameWithType: ConfigurationExtensions.RetrieveProfileAttributes
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveProjectActivities(Vasont.Inspire.SDK.InspireClient)
+  name: RetrieveProjectActivities(InspireClient)
+  href: sdk/Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_RetrieveProjectActivities_Vasont_Inspire_SDK_InspireClient_
+  commentId: M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveProjectActivities(Vasont.Inspire.SDK.InspireClient)
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveProjectActivities(Vasont.Inspire.SDK.InspireClient)
+  nameWithType: ConfigurationExtensions.RetrieveProjectActivities(InspireClient)
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveProjectActivities*
+  name: RetrieveProjectActivities
+  href: sdk/Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_RetrieveProjectActivities_
+  commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveProjectActivities
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveProjectActivities
+  nameWithType: ConfigurationExtensions.RetrieveProjectActivities
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveRelations(Vasont.Inspire.SDK.InspireClient)
+  name: RetrieveRelations(InspireClient)
+  href: sdk/Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_RetrieveRelations_Vasont_Inspire_SDK_InspireClient_
+  commentId: M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveRelations(Vasont.Inspire.SDK.InspireClient)
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveRelations(Vasont.Inspire.SDK.InspireClient)
+  nameWithType: ConfigurationExtensions.RetrieveRelations(InspireClient)
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveRelations*
+  name: RetrieveRelations
+  href: sdk/Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_RetrieveRelations_
+  commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveRelations
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveRelations
+  nameWithType: ConfigurationExtensions.RetrieveRelations
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveSchemaStandards(Vasont.Inspire.SDK.InspireClient)
+  name: RetrieveSchemaStandards(InspireClient)
+  href: sdk/Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_RetrieveSchemaStandards_Vasont_Inspire_SDK_InspireClient_
+  commentId: M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveSchemaStandards(Vasont.Inspire.SDK.InspireClient)
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveSchemaStandards(Vasont.Inspire.SDK.InspireClient)
+  nameWithType: ConfigurationExtensions.RetrieveSchemaStandards(InspireClient)
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveSchemaStandards*
+  name: RetrieveSchemaStandards
+  href: sdk/Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_RetrieveSchemaStandards_
+  commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveSchemaStandards
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveSchemaStandards
+  nameWithType: ConfigurationExtensions.RetrieveSchemaStandards
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveWebHookConfigurations(Vasont.Inspire.SDK.InspireClient)
+  name: RetrieveWebHookConfigurations(InspireClient)
+  href: sdk/Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_RetrieveWebHookConfigurations_Vasont_Inspire_SDK_InspireClient_
+  commentId: M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveWebHookConfigurations(Vasont.Inspire.SDK.InspireClient)
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveWebHookConfigurations(Vasont.Inspire.SDK.InspireClient)
+  nameWithType: ConfigurationExtensions.RetrieveWebHookConfigurations(InspireClient)
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveWebHookConfigurations*
+  name: RetrieveWebHookConfigurations
+  href: sdk/Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_RetrieveWebHookConfigurations_
+  commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveWebHookConfigurations
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveWebHookConfigurations
+  nameWithType: ConfigurationExtensions.RetrieveWebHookConfigurations
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveXmlLinkTypes(Vasont.Inspire.SDK.InspireClient)
+  name: RetrieveXmlLinkTypes(InspireClient)
+  href: sdk/Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_RetrieveXmlLinkTypes_Vasont_Inspire_SDK_InspireClient_
+  commentId: M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveXmlLinkTypes(Vasont.Inspire.SDK.InspireClient)
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveXmlLinkTypes(Vasont.Inspire.SDK.InspireClient)
+  nameWithType: ConfigurationExtensions.RetrieveXmlLinkTypes(InspireClient)
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveXmlLinkTypes*
+  name: RetrieveXmlLinkTypes
+  href: sdk/Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_RetrieveXmlLinkTypes_
+  commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveXmlLinkTypes
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveXmlLinkTypes
+  nameWithType: ConfigurationExtensions.RetrieveXmlLinkTypes
 - uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.UpdateAttribute(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Configuration.AttributeModel)
   name: UpdateAttribute(InspireClient, AttributeModel)
   href: sdk/Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html#Vasont_Inspire_SDK_Configuration_ConfigurationExtensions_UpdateAttribute_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Configuration_AttributeModel_
@@ -1645,6 +2362,58 @@ references:
   isSpec: "True"
   fullName: Vasont.Inspire.SDK.Folders.FolderExtensions.ExportFolder
   nameWithType: FolderExtensions.ExportFolder
+- uid: Vasont.Inspire.SDK.Folders.FolderExtensions.FindAncestorSiblingFoldersByFolderId(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  name: FindAncestorSiblingFoldersByFolderId(InspireClient, Int64)
+  href: sdk/Vasont.Inspire.SDK.Folders.FolderExtensions.html#Vasont_Inspire_SDK_Folders_FolderExtensions_FindAncestorSiblingFoldersByFolderId_Vasont_Inspire_SDK_InspireClient_System_Int64_
+  commentId: M:Vasont.Inspire.SDK.Folders.FolderExtensions.FindAncestorSiblingFoldersByFolderId(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  fullName: Vasont.Inspire.SDK.Folders.FolderExtensions.FindAncestorSiblingFoldersByFolderId(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  nameWithType: FolderExtensions.FindAncestorSiblingFoldersByFolderId(InspireClient, Int64)
+- uid: Vasont.Inspire.SDK.Folders.FolderExtensions.FindAncestorSiblingFoldersByFolderId*
+  name: FindAncestorSiblingFoldersByFolderId
+  href: sdk/Vasont.Inspire.SDK.Folders.FolderExtensions.html#Vasont_Inspire_SDK_Folders_FolderExtensions_FindAncestorSiblingFoldersByFolderId_
+  commentId: Overload:Vasont.Inspire.SDK.Folders.FolderExtensions.FindAncestorSiblingFoldersByFolderId
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Folders.FolderExtensions.FindAncestorSiblingFoldersByFolderId
+  nameWithType: FolderExtensions.FindAncestorSiblingFoldersByFolderId
+- uid: Vasont.Inspire.SDK.Folders.FolderExtensions.FindComponentsByFolderId(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Components.FolderComponentsQueryModel)
+  name: FindComponentsByFolderId(InspireClient, Int64, FolderComponentsQueryModel)
+  href: sdk/Vasont.Inspire.SDK.Folders.FolderExtensions.html#Vasont_Inspire_SDK_Folders_FolderExtensions_FindComponentsByFolderId_Vasont_Inspire_SDK_InspireClient_System_Int64_Vasont_Inspire_Models_Components_FolderComponentsQueryModel_
+  commentId: M:Vasont.Inspire.SDK.Folders.FolderExtensions.FindComponentsByFolderId(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Components.FolderComponentsQueryModel)
+  fullName: Vasont.Inspire.SDK.Folders.FolderExtensions.FindComponentsByFolderId(Vasont.Inspire.SDK.InspireClient, System.Int64, Vasont.Inspire.Models.Components.FolderComponentsQueryModel)
+  nameWithType: FolderExtensions.FindComponentsByFolderId(InspireClient, Int64, FolderComponentsQueryModel)
+- uid: Vasont.Inspire.SDK.Folders.FolderExtensions.FindComponentsByFolderId*
+  name: FindComponentsByFolderId
+  href: sdk/Vasont.Inspire.SDK.Folders.FolderExtensions.html#Vasont_Inspire_SDK_Folders_FolderExtensions_FindComponentsByFolderId_
+  commentId: Overload:Vasont.Inspire.SDK.Folders.FolderExtensions.FindComponentsByFolderId
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Folders.FolderExtensions.FindComponentsByFolderId
+  nameWithType: FolderExtensions.FindComponentsByFolderId
+- uid: Vasont.Inspire.SDK.Folders.FolderExtensions.FindFolderPermissions(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  name: FindFolderPermissions(InspireClient, Int64)
+  href: sdk/Vasont.Inspire.SDK.Folders.FolderExtensions.html#Vasont_Inspire_SDK_Folders_FolderExtensions_FindFolderPermissions_Vasont_Inspire_SDK_InspireClient_System_Int64_
+  commentId: M:Vasont.Inspire.SDK.Folders.FolderExtensions.FindFolderPermissions(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  fullName: Vasont.Inspire.SDK.Folders.FolderExtensions.FindFolderPermissions(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  nameWithType: FolderExtensions.FindFolderPermissions(InspireClient, Int64)
+- uid: Vasont.Inspire.SDK.Folders.FolderExtensions.FindFolderPermissions*
+  name: FindFolderPermissions
+  href: sdk/Vasont.Inspire.SDK.Folders.FolderExtensions.html#Vasont_Inspire_SDK_Folders_FolderExtensions_FindFolderPermissions_
+  commentId: Overload:Vasont.Inspire.SDK.Folders.FolderExtensions.FindFolderPermissions
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Folders.FolderExtensions.FindFolderPermissions
+  nameWithType: FolderExtensions.FindFolderPermissions
+- uid: Vasont.Inspire.SDK.Folders.FolderExtensions.FindFoldersByFolderId(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Boolean,Vasont.Inspire.Models.Security.PermissionFlags)
+  name: FindFoldersByFolderId(InspireClient, Int64, Boolean, PermissionFlags)
+  href: sdk/Vasont.Inspire.SDK.Folders.FolderExtensions.html#Vasont_Inspire_SDK_Folders_FolderExtensions_FindFoldersByFolderId_Vasont_Inspire_SDK_InspireClient_System_Int64_System_Boolean_Vasont_Inspire_Models_Security_PermissionFlags_
+  commentId: M:Vasont.Inspire.SDK.Folders.FolderExtensions.FindFoldersByFolderId(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Boolean,Vasont.Inspire.Models.Security.PermissionFlags)
+  fullName: Vasont.Inspire.SDK.Folders.FolderExtensions.FindFoldersByFolderId(Vasont.Inspire.SDK.InspireClient, System.Int64, System.Boolean, Vasont.Inspire.Models.Security.PermissionFlags)
+  nameWithType: FolderExtensions.FindFoldersByFolderId(InspireClient, Int64, Boolean, PermissionFlags)
+- uid: Vasont.Inspire.SDK.Folders.FolderExtensions.FindFoldersByFolderId*
+  name: FindFoldersByFolderId
+  href: sdk/Vasont.Inspire.SDK.Folders.FolderExtensions.html#Vasont_Inspire_SDK_Folders_FolderExtensions_FindFoldersByFolderId_
+  commentId: Overload:Vasont.Inspire.SDK.Folders.FolderExtensions.FindFoldersByFolderId
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Folders.FolderExtensions.FindFoldersByFolderId
+  nameWithType: FolderExtensions.FindFoldersByFolderId
 - uid: Vasont.Inspire.SDK.Folders.FolderExtensions.GetAncestorSiblingFoldersByFolderId(Vasont.Inspire.SDK.InspireClient,System.Int64)
   name: GetAncestorSiblingFoldersByFolderId(InspireClient, Int64)
   href: sdk/Vasont.Inspire.SDK.Folders.FolderExtensions.html#Vasont_Inspire_SDK_Folders_FolderExtensions_GetAncestorSiblingFoldersByFolderId_Vasont_Inspire_SDK_InspireClient_System_Int64_
@@ -2444,6 +3213,58 @@ references:
   isSpec: "True"
   fullName: Vasont.Inspire.SDK.Projects.ProjectExtensions.ExportComponents
   nameWithType: ProjectExtensions.ExportComponents
+- uid: Vasont.Inspire.SDK.Projects.ProjectExtensions.FindAvailableParticipants(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  name: FindAvailableParticipants(InspireClient, Int64)
+  href: sdk/Vasont.Inspire.SDK.Projects.ProjectExtensions.html#Vasont_Inspire_SDK_Projects_ProjectExtensions_FindAvailableParticipants_Vasont_Inspire_SDK_InspireClient_System_Int64_
+  commentId: M:Vasont.Inspire.SDK.Projects.ProjectExtensions.FindAvailableParticipants(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  fullName: Vasont.Inspire.SDK.Projects.ProjectExtensions.FindAvailableParticipants(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  nameWithType: ProjectExtensions.FindAvailableParticipants(InspireClient, Int64)
+- uid: Vasont.Inspire.SDK.Projects.ProjectExtensions.FindAvailableParticipants*
+  name: FindAvailableParticipants
+  href: sdk/Vasont.Inspire.SDK.Projects.ProjectExtensions.html#Vasont_Inspire_SDK_Projects_ProjectExtensions_FindAvailableParticipants_
+  commentId: Overload:Vasont.Inspire.SDK.Projects.ProjectExtensions.FindAvailableParticipants
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Projects.ProjectExtensions.FindAvailableParticipants
+  nameWithType: ProjectExtensions.FindAvailableParticipants
+- uid: Vasont.Inspire.SDK.Projects.ProjectExtensions.FindProject(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  name: FindProject(InspireClient, Int64)
+  href: sdk/Vasont.Inspire.SDK.Projects.ProjectExtensions.html#Vasont_Inspire_SDK_Projects_ProjectExtensions_FindProject_Vasont_Inspire_SDK_InspireClient_System_Int64_
+  commentId: M:Vasont.Inspire.SDK.Projects.ProjectExtensions.FindProject(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  fullName: Vasont.Inspire.SDK.Projects.ProjectExtensions.FindProject(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  nameWithType: ProjectExtensions.FindProject(InspireClient, Int64)
+- uid: Vasont.Inspire.SDK.Projects.ProjectExtensions.FindProject*
+  name: FindProject
+  href: sdk/Vasont.Inspire.SDK.Projects.ProjectExtensions.html#Vasont_Inspire_SDK_Projects_ProjectExtensions_FindProject_
+  commentId: Overload:Vasont.Inspire.SDK.Projects.ProjectExtensions.FindProject
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Projects.ProjectExtensions.FindProject
+  nameWithType: ProjectExtensions.FindProject
+- uid: Vasont.Inspire.SDK.Projects.ProjectExtensions.FindProjectAssignments(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  name: FindProjectAssignments(InspireClient, Int64)
+  href: sdk/Vasont.Inspire.SDK.Projects.ProjectExtensions.html#Vasont_Inspire_SDK_Projects_ProjectExtensions_FindProjectAssignments_Vasont_Inspire_SDK_InspireClient_System_Int64_
+  commentId: M:Vasont.Inspire.SDK.Projects.ProjectExtensions.FindProjectAssignments(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  fullName: Vasont.Inspire.SDK.Projects.ProjectExtensions.FindProjectAssignments(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  nameWithType: ProjectExtensions.FindProjectAssignments(InspireClient, Int64)
+- uid: Vasont.Inspire.SDK.Projects.ProjectExtensions.FindProjectAssignments*
+  name: FindProjectAssignments
+  href: sdk/Vasont.Inspire.SDK.Projects.ProjectExtensions.html#Vasont_Inspire_SDK_Projects_ProjectExtensions_FindProjectAssignments_
+  commentId: Overload:Vasont.Inspire.SDK.Projects.ProjectExtensions.FindProjectAssignments
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Projects.ProjectExtensions.FindProjectAssignments
+  nameWithType: ProjectExtensions.FindProjectAssignments
+- uid: Vasont.Inspire.SDK.Projects.ProjectExtensions.FindRecentlyOpenedProjects(Vasont.Inspire.SDK.InspireClient,System.Int32)
+  name: FindRecentlyOpenedProjects(InspireClient, Int32)
+  href: sdk/Vasont.Inspire.SDK.Projects.ProjectExtensions.html#Vasont_Inspire_SDK_Projects_ProjectExtensions_FindRecentlyOpenedProjects_Vasont_Inspire_SDK_InspireClient_System_Int32_
+  commentId: M:Vasont.Inspire.SDK.Projects.ProjectExtensions.FindRecentlyOpenedProjects(Vasont.Inspire.SDK.InspireClient,System.Int32)
+  fullName: Vasont.Inspire.SDK.Projects.ProjectExtensions.FindRecentlyOpenedProjects(Vasont.Inspire.SDK.InspireClient, System.Int32)
+  nameWithType: ProjectExtensions.FindRecentlyOpenedProjects(InspireClient, Int32)
+- uid: Vasont.Inspire.SDK.Projects.ProjectExtensions.FindRecentlyOpenedProjects*
+  name: FindRecentlyOpenedProjects
+  href: sdk/Vasont.Inspire.SDK.Projects.ProjectExtensions.html#Vasont_Inspire_SDK_Projects_ProjectExtensions_FindRecentlyOpenedProjects_
+  commentId: Overload:Vasont.Inspire.SDK.Projects.ProjectExtensions.FindRecentlyOpenedProjects
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Projects.ProjectExtensions.FindRecentlyOpenedProjects
+  nameWithType: ProjectExtensions.FindRecentlyOpenedProjects
 - uid: Vasont.Inspire.SDK.Projects.ProjectExtensions.GetActivities(Vasont.Inspire.SDK.InspireClient)
   name: GetActivities(InspireClient)
   href: sdk/Vasont.Inspire.SDK.Projects.ProjectExtensions.html#Vasont_Inspire_SDK_Projects_ProjectExtensions_GetActivities_Vasont_Inspire_SDK_InspireClient_
@@ -2561,6 +3382,45 @@ references:
   isSpec: "True"
   fullName: Vasont.Inspire.SDK.Projects.ProjectExtensions.RenameProjectFolder
   nameWithType: ProjectExtensions.RenameProjectFolder
+- uid: Vasont.Inspire.SDK.Projects.ProjectExtensions.RetrieveActivities(Vasont.Inspire.SDK.InspireClient)
+  name: RetrieveActivities(InspireClient)
+  href: sdk/Vasont.Inspire.SDK.Projects.ProjectExtensions.html#Vasont_Inspire_SDK_Projects_ProjectExtensions_RetrieveActivities_Vasont_Inspire_SDK_InspireClient_
+  commentId: M:Vasont.Inspire.SDK.Projects.ProjectExtensions.RetrieveActivities(Vasont.Inspire.SDK.InspireClient)
+  fullName: Vasont.Inspire.SDK.Projects.ProjectExtensions.RetrieveActivities(Vasont.Inspire.SDK.InspireClient)
+  nameWithType: ProjectExtensions.RetrieveActivities(InspireClient)
+- uid: Vasont.Inspire.SDK.Projects.ProjectExtensions.RetrieveActivities*
+  name: RetrieveActivities
+  href: sdk/Vasont.Inspire.SDK.Projects.ProjectExtensions.html#Vasont_Inspire_SDK_Projects_ProjectExtensions_RetrieveActivities_
+  commentId: Overload:Vasont.Inspire.SDK.Projects.ProjectExtensions.RetrieveActivities
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Projects.ProjectExtensions.RetrieveActivities
+  nameWithType: ProjectExtensions.RetrieveActivities
+- uid: Vasont.Inspire.SDK.Projects.ProjectExtensions.RetrieveAssignedProjects(Vasont.Inspire.SDK.InspireClient)
+  name: RetrieveAssignedProjects(InspireClient)
+  href: sdk/Vasont.Inspire.SDK.Projects.ProjectExtensions.html#Vasont_Inspire_SDK_Projects_ProjectExtensions_RetrieveAssignedProjects_Vasont_Inspire_SDK_InspireClient_
+  commentId: M:Vasont.Inspire.SDK.Projects.ProjectExtensions.RetrieveAssignedProjects(Vasont.Inspire.SDK.InspireClient)
+  fullName: Vasont.Inspire.SDK.Projects.ProjectExtensions.RetrieveAssignedProjects(Vasont.Inspire.SDK.InspireClient)
+  nameWithType: ProjectExtensions.RetrieveAssignedProjects(InspireClient)
+- uid: Vasont.Inspire.SDK.Projects.ProjectExtensions.RetrieveAssignedProjects*
+  name: RetrieveAssignedProjects
+  href: sdk/Vasont.Inspire.SDK.Projects.ProjectExtensions.html#Vasont_Inspire_SDK_Projects_ProjectExtensions_RetrieveAssignedProjects_
+  commentId: Overload:Vasont.Inspire.SDK.Projects.ProjectExtensions.RetrieveAssignedProjects
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Projects.ProjectExtensions.RetrieveAssignedProjects
+  nameWithType: ProjectExtensions.RetrieveAssignedProjects
+- uid: Vasont.Inspire.SDK.Projects.ProjectExtensions.RetrieveProjects(Vasont.Inspire.SDK.InspireClient)
+  name: RetrieveProjects(InspireClient)
+  href: sdk/Vasont.Inspire.SDK.Projects.ProjectExtensions.html#Vasont_Inspire_SDK_Projects_ProjectExtensions_RetrieveProjects_Vasont_Inspire_SDK_InspireClient_
+  commentId: M:Vasont.Inspire.SDK.Projects.ProjectExtensions.RetrieveProjects(Vasont.Inspire.SDK.InspireClient)
+  fullName: Vasont.Inspire.SDK.Projects.ProjectExtensions.RetrieveProjects(Vasont.Inspire.SDK.InspireClient)
+  nameWithType: ProjectExtensions.RetrieveProjects(InspireClient)
+- uid: Vasont.Inspire.SDK.Projects.ProjectExtensions.RetrieveProjects*
+  name: RetrieveProjects
+  href: sdk/Vasont.Inspire.SDK.Projects.ProjectExtensions.html#Vasont_Inspire_SDK_Projects_ProjectExtensions_RetrieveProjects_
+  commentId: Overload:Vasont.Inspire.SDK.Projects.ProjectExtensions.RetrieveProjects
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Projects.ProjectExtensions.RetrieveProjects
+  nameWithType: ProjectExtensions.RetrieveProjects
 - uid: Vasont.Inspire.SDK.Projects.ProjectExtensions.UpdateProject(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Projects.ProjectModel)
   name: UpdateProject(InspireClient, Int64, ProjectModel)
   href: sdk/Vasont.Inspire.SDK.Projects.ProjectExtensions.html#Vasont_Inspire_SDK_Projects_ProjectExtensions_UpdateProject_Vasont_Inspire_SDK_InspireClient_System_Int64_Vasont_Inspire_Models_Projects_ProjectModel_
@@ -2693,6 +3553,97 @@ references:
   isSpec: "True"
   fullName: Vasont.Inspire.SDK.Review.ReviewExtensions.DeleteReview
   nameWithType: ReviewExtensions.DeleteReview
+- uid: Vasont.Inspire.SDK.Review.ReviewExtensions.FindChangedReviewComponents(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Reviews.ReviewChangedComponentQueryModel)
+  name: FindChangedReviewComponents(InspireClient, ReviewChangedComponentQueryModel)
+  href: sdk/Vasont.Inspire.SDK.Review.ReviewExtensions.html#Vasont_Inspire_SDK_Review_ReviewExtensions_FindChangedReviewComponents_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Reviews_ReviewChangedComponentQueryModel_
+  commentId: M:Vasont.Inspire.SDK.Review.ReviewExtensions.FindChangedReviewComponents(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Reviews.ReviewChangedComponentQueryModel)
+  fullName: Vasont.Inspire.SDK.Review.ReviewExtensions.FindChangedReviewComponents(Vasont.Inspire.SDK.InspireClient, Vasont.Inspire.Models.Reviews.ReviewChangedComponentQueryModel)
+  nameWithType: ReviewExtensions.FindChangedReviewComponents(InspireClient, ReviewChangedComponentQueryModel)
+- uid: Vasont.Inspire.SDK.Review.ReviewExtensions.FindChangedReviewComponents*
+  name: FindChangedReviewComponents
+  href: sdk/Vasont.Inspire.SDK.Review.ReviewExtensions.html#Vasont_Inspire_SDK_Review_ReviewExtensions_FindChangedReviewComponents_
+  commentId: Overload:Vasont.Inspire.SDK.Review.ReviewExtensions.FindChangedReviewComponents
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Review.ReviewExtensions.FindChangedReviewComponents
+  nameWithType: ReviewExtensions.FindChangedReviewComponents
+- uid: Vasont.Inspire.SDK.Review.ReviewExtensions.FindReview(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  name: FindReview(InspireClient, Int64)
+  href: sdk/Vasont.Inspire.SDK.Review.ReviewExtensions.html#Vasont_Inspire_SDK_Review_ReviewExtensions_FindReview_Vasont_Inspire_SDK_InspireClient_System_Int64_
+  commentId: M:Vasont.Inspire.SDK.Review.ReviewExtensions.FindReview(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  fullName: Vasont.Inspire.SDK.Review.ReviewExtensions.FindReview(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  nameWithType: ReviewExtensions.FindReview(InspireClient, Int64)
+- uid: Vasont.Inspire.SDK.Review.ReviewExtensions.FindReview*
+  name: FindReview
+  href: sdk/Vasont.Inspire.SDK.Review.ReviewExtensions.html#Vasont_Inspire_SDK_Review_ReviewExtensions_FindReview_
+  commentId: Overload:Vasont.Inspire.SDK.Review.ReviewExtensions.FindReview
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Review.ReviewExtensions.FindReview
+  nameWithType: ReviewExtensions.FindReview
+- uid: Vasont.Inspire.SDK.Review.ReviewExtensions.FindReviewComponent(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Int64)
+  name: FindReviewComponent(InspireClient, Int64, Int64)
+  href: sdk/Vasont.Inspire.SDK.Review.ReviewExtensions.html#Vasont_Inspire_SDK_Review_ReviewExtensions_FindReviewComponent_Vasont_Inspire_SDK_InspireClient_System_Int64_System_Int64_
+  commentId: M:Vasont.Inspire.SDK.Review.ReviewExtensions.FindReviewComponent(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Int64)
+  fullName: Vasont.Inspire.SDK.Review.ReviewExtensions.FindReviewComponent(Vasont.Inspire.SDK.InspireClient, System.Int64, System.Int64)
+  nameWithType: ReviewExtensions.FindReviewComponent(InspireClient, Int64, Int64)
+- uid: Vasont.Inspire.SDK.Review.ReviewExtensions.FindReviewComponent*
+  name: FindReviewComponent
+  href: sdk/Vasont.Inspire.SDK.Review.ReviewExtensions.html#Vasont_Inspire_SDK_Review_ReviewExtensions_FindReviewComponent_
+  commentId: Overload:Vasont.Inspire.SDK.Review.ReviewExtensions.FindReviewComponent
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Review.ReviewExtensions.FindReviewComponent
+  nameWithType: ReviewExtensions.FindReviewComponent
+- uid: Vasont.Inspire.SDK.Review.ReviewExtensions.FindReviewComponents(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  name: FindReviewComponents(InspireClient, Int64)
+  href: sdk/Vasont.Inspire.SDK.Review.ReviewExtensions.html#Vasont_Inspire_SDK_Review_ReviewExtensions_FindReviewComponents_Vasont_Inspire_SDK_InspireClient_System_Int64_
+  commentId: M:Vasont.Inspire.SDK.Review.ReviewExtensions.FindReviewComponents(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  fullName: Vasont.Inspire.SDK.Review.ReviewExtensions.FindReviewComponents(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  nameWithType: ReviewExtensions.FindReviewComponents(InspireClient, Int64)
+- uid: Vasont.Inspire.SDK.Review.ReviewExtensions.FindReviewComponents*
+  name: FindReviewComponents
+  href: sdk/Vasont.Inspire.SDK.Review.ReviewExtensions.html#Vasont_Inspire_SDK_Review_ReviewExtensions_FindReviewComponents_
+  commentId: Overload:Vasont.Inspire.SDK.Review.ReviewExtensions.FindReviewComponents
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Review.ReviewExtensions.FindReviewComponents
+  nameWithType: ReviewExtensions.FindReviewComponents
+- uid: Vasont.Inspire.SDK.Review.ReviewExtensions.FindReviewDetail(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  name: FindReviewDetail(InspireClient, Int64)
+  href: sdk/Vasont.Inspire.SDK.Review.ReviewExtensions.html#Vasont_Inspire_SDK_Review_ReviewExtensions_FindReviewDetail_Vasont_Inspire_SDK_InspireClient_System_Int64_
+  commentId: M:Vasont.Inspire.SDK.Review.ReviewExtensions.FindReviewDetail(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  fullName: Vasont.Inspire.SDK.Review.ReviewExtensions.FindReviewDetail(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  nameWithType: ReviewExtensions.FindReviewDetail(InspireClient, Int64)
+- uid: Vasont.Inspire.SDK.Review.ReviewExtensions.FindReviewDetail*
+  name: FindReviewDetail
+  href: sdk/Vasont.Inspire.SDK.Review.ReviewExtensions.html#Vasont_Inspire_SDK_Review_ReviewExtensions_FindReviewDetail_
+  commentId: Overload:Vasont.Inspire.SDK.Review.ReviewExtensions.FindReviewDetail
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Review.ReviewExtensions.FindReviewDetail
+  nameWithType: ReviewExtensions.FindReviewDetail
+- uid: Vasont.Inspire.SDK.Review.ReviewExtensions.FindReviewEdit(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  name: FindReviewEdit(InspireClient, Int64)
+  href: sdk/Vasont.Inspire.SDK.Review.ReviewExtensions.html#Vasont_Inspire_SDK_Review_ReviewExtensions_FindReviewEdit_Vasont_Inspire_SDK_InspireClient_System_Int64_
+  commentId: M:Vasont.Inspire.SDK.Review.ReviewExtensions.FindReviewEdit(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  fullName: Vasont.Inspire.SDK.Review.ReviewExtensions.FindReviewEdit(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  nameWithType: ReviewExtensions.FindReviewEdit(InspireClient, Int64)
+- uid: Vasont.Inspire.SDK.Review.ReviewExtensions.FindReviewEdit*
+  name: FindReviewEdit
+  href: sdk/Vasont.Inspire.SDK.Review.ReviewExtensions.html#Vasont_Inspire_SDK_Review_ReviewExtensions_FindReviewEdit_
+  commentId: Overload:Vasont.Inspire.SDK.Review.ReviewExtensions.FindReviewEdit
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Review.ReviewExtensions.FindReviewEdit
+  nameWithType: ReviewExtensions.FindReviewEdit
+- uid: Vasont.Inspire.SDK.Review.ReviewExtensions.FindReviews(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Reviews.ReviewBrowseQueryModel)
+  name: FindReviews(InspireClient, ReviewBrowseQueryModel)
+  href: sdk/Vasont.Inspire.SDK.Review.ReviewExtensions.html#Vasont_Inspire_SDK_Review_ReviewExtensions_FindReviews_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Reviews_ReviewBrowseQueryModel_
+  commentId: M:Vasont.Inspire.SDK.Review.ReviewExtensions.FindReviews(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Reviews.ReviewBrowseQueryModel)
+  fullName: Vasont.Inspire.SDK.Review.ReviewExtensions.FindReviews(Vasont.Inspire.SDK.InspireClient, Vasont.Inspire.Models.Reviews.ReviewBrowseQueryModel)
+  nameWithType: ReviewExtensions.FindReviews(InspireClient, ReviewBrowseQueryModel)
+- uid: Vasont.Inspire.SDK.Review.ReviewExtensions.FindReviews*
+  name: FindReviews
+  href: sdk/Vasont.Inspire.SDK.Review.ReviewExtensions.html#Vasont_Inspire_SDK_Review_ReviewExtensions_FindReviews_
+  commentId: Overload:Vasont.Inspire.SDK.Review.ReviewExtensions.FindReviews
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Review.ReviewExtensions.FindReviews
+  nameWithType: ReviewExtensions.FindReviews
 - uid: Vasont.Inspire.SDK.Review.ReviewExtensions.GetReview(Vasont.Inspire.SDK.InspireClient,System.Int64)
   name: GetReview(InspireClient, Int64)
   href: sdk/Vasont.Inspire.SDK.Review.ReviewExtensions.html#Vasont_Inspire_SDK_Review_ReviewExtensions_GetReview_Vasont_Inspire_SDK_InspireClient_System_Int64_
@@ -2797,6 +3748,32 @@ references:
   isSpec: "True"
   fullName: Vasont.Inspire.SDK.Review.ReviewExtensions.GetUserReviewAssignments
   nameWithType: ReviewExtensions.GetUserReviewAssignments
+- uid: Vasont.Inspire.SDK.Review.ReviewExtensions.RetrieveReviewCoordinators(Vasont.Inspire.SDK.InspireClient)
+  name: RetrieveReviewCoordinators(InspireClient)
+  href: sdk/Vasont.Inspire.SDK.Review.ReviewExtensions.html#Vasont_Inspire_SDK_Review_ReviewExtensions_RetrieveReviewCoordinators_Vasont_Inspire_SDK_InspireClient_
+  commentId: M:Vasont.Inspire.SDK.Review.ReviewExtensions.RetrieveReviewCoordinators(Vasont.Inspire.SDK.InspireClient)
+  fullName: Vasont.Inspire.SDK.Review.ReviewExtensions.RetrieveReviewCoordinators(Vasont.Inspire.SDK.InspireClient)
+  nameWithType: ReviewExtensions.RetrieveReviewCoordinators(InspireClient)
+- uid: Vasont.Inspire.SDK.Review.ReviewExtensions.RetrieveReviewCoordinators*
+  name: RetrieveReviewCoordinators
+  href: sdk/Vasont.Inspire.SDK.Review.ReviewExtensions.html#Vasont_Inspire_SDK_Review_ReviewExtensions_RetrieveReviewCoordinators_
+  commentId: Overload:Vasont.Inspire.SDK.Review.ReviewExtensions.RetrieveReviewCoordinators
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Review.ReviewExtensions.RetrieveReviewCoordinators
+  nameWithType: ReviewExtensions.RetrieveReviewCoordinators
+- uid: Vasont.Inspire.SDK.Review.ReviewExtensions.RetrieveUserReviewAssignments(Vasont.Inspire.SDK.InspireClient)
+  name: RetrieveUserReviewAssignments(InspireClient)
+  href: sdk/Vasont.Inspire.SDK.Review.ReviewExtensions.html#Vasont_Inspire_SDK_Review_ReviewExtensions_RetrieveUserReviewAssignments_Vasont_Inspire_SDK_InspireClient_
+  commentId: M:Vasont.Inspire.SDK.Review.ReviewExtensions.RetrieveUserReviewAssignments(Vasont.Inspire.SDK.InspireClient)
+  fullName: Vasont.Inspire.SDK.Review.ReviewExtensions.RetrieveUserReviewAssignments(Vasont.Inspire.SDK.InspireClient)
+  nameWithType: ReviewExtensions.RetrieveUserReviewAssignments(InspireClient)
+- uid: Vasont.Inspire.SDK.Review.ReviewExtensions.RetrieveUserReviewAssignments*
+  name: RetrieveUserReviewAssignments
+  href: sdk/Vasont.Inspire.SDK.Review.ReviewExtensions.html#Vasont_Inspire_SDK_Review_ReviewExtensions_RetrieveUserReviewAssignments_
+  commentId: Overload:Vasont.Inspire.SDK.Review.ReviewExtensions.RetrieveUserReviewAssignments
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Review.ReviewExtensions.RetrieveUserReviewAssignments
+  nameWithType: ReviewExtensions.RetrieveUserReviewAssignments
 - uid: Vasont.Inspire.SDK.Review.ReviewExtensions.UpdateReview(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Reviews.ReviewModel)
   name: UpdateReview(InspireClient, ReviewModel)
   href: sdk/Vasont.Inspire.SDK.Review.ReviewExtensions.html#Vasont_Inspire_SDK_Review_ReviewExtensions_UpdateReview_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Reviews_ReviewModel_
@@ -2874,19 +3851,45 @@ references:
   isSpec: "True"
   fullName: Vasont.Inspire.SDK.Security.RoleExtensions.DeleteRole
   nameWithType: RoleExtensions.DeleteRole
-- uid: Vasont.Inspire.SDK.Security.RoleExtensions.GetAllRoles(Vasont.Inspire.SDK.InspireClient,System.Int64)
-  name: GetAllRoles(InspireClient, Int64)
-  href: sdk/Vasont.Inspire.SDK.Security.RoleExtensions.html#Vasont_Inspire_SDK_Security_RoleExtensions_GetAllRoles_Vasont_Inspire_SDK_InspireClient_System_Int64_
-  commentId: M:Vasont.Inspire.SDK.Security.RoleExtensions.GetAllRoles(Vasont.Inspire.SDK.InspireClient,System.Int64)
-  fullName: Vasont.Inspire.SDK.Security.RoleExtensions.GetAllRoles(Vasont.Inspire.SDK.InspireClient, System.Int64)
-  nameWithType: RoleExtensions.GetAllRoles(InspireClient, Int64)
-- uid: Vasont.Inspire.SDK.Security.RoleExtensions.GetAllRoles*
-  name: GetAllRoles
-  href: sdk/Vasont.Inspire.SDK.Security.RoleExtensions.html#Vasont_Inspire_SDK_Security_RoleExtensions_GetAllRoles_
-  commentId: Overload:Vasont.Inspire.SDK.Security.RoleExtensions.GetAllRoles
+- uid: Vasont.Inspire.SDK.Security.RoleExtensions.FindRole(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  name: FindRole(InspireClient, Int64)
+  href: sdk/Vasont.Inspire.SDK.Security.RoleExtensions.html#Vasont_Inspire_SDK_Security_RoleExtensions_FindRole_Vasont_Inspire_SDK_InspireClient_System_Int64_
+  commentId: M:Vasont.Inspire.SDK.Security.RoleExtensions.FindRole(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  fullName: Vasont.Inspire.SDK.Security.RoleExtensions.FindRole(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  nameWithType: RoleExtensions.FindRole(InspireClient, Int64)
+- uid: Vasont.Inspire.SDK.Security.RoleExtensions.FindRole*
+  name: FindRole
+  href: sdk/Vasont.Inspire.SDK.Security.RoleExtensions.html#Vasont_Inspire_SDK_Security_RoleExtensions_FindRole_
+  commentId: Overload:Vasont.Inspire.SDK.Security.RoleExtensions.FindRole
   isSpec: "True"
-  fullName: Vasont.Inspire.SDK.Security.RoleExtensions.GetAllRoles
-  nameWithType: RoleExtensions.GetAllRoles
+  fullName: Vasont.Inspire.SDK.Security.RoleExtensions.FindRole
+  nameWithType: RoleExtensions.FindRole
+- uid: Vasont.Inspire.SDK.Security.RoleExtensions.FindRoles(Vasont.Inspire.SDK.InspireClient,System.String,System.String,System.String)
+  name: FindRoles(InspireClient, String, String, String)
+  href: sdk/Vasont.Inspire.SDK.Security.RoleExtensions.html#Vasont_Inspire_SDK_Security_RoleExtensions_FindRoles_Vasont_Inspire_SDK_InspireClient_System_String_System_String_System_String_
+  commentId: M:Vasont.Inspire.SDK.Security.RoleExtensions.FindRoles(Vasont.Inspire.SDK.InspireClient,System.String,System.String,System.String)
+  fullName: Vasont.Inspire.SDK.Security.RoleExtensions.FindRoles(Vasont.Inspire.SDK.InspireClient, System.String, System.String, System.String)
+  nameWithType: RoleExtensions.FindRoles(InspireClient, String, String, String)
+- uid: Vasont.Inspire.SDK.Security.RoleExtensions.FindRoles*
+  name: FindRoles
+  href: sdk/Vasont.Inspire.SDK.Security.RoleExtensions.html#Vasont_Inspire_SDK_Security_RoleExtensions_FindRoles_
+  commentId: Overload:Vasont.Inspire.SDK.Security.RoleExtensions.FindRoles
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Security.RoleExtensions.FindRoles
+  nameWithType: RoleExtensions.FindRoles
+- uid: Vasont.Inspire.SDK.Security.RoleExtensions.GetRole(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  name: GetRole(InspireClient, Int64)
+  href: sdk/Vasont.Inspire.SDK.Security.RoleExtensions.html#Vasont_Inspire_SDK_Security_RoleExtensions_GetRole_Vasont_Inspire_SDK_InspireClient_System_Int64_
+  commentId: M:Vasont.Inspire.SDK.Security.RoleExtensions.GetRole(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  fullName: Vasont.Inspire.SDK.Security.RoleExtensions.GetRole(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  nameWithType: RoleExtensions.GetRole(InspireClient, Int64)
+- uid: Vasont.Inspire.SDK.Security.RoleExtensions.GetRole*
+  name: GetRole
+  href: sdk/Vasont.Inspire.SDK.Security.RoleExtensions.html#Vasont_Inspire_SDK_Security_RoleExtensions_GetRole_
+  commentId: Overload:Vasont.Inspire.SDK.Security.RoleExtensions.GetRole
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Security.RoleExtensions.GetRole
+  nameWithType: RoleExtensions.GetRole
 - uid: Vasont.Inspire.SDK.Security.RoleExtensions.GetRoles(Vasont.Inspire.SDK.InspireClient,System.String,System.String,System.String)
   name: GetRoles(InspireClient, String, String, String)
   href: sdk/Vasont.Inspire.SDK.Security.RoleExtensions.html#Vasont_Inspire_SDK_Security_RoleExtensions_GetRoles_Vasont_Inspire_SDK_InspireClient_System_String_System_String_System_String_
@@ -2945,6 +3948,32 @@ references:
   isSpec: "True"
   fullName: Vasont.Inspire.SDK.Security.UserExtensions.DeleteUser
   nameWithType: UserExtensions.DeleteUser
+- uid: Vasont.Inspire.SDK.Security.UserExtensions.FindUser(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  name: FindUser(InspireClient, Int64)
+  href: sdk/Vasont.Inspire.SDK.Security.UserExtensions.html#Vasont_Inspire_SDK_Security_UserExtensions_FindUser_Vasont_Inspire_SDK_InspireClient_System_Int64_
+  commentId: M:Vasont.Inspire.SDK.Security.UserExtensions.FindUser(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  fullName: Vasont.Inspire.SDK.Security.UserExtensions.FindUser(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  nameWithType: UserExtensions.FindUser(InspireClient, Int64)
+- uid: Vasont.Inspire.SDK.Security.UserExtensions.FindUser*
+  name: FindUser
+  href: sdk/Vasont.Inspire.SDK.Security.UserExtensions.html#Vasont_Inspire_SDK_Security_UserExtensions_FindUser_
+  commentId: Overload:Vasont.Inspire.SDK.Security.UserExtensions.FindUser
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Security.UserExtensions.FindUser
+  nameWithType: UserExtensions.FindUser
+- uid: Vasont.Inspire.SDK.Security.UserExtensions.FindUsers(Vasont.Inspire.SDK.InspireClient,System.String,System.String,System.String,System.String,System.String)
+  name: FindUsers(InspireClient, String, String, String, String, String)
+  href: sdk/Vasont.Inspire.SDK.Security.UserExtensions.html#Vasont_Inspire_SDK_Security_UserExtensions_FindUsers_Vasont_Inspire_SDK_InspireClient_System_String_System_String_System_String_System_String_System_String_
+  commentId: M:Vasont.Inspire.SDK.Security.UserExtensions.FindUsers(Vasont.Inspire.SDK.InspireClient,System.String,System.String,System.String,System.String,System.String)
+  fullName: Vasont.Inspire.SDK.Security.UserExtensions.FindUsers(Vasont.Inspire.SDK.InspireClient, System.String, System.String, System.String, System.String, System.String)
+  nameWithType: UserExtensions.FindUsers(InspireClient, String, String, String, String, String)
+- uid: Vasont.Inspire.SDK.Security.UserExtensions.FindUsers*
+  name: FindUsers
+  href: sdk/Vasont.Inspire.SDK.Security.UserExtensions.html#Vasont_Inspire_SDK_Security_UserExtensions_FindUsers_
+  commentId: Overload:Vasont.Inspire.SDK.Security.UserExtensions.FindUsers
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Security.UserExtensions.FindUsers
+  nameWithType: UserExtensions.FindUsers
 - uid: Vasont.Inspire.SDK.Security.UserExtensions.GetAllUsers(Vasont.Inspire.SDK.InspireClient)
   name: GetAllUsers(InspireClient)
   href: sdk/Vasont.Inspire.SDK.Security.UserExtensions.html#Vasont_Inspire_SDK_Security_UserExtensions_GetAllUsers_Vasont_Inspire_SDK_InspireClient_
@@ -2984,6 +4013,19 @@ references:
   isSpec: "True"
   fullName: Vasont.Inspire.SDK.Security.UserExtensions.GetUsers
   nameWithType: UserExtensions.GetUsers
+- uid: Vasont.Inspire.SDK.Security.UserExtensions.RetrieveUsers(Vasont.Inspire.SDK.InspireClient)
+  name: RetrieveUsers(InspireClient)
+  href: sdk/Vasont.Inspire.SDK.Security.UserExtensions.html#Vasont_Inspire_SDK_Security_UserExtensions_RetrieveUsers_Vasont_Inspire_SDK_InspireClient_
+  commentId: M:Vasont.Inspire.SDK.Security.UserExtensions.RetrieveUsers(Vasont.Inspire.SDK.InspireClient)
+  fullName: Vasont.Inspire.SDK.Security.UserExtensions.RetrieveUsers(Vasont.Inspire.SDK.InspireClient)
+  nameWithType: UserExtensions.RetrieveUsers(InspireClient)
+- uid: Vasont.Inspire.SDK.Security.UserExtensions.RetrieveUsers*
+  name: RetrieveUsers
+  href: sdk/Vasont.Inspire.SDK.Security.UserExtensions.html#Vasont_Inspire_SDK_Security_UserExtensions_RetrieveUsers_
+  commentId: Overload:Vasont.Inspire.SDK.Security.UserExtensions.RetrieveUsers
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Security.UserExtensions.RetrieveUsers
+  nameWithType: UserExtensions.RetrieveUsers
 - uid: Vasont.Inspire.SDK.Security.UserExtensions.UpdateUser(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Security.UserModel)
   name: UpdateUser(InspireClient, Int64, UserModel)
   href: sdk/Vasont.Inspire.SDK.Security.UserExtensions.html#Vasont_Inspire_SDK_Security_UserExtensions_UpdateUser_Vasont_Inspire_SDK_InspireClient_System_Int64_Vasont_Inspire_Models_Security_UserModel_
@@ -3009,6 +4051,61 @@ references:
   commentId: T:Vasont.Inspire.SDK.Translations.TranslationsExtensions
   fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions
   nameWithType: TranslationsExtensions
+- uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindQueuedTranslationJobs(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  name: FindQueuedTranslationJobs(InspireClient, Int64)
+  href: sdk/Vasont.Inspire.SDK.Translations.TranslationsExtensions.html#Vasont_Inspire_SDK_Translations_TranslationsExtensions_FindQueuedTranslationJobs_Vasont_Inspire_SDK_InspireClient_System_Int64_
+  commentId: M:Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindQueuedTranslationJobs(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindQueuedTranslationJobs(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  nameWithType: TranslationsExtensions.FindQueuedTranslationJobs(InspireClient, Int64)
+- uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindQueuedTranslationJobs*
+  name: FindQueuedTranslationJobs
+  href: sdk/Vasont.Inspire.SDK.Translations.TranslationsExtensions.html#Vasont_Inspire_SDK_Translations_TranslationsExtensions_FindQueuedTranslationJobs_
+  commentId: Overload:Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindQueuedTranslationJobs
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindQueuedTranslationJobs
+  nameWithType: TranslationsExtensions.FindQueuedTranslationJobs
+- uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationExportJobs(Vasont.Inspire.SDK.InspireClient,System.Collections.Generic.List{System.Int64})
+  name: FindTranslationExportJobs(InspireClient, List<Int64>)
+  href: sdk/Vasont.Inspire.SDK.Translations.TranslationsExtensions.html#Vasont_Inspire_SDK_Translations_TranslationsExtensions_FindTranslationExportJobs_Vasont_Inspire_SDK_InspireClient_System_Collections_Generic_List_System_Int64__
+  commentId: M:Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationExportJobs(Vasont.Inspire.SDK.InspireClient,System.Collections.Generic.List{System.Int64})
+  name.vb: FindTranslationExportJobs(InspireClient, List(Of Int64))
+  fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationExportJobs(Vasont.Inspire.SDK.InspireClient, System.Collections.Generic.List<System.Int64>)
+  fullName.vb: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationExportJobs(Vasont.Inspire.SDK.InspireClient, System.Collections.Generic.List(Of System.Int64))
+  nameWithType: TranslationsExtensions.FindTranslationExportJobs(InspireClient, List<Int64>)
+  nameWithType.vb: TranslationsExtensions.FindTranslationExportJobs(InspireClient, List(Of Int64))
+- uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationExportJobs*
+  name: FindTranslationExportJobs
+  href: sdk/Vasont.Inspire.SDK.Translations.TranslationsExtensions.html#Vasont_Inspire_SDK_Translations_TranslationsExtensions_FindTranslationExportJobs_
+  commentId: Overload:Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationExportJobs
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationExportJobs
+  nameWithType: TranslationsExtensions.FindTranslationExportJobs
+- uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationExportState(Vasont.Inspire.SDK.InspireClient,System.String)
+  name: FindTranslationExportState(InspireClient, String)
+  href: sdk/Vasont.Inspire.SDK.Translations.TranslationsExtensions.html#Vasont_Inspire_SDK_Translations_TranslationsExtensions_FindTranslationExportState_Vasont_Inspire_SDK_InspireClient_System_String_
+  commentId: M:Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationExportState(Vasont.Inspire.SDK.InspireClient,System.String)
+  fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationExportState(Vasont.Inspire.SDK.InspireClient, System.String)
+  nameWithType: TranslationsExtensions.FindTranslationExportState(InspireClient, String)
+- uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationExportState*
+  name: FindTranslationExportState
+  href: sdk/Vasont.Inspire.SDK.Translations.TranslationsExtensions.html#Vasont_Inspire_SDK_Translations_TranslationsExtensions_FindTranslationExportState_
+  commentId: Overload:Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationExportState
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationExportState
+  nameWithType: TranslationsExtensions.FindTranslationExportState
+- uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationJob(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  name: FindTranslationJob(InspireClient, Int64)
+  href: sdk/Vasont.Inspire.SDK.Translations.TranslationsExtensions.html#Vasont_Inspire_SDK_Translations_TranslationsExtensions_FindTranslationJob_Vasont_Inspire_SDK_InspireClient_System_Int64_
+  commentId: M:Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationJob(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationJob(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  nameWithType: TranslationsExtensions.FindTranslationJob(InspireClient, Int64)
+- uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationJob*
+  name: FindTranslationJob
+  href: sdk/Vasont.Inspire.SDK.Translations.TranslationsExtensions.html#Vasont_Inspire_SDK_Translations_TranslationsExtensions_FindTranslationJob_
+  commentId: Overload:Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationJob
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationJob
+  nameWithType: TranslationsExtensions.FindTranslationJob
 - uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationJobs(Vasont.Inspire.SDK.InspireClient,System.Collections.Generic.List{System.Int64})
   name: FindTranslationJobs(InspireClient, List<Int64>)
   href: sdk/Vasont.Inspire.SDK.Translations.TranslationsExtensions.html#Vasont_Inspire_SDK_Translations_TranslationsExtensions_FindTranslationJobs_Vasont_Inspire_SDK_InspireClient_System_Collections_Generic_List_System_Int64__
@@ -3135,6 +4232,32 @@ references:
   isSpec: "True"
   fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.ResetTranslationComponentsState
   nameWithType: TranslationsExtensions.ResetTranslationComponentsState
+- uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.RetrieveTranslationJobStates(Vasont.Inspire.SDK.InspireClient)
+  name: RetrieveTranslationJobStates(InspireClient)
+  href: sdk/Vasont.Inspire.SDK.Translations.TranslationsExtensions.html#Vasont_Inspire_SDK_Translations_TranslationsExtensions_RetrieveTranslationJobStates_Vasont_Inspire_SDK_InspireClient_
+  commentId: M:Vasont.Inspire.SDK.Translations.TranslationsExtensions.RetrieveTranslationJobStates(Vasont.Inspire.SDK.InspireClient)
+  fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.RetrieveTranslationJobStates(Vasont.Inspire.SDK.InspireClient)
+  nameWithType: TranslationsExtensions.RetrieveTranslationJobStates(InspireClient)
+- uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.RetrieveTranslationJobStates*
+  name: RetrieveTranslationJobStates
+  href: sdk/Vasont.Inspire.SDK.Translations.TranslationsExtensions.html#Vasont_Inspire_SDK_Translations_TranslationsExtensions_RetrieveTranslationJobStates_
+  commentId: Overload:Vasont.Inspire.SDK.Translations.TranslationsExtensions.RetrieveTranslationJobStates
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.RetrieveTranslationJobStates
+  nameWithType: TranslationsExtensions.RetrieveTranslationJobStates
+- uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.RetrieveTranslationVendors(Vasont.Inspire.SDK.InspireClient)
+  name: RetrieveTranslationVendors(InspireClient)
+  href: sdk/Vasont.Inspire.SDK.Translations.TranslationsExtensions.html#Vasont_Inspire_SDK_Translations_TranslationsExtensions_RetrieveTranslationVendors_Vasont_Inspire_SDK_InspireClient_
+  commentId: M:Vasont.Inspire.SDK.Translations.TranslationsExtensions.RetrieveTranslationVendors(Vasont.Inspire.SDK.InspireClient)
+  fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.RetrieveTranslationVendors(Vasont.Inspire.SDK.InspireClient)
+  nameWithType: TranslationsExtensions.RetrieveTranslationVendors(InspireClient)
+- uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.RetrieveTranslationVendors*
+  name: RetrieveTranslationVendors
+  href: sdk/Vasont.Inspire.SDK.Translations.TranslationsExtensions.html#Vasont_Inspire_SDK_Translations_TranslationsExtensions_RetrieveTranslationVendors_
+  commentId: Overload:Vasont.Inspire.SDK.Translations.TranslationsExtensions.RetrieveTranslationVendors
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.RetrieveTranslationVendors
+  nameWithType: TranslationsExtensions.RetrieveTranslationVendors
 - uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.SetTranslationJobStatus(Vasont.Inspire.SDK.InspireClient,System.Collections.Generic.List{Vasont.Inspire.Models.Translations.TranslationExportJobModel})
   name: SetTranslationJobStatus(InspireClient, List<TranslationExportJobModel>)
   href: sdk/Vasont.Inspire.SDK.Translations.TranslationsExtensions.html#Vasont_Inspire_SDK_Translations_TranslationsExtensions_SetTranslationJobStatus_Vasont_Inspire_SDK_InspireClient_System_Collections_Generic_List_Vasont_Inspire_Models_Translations_TranslationExportJobModel__

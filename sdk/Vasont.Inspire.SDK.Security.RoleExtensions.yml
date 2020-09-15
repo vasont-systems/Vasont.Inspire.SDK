@@ -7,7 +7,9 @@ items:
   children:
   - Vasont.Inspire.SDK.Security.RoleExtensions.CreateRole(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Security.RoleModel)
   - Vasont.Inspire.SDK.Security.RoleExtensions.DeleteRole(Vasont.Inspire.SDK.InspireClient,System.Int64)
-  - Vasont.Inspire.SDK.Security.RoleExtensions.GetAllRoles(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  - Vasont.Inspire.SDK.Security.RoleExtensions.FindRole(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  - Vasont.Inspire.SDK.Security.RoleExtensions.FindRoles(Vasont.Inspire.SDK.InspireClient,System.String,System.String,System.String)
+  - Vasont.Inspire.SDK.Security.RoleExtensions.GetRole(Vasont.Inspire.SDK.InspireClient,System.Int64)
   - Vasont.Inspire.SDK.Security.RoleExtensions.GetRoles(Vasont.Inspire.SDK.InspireClient,System.String,System.String,System.String)
   - Vasont.Inspire.SDK.Security.RoleExtensions.UpdateRole(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Security.RoleModel)
   langs:
@@ -50,54 +52,6 @@ items:
   modifiers.vb:
   - Public
   - Module
-- uid: Vasont.Inspire.SDK.Security.RoleExtensions.GetAllRoles(Vasont.Inspire.SDK.InspireClient,System.Int64)
-  commentId: M:Vasont.Inspire.SDK.Security.RoleExtensions.GetAllRoles(Vasont.Inspire.SDK.InspireClient,System.Int64)
-  id: GetAllRoles(Vasont.Inspire.SDK.InspireClient,System.Int64)
-  isExtensionMethod: true
-  parent: Vasont.Inspire.SDK.Security.RoleExtensions
-  langs:
-  - csharp
-  - vb
-  name: GetAllRoles(InspireClient, Int64)
-  nameWithType: RoleExtensions.GetAllRoles(InspireClient, Int64)
-  fullName: Vasont.Inspire.SDK.Security.RoleExtensions.GetAllRoles(Vasont.Inspire.SDK.InspireClient, System.Int64)
-  type: Method
-  source:
-    remote:
-      path: src/Security/RoleExtensions.cs
-      branch: develop
-      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
-    id: GetAllRoles
-    path: Security/RoleExtensions.cs
-    startLine: 26
-  assemblies:
-  - Vasont.Inspire.SDK
-  namespace: Vasont.Inspire.SDK.Security
-  summary: "\nThis method is used to retrieve a specific role model from the system.\n"
-  example: []
-  syntax:
-    content: public static RoleModel GetAllRoles(this InspireClient client, long roleId)
-    parameters:
-    - id: client
-      type: Vasont.Inspire.SDK.InspireClient
-      description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
-    - id: roleId
-      type: System.Int64
-      description: The role identity.
-    return:
-      type: Vasont.Inspire.Models.Security.RoleModel
-      description: Returns <xref href="Vasont.Inspire.Models.Security.RoleModel" data-throw-if-not-resolved="false"></xref> object if found.
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function GetAllRoles(client As InspireClient, roleId As Long) As RoleModel
-  overload: Vasont.Inspire.SDK.Security.RoleExtensions.GetAllRoles*
-  modifiers.csharp:
-  - public
-  - static
-  modifiers.vb:
-  - Public
-  - Shared
 - uid: Vasont.Inspire.SDK.Security.RoleExtensions.GetRoles(Vasont.Inspire.SDK.InspireClient,System.String,System.String,System.String)
   commentId: M:Vasont.Inspire.SDK.Security.RoleExtensions.GetRoles(Vasont.Inspire.SDK.InspireClient,System.String,System.String,System.String)
   id: GetRoles(Vasont.Inspire.SDK.InspireClient,System.String,System.String,System.String)
@@ -117,35 +71,207 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetRoles
     path: Security/RoleExtensions.cs
-    startLine: 40
+    startLine: 28
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Security
-  summary: "\nThis method is used to retrieve roles that match the search criteria.\n"
+  summary: "\nThis method is used to retrieve a list of <xref href=\"Vasont.Inspire.Models.Security.RoleModel\" data-throw-if-not-resolved=\"false\"></xref> from the specified query.\n"
   example: []
   syntax:
-    content: public static List<RoleModel> GetRoles(this InspireClient client, string roleName = "", string orderBy = "", string direction = "")
+    content: >-
+      [Obsolete("This method is obsolete. Please use FindRoles() going forward. This method will be removed in a future release.")]
+
+      public static List<RoleModel> GetRoles(this InspireClient client, string roleName = "", string orderBy = "Name", string direction = "asc")
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
       description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
     - id: roleName
       type: System.String
-      description: Name of the role.
+      description: Contains an optional value used to filter results by role name.
     - id: orderBy
       type: System.String
-      description: The field to order by the list of roles.
+      description: Contains an optional value used to specify which model property results will be ordered by.
     - id: direction
       type: System.String
-      description: The direction of the order by, ascending or descending.
+      description: Contains an optional value used to specify which direction results will be ordered.
     return:
       type: System.Collections.Generic.List{Vasont.Inspire.Models.Security.RoleModel}
-      description: Returns <xref href="Vasont.Inspire.Models.Security.RoleModel" data-throw-if-not-resolved="false"></xref> object if found.
+      description: Returns a list of <xref href="Vasont.Inspire.Models.Security.RoleModel" data-throw-if-not-resolved="false"></xref> containing the results of the specified query.
+    content.vb: >-
+      <Obsolete("This method is obsolete. Please use FindRoles() going forward. This method will be removed in a future release.")>
+
+      <ExtensionAttribute>
+
+      Public Shared Function GetRoles(client As InspireClient, roleName As String = "", orderBy As String = "Name", direction As String = "asc") As List(Of RoleModel)
+  overload: Vasont.Inspire.SDK.Security.RoleExtensions.GetRoles*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use FindRoles() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Security.RoleExtensions.FindRoles(Vasont.Inspire.SDK.InspireClient,System.String,System.String,System.String)
+  commentId: M:Vasont.Inspire.SDK.Security.RoleExtensions.FindRoles(Vasont.Inspire.SDK.InspireClient,System.String,System.String,System.String)
+  id: FindRoles(Vasont.Inspire.SDK.InspireClient,System.String,System.String,System.String)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Security.RoleExtensions
+  langs:
+  - csharp
+  - vb
+  name: FindRoles(InspireClient, String, String, String)
+  nameWithType: RoleExtensions.FindRoles(InspireClient, String, String, String)
+  fullName: Vasont.Inspire.SDK.Security.RoleExtensions.FindRoles(Vasont.Inspire.SDK.InspireClient, System.String, System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: src/Security/RoleExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: FindRoles
+    path: Security/RoleExtensions.cs
+    startLine: 42
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Security
+  summary: "\nThis method is used to retrieve a list of <xref href=\"Vasont.Inspire.Models.Security.RoleModel\" data-throw-if-not-resolved=\"false\"></xref> from the specified query.\n"
+  example: []
+  syntax:
+    content: public static List<RoleModel> FindRoles(this InspireClient client, string roleName = "", string orderBy = "Name", string direction = "asc")
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
+    - id: roleName
+      type: System.String
+      description: Contains an optional value used to filter results by role name.
+    - id: orderBy
+      type: System.String
+      description: Contains an optional value used to specify which model property results will be ordered by.
+    - id: direction
+      type: System.String
+      description: Contains an optional value used to specify which direction results will be ordered.
+    return:
+      type: System.Collections.Generic.List{Vasont.Inspire.Models.Security.RoleModel}
+      description: Returns a list of <xref href="Vasont.Inspire.Models.Security.RoleModel" data-throw-if-not-resolved="false"></xref> containing the results of the specified query.
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Function GetRoles(client As InspireClient, roleName As String = "", orderBy As String = "", direction As String = "") As List(Of RoleModel)
-  overload: Vasont.Inspire.SDK.Security.RoleExtensions.GetRoles*
+      Public Shared Function FindRoles(client As InspireClient, roleName As String = "", orderBy As String = "Name", direction As String = "asc") As List(Of RoleModel)
+  overload: Vasont.Inspire.SDK.Security.RoleExtensions.FindRoles*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Security.RoleExtensions.GetRole(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  commentId: M:Vasont.Inspire.SDK.Security.RoleExtensions.GetRole(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  id: GetRole(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Security.RoleExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetRole(InspireClient, Int64)
+  nameWithType: RoleExtensions.GetRole(InspireClient, Int64)
+  fullName: Vasont.Inspire.SDK.Security.RoleExtensions.GetRole(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  type: Method
+  source:
+    remote:
+      path: src/Security/RoleExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: GetRole
+    path: Security/RoleExtensions.cs
+    startLine: 54
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Security
+  summary: "\nGets the specified <xref href=\"Vasont.Inspire.Models.Security.RoleModel\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: >-
+      [Obsolete("This method is obsolete. Please use FindRole() going forward. This method will be removed in a future release.")]
+
+      public static RoleModel GetRole(this InspireClient client, long roleId)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
+    - id: roleId
+      type: System.Int64
+      description: The role identifier.
+    return:
+      type: Vasont.Inspire.Models.Security.RoleModel
+      description: Returns the <xref href="Vasont.Inspire.Models.Security.RoleModel" data-throw-if-not-resolved="false"></xref> record of the specified role
+    content.vb: >-
+      <Obsolete("This method is obsolete. Please use FindRole() going forward. This method will be removed in a future release.")>
+
+      <ExtensionAttribute>
+
+      Public Shared Function GetRole(client As InspireClient, roleId As Long) As RoleModel
+  overload: Vasont.Inspire.SDK.Security.RoleExtensions.GetRole*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use FindRole() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Security.RoleExtensions.FindRole(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  commentId: M:Vasont.Inspire.SDK.Security.RoleExtensions.FindRole(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  id: FindRole(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Security.RoleExtensions
+  langs:
+  - csharp
+  - vb
+  name: FindRole(InspireClient, Int64)
+  nameWithType: RoleExtensions.FindRole(InspireClient, Int64)
+  fullName: Vasont.Inspire.SDK.Security.RoleExtensions.FindRole(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  type: Method
+  source:
+    remote:
+      path: src/Security/RoleExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: FindRole
+    path: Security/RoleExtensions.cs
+    startLine: 66
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Security
+  summary: "\nGets the specified <xref href=\"Vasont.Inspire.Models.Security.RoleModel\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public static RoleModel FindRole(this InspireClient client, long roleId)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
+    - id: roleId
+      type: System.Int64
+      description: The role identifier.
+    return:
+      type: Vasont.Inspire.Models.Security.RoleModel
+      description: Returns the <xref href="Vasont.Inspire.Models.Security.RoleModel" data-throw-if-not-resolved="false"></xref> record of the specified role
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function FindRole(client As InspireClient, roleId As Long) As RoleModel
+  overload: Vasont.Inspire.SDK.Security.RoleExtensions.FindRole*
   modifiers.csharp:
   - public
   - static
@@ -171,11 +297,11 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: CreateRole
     path: Security/RoleExtensions.cs
-    startLine: 52
+    startLine: 78
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Security
-  summary: "\nThis method is used to create a new role, and return the new RoleModel.\n"
+  summary: "\nThis method is used to create a new role.\n"
   example: []
   syntax:
     content: public static RoleModel CreateRole(this InspireClient client, RoleModel inputModel)
@@ -219,11 +345,11 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: UpdateRole
     path: Security/RoleExtensions.cs
-    startLine: 70
+    startLine: 96
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Security
-  summary: "\nThis method is used to update an existing role, and return the updated RoleModel.\n"
+  summary: "\nThis method is used to update an existing role.\n"
   example: []
   syntax:
     content: public static RoleModel UpdateRole(this InspireClient client, long roleId, RoleModel inputModel)
@@ -270,7 +396,7 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: DeleteRole
     path: Security/RoleExtensions.cs
-    startLine: 87
+    startLine: 113
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Security
@@ -615,24 +741,6 @@ references:
   name: RoleModel
   nameWithType: RoleModel
   fullName: Vasont.Inspire.Models.Security.RoleModel
-- uid: Vasont.Inspire.SDK.Security.RoleExtensions.GetAllRoles*
-  commentId: Overload:Vasont.Inspire.SDK.Security.RoleExtensions.GetAllRoles
-  name: GetAllRoles
-  nameWithType: RoleExtensions.GetAllRoles
-  fullName: Vasont.Inspire.SDK.Security.RoleExtensions.GetAllRoles
-- uid: System.Int64
-  commentId: T:System.Int64
-  parent: System
-  isExternal: true
-  name: Int64
-  nameWithType: Int64
-  fullName: System.Int64
-- uid: Vasont.Inspire.Models.Security
-  commentId: N:Vasont.Inspire.Models.Security
-  isExternal: true
-  name: Vasont.Inspire.Models.Security
-  nameWithType: Vasont.Inspire.Models.Security
-  fullName: Vasont.Inspire.Models.Security
 - uid: Vasont.Inspire.SDK.Security.RoleExtensions.GetRoles*
   commentId: Overload:Vasont.Inspire.SDK.Security.RoleExtensions.GetRoles
   name: GetRoles
@@ -689,6 +797,12 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: Vasont.Inspire.Models.Security
+  commentId: N:Vasont.Inspire.Models.Security
+  isExternal: true
+  name: Vasont.Inspire.Models.Security
+  nameWithType: Vasont.Inspire.Models.Security
+  fullName: Vasont.Inspire.Models.Security
 - uid: System.Collections.Generic.List`1
   commentId: T:System.Collections.Generic.List`1
   isExternal: true
@@ -734,6 +848,28 @@ references:
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
+- uid: Vasont.Inspire.SDK.Security.RoleExtensions.FindRoles*
+  commentId: Overload:Vasont.Inspire.SDK.Security.RoleExtensions.FindRoles
+  name: FindRoles
+  nameWithType: RoleExtensions.FindRoles
+  fullName: Vasont.Inspire.SDK.Security.RoleExtensions.FindRoles
+- uid: Vasont.Inspire.SDK.Security.RoleExtensions.GetRole*
+  commentId: Overload:Vasont.Inspire.SDK.Security.RoleExtensions.GetRole
+  name: GetRole
+  nameWithType: RoleExtensions.GetRole
+  fullName: Vasont.Inspire.SDK.Security.RoleExtensions.GetRole
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  name: Int64
+  nameWithType: Int64
+  fullName: System.Int64
+- uid: Vasont.Inspire.SDK.Security.RoleExtensions.FindRole*
+  commentId: Overload:Vasont.Inspire.SDK.Security.RoleExtensions.FindRole
+  name: FindRole
+  nameWithType: RoleExtensions.FindRole
+  fullName: Vasont.Inspire.SDK.Security.RoleExtensions.FindRole
 - uid: Vasont.Inspire.SDK.Security.RoleExtensions.CreateRole*
   commentId: Overload:Vasont.Inspire.SDK.Security.RoleExtensions.CreateRole
   name: CreateRole
