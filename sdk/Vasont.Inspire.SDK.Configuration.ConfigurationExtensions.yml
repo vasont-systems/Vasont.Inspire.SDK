@@ -17,6 +17,21 @@ items:
   - Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.CreateTag(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.TagModel)
   - Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.CreateWebHookConfiguration(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Webhooks.WebhookConfigurationModel)
   - Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.CreateXmlLinkType(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Configuration.XmlLinkTypeModel)
+  - Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindAttribute(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  - Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindComponentType(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  - Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindElement(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  - Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindExport(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  - Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindExportComponentType(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Transfers.ExportType)
+  - Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindExportPluginParameters(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  - Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindFileExtension(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  - Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindLanguage(Vasont.Inspire.SDK.InspireClient,System.String)
+  - Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindLanguages(Vasont.Inspire.SDK.InspireClient,System.Boolean)
+  - Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindProfileAttribute(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  - Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindProjectActivity(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  - Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindRelation(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  - Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindTag(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  - Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindWebHookConfiguration(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  - Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindXmlLinkType(Vasont.Inspire.SDK.InspireClient,System.Int64)
   - Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetAttribute(Vasont.Inspire.SDK.InspireClient,System.Int64)
   - Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetAttributes(Vasont.Inspire.SDK.InspireClient)
   - Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetComponentType(Vasont.Inspire.SDK.InspireClient,System.Int64)
@@ -58,6 +73,20 @@ items:
   - Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RemoveTag(Vasont.Inspire.SDK.InspireClient,System.Int64)
   - Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RemoveWebHookConfiguration(Vasont.Inspire.SDK.InspireClient,System.String)
   - Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RemoveXmlLinkType(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  - Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveAttributes(Vasont.Inspire.SDK.InspireClient)
+  - Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveComponentTypes(Vasont.Inspire.SDK.InspireClient)
+  - Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveElements(Vasont.Inspire.SDK.InspireClient)
+  - Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveExportPlugins(Vasont.Inspire.SDK.InspireClient)
+  - Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveExports(Vasont.Inspire.SDK.InspireClient)
+  - Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveFileExtensions(Vasont.Inspire.SDK.InspireClient)
+  - Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveLinkMethods(Vasont.Inspire.SDK.InspireClient)
+  - Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveProfileAttributeItems(Vasont.Inspire.SDK.InspireClient)
+  - Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveProfileAttributes(Vasont.Inspire.SDK.InspireClient)
+  - Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveProjectActivities(Vasont.Inspire.SDK.InspireClient)
+  - Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveRelations(Vasont.Inspire.SDK.InspireClient)
+  - Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveSchemaStandards(Vasont.Inspire.SDK.InspireClient)
+  - Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveWebHookConfigurations(Vasont.Inspire.SDK.InspireClient)
+  - Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveXmlLinkTypes(Vasont.Inspire.SDK.InspireClient)
   - Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.UpdateAttribute(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Configuration.AttributeModel)
   - Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.UpdateComponentType(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.ComponentTypeModel)
   - Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.UpdateElement(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Configuration.ElementModel)
@@ -88,7 +117,7 @@ items:
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Configuration
-  summary: "\nThis class extends the <xref href=\"Vasont.Inspire.SDK.InspireClient\" data-throw-if-not-resolved=\"false\"></xref> class to include methods for calling\napplication API endpoints.\n"
+  summary: "\nThis class extends the <xref href=\"Vasont.Inspire.SDK.InspireClient\" data-throw-if-not-resolved=\"false\"></xref> class to include methods for calling\nconfiguration API endpoints.\n"
   example: []
   syntax:
     content: public static class ConfigurationExtensions
@@ -136,7 +165,63 @@ items:
   summary: "\nThis method is used to retrieve and return attributes.\n"
   example: []
   syntax:
-    content: public static List<AttributeModel> GetAttributes(this InspireClient client)
+    content: >-
+      [Obsolete("This method is obsolete. Please use RetrieveAttributes() going forward. This method will be removed in a future release.")]
+
+      public static List<AttributeModel> GetAttributes(this InspireClient client)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
+    return:
+      type: System.Collections.Generic.List{Vasont.Inspire.Models.Configuration.AttributeModel}
+      description: Returns a list of <xref href="Vasont.Inspire.Models.Configuration.AttributeModel" data-throw-if-not-resolved="false"></xref> from the application.
+    content.vb: >-
+      <Obsolete("This method is obsolete. Please use RetrieveAttributes() going forward. This method will be removed in a future release.")>
+
+      <ExtensionAttribute>
+
+      Public Shared Function GetAttributes(client As InspireClient) As List(Of AttributeModel)
+  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetAttributes*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use RetrieveAttributes() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveAttributes(Vasont.Inspire.SDK.InspireClient)
+  commentId: M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveAttributes(Vasont.Inspire.SDK.InspireClient)
+  id: RetrieveAttributes(Vasont.Inspire.SDK.InspireClient)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions
+  langs:
+  - csharp
+  - vb
+  name: RetrieveAttributes(InspireClient)
+  nameWithType: ConfigurationExtensions.RetrieveAttributes(InspireClient)
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveAttributes(Vasont.Inspire.SDK.InspireClient)
+  type: Method
+  source:
+    remote:
+      path: src/Configuration/ConfigurationExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: RetrieveAttributes
+    path: Configuration/ConfigurationExtensions.cs
+    startLine: 43
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Configuration
+  summary: "\nThis method is used to retrieve and return attributes.\n"
+  example: []
+  syntax:
+    content: public static List<AttributeModel> RetrieveAttributes(this InspireClient client)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
@@ -147,8 +232,8 @@ items:
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Function GetAttributes(client As InspireClient) As List(Of AttributeModel)
-  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetAttributes*
+      Public Shared Function RetrieveAttributes(client As InspireClient) As List(Of AttributeModel)
+  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveAttributes*
   modifiers.csharp:
   - public
   - static
@@ -174,14 +259,73 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetAttribute
     path: Configuration/ConfigurationExtensions.cs
-    startLine: 44
+    startLine: 55
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Configuration
   summary: "\nThis Method used to retrieve and return a specific attribute.\n"
   example: []
   syntax:
-    content: public static AttributeModel GetAttribute(this InspireClient client, long attributeId)
+    content: >-
+      [Obsolete("This method is obsolete. Please use FindAttribute() going forward. This method will be removed in a future release.")]
+
+      public static AttributeModel GetAttribute(this InspireClient client, long attributeId)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
+    - id: attributeId
+      type: System.Int64
+      description: Contains the attribute identity to retrieve metadata for.
+    return:
+      type: Vasont.Inspire.Models.Configuration.AttributeModel
+      description: Returns a specific <xref href="Vasont.Inspire.Models.Configuration.AttributeModel" data-throw-if-not-resolved="false"></xref> from the application.
+    content.vb: >-
+      <Obsolete("This method is obsolete. Please use FindAttribute() going forward. This method will be removed in a future release.")>
+
+      <ExtensionAttribute>
+
+      Public Shared Function GetAttribute(client As InspireClient, attributeId As Long) As AttributeModel
+  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetAttribute*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use FindAttribute() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindAttribute(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  commentId: M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindAttribute(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  id: FindAttribute(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions
+  langs:
+  - csharp
+  - vb
+  name: FindAttribute(InspireClient, Int64)
+  nameWithType: ConfigurationExtensions.FindAttribute(InspireClient, Int64)
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindAttribute(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  type: Method
+  source:
+    remote:
+      path: src/Configuration/ConfigurationExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: FindAttribute
+    path: Configuration/ConfigurationExtensions.cs
+    startLine: 67
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Configuration
+  summary: "\nThis Method used to retrieve and return a specific attribute.\n"
+  example: []
+  syntax:
+    content: public static AttributeModel FindAttribute(this InspireClient client, long attributeId)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
@@ -195,8 +339,8 @@ items:
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Function GetAttribute(client As InspireClient, attributeId As Long) As AttributeModel
-  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetAttribute*
+      Public Shared Function FindAttribute(client As InspireClient, attributeId As Long) As AttributeModel
+  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindAttribute*
   modifiers.csharp:
   - public
   - static
@@ -222,7 +366,7 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: UpdateAttribute
     path: Configuration/ConfigurationExtensions.cs
-    startLine: 56
+    startLine: 79
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Configuration
@@ -270,7 +414,7 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: CreateAttribute
     path: Configuration/ConfigurationExtensions.cs
-    startLine: 73
+    startLine: 96
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Configuration
@@ -318,11 +462,11 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RemoveAttribute
     path: Configuration/ConfigurationExtensions.cs
-    startLine: 90
+    startLine: 113
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Configuration
-  summary: "\nThis Method is used to create a new attribute.\n"
+  summary: "\nThis Method is used to delete the specified attribute.\n"
   example: []
   syntax:
     content: public static bool RemoveAttribute(this InspireClient client, long attributeId)
@@ -335,7 +479,7 @@ items:
       description: Contains the attribute identity to delete.
     return:
       type: System.Boolean
-      description: Returns the results of the action.
+      description: Returns a boolean value indicating whether the action succeeded or not.
     content.vb: >-
       <ExtensionAttribute>
 
@@ -366,14 +510,70 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetProfileAttributes
     path: Configuration/ConfigurationExtensions.cs
-    startLine: 106
+    startLine: 129
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Configuration
   summary: "\nThis method is used to retrieve a list of minimal profile attributes.\n"
   example: []
   syntax:
-    content: public static List<MinimalProfileAttributeModel> GetProfileAttributes(this InspireClient client)
+    content: >-
+      [Obsolete("This method is obsolete. Please use RetrieveProfileAttributes() going forward. This method will be removed in a future release.")]
+
+      public static List<MinimalProfileAttributeModel> GetProfileAttributes(this InspireClient client)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
+    return:
+      type: System.Collections.Generic.List{Vasont.Inspire.Models.Components.Schema.MinimalProfileAttributeModel}
+      description: Returns a list of <xref href="Vasont.Inspire.Models.Components.Schema.MinimalProfileAttributeModel" data-throw-if-not-resolved="false"></xref> from the application.
+    content.vb: >-
+      <Obsolete("This method is obsolete. Please use RetrieveProfileAttributes() going forward. This method will be removed in a future release.")>
+
+      <ExtensionAttribute>
+
+      Public Shared Function GetProfileAttributes(client As InspireClient) As List(Of MinimalProfileAttributeModel)
+  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetProfileAttributes*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use RetrieveProfileAttributes() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveProfileAttributes(Vasont.Inspire.SDK.InspireClient)
+  commentId: M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveProfileAttributes(Vasont.Inspire.SDK.InspireClient)
+  id: RetrieveProfileAttributes(Vasont.Inspire.SDK.InspireClient)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions
+  langs:
+  - csharp
+  - vb
+  name: RetrieveProfileAttributes(InspireClient)
+  nameWithType: ConfigurationExtensions.RetrieveProfileAttributes(InspireClient)
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveProfileAttributes(Vasont.Inspire.SDK.InspireClient)
+  type: Method
+  source:
+    remote:
+      path: src/Configuration/ConfigurationExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: RetrieveProfileAttributes
+    path: Configuration/ConfigurationExtensions.cs
+    startLine: 140
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Configuration
+  summary: "\nThis method is used to retrieve a list of minimal profile attributes.\n"
+  example: []
+  syntax:
+    content: public static List<MinimalProfileAttributeModel> RetrieveProfileAttributes(this InspireClient client)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
@@ -384,8 +584,8 @@ items:
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Function GetProfileAttributes(client As InspireClient) As List(Of MinimalProfileAttributeModel)
-  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetProfileAttributes*
+      Public Shared Function RetrieveProfileAttributes(client As InspireClient) As List(Of MinimalProfileAttributeModel)
+  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveProfileAttributes*
   modifiers.csharp:
   - public
   - static
@@ -411,14 +611,70 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetProfileAttributeItems
     path: Configuration/ConfigurationExtensions.cs
-    startLine: 117
+    startLine: 151
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Configuration
   summary: "\nThis method is used to retrieve a list of profile attribute items.\n"
   example: []
   syntax:
-    content: public static List<ProfileAttributeItemModel> GetProfileAttributeItems(this InspireClient client)
+    content: >-
+      [Obsolete("This method is obsolete. Please use RetrieveProfileAttributeItems() going forward. This method will be removed in a future release.")]
+
+      public static List<ProfileAttributeItemModel> GetProfileAttributeItems(this InspireClient client)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
+    return:
+      type: System.Collections.Generic.List{Vasont.Inspire.Models.Components.Schema.ProfileAttributeItemModel}
+      description: Returns a list of <xref href="Vasont.Inspire.Models.Components.Schema.ProfileAttributeItemModel" data-throw-if-not-resolved="false"></xref> from the application.
+    content.vb: >-
+      <Obsolete("This method is obsolete. Please use RetrieveProfileAttributeItems() going forward. This method will be removed in a future release.")>
+
+      <ExtensionAttribute>
+
+      Public Shared Function GetProfileAttributeItems(client As InspireClient) As List(Of ProfileAttributeItemModel)
+  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetProfileAttributeItems*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use RetrieveProfileAttributeItems() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveProfileAttributeItems(Vasont.Inspire.SDK.InspireClient)
+  commentId: M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveProfileAttributeItems(Vasont.Inspire.SDK.InspireClient)
+  id: RetrieveProfileAttributeItems(Vasont.Inspire.SDK.InspireClient)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions
+  langs:
+  - csharp
+  - vb
+  name: RetrieveProfileAttributeItems(InspireClient)
+  nameWithType: ConfigurationExtensions.RetrieveProfileAttributeItems(InspireClient)
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveProfileAttributeItems(Vasont.Inspire.SDK.InspireClient)
+  type: Method
+  source:
+    remote:
+      path: src/Configuration/ConfigurationExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: RetrieveProfileAttributeItems
+    path: Configuration/ConfigurationExtensions.cs
+    startLine: 162
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Configuration
+  summary: "\nThis method is used to retrieve a list of profile attribute items.\n"
+  example: []
+  syntax:
+    content: public static List<ProfileAttributeItemModel> RetrieveProfileAttributeItems(this InspireClient client)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
@@ -429,8 +685,8 @@ items:
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Function GetProfileAttributeItems(client As InspireClient) As List(Of ProfileAttributeItemModel)
-  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetProfileAttributeItems*
+      Public Shared Function RetrieveProfileAttributeItems(client As InspireClient) As List(Of ProfileAttributeItemModel)
+  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveProfileAttributeItems*
   modifiers.csharp:
   - public
   - static
@@ -456,14 +712,73 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetProfileAttribute
     path: Configuration/ConfigurationExtensions.cs
-    startLine: 129
+    startLine: 174
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Configuration
   summary: "\nThis method is used to retrieve a specific profile attributes.\n"
   example: []
   syntax:
-    content: public static ProfileAttributeModel GetProfileAttribute(this InspireClient client, long attributeId)
+    content: >-
+      [Obsolete("This method is obsolete. Please use FindProfileAttribute() going forward. This method will be removed in a future release.")]
+
+      public static ProfileAttributeModel GetProfileAttribute(this InspireClient client, long attributeId)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
+    - id: attributeId
+      type: System.Int64
+      description: Contains the attribute identity to retrieve metadata for.
+    return:
+      type: Vasont.Inspire.Models.Components.Schema.ProfileAttributeModel
+      description: Returns a specific <xref href="Vasont.Inspire.Models.Components.Schema.ProfileAttributeModel" data-throw-if-not-resolved="false"></xref> from the application.
+    content.vb: >-
+      <Obsolete("This method is obsolete. Please use FindProfileAttribute() going forward. This method will be removed in a future release.")>
+
+      <ExtensionAttribute>
+
+      Public Shared Function GetProfileAttribute(client As InspireClient, attributeId As Long) As ProfileAttributeModel
+  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetProfileAttribute*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use FindProfileAttribute() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindProfileAttribute(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  commentId: M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindProfileAttribute(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  id: FindProfileAttribute(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions
+  langs:
+  - csharp
+  - vb
+  name: FindProfileAttribute(InspireClient, Int64)
+  nameWithType: ConfigurationExtensions.FindProfileAttribute(InspireClient, Int64)
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindProfileAttribute(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  type: Method
+  source:
+    remote:
+      path: src/Configuration/ConfigurationExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: FindProfileAttribute
+    path: Configuration/ConfigurationExtensions.cs
+    startLine: 186
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Configuration
+  summary: "\nThis method is used to retrieve a specific profile attributes.\n"
+  example: []
+  syntax:
+    content: public static ProfileAttributeModel FindProfileAttribute(this InspireClient client, long attributeId)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
@@ -477,8 +792,8 @@ items:
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Function GetProfileAttribute(client As InspireClient, attributeId As Long) As ProfileAttributeModel
-  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetProfileAttribute*
+      Public Shared Function FindProfileAttribute(client As InspireClient, attributeId As Long) As ProfileAttributeModel
+  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindProfileAttribute*
   modifiers.csharp:
   - public
   - static
@@ -504,7 +819,7 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: UpdateProfileAttribute
     path: Configuration/ConfigurationExtensions.cs
-    startLine: 141
+    startLine: 198
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Configuration
@@ -552,7 +867,7 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: CreateProfileAttribute
     path: Configuration/ConfigurationExtensions.cs
-    startLine: 158
+    startLine: 215
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Configuration
@@ -600,11 +915,11 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RemoveProfileAttribute
     path: Configuration/ConfigurationExtensions.cs
-    startLine: 175
+    startLine: 232
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Configuration
-  summary: "\nThis Method is used to create a new attribute.\n"
+  summary: "\nThis Method is used to delete the specified attribute.\n"
   example: []
   syntax:
     content: public static bool RemoveProfileAttribute(this InspireClient client, long attributeId)
@@ -617,7 +932,7 @@ items:
       description: Contains the attribute identity to delete.
     return:
       type: System.Boolean
-      description: Returns the results of the action.
+      description: Returns a boolean value indicating whether the action succeeded or not.
     content.vb: >-
       <ExtensionAttribute>
 
@@ -648,14 +963,70 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetSchemaStandards
     path: Configuration/ConfigurationExtensions.cs
-    startLine: 191
+    startLine: 248
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Configuration
   summary: "\nThis method is used to retrieve a list of schema standards.\n"
   example: []
   syntax:
-    content: public static List<string> GetSchemaStandards(this InspireClient client)
+    content: >-
+      [Obsolete("This method is obsolete. Please use RetrieveSchemaStandards() going forward. This method will be removed in a future release.")]
+
+      public static List<string> GetSchemaStandards(this InspireClient client)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
+    return:
+      type: System.Collections.Generic.List{System.String}
+      description: Returns a list of schema standards from the application.
+    content.vb: >-
+      <Obsolete("This method is obsolete. Please use RetrieveSchemaStandards() going forward. This method will be removed in a future release.")>
+
+      <ExtensionAttribute>
+
+      Public Shared Function GetSchemaStandards(client As InspireClient) As List(Of String)
+  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetSchemaStandards*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use RetrieveSchemaStandards() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveSchemaStandards(Vasont.Inspire.SDK.InspireClient)
+  commentId: M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveSchemaStandards(Vasont.Inspire.SDK.InspireClient)
+  id: RetrieveSchemaStandards(Vasont.Inspire.SDK.InspireClient)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions
+  langs:
+  - csharp
+  - vb
+  name: RetrieveSchemaStandards(InspireClient)
+  nameWithType: ConfigurationExtensions.RetrieveSchemaStandards(InspireClient)
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveSchemaStandards(Vasont.Inspire.SDK.InspireClient)
+  type: Method
+  source:
+    remote:
+      path: src/Configuration/ConfigurationExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: RetrieveSchemaStandards
+    path: Configuration/ConfigurationExtensions.cs
+    startLine: 259
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Configuration
+  summary: "\nThis method is used to retrieve a list of schema standards.\n"
+  example: []
+  syntax:
+    content: public static List<string> RetrieveSchemaStandards(this InspireClient client)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
@@ -666,8 +1037,8 @@ items:
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Function GetSchemaStandards(client As InspireClient) As List(Of String)
-  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetSchemaStandards*
+      Public Shared Function RetrieveSchemaStandards(client As InspireClient) As List(Of String)
+  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveSchemaStandards*
   modifiers.csharp:
   - public
   - static
@@ -693,14 +1064,70 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetComponentTypes
     path: Configuration/ConfigurationExtensions.cs
-    startLine: 206
+    startLine: 274
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Configuration
   summary: "\nThis method is used to retrieve a list of component types.\n"
   example: []
   syntax:
-    content: public static List<ComponentTypeModel> GetComponentTypes(this InspireClient client)
+    content: >-
+      [Obsolete("This method is obsolete. Please use RetrieveComponentTypes() going forward. This method will be removed in a future release.")]
+
+      public static List<ComponentTypeModel> GetComponentTypes(this InspireClient client)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
+    return:
+      type: System.Collections.Generic.List{Vasont.Inspire.Models.Components.ComponentTypeModel}
+      description: Returns a list of <xref href="Vasont.Inspire.Models.Components.ComponentTypeModel" data-throw-if-not-resolved="false"></xref> from the application.
+    content.vb: >-
+      <Obsolete("This method is obsolete. Please use RetrieveComponentTypes() going forward. This method will be removed in a future release.")>
+
+      <ExtensionAttribute>
+
+      Public Shared Function GetComponentTypes(client As InspireClient) As List(Of ComponentTypeModel)
+  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetComponentTypes*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use RetrieveComponentTypes() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveComponentTypes(Vasont.Inspire.SDK.InspireClient)
+  commentId: M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveComponentTypes(Vasont.Inspire.SDK.InspireClient)
+  id: RetrieveComponentTypes(Vasont.Inspire.SDK.InspireClient)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions
+  langs:
+  - csharp
+  - vb
+  name: RetrieveComponentTypes(InspireClient)
+  nameWithType: ConfigurationExtensions.RetrieveComponentTypes(InspireClient)
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveComponentTypes(Vasont.Inspire.SDK.InspireClient)
+  type: Method
+  source:
+    remote:
+      path: src/Configuration/ConfigurationExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: RetrieveComponentTypes
+    path: Configuration/ConfigurationExtensions.cs
+    startLine: 285
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Configuration
+  summary: "\nThis method is used to retrieve a list of component types.\n"
+  example: []
+  syntax:
+    content: public static List<ComponentTypeModel> RetrieveComponentTypes(this InspireClient client)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
@@ -711,8 +1138,8 @@ items:
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Function GetComponentTypes(client As InspireClient) As List(Of ComponentTypeModel)
-  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetComponentTypes*
+      Public Shared Function RetrieveComponentTypes(client As InspireClient) As List(Of ComponentTypeModel)
+  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveComponentTypes*
   modifiers.csharp:
   - public
   - static
@@ -738,14 +1165,73 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetComponentType
     path: Configuration/ConfigurationExtensions.cs
-    startLine: 218
+    startLine: 297
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Configuration
   summary: "\nThis method is used to retrieve a specific component type.\n"
   example: []
   syntax:
-    content: public static ComponentTypeModel GetComponentType(this InspireClient client, long componentTypeId)
+    content: >-
+      [Obsolete("This method is obsolete. Please use FindComponentType() going forward. This method will be removed in a future release.")]
+
+      public static ComponentTypeModel GetComponentType(this InspireClient client, long componentTypeId)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
+    - id: componentTypeId
+      type: System.Int64
+      description: Contains the component type identity to retrieve metadata for.
+    return:
+      type: Vasont.Inspire.Models.Components.ComponentTypeModel
+      description: Returns a specific <xref href="Vasont.Inspire.Models.Components.ComponentTypeModel" data-throw-if-not-resolved="false"></xref> from the application.
+    content.vb: >-
+      <Obsolete("This method is obsolete. Please use FindComponentType() going forward. This method will be removed in a future release.")>
+
+      <ExtensionAttribute>
+
+      Public Shared Function GetComponentType(client As InspireClient, componentTypeId As Long) As ComponentTypeModel
+  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetComponentType*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use FindComponentType() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindComponentType(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  commentId: M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindComponentType(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  id: FindComponentType(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions
+  langs:
+  - csharp
+  - vb
+  name: FindComponentType(InspireClient, Int64)
+  nameWithType: ConfigurationExtensions.FindComponentType(InspireClient, Int64)
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindComponentType(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  type: Method
+  source:
+    remote:
+      path: src/Configuration/ConfigurationExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: FindComponentType
+    path: Configuration/ConfigurationExtensions.cs
+    startLine: 309
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Configuration
+  summary: "\nThis method is used to retrieve a specific component type.\n"
+  example: []
+  syntax:
+    content: public static ComponentTypeModel FindComponentType(this InspireClient client, long componentTypeId)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
@@ -759,8 +1245,8 @@ items:
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Function GetComponentType(client As InspireClient, componentTypeId As Long) As ComponentTypeModel
-  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetComponentType*
+      Public Shared Function FindComponentType(client As InspireClient, componentTypeId As Long) As ComponentTypeModel
+  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindComponentType*
   modifiers.csharp:
   - public
   - static
@@ -786,7 +1272,7 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: UpdateComponentType
     path: Configuration/ConfigurationExtensions.cs
-    startLine: 230
+    startLine: 321
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Configuration
@@ -834,7 +1320,7 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: CreateComponentType
     path: Configuration/ConfigurationExtensions.cs
-    startLine: 247
+    startLine: 338
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Configuration
@@ -882,11 +1368,11 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RemoveComponentType
     path: Configuration/ConfigurationExtensions.cs
-    startLine: 264
+    startLine: 355
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Configuration
-  summary: "\nThis Method is used to remove a component type.\n"
+  summary: "\nThis Method is used to delete the specified component type.\n"
   example: []
   syntax:
     content: public static bool RemoveComponentType(this InspireClient client, long componentTypeId)
@@ -899,7 +1385,7 @@ items:
       description: Contains the component type identity to delete.
     return:
       type: System.Boolean
-      description: Returns the results of the action.
+      description: Returns a boolean value indicating whether the action succeeded or not.
     content.vb: >-
       <ExtensionAttribute>
 
@@ -930,14 +1416,70 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetElements
     path: Configuration/ConfigurationExtensions.cs
-    startLine: 280
+    startLine: 371
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Configuration
   summary: "\nThis method is used to retrieve a list of elements.\n"
   example: []
   syntax:
-    content: public static List<ElementModel> GetElements(this InspireClient client)
+    content: >-
+      [Obsolete("This method is obsolete. Please use RetrieveElements() going forward. This method will be removed in a future release.")]
+
+      public static List<ElementModel> GetElements(this InspireClient client)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
+    return:
+      type: System.Collections.Generic.List{Vasont.Inspire.Models.Configuration.ElementModel}
+      description: Returns a list of <xref href="Vasont.Inspire.Models.Configuration.ElementModel" data-throw-if-not-resolved="false"></xref> from the application.
+    content.vb: >-
+      <Obsolete("This method is obsolete. Please use RetrieveElements() going forward. This method will be removed in a future release.")>
+
+      <ExtensionAttribute>
+
+      Public Shared Function GetElements(client As InspireClient) As List(Of ElementModel)
+  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetElements*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use RetrieveElements() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveElements(Vasont.Inspire.SDK.InspireClient)
+  commentId: M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveElements(Vasont.Inspire.SDK.InspireClient)
+  id: RetrieveElements(Vasont.Inspire.SDK.InspireClient)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions
+  langs:
+  - csharp
+  - vb
+  name: RetrieveElements(InspireClient)
+  nameWithType: ConfigurationExtensions.RetrieveElements(InspireClient)
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveElements(Vasont.Inspire.SDK.InspireClient)
+  type: Method
+  source:
+    remote:
+      path: src/Configuration/ConfigurationExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: RetrieveElements
+    path: Configuration/ConfigurationExtensions.cs
+    startLine: 382
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Configuration
+  summary: "\nThis method is used to retrieve a list of elements.\n"
+  example: []
+  syntax:
+    content: public static List<ElementModel> RetrieveElements(this InspireClient client)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
@@ -948,8 +1490,8 @@ items:
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Function GetElements(client As InspireClient) As List(Of ElementModel)
-  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetElements*
+      Public Shared Function RetrieveElements(client As InspireClient) As List(Of ElementModel)
+  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveElements*
   modifiers.csharp:
   - public
   - static
@@ -975,14 +1517,73 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetElement
     path: Configuration/ConfigurationExtensions.cs
-    startLine: 292
+    startLine: 394
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Configuration
   summary: "\nThis method is used to retrieve a specific element.\n"
   example: []
   syntax:
-    content: public static ElementModel GetElement(this InspireClient client, long elementId)
+    content: >-
+      [Obsolete("This method is obsolete. Please use FindElement() going forward. This method will be removed in a future release.")]
+
+      public static ElementModel GetElement(this InspireClient client, long elementId)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
+    - id: elementId
+      type: System.Int64
+      description: Contains the record identity to retrieve.
+    return:
+      type: Vasont.Inspire.Models.Configuration.ElementModel
+      description: Returns a specific <xref href="Vasont.Inspire.Models.Configuration.ElementModel" data-throw-if-not-resolved="false"></xref> from the application.
+    content.vb: >-
+      <Obsolete("This method is obsolete. Please use FindElement() going forward. This method will be removed in a future release.")>
+
+      <ExtensionAttribute>
+
+      Public Shared Function GetElement(client As InspireClient, elementId As Long) As ElementModel
+  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetElement*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use FindElement() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindElement(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  commentId: M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindElement(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  id: FindElement(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions
+  langs:
+  - csharp
+  - vb
+  name: FindElement(InspireClient, Int64)
+  nameWithType: ConfigurationExtensions.FindElement(InspireClient, Int64)
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindElement(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  type: Method
+  source:
+    remote:
+      path: src/Configuration/ConfigurationExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: FindElement
+    path: Configuration/ConfigurationExtensions.cs
+    startLine: 406
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Configuration
+  summary: "\nThis method is used to retrieve a specific element.\n"
+  example: []
+  syntax:
+    content: public static ElementModel FindElement(this InspireClient client, long elementId)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
@@ -996,8 +1597,8 @@ items:
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Function GetElement(client As InspireClient, elementId As Long) As ElementModel
-  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetElement*
+      Public Shared Function FindElement(client As InspireClient, elementId As Long) As ElementModel
+  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindElement*
   modifiers.csharp:
   - public
   - static
@@ -1023,7 +1624,7 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: UpdateElement
     path: Configuration/ConfigurationExtensions.cs
-    startLine: 304
+    startLine: 418
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Configuration
@@ -1071,7 +1672,7 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: CreateElement
     path: Configuration/ConfigurationExtensions.cs
-    startLine: 321
+    startLine: 435
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Configuration
@@ -1119,11 +1720,11 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RemoveElement
     path: Configuration/ConfigurationExtensions.cs
-    startLine: 338
+    startLine: 452
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Configuration
-  summary: "\nThis Method is used to create a new attribute.\n"
+  summary: "\nThis Method is used to delete the specified attribute.\n"
   example: []
   syntax:
     content: public static bool RemoveElement(this InspireClient client, long elementId)
@@ -1136,7 +1737,7 @@ items:
       description: Contains the element identity to delete.
     return:
       type: System.Boolean
-      description: Returns the results of the action.
+      description: Returns a boolean value indicating whether the action succeeded or not.
     content.vb: >-
       <ExtensionAttribute>
 
@@ -1167,26 +1768,82 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetExports
     path: Configuration/ConfigurationExtensions.cs
-    startLine: 354
+    startLine: 468
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Configuration
   summary: "\nThis method is used to retrieve a list of exports.\n"
   example: []
   syntax:
-    content: public static List<ExportConfigurationModel> GetExports(this InspireClient client)
+    content: >-
+      [Obsolete("This method is obsolete. Please use RetrieveExports() going forward. This method will be removed in a future release.")]
+
+      public static List<ExportConfigurationModel> GetExports(this InspireClient client)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
       description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
     return:
       type: System.Collections.Generic.List{Vasont.Inspire.Models.Transfers.ExportConfigurationModel}
-      description: Returns a list of <xref href="Vasont.Inspire.Models.Transfers.ExportConfigurationModel" data-throw-if-not-resolved="false"></xref> from the application.
+      description: Returns a list of <xref href="Vasont.Inspire.Models.Transfers.ExportConfigurationModel" data-throw-if-not-resolved="false"></xref> objects from the application.
     content.vb: >-
+      <Obsolete("This method is obsolete. Please use RetrieveExports() going forward. This method will be removed in a future release.")>
+
       <ExtensionAttribute>
 
       Public Shared Function GetExports(client As InspireClient) As List(Of ExportConfigurationModel)
   overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetExports*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use RetrieveExports() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveExports(Vasont.Inspire.SDK.InspireClient)
+  commentId: M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveExports(Vasont.Inspire.SDK.InspireClient)
+  id: RetrieveExports(Vasont.Inspire.SDK.InspireClient)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions
+  langs:
+  - csharp
+  - vb
+  name: RetrieveExports(InspireClient)
+  nameWithType: ConfigurationExtensions.RetrieveExports(InspireClient)
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveExports(Vasont.Inspire.SDK.InspireClient)
+  type: Method
+  source:
+    remote:
+      path: src/Configuration/ConfigurationExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: RetrieveExports
+    path: Configuration/ConfigurationExtensions.cs
+    startLine: 479
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Configuration
+  summary: "\nThis method is used to retrieve a list of exports.\n"
+  example: []
+  syntax:
+    content: public static List<ExportConfigurationModel> RetrieveExports(this InspireClient client)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
+    return:
+      type: System.Collections.Generic.List{Vasont.Inspire.Models.Transfers.ExportConfigurationModel}
+      description: Returns a list of <xref href="Vasont.Inspire.Models.Transfers.ExportConfigurationModel" data-throw-if-not-resolved="false"></xref> objects from the application.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function RetrieveExports(client As InspireClient) As List(Of ExportConfigurationModel)
+  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveExports*
   modifiers.csharp:
   - public
   - static
@@ -1212,14 +1869,73 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetExport
     path: Configuration/ConfigurationExtensions.cs
-    startLine: 366
+    startLine: 491
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Configuration
   summary: "\nThis method is used to retrieve a specific export.\n"
   example: []
   syntax:
-    content: public static ExportConfigurationModel GetExport(this InspireClient client, long exportId)
+    content: >-
+      [Obsolete("This method is obsolete. Please use FindExport() going forward. This method will be removed in a future release.")]
+
+      public static ExportConfigurationModel GetExport(this InspireClient client, long exportId)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
+    - id: exportId
+      type: System.Int64
+      description: Contains the record identity to retrieve.
+    return:
+      type: Vasont.Inspire.Models.Transfers.ExportConfigurationModel
+      description: Returns a specific <xref href="Vasont.Inspire.Models.Transfers.ExportConfigurationModel" data-throw-if-not-resolved="false"></xref> from the application.
+    content.vb: >-
+      <Obsolete("This method is obsolete. Please use FindExport() going forward. This method will be removed in a future release.")>
+
+      <ExtensionAttribute>
+
+      Public Shared Function GetExport(client As InspireClient, exportId As Long) As ExportConfigurationModel
+  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetExport*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use FindExport() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindExport(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  commentId: M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindExport(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  id: FindExport(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions
+  langs:
+  - csharp
+  - vb
+  name: FindExport(InspireClient, Int64)
+  nameWithType: ConfigurationExtensions.FindExport(InspireClient, Int64)
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindExport(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  type: Method
+  source:
+    remote:
+      path: src/Configuration/ConfigurationExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: FindExport
+    path: Configuration/ConfigurationExtensions.cs
+    startLine: 503
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Configuration
+  summary: "\nThis method is used to retrieve a specific export.\n"
+  example: []
+  syntax:
+    content: public static ExportConfigurationModel FindExport(this InspireClient client, long exportId)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
@@ -1233,8 +1949,8 @@ items:
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Function GetExport(client As InspireClient, exportId As Long) As ExportConfigurationModel
-  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetExport*
+      Public Shared Function FindExport(client As InspireClient, exportId As Long) As ExportConfigurationModel
+  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindExport*
   modifiers.csharp:
   - public
   - static
@@ -1260,7 +1976,7 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: UpdateExport
     path: Configuration/ConfigurationExtensions.cs
-    startLine: 378
+    startLine: 515
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Configuration
@@ -1308,7 +2024,7 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: CreateExport
     path: Configuration/ConfigurationExtensions.cs
-    startLine: 395
+    startLine: 532
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Configuration
@@ -1322,10 +2038,10 @@ items:
       description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
     - id: model
       type: Vasont.Inspire.Models.Transfers.ExportConfigurationModel
-      description: Contains the export model to create.
+      description: Contains the <xref href="Vasont.Inspire.Models.Transfers.ExportConfigurationModel" data-throw-if-not-resolved="false"></xref> to create.
     return:
       type: Vasont.Inspire.Models.Transfers.ExportConfigurationModel
-      description: Returns a specific <xref href="Vasont.Inspire.Models.Configuration.ElementModel" data-throw-if-not-resolved="false"></xref> that was created.
+      description: Returns the new <xref href="Vasont.Inspire.Models.Transfers.ExportConfigurationModel" data-throw-if-not-resolved="false"></xref> that was created.
     content.vb: >-
       <ExtensionAttribute>
 
@@ -1356,11 +2072,11 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RemoveExport
     path: Configuration/ConfigurationExtensions.cs
-    startLine: 412
+    startLine: 549
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Configuration
-  summary: "\nThis Method is used to create remove a export.\n"
+  summary: "\nThis Method is used to delete a specified export.\n"
   example: []
   syntax:
     content: public static bool RemoveExport(this InspireClient client, long exportId)
@@ -1373,7 +2089,7 @@ items:
       description: Contains the export identity to delete.
     return:
       type: System.Boolean
-      description: Returns the results of the action.
+      description: Returns a boolean value indicating whether the action succeeded or not.
     content.vb: >-
       <ExtensionAttribute>
 
@@ -1404,26 +2120,82 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetExportPlugins
     path: Configuration/ConfigurationExtensions.cs
-    startLine: 424
+    startLine: 561
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Configuration
   summary: "\nThis method is used to retrieve a list of export plugins.\n"
   example: []
   syntax:
-    content: public static List<PluginModel> GetExportPlugins(this InspireClient client)
+    content: >-
+      [Obsolete("This method is obsolete. Please use RetrieveExportPlugins() going forward. This method will be removed in a future release.")]
+
+      public static List<PluginModel> GetExportPlugins(this InspireClient client)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
       description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
     return:
       type: System.Collections.Generic.List{Vasont.Inspire.Models.Plugins.PluginModel}
-      description: Returns a list of <xref href="Vasont.Inspire.Models.Plugins.PluginModel" data-throw-if-not-resolved="false"></xref> from the application.
+      description: Returns a list of <xref href="Vasont.Inspire.Models.Plugins.PluginModel" data-throw-if-not-resolved="false"></xref> objects from the application.
     content.vb: >-
+      <Obsolete("This method is obsolete. Please use RetrieveExportPlugins() going forward. This method will be removed in a future release.")>
+
       <ExtensionAttribute>
 
       Public Shared Function GetExportPlugins(client As InspireClient) As List(Of PluginModel)
   overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetExportPlugins*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use RetrieveExportPlugins() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveExportPlugins(Vasont.Inspire.SDK.InspireClient)
+  commentId: M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveExportPlugins(Vasont.Inspire.SDK.InspireClient)
+  id: RetrieveExportPlugins(Vasont.Inspire.SDK.InspireClient)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions
+  langs:
+  - csharp
+  - vb
+  name: RetrieveExportPlugins(InspireClient)
+  nameWithType: ConfigurationExtensions.RetrieveExportPlugins(InspireClient)
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveExportPlugins(Vasont.Inspire.SDK.InspireClient)
+  type: Method
+  source:
+    remote:
+      path: src/Configuration/ConfigurationExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: RetrieveExportPlugins
+    path: Configuration/ConfigurationExtensions.cs
+    startLine: 572
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Configuration
+  summary: "\nThis method is used to retrieve a list of export plugins.\n"
+  example: []
+  syntax:
+    content: public static List<PluginModel> RetrieveExportPlugins(this InspireClient client)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
+    return:
+      type: System.Collections.Generic.List{Vasont.Inspire.Models.Plugins.PluginModel}
+      description: Returns a list of <xref href="Vasont.Inspire.Models.Plugins.PluginModel" data-throw-if-not-resolved="false"></xref> objects from the application.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function RetrieveExportPlugins(client As InspireClient) As List(Of PluginModel)
+  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveExportPlugins*
   modifiers.csharp:
   - public
   - static
@@ -1449,14 +2221,17 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetExportPluginParameters
     path: Configuration/ConfigurationExtensions.cs
-    startLine: 436
+    startLine: 584
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Configuration
-  summary: "\nThis method is used to retrieve a list of export plugin parameters.\n"
+  summary: "\nThis method is used to retrieve a list of export plugin parameters for a specified plugin.\n"
   example: []
   syntax:
-    content: public static List<PluginParameterModel> GetExportPluginParameters(this InspireClient client, long pluginId)
+    content: >-
+      [Obsolete("This method is obsolete. Please use FindExportPluginParameters() going forward. This method will be removed in a future release.")]
+
+      public static List<PluginParameterModel> GetExportPluginParameters(this InspireClient client, long pluginId)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
@@ -1466,12 +2241,68 @@ items:
       description: Contains the plugin identity to retrieve metadata for.
     return:
       type: System.Collections.Generic.List{Vasont.Inspire.Models.Plugins.PluginParameterModel}
-      description: Returns a list of <xref href="Vasont.Inspire.Models.Plugins.PluginParameterModel" data-throw-if-not-resolved="false"></xref> from the application.
+      description: Returns a list of <xref href="Vasont.Inspire.Models.Plugins.PluginParameterModel" data-throw-if-not-resolved="false"></xref> objects from the application.
     content.vb: >-
+      <Obsolete("This method is obsolete. Please use FindExportPluginParameters() going forward. This method will be removed in a future release.")>
+
       <ExtensionAttribute>
 
       Public Shared Function GetExportPluginParameters(client As InspireClient, pluginId As Long) As List(Of PluginParameterModel)
   overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetExportPluginParameters*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use FindExportPluginParameters() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindExportPluginParameters(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  commentId: M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindExportPluginParameters(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  id: FindExportPluginParameters(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions
+  langs:
+  - csharp
+  - vb
+  name: FindExportPluginParameters(InspireClient, Int64)
+  nameWithType: ConfigurationExtensions.FindExportPluginParameters(InspireClient, Int64)
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindExportPluginParameters(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  type: Method
+  source:
+    remote:
+      path: src/Configuration/ConfigurationExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: FindExportPluginParameters
+    path: Configuration/ConfigurationExtensions.cs
+    startLine: 596
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Configuration
+  summary: "\nThis method is used to retrieve a list of export plugin parameters for a specified plugin.\n"
+  example: []
+  syntax:
+    content: public static List<PluginParameterModel> FindExportPluginParameters(this InspireClient client, long pluginId)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
+    - id: pluginId
+      type: System.Int64
+      description: Contains the plugin identity to retrieve metadata for.
+    return:
+      type: System.Collections.Generic.List{Vasont.Inspire.Models.Plugins.PluginParameterModel}
+      description: Returns a list of <xref href="Vasont.Inspire.Models.Plugins.PluginParameterModel" data-throw-if-not-resolved="false"></xref> objects from the application.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function FindExportPluginParameters(client As InspireClient, pluginId As Long) As List(Of PluginParameterModel)
+  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindExportPluginParameters*
   modifiers.csharp:
   - public
   - static
@@ -1497,14 +2328,17 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetExportComponentType
     path: Configuration/ConfigurationExtensions.cs
-    startLine: 449
+    startLine: 609
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Configuration
   summary: "\nThis method is used to retrieve a specific export component type selection model.\n"
   example: []
   syntax:
-    content: public static ExportSelectionModel GetExportComponentType(this InspireClient client, long componentTypeId, ExportType exportType = ExportType.Standard)
+    content: >-
+      [Obsolete("This method is obsolete. Please use FindExportComponentType() going forward. This method will be removed in a future release.")]
+
+      public static ExportSelectionModel GetExportComponentType(this InspireClient client, long componentTypeId, ExportType exportType = ExportType.Standard)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
@@ -1517,12 +2351,71 @@ items:
       description: Contains the <xref href="Vasont.Inspire.Models.Transfers.ExportType" data-throw-if-not-resolved="false"></xref> type that will be retrieved, Standard is default.
     return:
       type: Vasont.Inspire.Models.Transfers.ExportSelectionModel
-      description: Returns a list of <xref href="Vasont.Inspire.Models.Plugins.PluginParameterModel" data-throw-if-not-resolved="false"></xref> from the application.
+      description: Returns a list of <xref href="Vasont.Inspire.Models.Transfers.ExportSelectionModel" data-throw-if-not-resolved="false"></xref> objects from the application.
     content.vb: >-
+      <Obsolete("This method is obsolete. Please use FindExportComponentType() going forward. This method will be removed in a future release.")>
+
       <ExtensionAttribute>
 
       Public Shared Function GetExportComponentType(client As InspireClient, componentTypeId As Long, exportType As ExportType = ExportType.Standard) As ExportSelectionModel
   overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetExportComponentType*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use FindExportComponentType() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindExportComponentType(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Transfers.ExportType)
+  commentId: M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindExportComponentType(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Transfers.ExportType)
+  id: FindExportComponentType(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Transfers.ExportType)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions
+  langs:
+  - csharp
+  - vb
+  name: FindExportComponentType(InspireClient, Int64, ExportType)
+  nameWithType: ConfigurationExtensions.FindExportComponentType(InspireClient, Int64, ExportType)
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindExportComponentType(Vasont.Inspire.SDK.InspireClient, System.Int64, Vasont.Inspire.Models.Transfers.ExportType)
+  type: Method
+  source:
+    remote:
+      path: src/Configuration/ConfigurationExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: FindExportComponentType
+    path: Configuration/ConfigurationExtensions.cs
+    startLine: 622
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Configuration
+  summary: "\nThis method is used to retrieve a specific export component type selection model.\n"
+  example: []
+  syntax:
+    content: public static ExportSelectionModel FindExportComponentType(this InspireClient client, long componentTypeId, ExportType exportType = ExportType.Standard)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
+    - id: componentTypeId
+      type: System.Int64
+      description: Contains the specific export component type.
+    - id: exportType
+      type: Vasont.Inspire.Models.Transfers.ExportType
+      description: Contains the <xref href="Vasont.Inspire.Models.Transfers.ExportType" data-throw-if-not-resolved="false"></xref> type that will be retrieved, Standard is default.
+    return:
+      type: Vasont.Inspire.Models.Transfers.ExportSelectionModel
+      description: Returns a list of <xref href="Vasont.Inspire.Models.Transfers.ExportSelectionModel" data-throw-if-not-resolved="false"></xref> objects from the application.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function FindExportComponentType(client As InspireClient, componentTypeId As Long, exportType As ExportType = ExportType.Standard) As ExportSelectionModel
+  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindExportComponentType*
   modifiers.csharp:
   - public
   - static
@@ -1548,14 +2441,70 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetLinkMethods
     path: Configuration/ConfigurationExtensions.cs
-    startLine: 464
+    startLine: 637
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Configuration
   summary: "\nThis method is used to retrieve a list of link methods.\n"
   example: []
   syntax:
-    content: public static List<LinkMethodModel> GetLinkMethods(this InspireClient client)
+    content: >-
+      [Obsolete("This method is obsolete. Please use RetrieveLinkMethods() going forward. This method will be removed in a future release.")]
+
+      public static List<LinkMethodModel> GetLinkMethods(this InspireClient client)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
+    return:
+      type: System.Collections.Generic.List{Vasont.Inspire.Models.Configuration.LinkMethodModel}
+      description: Returns a list of <xref href="Vasont.Inspire.Models.Configuration.LinkMethodModel" data-throw-if-not-resolved="false"></xref> from the application.
+    content.vb: >-
+      <Obsolete("This method is obsolete. Please use RetrieveLinkMethods() going forward. This method will be removed in a future release.")>
+
+      <ExtensionAttribute>
+
+      Public Shared Function GetLinkMethods(client As InspireClient) As List(Of LinkMethodModel)
+  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetLinkMethods*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use RetrieveLinkMethods() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveLinkMethods(Vasont.Inspire.SDK.InspireClient)
+  commentId: M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveLinkMethods(Vasont.Inspire.SDK.InspireClient)
+  id: RetrieveLinkMethods(Vasont.Inspire.SDK.InspireClient)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions
+  langs:
+  - csharp
+  - vb
+  name: RetrieveLinkMethods(InspireClient)
+  nameWithType: ConfigurationExtensions.RetrieveLinkMethods(InspireClient)
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveLinkMethods(Vasont.Inspire.SDK.InspireClient)
+  type: Method
+  source:
+    remote:
+      path: src/Configuration/ConfigurationExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: RetrieveLinkMethods
+    path: Configuration/ConfigurationExtensions.cs
+    startLine: 648
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Configuration
+  summary: "\nThis method is used to retrieve a list of link methods.\n"
+  example: []
+  syntax:
+    content: public static List<LinkMethodModel> RetrieveLinkMethods(this InspireClient client)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
@@ -1566,8 +2515,8 @@ items:
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Function GetLinkMethods(client As InspireClient) As List(Of LinkMethodModel)
-  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetLinkMethods*
+      Public Shared Function RetrieveLinkMethods(client As InspireClient) As List(Of LinkMethodModel)
+  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveLinkMethods*
   modifiers.csharp:
   - public
   - static
@@ -1593,14 +2542,70 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetXmlLinkTypes
     path: Configuration/ConfigurationExtensions.cs
-    startLine: 479
+    startLine: 663
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Configuration
   summary: "\nThis method is used to retrieve a list of XML link types.\n"
   example: []
   syntax:
-    content: public static List<XmlLinkTypeModel> GetXmlLinkTypes(this InspireClient client)
+    content: >-
+      [Obsolete("This method is obsolete. Please use RetrieveXmlLinkTypes() going forward. This method will be removed in a future release.")]
+
+      public static List<XmlLinkTypeModel> GetXmlLinkTypes(this InspireClient client)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
+    return:
+      type: System.Collections.Generic.List{Vasont.Inspire.Models.Configuration.XmlLinkTypeModel}
+      description: Returns a list of <xref href="Vasont.Inspire.Models.Configuration.XmlLinkTypeModel" data-throw-if-not-resolved="false"></xref> from the application.
+    content.vb: >-
+      <Obsolete("This method is obsolete. Please use RetrieveXmlLinkTypes() going forward. This method will be removed in a future release.")>
+
+      <ExtensionAttribute>
+
+      Public Shared Function GetXmlLinkTypes(client As InspireClient) As List(Of XmlLinkTypeModel)
+  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetXmlLinkTypes*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use RetrieveXmlLinkTypes() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveXmlLinkTypes(Vasont.Inspire.SDK.InspireClient)
+  commentId: M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveXmlLinkTypes(Vasont.Inspire.SDK.InspireClient)
+  id: RetrieveXmlLinkTypes(Vasont.Inspire.SDK.InspireClient)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions
+  langs:
+  - csharp
+  - vb
+  name: RetrieveXmlLinkTypes(InspireClient)
+  nameWithType: ConfigurationExtensions.RetrieveXmlLinkTypes(InspireClient)
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveXmlLinkTypes(Vasont.Inspire.SDK.InspireClient)
+  type: Method
+  source:
+    remote:
+      path: src/Configuration/ConfigurationExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: RetrieveXmlLinkTypes
+    path: Configuration/ConfigurationExtensions.cs
+    startLine: 674
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Configuration
+  summary: "\nThis method is used to retrieve a list of XML link types.\n"
+  example: []
+  syntax:
+    content: public static List<XmlLinkTypeModel> RetrieveXmlLinkTypes(this InspireClient client)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
@@ -1611,8 +2616,8 @@ items:
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Function GetXmlLinkTypes(client As InspireClient) As List(Of XmlLinkTypeModel)
-  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetXmlLinkTypes*
+      Public Shared Function RetrieveXmlLinkTypes(client As InspireClient) As List(Of XmlLinkTypeModel)
+  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveXmlLinkTypes*
   modifiers.csharp:
   - public
   - static
@@ -1638,14 +2643,73 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetXmlLinkType
     path: Configuration/ConfigurationExtensions.cs
-    startLine: 491
+    startLine: 686
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Configuration
   summary: "\nThis method is used to retrieve a specific XML link type.\n"
   example: []
   syntax:
-    content: public static XmlLinkTypeModel GetXmlLinkType(this InspireClient client, long xmlLinkTypeId)
+    content: >-
+      [Obsolete("This method is obsolete. Please use FindXmlLinkType() going forward. This method will be removed in a future release.")]
+
+      public static XmlLinkTypeModel GetXmlLinkType(this InspireClient client, long xmlLinkTypeId)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
+    - id: xmlLinkTypeId
+      type: System.Int64
+      description: Contains the record identity to retrieve.
+    return:
+      type: Vasont.Inspire.Models.Configuration.XmlLinkTypeModel
+      description: Returns a specific <xref href="Vasont.Inspire.Models.Configuration.XmlLinkTypeModel" data-throw-if-not-resolved="false"></xref> from the application.
+    content.vb: >-
+      <Obsolete("This method is obsolete. Please use FindXmlLinkType() going forward. This method will be removed in a future release.")>
+
+      <ExtensionAttribute>
+
+      Public Shared Function GetXmlLinkType(client As InspireClient, xmlLinkTypeId As Long) As XmlLinkTypeModel
+  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetXmlLinkType*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use FindXmlLinkType() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindXmlLinkType(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  commentId: M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindXmlLinkType(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  id: FindXmlLinkType(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions
+  langs:
+  - csharp
+  - vb
+  name: FindXmlLinkType(InspireClient, Int64)
+  nameWithType: ConfigurationExtensions.FindXmlLinkType(InspireClient, Int64)
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindXmlLinkType(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  type: Method
+  source:
+    remote:
+      path: src/Configuration/ConfigurationExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: FindXmlLinkType
+    path: Configuration/ConfigurationExtensions.cs
+    startLine: 698
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Configuration
+  summary: "\nThis method is used to retrieve a specific XML link type.\n"
+  example: []
+  syntax:
+    content: public static XmlLinkTypeModel FindXmlLinkType(this InspireClient client, long xmlLinkTypeId)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
@@ -1659,8 +2723,8 @@ items:
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Function GetXmlLinkType(client As InspireClient, xmlLinkTypeId As Long) As XmlLinkTypeModel
-  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetXmlLinkType*
+      Public Shared Function FindXmlLinkType(client As InspireClient, xmlLinkTypeId As Long) As XmlLinkTypeModel
+  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindXmlLinkType*
   modifiers.csharp:
   - public
   - static
@@ -1686,7 +2750,7 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: UpdateXmlLinkType
     path: Configuration/ConfigurationExtensions.cs
-    startLine: 503
+    startLine: 710
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Configuration
@@ -1734,7 +2798,7 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: CreateXmlLinkType
     path: Configuration/ConfigurationExtensions.cs
-    startLine: 520
+    startLine: 727
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Configuration
@@ -1782,11 +2846,11 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RemoveXmlLinkType
     path: Configuration/ConfigurationExtensions.cs
-    startLine: 537
+    startLine: 744
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Configuration
-  summary: "\nThis Method is used to remove a XML link type.\n"
+  summary: "\nThis Method is used to remove the specified XML link type.\n"
   example: []
   syntax:
     content: public static bool RemoveXmlLinkType(this InspireClient client, long xmlLinkTypeId)
@@ -1799,7 +2863,7 @@ items:
       description: Contains the identity of record to delete.
     return:
       type: System.Boolean
-      description: Returns the results of the action.
+      description: Returns a boolean value indicating whether the action succeeded or not.
     content.vb: >-
       <ExtensionAttribute>
 
@@ -1830,14 +2894,70 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetRelations
     path: Configuration/ConfigurationExtensions.cs
-    startLine: 553
+    startLine: 760
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Configuration
-  summary: "\nThis method is used to retrieve a list of Relation types.\n"
+  summary: "\nThis method is used to retrieve a list of Relation.\n"
   example: []
   syntax:
-    content: public static List<RelationModel> GetRelations(this InspireClient client)
+    content: >-
+      [Obsolete("This method is obsolete. Please use RetrieveRelations() going forward. This method will be removed in a future release.")]
+
+      public static List<RelationModel> GetRelations(this InspireClient client)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
+    return:
+      type: System.Collections.Generic.List{Vasont.Inspire.Models.Configuration.RelationModel}
+      description: Returns a list of <xref href="Vasont.Inspire.Models.Configuration.RelationModel" data-throw-if-not-resolved="false"></xref> from the application.
+    content.vb: >-
+      <Obsolete("This method is obsolete. Please use RetrieveRelations() going forward. This method will be removed in a future release.")>
+
+      <ExtensionAttribute>
+
+      Public Shared Function GetRelations(client As InspireClient) As List(Of RelationModel)
+  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetRelations*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use RetrieveRelations() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveRelations(Vasont.Inspire.SDK.InspireClient)
+  commentId: M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveRelations(Vasont.Inspire.SDK.InspireClient)
+  id: RetrieveRelations(Vasont.Inspire.SDK.InspireClient)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions
+  langs:
+  - csharp
+  - vb
+  name: RetrieveRelations(InspireClient)
+  nameWithType: ConfigurationExtensions.RetrieveRelations(InspireClient)
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveRelations(Vasont.Inspire.SDK.InspireClient)
+  type: Method
+  source:
+    remote:
+      path: src/Configuration/ConfigurationExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: RetrieveRelations
+    path: Configuration/ConfigurationExtensions.cs
+    startLine: 771
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Configuration
+  summary: "\nThis method is used to retrieve a list of Relation.\n"
+  example: []
+  syntax:
+    content: public static List<RelationModel> RetrieveRelations(this InspireClient client)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
@@ -1848,8 +2968,8 @@ items:
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Function GetRelations(client As InspireClient) As List(Of RelationModel)
-  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetRelations*
+      Public Shared Function RetrieveRelations(client As InspireClient) As List(Of RelationModel)
+  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveRelations*
   modifiers.csharp:
   - public
   - static
@@ -1875,14 +2995,17 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetRelation
     path: Configuration/ConfigurationExtensions.cs
-    startLine: 565
+    startLine: 783
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Configuration
-  summary: "\nThis method is used to retrieve a specific Relation type.\n"
+  summary: "\nThis method is used to retrieve a specific Relation.\n"
   example: []
   syntax:
-    content: public static RelationModel GetRelation(this InspireClient client, long relationId)
+    content: >-
+      [Obsolete("This method is obsolete. Please use FindRelation() going forward. This method will be removed in a future release.")]
+
+      public static RelationModel GetRelation(this InspireClient client, long relationId)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
@@ -1892,12 +3015,68 @@ items:
       description: Contains the record identity to retrieve.
     return:
       type: Vasont.Inspire.Models.Configuration.RelationModel
-      description: Returns a specific <xref href="Vasont.Inspire.Models.Configuration.XmlLinkTypeModel" data-throw-if-not-resolved="false"></xref> from the application.
+      description: Returns a specific <xref href="Vasont.Inspire.Models.Configuration.RelationModel" data-throw-if-not-resolved="false"></xref> from the application.
     content.vb: >-
+      <Obsolete("This method is obsolete. Please use FindRelation() going forward. This method will be removed in a future release.")>
+
       <ExtensionAttribute>
 
       Public Shared Function GetRelation(client As InspireClient, relationId As Long) As RelationModel
   overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetRelation*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use FindRelation() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindRelation(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  commentId: M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindRelation(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  id: FindRelation(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions
+  langs:
+  - csharp
+  - vb
+  name: FindRelation(InspireClient, Int64)
+  nameWithType: ConfigurationExtensions.FindRelation(InspireClient, Int64)
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindRelation(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  type: Method
+  source:
+    remote:
+      path: src/Configuration/ConfigurationExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: FindRelation
+    path: Configuration/ConfigurationExtensions.cs
+    startLine: 795
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Configuration
+  summary: "\nThis method is used to retrieve a specific Relation.\n"
+  example: []
+  syntax:
+    content: public static RelationModel FindRelation(this InspireClient client, long relationId)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
+    - id: relationId
+      type: System.Int64
+      description: Contains the record identity to retrieve.
+    return:
+      type: Vasont.Inspire.Models.Configuration.RelationModel
+      description: Returns a specific <xref href="Vasont.Inspire.Models.Configuration.RelationModel" data-throw-if-not-resolved="false"></xref> from the application.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function FindRelation(client As InspireClient, relationId As Long) As RelationModel
+  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindRelation*
   modifiers.csharp:
   - public
   - static
@@ -1923,7 +3102,7 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: UpdateRelation
     path: Configuration/ConfigurationExtensions.cs
-    startLine: 577
+    startLine: 807
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Configuration
@@ -1971,7 +3150,7 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: CreateRelation
     path: Configuration/ConfigurationExtensions.cs
-    startLine: 594
+    startLine: 824
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Configuration
@@ -2019,11 +3198,11 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RemoveRelation
     path: Configuration/ConfigurationExtensions.cs
-    startLine: 611
+    startLine: 841
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Configuration
-  summary: "\nThis Method is used to remove a relation.\n"
+  summary: "\nThis Method is used to remove the specified relation.\n"
   example: []
   syntax:
     content: public static bool RemoveRelation(this InspireClient client, long relationId)
@@ -2036,7 +3215,7 @@ items:
       description: Contains the identity of record to delete.
     return:
       type: System.Boolean
-      description: Returns the results of the action.
+      description: Returns a boolean value indicating whether the action succeeded or not.
     content.vb: >-
       <ExtensionAttribute>
 
@@ -2067,14 +3246,73 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetTag
     path: Configuration/ConfigurationExtensions.cs
-    startLine: 627
+    startLine: 857
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Configuration
   summary: "\nThis method is used to retrieve a specific tag.\n"
   example: []
   syntax:
-    content: public static TagModel GetTag(this InspireClient client, long tagId)
+    content: >-
+      [Obsolete("This method is obsolete. Please use FindTag() going forward. This method will be removed in a future release.")]
+
+      public static TagModel GetTag(this InspireClient client, long tagId)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
+    - id: tagId
+      type: System.Int64
+      description: Contains the record identity to retrieve.
+    return:
+      type: Vasont.Inspire.Models.Components.TagModel
+      description: Returns a specific <xref href="Vasont.Inspire.Models.Components.TagModel" data-throw-if-not-resolved="false"></xref> from the application.
+    content.vb: >-
+      <Obsolete("This method is obsolete. Please use FindTag() going forward. This method will be removed in a future release.")>
+
+      <ExtensionAttribute>
+
+      Public Shared Function GetTag(client As InspireClient, tagId As Long) As TagModel
+  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetTag*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use FindTag() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindTag(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  commentId: M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindTag(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  id: FindTag(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions
+  langs:
+  - csharp
+  - vb
+  name: FindTag(InspireClient, Int64)
+  nameWithType: ConfigurationExtensions.FindTag(InspireClient, Int64)
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindTag(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  type: Method
+  source:
+    remote:
+      path: src/Configuration/ConfigurationExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: FindTag
+    path: Configuration/ConfigurationExtensions.cs
+    startLine: 869
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Configuration
+  summary: "\nThis method is used to retrieve a specific tag.\n"
+  example: []
+  syntax:
+    content: public static TagModel FindTag(this InspireClient client, long tagId)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
@@ -2088,8 +3326,8 @@ items:
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Function GetTag(client As InspireClient, tagId As Long) As TagModel
-  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetTag*
+      Public Shared Function FindTag(client As InspireClient, tagId As Long) As TagModel
+  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindTag*
   modifiers.csharp:
   - public
   - static
@@ -2115,7 +3353,7 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: UpdateTag
     path: Configuration/ConfigurationExtensions.cs
-    startLine: 639
+    startLine: 881
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Configuration
@@ -2163,7 +3401,7 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: CreateTag
     path: Configuration/ConfigurationExtensions.cs
-    startLine: 656
+    startLine: 898
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Configuration
@@ -2211,11 +3449,11 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RemoveTag
     path: Configuration/ConfigurationExtensions.cs
-    startLine: 673
+    startLine: 915
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Configuration
-  summary: "\nThis Method is used to remove a tag.\n"
+  summary: "\nThis Method is used to remove the specified tag.\n"
   example: []
   syntax:
     content: public static bool RemoveTag(this InspireClient client, long tagId)
@@ -2228,7 +3466,7 @@ items:
       description: Contains the identity of record to delete.
     return:
       type: System.Boolean
-      description: Returns the results of the action.
+      description: Returns a boolean value indicating whether the action succeeded or not.
     content.vb: >-
       <ExtensionAttribute>
 
@@ -2259,14 +3497,70 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetProjectActivities
     path: Configuration/ConfigurationExtensions.cs
-    startLine: 689
+    startLine: 931
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Configuration
   summary: "\nThis method is used to retrieve a list of project activities.\n"
   example: []
   syntax:
-    content: public static List<ProjectActivityModel> GetProjectActivities(this InspireClient client)
+    content: >-
+      [Obsolete("This method is obsolete. Please use RetrieveProjectActivities() going forward. This method will be removed in a future release.")]
+
+      public static List<ProjectActivityModel> GetProjectActivities(this InspireClient client)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
+    return:
+      type: System.Collections.Generic.List{Vasont.Inspire.Models.Projects.ProjectActivityModel}
+      description: Returns a list of <xref href="Vasont.Inspire.Models.Projects.ProjectActivityModel" data-throw-if-not-resolved="false"></xref> from the application.
+    content.vb: >-
+      <Obsolete("This method is obsolete. Please use RetrieveProjectActivities() going forward. This method will be removed in a future release.")>
+
+      <ExtensionAttribute>
+
+      Public Shared Function GetProjectActivities(client As InspireClient) As List(Of ProjectActivityModel)
+  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetProjectActivities*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use RetrieveProjectActivities() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveProjectActivities(Vasont.Inspire.SDK.InspireClient)
+  commentId: M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveProjectActivities(Vasont.Inspire.SDK.InspireClient)
+  id: RetrieveProjectActivities(Vasont.Inspire.SDK.InspireClient)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions
+  langs:
+  - csharp
+  - vb
+  name: RetrieveProjectActivities(InspireClient)
+  nameWithType: ConfigurationExtensions.RetrieveProjectActivities(InspireClient)
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveProjectActivities(Vasont.Inspire.SDK.InspireClient)
+  type: Method
+  source:
+    remote:
+      path: src/Configuration/ConfigurationExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: RetrieveProjectActivities
+    path: Configuration/ConfigurationExtensions.cs
+    startLine: 942
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Configuration
+  summary: "\nThis method is used to retrieve a list of project activities.\n"
+  example: []
+  syntax:
+    content: public static List<ProjectActivityModel> RetrieveProjectActivities(this InspireClient client)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
@@ -2277,8 +3571,8 @@ items:
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Function GetProjectActivities(client As InspireClient) As List(Of ProjectActivityModel)
-  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetProjectActivities*
+      Public Shared Function RetrieveProjectActivities(client As InspireClient) As List(Of ProjectActivityModel)
+  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveProjectActivities*
   modifiers.csharp:
   - public
   - static
@@ -2304,14 +3598,73 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetProjectActivity
     path: Configuration/ConfigurationExtensions.cs
-    startLine: 701
+    startLine: 954
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Configuration
   summary: "\nThis method is used to retrieve a specific project activity.\n"
   example: []
   syntax:
-    content: public static ProjectActivityModel GetProjectActivity(this InspireClient client, long projectActivityId)
+    content: >-
+      [Obsolete("This method is obsolete. Please use FindProjectActivity() going forward. This method will be removed in a future release.")]
+
+      public static ProjectActivityModel GetProjectActivity(this InspireClient client, long projectActivityId)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
+    - id: projectActivityId
+      type: System.Int64
+      description: Contains the record identity to retrieve.
+    return:
+      type: Vasont.Inspire.Models.Projects.ProjectActivityModel
+      description: Returns a specific <xref href="Vasont.Inspire.Models.Projects.ProjectActivityModel" data-throw-if-not-resolved="false"></xref> from the application.
+    content.vb: >-
+      <Obsolete("This method is obsolete. Please use FindProjectActivity() going forward. This method will be removed in a future release.")>
+
+      <ExtensionAttribute>
+
+      Public Shared Function GetProjectActivity(client As InspireClient, projectActivityId As Long) As ProjectActivityModel
+  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetProjectActivity*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use FindProjectActivity() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindProjectActivity(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  commentId: M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindProjectActivity(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  id: FindProjectActivity(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions
+  langs:
+  - csharp
+  - vb
+  name: FindProjectActivity(InspireClient, Int64)
+  nameWithType: ConfigurationExtensions.FindProjectActivity(InspireClient, Int64)
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindProjectActivity(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  type: Method
+  source:
+    remote:
+      path: src/Configuration/ConfigurationExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: FindProjectActivity
+    path: Configuration/ConfigurationExtensions.cs
+    startLine: 966
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Configuration
+  summary: "\nThis method is used to retrieve a specific project activity.\n"
+  example: []
+  syntax:
+    content: public static ProjectActivityModel FindProjectActivity(this InspireClient client, long projectActivityId)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
@@ -2325,8 +3678,8 @@ items:
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Function GetProjectActivity(client As InspireClient, projectActivityId As Long) As ProjectActivityModel
-  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetProjectActivity*
+      Public Shared Function FindProjectActivity(client As InspireClient, projectActivityId As Long) As ProjectActivityModel
+  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindProjectActivity*
   modifiers.csharp:
   - public
   - static
@@ -2352,7 +3705,7 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: UpdateProjectActivity
     path: Configuration/ConfigurationExtensions.cs
-    startLine: 713
+    startLine: 978
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Configuration
@@ -2400,7 +3753,7 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: CreateProjectActivity
     path: Configuration/ConfigurationExtensions.cs
-    startLine: 730
+    startLine: 995
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Configuration
@@ -2448,11 +3801,11 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RemoveProjectActivity
     path: Configuration/ConfigurationExtensions.cs
-    startLine: 747
+    startLine: 1012
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Configuration
-  summary: "\nThis Method is used to remove a project activity.\n"
+  summary: "\nThis Method is used to remove the specified project activity.\n"
   example: []
   syntax:
     content: public static bool RemoveProjectActivity(this InspireClient client, long projectActivityId)
@@ -2465,7 +3818,7 @@ items:
       description: Contains the identity of record to delete.
     return:
       type: System.Boolean
-      description: Returns the results of the action.
+      description: Returns a boolean value indicating whether the action succeeded or not.
     content.vb: >-
       <ExtensionAttribute>
 
@@ -2496,14 +3849,73 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetLanguages
     path: Configuration/ConfigurationExtensions.cs
-    startLine: 763
+    startLine: 1028
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Configuration
   summary: "\nThis method is used to retrieve a list of languages.\n"
   example: []
   syntax:
-    content: public static List<LanguageModel> GetLanguages(this InspireClient client, bool dictionaryOnly = false)
+    content: >-
+      [Obsolete("This method is obsolete. Please use FindLanguages() going forward. This method will be removed in a future release.")]
+
+      public static List<LanguageModel> GetLanguages(this InspireClient client, bool dictionaryOnly = false)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
+    - id: dictionaryOnly
+      type: System.Boolean
+      description: Contains a value indicating whether the languages that are for editor dictionary only are returned.
+    return:
+      type: System.Collections.Generic.List{Vasont.Inspire.Models.Common.LanguageModel}
+      description: Returns a list of <xref href="Vasont.Inspire.Models.Common.LanguageModel" data-throw-if-not-resolved="false"></xref> from the application.
+    content.vb: >-
+      <Obsolete("This method is obsolete. Please use FindLanguages() going forward. This method will be removed in a future release.")>
+
+      <ExtensionAttribute>
+
+      Public Shared Function GetLanguages(client As InspireClient, dictionaryOnly As Boolean = False) As List(Of LanguageModel)
+  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetLanguages*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use FindLanguages() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindLanguages(Vasont.Inspire.SDK.InspireClient,System.Boolean)
+  commentId: M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindLanguages(Vasont.Inspire.SDK.InspireClient,System.Boolean)
+  id: FindLanguages(Vasont.Inspire.SDK.InspireClient,System.Boolean)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions
+  langs:
+  - csharp
+  - vb
+  name: FindLanguages(InspireClient, Boolean)
+  nameWithType: ConfigurationExtensions.FindLanguages(InspireClient, Boolean)
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindLanguages(Vasont.Inspire.SDK.InspireClient, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: src/Configuration/ConfigurationExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: FindLanguages
+    path: Configuration/ConfigurationExtensions.cs
+    startLine: 1040
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Configuration
+  summary: "\nThis method is used to retrieve a list of languages.\n"
+  example: []
+  syntax:
+    content: public static List<LanguageModel> FindLanguages(this InspireClient client, bool dictionaryOnly = false)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
@@ -2517,8 +3929,8 @@ items:
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Function GetLanguages(client As InspireClient, dictionaryOnly As Boolean = False) As List(Of LanguageModel)
-  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetLanguages*
+      Public Shared Function FindLanguages(client As InspireClient, dictionaryOnly As Boolean = False) As List(Of LanguageModel)
+  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindLanguages*
   modifiers.csharp:
   - public
   - static
@@ -2544,14 +3956,73 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetLanguage
     path: Configuration/ConfigurationExtensions.cs
-    startLine: 775
+    startLine: 1052
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Configuration
   summary: "\nThis method is used to retrieve a specific language.\n"
   example: []
   syntax:
-    content: public static LanguageModel GetLanguage(this InspireClient client, string languageCode)
+    content: >-
+      [Obsolete("This method is obsolete. Please use FindLanguage() going forward. This method will be removed in a future release.")]
+
+      public static LanguageModel GetLanguage(this InspireClient client, string languageCode)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
+    - id: languageCode
+      type: System.String
+      description: Contains the record identity to retrieve.
+    return:
+      type: Vasont.Inspire.Models.Common.LanguageModel
+      description: Returns a specific <xref href="Vasont.Inspire.Models.Common.LanguageModel" data-throw-if-not-resolved="false"></xref> from the application.
+    content.vb: >-
+      <Obsolete("This method is obsolete. Please use FindLanguage() going forward. This method will be removed in a future release.")>
+
+      <ExtensionAttribute>
+
+      Public Shared Function GetLanguage(client As InspireClient, languageCode As String) As LanguageModel
+  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetLanguage*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use FindLanguage() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindLanguage(Vasont.Inspire.SDK.InspireClient,System.String)
+  commentId: M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindLanguage(Vasont.Inspire.SDK.InspireClient,System.String)
+  id: FindLanguage(Vasont.Inspire.SDK.InspireClient,System.String)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions
+  langs:
+  - csharp
+  - vb
+  name: FindLanguage(InspireClient, String)
+  nameWithType: ConfigurationExtensions.FindLanguage(InspireClient, String)
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindLanguage(Vasont.Inspire.SDK.InspireClient, System.String)
+  type: Method
+  source:
+    remote:
+      path: src/Configuration/ConfigurationExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: FindLanguage
+    path: Configuration/ConfigurationExtensions.cs
+    startLine: 1064
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Configuration
+  summary: "\nThis method is used to retrieve a specific language.\n"
+  example: []
+  syntax:
+    content: public static LanguageModel FindLanguage(this InspireClient client, string languageCode)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
@@ -2565,8 +4036,8 @@ items:
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Function GetLanguage(client As InspireClient, languageCode As String) As LanguageModel
-  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetLanguage*
+      Public Shared Function FindLanguage(client As InspireClient, languageCode As String) As LanguageModel
+  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindLanguage*
   modifiers.csharp:
   - public
   - static
@@ -2592,7 +4063,7 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: UpdateLanguage
     path: Configuration/ConfigurationExtensions.cs
-    startLine: 787
+    startLine: 1076
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Configuration
@@ -2640,7 +4111,7 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: CreateLanguage
     path: Configuration/ConfigurationExtensions.cs
-    startLine: 804
+    startLine: 1093
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Configuration
@@ -2688,11 +4159,11 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RemoveLanguage
     path: Configuration/ConfigurationExtensions.cs
-    startLine: 821
+    startLine: 1110
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Configuration
-  summary: "\nThis Method is used to remove a language.\n"
+  summary: "\nThis Method is used to remove the specified language.\n"
   example: []
   syntax:
     content: public static bool RemoveLanguage(this InspireClient client, string languageCode)
@@ -2705,7 +4176,7 @@ items:
       description: Contains the identity of record to delete.
     return:
       type: System.Boolean
-      description: Returns the results of the action.
+      description: Returns a boolean value indicating whether the action succeeded or not.
     content.vb: >-
       <ExtensionAttribute>
 
@@ -2736,14 +4207,70 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetWebHookConfigurations
     path: Configuration/ConfigurationExtensions.cs
-    startLine: 837
+    startLine: 1126
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Configuration
   summary: "\nThis method is used to retrieve a list of web hook configurations.\n"
   example: []
   syntax:
-    content: public static List<WebhookConfigurationModel> GetWebHookConfigurations(this InspireClient client)
+    content: >-
+      [Obsolete("This method is obsolete. Please use RetrieveWebHookConfigurations() going forward. This method will be removed in a future release.")]
+
+      public static List<WebhookConfigurationModel> GetWebHookConfigurations(this InspireClient client)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
+    return:
+      type: System.Collections.Generic.List{Vasont.Inspire.Models.Webhooks.WebhookConfigurationModel}
+      description: Returns a list of <xref href="Vasont.Inspire.Models.Webhooks.WebhookConfigurationModel" data-throw-if-not-resolved="false"></xref> from the application.
+    content.vb: >-
+      <Obsolete("This method is obsolete. Please use RetrieveWebHookConfigurations() going forward. This method will be removed in a future release.")>
+
+      <ExtensionAttribute>
+
+      Public Shared Function GetWebHookConfigurations(client As InspireClient) As List(Of WebhookConfigurationModel)
+  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetWebHookConfigurations*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use RetrieveWebHookConfigurations() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveWebHookConfigurations(Vasont.Inspire.SDK.InspireClient)
+  commentId: M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveWebHookConfigurations(Vasont.Inspire.SDK.InspireClient)
+  id: RetrieveWebHookConfigurations(Vasont.Inspire.SDK.InspireClient)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions
+  langs:
+  - csharp
+  - vb
+  name: RetrieveWebHookConfigurations(InspireClient)
+  nameWithType: ConfigurationExtensions.RetrieveWebHookConfigurations(InspireClient)
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveWebHookConfigurations(Vasont.Inspire.SDK.InspireClient)
+  type: Method
+  source:
+    remote:
+      path: src/Configuration/ConfigurationExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: RetrieveWebHookConfigurations
+    path: Configuration/ConfigurationExtensions.cs
+    startLine: 1137
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Configuration
+  summary: "\nThis method is used to retrieve a list of web hook configurations.\n"
+  example: []
+  syntax:
+    content: public static List<WebhookConfigurationModel> RetrieveWebHookConfigurations(this InspireClient client)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
@@ -2754,8 +4281,8 @@ items:
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Function GetWebHookConfigurations(client As InspireClient) As List(Of WebhookConfigurationModel)
-  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetWebHookConfigurations*
+      Public Shared Function RetrieveWebHookConfigurations(client As InspireClient) As List(Of WebhookConfigurationModel)
+  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveWebHookConfigurations*
   modifiers.csharp:
   - public
   - static
@@ -2781,14 +4308,73 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetWebHookConfiguration
     path: Configuration/ConfigurationExtensions.cs
-    startLine: 849
+    startLine: 1149
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Configuration
   summary: "\nThis method is used to retrieve a specific web hook configuration.\n"
   example: []
   syntax:
-    content: public static WebhookConfigurationModel GetWebHookConfiguration(this InspireClient client, long webHookConfigurationId)
+    content: >-
+      [Obsolete("This method is obsolete. Please use FindWebHookConfiguration() going forward. This method will be removed in a future release.")]
+
+      public static WebhookConfigurationModel GetWebHookConfiguration(this InspireClient client, long webHookConfigurationId)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
+    - id: webHookConfigurationId
+      type: System.Int64
+      description: Contains the record identity to retrieve.
+    return:
+      type: Vasont.Inspire.Models.Webhooks.WebhookConfigurationModel
+      description: Returns a specific <xref href="Vasont.Inspire.Models.Webhooks.WebhookConfigurationModel" data-throw-if-not-resolved="false"></xref> from the application.
+    content.vb: >-
+      <Obsolete("This method is obsolete. Please use FindWebHookConfiguration() going forward. This method will be removed in a future release.")>
+
+      <ExtensionAttribute>
+
+      Public Shared Function GetWebHookConfiguration(client As InspireClient, webHookConfigurationId As Long) As WebhookConfigurationModel
+  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetWebHookConfiguration*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use FindWebHookConfiguration() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindWebHookConfiguration(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  commentId: M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindWebHookConfiguration(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  id: FindWebHookConfiguration(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions
+  langs:
+  - csharp
+  - vb
+  name: FindWebHookConfiguration(InspireClient, Int64)
+  nameWithType: ConfigurationExtensions.FindWebHookConfiguration(InspireClient, Int64)
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindWebHookConfiguration(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  type: Method
+  source:
+    remote:
+      path: src/Configuration/ConfigurationExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: FindWebHookConfiguration
+    path: Configuration/ConfigurationExtensions.cs
+    startLine: 1161
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Configuration
+  summary: "\nThis method is used to retrieve a specific web hook configuration.\n"
+  example: []
+  syntax:
+    content: public static WebhookConfigurationModel FindWebHookConfiguration(this InspireClient client, long webHookConfigurationId)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
@@ -2802,8 +4388,8 @@ items:
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Function GetWebHookConfiguration(client As InspireClient, webHookConfigurationId As Long) As WebhookConfigurationModel
-  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetWebHookConfiguration*
+      Public Shared Function FindWebHookConfiguration(client As InspireClient, webHookConfigurationId As Long) As WebhookConfigurationModel
+  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindWebHookConfiguration*
   modifiers.csharp:
   - public
   - static
@@ -2829,7 +4415,7 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: UpdateWebHookConfiguration
     path: Configuration/ConfigurationExtensions.cs
-    startLine: 861
+    startLine: 1173
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Configuration
@@ -2877,7 +4463,7 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: CreateWebHookConfiguration
     path: Configuration/ConfigurationExtensions.cs
-    startLine: 878
+    startLine: 1190
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Configuration
@@ -2894,7 +4480,7 @@ items:
       description: Contains the model to create.
     return:
       type: Vasont.Inspire.Models.Webhooks.WebhookConfigurationModel
-      description: Returns a specific <xref href="Vasont.Inspire.Models.Common.LanguageModel" data-throw-if-not-resolved="false"></xref> that was created.
+      description: Returns a specific <xref href="Vasont.Inspire.Models.Webhooks.WebhookConfigurationModel" data-throw-if-not-resolved="false"></xref> that was created.
     content.vb: >-
       <ExtensionAttribute>
 
@@ -2925,11 +4511,11 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RemoveWebHookConfiguration
     path: Configuration/ConfigurationExtensions.cs
-    startLine: 895
+    startLine: 1207
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Configuration
-  summary: "\nThis Method is used to remove a web hook configuration.\n"
+  summary: "\nThis Method is used to remove the specified web hook configuration.\n"
   example: []
   syntax:
     content: public static bool RemoveWebHookConfiguration(this InspireClient client, string name)
@@ -2942,7 +4528,7 @@ items:
       description: Contains the identity of record to delete.
     return:
       type: System.Boolean
-      description: Returns the results of the action.
+      description: Returns a boolean value indicating whether the action succeeded or not.
     content.vb: >-
       <ExtensionAttribute>
 
@@ -2973,14 +4559,70 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetFileExtensions
     path: Configuration/ConfigurationExtensions.cs
-    startLine: 911
+    startLine: 1223
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Configuration
   summary: "\nThis method is used to retrieve a list of file extensions.\n"
   example: []
   syntax:
-    content: public static List<FileExtensionModel> GetFileExtensions(this InspireClient client)
+    content: >-
+      [Obsolete("This method is obsolete. Please use RetrieveFileExtensions() going forward. This method will be removed in a future release.")]
+
+      public static List<FileExtensionModel> GetFileExtensions(this InspireClient client)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
+    return:
+      type: System.Collections.Generic.List{Vasont.Inspire.Models.Common.FileExtensionModel}
+      description: Returns a list of <xref href="Vasont.Inspire.Models.Common.FileExtensionModel" data-throw-if-not-resolved="false"></xref> from the application.
+    content.vb: >-
+      <Obsolete("This method is obsolete. Please use RetrieveFileExtensions() going forward. This method will be removed in a future release.")>
+
+      <ExtensionAttribute>
+
+      Public Shared Function GetFileExtensions(client As InspireClient) As List(Of FileExtensionModel)
+  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetFileExtensions*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use RetrieveFileExtensions() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveFileExtensions(Vasont.Inspire.SDK.InspireClient)
+  commentId: M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveFileExtensions(Vasont.Inspire.SDK.InspireClient)
+  id: RetrieveFileExtensions(Vasont.Inspire.SDK.InspireClient)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions
+  langs:
+  - csharp
+  - vb
+  name: RetrieveFileExtensions(InspireClient)
+  nameWithType: ConfigurationExtensions.RetrieveFileExtensions(InspireClient)
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveFileExtensions(Vasont.Inspire.SDK.InspireClient)
+  type: Method
+  source:
+    remote:
+      path: src/Configuration/ConfigurationExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: RetrieveFileExtensions
+    path: Configuration/ConfigurationExtensions.cs
+    startLine: 1234
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Configuration
+  summary: "\nThis method is used to retrieve a list of file extensions.\n"
+  example: []
+  syntax:
+    content: public static List<FileExtensionModel> RetrieveFileExtensions(this InspireClient client)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
@@ -2991,8 +4633,8 @@ items:
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Function GetFileExtensions(client As InspireClient) As List(Of FileExtensionModel)
-  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetFileExtensions*
+      Public Shared Function RetrieveFileExtensions(client As InspireClient) As List(Of FileExtensionModel)
+  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveFileExtensions*
   modifiers.csharp:
   - public
   - static
@@ -3018,14 +4660,73 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetFileExtension
     path: Configuration/ConfigurationExtensions.cs
-    startLine: 923
+    startLine: 1246
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Configuration
   summary: "\nThis method is used to retrieve a specific file extension configuration.\n"
   example: []
   syntax:
-    content: public static FileExtensionModel GetFileExtension(this InspireClient client, long extensionId)
+    content: >-
+      [Obsolete("This method is obsolete. Please use FindFileExtension() going forward. This method will be removed in a future release.")]
+
+      public static FileExtensionModel GetFileExtension(this InspireClient client, long extensionId)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
+    - id: extensionId
+      type: System.Int64
+      description: Contains the record identity to retrieve.
+    return:
+      type: Vasont.Inspire.Models.Common.FileExtensionModel
+      description: Returns a specific <xref href="Vasont.Inspire.Models.Common.FileExtensionModel" data-throw-if-not-resolved="false"></xref> from the application.
+    content.vb: >-
+      <Obsolete("This method is obsolete. Please use FindFileExtension() going forward. This method will be removed in a future release.")>
+
+      <ExtensionAttribute>
+
+      Public Shared Function GetFileExtension(client As InspireClient, extensionId As Long) As FileExtensionModel
+  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetFileExtension*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use FindFileExtension() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindFileExtension(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  commentId: M:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindFileExtension(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  id: FindFileExtension(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions
+  langs:
+  - csharp
+  - vb
+  name: FindFileExtension(InspireClient, Int64)
+  nameWithType: ConfigurationExtensions.FindFileExtension(InspireClient, Int64)
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindFileExtension(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  type: Method
+  source:
+    remote:
+      path: src/Configuration/ConfigurationExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: FindFileExtension
+    path: Configuration/ConfigurationExtensions.cs
+    startLine: 1258
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Configuration
+  summary: "\nThis method is used to retrieve a specific file extension configuration.\n"
+  example: []
+  syntax:
+    content: public static FileExtensionModel FindFileExtension(this InspireClient client, long extensionId)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
@@ -3039,8 +4740,8 @@ items:
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Function GetFileExtension(client As InspireClient, extensionId As Long) As FileExtensionModel
-  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetFileExtension*
+      Public Shared Function FindFileExtension(client As InspireClient, extensionId As Long) As FileExtensionModel
+  overload: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindFileExtension*
   modifiers.csharp:
   - public
   - static
@@ -3066,7 +4767,7 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: UpdateFileExtension
     path: Configuration/ConfigurationExtensions.cs
-    startLine: 935
+    startLine: 1270
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Configuration
@@ -3114,7 +4815,7 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: CreateFileExtension
     path: Configuration/ConfigurationExtensions.cs
-    startLine: 952
+    startLine: 1287
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Configuration
@@ -3162,11 +4863,11 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RemoveFileExtension
     path: Configuration/ConfigurationExtensions.cs
-    startLine: 969
+    startLine: 1304
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Configuration
-  summary: "\nThis Method is used to remove a file extension configuration.\n"
+  summary: "\nThis Method is used to remove the specified file extension configuration.\n"
   example: []
   syntax:
     content: public static bool RemoveFileExtension(this InspireClient client, long extensionId)
@@ -3179,7 +4880,7 @@ items:
       description: Contains the identity of record to delete.
     return:
       type: System.Boolean
-      description: Returns the results of the action.
+      description: Returns a boolean value indicating whether the action succeeded or not.
     content.vb: >-
       <ExtensionAttribute>
 
@@ -3607,6 +5308,11 @@ references:
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveAttributes*
+  commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveAttributes
+  name: RetrieveAttributes
+  nameWithType: ConfigurationExtensions.RetrieveAttributes
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveAttributes
 - uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetAttribute*
   commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetAttribute
   name: GetAttribute
@@ -3619,6 +5325,11 @@ references:
   name: Int64
   nameWithType: Int64
   fullName: System.Int64
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindAttribute*
+  commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindAttribute
+  name: FindAttribute
+  nameWithType: ConfigurationExtensions.FindAttribute
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindAttribute
 - uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.UpdateAttribute*
   commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.UpdateAttribute
   name: UpdateAttribute
@@ -3693,6 +5404,11 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveProfileAttributes*
+  commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveProfileAttributes
+  name: RetrieveProfileAttributes
+  nameWithType: ConfigurationExtensions.RetrieveProfileAttributes
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveProfileAttributes
 - uid: Vasont.Inspire.Models.Components.Schema.ProfileAttributeItemModel
   commentId: T:Vasont.Inspire.Models.Components.Schema.ProfileAttributeItemModel
   isExternal: true
@@ -3745,6 +5461,11 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveProfileAttributeItems*
+  commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveProfileAttributeItems
+  name: RetrieveProfileAttributeItems
+  nameWithType: ConfigurationExtensions.RetrieveProfileAttributeItems
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveProfileAttributeItems
 - uid: Vasont.Inspire.Models.Components.Schema.ProfileAttributeModel
   commentId: T:Vasont.Inspire.Models.Components.Schema.ProfileAttributeModel
   parent: Vasont.Inspire.Models.Components.Schema
@@ -3763,6 +5484,11 @@ references:
   name: Vasont.Inspire.Models.Components.Schema
   nameWithType: Vasont.Inspire.Models.Components.Schema
   fullName: Vasont.Inspire.Models.Components.Schema
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindProfileAttribute*
+  commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindProfileAttribute
+  name: FindProfileAttribute
+  nameWithType: ConfigurationExtensions.FindProfileAttribute
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindProfileAttribute
 - uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.UpdateProfileAttribute*
   commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.UpdateProfileAttribute
   name: UpdateProfileAttribute
@@ -3827,6 +5553,11 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveSchemaStandards*
+  commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveSchemaStandards
+  name: RetrieveSchemaStandards
+  nameWithType: ConfigurationExtensions.RetrieveSchemaStandards
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveSchemaStandards
 - uid: Vasont.Inspire.Models.Components.ComponentTypeModel
   commentId: T:Vasont.Inspire.Models.Components.ComponentTypeModel
   parent: Vasont.Inspire.Models.Components
@@ -3889,11 +5620,21 @@ references:
   name: Vasont.Inspire.Models.Components
   nameWithType: Vasont.Inspire.Models.Components
   fullName: Vasont.Inspire.Models.Components
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveComponentTypes*
+  commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveComponentTypes
+  name: RetrieveComponentTypes
+  nameWithType: ConfigurationExtensions.RetrieveComponentTypes
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveComponentTypes
 - uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetComponentType*
   commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetComponentType
   name: GetComponentType
   nameWithType: ConfigurationExtensions.GetComponentType
   fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetComponentType
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindComponentType*
+  commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindComponentType
+  name: FindComponentType
+  nameWithType: ConfigurationExtensions.FindComponentType
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindComponentType
 - uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.UpdateComponentType*
   commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.UpdateComponentType
   name: UpdateComponentType
@@ -3965,11 +5706,21 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveElements*
+  commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveElements
+  name: RetrieveElements
+  nameWithType: ConfigurationExtensions.RetrieveElements
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveElements
 - uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetElement*
   commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetElement
   name: GetElement
   nameWithType: ConfigurationExtensions.GetElement
   fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetElement
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindElement*
+  commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindElement
+  name: FindElement
+  nameWithType: ConfigurationExtensions.FindElement
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindElement
 - uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.UpdateElement*
   commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.UpdateElement
   name: UpdateElement
@@ -4047,11 +5798,21 @@ references:
   name: Vasont.Inspire.Models.Transfers
   nameWithType: Vasont.Inspire.Models.Transfers
   fullName: Vasont.Inspire.Models.Transfers
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveExports*
+  commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveExports
+  name: RetrieveExports
+  nameWithType: ConfigurationExtensions.RetrieveExports
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveExports
 - uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetExport*
   commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetExport
   name: GetExport
   nameWithType: ConfigurationExtensions.GetExport
   fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetExport
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindExport*
+  commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindExport
+  name: FindExport
+  nameWithType: ConfigurationExtensions.FindExport
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindExport
 - uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.UpdateExport*
   commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.UpdateExport
   name: UpdateExport
@@ -4119,6 +5880,11 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveExportPlugins*
+  commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveExportPlugins
+  name: RetrieveExportPlugins
+  nameWithType: ConfigurationExtensions.RetrieveExportPlugins
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveExportPlugins
 - uid: Vasont.Inspire.Models.Plugins.PluginParameterModel
   commentId: T:Vasont.Inspire.Models.Plugins.PluginParameterModel
   isExternal: true
@@ -4171,6 +5937,11 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindExportPluginParameters*
+  commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindExportPluginParameters
+  name: FindExportPluginParameters
+  nameWithType: ConfigurationExtensions.FindExportPluginParameters
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindExportPluginParameters
 - uid: Vasont.Inspire.Models.Transfers.ExportType
   commentId: T:Vasont.Inspire.Models.Transfers.ExportType
   parent: Vasont.Inspire.Models.Transfers
@@ -4178,11 +5949,6 @@ references:
   name: ExportType
   nameWithType: ExportType
   fullName: Vasont.Inspire.Models.Transfers.ExportType
-- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetExportComponentType*
-  commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetExportComponentType
-  name: GetExportComponentType
-  nameWithType: ConfigurationExtensions.GetExportComponentType
-  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetExportComponentType
 - uid: Vasont.Inspire.Models.Transfers.ExportSelectionModel
   commentId: T:Vasont.Inspire.Models.Transfers.ExportSelectionModel
   parent: Vasont.Inspire.Models.Transfers
@@ -4190,6 +5956,16 @@ references:
   name: ExportSelectionModel
   nameWithType: ExportSelectionModel
   fullName: Vasont.Inspire.Models.Transfers.ExportSelectionModel
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetExportComponentType*
+  commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetExportComponentType
+  name: GetExportComponentType
+  nameWithType: ConfigurationExtensions.GetExportComponentType
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetExportComponentType
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindExportComponentType*
+  commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindExportComponentType
+  name: FindExportComponentType
+  nameWithType: ConfigurationExtensions.FindExportComponentType
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindExportComponentType
 - uid: Vasont.Inspire.Models.Configuration.LinkMethodModel
   commentId: T:Vasont.Inspire.Models.Configuration.LinkMethodModel
   isExternal: true
@@ -4242,6 +6018,11 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveLinkMethods*
+  commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveLinkMethods
+  name: RetrieveLinkMethods
+  nameWithType: ConfigurationExtensions.RetrieveLinkMethods
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveLinkMethods
 - uid: Vasont.Inspire.Models.Configuration.XmlLinkTypeModel
   commentId: T:Vasont.Inspire.Models.Configuration.XmlLinkTypeModel
   parent: Vasont.Inspire.Models.Configuration
@@ -4298,11 +6079,21 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveXmlLinkTypes*
+  commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveXmlLinkTypes
+  name: RetrieveXmlLinkTypes
+  nameWithType: ConfigurationExtensions.RetrieveXmlLinkTypes
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveXmlLinkTypes
 - uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetXmlLinkType*
   commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetXmlLinkType
   name: GetXmlLinkType
   nameWithType: ConfigurationExtensions.GetXmlLinkType
   fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetXmlLinkType
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindXmlLinkType*
+  commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindXmlLinkType
+  name: FindXmlLinkType
+  nameWithType: ConfigurationExtensions.FindXmlLinkType
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindXmlLinkType
 - uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.UpdateXmlLinkType*
   commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.UpdateXmlLinkType
   name: UpdateXmlLinkType
@@ -4374,11 +6165,21 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveRelations*
+  commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveRelations
+  name: RetrieveRelations
+  nameWithType: ConfigurationExtensions.RetrieveRelations
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveRelations
 - uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetRelation*
   commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetRelation
   name: GetRelation
   nameWithType: ConfigurationExtensions.GetRelation
   fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetRelation
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindRelation*
+  commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindRelation
+  name: FindRelation
+  nameWithType: ConfigurationExtensions.FindRelation
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindRelation
 - uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.UpdateRelation*
   commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.UpdateRelation
   name: UpdateRelation
@@ -4406,6 +6207,11 @@ references:
   name: GetTag
   nameWithType: ConfigurationExtensions.GetTag
   fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetTag
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindTag*
+  commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindTag
+  name: FindTag
+  nameWithType: ConfigurationExtensions.FindTag
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindTag
 - uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.UpdateTag*
   commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.UpdateTag
   name: UpdateTag
@@ -4483,11 +6289,21 @@ references:
   name: Vasont.Inspire.Models.Projects
   nameWithType: Vasont.Inspire.Models.Projects
   fullName: Vasont.Inspire.Models.Projects
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveProjectActivities*
+  commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveProjectActivities
+  name: RetrieveProjectActivities
+  nameWithType: ConfigurationExtensions.RetrieveProjectActivities
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveProjectActivities
 - uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetProjectActivity*
   commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetProjectActivity
   name: GetProjectActivity
   nameWithType: ConfigurationExtensions.GetProjectActivity
   fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetProjectActivity
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindProjectActivity*
+  commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindProjectActivity
+  name: FindProjectActivity
+  nameWithType: ConfigurationExtensions.FindProjectActivity
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindProjectActivity
 - uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.UpdateProjectActivity*
   commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.UpdateProjectActivity
   name: UpdateProjectActivity
@@ -4565,6 +6381,11 @@ references:
   name: Vasont.Inspire.Models.Common
   nameWithType: Vasont.Inspire.Models.Common
   fullName: Vasont.Inspire.Models.Common
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindLanguages*
+  commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindLanguages
+  name: FindLanguages
+  nameWithType: ConfigurationExtensions.FindLanguages
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindLanguages
 - uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetLanguage*
   commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetLanguage
   name: GetLanguage
@@ -4577,6 +6398,11 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindLanguage*
+  commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindLanguage
+  name: FindLanguage
+  nameWithType: ConfigurationExtensions.FindLanguage
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindLanguage
 - uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.UpdateLanguage*
   commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.UpdateLanguage
   name: UpdateLanguage
@@ -4654,11 +6480,21 @@ references:
   name: Vasont.Inspire.Models.Webhooks
   nameWithType: Vasont.Inspire.Models.Webhooks
   fullName: Vasont.Inspire.Models.Webhooks
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveWebHookConfigurations*
+  commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveWebHookConfigurations
+  name: RetrieveWebHookConfigurations
+  nameWithType: ConfigurationExtensions.RetrieveWebHookConfigurations
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveWebHookConfigurations
 - uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetWebHookConfiguration*
   commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetWebHookConfiguration
   name: GetWebHookConfiguration
   nameWithType: ConfigurationExtensions.GetWebHookConfiguration
   fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetWebHookConfiguration
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindWebHookConfiguration*
+  commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindWebHookConfiguration
+  name: FindWebHookConfiguration
+  nameWithType: ConfigurationExtensions.FindWebHookConfiguration
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindWebHookConfiguration
 - uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.UpdateWebHookConfiguration*
   commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.UpdateWebHookConfiguration
   name: UpdateWebHookConfiguration
@@ -4730,11 +6566,21 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveFileExtensions*
+  commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveFileExtensions
+  name: RetrieveFileExtensions
+  nameWithType: ConfigurationExtensions.RetrieveFileExtensions
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.RetrieveFileExtensions
 - uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetFileExtension*
   commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetFileExtension
   name: GetFileExtension
   nameWithType: ConfigurationExtensions.GetFileExtension
   fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.GetFileExtension
+- uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindFileExtension*
+  commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindFileExtension
+  name: FindFileExtension
+  nameWithType: ConfigurationExtensions.FindFileExtension
+  fullName: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.FindFileExtension
 - uid: Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.UpdateFileExtension*
   commentId: Overload:Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.UpdateFileExtension
   name: UpdateFileExtension

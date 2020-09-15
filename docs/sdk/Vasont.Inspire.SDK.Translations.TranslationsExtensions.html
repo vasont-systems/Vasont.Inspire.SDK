@@ -73,7 +73,7 @@
   
   <h1 id="Vasont_Inspire_SDK_Translations_TranslationsExtensions" data-uid="Vasont.Inspire.SDK.Translations.TranslationsExtensions" class="text-break">Class TranslationsExtensions
   </h1>
-  <div class="markdown level0 summary"><p>This class extends the <a class="xref" href="Vasont.Inspire.SDK.InspireClient.html">InspireClient</a> class to include methods for calling user API endpoints.</p>
+  <div class="markdown level0 summary"><p>This class extends the <a class="xref" href="Vasont.Inspire.SDK.InspireClient.html">InspireClient</a> class to include methods for calling translation API endpoints.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -115,14 +115,238 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/new/master/apiSpec/new?filename=Vasont_Inspire_SDK_Translations_TranslationsExtensions_FindQueuedTranslationJobs_Vasont_Inspire_SDK_InspireClient_System_Int64_.md&amp;value=---%0Auid%3A%20Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindQueuedTranslationJobs(Vasont.Inspire.SDK.InspireClient%2CSystem.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/blob/develop/src/Translations/TranslationsExtensions.cs/#L140">View Source</a>
+  </span>
+  <a id="Vasont_Inspire_SDK_Translations_TranslationsExtensions_FindQueuedTranslationJobs_" data-uid="Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindQueuedTranslationJobs*"></a>
+  <h4 id="Vasont_Inspire_SDK_Translations_TranslationsExtensions_FindQueuedTranslationJobs_Vasont_Inspire_SDK_InspireClient_System_Int64_" data-uid="Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindQueuedTranslationJobs(Vasont.Inspire.SDK.InspireClient,System.Int64)">FindQueuedTranslationJobs(InspireClient, Int64)</h4>
+  <div class="markdown level1 summary"><p>Gets the queued translation jobs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static WorkerStateModel&lt;TranslationExportStateModel&gt; FindQueuedTranslationJobs(this InspireClient client, long translationVendorId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Vasont.Inspire.SDK.InspireClient.html">InspireClient</a></td>
+        <td><span class="parametername">client</span></td>
+        <td><p><a class="xref" href="Vasont.Inspire.SDK.InspireClient.html">InspireClient</a> used to communication with the API endpoint.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">translationVendorId</span></td>
+        <td><p>The translation vendor identifier.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vasont.Inspire.Models.Worker.WorkerStateModel</span>&lt;<span class="xref">Vasont.Inspire.Models.Translations.TranslationExportStateModel</span>&gt;</td>
+        <td><p>Returns a <span class="xref">Vasont.Inspire.Models.Worker.WorkerStateModel</span> of type <span class="xref">Vasont.Inspire.Models.Translations.TranslationExportStateModel</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/new/master/apiSpec/new?filename=Vasont_Inspire_SDK_Translations_TranslationsExtensions_FindTranslationExportJobs_Vasont_Inspire_SDK_InspireClient_System_Collections_Generic_List_System_Int64__.md&amp;value=---%0Auid%3A%20Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationExportJobs(Vasont.Inspire.SDK.InspireClient%2CSystem.Collections.Generic.List%7BSystem.Int64%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/blob/develop/src/Translations/TranslationsExtensions.cs/#L225">View Source</a>
+  </span>
+  <a id="Vasont_Inspire_SDK_Translations_TranslationsExtensions_FindTranslationExportJobs_" data-uid="Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationExportJobs*"></a>
+  <h4 id="Vasont_Inspire_SDK_Translations_TranslationsExtensions_FindTranslationExportJobs_Vasont_Inspire_SDK_InspireClient_System_Collections_Generic_List_System_Int64__" data-uid="Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationExportJobs(Vasont.Inspire.SDK.InspireClient,System.Collections.Generic.List{System.Int64})">FindTranslationExportJobs(InspireClient, List&lt;Int64&gt;)</h4>
+  <div class="markdown level1 summary"><p>Gets all of the translation export jobs ready to be processed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static List&lt;TranslationExportJobModel&gt; FindTranslationExportJobs(this InspireClient client, List&lt;long&gt; translationJobIds)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Vasont.Inspire.SDK.InspireClient.html">InspireClient</a></td>
+        <td><span class="parametername">client</span></td>
+        <td><p><a class="xref" href="Vasont.Inspire.SDK.InspireClient.html">InspireClient</a> used to communication with the API endpoint.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
+        <td><span class="parametername">translationJobIds</span></td>
+        <td><p>The translation job ids.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">Vasont.Inspire.Models.Translations.TranslationExportJobModel</span>&gt;</td>
+        <td><p>Returns a List of <span class="xref">Vasont.Inspire.Models.Translations.TranslationExportJobModel</span> objects.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/new/master/apiSpec/new?filename=Vasont_Inspire_SDK_Translations_TranslationsExtensions_FindTranslationExportState_Vasont_Inspire_SDK_InspireClient_System_String_.md&amp;value=---%0Auid%3A%20Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationExportState(Vasont.Inspire.SDK.InspireClient%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/blob/develop/src/Translations/TranslationsExtensions.cs/#L176">View Source</a>
+  </span>
+  <a id="Vasont_Inspire_SDK_Translations_TranslationsExtensions_FindTranslationExportState_" data-uid="Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationExportState*"></a>
+  <h4 id="Vasont_Inspire_SDK_Translations_TranslationsExtensions_FindTranslationExportState_Vasont_Inspire_SDK_InspireClient_System_String_" data-uid="Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationExportState(Vasont.Inspire.SDK.InspireClient,System.String)">FindTranslationExportState(InspireClient, String)</h4>
+  <div class="markdown level1 summary"><p>Gets the translation export state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static MinimalWorkerStateModel&lt;TranslationExportStateModel&gt; FindTranslationExportState(this InspireClient client, string workerKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Vasont.Inspire.SDK.InspireClient.html">InspireClient</a></td>
+        <td><span class="parametername">client</span></td>
+        <td><p><a class="xref" href="Vasont.Inspire.SDK.InspireClient.html">InspireClient</a> used to communication with the API endpoint.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">workerKey</span></td>
+        <td><p>The worker key.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vasont.Inspire.Models.Worker.MinimalWorkerStateModel</span>&lt;<span class="xref">Vasont.Inspire.Models.Translations.TranslationExportStateModel</span>&gt;</td>
+        <td><p>Returns a <span class="xref">Vasont.Inspire.Models.Worker.WorkerStateModel</span> of type <span class="xref">Vasont.Inspire.Models.Translations.TranslationExportStateModel</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/new/master/apiSpec/new?filename=Vasont_Inspire_SDK_Translations_TranslationsExtensions_FindTranslationJob_Vasont_Inspire_SDK_InspireClient_System_Int64_.md&amp;value=---%0Auid%3A%20Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationJob(Vasont.Inspire.SDK.InspireClient%2CSystem.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/blob/develop/src/Translations/TranslationsExtensions.cs/#L81">View Source</a>
+  </span>
+  <a id="Vasont_Inspire_SDK_Translations_TranslationsExtensions_FindTranslationJob_" data-uid="Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationJob*"></a>
+  <h4 id="Vasont_Inspire_SDK_Translations_TranslationsExtensions_FindTranslationJob_Vasont_Inspire_SDK_InspireClient_System_Int64_" data-uid="Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationJob(Vasont.Inspire.SDK.InspireClient,System.Int64)">FindTranslationJob(InspireClient, Int64)</h4>
+  <div class="markdown level1 summary"><p>Gets the translation job by identifier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TranslationJobModel FindTranslationJob(this InspireClient client, long translationJobId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Vasont.Inspire.SDK.InspireClient.html">InspireClient</a></td>
+        <td><span class="parametername">client</span></td>
+        <td><p><a class="xref" href="Vasont.Inspire.SDK.InspireClient.html">InspireClient</a> used to communication with the API endpoint.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">translationJobId</span></td>
+        <td><p>The translation job identifier.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vasont.Inspire.Models.Translations.TranslationJobModel</span></td>
+        <td><p>Returns the <span class="xref">Vasont.Inspire.Models.Translations.TranslationJobModel</span> object found for the requested Id.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/new/master/apiSpec/new?filename=Vasont_Inspire_SDK_Translations_TranslationsExtensions_FindTranslationJobs_Vasont_Inspire_SDK_InspireClient_System_Collections_Generic_List_System_Int64__.md&amp;value=---%0Auid%3A%20Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationJobs(Vasont.Inspire.SDK.InspireClient%2CSystem.Collections.Generic.List%7BSystem.Int64%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/blob/develop/src/Translations/TranslationsExtensions.cs/#L59">View Source</a>
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/blob/develop/src/Translations/TranslationsExtensions.cs/#L93">View Source</a>
   </span>
   <a id="Vasont_Inspire_SDK_Translations_TranslationsExtensions_FindTranslationJobs_" data-uid="Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationJobs*"></a>
   <h4 id="Vasont_Inspire_SDK_Translations_TranslationsExtensions_FindTranslationJobs_Vasont_Inspire_SDK_InspireClient_System_Collections_Generic_List_System_Int64__" data-uid="Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationJobs(Vasont.Inspire.SDK.InspireClient,System.Collections.Generic.List{System.Int64})">FindTranslationJobs(InspireClient, List&lt;Int64&gt;)</h4>
-  <div class="markdown level1 summary"><p>Finds the translation jobs.</p>
+  <div class="markdown level1 summary"><p>Finds the translation jobs for the requested translation job Ids.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -142,7 +366,7 @@
       <tr>
         <td><a class="xref" href="Vasont.Inspire.SDK.InspireClient.html">InspireClient</a></td>
         <td><span class="parametername">client</span></td>
-        <td><p>The client.</p>
+        <td><p><a class="xref" href="Vasont.Inspire.SDK.InspireClient.html">InspireClient</a> used to communication with the API endpoint.</p>
 </td>
       </tr>
       <tr>
@@ -164,7 +388,7 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">Vasont.Inspire.Models.Translations.MinimalTranslationJobModel</span>&gt;</td>
-        <td><p>Returns a List of the requested <span class="xref">Vasont.Inspire.Models.Translations.TranslationJobModel</span> objects.</p>
+        <td><p>Returns a List of the requested <span class="xref">Vasont.Inspire.Models.Translations.MinimalTranslationJobModel</span> objects.</p>
 </td>
       </tr>
     </tbody>
@@ -174,7 +398,7 @@
     <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/new/master/apiSpec/new?filename=Vasont_Inspire_SDK_Translations_TranslationsExtensions_GetQueuedTranslationJobs_Vasont_Inspire_SDK_InspireClient_System_Int64_.md&amp;value=---%0Auid%3A%20Vasont.Inspire.SDK.Translations.TranslationsExtensions.GetQueuedTranslationJobs(Vasont.Inspire.SDK.InspireClient%2CSystem.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/blob/develop/src/Translations/TranslationsExtensions.cs/#L94">View Source</a>
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/blob/develop/src/Translations/TranslationsExtensions.cs/#L128">View Source</a>
   </span>
   <a id="Vasont_Inspire_SDK_Translations_TranslationsExtensions_GetQueuedTranslationJobs_" data-uid="Vasont.Inspire.SDK.Translations.TranslationsExtensions.GetQueuedTranslationJobs*"></a>
   <h4 id="Vasont_Inspire_SDK_Translations_TranslationsExtensions_GetQueuedTranslationJobs_Vasont_Inspire_SDK_InspireClient_System_Int64_" data-uid="Vasont.Inspire.SDK.Translations.TranslationsExtensions.GetQueuedTranslationJobs(Vasont.Inspire.SDK.InspireClient,System.Int64)">GetQueuedTranslationJobs(InspireClient, Int64)</h4>
@@ -183,7 +407,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static WorkerStateModel&lt;TranslationExportStateModel&gt; GetQueuedTranslationJobs(this InspireClient client, long translationVendorId)</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This method is obsolete. Please use FindQueuedTranslationJobs() going forward. This method will be removed in a future release.&quot;)]
+public static WorkerStateModel&lt;TranslationExportStateModel&gt; GetQueuedTranslationJobs(this InspireClient client, long translationVendorId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -198,7 +423,7 @@
       <tr>
         <td><a class="xref" href="Vasont.Inspire.SDK.InspireClient.html">InspireClient</a></td>
         <td><span class="parametername">client</span></td>
-        <td><p>The client.</p>
+        <td><p><a class="xref" href="Vasont.Inspire.SDK.InspireClient.html">InspireClient</a> used to communication with the API endpoint.</p>
 </td>
       </tr>
       <tr>
@@ -230,16 +455,17 @@
     <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/new/master/apiSpec/new?filename=Vasont_Inspire_SDK_Translations_TranslationsExtensions_GetTranslationExportJobs_Vasont_Inspire_SDK_InspireClient_System_Collections_Generic_List_System_Int64__.md&amp;value=---%0Auid%3A%20Vasont.Inspire.SDK.Translations.TranslationsExtensions.GetTranslationExportJobs(Vasont.Inspire.SDK.InspireClient%2CSystem.Collections.Generic.List%7BSystem.Int64%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/blob/develop/src/Translations/TranslationsExtensions.cs/#L155">View Source</a>
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/blob/develop/src/Translations/TranslationsExtensions.cs/#L213">View Source</a>
   </span>
   <a id="Vasont_Inspire_SDK_Translations_TranslationsExtensions_GetTranslationExportJobs_" data-uid="Vasont.Inspire.SDK.Translations.TranslationsExtensions.GetTranslationExportJobs*"></a>
   <h4 id="Vasont_Inspire_SDK_Translations_TranslationsExtensions_GetTranslationExportJobs_Vasont_Inspire_SDK_InspireClient_System_Collections_Generic_List_System_Int64__" data-uid="Vasont.Inspire.SDK.Translations.TranslationsExtensions.GetTranslationExportJobs(Vasont.Inspire.SDK.InspireClient,System.Collections.Generic.List{System.Int64})">GetTranslationExportJobs(InspireClient, List&lt;Int64&gt;)</h4>
-  <div class="markdown level1 summary"><p>Gets the translation export jobs.</p>
+  <div class="markdown level1 summary"><p>Gets all of the translation export jobs ready to be processed.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static List&lt;TranslationExportJobModel&gt; GetTranslationExportJobs(this InspireClient client, List&lt;long&gt; translationJobIds)</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This method is obsolete. Please use FindTranslationExportJobs() going forward. This method will be removed in a future release.&quot;)]
+public static List&lt;TranslationExportJobModel&gt; GetTranslationExportJobs(this InspireClient client, List&lt;long&gt; translationJobIds)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -254,7 +480,7 @@
       <tr>
         <td><a class="xref" href="Vasont.Inspire.SDK.InspireClient.html">InspireClient</a></td>
         <td><span class="parametername">client</span></td>
-        <td><p>The client.</p>
+        <td><p><a class="xref" href="Vasont.Inspire.SDK.InspireClient.html">InspireClient</a> used to communication with the API endpoint.</p>
 </td>
       </tr>
       <tr>
@@ -286,7 +512,7 @@
     <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/new/master/apiSpec/new?filename=Vasont_Inspire_SDK_Translations_TranslationsExtensions_GetTranslationExportState_Vasont_Inspire_SDK_InspireClient_System_String_.md&amp;value=---%0Auid%3A%20Vasont.Inspire.SDK.Translations.TranslationsExtensions.GetTranslationExportState(Vasont.Inspire.SDK.InspireClient%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/blob/develop/src/Translations/TranslationsExtensions.cs/#L118">View Source</a>
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/blob/develop/src/Translations/TranslationsExtensions.cs/#L164">View Source</a>
   </span>
   <a id="Vasont_Inspire_SDK_Translations_TranslationsExtensions_GetTranslationExportState_" data-uid="Vasont.Inspire.SDK.Translations.TranslationsExtensions.GetTranslationExportState*"></a>
   <h4 id="Vasont_Inspire_SDK_Translations_TranslationsExtensions_GetTranslationExportState_Vasont_Inspire_SDK_InspireClient_System_String_" data-uid="Vasont.Inspire.SDK.Translations.TranslationsExtensions.GetTranslationExportState(Vasont.Inspire.SDK.InspireClient,System.String)">GetTranslationExportState(InspireClient, String)</h4>
@@ -295,7 +521,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static MinimalWorkerStateModel&lt;TranslationExportStateModel&gt; GetTranslationExportState(this InspireClient client, string workerKey)</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This method is obsolete. Please use FindTranslationExportState() going forward. This method will be removed in a future release.&quot;)]
+public static MinimalWorkerStateModel&lt;TranslationExportStateModel&gt; GetTranslationExportState(this InspireClient client, string workerKey)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -310,7 +537,7 @@
       <tr>
         <td><a class="xref" href="Vasont.Inspire.SDK.InspireClient.html">InspireClient</a></td>
         <td><span class="parametername">client</span></td>
-        <td><p>The client.</p>
+        <td><p><a class="xref" href="Vasont.Inspire.SDK.InspireClient.html">InspireClient</a> used to communication with the API endpoint.</p>
 </td>
       </tr>
       <tr>
@@ -342,7 +569,7 @@
     <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/new/master/apiSpec/new?filename=Vasont_Inspire_SDK_Translations_TranslationsExtensions_GetTranslationJobById_Vasont_Inspire_SDK_InspireClient_System_Int64_.md&amp;value=---%0Auid%3A%20Vasont.Inspire.SDK.Translations.TranslationsExtensions.GetTranslationJobById(Vasont.Inspire.SDK.InspireClient%2CSystem.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/blob/develop/src/Translations/TranslationsExtensions.cs/#L47">View Source</a>
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/blob/develop/src/Translations/TranslationsExtensions.cs/#L69">View Source</a>
   </span>
   <a id="Vasont_Inspire_SDK_Translations_TranslationsExtensions_GetTranslationJobById_" data-uid="Vasont.Inspire.SDK.Translations.TranslationsExtensions.GetTranslationJobById*"></a>
   <h4 id="Vasont_Inspire_SDK_Translations_TranslationsExtensions_GetTranslationJobById_Vasont_Inspire_SDK_InspireClient_System_Int64_" data-uid="Vasont.Inspire.SDK.Translations.TranslationsExtensions.GetTranslationJobById(Vasont.Inspire.SDK.InspireClient,System.Int64)">GetTranslationJobById(InspireClient, Int64)</h4>
@@ -351,7 +578,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static TranslationJobModel GetTranslationJobById(this InspireClient client, long translationJobId)</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This method is obsolete. Please use FindTranslationJob() going forward. This method will be removed in a future release.&quot;)]
+public static TranslationJobModel GetTranslationJobById(this InspireClient client, long translationJobId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -366,7 +594,7 @@
       <tr>
         <td><a class="xref" href="Vasont.Inspire.SDK.InspireClient.html">InspireClient</a></td>
         <td><span class="parametername">client</span></td>
-        <td><p>The client.</p>
+        <td><p><a class="xref" href="Vasont.Inspire.SDK.InspireClient.html">InspireClient</a> used to communication with the API endpoint.</p>
 </td>
       </tr>
       <tr>
@@ -407,7 +635,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static List&lt;TranslationJobStateModel&gt; GetTranslationJobStates(this InspireClient client)</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This method is obsolete. Please use RetrieveTranslationJobStates() going forward. This method will be removed in a future release.&quot;)]
+public static List&lt;TranslationJobStateModel&gt; GetTranslationJobStates(this InspireClient client)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -422,7 +651,7 @@
       <tr>
         <td><a class="xref" href="Vasont.Inspire.SDK.InspireClient.html">InspireClient</a></td>
         <td><span class="parametername">client</span></td>
-        <td><p>Contains the client.</p>
+        <td><p><a class="xref" href="Vasont.Inspire.SDK.InspireClient.html">InspireClient</a> used to communication with the API endpoint.</p>
 </td>
       </tr>
     </tbody>
@@ -448,7 +677,7 @@
     <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/new/master/apiSpec/new?filename=Vasont_Inspire_SDK_Translations_TranslationsExtensions_GetTranslationVendors_Vasont_Inspire_SDK_InspireClient_.md&amp;value=---%0Auid%3A%20Vasont.Inspire.SDK.Translations.TranslationsExtensions.GetTranslationVendors(Vasont.Inspire.SDK.InspireClient)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/blob/develop/src/Translations/TranslationsExtensions.cs/#L35">View Source</a>
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/blob/develop/src/Translations/TranslationsExtensions.cs/#L46">View Source</a>
   </span>
   <a id="Vasont_Inspire_SDK_Translations_TranslationsExtensions_GetTranslationVendors_" data-uid="Vasont.Inspire.SDK.Translations.TranslationsExtensions.GetTranslationVendors*"></a>
   <h4 id="Vasont_Inspire_SDK_Translations_TranslationsExtensions_GetTranslationVendors_Vasont_Inspire_SDK_InspireClient_" data-uid="Vasont.Inspire.SDK.Translations.TranslationsExtensions.GetTranslationVendors(Vasont.Inspire.SDK.InspireClient)">GetTranslationVendors(InspireClient)</h4>
@@ -457,7 +686,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static List&lt;TranslationVendorModel&gt; GetTranslationVendors(this InspireClient client)</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This method is obsolete. Please use RetrieveTranslationVendors() going forward. This method will be removed in a future release.&quot;)]
+public static List&lt;TranslationVendorModel&gt; GetTranslationVendors(this InspireClient client)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -472,7 +702,7 @@
       <tr>
         <td><a class="xref" href="Vasont.Inspire.SDK.InspireClient.html">InspireClient</a></td>
         <td><span class="parametername">client</span></td>
-        <td><p>The client.</p>
+        <td><p><a class="xref" href="Vasont.Inspire.SDK.InspireClient.html">InspireClient</a> used to communication with the API endpoint.</p>
 </td>
       </tr>
     </tbody>
@@ -498,7 +728,7 @@
     <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/new/master/apiSpec/new?filename=Vasont_Inspire_SDK_Translations_TranslationsExtensions_PutTranslationCancel_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Translations_TranslationJobModel_.md&amp;value=---%0Auid%3A%20Vasont.Inspire.SDK.Translations.TranslationsExtensions.PutTranslationCancel(Vasont.Inspire.SDK.InspireClient%2CVasont.Inspire.Models.Translations.TranslationJobModel)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/blob/develop/src/Translations/TranslationsExtensions.cs/#L77">View Source</a>
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/blob/develop/src/Translations/TranslationsExtensions.cs/#L111">View Source</a>
   </span>
   <a id="Vasont_Inspire_SDK_Translations_TranslationsExtensions_PutTranslationCancel_" data-uid="Vasont.Inspire.SDK.Translations.TranslationsExtensions.PutTranslationCancel*"></a>
   <h4 id="Vasont_Inspire_SDK_Translations_TranslationsExtensions_PutTranslationCancel_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Translations_TranslationJobModel_" data-uid="Vasont.Inspire.SDK.Translations.TranslationsExtensions.PutTranslationCancel(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Translations.TranslationJobModel)">PutTranslationCancel(InspireClient, TranslationJobModel)</h4>
@@ -522,13 +752,13 @@
       <tr>
         <td><a class="xref" href="Vasont.Inspire.SDK.InspireClient.html">InspireClient</a></td>
         <td><span class="parametername">client</span></td>
-        <td><p>The client.</p>
+        <td><p><a class="xref" href="Vasont.Inspire.SDK.InspireClient.html">InspireClient</a> used to communication with the API endpoint.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">Vasont.Inspire.Models.Translations.TranslationJobModel</span></td>
         <td><span class="parametername">model</span></td>
-        <td><p>The model.</p>
+        <td><p>The <span class="xref">Vasont.Inspire.Models.Translations.TranslationJobModel</span> used to Cancel the Translation Job.</p>
 </td>
       </tr>
     </tbody>
@@ -554,11 +784,11 @@
     <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/new/master/apiSpec/new?filename=Vasont_Inspire_SDK_Translations_TranslationsExtensions_ResetTranslationComponentsState_Vasont_Inspire_SDK_InspireClient_System_Collections_Generic_List_System_Int64__.md&amp;value=---%0Auid%3A%20Vasont.Inspire.SDK.Translations.TranslationsExtensions.ResetTranslationComponentsState(Vasont.Inspire.SDK.InspireClient%2CSystem.Collections.Generic.List%7BSystem.Int64%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/blob/develop/src/Translations/TranslationsExtensions.cs/#L137">View Source</a>
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/blob/develop/src/Translations/TranslationsExtensions.cs/#L195">View Source</a>
   </span>
   <a id="Vasont_Inspire_SDK_Translations_TranslationsExtensions_ResetTranslationComponentsState_" data-uid="Vasont.Inspire.SDK.Translations.TranslationsExtensions.ResetTranslationComponentsState*"></a>
   <h4 id="Vasont_Inspire_SDK_Translations_TranslationsExtensions_ResetTranslationComponentsState_Vasont_Inspire_SDK_InspireClient_System_Collections_Generic_List_System_Int64__" data-uid="Vasont.Inspire.SDK.Translations.TranslationsExtensions.ResetTranslationComponentsState(Vasont.Inspire.SDK.InspireClient,System.Collections.Generic.List{System.Int64})">ResetTranslationComponentsState(InspireClient, List&lt;Int64&gt;)</h4>
-  <div class="markdown level1 summary"><p>Resets the state of the translation components to queued.</p>
+  <div class="markdown level1 summary"><p>Resets the state of the requested translation components to queued.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -578,7 +808,7 @@
       <tr>
         <td><a class="xref" href="Vasont.Inspire.SDK.InspireClient.html">InspireClient</a></td>
         <td><span class="parametername">client</span></td>
-        <td><p>The client.</p>
+        <td><p><a class="xref" href="Vasont.Inspire.SDK.InspireClient.html">InspireClient</a> used to communication with the API endpoint.</p>
 </td>
       </tr>
       <tr>
@@ -607,14 +837,114 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/new/master/apiSpec/new?filename=Vasont_Inspire_SDK_Translations_TranslationsExtensions_RetrieveTranslationJobStates_Vasont_Inspire_SDK_InspireClient_.md&amp;value=---%0Auid%3A%20Vasont.Inspire.SDK.Translations.TranslationsExtensions.RetrieveTranslationJobStates(Vasont.Inspire.SDK.InspireClient)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/blob/develop/src/Translations/TranslationsExtensions.cs/#L35">View Source</a>
+  </span>
+  <a id="Vasont_Inspire_SDK_Translations_TranslationsExtensions_RetrieveTranslationJobStates_" data-uid="Vasont.Inspire.SDK.Translations.TranslationsExtensions.RetrieveTranslationJobStates*"></a>
+  <h4 id="Vasont_Inspire_SDK_Translations_TranslationsExtensions_RetrieveTranslationJobStates_Vasont_Inspire_SDK_InspireClient_" data-uid="Vasont.Inspire.SDK.Translations.TranslationsExtensions.RetrieveTranslationJobStates(Vasont.Inspire.SDK.InspireClient)">RetrieveTranslationJobStates(InspireClient)</h4>
+  <div class="markdown level1 summary"><p>Get all available translation job states.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static List&lt;TranslationJobStateModel&gt; RetrieveTranslationJobStates(this InspireClient client)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Vasont.Inspire.SDK.InspireClient.html">InspireClient</a></td>
+        <td><span class="parametername">client</span></td>
+        <td><p><a class="xref" href="Vasont.Inspire.SDK.InspireClient.html">InspireClient</a> used to communication with the API endpoint.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">Vasont.Inspire.Models.Translations.TranslationJobStateModel</span>&gt;</td>
+        <td><p>Returns a list of <span class="xref">Vasont.Inspire.Models.Translations.TranslationJobStateModel</span> objects.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/new/master/apiSpec/new?filename=Vasont_Inspire_SDK_Translations_TranslationsExtensions_RetrieveTranslationVendors_Vasont_Inspire_SDK_InspireClient_.md&amp;value=---%0Auid%3A%20Vasont.Inspire.SDK.Translations.TranslationsExtensions.RetrieveTranslationVendors(Vasont.Inspire.SDK.InspireClient)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/blob/develop/src/Translations/TranslationsExtensions.cs/#L57">View Source</a>
+  </span>
+  <a id="Vasont_Inspire_SDK_Translations_TranslationsExtensions_RetrieveTranslationVendors_" data-uid="Vasont.Inspire.SDK.Translations.TranslationsExtensions.RetrieveTranslationVendors*"></a>
+  <h4 id="Vasont_Inspire_SDK_Translations_TranslationsExtensions_RetrieveTranslationVendors_Vasont_Inspire_SDK_InspireClient_" data-uid="Vasont.Inspire.SDK.Translations.TranslationsExtensions.RetrieveTranslationVendors(Vasont.Inspire.SDK.InspireClient)">RetrieveTranslationVendors(InspireClient)</h4>
+  <div class="markdown level1 summary"><p>Gets all translation vendors.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static List&lt;TranslationVendorModel&gt; RetrieveTranslationVendors(this InspireClient client)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Vasont.Inspire.SDK.InspireClient.html">InspireClient</a></td>
+        <td><span class="parametername">client</span></td>
+        <td><p><a class="xref" href="Vasont.Inspire.SDK.InspireClient.html">InspireClient</a> used to communication with the API endpoint.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">Vasont.Inspire.Models.Translations.TranslationVendorModel</span>&gt;</td>
+        <td><p>Returns a List of <span class="xref">Vasont.Inspire.Models.Translations.TranslationVendorModel</span> objects.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/new/master/apiSpec/new?filename=Vasont_Inspire_SDK_Translations_TranslationsExtensions_SetTranslationJobStatus_Vasont_Inspire_SDK_InspireClient_System_Collections_Generic_List_Vasont_Inspire_Models_Translations_TranslationExportJobModel__.md&amp;value=---%0Auid%3A%20Vasont.Inspire.SDK.Translations.TranslationsExtensions.SetTranslationJobStatus(Vasont.Inspire.SDK.InspireClient%2CSystem.Collections.Generic.List%7BVasont.Inspire.Models.Translations.TranslationExportJobModel%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/blob/develop/src/Translations/TranslationsExtensions.cs/#L173">View Source</a>
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/blob/develop/src/Translations/TranslationsExtensions.cs/#L243">View Source</a>
   </span>
   <a id="Vasont_Inspire_SDK_Translations_TranslationsExtensions_SetTranslationJobStatus_" data-uid="Vasont.Inspire.SDK.Translations.TranslationsExtensions.SetTranslationJobStatus*"></a>
   <h4 id="Vasont_Inspire_SDK_Translations_TranslationsExtensions_SetTranslationJobStatus_Vasont_Inspire_SDK_InspireClient_System_Collections_Generic_List_Vasont_Inspire_Models_Translations_TranslationExportJobModel__" data-uid="Vasont.Inspire.SDK.Translations.TranslationsExtensions.SetTranslationJobStatus(Vasont.Inspire.SDK.InspireClient,System.Collections.Generic.List{Vasont.Inspire.Models.Translations.TranslationExportJobModel})">SetTranslationJobStatus(InspireClient, List&lt;TranslationExportJobModel&gt;)</h4>
-  <div class="markdown level1 summary"><p>Sets the translation job status.</p>
+  <div class="markdown level1 summary"><p>Sets the translation job statuses for each requested <span class="xref">Vasont.Inspire.Models.Translations.TranslationExportJobModel</span>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -634,13 +964,13 @@
       <tr>
         <td><a class="xref" href="Vasont.Inspire.SDK.InspireClient.html">InspireClient</a></td>
         <td><span class="parametername">client</span></td>
-        <td><p>The client.</p>
+        <td><p><a class="xref" href="Vasont.Inspire.SDK.InspireClient.html">InspireClient</a> used to communication with the API endpoint.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">Vasont.Inspire.Models.Translations.TranslationExportJobModel</span>&gt;</td>
         <td><span class="parametername">models</span></td>
-        <td><p>The models.</p>
+        <td><p>The List of <span class="xref">Vasont.Inspire.Models.Translations.TranslationExportJobModel</span> objects used to set translation job statuses.</p>
 </td>
       </tr>
     </tbody>

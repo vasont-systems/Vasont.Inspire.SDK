@@ -115,6 +115,62 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/new/master/apiSpec/new?filename=Vasont_Inspire_SDK_Components_EditorExtensions_FindEditorComponent_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Components_EditorLoadModel_.md&amp;value=---%0Auid%3A%20Vasont.Inspire.SDK.Components.EditorExtensions.FindEditorComponent(Vasont.Inspire.SDK.InspireClient%2CVasont.Inspire.Models.Components.EditorLoadModel)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/blob/develop/src/Components/EditorExtensions.cs/#L37">View Source</a>
+  </span>
+  <a id="Vasont_Inspire_SDK_Components_EditorExtensions_FindEditorComponent_" data-uid="Vasont.Inspire.SDK.Components.EditorExtensions.FindEditorComponent*"></a>
+  <h4 id="Vasont_Inspire_SDK_Components_EditorExtensions_FindEditorComponent_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Components_EditorLoadModel_" data-uid="Vasont.Inspire.SDK.Components.EditorExtensions.FindEditorComponent(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.EditorLoadModel)">FindEditorComponent(InspireClient, EditorLoadModel)</h4>
+  <div class="markdown level1 summary"><p>This method is used to retrieve the specified Editor Xml Model.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static MinimalEditorXmlModel FindEditorComponent(this InspireClient client, EditorLoadModel model)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Vasont.Inspire.SDK.InspireClient.html">InspireClient</a></td>
+        <td><span class="parametername">client</span></td>
+        <td><p><a class="xref" href="Vasont.Inspire.SDK.InspireClient.html">InspireClient</a> used to communication with the API endpoint.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vasont.Inspire.Models.Components.EditorLoadModel</span></td>
+        <td><span class="parametername">model</span></td>
+        <td><p>Contains the component load editor model.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vasont.Inspire.Models.Components.MinimalEditorXmlModel</span></td>
+        <td><p>Returns the <span class="xref">Vasont.Inspire.Models.Components.MinimalEditorXmlModel</span> object that represents the editor record created.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/vasont-systems/Vasont.Inspire.SDK/new/master/apiSpec/new?filename=Vasont_Inspire_SDK_Components_EditorExtensions_GetEditorComponent_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Components_EditorLoadModel_.md&amp;value=---%0Auid%3A%20Vasont.Inspire.SDK.Components.EditorExtensions.GetEditorComponent(Vasont.Inspire.SDK.InspireClient%2CVasont.Inspire.Models.Components.EditorLoadModel)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
@@ -122,12 +178,13 @@
   </span>
   <a id="Vasont_Inspire_SDK_Components_EditorExtensions_GetEditorComponent_" data-uid="Vasont.Inspire.SDK.Components.EditorExtensions.GetEditorComponent*"></a>
   <h4 id="Vasont_Inspire_SDK_Components_EditorExtensions_GetEditorComponent_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Components_EditorLoadModel_" data-uid="Vasont.Inspire.SDK.Components.EditorExtensions.GetEditorComponent(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.EditorLoadModel)">GetEditorComponent(InspireClient, EditorLoadModel)</h4>
-  <div class="markdown level1 summary"><p>This method is used to create an Inspire Editor record and lock for editing the specified XML component.</p>
+  <div class="markdown level1 summary"><p>This method is used to retrieve the specified Editor Xml Model.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static MinimalEditorXmlModel GetEditorComponent(this InspireClient client, EditorLoadModel model)</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This method is obsolete. Please use FindEditorComponent() going forward. This method will be removed in a future release.&quot;)]
+public static MinimalEditorXmlModel GetEditorComponent(this InspireClient client, EditorLoadModel model)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">

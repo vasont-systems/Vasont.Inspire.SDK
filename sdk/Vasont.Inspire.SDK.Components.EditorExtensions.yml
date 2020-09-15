@@ -5,6 +5,7 @@ items:
   id: EditorExtensions
   parent: Vasont.Inspire.SDK.Components
   children:
+  - Vasont.Inspire.SDK.Components.EditorExtensions.FindEditorComponent(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.EditorLoadModel)
   - Vasont.Inspire.SDK.Components.EditorExtensions.GetEditorComponent(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.EditorLoadModel)
   langs:
   - csharp
@@ -69,10 +70,69 @@ items:
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Components
-  summary: "\nThis method is used to create an Inspire Editor record and lock for editing the specified XML component.\n"
+  summary: "\nThis method is used to retrieve the specified Editor Xml Model.\n"
   example: []
   syntax:
-    content: public static MinimalEditorXmlModel GetEditorComponent(this InspireClient client, EditorLoadModel model)
+    content: >-
+      [Obsolete("This method is obsolete. Please use FindEditorComponent() going forward. This method will be removed in a future release.")]
+
+      public static MinimalEditorXmlModel GetEditorComponent(this InspireClient client, EditorLoadModel model)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
+    - id: model
+      type: Vasont.Inspire.Models.Components.EditorLoadModel
+      description: Contains the component load editor model.
+    return:
+      type: Vasont.Inspire.Models.Components.MinimalEditorXmlModel
+      description: Returns the <xref href="Vasont.Inspire.Models.Components.MinimalEditorXmlModel" data-throw-if-not-resolved="false"></xref> object that represents the editor record created.
+    content.vb: >-
+      <Obsolete("This method is obsolete. Please use FindEditorComponent() going forward. This method will be removed in a future release.")>
+
+      <ExtensionAttribute>
+
+      Public Shared Function GetEditorComponent(client As InspireClient, model As EditorLoadModel) As MinimalEditorXmlModel
+  overload: Vasont.Inspire.SDK.Components.EditorExtensions.GetEditorComponent*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use FindEditorComponent() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Components.EditorExtensions.FindEditorComponent(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.EditorLoadModel)
+  commentId: M:Vasont.Inspire.SDK.Components.EditorExtensions.FindEditorComponent(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.EditorLoadModel)
+  id: FindEditorComponent(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Components.EditorLoadModel)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Components.EditorExtensions
+  langs:
+  - csharp
+  - vb
+  name: FindEditorComponent(InspireClient, EditorLoadModel)
+  nameWithType: EditorExtensions.FindEditorComponent(InspireClient, EditorLoadModel)
+  fullName: Vasont.Inspire.SDK.Components.EditorExtensions.FindEditorComponent(Vasont.Inspire.SDK.InspireClient, Vasont.Inspire.Models.Components.EditorLoadModel)
+  type: Method
+  source:
+    remote:
+      path: src/Components/EditorExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: FindEditorComponent
+    path: Components/EditorExtensions.cs
+    startLine: 36
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Components
+  summary: "\nThis method is used to retrieve the specified Editor Xml Model.\n"
+  example: []
+  syntax:
+    content: public static MinimalEditorXmlModel FindEditorComponent(this InspireClient client, EditorLoadModel model)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
@@ -86,8 +146,8 @@ items:
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Function GetEditorComponent(client As InspireClient, model As EditorLoadModel) As MinimalEditorXmlModel
-  overload: Vasont.Inspire.SDK.Components.EditorExtensions.GetEditorComponent*
+      Public Shared Function FindEditorComponent(client As InspireClient, model As EditorLoadModel) As MinimalEditorXmlModel
+  overload: Vasont.Inspire.SDK.Components.EditorExtensions.FindEditorComponent*
   modifiers.csharp:
   - public
   - static
@@ -428,3 +488,8 @@ references:
   name: Vasont.Inspire.Models.Components
   nameWithType: Vasont.Inspire.Models.Components
   fullName: Vasont.Inspire.Models.Components
+- uid: Vasont.Inspire.SDK.Components.EditorExtensions.FindEditorComponent*
+  commentId: Overload:Vasont.Inspire.SDK.Components.EditorExtensions.FindEditorComponent
+  name: FindEditorComponent
+  nameWithType: EditorExtensions.FindEditorComponent
+  fullName: Vasont.Inspire.SDK.Components.EditorExtensions.FindEditorComponent

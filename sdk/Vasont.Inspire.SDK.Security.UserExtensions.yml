@@ -7,9 +7,12 @@ items:
   children:
   - Vasont.Inspire.SDK.Security.UserExtensions.CreateUser(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Security.UserModel)
   - Vasont.Inspire.SDK.Security.UserExtensions.DeleteUser(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  - Vasont.Inspire.SDK.Security.UserExtensions.FindUser(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  - Vasont.Inspire.SDK.Security.UserExtensions.FindUsers(Vasont.Inspire.SDK.InspireClient,System.String,System.String,System.String,System.String,System.String)
   - Vasont.Inspire.SDK.Security.UserExtensions.GetAllUsers(Vasont.Inspire.SDK.InspireClient)
   - Vasont.Inspire.SDK.Security.UserExtensions.GetUser(Vasont.Inspire.SDK.InspireClient,System.Int64)
   - Vasont.Inspire.SDK.Security.UserExtensions.GetUsers(Vasont.Inspire.SDK.InspireClient,System.String,System.String,System.String,System.String,System.String)
+  - Vasont.Inspire.SDK.Security.UserExtensions.RetrieveUsers(Vasont.Inspire.SDK.InspireClient)
   - Vasont.Inspire.SDK.Security.UserExtensions.UpdateUser(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Security.UserModel)
   langs:
   - csharp
@@ -77,7 +80,63 @@ items:
   summary: "\nThis method is used to retrieve a list of users from the system.\n"
   example: []
   syntax:
-    content: public static List<SelectUserRoleModel> GetAllUsers(this InspireClient client)
+    content: >-
+      [Obsolete("This method is obsolete. Please use RetrieveUsers() going forward. This method will be removed in a future release.")]
+
+      public static List<SelectUserRoleModel> GetAllUsers(this InspireClient client)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
+    return:
+      type: System.Collections.Generic.List{Vasont.Inspire.Models.Utilities.SelectUserRoleModel}
+      description: Returns a list of <xref href="Vasont.Inspire.Models.Utilities.SelectUserRoleModel" data-throw-if-not-resolved="false"></xref> objects if found.
+    content.vb: >-
+      <Obsolete("This method is obsolete. Please use RetrieveUsers() going forward. This method will be removed in a future release.")>
+
+      <ExtensionAttribute>
+
+      Public Shared Function GetAllUsers(client As InspireClient) As List(Of SelectUserRoleModel)
+  overload: Vasont.Inspire.SDK.Security.UserExtensions.GetAllUsers*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use RetrieveUsers() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Security.UserExtensions.RetrieveUsers(Vasont.Inspire.SDK.InspireClient)
+  commentId: M:Vasont.Inspire.SDK.Security.UserExtensions.RetrieveUsers(Vasont.Inspire.SDK.InspireClient)
+  id: RetrieveUsers(Vasont.Inspire.SDK.InspireClient)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Security.UserExtensions
+  langs:
+  - csharp
+  - vb
+  name: RetrieveUsers(InspireClient)
+  nameWithType: UserExtensions.RetrieveUsers(InspireClient)
+  fullName: Vasont.Inspire.SDK.Security.UserExtensions.RetrieveUsers(Vasont.Inspire.SDK.InspireClient)
+  type: Method
+  source:
+    remote:
+      path: src/Security/UserExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: RetrieveUsers
+    path: Security/UserExtensions.cs
+    startLine: 37
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Security
+  summary: "\nThis method is used to retrieve a list of users from the system.\n"
+  example: []
+  syntax:
+    content: public static List<SelectUserRoleModel> RetrieveUsers(this InspireClient client)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
@@ -88,8 +147,8 @@ items:
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Function GetAllUsers(client As InspireClient) As List(Of SelectUserRoleModel)
-  overload: Vasont.Inspire.SDK.Security.UserExtensions.GetAllUsers*
+      Public Shared Function RetrieveUsers(client As InspireClient) As List(Of SelectUserRoleModel)
+  overload: Vasont.Inspire.SDK.Security.UserExtensions.RetrieveUsers*
   modifiers.csharp:
   - public
   - static
@@ -115,14 +174,73 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetUser
     path: Security/UserExtensions.cs
-    startLine: 38
+    startLine: 49
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Security
   summary: "\nThis method is used to retrieve information about a specific user.\n"
   example: []
   syntax:
-    content: public static UserModel GetUser(this InspireClient client, long userId)
+    content: >-
+      [Obsolete("This method is obsolete. Please use FindUser() going forward. This method will be removed in a future release.")]
+
+      public static UserModel GetUser(this InspireClient client, long userId)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
+    - id: userId
+      type: System.Int64
+      description: Contains the user identity.
+    return:
+      type: Vasont.Inspire.Models.Security.UserModel
+      description: Returns <xref href="Vasont.Inspire.Models.Security.UserModel" data-throw-if-not-resolved="false"></xref> object if found.
+    content.vb: >-
+      <Obsolete("This method is obsolete. Please use FindUser() going forward. This method will be removed in a future release.")>
+
+      <ExtensionAttribute>
+
+      Public Shared Function GetUser(client As InspireClient, userId As Long) As UserModel
+  overload: Vasont.Inspire.SDK.Security.UserExtensions.GetUser*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use FindUser() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Security.UserExtensions.FindUser(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  commentId: M:Vasont.Inspire.SDK.Security.UserExtensions.FindUser(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  id: FindUser(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Security.UserExtensions
+  langs:
+  - csharp
+  - vb
+  name: FindUser(InspireClient, Int64)
+  nameWithType: UserExtensions.FindUser(InspireClient, Int64)
+  fullName: Vasont.Inspire.SDK.Security.UserExtensions.FindUser(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  type: Method
+  source:
+    remote:
+      path: src/Security/UserExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: FindUser
+    path: Security/UserExtensions.cs
+    startLine: 61
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Security
+  summary: "\nThis method is used to retrieve information about a specific user.\n"
+  example: []
+  syntax:
+    content: public static UserModel FindUser(this InspireClient client, long userId)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
@@ -136,8 +254,8 @@ items:
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Function GetUser(client As InspireClient, userId As Long) As UserModel
-  overload: Vasont.Inspire.SDK.Security.UserExtensions.GetUser*
+      Public Shared Function FindUser(client As InspireClient, userId As Long) As UserModel
+  overload: Vasont.Inspire.SDK.Security.UserExtensions.FindUser*
   modifiers.csharp:
   - public
   - static
@@ -163,14 +281,17 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetUsers
     path: Security/UserExtensions.cs
-    startLine: 54
+    startLine: 77
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Security
-  summary: "\nThis method is used to retrieve information about a specific user.\n"
+  summary: "\nThis method is used to find users based on the search criteria.\n"
   example: []
   syntax:
-    content: public static List<UserModel> GetUsers(this InspireClient client, string userName = "", string email = "", string phone = "", string orderBy = "UserName", string direction = "ascending")
+    content: >-
+      [Obsolete("This method is obsolete. Please use FindUsers() going forward. This method will be removed in a future release.")]
+
+      public static List<UserModel> GetUsers(this InspireClient client, string userName = "", string email = "", string phone = "", string orderBy = "UserName", string direction = "ascending")
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
@@ -192,12 +313,80 @@ items:
       description: Contains the direction of sort, &quot;ascending&quot; by default.
     return:
       type: System.Collections.Generic.List{Vasont.Inspire.Models.Security.UserModel}
-      description: Returns <xref href="Vasont.Inspire.Models.Security.UserModel" data-throw-if-not-resolved="false"></xref> object if found.
+      description: Returns a list of <xref href="Vasont.Inspire.Models.Security.UserModel" data-throw-if-not-resolved="false"></xref> objects if found.
     content.vb: >-
+      <Obsolete("This method is obsolete. Please use FindUsers() going forward. This method will be removed in a future release.")>
+
       <ExtensionAttribute>
 
       Public Shared Function GetUsers(client As InspireClient, userName As String = "", email As String = "", phone As String = "", orderBy As String = "UserName", direction As String = "ascending") As List(Of UserModel)
   overload: Vasont.Inspire.SDK.Security.UserExtensions.GetUsers*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use FindUsers() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Security.UserExtensions.FindUsers(Vasont.Inspire.SDK.InspireClient,System.String,System.String,System.String,System.String,System.String)
+  commentId: M:Vasont.Inspire.SDK.Security.UserExtensions.FindUsers(Vasont.Inspire.SDK.InspireClient,System.String,System.String,System.String,System.String,System.String)
+  id: FindUsers(Vasont.Inspire.SDK.InspireClient,System.String,System.String,System.String,System.String,System.String)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Security.UserExtensions
+  langs:
+  - csharp
+  - vb
+  name: FindUsers(InspireClient, String, String, String, String, String)
+  nameWithType: UserExtensions.FindUsers(InspireClient, String, String, String, String, String)
+  fullName: Vasont.Inspire.SDK.Security.UserExtensions.FindUsers(Vasont.Inspire.SDK.InspireClient, System.String, System.String, System.String, System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: src/Security/UserExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: FindUsers
+    path: Security/UserExtensions.cs
+    startLine: 93
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Security
+  summary: "\nThis method is used to find users based on the search criteria.\n"
+  example: []
+  syntax:
+    content: public static List<UserModel> FindUsers(this InspireClient client, string userName = "", string email = "", string phone = "", string orderBy = "UserName", string direction = "ascending")
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
+    - id: userName
+      type: System.String
+      description: Contains the name of the user.
+    - id: email
+      type: System.String
+      description: Contains the email of the user.
+    - id: phone
+      type: System.String
+      description: Contains the phone number of the user.
+    - id: orderBy
+      type: System.String
+      description: Contains the order by field.
+    - id: direction
+      type: System.String
+      description: Contains the direction of sort, &quot;ascending&quot; by default.
+    return:
+      type: System.Collections.Generic.List{Vasont.Inspire.Models.Security.UserModel}
+      description: Returns a list of <xref href="Vasont.Inspire.Models.Security.UserModel" data-throw-if-not-resolved="false"></xref> objects if found.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function FindUsers(client As InspireClient, userName As String = "", email As String = "", phone As String = "", orderBy As String = "UserName", direction As String = "ascending") As List(Of UserModel)
+  overload: Vasont.Inspire.SDK.Security.UserExtensions.FindUsers*
   modifiers.csharp:
   - public
   - static
@@ -223,11 +412,11 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: CreateUser
     path: Security/UserExtensions.cs
-    startLine: 66
+    startLine: 105
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Security
-  summary: "\nThis method is used to create a new user, and return the new UserModel.\n"
+  summary: "\nThis method is used to create a new user.\n"
   example: []
   syntax:
     content: public static UserModel CreateUser(this InspireClient client, UserModel inputModel)
@@ -271,11 +460,11 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: UpdateUser
     path: Security/UserExtensions.cs
-    startLine: 84
+    startLine: 123
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Security
-  summary: "\nThis method is used to update an existing user, and return the updated UserModel.\n"
+  summary: "\nThis method is used to update an existing user.\n"
   example: []
   syntax:
     content: public static UserModel UpdateUser(this InspireClient client, long userId, UserModel inputModel)
@@ -322,7 +511,7 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: DeleteUser
     path: Security/UserExtensions.cs
-    startLine: 101
+    startLine: 140
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Security
@@ -757,6 +946,11 @@ references:
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
+- uid: Vasont.Inspire.SDK.Security.UserExtensions.RetrieveUsers*
+  commentId: Overload:Vasont.Inspire.SDK.Security.UserExtensions.RetrieveUsers
+  name: RetrieveUsers
+  nameWithType: UserExtensions.RetrieveUsers
+  fullName: Vasont.Inspire.SDK.Security.UserExtensions.RetrieveUsers
 - uid: Vasont.Inspire.Models.Security.UserModel
   commentId: T:Vasont.Inspire.Models.Security.UserModel
   parent: Vasont.Inspire.Models.Security
@@ -782,6 +976,11 @@ references:
   name: Vasont.Inspire.Models.Security
   nameWithType: Vasont.Inspire.Models.Security
   fullName: Vasont.Inspire.Models.Security
+- uid: Vasont.Inspire.SDK.Security.UserExtensions.FindUser*
+  commentId: Overload:Vasont.Inspire.SDK.Security.UserExtensions.FindUser
+  name: FindUser
+  nameWithType: UserExtensions.FindUser
+  fullName: Vasont.Inspire.SDK.Security.UserExtensions.FindUser
 - uid: Vasont.Inspire.SDK.Security.UserExtensions.GetUsers*
   commentId: Overload:Vasont.Inspire.SDK.Security.UserExtensions.GetUsers
   name: GetUsers
@@ -838,6 +1037,11 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: Vasont.Inspire.SDK.Security.UserExtensions.FindUsers*
+  commentId: Overload:Vasont.Inspire.SDK.Security.UserExtensions.FindUsers
+  name: FindUsers
+  nameWithType: UserExtensions.FindUsers
+  fullName: Vasont.Inspire.SDK.Security.UserExtensions.FindUsers
 - uid: Vasont.Inspire.SDK.Security.UserExtensions.CreateUser*
   commentId: Overload:Vasont.Inspire.SDK.Security.UserExtensions.CreateUser
   name: CreateUser

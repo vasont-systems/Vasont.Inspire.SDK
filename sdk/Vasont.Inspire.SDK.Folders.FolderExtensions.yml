@@ -8,6 +8,10 @@ items:
   - Vasont.Inspire.SDK.Folders.FolderExtensions.CreateFolder(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Components.FolderBrowseModel)
   - Vasont.Inspire.SDK.Folders.FolderExtensions.DeleteFolder(Vasont.Inspire.SDK.InspireClient,System.Int64)
   - Vasont.Inspire.SDK.Folders.FolderExtensions.ExportFolder(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Int64,System.Boolean)
+  - Vasont.Inspire.SDK.Folders.FolderExtensions.FindAncestorSiblingFoldersByFolderId(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  - Vasont.Inspire.SDK.Folders.FolderExtensions.FindComponentsByFolderId(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Components.FolderComponentsQueryModel)
+  - Vasont.Inspire.SDK.Folders.FolderExtensions.FindFolderPermissions(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  - Vasont.Inspire.SDK.Folders.FolderExtensions.FindFoldersByFolderId(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Boolean,Vasont.Inspire.Models.Security.PermissionFlags)
   - Vasont.Inspire.SDK.Folders.FolderExtensions.GetAncestorSiblingFoldersByFolderId(Vasont.Inspire.SDK.InspireClient,System.Int64)
   - Vasont.Inspire.SDK.Folders.FolderExtensions.GetComponentsByFolderId(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Components.FolderComponentsQueryModel)
   - Vasont.Inspire.SDK.Folders.FolderExtensions.GetFolderPermissions(Vasont.Inspire.SDK.InspireClient,System.Int64)
@@ -82,7 +86,72 @@ items:
   summary: "\nThis method is used to return a list of folders that are children of the specified parent folder. \nIf parent folder is not specified, a list of root folders will be returned.\n"
   example: []
   syntax:
-    content: public static List<FolderBrowseModel> GetFoldersByFolderId(this InspireClient client, long folderId, bool includeAllDescendantFolders, PermissionFlags permissionFlag)
+    content: >-
+      [Obsolete("This method is obsolete. Please use FindFoldersByFolderId() going forward. This method will be removed in a future release.")]
+
+      public static List<FolderBrowseModel> GetFoldersByFolderId(this InspireClient client, long folderId, bool includeAllDescendantFolders, PermissionFlags permissionFlag)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
+    - id: folderId
+      type: System.Int64
+      description: Contains the folder identity to retrieve child folders from, pass a value of zero to retrieve all folders.
+    - id: includeAllDescendantFolders
+      type: System.Boolean
+      description: Contains a value to indicate whether or not to include all descendant folders.
+    - id: permissionFlag
+      type: Vasont.Inspire.Models.Security.PermissionFlags
+      description: Contains an optional <xref href="Vasont.Inspire.Models.Security.PermissionFlags" data-throw-if-not-resolved="false"></xref> that will be used to filter the results of the query.
+    return:
+      type: System.Collections.Generic.List{Vasont.Inspire.Models.Components.FolderBrowseModel}
+      description: Returns a list of <xref href="Vasont.Inspire.Models.Components.FolderBrowseModel" data-throw-if-not-resolved="false"></xref> objects if found.
+    content.vb: >-
+      <Obsolete("This method is obsolete. Please use FindFoldersByFolderId() going forward. This method will be removed in a future release.")>
+
+      <ExtensionAttribute>
+
+      Public Shared Function GetFoldersByFolderId(client As InspireClient, folderId As Long, includeAllDescendantFolders As Boolean, permissionFlag As PermissionFlags) As List(Of FolderBrowseModel)
+  overload: Vasont.Inspire.SDK.Folders.FolderExtensions.GetFoldersByFolderId*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use FindFoldersByFolderId() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Folders.FolderExtensions.FindFoldersByFolderId(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Boolean,Vasont.Inspire.Models.Security.PermissionFlags)
+  commentId: M:Vasont.Inspire.SDK.Folders.FolderExtensions.FindFoldersByFolderId(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Boolean,Vasont.Inspire.Models.Security.PermissionFlags)
+  id: FindFoldersByFolderId(Vasont.Inspire.SDK.InspireClient,System.Int64,System.Boolean,Vasont.Inspire.Models.Security.PermissionFlags)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Folders.FolderExtensions
+  langs:
+  - csharp
+  - vb
+  name: FindFoldersByFolderId(InspireClient, Int64, Boolean, PermissionFlags)
+  nameWithType: FolderExtensions.FindFoldersByFolderId(InspireClient, Int64, Boolean, PermissionFlags)
+  fullName: Vasont.Inspire.SDK.Folders.FolderExtensions.FindFoldersByFolderId(Vasont.Inspire.SDK.InspireClient, System.Int64, System.Boolean, Vasont.Inspire.Models.Security.PermissionFlags)
+  type: Method
+  source:
+    remote:
+      path: src/Folders/FolderExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: FindFoldersByFolderId
+    path: Folders/FolderExtensions.cs
+    startLine: 44
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Folders
+  summary: "\nThis method is used to return a list of folders that are children of the specified parent folder. \nIf parent folder is not specified, a list of root folders will be returned.\n"
+  example: []
+  syntax:
+    content: public static List<FolderBrowseModel> FindFoldersByFolderId(this InspireClient client, long folderId, bool includeAllDescendantFolders, PermissionFlags permissionFlag)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
@@ -102,8 +171,8 @@ items:
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Function GetFoldersByFolderId(client As InspireClient, folderId As Long, includeAllDescendantFolders As Boolean, permissionFlag As PermissionFlags) As List(Of FolderBrowseModel)
-  overload: Vasont.Inspire.SDK.Folders.FolderExtensions.GetFoldersByFolderId*
+      Public Shared Function FindFoldersByFolderId(client As InspireClient, folderId As Long, includeAllDescendantFolders As Boolean, permissionFlag As PermissionFlags) As List(Of FolderBrowseModel)
+  overload: Vasont.Inspire.SDK.Folders.FolderExtensions.FindFoldersByFolderId*
   modifiers.csharp:
   - public
   - static
@@ -129,14 +198,76 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetComponentsByFolderId
     path: Folders/FolderExtensions.cs
-    startLine: 47
+    startLine: 62
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Folders
   summary: "\nThis method is used to return components that are stored within a specific folder matching a specific search criteria.\n"
   example: []
   syntax:
-    content: public static FolderComponentsResultModel GetComponentsByFolderId(this InspireClient client, long folderId, FolderComponentsQueryModel inputModel)
+    content: >-
+      [Obsolete("This method is obsolete. Please use FindComponentsByFolderId() going forward. This method will be removed in a future release.")]
+
+      public static FolderComponentsResultModel GetComponentsByFolderId(this InspireClient client, long folderId, FolderComponentsQueryModel inputModel)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
+    - id: folderId
+      type: System.Int64
+      description: Contains the folder identity to retrieve components from, pass a value of zero to retrieve all components.
+    - id: inputModel
+      type: Vasont.Inspire.Models.Components.FolderComponentsQueryModel
+      description: Contains the <xref href="Vasont.Inspire.Models.Components.FolderComponentsQueryModel" data-throw-if-not-resolved="false"></xref> input.
+    return:
+      type: Vasont.Inspire.Models.Components.FolderComponentsResultModel
+      description: Returns a <xref href="Vasont.Inspire.Models.Components.FolderComponentsResultModel" data-throw-if-not-resolved="false"></xref> object if found.
+    content.vb: >-
+      <Obsolete("This method is obsolete. Please use FindComponentsByFolderId() going forward. This method will be removed in a future release.")>
+
+      <ExtensionAttribute>
+
+      Public Shared Function GetComponentsByFolderId(client As InspireClient, folderId As Long, inputModel As FolderComponentsQueryModel) As FolderComponentsResultModel
+  overload: Vasont.Inspire.SDK.Folders.FolderExtensions.GetComponentsByFolderId*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use FindComponentsByFolderId() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Folders.FolderExtensions.FindComponentsByFolderId(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Components.FolderComponentsQueryModel)
+  commentId: M:Vasont.Inspire.SDK.Folders.FolderExtensions.FindComponentsByFolderId(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Components.FolderComponentsQueryModel)
+  id: FindComponentsByFolderId(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Components.FolderComponentsQueryModel)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Folders.FolderExtensions
+  langs:
+  - csharp
+  - vb
+  name: FindComponentsByFolderId(InspireClient, Int64, FolderComponentsQueryModel)
+  nameWithType: FolderExtensions.FindComponentsByFolderId(InspireClient, Int64, FolderComponentsQueryModel)
+  fullName: Vasont.Inspire.SDK.Folders.FolderExtensions.FindComponentsByFolderId(Vasont.Inspire.SDK.InspireClient, System.Int64, Vasont.Inspire.Models.Components.FolderComponentsQueryModel)
+  type: Method
+  source:
+    remote:
+      path: src/Folders/FolderExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: FindComponentsByFolderId
+    path: Folders/FolderExtensions.cs
+    startLine: 75
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Folders
+  summary: "\nThis method is used to return components that are stored within a specific folder matching a specific search criteria.\n"
+  example: []
+  syntax:
+    content: public static FolderComponentsResultModel FindComponentsByFolderId(this InspireClient client, long folderId, FolderComponentsQueryModel inputModel)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
@@ -153,8 +284,8 @@ items:
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Function GetComponentsByFolderId(client As InspireClient, folderId As Long, inputModel As FolderComponentsQueryModel) As FolderComponentsResultModel
-  overload: Vasont.Inspire.SDK.Folders.FolderExtensions.GetComponentsByFolderId*
+      Public Shared Function FindComponentsByFolderId(client As InspireClient, folderId As Long, inputModel As FolderComponentsQueryModel) As FolderComponentsResultModel
+  overload: Vasont.Inspire.SDK.Folders.FolderExtensions.FindComponentsByFolderId*
   modifiers.csharp:
   - public
   - static
@@ -180,14 +311,73 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetAncestorSiblingFoldersByFolderId
     path: Folders/FolderExtensions.cs
-    startLine: 65
+    startLine: 93
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Folders
   summary: "\nThis method is used to return a list of folders including the specified folder, \nits ancestor folders, and corresponding sibling folders.\n"
   example: []
   syntax:
-    content: public static List<FolderBrowseModel> GetAncestorSiblingFoldersByFolderId(this InspireClient client, long folderId)
+    content: >-
+      [Obsolete("This method is obsolete. Please use FindAncestorSiblingFoldersByFolderId() going forward. This method will be removed in a future release.")]
+
+      public static List<FolderBrowseModel> GetAncestorSiblingFoldersByFolderId(this InspireClient client, long folderId)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
+    - id: folderId
+      type: System.Int64
+      description: Contains the folder identity.
+    return:
+      type: System.Collections.Generic.List{Vasont.Inspire.Models.Components.FolderBrowseModel}
+      description: Returns a list of <xref href="Vasont.Inspire.Models.Components.FolderBrowseModel" data-throw-if-not-resolved="false"></xref> objects if found.
+    content.vb: >-
+      <Obsolete("This method is obsolete. Please use FindAncestorSiblingFoldersByFolderId() going forward. This method will be removed in a future release.")>
+
+      <ExtensionAttribute>
+
+      Public Shared Function GetAncestorSiblingFoldersByFolderId(client As InspireClient, folderId As Long) As List(Of FolderBrowseModel)
+  overload: Vasont.Inspire.SDK.Folders.FolderExtensions.GetAncestorSiblingFoldersByFolderId*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use FindAncestorSiblingFoldersByFolderId() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Folders.FolderExtensions.FindAncestorSiblingFoldersByFolderId(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  commentId: M:Vasont.Inspire.SDK.Folders.FolderExtensions.FindAncestorSiblingFoldersByFolderId(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  id: FindAncestorSiblingFoldersByFolderId(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Folders.FolderExtensions
+  langs:
+  - csharp
+  - vb
+  name: FindAncestorSiblingFoldersByFolderId(InspireClient, Int64)
+  nameWithType: FolderExtensions.FindAncestorSiblingFoldersByFolderId(InspireClient, Int64)
+  fullName: Vasont.Inspire.SDK.Folders.FolderExtensions.FindAncestorSiblingFoldersByFolderId(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  type: Method
+  source:
+    remote:
+      path: src/Folders/FolderExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: FindAncestorSiblingFoldersByFolderId
+    path: Folders/FolderExtensions.cs
+    startLine: 106
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Folders
+  summary: "\nThis method is used to return a list of folders including the specified folder, \nits ancestor folders, and corresponding sibling folders.\n"
+  example: []
+  syntax:
+    content: public static List<FolderBrowseModel> FindAncestorSiblingFoldersByFolderId(this InspireClient client, long folderId)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
@@ -201,8 +391,8 @@ items:
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Function GetAncestorSiblingFoldersByFolderId(client As InspireClient, folderId As Long) As List(Of FolderBrowseModel)
-  overload: Vasont.Inspire.SDK.Folders.FolderExtensions.GetAncestorSiblingFoldersByFolderId*
+      Public Shared Function FindAncestorSiblingFoldersByFolderId(client As InspireClient, folderId As Long) As List(Of FolderBrowseModel)
+  overload: Vasont.Inspire.SDK.Folders.FolderExtensions.FindAncestorSiblingFoldersByFolderId*
   modifiers.csharp:
   - public
   - static
@@ -228,14 +418,73 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetFolderPermissions
     path: Folders/FolderExtensions.cs
-    startLine: 82
+    startLine: 123
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Folders
   summary: "\nThis method is used to return folder permission details.\n"
   example: []
   syntax:
-    content: public static PermissionUpdateModel GetFolderPermissions(this InspireClient client, long folderId)
+    content: >-
+      [Obsolete("This method is obsolete. Please use FindFolderPermissions() going forward. This method will be removed in a future release.")]
+
+      public static PermissionUpdateModel GetFolderPermissions(this InspireClient client, long folderId)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: Contains the <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> that is used for communication.
+    - id: folderId
+      type: System.Int64
+      description: Contains the folder identity.
+    return:
+      type: Vasont.Inspire.Models.Components.PermissionUpdateModel
+      description: Returns a <xref href="Vasont.Inspire.Models.Components.PermissionUpdateModel" data-throw-if-not-resolved="false"></xref> object if found.
+    content.vb: >-
+      <Obsolete("This method is obsolete. Please use FindFolderPermissions() going forward. This method will be removed in a future release.")>
+
+      <ExtensionAttribute>
+
+      Public Shared Function GetFolderPermissions(client As InspireClient, folderId As Long) As PermissionUpdateModel
+  overload: Vasont.Inspire.SDK.Folders.FolderExtensions.GetFolderPermissions*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is obsolete. Please use FindFolderPermissions() going forward. This method will be removed in a future release.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vasont.Inspire.SDK.Folders.FolderExtensions.FindFolderPermissions(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  commentId: M:Vasont.Inspire.SDK.Folders.FolderExtensions.FindFolderPermissions(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  id: FindFolderPermissions(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Folders.FolderExtensions
+  langs:
+  - csharp
+  - vb
+  name: FindFolderPermissions(InspireClient, Int64)
+  nameWithType: FolderExtensions.FindFolderPermissions(InspireClient, Int64)
+  fullName: Vasont.Inspire.SDK.Folders.FolderExtensions.FindFolderPermissions(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  type: Method
+  source:
+    remote:
+      path: src/Folders/FolderExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: FindFolderPermissions
+    path: Folders/FolderExtensions.cs
+    startLine: 135
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Folders
+  summary: "\nThis method is used to return folder permission details.\n"
+  example: []
+  syntax:
+    content: public static PermissionUpdateModel FindFolderPermissions(this InspireClient client, long folderId)
     parameters:
     - id: client
       type: Vasont.Inspire.SDK.InspireClient
@@ -249,8 +498,8 @@ items:
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Function GetFolderPermissions(client As InspireClient, folderId As Long) As PermissionUpdateModel
-  overload: Vasont.Inspire.SDK.Folders.FolderExtensions.GetFolderPermissions*
+      Public Shared Function FindFolderPermissions(client As InspireClient, folderId As Long) As PermissionUpdateModel
+  overload: Vasont.Inspire.SDK.Folders.FolderExtensions.FindFolderPermissions*
   modifiers.csharp:
   - public
   - static
@@ -276,7 +525,7 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: MoveFolder
     path: Folders/FolderExtensions.cs
-    startLine: 100
+    startLine: 153
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Folders
@@ -327,7 +576,7 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: CreateFolder
     path: Folders/FolderExtensions.cs
-    startLine: 118
+    startLine: 171
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Folders
@@ -378,7 +627,7 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: ExportFolder
     path: Folders/FolderExtensions.cs
-    startLine: 137
+    startLine: 190
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Folders
@@ -432,7 +681,7 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: DeleteFolder
     path: Folders/FolderExtensions.cs
-    startLine: 154
+    startLine: 207
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Folders
@@ -480,7 +729,7 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: UpdateFolderPermissions
     path: Folders/FolderExtensions.cs
-    startLine: 173
+    startLine: 226
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Folders
@@ -531,7 +780,7 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: UpdateFolder
     path: Folders/FolderExtensions.cs
-    startLine: 191
+    startLine: 244
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Folders
@@ -582,7 +831,7 @@ items:
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RenameFolder
     path: Folders/FolderExtensions.cs
-    startLine: 209
+    startLine: 262
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Folders
@@ -1057,6 +1306,11 @@ references:
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
+- uid: Vasont.Inspire.SDK.Folders.FolderExtensions.FindFoldersByFolderId*
+  commentId: Overload:Vasont.Inspire.SDK.Folders.FolderExtensions.FindFoldersByFolderId
+  name: FindFoldersByFolderId
+  nameWithType: FolderExtensions.FindFoldersByFolderId
+  fullName: Vasont.Inspire.SDK.Folders.FolderExtensions.FindFoldersByFolderId
 - uid: Vasont.Inspire.Models.Components.FolderComponentsQueryModel
   commentId: T:Vasont.Inspire.Models.Components.FolderComponentsQueryModel
   parent: Vasont.Inspire.Models.Components
@@ -1076,11 +1330,21 @@ references:
   name: GetComponentsByFolderId
   nameWithType: FolderExtensions.GetComponentsByFolderId
   fullName: Vasont.Inspire.SDK.Folders.FolderExtensions.GetComponentsByFolderId
+- uid: Vasont.Inspire.SDK.Folders.FolderExtensions.FindComponentsByFolderId*
+  commentId: Overload:Vasont.Inspire.SDK.Folders.FolderExtensions.FindComponentsByFolderId
+  name: FindComponentsByFolderId
+  nameWithType: FolderExtensions.FindComponentsByFolderId
+  fullName: Vasont.Inspire.SDK.Folders.FolderExtensions.FindComponentsByFolderId
 - uid: Vasont.Inspire.SDK.Folders.FolderExtensions.GetAncestorSiblingFoldersByFolderId*
   commentId: Overload:Vasont.Inspire.SDK.Folders.FolderExtensions.GetAncestorSiblingFoldersByFolderId
   name: GetAncestorSiblingFoldersByFolderId
   nameWithType: FolderExtensions.GetAncestorSiblingFoldersByFolderId
   fullName: Vasont.Inspire.SDK.Folders.FolderExtensions.GetAncestorSiblingFoldersByFolderId
+- uid: Vasont.Inspire.SDK.Folders.FolderExtensions.FindAncestorSiblingFoldersByFolderId*
+  commentId: Overload:Vasont.Inspire.SDK.Folders.FolderExtensions.FindAncestorSiblingFoldersByFolderId
+  name: FindAncestorSiblingFoldersByFolderId
+  nameWithType: FolderExtensions.FindAncestorSiblingFoldersByFolderId
+  fullName: Vasont.Inspire.SDK.Folders.FolderExtensions.FindAncestorSiblingFoldersByFolderId
 - uid: Vasont.Inspire.Models.Components.PermissionUpdateModel
   commentId: T:Vasont.Inspire.Models.Components.PermissionUpdateModel
   parent: Vasont.Inspire.Models.Components
@@ -1093,6 +1357,11 @@ references:
   name: GetFolderPermissions
   nameWithType: FolderExtensions.GetFolderPermissions
   fullName: Vasont.Inspire.SDK.Folders.FolderExtensions.GetFolderPermissions
+- uid: Vasont.Inspire.SDK.Folders.FolderExtensions.FindFolderPermissions*
+  commentId: Overload:Vasont.Inspire.SDK.Folders.FolderExtensions.FindFolderPermissions
+  name: FindFolderPermissions
+  nameWithType: FolderExtensions.FindFolderPermissions
+  fullName: Vasont.Inspire.SDK.Folders.FolderExtensions.FindFolderPermissions
 - uid: Vasont.Inspire.SDK.Folders.FolderExtensions.MoveFolder*
   commentId: Overload:Vasont.Inspire.SDK.Folders.FolderExtensions.MoveFolder
   name: MoveFolder
