@@ -566,7 +566,7 @@ namespace Vasont.Inspire.SDK.Components
             }
 
             var request = client.CreateRequest($"/Components", HttpMethod.Delete);
-            client.RequestContent<List<long>, List<UnlockResultModel>>(request, componentIds);
+            client.RequestContent<List<long>, bool>(request, componentIds);
             return !client.HasError;
         }
 

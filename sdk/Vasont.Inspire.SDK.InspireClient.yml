@@ -39,7 +39,7 @@ items:
   source:
     remote:
       path: src/InspireClient.cs
-      branch: develop
+      branch: feature/TranslationIntegrationManagement
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: InspireClient
     path: InspireClient.cs
@@ -343,6 +343,12 @@ items:
   - Vasont.Inspire.SDK.InspireClient.Vasont.Inspire.SDK.Translations.TranslationsExtensions.GetTranslationExportJobs(System.Collections.Generic.List{System.Int64})
   - Vasont.Inspire.SDK.InspireClient.Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationExportJobs(System.Collections.Generic.List{System.Int64})
   - Vasont.Inspire.SDK.InspireClient.Vasont.Inspire.SDK.Translations.TranslationsExtensions.SetTranslationJobStatus(System.Collections.Generic.List{Vasont.Inspire.Models.Translations.TranslationExportJobModel})
+  - Vasont.Inspire.SDK.InspireClient.Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegrations(System.Boolean)
+  - Vasont.Inspire.SDK.InspireClient.Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegration(System.Int64)
+  - Vasont.Inspire.SDK.InspireClient.Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegrations(Vasont.Inspire.Models.Translations.TranslationIntegrationBrowseQueryModel)
+  - Vasont.Inspire.SDK.InspireClient.Vasont.Inspire.SDK.Translations.TranslationsExtensions.UpdateTranslationIntegration(Vasont.Inspire.Models.Translations.TranslationIntegrationModel)
+  - Vasont.Inspire.SDK.InspireClient.Vasont.Inspire.SDK.Translations.TranslationsExtensions.CreateTranslationIntegration(Vasont.Inspire.Models.Translations.TranslationIntegrationModel)
+  - Vasont.Inspire.SDK.InspireClient.Vasont.Inspire.SDK.Translations.TranslationsExtensions.DeleteTranslationIntegration(System.Int64)
   modifiers.csharp:
   - public
   - class
@@ -363,7 +369,7 @@ items:
   source:
     remote:
       path: src/InspireClient.cs
-      branch: develop
+      branch: feature/TranslationIntegrationManagement
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: .ctor
     path: InspireClient.cs
@@ -400,7 +406,7 @@ items:
   source:
     remote:
       path: src/InspireClient.cs
-      branch: develop
+      branch: feature/TranslationIntegrationManagement
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: Config
     path: InspireClient.cs
@@ -437,7 +443,7 @@ items:
   source:
     remote:
       path: src/InspireClient.cs
-      branch: develop
+      branch: feature/TranslationIntegrationManagement
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: HasAuthenticated
     path: InspireClient.cs
@@ -474,7 +480,7 @@ items:
   source:
     remote:
       path: src/InspireClient.cs
-      branch: develop
+      branch: feature/TranslationIntegrationManagement
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: HasError
     path: InspireClient.cs
@@ -511,7 +517,7 @@ items:
   source:
     remote:
       path: src/InspireClient.cs
-      branch: develop
+      branch: feature/TranslationIntegrationManagement
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: LastErrorResponse
     path: InspireClient.cs
@@ -548,7 +554,7 @@ items:
   source:
     remote:
       path: src/InspireClient.cs
-      branch: develop
+      branch: feature/TranslationIntegrationManagement
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: LastException
     path: InspireClient.cs
@@ -585,7 +591,7 @@ items:
   source:
     remote:
       path: src/InspireClient.cs
-      branch: develop
+      branch: feature/TranslationIntegrationManagement
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: TokenResponse
     path: InspireClient.cs
@@ -622,7 +628,7 @@ items:
   source:
     remote:
       path: src/InspireClient.cs
-      branch: develop
+      branch: feature/TranslationIntegrationManagement
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: AccessToken
     path: InspireClient.cs
@@ -659,7 +665,7 @@ items:
   source:
     remote:
       path: src/InspireClient.cs
-      branch: develop
+      branch: feature/TranslationIntegrationManagement
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: TokenEndpoint
     path: InspireClient.cs
@@ -696,7 +702,7 @@ items:
   source:
     remote:
       path: src/InspireClient.cs
-      branch: develop
+      branch: feature/TranslationIntegrationManagement
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: Authenticate
     path: InspireClient.cs
@@ -736,7 +742,7 @@ items:
   source:
     remote:
       path: src/InspireClient.cs
-      branch: develop
+      branch: feature/TranslationIntegrationManagement
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: AuthenticateAsync
     path: InspireClient.cs
@@ -783,7 +789,7 @@ items:
   source:
     remote:
       path: src/InspireClient.cs
-      branch: develop
+      branch: feature/TranslationIntegrationManagement
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: CreateRequest
     path: InspireClient.cs
@@ -835,7 +841,7 @@ items:
   source:
     remote:
       path: src/InspireClient.cs
-      branch: develop
+      branch: feature/TranslationIntegrationManagement
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: CreateRequest
     path: InspireClient.cs
@@ -887,7 +893,7 @@ items:
   source:
     remote:
       path: src/InspireClient.cs
-      branch: develop
+      branch: feature/TranslationIntegrationManagement
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RequestContent
     path: InspireClient.cs
@@ -930,7 +936,7 @@ items:
   source:
     remote:
       path: src/InspireClient.cs
-      branch: develop
+      branch: feature/TranslationIntegrationManagement
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RequestContent
     path: InspireClient.cs
@@ -970,7 +976,7 @@ items:
   source:
     remote:
       path: src/InspireClient.cs
-      branch: develop
+      branch: feature/TranslationIntegrationManagement
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RequestContent
     path: InspireClient.cs
@@ -1019,7 +1025,7 @@ items:
   source:
     remote:
       path: src/InspireClient.cs
-      branch: develop
+      branch: feature/TranslationIntegrationManagement
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RequestContent
     path: InspireClient.cs
@@ -1059,7 +1065,7 @@ items:
   source:
     remote:
       path: src/InspireClient.cs
-      branch: develop
+      branch: feature/TranslationIntegrationManagement
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: Dispose
     path: InspireClient.cs
@@ -1094,7 +1100,7 @@ items:
   source:
     remote:
       path: src/InspireClient.cs
-      branch: develop
+      branch: feature/TranslationIntegrationManagement
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: Dispose
     path: InspireClient.cs
@@ -1132,7 +1138,7 @@ items:
   source:
     remote:
       path: src/InspireClient.cs
-      branch: develop
+      branch: feature/TranslationIntegrationManagement
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: ResetErrors
     path: InspireClient.cs
@@ -1164,7 +1170,7 @@ items:
   source:
     remote:
       path: src/InspireClient.cs
-      branch: develop
+      branch: feature/TranslationIntegrationManagement
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RequestDiscoveryAsync
     path: InspireClient.cs
@@ -1206,7 +1212,7 @@ items:
   source:
     remote:
       path: src/InspireClient.cs
-      branch: develop
+      branch: feature/TranslationIntegrationManagement
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RequestClientCredentialsAsync
     path: InspireClient.cs
@@ -1248,7 +1254,7 @@ items:
   source:
     remote:
       path: src/InspireClient.cs
-      branch: develop
+      branch: feature/TranslationIntegrationManagement
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RequestDelegationAsync
     path: InspireClient.cs
@@ -1293,7 +1299,7 @@ items:
   source:
     remote:
       path: src/InspireClient.cs
-      branch: develop
+      branch: feature/TranslationIntegrationManagement
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RequestResourceOwnerPasswordAsync
     path: InspireClient.cs
@@ -13525,6 +13531,240 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vasont.Inspire.SDK.InspireClient.Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegrations(System.Boolean)
+  commentId: M:Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegrations(Vasont.Inspire.SDK.InspireClient,System.Boolean)
+  parent: Vasont.Inspire.SDK.Translations.TranslationsExtensions
+  definition: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegrations(Vasont.Inspire.SDK.InspireClient,System.Boolean)
+  name: FindTranslationIntegrations(Boolean)
+  nameWithType: TranslationsExtensions.FindTranslationIntegrations(Boolean)
+  fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegrations(System.Boolean)
+  spec.csharp:
+  - uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegrations(System.Boolean)
+    name: FindTranslationIntegrations
+    nameWithType: TranslationsExtensions.FindTranslationIntegrations
+    fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegrations
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegrations(System.Boolean)
+    name: FindTranslationIntegrations
+    nameWithType: TranslationsExtensions.FindTranslationIntegrations
+    fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegrations
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vasont.Inspire.SDK.InspireClient.Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegration(System.Int64)
+  commentId: M:Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegration(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  parent: Vasont.Inspire.SDK.Translations.TranslationsExtensions
+  definition: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegration(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  name: FindTranslationIntegration(Int64)
+  nameWithType: TranslationsExtensions.FindTranslationIntegration(Int64)
+  fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegration(System.Int64)
+  spec.csharp:
+  - uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegration(System.Int64)
+    name: FindTranslationIntegration
+    nameWithType: TranslationsExtensions.FindTranslationIntegration
+    fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegration
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int64
+    name: Int64
+    nameWithType: Int64
+    fullName: System.Int64
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegration(System.Int64)
+    name: FindTranslationIntegration
+    nameWithType: TranslationsExtensions.FindTranslationIntegration
+    fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegration
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int64
+    name: Int64
+    nameWithType: Int64
+    fullName: System.Int64
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vasont.Inspire.SDK.InspireClient.Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegrations(Vasont.Inspire.Models.Translations.TranslationIntegrationBrowseQueryModel)
+  commentId: M:Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegrations(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Translations.TranslationIntegrationBrowseQueryModel)
+  parent: Vasont.Inspire.SDK.Translations.TranslationsExtensions
+  definition: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegrations(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Translations.TranslationIntegrationBrowseQueryModel)
+  name: FindTranslationIntegrations(TranslationIntegrationBrowseQueryModel)
+  nameWithType: TranslationsExtensions.FindTranslationIntegrations(TranslationIntegrationBrowseQueryModel)
+  fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegrations(Vasont.Inspire.Models.Translations.TranslationIntegrationBrowseQueryModel)
+  spec.csharp:
+  - uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegrations(Vasont.Inspire.Models.Translations.TranslationIntegrationBrowseQueryModel)
+    name: FindTranslationIntegrations
+    nameWithType: TranslationsExtensions.FindTranslationIntegrations
+    fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegrations
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vasont.Inspire.Models.Translations.TranslationIntegrationBrowseQueryModel
+    name: TranslationIntegrationBrowseQueryModel
+    nameWithType: TranslationIntegrationBrowseQueryModel
+    fullName: Vasont.Inspire.Models.Translations.TranslationIntegrationBrowseQueryModel
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegrations(Vasont.Inspire.Models.Translations.TranslationIntegrationBrowseQueryModel)
+    name: FindTranslationIntegrations
+    nameWithType: TranslationsExtensions.FindTranslationIntegrations
+    fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegrations
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vasont.Inspire.Models.Translations.TranslationIntegrationBrowseQueryModel
+    name: TranslationIntegrationBrowseQueryModel
+    nameWithType: TranslationIntegrationBrowseQueryModel
+    fullName: Vasont.Inspire.Models.Translations.TranslationIntegrationBrowseQueryModel
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vasont.Inspire.SDK.InspireClient.Vasont.Inspire.SDK.Translations.TranslationsExtensions.UpdateTranslationIntegration(Vasont.Inspire.Models.Translations.TranslationIntegrationModel)
+  commentId: M:Vasont.Inspire.SDK.Translations.TranslationsExtensions.UpdateTranslationIntegration(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Translations.TranslationIntegrationModel)
+  parent: Vasont.Inspire.SDK.Translations.TranslationsExtensions
+  definition: Vasont.Inspire.SDK.Translations.TranslationsExtensions.UpdateTranslationIntegration(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Translations.TranslationIntegrationModel)
+  name: UpdateTranslationIntegration(TranslationIntegrationModel)
+  nameWithType: TranslationsExtensions.UpdateTranslationIntegration(TranslationIntegrationModel)
+  fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.UpdateTranslationIntegration(Vasont.Inspire.Models.Translations.TranslationIntegrationModel)
+  spec.csharp:
+  - uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.UpdateTranslationIntegration(Vasont.Inspire.Models.Translations.TranslationIntegrationModel)
+    name: UpdateTranslationIntegration
+    nameWithType: TranslationsExtensions.UpdateTranslationIntegration
+    fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.UpdateTranslationIntegration
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vasont.Inspire.Models.Translations.TranslationIntegrationModel
+    name: TranslationIntegrationModel
+    nameWithType: TranslationIntegrationModel
+    fullName: Vasont.Inspire.Models.Translations.TranslationIntegrationModel
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.UpdateTranslationIntegration(Vasont.Inspire.Models.Translations.TranslationIntegrationModel)
+    name: UpdateTranslationIntegration
+    nameWithType: TranslationsExtensions.UpdateTranslationIntegration
+    fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.UpdateTranslationIntegration
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vasont.Inspire.Models.Translations.TranslationIntegrationModel
+    name: TranslationIntegrationModel
+    nameWithType: TranslationIntegrationModel
+    fullName: Vasont.Inspire.Models.Translations.TranslationIntegrationModel
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vasont.Inspire.SDK.InspireClient.Vasont.Inspire.SDK.Translations.TranslationsExtensions.CreateTranslationIntegration(Vasont.Inspire.Models.Translations.TranslationIntegrationModel)
+  commentId: M:Vasont.Inspire.SDK.Translations.TranslationsExtensions.CreateTranslationIntegration(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Translations.TranslationIntegrationModel)
+  parent: Vasont.Inspire.SDK.Translations.TranslationsExtensions
+  definition: Vasont.Inspire.SDK.Translations.TranslationsExtensions.CreateTranslationIntegration(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Translations.TranslationIntegrationModel)
+  name: CreateTranslationIntegration(TranslationIntegrationModel)
+  nameWithType: TranslationsExtensions.CreateTranslationIntegration(TranslationIntegrationModel)
+  fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.CreateTranslationIntegration(Vasont.Inspire.Models.Translations.TranslationIntegrationModel)
+  spec.csharp:
+  - uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.CreateTranslationIntegration(Vasont.Inspire.Models.Translations.TranslationIntegrationModel)
+    name: CreateTranslationIntegration
+    nameWithType: TranslationsExtensions.CreateTranslationIntegration
+    fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.CreateTranslationIntegration
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vasont.Inspire.Models.Translations.TranslationIntegrationModel
+    name: TranslationIntegrationModel
+    nameWithType: TranslationIntegrationModel
+    fullName: Vasont.Inspire.Models.Translations.TranslationIntegrationModel
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.CreateTranslationIntegration(Vasont.Inspire.Models.Translations.TranslationIntegrationModel)
+    name: CreateTranslationIntegration
+    nameWithType: TranslationsExtensions.CreateTranslationIntegration
+    fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.CreateTranslationIntegration
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vasont.Inspire.Models.Translations.TranslationIntegrationModel
+    name: TranslationIntegrationModel
+    nameWithType: TranslationIntegrationModel
+    fullName: Vasont.Inspire.Models.Translations.TranslationIntegrationModel
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vasont.Inspire.SDK.InspireClient.Vasont.Inspire.SDK.Translations.TranslationsExtensions.DeleteTranslationIntegration(System.Int64)
+  commentId: M:Vasont.Inspire.SDK.Translations.TranslationsExtensions.DeleteTranslationIntegration(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  parent: Vasont.Inspire.SDK.Translations.TranslationsExtensions
+  definition: Vasont.Inspire.SDK.Translations.TranslationsExtensions.DeleteTranslationIntegration(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  name: DeleteTranslationIntegration(Int64)
+  nameWithType: TranslationsExtensions.DeleteTranslationIntegration(Int64)
+  fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.DeleteTranslationIntegration(System.Int64)
+  spec.csharp:
+  - uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.DeleteTranslationIntegration(System.Int64)
+    name: DeleteTranslationIntegration
+    nameWithType: TranslationsExtensions.DeleteTranslationIntegration
+    fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.DeleteTranslationIntegration
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int64
+    name: Int64
+    nameWithType: Int64
+    fullName: System.Int64
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.DeleteTranslationIntegration(System.Int64)
+    name: DeleteTranslationIntegration
+    nameWithType: TranslationsExtensions.DeleteTranslationIntegration
+    fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.DeleteTranslationIntegration
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int64
+    name: Int64
+    nameWithType: Int64
+    fullName: System.Int64
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -28724,6 +28964,318 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegrations(Vasont.Inspire.SDK.InspireClient,System.Boolean)
+  commentId: M:Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegrations(Vasont.Inspire.SDK.InspireClient,System.Boolean)
+  isExternal: true
+  name: FindTranslationIntegrations(InspireClient, Boolean)
+  nameWithType: TranslationsExtensions.FindTranslationIntegrations(InspireClient, Boolean)
+  fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegrations(Vasont.Inspire.SDK.InspireClient, System.Boolean)
+  spec.csharp:
+  - uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegrations(Vasont.Inspire.SDK.InspireClient,System.Boolean)
+    name: FindTranslationIntegrations
+    nameWithType: TranslationsExtensions.FindTranslationIntegrations
+    fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegrations
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vasont.Inspire.SDK.InspireClient
+    name: InspireClient
+    nameWithType: InspireClient
+    fullName: Vasont.Inspire.SDK.InspireClient
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegrations(Vasont.Inspire.SDK.InspireClient,System.Boolean)
+    name: FindTranslationIntegrations
+    nameWithType: TranslationsExtensions.FindTranslationIntegrations
+    fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegrations
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vasont.Inspire.SDK.InspireClient
+    name: InspireClient
+    nameWithType: InspireClient
+    fullName: Vasont.Inspire.SDK.InspireClient
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegration(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  commentId: M:Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegration(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  isExternal: true
+  name: FindTranslationIntegration(InspireClient, Int64)
+  nameWithType: TranslationsExtensions.FindTranslationIntegration(InspireClient, Int64)
+  fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegration(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  spec.csharp:
+  - uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegration(Vasont.Inspire.SDK.InspireClient,System.Int64)
+    name: FindTranslationIntegration
+    nameWithType: TranslationsExtensions.FindTranslationIntegration
+    fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegration
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vasont.Inspire.SDK.InspireClient
+    name: InspireClient
+    nameWithType: InspireClient
+    fullName: Vasont.Inspire.SDK.InspireClient
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int64
+    name: Int64
+    nameWithType: Int64
+    fullName: System.Int64
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegration(Vasont.Inspire.SDK.InspireClient,System.Int64)
+    name: FindTranslationIntegration
+    nameWithType: TranslationsExtensions.FindTranslationIntegration
+    fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegration
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vasont.Inspire.SDK.InspireClient
+    name: InspireClient
+    nameWithType: InspireClient
+    fullName: Vasont.Inspire.SDK.InspireClient
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int64
+    name: Int64
+    nameWithType: Int64
+    fullName: System.Int64
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegrations(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Translations.TranslationIntegrationBrowseQueryModel)
+  commentId: M:Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegrations(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Translations.TranslationIntegrationBrowseQueryModel)
+  isExternal: true
+  name: FindTranslationIntegrations(InspireClient, TranslationIntegrationBrowseQueryModel)
+  nameWithType: TranslationsExtensions.FindTranslationIntegrations(InspireClient, TranslationIntegrationBrowseQueryModel)
+  fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegrations(Vasont.Inspire.SDK.InspireClient, Vasont.Inspire.Models.Translations.TranslationIntegrationBrowseQueryModel)
+  spec.csharp:
+  - uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegrations(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Translations.TranslationIntegrationBrowseQueryModel)
+    name: FindTranslationIntegrations
+    nameWithType: TranslationsExtensions.FindTranslationIntegrations
+    fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegrations
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vasont.Inspire.SDK.InspireClient
+    name: InspireClient
+    nameWithType: InspireClient
+    fullName: Vasont.Inspire.SDK.InspireClient
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vasont.Inspire.Models.Translations.TranslationIntegrationBrowseQueryModel
+    name: TranslationIntegrationBrowseQueryModel
+    nameWithType: TranslationIntegrationBrowseQueryModel
+    fullName: Vasont.Inspire.Models.Translations.TranslationIntegrationBrowseQueryModel
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegrations(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Translations.TranslationIntegrationBrowseQueryModel)
+    name: FindTranslationIntegrations
+    nameWithType: TranslationsExtensions.FindTranslationIntegrations
+    fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegrations
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vasont.Inspire.SDK.InspireClient
+    name: InspireClient
+    nameWithType: InspireClient
+    fullName: Vasont.Inspire.SDK.InspireClient
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vasont.Inspire.Models.Translations.TranslationIntegrationBrowseQueryModel
+    name: TranslationIntegrationBrowseQueryModel
+    nameWithType: TranslationIntegrationBrowseQueryModel
+    fullName: Vasont.Inspire.Models.Translations.TranslationIntegrationBrowseQueryModel
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.UpdateTranslationIntegration(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Translations.TranslationIntegrationModel)
+  commentId: M:Vasont.Inspire.SDK.Translations.TranslationsExtensions.UpdateTranslationIntegration(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Translations.TranslationIntegrationModel)
+  isExternal: true
+  name: UpdateTranslationIntegration(InspireClient, TranslationIntegrationModel)
+  nameWithType: TranslationsExtensions.UpdateTranslationIntegration(InspireClient, TranslationIntegrationModel)
+  fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.UpdateTranslationIntegration(Vasont.Inspire.SDK.InspireClient, Vasont.Inspire.Models.Translations.TranslationIntegrationModel)
+  spec.csharp:
+  - uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.UpdateTranslationIntegration(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Translations.TranslationIntegrationModel)
+    name: UpdateTranslationIntegration
+    nameWithType: TranslationsExtensions.UpdateTranslationIntegration
+    fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.UpdateTranslationIntegration
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vasont.Inspire.SDK.InspireClient
+    name: InspireClient
+    nameWithType: InspireClient
+    fullName: Vasont.Inspire.SDK.InspireClient
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vasont.Inspire.Models.Translations.TranslationIntegrationModel
+    name: TranslationIntegrationModel
+    nameWithType: TranslationIntegrationModel
+    fullName: Vasont.Inspire.Models.Translations.TranslationIntegrationModel
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.UpdateTranslationIntegration(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Translations.TranslationIntegrationModel)
+    name: UpdateTranslationIntegration
+    nameWithType: TranslationsExtensions.UpdateTranslationIntegration
+    fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.UpdateTranslationIntegration
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vasont.Inspire.SDK.InspireClient
+    name: InspireClient
+    nameWithType: InspireClient
+    fullName: Vasont.Inspire.SDK.InspireClient
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vasont.Inspire.Models.Translations.TranslationIntegrationModel
+    name: TranslationIntegrationModel
+    nameWithType: TranslationIntegrationModel
+    fullName: Vasont.Inspire.Models.Translations.TranslationIntegrationModel
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.CreateTranslationIntegration(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Translations.TranslationIntegrationModel)
+  commentId: M:Vasont.Inspire.SDK.Translations.TranslationsExtensions.CreateTranslationIntegration(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Translations.TranslationIntegrationModel)
+  isExternal: true
+  name: CreateTranslationIntegration(InspireClient, TranslationIntegrationModel)
+  nameWithType: TranslationsExtensions.CreateTranslationIntegration(InspireClient, TranslationIntegrationModel)
+  fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.CreateTranslationIntegration(Vasont.Inspire.SDK.InspireClient, Vasont.Inspire.Models.Translations.TranslationIntegrationModel)
+  spec.csharp:
+  - uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.CreateTranslationIntegration(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Translations.TranslationIntegrationModel)
+    name: CreateTranslationIntegration
+    nameWithType: TranslationsExtensions.CreateTranslationIntegration
+    fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.CreateTranslationIntegration
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vasont.Inspire.SDK.InspireClient
+    name: InspireClient
+    nameWithType: InspireClient
+    fullName: Vasont.Inspire.SDK.InspireClient
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vasont.Inspire.Models.Translations.TranslationIntegrationModel
+    name: TranslationIntegrationModel
+    nameWithType: TranslationIntegrationModel
+    fullName: Vasont.Inspire.Models.Translations.TranslationIntegrationModel
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.CreateTranslationIntegration(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Translations.TranslationIntegrationModel)
+    name: CreateTranslationIntegration
+    nameWithType: TranslationsExtensions.CreateTranslationIntegration
+    fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.CreateTranslationIntegration
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vasont.Inspire.SDK.InspireClient
+    name: InspireClient
+    nameWithType: InspireClient
+    fullName: Vasont.Inspire.SDK.InspireClient
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vasont.Inspire.Models.Translations.TranslationIntegrationModel
+    name: TranslationIntegrationModel
+    nameWithType: TranslationIntegrationModel
+    fullName: Vasont.Inspire.Models.Translations.TranslationIntegrationModel
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.DeleteTranslationIntegration(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  commentId: M:Vasont.Inspire.SDK.Translations.TranslationsExtensions.DeleteTranslationIntegration(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  isExternal: true
+  name: DeleteTranslationIntegration(InspireClient, Int64)
+  nameWithType: TranslationsExtensions.DeleteTranslationIntegration(InspireClient, Int64)
+  fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.DeleteTranslationIntegration(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  spec.csharp:
+  - uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.DeleteTranslationIntegration(Vasont.Inspire.SDK.InspireClient,System.Int64)
+    name: DeleteTranslationIntegration
+    nameWithType: TranslationsExtensions.DeleteTranslationIntegration
+    fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.DeleteTranslationIntegration
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vasont.Inspire.SDK.InspireClient
+    name: InspireClient
+    nameWithType: InspireClient
+    fullName: Vasont.Inspire.SDK.InspireClient
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int64
+    name: Int64
+    nameWithType: Int64
+    fullName: System.Int64
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.DeleteTranslationIntegration(Vasont.Inspire.SDK.InspireClient,System.Int64)
+    name: DeleteTranslationIntegration
+    nameWithType: TranslationsExtensions.DeleteTranslationIntegration
+    fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.DeleteTranslationIntegration
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vasont.Inspire.SDK.InspireClient
+    name: InspireClient
+    nameWithType: InspireClient
+    fullName: Vasont.Inspire.SDK.InspireClient
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int64
+    name: Int64
+    nameWithType: Int64
+    fullName: System.Int64
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
