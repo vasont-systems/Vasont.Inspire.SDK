@@ -251,5 +251,101 @@ namespace Vasont.Inspire.SDK.Translations
 
             return client.RequestContent<List<TranslationExportJobModel>, List<TranslationExportJobModel>>(request, models);
         }
+
+        /// <summary>
+        /// Finds all translation integrations.
+        /// </summary>
+        /// <param name="client">The client.</param>
+        /// <param name="activeOnly">if set to <c>true</c> [active only].</param>
+        /// <returns>Returns a <see cref="TranslationIntegrationBrowseResultModel"/> object containing the results of the query.</returns>
+        public static TranslationIntegrationBrowseResultModel FindTranslationIntegrations(this InspireClient client, bool activeOnly)
+        {
+            var request = client.CreateRequest($"/TranslationIntegrations/All/{activeOnly}", HttpMethod.Get);
+
+            return client.RequestContent<TranslationIntegrationBrowseResultModel>(request);
+        }
+
+        /// <summary>
+        /// Finds the translation integration.
+        /// </summary>
+        /// <param name="client">The client.</param>
+        /// <param name="id">The identifier.</param>
+        /// <returns>Returns a <see cref="TranslationIntegrationModel"/> object matching the specified identifier.</returns>
+        public static TranslationIntegrationModel FindTranslationIntegration(this InspireClient client, long id)
+        {
+            var request = client.CreateRequest($"/TranslationIntegrations/{id}", HttpMethod.Get);
+
+            return client.RequestContent<TranslationIntegrationModel>(request);
+        }
+
+        /// <summary>
+        /// Finds the translation integrations.
+        /// </summary>
+        /// <param name="client">The client.</param>
+        /// <param name="model">The model.</param>
+        /// <returns>Returns a <see cref="TranslationIntegrationBrowseResultModel"/> object containing the results of the query.</returns>
+        /// <exception cref="ArgumentNullException">model</exception>
+        public static TranslationIntegrationBrowseResultModel FindTranslationIntegrations(this InspireClient client, TranslationIntegrationBrowseQueryModel model)
+        {
+            if (model == null)
+            {
+                throw new ArgumentNullException(nameof(model));
+            }
+
+            var request = client.CreateRequest($"/TranslationIntegrations/Query", HttpMethod.Post);
+
+            return client.RequestContent<TranslationIntegrationBrowseQueryModel, TranslationIntegrationBrowseResultModel>(request, model);
+        }
+
+        /// <summary>
+        /// Updates the translation integration.
+        /// </summary>
+        /// <param name="client">The client.</param>
+        /// <param name="inputModel">The input model.</param>
+        /// <returns>Returns the updated <see cref="TranslationIntegrationModel"/> object.</returns>
+        /// <exception cref="ArgumentNullException">InputModel cannot be null.</exception>
+        public static TranslationIntegrationModel UpdateTranslationIntegration(this InspireClient client, TranslationIntegrationModel inputModel)
+        {
+            if (inputModel == null)
+            {
+                throw new ArgumentNullException(nameof(inputModel));
+            }
+
+            var request = client.CreateRequest($"/TranslationIntegrations/{inputModel.TranslationIntegrationId}", HttpMethod.Put);
+
+            return client.RequestContent<TranslationIntegrationModel, TranslationIntegrationModel>(request, inputModel);
+        }
+
+        /// <summary>
+        /// Creates the translation integration.
+        /// </summary>
+        /// <param name="client">The client.</param>
+        /// <param name="inputModel">The input model.</param>
+        /// <returns>Returns the new <see cref="TranslationIntegrationModel"/> object.</returns>
+        /// <exception cref="ArgumentNullException">InputModel cannot be null.</exception>
+        public static TranslationIntegrationModel CreateTranslationIntegration(this InspireClient client, TranslationIntegrationModel inputModel)
+        {
+            if (inputModel == null)
+            {
+                throw new ArgumentNullException(nameof(inputModel));
+            }
+
+            var request = client.CreateRequest($"/TranslationIntegrations", HttpMethod.Post);
+
+            return client.RequestContent<TranslationIntegrationModel, TranslationIntegrationModel>(request, inputModel);
+        }
+
+        /// <summary>
+        /// Deletes the translation integration.
+        /// </summary>
+        /// <param name="client">The client.</param>
+        /// <param name="id">The identifier.</param>
+        /// <returns>Returns [true] if the Translation Integration record has been successfully deleted.</returns>
+        public static bool DeleteTranslationIntegration(this InspireClient client, long id)
+        {
+            var request = client.CreateRequest($"/TranslationIntegrations/{id}", HttpMethod.Delete);
+
+            return client.RequestContent<bool>(request);
+        }
     }
 }
