@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: src/InspireClientConfiguration.cs
-      branch: develop
+      branch: feature/TranslationIntegrationManagement
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: ClientAuthenticationMethods
     path: InspireClientConfiguration.cs
@@ -51,7 +51,7 @@ items:
   source:
     remote:
       path: src/InspireClientConfiguration.cs
-      branch: develop
+      branch: feature/TranslationIntegrationManagement
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: ClientCredentials
     path: InspireClientConfiguration.cs
@@ -85,7 +85,7 @@ items:
   source:
     remote:
       path: src/InspireClientConfiguration.cs
-      branch: develop
+      branch: feature/TranslationIntegrationManagement
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: ResourceOwnerPassword
     path: InspireClientConfiguration.cs
@@ -120,7 +120,7 @@ items:
   source:
     remote:
       path: src/InspireClientConfiguration.cs
-      branch: develop
+      branch: feature/TranslationIntegrationManagement
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: Delegation
     path: InspireClientConfiguration.cs

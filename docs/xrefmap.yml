@@ -4051,6 +4051,32 @@ references:
   commentId: T:Vasont.Inspire.SDK.Translations.TranslationsExtensions
   fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions
   nameWithType: TranslationsExtensions
+- uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.CreateTranslationIntegration(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Translations.TranslationIntegrationModel)
+  name: CreateTranslationIntegration(InspireClient, TranslationIntegrationModel)
+  href: sdk/Vasont.Inspire.SDK.Translations.TranslationsExtensions.html#Vasont_Inspire_SDK_Translations_TranslationsExtensions_CreateTranslationIntegration_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Translations_TranslationIntegrationModel_
+  commentId: M:Vasont.Inspire.SDK.Translations.TranslationsExtensions.CreateTranslationIntegration(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Translations.TranslationIntegrationModel)
+  fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.CreateTranslationIntegration(Vasont.Inspire.SDK.InspireClient, Vasont.Inspire.Models.Translations.TranslationIntegrationModel)
+  nameWithType: TranslationsExtensions.CreateTranslationIntegration(InspireClient, TranslationIntegrationModel)
+- uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.CreateTranslationIntegration*
+  name: CreateTranslationIntegration
+  href: sdk/Vasont.Inspire.SDK.Translations.TranslationsExtensions.html#Vasont_Inspire_SDK_Translations_TranslationsExtensions_CreateTranslationIntegration_
+  commentId: Overload:Vasont.Inspire.SDK.Translations.TranslationsExtensions.CreateTranslationIntegration
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.CreateTranslationIntegration
+  nameWithType: TranslationsExtensions.CreateTranslationIntegration
+- uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.DeleteTranslationIntegration(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  name: DeleteTranslationIntegration(InspireClient, Int64)
+  href: sdk/Vasont.Inspire.SDK.Translations.TranslationsExtensions.html#Vasont_Inspire_SDK_Translations_TranslationsExtensions_DeleteTranslationIntegration_Vasont_Inspire_SDK_InspireClient_System_Int64_
+  commentId: M:Vasont.Inspire.SDK.Translations.TranslationsExtensions.DeleteTranslationIntegration(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.DeleteTranslationIntegration(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  nameWithType: TranslationsExtensions.DeleteTranslationIntegration(InspireClient, Int64)
+- uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.DeleteTranslationIntegration*
+  name: DeleteTranslationIntegration
+  href: sdk/Vasont.Inspire.SDK.Translations.TranslationsExtensions.html#Vasont_Inspire_SDK_Translations_TranslationsExtensions_DeleteTranslationIntegration_
+  commentId: Overload:Vasont.Inspire.SDK.Translations.TranslationsExtensions.DeleteTranslationIntegration
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.DeleteTranslationIntegration
+  nameWithType: TranslationsExtensions.DeleteTranslationIntegration
 - uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindQueuedTranslationJobs(Vasont.Inspire.SDK.InspireClient,System.Int64)
   name: FindQueuedTranslationJobs(InspireClient, Int64)
   href: sdk/Vasont.Inspire.SDK.Translations.TranslationsExtensions.html#Vasont_Inspire_SDK_Translations_TranslationsExtensions_FindQueuedTranslationJobs_Vasont_Inspire_SDK_InspireClient_System_Int64_
@@ -4093,6 +4119,38 @@ references:
   isSpec: "True"
   fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationExportState
   nameWithType: TranslationsExtensions.FindTranslationExportState
+- uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegration(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  name: FindTranslationIntegration(InspireClient, Int64)
+  href: sdk/Vasont.Inspire.SDK.Translations.TranslationsExtensions.html#Vasont_Inspire_SDK_Translations_TranslationsExtensions_FindTranslationIntegration_Vasont_Inspire_SDK_InspireClient_System_Int64_
+  commentId: M:Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegration(Vasont.Inspire.SDK.InspireClient,System.Int64)
+  fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegration(Vasont.Inspire.SDK.InspireClient, System.Int64)
+  nameWithType: TranslationsExtensions.FindTranslationIntegration(InspireClient, Int64)
+- uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegration*
+  name: FindTranslationIntegration
+  href: sdk/Vasont.Inspire.SDK.Translations.TranslationsExtensions.html#Vasont_Inspire_SDK_Translations_TranslationsExtensions_FindTranslationIntegration_
+  commentId: Overload:Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegration
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegration
+  nameWithType: TranslationsExtensions.FindTranslationIntegration
+- uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegrations(Vasont.Inspire.SDK.InspireClient,System.Boolean)
+  name: FindTranslationIntegrations(InspireClient, Boolean)
+  href: sdk/Vasont.Inspire.SDK.Translations.TranslationsExtensions.html#Vasont_Inspire_SDK_Translations_TranslationsExtensions_FindTranslationIntegrations_Vasont_Inspire_SDK_InspireClient_System_Boolean_
+  commentId: M:Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegrations(Vasont.Inspire.SDK.InspireClient,System.Boolean)
+  fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegrations(Vasont.Inspire.SDK.InspireClient, System.Boolean)
+  nameWithType: TranslationsExtensions.FindTranslationIntegrations(InspireClient, Boolean)
+- uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegrations(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Translations.TranslationIntegrationBrowseQueryModel)
+  name: FindTranslationIntegrations(InspireClient, TranslationIntegrationBrowseQueryModel)
+  href: sdk/Vasont.Inspire.SDK.Translations.TranslationsExtensions.html#Vasont_Inspire_SDK_Translations_TranslationsExtensions_FindTranslationIntegrations_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Translations_TranslationIntegrationBrowseQueryModel_
+  commentId: M:Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegrations(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Translations.TranslationIntegrationBrowseQueryModel)
+  fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegrations(Vasont.Inspire.SDK.InspireClient, Vasont.Inspire.Models.Translations.TranslationIntegrationBrowseQueryModel)
+  nameWithType: TranslationsExtensions.FindTranslationIntegrations(InspireClient, TranslationIntegrationBrowseQueryModel)
+- uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegrations*
+  name: FindTranslationIntegrations
+  href: sdk/Vasont.Inspire.SDK.Translations.TranslationsExtensions.html#Vasont_Inspire_SDK_Translations_TranslationsExtensions_FindTranslationIntegrations_
+  commentId: Overload:Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegrations
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegrations
+  nameWithType: TranslationsExtensions.FindTranslationIntegrations
 - uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationJob(Vasont.Inspire.SDK.InspireClient,System.Int64)
   name: FindTranslationJob(InspireClient, Int64)
   href: sdk/Vasont.Inspire.SDK.Translations.TranslationsExtensions.html#Vasont_Inspire_SDK_Translations_TranslationsExtensions_FindTranslationJob_Vasont_Inspire_SDK_InspireClient_System_Int64_
@@ -4274,3 +4332,16 @@ references:
   isSpec: "True"
   fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.SetTranslationJobStatus
   nameWithType: TranslationsExtensions.SetTranslationJobStatus
+- uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.UpdateTranslationIntegration(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Translations.TranslationIntegrationModel)
+  name: UpdateTranslationIntegration(InspireClient, TranslationIntegrationModel)
+  href: sdk/Vasont.Inspire.SDK.Translations.TranslationsExtensions.html#Vasont_Inspire_SDK_Translations_TranslationsExtensions_UpdateTranslationIntegration_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Translations_TranslationIntegrationModel_
+  commentId: M:Vasont.Inspire.SDK.Translations.TranslationsExtensions.UpdateTranslationIntegration(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Translations.TranslationIntegrationModel)
+  fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.UpdateTranslationIntegration(Vasont.Inspire.SDK.InspireClient, Vasont.Inspire.Models.Translations.TranslationIntegrationModel)
+  nameWithType: TranslationsExtensions.UpdateTranslationIntegration(InspireClient, TranslationIntegrationModel)
+- uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.UpdateTranslationIntegration*
+  name: UpdateTranslationIntegration
+  href: sdk/Vasont.Inspire.SDK.Translations.TranslationsExtensions.html#Vasont_Inspire_SDK_Translations_TranslationsExtensions_UpdateTranslationIntegration_
+  commentId: Overload:Vasont.Inspire.SDK.Translations.TranslationsExtensions.UpdateTranslationIntegration
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.UpdateTranslationIntegration
+  nameWithType: TranslationsExtensions.UpdateTranslationIntegration
