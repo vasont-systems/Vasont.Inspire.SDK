@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: src/Application/ApplicationExtensions.cs
-      branch: develop
+      branch: feature/TranslationIntegrationManagement
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: ApplicationExtensions
     path: Application/ApplicationExtensions.cs
@@ -63,7 +63,7 @@ items:
   source:
     remote:
       path: src/Application/ApplicationExtensions.cs
-      branch: develop
+      branch: feature/TranslationIntegrationManagement
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetAppInfo
     path: Application/ApplicationExtensions.cs
@@ -119,7 +119,7 @@ items:
   source:
     remote:
       path: src/Application/ApplicationExtensions.cs
-      branch: develop
+      branch: feature/TranslationIntegrationManagement
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RetrieveAppInfo
     path: Application/ApplicationExtensions.cs
@@ -164,7 +164,7 @@ items:
   source:
     remote:
       path: src/Application/ApplicationExtensions.cs
-      branch: develop
+      branch: feature/TranslationIntegrationManagement
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: KeepAlive
     path: Application/ApplicationExtensions.cs

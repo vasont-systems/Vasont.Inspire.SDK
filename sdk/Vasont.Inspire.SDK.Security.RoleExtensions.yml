@@ -22,7 +22,7 @@ items:
   source:
     remote:
       path: src/Security/RoleExtensions.cs
-      branch: develop
+      branch: feature/TranslationIntegrationManagement
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RoleExtensions
     path: Security/RoleExtensions.cs
@@ -67,7 +67,7 @@ items:
   source:
     remote:
       path: src/Security/RoleExtensions.cs
-      branch: develop
+      branch: feature/TranslationIntegrationManagement
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetRoles
     path: Security/RoleExtensions.cs
@@ -132,7 +132,7 @@ items:
   source:
     remote:
       path: src/Security/RoleExtensions.cs
-      branch: develop
+      branch: feature/TranslationIntegrationManagement
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FindRoles
     path: Security/RoleExtensions.cs
@@ -186,7 +186,7 @@ items:
   source:
     remote:
       path: src/Security/RoleExtensions.cs
-      branch: develop
+      branch: feature/TranslationIntegrationManagement
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetRole
     path: Security/RoleExtensions.cs
@@ -245,7 +245,7 @@ items:
   source:
     remote:
       path: src/Security/RoleExtensions.cs
-      branch: develop
+      branch: feature/TranslationIntegrationManagement
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FindRole
     path: Security/RoleExtensions.cs
@@ -293,7 +293,7 @@ items:
   source:
     remote:
       path: src/Security/RoleExtensions.cs
-      branch: develop
+      branch: feature/TranslationIntegrationManagement
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: CreateRole
     path: Security/RoleExtensions.cs
@@ -341,7 +341,7 @@ items:
   source:
     remote:
       path: src/Security/RoleExtensions.cs
-      branch: develop
+      branch: feature/TranslationIntegrationManagement
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: UpdateRole
     path: Security/RoleExtensions.cs
@@ -392,7 +392,7 @@ items:
   source:
     remote:
       path: src/Security/RoleExtensions.cs
-      branch: develop
+      branch: feature/TranslationIntegrationManagement
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: DeleteRole
     path: Security/RoleExtensions.cs

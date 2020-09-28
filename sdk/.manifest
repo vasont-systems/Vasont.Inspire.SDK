@@ -331,9 +331,14 @@
   "Vasont.Inspire.SDK.Security.UserExtensions.UpdateUser(Vasont.Inspire.SDK.InspireClient,System.Int64,Vasont.Inspire.Models.Security.UserModel)": "Vasont.Inspire.SDK.Security.UserExtensions.yml",
   "Vasont.Inspire.SDK.Translations": "Vasont.Inspire.SDK.Translations.yml",
   "Vasont.Inspire.SDK.Translations.TranslationsExtensions": "Vasont.Inspire.SDK.Translations.TranslationsExtensions.yml",
+  "Vasont.Inspire.SDK.Translations.TranslationsExtensions.CreateTranslationIntegration(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Translations.TranslationIntegrationModel)": "Vasont.Inspire.SDK.Translations.TranslationsExtensions.yml",
+  "Vasont.Inspire.SDK.Translations.TranslationsExtensions.DeleteTranslationIntegration(Vasont.Inspire.SDK.InspireClient,System.Int64)": "Vasont.Inspire.SDK.Translations.TranslationsExtensions.yml",
   "Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindQueuedTranslationJobs(Vasont.Inspire.SDK.InspireClient,System.Int64)": "Vasont.Inspire.SDK.Translations.TranslationsExtensions.yml",
   "Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationExportJobs(Vasont.Inspire.SDK.InspireClient,System.Collections.Generic.List{System.Int64})": "Vasont.Inspire.SDK.Translations.TranslationsExtensions.yml",
   "Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationExportState(Vasont.Inspire.SDK.InspireClient,System.String)": "Vasont.Inspire.SDK.Translations.TranslationsExtensions.yml",
+  "Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegration(Vasont.Inspire.SDK.InspireClient,System.Int64)": "Vasont.Inspire.SDK.Translations.TranslationsExtensions.yml",
+  "Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegrations(Vasont.Inspire.SDK.InspireClient,System.Boolean)": "Vasont.Inspire.SDK.Translations.TranslationsExtensions.yml",
+  "Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegrations(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Translations.TranslationIntegrationBrowseQueryModel)": "Vasont.Inspire.SDK.Translations.TranslationsExtensions.yml",
   "Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationJob(Vasont.Inspire.SDK.InspireClient,System.Int64)": "Vasont.Inspire.SDK.Translations.TranslationsExtensions.yml",
   "Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationJobs(Vasont.Inspire.SDK.InspireClient,System.Collections.Generic.List{System.Int64})": "Vasont.Inspire.SDK.Translations.TranslationsExtensions.yml",
   "Vasont.Inspire.SDK.Translations.TranslationsExtensions.GetQueuedTranslationJobs(Vasont.Inspire.SDK.InspireClient,System.Int64)": "Vasont.Inspire.SDK.Translations.TranslationsExtensions.yml",
@@ -346,5 +351,6 @@
   "Vasont.Inspire.SDK.Translations.TranslationsExtensions.ResetTranslationComponentsState(Vasont.Inspire.SDK.InspireClient,System.Collections.Generic.List{System.Int64})": "Vasont.Inspire.SDK.Translations.TranslationsExtensions.yml",
   "Vasont.Inspire.SDK.Translations.TranslationsExtensions.RetrieveTranslationJobStates(Vasont.Inspire.SDK.InspireClient)": "Vasont.Inspire.SDK.Translations.TranslationsExtensions.yml",
   "Vasont.Inspire.SDK.Translations.TranslationsExtensions.RetrieveTranslationVendors(Vasont.Inspire.SDK.InspireClient)": "Vasont.Inspire.SDK.Translations.TranslationsExtensions.yml",
-  "Vasont.Inspire.SDK.Translations.TranslationsExtensions.SetTranslationJobStatus(Vasont.Inspire.SDK.InspireClient,System.Collections.Generic.List{Vasont.Inspire.Models.Translations.TranslationExportJobModel})": "Vasont.Inspire.SDK.Translations.TranslationsExtensions.yml"
+  "Vasont.Inspire.SDK.Translations.TranslationsExtensions.SetTranslationJobStatus(Vasont.Inspire.SDK.InspireClient,System.Collections.Generic.List{Vasont.Inspire.Models.Translations.TranslationExportJobModel})": "Vasont.Inspire.SDK.Translations.TranslationsExtensions.yml",
+  "Vasont.Inspire.SDK.Translations.TranslationsExtensions.UpdateTranslationIntegration(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Translations.TranslationIntegrationModel)": "Vasont.Inspire.SDK.Translations.TranslationsExtensions.yml"
 }

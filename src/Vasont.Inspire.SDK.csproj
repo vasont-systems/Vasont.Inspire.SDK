@@ -9,13 +9,13 @@
   <PropertyGroup>
     <TargetFrameworks>net48;netstandard2.1</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.8.0</Version>
+    <Version>1.8.1</Version>
     <Authors>GlobalLink Vasont</Authors>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <RepositoryUrl>https://github.com/vasont-systems/Vasont.Inspire.SDK</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>CCMS</PackageTags>
-    <PackageReleaseNotes>Removed legacy Route Prefix. Refactored GetAllRoles and UpdateReviewComponents  functionality and replaced 'Get' methods with 'Find' or 'Retrieve' methods</PackageReleaseNotes>
+    <PackageReleaseNotes>Added additional methods to support Translation Integration Management</PackageReleaseNotes>
     <PackageProjectUrl>https://dev.vasont.com/</PackageProjectUrl>
     <Description>Contains the Vasont Inspire SDK Client for integrating with Vasont Inspire CCMS REST Web API.</Description>
     <NeutralLanguage>en</NeutralLanguage>
@@ -28,8 +28,8 @@
     <SignAssembly>false</SignAssembly>
     <AssemblyOriginatorKeyFile>Vasont.Inspire.SDK.pfx</AssemblyOriginatorKeyFile>
     <DelaySign>false</DelaySign>
-    <AssemblyVersion>1.8.0.0</AssemblyVersion>
-    <FileVersion>1.8.0.0</FileVersion>
+    <AssemblyVersion>1.8.1.0</AssemblyVersion>
+    <FileVersion>1.8.1.0</FileVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net461|AnyCPU'">
     <DocumentationFile>Vasont.Inspire.SDK.xml</DocumentationFile>
@@ -70,7 +70,7 @@
     </PackageReference>
     <PackageReference Include="IdentityModel" Version="4.3.1" />
     <PackageReference Include="Vasont.Inspire.Core" Version="1.0.16" />
-    <PackageReference Include="Vasont.Inspire.Models" Version="1.1.60" />
+    <PackageReference Include="Vasont.Inspire.Models" Version="1.1.67" />
   </ItemGroup>
   <ItemGroup>
     <XliffResource Include="MultilingualResources\Vasont.Inspire.SDK.de.xlf" />
