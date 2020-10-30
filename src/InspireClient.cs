@@ -10,6 +10,7 @@ namespace Vasont.Inspire.SDK
     using System.Net;
     using System.Net.Cache;
     using System.Net.Http;
+    using System.Runtime;
     using System.Text;
     using System.Threading;
     using System.Threading.Tasks;
@@ -314,6 +315,7 @@ namespace Vasont.Inspire.SDK
         public TOut RequestContent<T, TOut>(HttpWebRequest request, T requestBodyModel)
         {
             string content = this.RequestContent(request, requestBodyModel);
+
             return !string.IsNullOrWhiteSpace(content) && !this.HasError ? JsonConvert.DeserializeObject<TOut>(content) : default(TOut);
         }
 
@@ -333,7 +335,24 @@ namespace Vasont.Inspire.SDK
         public TOut RequestContent<TOut>(HttpWebRequest request)
         {
             string content = this.RequestContent(request);
+
             return !string.IsNullOrWhiteSpace(content) && !this.HasError ? JsonConvert.DeserializeObject<TOut>(content) : default(TOut);
+        }
+
+        public byte[] RequestContentStream(HttpWebRequest request)
+        {
+            UTF8Encoding utf8 = new UTF8Encoding(true, true);
+            string content = this.RequestContent(request);
+
+            return !string.IsNullOrWhiteSpace(content) && !this.HasError ? utf8.GetBytes(content) : default(byte[]);
+        }
+
+        public byte[] RequestContentStream<T>(HttpWebRequest request, T requestBodyModel)
+        {
+            UTF8Encoding utf8 = new UTF8Encoding(true, true);
+            string content = this.RequestContent(request, requestBodyModel);
+
+            return !string.IsNullOrWhiteSpace(content) && !this.HasError ? utf8.GetBytes(content) : default(byte[]);
         }
 
         /// <summary>
