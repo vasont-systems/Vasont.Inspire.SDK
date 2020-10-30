@@ -214,7 +214,7 @@ namespace Vasont.Inspire.SDK.Components
         public static byte[] FindComponentContent(this InspireClient client, long componentId)
         {
             var request = client.CreateRequest($"/Components/{componentId}/Content");
-            return client.RequestContent<byte[]>(request);
+            return client.RequestContentStream(request);
         }
 
         /// <summary>
@@ -1066,7 +1066,7 @@ namespace Vasont.Inspire.SDK.Components
             }
 
             var request = client.CreateRequest($"/Components/ComponentTranslations/Export", HttpMethod.Post);
-            return client.RequestContent<ComponentRelationsQueryModel, byte[]>(request, inputModel);
+            return client.RequestContentStream<ComponentRelationsQueryModel>(request, inputModel);
         }
 
         #endregion Translation Related Extension Methods
