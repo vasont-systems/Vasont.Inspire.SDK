@@ -78,12 +78,18 @@ namespace CoreTestClient
                 {
                     if (AsyncHelper.RunSync(() => client.AuthenticateAsync()))
                     {
+
+                        Console.WriteLine("Begin Calling GetComponentContent.");
                         byte[] bytes = client.GetComponentContent(componentId);
 
                         UTF8Encoding utf8 = new UTF8Encoding(true, true);
                         Console.WriteLine(utf8.GetString(bytes, 0, bytes.Length));
+                        Console.WriteLine("End Calling GetComponentContent.");
                     }
                 }
+
+                Console.WriteLine("Press any key to continue.");
+                Console.ReadKey();
             }
 
             if (File.Exists(zipFile))
@@ -142,6 +148,9 @@ namespace CoreTestClient
                         Console.WriteLine("Done");
                     }
                 }
+
+                Console.WriteLine("Press any key to continue.");
+                Console.ReadKey();
             }
             else
             {
@@ -190,6 +199,9 @@ namespace CoreTestClient
                         }
                     }
                 }
+
+                Console.WriteLine("Press any key to continue.");
+                Console.ReadKey();
             }
 
             // create a new inspire client which will authenticate automatically.
@@ -226,6 +238,9 @@ namespace CoreTestClient
                                 Console.WriteLine("No users found.");
                             }
 
+                            Console.WriteLine("Press any key to continue.");
+                            Console.ReadKey();
+
                             // get all of the current user's projects 
                             var myProjects = client.RetrieveProjects();
 
@@ -243,6 +258,9 @@ namespace CoreTestClient
                                 Console.WriteLine("No assigned projects found.");
                             }
 
+                            Console.WriteLine("Press any key to continue.");
+                            Console.ReadKey();
+
                             var componentTypes = client.RetrieveComponentTypes();
 
                             Console.WriteLine("Component Types:" + Environment.NewLine + "--------------");
@@ -258,7 +276,10 @@ namespace CoreTestClient
                             {
                                 Console.WriteLine("No component types found.");
                             }
-                            
+
+                            Console.WriteLine("Press any key to continue.");
+                            Console.ReadKey();
+
                             var folders = client.FindFoldersByFolderId(0, true, Vasont.Inspire.Models.Security.PermissionFlags.All);
 
                             Console.WriteLine("Folders:" + Environment.NewLine + "--------------");
@@ -274,6 +295,9 @@ namespace CoreTestClient
                             {
                                 Console.WriteLine("No folders found.");
                             }
+
+                            Console.WriteLine("Press any key to continue.");
+                            Console.ReadKey();
 
                             var translationVendors = client.RetrieveTranslationVendors();
 
@@ -291,7 +315,8 @@ namespace CoreTestClient
                                 Console.WriteLine("No translation vendors found.");
                             }
 
-                            Console.WriteLine();
+                            Console.WriteLine("Press any key to continue.");
+                            Console.ReadKey();
 
                             // Test Translation Integration methods
                             var model = new TranslationIntegrationModel
@@ -345,6 +370,9 @@ namespace CoreTestClient
                                     {
                                         Console.WriteLine($"Failed to update the Translation Integration record");
                                     }
+
+                                    Console.WriteLine("Press any key to continue.");
+                                    Console.ReadKey();
 
                                     // Find all Translation Integrations
                                     var allTranslationIntegrations = client.FindTranslationIntegrations(false);
