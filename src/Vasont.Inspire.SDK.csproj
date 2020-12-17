@@ -7,15 +7,15 @@
     <SuppressPseudoWarning Condition="'$(Configuration)' == 'Debug'">true</SuppressPseudoWarning>
   </PropertyGroup>
   <PropertyGroup>
-    <TargetFrameworks>net48;netstandard2.1</TargetFrameworks>
+    <TargetFrameworks>net462;net472;net48;netstandard2.1</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.8.2</Version>
+    <Version>1.8.3</Version>
     <Authors>GlobalLink Vasont</Authors>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <RepositoryUrl>https://github.com/vasont-systems/Vasont.Inspire.SDK</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>CCMS</PackageTags>
-    <PackageReleaseNotes>Added additional methods to support Translation Integration Management</PackageReleaseNotes>
+    <PackageReleaseNotes>Added additional support for 4.6.2, 4.7.2, 4.8, and Standard 2.1</PackageReleaseNotes>
     <PackageProjectUrl>https://dev.vasont.com/</PackageProjectUrl>
     <Description>Contains the Vasont Inspire SDK Client for integrating with Vasont Inspire CCMS REST Web API.</Description>
     <NeutralLanguage>en</NeutralLanguage>
@@ -28,8 +28,8 @@
     <SignAssembly>false</SignAssembly>
     <AssemblyOriginatorKeyFile>Vasont.Inspire.SDK.pfx</AssemblyOriginatorKeyFile>
     <DelaySign>false</DelaySign>
-    <AssemblyVersion>1.8.2.0</AssemblyVersion>
-    <FileVersion>1.8.2.0</FileVersion>
+    <AssemblyVersion>1.8.3.0</AssemblyVersion>
+    <FileVersion>1.8.3.0</FileVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net461|AnyCPU'">
     <DocumentationFile>Vasont.Inspire.SDK.xml</DocumentationFile>
@@ -64,13 +64,13 @@
     <None Remove="Vasont.Inspire.SDK.xml" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="docfx.console" Version="2.56.2">
+    <PackageReference Include="docfx.console" Version="2.56.6">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="IdentityModel" Version="4.3.1" />
+    <PackageReference Include="IdentityModel" Version="4.5.0" />
     <PackageReference Include="Vasont.Inspire.Core" Version="1.0.16" />
-    <PackageReference Include="Vasont.Inspire.Models" Version="1.1.67" />
+    <PackageReference Include="Vasont.Inspire.Models" Version="1.2.3" />
   </ItemGroup>
   <ItemGroup>
     <XliffResource Include="MultilingualResources\Vasont.Inspire.SDK.de.xlf" />
