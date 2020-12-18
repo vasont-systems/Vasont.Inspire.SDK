@@ -15,7 +15,7 @@
     <RepositoryUrl>https://github.com/vasont-systems/Vasont.Inspire.SDK</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>CCMS</PackageTags>
-    <PackageReleaseNotes>Added additional support for 4.6.2, 4.7.2, 4.8, and Standard 2.1</PackageReleaseNotes>
+    <PackageReleaseNotes>Added additional support for 4.6.2, 4.7.2, 4.8, and Standard 2.1. Including package updates for Core etc.</PackageReleaseNotes>
     <PackageProjectUrl>https://dev.vasont.com/</PackageProjectUrl>
     <Description>Contains the Vasont Inspire SDK Client for integrating with Vasont Inspire CCMS REST Web API.</Description>
     <NeutralLanguage>en</NeutralLanguage>
@@ -29,7 +29,7 @@
     <AssemblyOriginatorKeyFile>Vasont.Inspire.SDK.pfx</AssemblyOriginatorKeyFile>
     <DelaySign>false</DelaySign>
     <AssemblyVersion>1.8.4.0</AssemblyVersion>
-    <FileVersion>1.8.3.0</FileVersion>
+    <FileVersion>1.8.4.0</FileVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net461|AnyCPU'">
     <DocumentationFile>Vasont.Inspire.SDK.xml</DocumentationFile>
