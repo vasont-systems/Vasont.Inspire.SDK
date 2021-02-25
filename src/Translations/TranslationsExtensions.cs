@@ -253,6 +253,24 @@ namespace Vasont.Inspire.SDK.Translations
         }
 
         /// <summary>
+        /// Processes the message received from Transport as part of a project delivery.
+        /// </summary>
+        /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
+        /// <param name="transportProjectId">The Transport Project Id.</param>
+        /// <returns>Returns success or failure of the operation.</returns>
+        public static bool ProcessTransportResponse(this InspireClient client, string transportProjectId)
+        {
+            if (string.IsNullOrEmpty(transportProjectId))
+            {
+                throw new ArgumentNullException(nameof(transportProjectId));
+            }
+
+            var request = client.CreateRequest($"/Translations/ProcessTransportResponse", HttpMethod.Post);
+
+            return client.RequestContent<string, bool>(request, transportProjectId);
+        }
+
+        /// <summary>
         /// Finds all translation integrations.
         /// </summary>
         /// <param name="client">The client.</param>
