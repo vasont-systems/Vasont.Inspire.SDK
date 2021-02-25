@@ -9,7 +9,7 @@
   <PropertyGroup>
     <TargetFrameworks>net462;net472;net48;netstandard2.1</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.8.4</Version>
+    <Version>1.8.5</Version>
     <Authors>GlobalLink Vasont</Authors>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <RepositoryUrl>https://github.com/vasont-systems/Vasont.Inspire.SDK</RepositoryUrl>
