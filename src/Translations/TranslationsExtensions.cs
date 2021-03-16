@@ -265,9 +265,9 @@ namespace Vasont.Inspire.SDK.Translations
                 throw new ArgumentNullException(nameof(transportProjectId));
             }
 
-            var request = client.CreateRequest($"/Translations/ProcessTransportResponse", HttpMethod.Post);
+            var request = client.CreateRequest($"/Translations/ProcessTransportResponse/{transportProjectId}", HttpMethod.Post);
 
-            return client.RequestContent<string, bool>(request, transportProjectId);
+            return client.RequestContent<bool>(request);
         }
 
         /// <summary>
