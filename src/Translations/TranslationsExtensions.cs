@@ -267,7 +267,7 @@ namespace Vasont.Inspire.SDK.Translations
 
             var request = client.CreateRequest($"/Translations/ProcessTransportResponse/{transportProjectId}", HttpMethod.Post);
 
-            return client.RequestContent<Object, bool>(request, new { transportProjectId = transportProjectId });
+            return client.RequestContent<bool>(request);
         }
 
         /// <summary>
