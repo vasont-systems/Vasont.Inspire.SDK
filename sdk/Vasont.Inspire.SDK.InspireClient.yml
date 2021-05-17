@@ -23,6 +23,8 @@ items:
   - Vasont.Inspire.SDK.InspireClient.RequestContent``1(System.Net.HttpWebRequest)
   - Vasont.Inspire.SDK.InspireClient.RequestContent``1(System.Net.HttpWebRequest,``0)
   - Vasont.Inspire.SDK.InspireClient.RequestContent``2(System.Net.HttpWebRequest,``0)
+  - Vasont.Inspire.SDK.InspireClient.RequestContentStream(System.Net.HttpWebRequest)
+  - Vasont.Inspire.SDK.InspireClient.RequestContentStream``1(System.Net.HttpWebRequest,``0)
   - Vasont.Inspire.SDK.InspireClient.RequestDelegationAsync(System.String,System.String,System.Threading.CancellationToken)
   - Vasont.Inspire.SDK.InspireClient.RequestDiscoveryAsync(System.Uri,System.Threading.CancellationToken)
   - Vasont.Inspire.SDK.InspireClient.RequestResourceOwnerPasswordAsync(System.String,System.String,System.String,System.Threading.CancellationToken)
@@ -39,11 +41,11 @@ items:
   source:
     remote:
       path: src/InspireClient.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: InspireClient
     path: InspireClient.cs
-    startLine: 25
+    startLine: 26
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK
@@ -343,6 +345,7 @@ items:
   - Vasont.Inspire.SDK.InspireClient.Vasont.Inspire.SDK.Translations.TranslationsExtensions.GetTranslationExportJobs(System.Collections.Generic.List{System.Int64})
   - Vasont.Inspire.SDK.InspireClient.Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationExportJobs(System.Collections.Generic.List{System.Int64})
   - Vasont.Inspire.SDK.InspireClient.Vasont.Inspire.SDK.Translations.TranslationsExtensions.SetTranslationJobStatus(System.Collections.Generic.List{Vasont.Inspire.Models.Translations.TranslationExportJobModel})
+  - Vasont.Inspire.SDK.InspireClient.Vasont.Inspire.SDK.Translations.TranslationsExtensions.ProcessTransportResponse(System.String)
   - Vasont.Inspire.SDK.InspireClient.Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegrations(System.Boolean)
   - Vasont.Inspire.SDK.InspireClient.Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegration(System.Int64)
   - Vasont.Inspire.SDK.InspireClient.Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegrations(Vasont.Inspire.Models.Translations.TranslationIntegrationBrowseQueryModel)
@@ -369,11 +372,11 @@ items:
   source:
     remote:
       path: src/InspireClient.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: .ctor
     path: InspireClient.cs
-    startLine: 71
+    startLine: 72
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK
@@ -406,11 +409,11 @@ items:
   source:
     remote:
       path: src/InspireClient.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: Config
     path: InspireClient.cs
-    startLine: 84
+    startLine: 85
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK
@@ -443,11 +446,11 @@ items:
   source:
     remote:
       path: src/InspireClient.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: HasAuthenticated
     path: InspireClient.cs
-    startLine: 89
+    startLine: 90
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK
@@ -480,11 +483,11 @@ items:
   source:
     remote:
       path: src/InspireClient.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: HasError
     path: InspireClient.cs
-    startLine: 94
+    startLine: 95
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK
@@ -517,11 +520,11 @@ items:
   source:
     remote:
       path: src/InspireClient.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: LastErrorResponse
     path: InspireClient.cs
-    startLine: 99
+    startLine: 100
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK
@@ -554,11 +557,11 @@ items:
   source:
     remote:
       path: src/InspireClient.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: LastException
     path: InspireClient.cs
-    startLine: 104
+    startLine: 105
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK
@@ -591,11 +594,11 @@ items:
   source:
     remote:
       path: src/InspireClient.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: TokenResponse
     path: InspireClient.cs
-    startLine: 113
+    startLine: 114
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK
@@ -628,11 +631,11 @@ items:
   source:
     remote:
       path: src/InspireClient.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: AccessToken
     path: InspireClient.cs
-    startLine: 118
+    startLine: 119
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK
@@ -665,11 +668,11 @@ items:
   source:
     remote:
       path: src/InspireClient.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: TokenEndpoint
     path: InspireClient.cs
-    startLine: 123
+    startLine: 124
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK
@@ -702,11 +705,11 @@ items:
   source:
     remote:
       path: src/InspireClient.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: Authenticate
     path: InspireClient.cs
-    startLine: 141
+    startLine: 142
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK
@@ -742,11 +745,11 @@ items:
   source:
     remote:
       path: src/InspireClient.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: AuthenticateAsync
     path: InspireClient.cs
-    startLine: 160
+    startLine: 161
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK
@@ -789,11 +792,11 @@ items:
   source:
     remote:
       path: src/InspireClient.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: CreateRequest
     path: InspireClient.cs
-    startLine: 233
+    startLine: 234
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK
@@ -841,11 +844,11 @@ items:
   source:
     remote:
       path: src/InspireClient.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: CreateRequest
     path: InspireClient.cs
-    startLine: 264
+    startLine: 265
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK
@@ -893,11 +896,11 @@ items:
   source:
     remote:
       path: src/InspireClient.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RequestContent
     path: InspireClient.cs
-    startLine: 313
+    startLine: 314
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK
@@ -936,11 +939,11 @@ items:
   source:
     remote:
       path: src/InspireClient.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RequestContent
     path: InspireClient.cs
-    startLine: 332
+    startLine: 334
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK
@@ -962,6 +965,83 @@ items:
   - Public
   fullName.vb: Vasont.Inspire.SDK.InspireClient.RequestContent(Of TOut)(System.Net.HttpWebRequest)
   name.vb: RequestContent(Of TOut)(HttpWebRequest)
+- uid: Vasont.Inspire.SDK.InspireClient.RequestContentStream(System.Net.HttpWebRequest)
+  commentId: M:Vasont.Inspire.SDK.InspireClient.RequestContentStream(System.Net.HttpWebRequest)
+  id: RequestContentStream(System.Net.HttpWebRequest)
+  parent: Vasont.Inspire.SDK.InspireClient
+  langs:
+  - csharp
+  - vb
+  name: RequestContentStream(HttpWebRequest)
+  nameWithType: InspireClient.RequestContentStream(HttpWebRequest)
+  fullName: Vasont.Inspire.SDK.InspireClient.RequestContentStream(System.Net.HttpWebRequest)
+  type: Method
+  source:
+    remote:
+      path: src/InspireClient.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: RequestContentStream
+    path: InspireClient.cs
+    startLine: 341
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK
+  syntax:
+    content: public byte[] RequestContentStream(HttpWebRequest request)
+    parameters:
+    - id: request
+      type: System.Net.HttpWebRequest
+    return:
+      type: System.Byte[]
+    content.vb: Public Function RequestContentStream(request As HttpWebRequest) As Byte()
+  overload: Vasont.Inspire.SDK.InspireClient.RequestContentStream*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Vasont.Inspire.SDK.InspireClient.RequestContentStream``1(System.Net.HttpWebRequest,``0)
+  commentId: M:Vasont.Inspire.SDK.InspireClient.RequestContentStream``1(System.Net.HttpWebRequest,``0)
+  id: RequestContentStream``1(System.Net.HttpWebRequest,``0)
+  parent: Vasont.Inspire.SDK.InspireClient
+  langs:
+  - csharp
+  - vb
+  name: RequestContentStream<T>(HttpWebRequest, T)
+  nameWithType: InspireClient.RequestContentStream<T>(HttpWebRequest, T)
+  fullName: Vasont.Inspire.SDK.InspireClient.RequestContentStream<T>(System.Net.HttpWebRequest, T)
+  type: Method
+  source:
+    remote:
+      path: src/InspireClient.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: RequestContentStream
+    path: InspireClient.cs
+    startLine: 349
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK
+  syntax:
+    content: public byte[] RequestContentStream<T>(HttpWebRequest request, T requestBodyModel)
+    parameters:
+    - id: request
+      type: System.Net.HttpWebRequest
+    - id: requestBodyModel
+      type: '{T}'
+    typeParameters:
+    - id: T
+    return:
+      type: System.Byte[]
+    content.vb: Public Function RequestContentStream(Of T)(request As HttpWebRequest, requestBodyModel As T) As Byte()
+  overload: Vasont.Inspire.SDK.InspireClient.RequestContentStream*
+  nameWithType.vb: InspireClient.RequestContentStream(Of T)(HttpWebRequest, T)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Vasont.Inspire.SDK.InspireClient.RequestContentStream(Of T)(System.Net.HttpWebRequest, T)
+  name.vb: RequestContentStream(Of T)(HttpWebRequest, T)
 - uid: Vasont.Inspire.SDK.InspireClient.RequestContent``1(System.Net.HttpWebRequest,``0)
   commentId: M:Vasont.Inspire.SDK.InspireClient.RequestContent``1(System.Net.HttpWebRequest,``0)
   id: RequestContent``1(System.Net.HttpWebRequest,``0)
@@ -976,11 +1056,11 @@ items:
   source:
     remote:
       path: src/InspireClient.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RequestContent
     path: InspireClient.cs
-    startLine: 354
+    startLine: 373
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK
@@ -1025,11 +1105,11 @@ items:
   source:
     remote:
       path: src/InspireClient.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RequestContent
     path: InspireClient.cs
-    startLine: 397
+    startLine: 416
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK
@@ -1065,11 +1145,11 @@ items:
   source:
     remote:
       path: src/InspireClient.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: Dispose
     path: InspireClient.cs
-    startLine: 483
+    startLine: 502
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK
@@ -1100,11 +1180,11 @@ items:
   source:
     remote:
       path: src/InspireClient.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: Dispose
     path: InspireClient.cs
-    startLine: 497
+    startLine: 516
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK
@@ -1138,11 +1218,11 @@ items:
   source:
     remote:
       path: src/InspireClient.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: ResetErrors
     path: InspireClient.cs
-    startLine: 514
+    startLine: 533
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK
@@ -1170,11 +1250,11 @@ items:
   source:
     remote:
       path: src/InspireClient.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RequestDiscoveryAsync
     path: InspireClient.cs
-    startLine: 530
+    startLine: 549
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK
@@ -1212,11 +1292,11 @@ items:
   source:
     remote:
       path: src/InspireClient.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RequestClientCredentialsAsync
     path: InspireClient.cs
-    startLine: 551
+    startLine: 570
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK
@@ -1254,11 +1334,11 @@ items:
   source:
     remote:
       path: src/InspireClient.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RequestDelegationAsync
     path: InspireClient.cs
-    startLine: 577
+    startLine: 596
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK
@@ -1299,11 +1379,11 @@ items:
   source:
     remote:
       path: src/InspireClient.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RequestResourceOwnerPasswordAsync
     path: InspireClient.cs
-    startLine: 609
+    startLine: 628
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK
@@ -13531,6 +13611,45 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vasont.Inspire.SDK.InspireClient.Vasont.Inspire.SDK.Translations.TranslationsExtensions.ProcessTransportResponse(System.String)
+  commentId: M:Vasont.Inspire.SDK.Translations.TranslationsExtensions.ProcessTransportResponse(Vasont.Inspire.SDK.InspireClient,System.String)
+  parent: Vasont.Inspire.SDK.Translations.TranslationsExtensions
+  definition: Vasont.Inspire.SDK.Translations.TranslationsExtensions.ProcessTransportResponse(Vasont.Inspire.SDK.InspireClient,System.String)
+  name: ProcessTransportResponse(String)
+  nameWithType: TranslationsExtensions.ProcessTransportResponse(String)
+  fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.ProcessTransportResponse(System.String)
+  spec.csharp:
+  - uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.ProcessTransportResponse(System.String)
+    name: ProcessTransportResponse
+    nameWithType: TranslationsExtensions.ProcessTransportResponse
+    fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.ProcessTransportResponse
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.ProcessTransportResponse(System.String)
+    name: ProcessTransportResponse
+    nameWithType: TranslationsExtensions.ProcessTransportResponse
+    fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.ProcessTransportResponse
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -28967,6 +29086,58 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.ProcessTransportResponse(Vasont.Inspire.SDK.InspireClient,System.String)
+  commentId: M:Vasont.Inspire.SDK.Translations.TranslationsExtensions.ProcessTransportResponse(Vasont.Inspire.SDK.InspireClient,System.String)
+  isExternal: true
+  name: ProcessTransportResponse(InspireClient, String)
+  nameWithType: TranslationsExtensions.ProcessTransportResponse(InspireClient, String)
+  fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.ProcessTransportResponse(Vasont.Inspire.SDK.InspireClient, System.String)
+  spec.csharp:
+  - uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.ProcessTransportResponse(Vasont.Inspire.SDK.InspireClient,System.String)
+    name: ProcessTransportResponse
+    nameWithType: TranslationsExtensions.ProcessTransportResponse
+    fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.ProcessTransportResponse
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vasont.Inspire.SDK.InspireClient
+    name: InspireClient
+    nameWithType: InspireClient
+    fullName: Vasont.Inspire.SDK.InspireClient
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.ProcessTransportResponse(Vasont.Inspire.SDK.InspireClient,System.String)
+    name: ProcessTransportResponse
+    nameWithType: TranslationsExtensions.ProcessTransportResponse
+    fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.ProcessTransportResponse
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vasont.Inspire.SDK.InspireClient
+    name: InspireClient
+    nameWithType: InspireClient
+    fullName: Vasont.Inspire.SDK.InspireClient
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegrations(Vasont.Inspire.SDK.InspireClient,System.Boolean)
   commentId: M:Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegrations(Vasont.Inspire.SDK.InspireClient,System.Boolean)
   isExternal: true
@@ -29603,6 +29774,37 @@ references:
   name: TOut
   nameWithType: TOut
   fullName: TOut
+- uid: Vasont.Inspire.SDK.InspireClient.RequestContentStream*
+  commentId: Overload:Vasont.Inspire.SDK.InspireClient.RequestContentStream
+  name: RequestContentStream
+  nameWithType: InspireClient.RequestContentStream
+  fullName: Vasont.Inspire.SDK.InspireClient.RequestContentStream
+- uid: System.Byte[]
+  isExternal: true
+  name: Byte[]
+  nameWithType: Byte[]
+  fullName: System.Byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: System.Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
 - uid: Vasont.Inspire.SDK.InspireClient.Dispose*
   commentId: Overload:Vasont.Inspire.SDK.InspireClient.Dispose
   name: Dispose

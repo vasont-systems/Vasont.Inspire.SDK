@@ -40,7 +40,7 @@ items:
   source:
     remote:
       path: src/Review/ReviewExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: ReviewExtensions
     path: Review/ReviewExtensions.cs
@@ -85,7 +85,7 @@ items:
   source:
     remote:
       path: src/Review/ReviewExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetReview
     path: Review/ReviewExtensions.cs
@@ -144,7 +144,7 @@ items:
   source:
     remote:
       path: src/Review/ReviewExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FindReview
     path: Review/ReviewExtensions.cs
@@ -192,7 +192,7 @@ items:
   source:
     remote:
       path: src/Review/ReviewExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetReviewEdit
     path: Review/ReviewExtensions.cs
@@ -251,7 +251,7 @@ items:
   source:
     remote:
       path: src/Review/ReviewExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FindReviewEdit
     path: Review/ReviewExtensions.cs
@@ -299,7 +299,7 @@ items:
   source:
     remote:
       path: src/Review/ReviewExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetReviewDetail
     path: Review/ReviewExtensions.cs
@@ -358,7 +358,7 @@ items:
   source:
     remote:
       path: src/Review/ReviewExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FindReviewDetail
     path: Review/ReviewExtensions.cs
@@ -406,7 +406,7 @@ items:
   source:
     remote:
       path: src/Review/ReviewExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetReviews
     path: Review/ReviewExtensions.cs
@@ -465,7 +465,7 @@ items:
   source:
     remote:
       path: src/Review/ReviewExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FindReviews
     path: Review/ReviewExtensions.cs
@@ -513,7 +513,7 @@ items:
   source:
     remote:
       path: src/Review/ReviewExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetReviewComponents
     path: Review/ReviewExtensions.cs
@@ -572,7 +572,7 @@ items:
   source:
     remote:
       path: src/Review/ReviewExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FindReviewComponents
     path: Review/ReviewExtensions.cs
@@ -620,7 +620,7 @@ items:
   source:
     remote:
       path: src/Review/ReviewExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetReviewComponent
     path: Review/ReviewExtensions.cs
@@ -682,7 +682,7 @@ items:
   source:
     remote:
       path: src/Review/ReviewExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FindReviewComponent
     path: Review/ReviewExtensions.cs
@@ -733,7 +733,7 @@ items:
   source:
     remote:
       path: src/Review/ReviewExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetUserReviewAssignments
     path: Review/ReviewExtensions.cs
@@ -789,7 +789,7 @@ items:
   source:
     remote:
       path: src/Review/ReviewExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RetrieveUserReviewAssignments
     path: Review/ReviewExtensions.cs
@@ -834,7 +834,7 @@ items:
   source:
     remote:
       path: src/Review/ReviewExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetReviewCoordinators
     path: Review/ReviewExtensions.cs
@@ -890,7 +890,7 @@ items:
   source:
     remote:
       path: src/Review/ReviewExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RetrieveReviewCoordinators
     path: Review/ReviewExtensions.cs
@@ -935,7 +935,7 @@ items:
   source:
     remote:
       path: src/Review/ReviewExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: UpdateReview
     path: Review/ReviewExtensions.cs
@@ -983,7 +983,7 @@ items:
   source:
     remote:
       path: src/Review/ReviewExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: UpdateReviewComponents
     path: Review/ReviewExtensions.cs
@@ -1042,7 +1042,7 @@ items:
   source:
     remote:
       path: src/Review/ReviewExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FindChangedReviewComponents
     path: Review/ReviewExtensions.cs
@@ -1090,7 +1090,7 @@ items:
   source:
     remote:
       path: src/Review/ReviewExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: UpdateReviewComponentState
     path: Review/ReviewExtensions.cs
@@ -1144,7 +1144,7 @@ items:
   source:
     remote:
       path: src/Review/ReviewExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: CreateReview
     path: Review/ReviewExtensions.cs
@@ -1192,7 +1192,7 @@ items:
   source:
     remote:
       path: src/Review/ReviewExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: CompleteReviewerSession
     path: Review/ReviewExtensions.cs
@@ -1240,7 +1240,7 @@ items:
   source:
     remote:
       path: src/Review/ReviewExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: CompleteReview
     path: Review/ReviewExtensions.cs
@@ -1288,7 +1288,7 @@ items:
   source:
     remote:
       path: src/Review/ReviewExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: CancelReview
     path: Review/ReviewExtensions.cs
@@ -1339,7 +1339,7 @@ items:
   source:
     remote:
       path: src/Review/ReviewExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: DeleteReview
     path: Review/ReviewExtensions.cs

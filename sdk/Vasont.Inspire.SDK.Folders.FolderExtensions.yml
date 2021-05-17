@@ -30,7 +30,7 @@ items:
   source:
     remote:
       path: src/Folders/FolderExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FolderExtensions
     path: Folders/FolderExtensions.cs
@@ -75,7 +75,7 @@ items:
   source:
     remote:
       path: src/Folders/FolderExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetFoldersByFolderId
     path: Folders/FolderExtensions.cs
@@ -140,7 +140,7 @@ items:
   source:
     remote:
       path: src/Folders/FolderExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FindFoldersByFolderId
     path: Folders/FolderExtensions.cs
@@ -194,7 +194,7 @@ items:
   source:
     remote:
       path: src/Folders/FolderExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetComponentsByFolderId
     path: Folders/FolderExtensions.cs
@@ -256,7 +256,7 @@ items:
   source:
     remote:
       path: src/Folders/FolderExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FindComponentsByFolderId
     path: Folders/FolderExtensions.cs
@@ -307,7 +307,7 @@ items:
   source:
     remote:
       path: src/Folders/FolderExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetAncestorSiblingFoldersByFolderId
     path: Folders/FolderExtensions.cs
@@ -366,7 +366,7 @@ items:
   source:
     remote:
       path: src/Folders/FolderExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FindAncestorSiblingFoldersByFolderId
     path: Folders/FolderExtensions.cs
@@ -414,7 +414,7 @@ items:
   source:
     remote:
       path: src/Folders/FolderExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetFolderPermissions
     path: Folders/FolderExtensions.cs
@@ -473,7 +473,7 @@ items:
   source:
     remote:
       path: src/Folders/FolderExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FindFolderPermissions
     path: Folders/FolderExtensions.cs
@@ -521,7 +521,7 @@ items:
   source:
     remote:
       path: src/Folders/FolderExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: MoveFolder
     path: Folders/FolderExtensions.cs
@@ -572,7 +572,7 @@ items:
   source:
     remote:
       path: src/Folders/FolderExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: CreateFolder
     path: Folders/FolderExtensions.cs
@@ -623,7 +623,7 @@ items:
   source:
     remote:
       path: src/Folders/FolderExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: ExportFolder
     path: Folders/FolderExtensions.cs
@@ -677,7 +677,7 @@ items:
   source:
     remote:
       path: src/Folders/FolderExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: DeleteFolder
     path: Folders/FolderExtensions.cs
@@ -725,7 +725,7 @@ items:
   source:
     remote:
       path: src/Folders/FolderExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: UpdateFolderPermissions
     path: Folders/FolderExtensions.cs
@@ -776,7 +776,7 @@ items:
   source:
     remote:
       path: src/Folders/FolderExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: UpdateFolder
     path: Folders/FolderExtensions.cs
@@ -827,7 +827,7 @@ items:
   source:
     remote:
       path: src/Folders/FolderExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RenameFolder
     path: Folders/FolderExtensions.cs

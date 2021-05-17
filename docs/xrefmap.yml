@@ -2732,6 +2732,28 @@ references:
   fullName.vb: Vasont.Inspire.SDK.InspireClient.RequestContent(Of T, TOut)(System.Net.HttpWebRequest, T)
   nameWithType: InspireClient.RequestContent<T, TOut>(HttpWebRequest, T)
   nameWithType.vb: InspireClient.RequestContent(Of T, TOut)(HttpWebRequest, T)
+- uid: Vasont.Inspire.SDK.InspireClient.RequestContentStream(System.Net.HttpWebRequest)
+  name: RequestContentStream(HttpWebRequest)
+  href: sdk/Vasont.Inspire.SDK.InspireClient.html#Vasont_Inspire_SDK_InspireClient_RequestContentStream_System_Net_HttpWebRequest_
+  commentId: M:Vasont.Inspire.SDK.InspireClient.RequestContentStream(System.Net.HttpWebRequest)
+  fullName: Vasont.Inspire.SDK.InspireClient.RequestContentStream(System.Net.HttpWebRequest)
+  nameWithType: InspireClient.RequestContentStream(HttpWebRequest)
+- uid: Vasont.Inspire.SDK.InspireClient.RequestContentStream*
+  name: RequestContentStream
+  href: sdk/Vasont.Inspire.SDK.InspireClient.html#Vasont_Inspire_SDK_InspireClient_RequestContentStream_
+  commentId: Overload:Vasont.Inspire.SDK.InspireClient.RequestContentStream
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.InspireClient.RequestContentStream
+  nameWithType: InspireClient.RequestContentStream
+- uid: Vasont.Inspire.SDK.InspireClient.RequestContentStream``1(System.Net.HttpWebRequest,``0)
+  name: RequestContentStream<T>(HttpWebRequest, T)
+  href: sdk/Vasont.Inspire.SDK.InspireClient.html#Vasont_Inspire_SDK_InspireClient_RequestContentStream__1_System_Net_HttpWebRequest___0_
+  commentId: M:Vasont.Inspire.SDK.InspireClient.RequestContentStream``1(System.Net.HttpWebRequest,``0)
+  name.vb: RequestContentStream(Of T)(HttpWebRequest, T)
+  fullName: Vasont.Inspire.SDK.InspireClient.RequestContentStream<T>(System.Net.HttpWebRequest, T)
+  fullName.vb: Vasont.Inspire.SDK.InspireClient.RequestContentStream(Of T)(System.Net.HttpWebRequest, T)
+  nameWithType: InspireClient.RequestContentStream<T>(HttpWebRequest, T)
+  nameWithType.vb: InspireClient.RequestContentStream(Of T)(HttpWebRequest, T)
 - uid: Vasont.Inspire.SDK.InspireClient.RequestDelegationAsync(System.String,System.String,System.Threading.CancellationToken)
   name: RequestDelegationAsync(String, String, CancellationToken)
   href: sdk/Vasont.Inspire.SDK.InspireClient.html#Vasont_Inspire_SDK_InspireClient_RequestDelegationAsync_System_String_System_String_System_Threading_CancellationToken_
@@ -4261,6 +4283,19 @@ references:
   isSpec: "True"
   fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.GetTranslationVendors
   nameWithType: TranslationsExtensions.GetTranslationVendors
+- uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.ProcessTransportResponse(Vasont.Inspire.SDK.InspireClient,System.String)
+  name: ProcessTransportResponse(InspireClient, String)
+  href: sdk/Vasont.Inspire.SDK.Translations.TranslationsExtensions.html#Vasont_Inspire_SDK_Translations_TranslationsExtensions_ProcessTransportResponse_Vasont_Inspire_SDK_InspireClient_System_String_
+  commentId: M:Vasont.Inspire.SDK.Translations.TranslationsExtensions.ProcessTransportResponse(Vasont.Inspire.SDK.InspireClient,System.String)
+  fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.ProcessTransportResponse(Vasont.Inspire.SDK.InspireClient, System.String)
+  nameWithType: TranslationsExtensions.ProcessTransportResponse(InspireClient, String)
+- uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.ProcessTransportResponse*
+  name: ProcessTransportResponse
+  href: sdk/Vasont.Inspire.SDK.Translations.TranslationsExtensions.html#Vasont_Inspire_SDK_Translations_TranslationsExtensions_ProcessTransportResponse_
+  commentId: Overload:Vasont.Inspire.SDK.Translations.TranslationsExtensions.ProcessTransportResponse
+  isSpec: "True"
+  fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.ProcessTransportResponse
+  nameWithType: TranslationsExtensions.ProcessTransportResponse
 - uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.PutTranslationCancel(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Translations.TranslationJobModel)
   name: PutTranslationCancel(InspireClient, TranslationJobModel)
   href: sdk/Vasont.Inspire.SDK.Translations.TranslationsExtensions.html#Vasont_Inspire_SDK_Translations_TranslationsExtensions_PutTranslationCancel_Vasont_Inspire_SDK_InspireClient_Vasont_Inspire_Models_Translations_TranslationJobModel_
