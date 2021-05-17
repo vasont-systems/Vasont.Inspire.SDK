@@ -89,7 +89,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: ComponentExtensions
     path: Components/ComponentExtensions.cs
@@ -134,7 +134,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetComponentTypes
     path: Components/ComponentExtensions.cs
@@ -190,7 +190,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RetrieveComponentTypes
     path: Components/ComponentExtensions.cs
@@ -235,7 +235,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetComponentWorkflowTemplates
     path: Components/ComponentExtensions.cs
@@ -291,7 +291,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RetrieveComponentWorkflowTemplates
     path: Components/ComponentExtensions.cs
@@ -336,7 +336,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetComponentWorkflowTemplate
     path: Components/ComponentExtensions.cs
@@ -395,7 +395,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FindComponentWorkflowTemplate
     path: Components/ComponentExtensions.cs
@@ -443,7 +443,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetComponentTemplates
     path: Components/ComponentExtensions.cs
@@ -502,7 +502,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FindComponentTemplates
     path: Components/ComponentExtensions.cs
@@ -550,7 +550,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetComponents
     path: Components/ComponentExtensions.cs
@@ -609,7 +609,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FindComponents
     path: Components/ComponentExtensions.cs
@@ -657,7 +657,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetComponent
     path: Components/ComponentExtensions.cs
@@ -716,7 +716,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FindComponent
     path: Components/ComponentExtensions.cs
@@ -764,7 +764,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetComponentDetail
     path: Components/ComponentExtensions.cs
@@ -823,7 +823,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FindComponentDetail
     path: Components/ComponentExtensions.cs
@@ -871,7 +871,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetComponentContent
     path: Components/ComponentExtensions.cs
@@ -930,7 +930,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FindComponentContent
     path: Components/ComponentExtensions.cs
@@ -978,7 +978,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetComponentPermissions
     path: Components/ComponentExtensions.cs
@@ -1037,7 +1037,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FindComponentPermissions
     path: Components/ComponentExtensions.cs
@@ -1085,7 +1085,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetComponentElements
     path: Components/ComponentExtensions.cs
@@ -1150,7 +1150,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FindComponentElements
     path: Components/ComponentExtensions.cs
@@ -1204,7 +1204,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: ApproveComponents
     path: Components/ComponentExtensions.cs
@@ -1255,7 +1255,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetComponentConfiguration
     path: Components/ComponentExtensions.cs
@@ -1317,7 +1317,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FindComponentConfiguration
     path: Components/ComponentExtensions.cs
@@ -1368,7 +1368,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: CreateComponent
     path: Components/ComponentExtensions.cs
@@ -1416,7 +1416,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: CreateComponentAs
     path: Components/ComponentExtensions.cs
@@ -1464,7 +1464,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: CreateComponentBranch
     path: Components/ComponentExtensions.cs
@@ -1512,7 +1512,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: CreateComponentsExportRequest
     path: Components/ComponentExtensions.cs
@@ -1563,7 +1563,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RenameComponent
     path: Components/ComponentExtensions.cs
@@ -1614,7 +1614,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: UpdateComponentPermissions
     path: Components/ComponentExtensions.cs
@@ -1662,7 +1662,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: UpdateComponentPermissions
     path: Components/ComponentExtensions.cs
@@ -1713,7 +1713,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: SetComponentPermissions
     path: Components/ComponentExtensions.cs
@@ -1772,7 +1772,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: MoveComponentsToFolder
     path: Components/ComponentExtensions.cs
@@ -1826,7 +1826,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: LockComponent
     path: Components/ComponentExtensions.cs
@@ -1874,7 +1874,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: LockComponents
     path: Components/ComponentExtensions.cs
@@ -1929,7 +1929,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: UnlockComponents
     path: Components/ComponentExtensions.cs
@@ -1987,7 +1987,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: UnlockComponent
     path: Components/ComponentExtensions.cs
@@ -2038,7 +2038,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: DeleteComponent
     path: Components/ComponentExtensions.cs
@@ -2086,7 +2086,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: DeleteComponents
     path: Components/ComponentExtensions.cs
@@ -2141,7 +2141,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: ImportComponents
     path: Components/ComponentExtensions.cs
@@ -2199,7 +2199,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetImportState
     path: Components/ComponentExtensions.cs
@@ -2258,7 +2258,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FindImportState
     path: Components/ComponentExtensions.cs
@@ -2306,7 +2306,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetImportState
     path: Components/ComponentExtensions.cs
@@ -2365,7 +2365,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FindImportState
     path: Components/ComponentExtensions.cs
@@ -2413,7 +2413,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetExportState
     path: Components/ComponentExtensions.cs
@@ -2472,7 +2472,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FindExportState
     path: Components/ComponentExtensions.cs
@@ -2520,7 +2520,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetExportState
     path: Components/ComponentExtensions.cs
@@ -2579,7 +2579,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FindExportState
     path: Components/ComponentExtensions.cs
@@ -2627,7 +2627,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: UpdateComponentTags
     path: Components/ComponentExtensions.cs
@@ -2678,7 +2678,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: PostComponentTags
     path: Components/ComponentExtensions.cs
@@ -2740,7 +2740,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RepairComponentRelationship
     path: Components/ComponentExtensions.cs
@@ -2792,7 +2792,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: AutoRepairComponentRelationships
     path: Components/ComponentExtensions.cs
@@ -2844,7 +2844,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetComponentRelations
     path: Components/ComponentExtensions.cs
@@ -2907,7 +2907,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FindComponentRelations
     path: Components/ComponentExtensions.cs
@@ -2959,7 +2959,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetComponentRelationsReport
     path: Components/ComponentExtensions.cs
@@ -3022,7 +3022,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FindComponentRelationsReport
     path: Components/ComponentExtensions.cs
@@ -3074,7 +3074,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetComponentDependencies
     path: Components/ComponentExtensions.cs
@@ -3137,7 +3137,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FindComponentDependencies
     path: Components/ComponentExtensions.cs
@@ -3189,7 +3189,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetComponentDependenciesReport
     path: Components/ComponentExtensions.cs
@@ -3252,7 +3252,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FIndComponentDependenciesReport
     path: Components/ComponentExtensions.cs
@@ -3304,7 +3304,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetComponentBranchRelations
     path: Components/ComponentExtensions.cs
@@ -3363,7 +3363,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FindComponentBranchRelations
     path: Components/ComponentExtensions.cs
@@ -3411,7 +3411,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetComponentBranches
     path: Components/ComponentExtensions.cs
@@ -3474,7 +3474,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FindComponentBranches
     path: Components/ComponentExtensions.cs
@@ -3526,7 +3526,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetComponentBranchesReport
     path: Components/ComponentExtensions.cs
@@ -3589,7 +3589,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FindComponentBranchesReport
     path: Components/ComponentExtensions.cs
@@ -3641,7 +3641,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetComponentTranslations
     path: Components/ComponentExtensions.cs
@@ -3704,7 +3704,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FindComponentTranslations
     path: Components/ComponentExtensions.cs
@@ -3756,7 +3756,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetComponentTranslationsReport
     path: Components/ComponentExtensions.cs
@@ -3819,7 +3819,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FindComponentTranslationsReport
     path: Components/ComponentExtensions.cs
@@ -3871,7 +3871,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetComponentHistory
     path: Components/ComponentExtensions.cs
@@ -3937,7 +3937,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FindComponentHistory
     path: Components/ComponentExtensions.cs
@@ -3992,7 +3992,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetComponentHistoryDetails
     path: Components/ComponentExtensions.cs
@@ -4054,7 +4054,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FindComponentHistoryDetails
     path: Components/ComponentExtensions.cs
@@ -4105,7 +4105,7 @@ items:
   source:
     remote:
       path: src/Components/ComponentExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RestoreComponentFromHistory
     path: Components/ComponentExtensions.cs

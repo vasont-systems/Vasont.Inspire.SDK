@@ -9,13 +9,13 @@
   <PropertyGroup>
     <TargetFrameworks>net462;net472;net48;netstandard2.1</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.8.6</Version>
+    <Version>1.9.0</Version>
     <Authors>GlobalLink Vasont</Authors>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <RepositoryUrl>https://github.com/vasont-systems/Vasont.Inspire.SDK</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>CCMS</PackageTags>
-    <PackageReleaseNotes>Added additional support for 4.6.2, 4.7.2, 4.8, and Standard 2.1. Including package updates for Core etc.</PackageReleaseNotes>
+    <PackageReleaseNotes>Updated nuget packages, including a breaking change for IdentityModel library. Will need 2021.2.4.0 Identity server to support this library.</PackageReleaseNotes>
     <PackageProjectUrl>https://dev.vasont.com/</PackageProjectUrl>
     <Description>Contains the Vasont Inspire SDK Client for integrating with Vasont Inspire CCMS REST Web API.</Description>
     <NeutralLanguage>en</NeutralLanguage>
@@ -28,8 +28,8 @@
     <SignAssembly>false</SignAssembly>
     <AssemblyOriginatorKeyFile>Vasont.Inspire.SDK.pfx</AssemblyOriginatorKeyFile>
     <DelaySign>false</DelaySign>
-    <AssemblyVersion>1.8.6.0</AssemblyVersion>
-    <FileVersion>1.8.6.0</FileVersion>
+    <AssemblyVersion>1.9.0.0</AssemblyVersion>
+    <FileVersion>1.9.0.0</FileVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net461|AnyCPU'">
     <DocumentationFile>Vasont.Inspire.SDK.xml</DocumentationFile>

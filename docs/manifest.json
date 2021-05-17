@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "E:/Projects/Vasont GIT/Vasont.Inspire.SDK/src",
+  "source_base_path": "C:/Projects/Vasont Systems/GitHub/Vasont.Inspire.SDK/src",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -9,7 +9,7 @@
       "output": {
         ".html": {
           "relative_path": "README.html",
-          "hash": "9jX6w2ld04tczytGvxaOUw=="
+          "hash": "ORrR29KrrrK0o5BlvjvTRaUbSXrWqpqHJjyOSv92a/4="
         }
       },
       "is_incremental": false,
@@ -43,7 +43,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "6Us1Od4JDqJK4lR+CDAyNQ=="
+          "hash": "lmkPeZrDhcR9tmIHTJpASNr1TzkY0o5gEkkGuw4XslQ="
         }
       },
       "is_incremental": false,
@@ -55,7 +55,7 @@
       "output": {
         ".html": {
           "relative_path": "sdk/Vasont.Inspire.SDK.Application.ApplicationExtensions.html",
-          "hash": "ZQIH2hk9Ke739SqeivZgYA=="
+          "hash": "sZ2UA6lBVXWAG2juyaZdVXHQuhlX+wTsgQwK5ZI4uFk="
         }
       },
       "is_incremental": false,
@@ -67,7 +67,7 @@
       "output": {
         ".html": {
           "relative_path": "sdk/Vasont.Inspire.SDK.Application.html",
-          "hash": "oNLA1zvJTcRRYKB0C2+CwQ=="
+          "hash": "Rdetnj30lkSF+TxEBTxJPs5MEQ30m1anUQ1pVK5L2sc="
         }
       },
       "is_incremental": false,
@@ -79,7 +79,7 @@
       "output": {
         ".html": {
           "relative_path": "sdk/Vasont.Inspire.SDK.ClientAuthenticationMethods.html",
-          "hash": "51QCZB6Ba+S+DrMD4z3pwg=="
+          "hash": "zmezhNnK7t4y6FwI1kIe/NITUCp5PzQXHVQ8zuK9Hwk="
         }
       },
       "is_incremental": false,
@@ -91,7 +91,7 @@
       "output": {
         ".html": {
           "relative_path": "sdk/Vasont.Inspire.SDK.Components.ComponentExtensions.html",
-          "hash": "ZSdqGfrO1Shs5kACe7+KWw=="
+          "hash": "PxakR07T0Ogf38g74pGhjRllpFVDXM2aZsVeDFtT6rA="
         }
       },
       "is_incremental": false,
@@ -103,7 +103,7 @@
       "output": {
         ".html": {
           "relative_path": "sdk/Vasont.Inspire.SDK.Components.EditorExtensions.html",
-          "hash": "J9QazlNsmZc0keea/j1G5Q=="
+          "hash": "087oOBZ3uO2+R127otFRwEupWk+VHKM+3UsIHU8h8Pc="
         }
       },
       "is_incremental": false,
@@ -115,7 +115,7 @@
       "output": {
         ".html": {
           "relative_path": "sdk/Vasont.Inspire.SDK.Components.html",
-          "hash": "cTb9UAuurY+87HCsPTKVoQ=="
+          "hash": "abJhiRXr6Uh1B3+4L2fJho6v5aoEuYxSL0JQEgm2HkY="
         }
       },
       "is_incremental": false,
@@ -127,7 +127,7 @@
       "output": {
         ".html": {
           "relative_path": "sdk/Vasont.Inspire.SDK.Configuration.ConfigurationExtensions.html",
-          "hash": "hVrEKTqYGETLYMBLj6eyMg=="
+          "hash": "YGTJz82KGus34tnvvteq37E7BOLRmMOWddeSNJ28vBo="
         }
       },
       "is_incremental": false,
@@ -139,7 +139,7 @@
       "output": {
         ".html": {
           "relative_path": "sdk/Vasont.Inspire.SDK.Configuration.html",
-          "hash": "5KuaV08og1ZTNf2iJzBbSA=="
+          "hash": "yVMJr1K2YIZlQXoAtB2UdZjca3y+kuC95XFxXT/SmjI="
         }
       },
       "is_incremental": false,
@@ -151,7 +151,7 @@
       "output": {
         ".html": {
           "relative_path": "sdk/Vasont.Inspire.SDK.Folders.FolderExtensions.html",
-          "hash": "t+wK+Mm85JEOvgijjoUHhQ=="
+          "hash": "uknM6Aw4yFFU6uZGle5BmeM71r+XyoCpcR7qstAC+4s="
         }
       },
       "is_incremental": false,
@@ -163,7 +163,7 @@
       "output": {
         ".html": {
           "relative_path": "sdk/Vasont.Inspire.SDK.Folders.html",
-          "hash": "TppMSJrLwQf6j+ykElLUPw=="
+          "hash": "vgz9+eQi7XX5JOLpvJ5ik7X76uF+L4OJds3EiKwkfRQ="
         }
       },
       "is_incremental": false,
@@ -175,7 +175,7 @@
       "output": {
         ".html": {
           "relative_path": "sdk/Vasont.Inspire.SDK.InspireClient.html",
-          "hash": "AVVNqXkeXPlTTn9jJFJ9bw=="
+          "hash": "wod0o8gRbJb0efM+AxiiLQlrlcGQL4Rrv660/k+RWf0="
         }
       },
       "is_incremental": false,
@@ -187,7 +187,7 @@
       "output": {
         ".html": {
           "relative_path": "sdk/Vasont.Inspire.SDK.InspireClientConfiguration.html",
-          "hash": "csRFdx40WASbrm45u+Q82Q=="
+          "hash": "+ZIjh3XcmzsQxsNMV7MIJvM6woRcgWuZjYkf+kQjfk4="
         }
       },
       "is_incremental": false,
@@ -199,7 +199,7 @@
       "output": {
         ".html": {
           "relative_path": "sdk/Vasont.Inspire.SDK.InspireClientException.html",
-          "hash": "dMSo7FIRahhZpFFpLLdofg=="
+          "hash": "hS7NZWp42xFXoYXcrpTY9ilqx/edwb6f7NZ+Ro4oUH4="
         }
       },
       "is_incremental": false,
@@ -211,7 +211,7 @@
       "output": {
         ".html": {
           "relative_path": "sdk/Vasont.Inspire.SDK.Projects.ProjectExtensions.html",
-          "hash": "AM9rWVNXRn8ZkCWMZPOseA=="
+          "hash": "wToCe4gGRmll6DRdhZnbAeZE2T8ruelk67noq4QX4Bk="
         }
       },
       "is_incremental": false,
@@ -223,7 +223,7 @@
       "output": {
         ".html": {
           "relative_path": "sdk/Vasont.Inspire.SDK.Projects.html",
-          "hash": "A2tI7+B4kWJZ5kgX7O5VbQ=="
+          "hash": "pB9ORuRIOpkwpfAxQc1V45hlZDFmpWIpNWTL9Y3Z6W8="
         }
       },
       "is_incremental": false,
@@ -235,7 +235,7 @@
       "output": {
         ".html": {
           "relative_path": "sdk/Vasont.Inspire.SDK.Review.ReviewExtensions.html",
-          "hash": "dLTKhi8A68FYxp/QCWF/7g=="
+          "hash": "5158nc+AykRtRedGkihaWT/cdZj/70HB7n/GlpJndk8="
         }
       },
       "is_incremental": false,
@@ -247,7 +247,7 @@
       "output": {
         ".html": {
           "relative_path": "sdk/Vasont.Inspire.SDK.Review.html",
-          "hash": "qCioytF/Rl/DUCdMcItDTA=="
+          "hash": "Q5dDj1TpWL2VP4MxEUKAxN+R+oo3ItgFLyUF3tt10as="
         }
       },
       "is_incremental": false,
@@ -259,7 +259,7 @@
       "output": {
         ".html": {
           "relative_path": "sdk/Vasont.Inspire.SDK.Security.RoleExtensions.html",
-          "hash": "QlNaZRfOXyQoWEzyzvcjaw=="
+          "hash": "eH5lGfNc85Q1kZ91WUfCYVmxo5jqsRQFTAIl3Xqw5lc="
         }
       },
       "is_incremental": false,
@@ -271,7 +271,7 @@
       "output": {
         ".html": {
           "relative_path": "sdk/Vasont.Inspire.SDK.Security.UserExtensions.html",
-          "hash": "4YMWtOGSN+LtzSD4Dnai/A=="
+          "hash": "OUjfNfndtY2Nf91qRbVeFG+46dOjchHaMKV7ht6P75A="
         }
       },
       "is_incremental": false,
@@ -283,7 +283,7 @@
       "output": {
         ".html": {
           "relative_path": "sdk/Vasont.Inspire.SDK.Security.html",
-          "hash": "iznPnRsAI5LZqyY6ywc6ew=="
+          "hash": "WlFLOY1PM/NiTFlxPsXKKYShMhtPMGJ7o/abHf8AneE="
         }
       },
       "is_incremental": false,
@@ -295,7 +295,7 @@
       "output": {
         ".html": {
           "relative_path": "sdk/Vasont.Inspire.SDK.Translations.TranslationsExtensions.html",
-          "hash": "JG9FaMHIx4RvoqaYXh+1bQ=="
+          "hash": "rAnJGjFBWdnlCO+LkPXJKk7LTCVpDprVU8VCaiB88ZE="
         }
       },
       "is_incremental": false,
@@ -307,7 +307,7 @@
       "output": {
         ".html": {
           "relative_path": "sdk/Vasont.Inspire.SDK.Translations.html",
-          "hash": "syaZsAU1S58AvkPsZp84Rg=="
+          "hash": "aSKdplS/V4muyCz4G9SvMa1YbUKAmGXPuCldvzjUu/k="
         }
       },
       "is_incremental": false,
@@ -319,7 +319,7 @@
       "output": {
         ".html": {
           "relative_path": "sdk/Vasont.Inspire.SDK.html",
-          "hash": "cC2LrQ92xSUj7hPDErMA5w=="
+          "hash": "hFiXUmo0p2FZaHIkacHdLAi3sfGU0zq8IhuAjPhg7Sc="
         }
       },
       "is_incremental": false,
@@ -331,7 +331,7 @@
       "output": {
         ".html": {
           "relative_path": "sdk/toc.html",
-          "hash": "jULdwALM9KfA00I8Gpc1Iw=="
+          "hash": "v5kjSfqBXmMyE6lIGjdC2qlokS4bSL7yopd+/ZWNS/c="
         }
       },
       "is_incremental": false,
@@ -343,7 +343,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "K/bt0F3wujTA5eU2QtGUxw=="
+          "hash": "M4QA9i6+xxc97BoC0NMI2WcoyO1irKKCRUxtuOpvfUo="
         }
       },
       "is_incremental": false,
@@ -354,11 +354,11 @@
     {
       "status": {
         "can_incremental": false,
-        "details": "Disable incremental build by force rebuild option.",
+        "details": "Cannot build incrementally because last build info is missing.",
         "incrementalPhase": "build",
         "total_file_count": 0,
         "skipped_file_count": 0,
-        "full_build_reason_code": "ForceRebuild"
+        "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
         "ConceptualDocumentProcessor": {
@@ -392,7 +392,7 @@
     {
       "status": {
         "can_incremental": false,
-        "details": "Cannot support incremental post processing, the reason is: it's disabled.",
+        "details": "Cannot support incremental post processing, the reason is: last post processor info is null.",
         "incrementalPhase": "postProcessing",
         "total_file_count": 0,
         "skipped_file_count": 0

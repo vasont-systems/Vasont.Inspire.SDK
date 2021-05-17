@@ -46,7 +46,7 @@ items:
   source:
     remote:
       path: src/Projects/ProjectExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: ProjectExtensions
     path: Projects/ProjectExtensions.cs
@@ -91,7 +91,7 @@ items:
   source:
     remote:
       path: src/Projects/ProjectExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetProjects
     path: Projects/ProjectExtensions.cs
@@ -147,7 +147,7 @@ items:
   source:
     remote:
       path: src/Projects/ProjectExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RetrieveProjects
     path: Projects/ProjectExtensions.cs
@@ -192,7 +192,7 @@ items:
   source:
     remote:
       path: src/Projects/ProjectExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetProject
     path: Projects/ProjectExtensions.cs
@@ -251,7 +251,7 @@ items:
   source:
     remote:
       path: src/Projects/ProjectExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FindProject
     path: Projects/ProjectExtensions.cs
@@ -299,7 +299,7 @@ items:
   source:
     remote:
       path: src/Projects/ProjectExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetRecentlyOpenedProjects
     path: Projects/ProjectExtensions.cs
@@ -358,7 +358,7 @@ items:
   source:
     remote:
       path: src/Projects/ProjectExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FindRecentlyOpenedProjects
     path: Projects/ProjectExtensions.cs
@@ -406,7 +406,7 @@ items:
   source:
     remote:
       path: src/Projects/ProjectExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetAssignedProjects
     path: Projects/ProjectExtensions.cs
@@ -462,7 +462,7 @@ items:
   source:
     remote:
       path: src/Projects/ProjectExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RetrieveAssignedProjects
     path: Projects/ProjectExtensions.cs
@@ -507,7 +507,7 @@ items:
   source:
     remote:
       path: src/Projects/ProjectExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetAvailableParticipants
     path: Projects/ProjectExtensions.cs
@@ -566,7 +566,7 @@ items:
   source:
     remote:
       path: src/Projects/ProjectExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FindAvailableParticipants
     path: Projects/ProjectExtensions.cs
@@ -614,7 +614,7 @@ items:
   source:
     remote:
       path: src/Projects/ProjectExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetActivities
     path: Projects/ProjectExtensions.cs
@@ -670,7 +670,7 @@ items:
   source:
     remote:
       path: src/Projects/ProjectExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RetrieveActivities
     path: Projects/ProjectExtensions.cs
@@ -715,7 +715,7 @@ items:
   source:
     remote:
       path: src/Projects/ProjectExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetProjectAssignments
     path: Projects/ProjectExtensions.cs
@@ -774,7 +774,7 @@ items:
   source:
     remote:
       path: src/Projects/ProjectExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FindProjectAssignments
     path: Projects/ProjectExtensions.cs
@@ -822,7 +822,7 @@ items:
   source:
     remote:
       path: src/Projects/ProjectExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: DeleteProject
     path: Projects/ProjectExtensions.cs
@@ -870,7 +870,7 @@ items:
   source:
     remote:
       path: src/Projects/ProjectExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: DeleteProjectParticipant
     path: Projects/ProjectExtensions.cs
@@ -921,7 +921,7 @@ items:
   source:
     remote:
       path: src/Projects/ProjectExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: DeleteProjectAssignment
     path: Projects/ProjectExtensions.cs
@@ -972,7 +972,7 @@ items:
   source:
     remote:
       path: src/Projects/ProjectExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: DeleteProjectAssignmentComponent
     path: Projects/ProjectExtensions.cs
@@ -1026,7 +1026,7 @@ items:
   source:
     remote:
       path: src/Projects/ProjectExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: DeleteProjectFolder
     path: Projects/ProjectExtensions.cs
@@ -1077,7 +1077,7 @@ items:
   source:
     remote:
       path: src/Projects/ProjectExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: CreateProject
     path: Projects/ProjectExtensions.cs
@@ -1125,7 +1125,7 @@ items:
   source:
     remote:
       path: src/Projects/ProjectExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: CreateProjectParticipants
     path: Projects/ProjectExtensions.cs
@@ -1179,7 +1179,7 @@ items:
   source:
     remote:
       path: src/Projects/ProjectExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: CreateProjectAssignment
     path: Projects/ProjectExtensions.cs
@@ -1230,7 +1230,7 @@ items:
   source:
     remote:
       path: src/Projects/ProjectExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: CreateProjectFolder
     path: Projects/ProjectExtensions.cs
@@ -1281,7 +1281,7 @@ items:
   source:
     remote:
       path: src/Projects/ProjectExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: AddComponentsToFolder
     path: Projects/ProjectExtensions.cs
@@ -1338,7 +1338,7 @@ items:
   source:
     remote:
       path: src/Projects/ProjectExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: ExportComponents
     path: Projects/ProjectExtensions.cs
@@ -1395,7 +1395,7 @@ items:
   source:
     remote:
       path: src/Projects/ProjectExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: UpdateProject
     path: Projects/ProjectExtensions.cs
@@ -1446,7 +1446,7 @@ items:
   source:
     remote:
       path: src/Projects/ProjectExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: UpdateProjectParticipants
     path: Projects/ProjectExtensions.cs
@@ -1500,7 +1500,7 @@ items:
   source:
     remote:
       path: src/Projects/ProjectExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: UpdateProjectAssignment
     path: Projects/ProjectExtensions.cs
@@ -1554,7 +1554,7 @@ items:
   source:
     remote:
       path: src/Projects/ProjectExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: UpdateProjectAssignmentCompletionStatus
     path: Projects/ProjectExtensions.cs
@@ -1608,7 +1608,7 @@ items:
   source:
     remote:
       path: src/Projects/ProjectExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RenameProjectFolder
     path: Projects/ProjectExtensions.cs
@@ -1662,7 +1662,7 @@ items:
   source:
     remote:
       path: src/Projects/ProjectExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: MoveProjectFolder
     path: Projects/ProjectExtensions.cs

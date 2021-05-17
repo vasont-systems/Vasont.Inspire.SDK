@@ -24,7 +24,7 @@ items:
   source:
     remote:
       path: src/Security/UserExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: UserExtensions
     path: Security/UserExtensions.cs
@@ -69,7 +69,7 @@ items:
   source:
     remote:
       path: src/Security/UserExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetAllUsers
     path: Security/UserExtensions.cs
@@ -125,7 +125,7 @@ items:
   source:
     remote:
       path: src/Security/UserExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RetrieveUsers
     path: Security/UserExtensions.cs
@@ -170,7 +170,7 @@ items:
   source:
     remote:
       path: src/Security/UserExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetUser
     path: Security/UserExtensions.cs
@@ -229,7 +229,7 @@ items:
   source:
     remote:
       path: src/Security/UserExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FindUser
     path: Security/UserExtensions.cs
@@ -277,7 +277,7 @@ items:
   source:
     remote:
       path: src/Security/UserExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetUsers
     path: Security/UserExtensions.cs
@@ -348,7 +348,7 @@ items:
   source:
     remote:
       path: src/Security/UserExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FindUsers
     path: Security/UserExtensions.cs
@@ -408,7 +408,7 @@ items:
   source:
     remote:
       path: src/Security/UserExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: CreateUser
     path: Security/UserExtensions.cs
@@ -456,7 +456,7 @@ items:
   source:
     remote:
       path: src/Security/UserExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: UpdateUser
     path: Security/UserExtensions.cs
@@ -507,7 +507,7 @@ items:
   source:
     remote:
       path: src/Security/UserExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: DeleteUser
     path: Security/UserExtensions.cs

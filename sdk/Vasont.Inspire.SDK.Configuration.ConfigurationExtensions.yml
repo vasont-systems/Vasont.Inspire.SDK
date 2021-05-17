@@ -109,7 +109,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: ConfigurationExtensions
     path: Configuration/ConfigurationExtensions.cs
@@ -154,7 +154,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetAttributes
     path: Configuration/ConfigurationExtensions.cs
@@ -210,7 +210,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RetrieveAttributes
     path: Configuration/ConfigurationExtensions.cs
@@ -255,7 +255,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetAttribute
     path: Configuration/ConfigurationExtensions.cs
@@ -314,7 +314,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FindAttribute
     path: Configuration/ConfigurationExtensions.cs
@@ -362,7 +362,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: UpdateAttribute
     path: Configuration/ConfigurationExtensions.cs
@@ -410,7 +410,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: CreateAttribute
     path: Configuration/ConfigurationExtensions.cs
@@ -458,7 +458,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RemoveAttribute
     path: Configuration/ConfigurationExtensions.cs
@@ -506,7 +506,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetProfileAttributes
     path: Configuration/ConfigurationExtensions.cs
@@ -562,7 +562,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RetrieveProfileAttributes
     path: Configuration/ConfigurationExtensions.cs
@@ -607,7 +607,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetProfileAttributeItems
     path: Configuration/ConfigurationExtensions.cs
@@ -663,7 +663,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RetrieveProfileAttributeItems
     path: Configuration/ConfigurationExtensions.cs
@@ -708,7 +708,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetProfileAttribute
     path: Configuration/ConfigurationExtensions.cs
@@ -767,7 +767,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FindProfileAttribute
     path: Configuration/ConfigurationExtensions.cs
@@ -815,7 +815,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: UpdateProfileAttribute
     path: Configuration/ConfigurationExtensions.cs
@@ -863,7 +863,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: CreateProfileAttribute
     path: Configuration/ConfigurationExtensions.cs
@@ -911,7 +911,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RemoveProfileAttribute
     path: Configuration/ConfigurationExtensions.cs
@@ -959,7 +959,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetSchemaStandards
     path: Configuration/ConfigurationExtensions.cs
@@ -1015,7 +1015,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RetrieveSchemaStandards
     path: Configuration/ConfigurationExtensions.cs
@@ -1060,7 +1060,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetComponentTypes
     path: Configuration/ConfigurationExtensions.cs
@@ -1116,7 +1116,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RetrieveComponentTypes
     path: Configuration/ConfigurationExtensions.cs
@@ -1161,7 +1161,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetComponentType
     path: Configuration/ConfigurationExtensions.cs
@@ -1220,7 +1220,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FindComponentType
     path: Configuration/ConfigurationExtensions.cs
@@ -1268,7 +1268,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: UpdateComponentType
     path: Configuration/ConfigurationExtensions.cs
@@ -1316,7 +1316,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: CreateComponentType
     path: Configuration/ConfigurationExtensions.cs
@@ -1364,7 +1364,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RemoveComponentType
     path: Configuration/ConfigurationExtensions.cs
@@ -1412,7 +1412,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetElements
     path: Configuration/ConfigurationExtensions.cs
@@ -1468,7 +1468,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RetrieveElements
     path: Configuration/ConfigurationExtensions.cs
@@ -1513,7 +1513,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetElement
     path: Configuration/ConfigurationExtensions.cs
@@ -1572,7 +1572,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FindElement
     path: Configuration/ConfigurationExtensions.cs
@@ -1620,7 +1620,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: UpdateElement
     path: Configuration/ConfigurationExtensions.cs
@@ -1668,7 +1668,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: CreateElement
     path: Configuration/ConfigurationExtensions.cs
@@ -1716,7 +1716,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RemoveElement
     path: Configuration/ConfigurationExtensions.cs
@@ -1764,7 +1764,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetExports
     path: Configuration/ConfigurationExtensions.cs
@@ -1820,7 +1820,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RetrieveExports
     path: Configuration/ConfigurationExtensions.cs
@@ -1865,7 +1865,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetExport
     path: Configuration/ConfigurationExtensions.cs
@@ -1924,7 +1924,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FindExport
     path: Configuration/ConfigurationExtensions.cs
@@ -1972,7 +1972,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: UpdateExport
     path: Configuration/ConfigurationExtensions.cs
@@ -2020,7 +2020,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: CreateExport
     path: Configuration/ConfigurationExtensions.cs
@@ -2068,7 +2068,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RemoveExport
     path: Configuration/ConfigurationExtensions.cs
@@ -2116,7 +2116,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetExportPlugins
     path: Configuration/ConfigurationExtensions.cs
@@ -2172,7 +2172,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RetrieveExportPlugins
     path: Configuration/ConfigurationExtensions.cs
@@ -2217,7 +2217,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetExportPluginParameters
     path: Configuration/ConfigurationExtensions.cs
@@ -2276,7 +2276,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FindExportPluginParameters
     path: Configuration/ConfigurationExtensions.cs
@@ -2324,7 +2324,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetExportComponentType
     path: Configuration/ConfigurationExtensions.cs
@@ -2386,7 +2386,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FindExportComponentType
     path: Configuration/ConfigurationExtensions.cs
@@ -2437,7 +2437,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetLinkMethods
     path: Configuration/ConfigurationExtensions.cs
@@ -2493,7 +2493,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RetrieveLinkMethods
     path: Configuration/ConfigurationExtensions.cs
@@ -2538,7 +2538,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetXmlLinkTypes
     path: Configuration/ConfigurationExtensions.cs
@@ -2594,7 +2594,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RetrieveXmlLinkTypes
     path: Configuration/ConfigurationExtensions.cs
@@ -2639,7 +2639,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetXmlLinkType
     path: Configuration/ConfigurationExtensions.cs
@@ -2698,7 +2698,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FindXmlLinkType
     path: Configuration/ConfigurationExtensions.cs
@@ -2746,7 +2746,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: UpdateXmlLinkType
     path: Configuration/ConfigurationExtensions.cs
@@ -2794,7 +2794,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: CreateXmlLinkType
     path: Configuration/ConfigurationExtensions.cs
@@ -2842,7 +2842,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RemoveXmlLinkType
     path: Configuration/ConfigurationExtensions.cs
@@ -2890,7 +2890,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetRelations
     path: Configuration/ConfigurationExtensions.cs
@@ -2946,7 +2946,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RetrieveRelations
     path: Configuration/ConfigurationExtensions.cs
@@ -2991,7 +2991,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetRelation
     path: Configuration/ConfigurationExtensions.cs
@@ -3050,7 +3050,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FindRelation
     path: Configuration/ConfigurationExtensions.cs
@@ -3098,7 +3098,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: UpdateRelation
     path: Configuration/ConfigurationExtensions.cs
@@ -3146,7 +3146,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: CreateRelation
     path: Configuration/ConfigurationExtensions.cs
@@ -3194,7 +3194,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RemoveRelation
     path: Configuration/ConfigurationExtensions.cs
@@ -3242,7 +3242,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetTag
     path: Configuration/ConfigurationExtensions.cs
@@ -3301,7 +3301,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FindTag
     path: Configuration/ConfigurationExtensions.cs
@@ -3349,7 +3349,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: UpdateTag
     path: Configuration/ConfigurationExtensions.cs
@@ -3397,7 +3397,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: CreateTag
     path: Configuration/ConfigurationExtensions.cs
@@ -3445,7 +3445,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RemoveTag
     path: Configuration/ConfigurationExtensions.cs
@@ -3493,7 +3493,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetProjectActivities
     path: Configuration/ConfigurationExtensions.cs
@@ -3549,7 +3549,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RetrieveProjectActivities
     path: Configuration/ConfigurationExtensions.cs
@@ -3594,7 +3594,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetProjectActivity
     path: Configuration/ConfigurationExtensions.cs
@@ -3653,7 +3653,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FindProjectActivity
     path: Configuration/ConfigurationExtensions.cs
@@ -3701,7 +3701,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: UpdateProjectActivity
     path: Configuration/ConfigurationExtensions.cs
@@ -3749,7 +3749,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: CreateProjectActivity
     path: Configuration/ConfigurationExtensions.cs
@@ -3797,7 +3797,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RemoveProjectActivity
     path: Configuration/ConfigurationExtensions.cs
@@ -3845,7 +3845,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetLanguages
     path: Configuration/ConfigurationExtensions.cs
@@ -3904,7 +3904,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FindLanguages
     path: Configuration/ConfigurationExtensions.cs
@@ -3952,7 +3952,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetLanguage
     path: Configuration/ConfigurationExtensions.cs
@@ -4011,7 +4011,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FindLanguage
     path: Configuration/ConfigurationExtensions.cs
@@ -4059,7 +4059,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: UpdateLanguage
     path: Configuration/ConfigurationExtensions.cs
@@ -4107,7 +4107,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: CreateLanguage
     path: Configuration/ConfigurationExtensions.cs
@@ -4155,7 +4155,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RemoveLanguage
     path: Configuration/ConfigurationExtensions.cs
@@ -4203,7 +4203,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetWebHookConfigurations
     path: Configuration/ConfigurationExtensions.cs
@@ -4259,7 +4259,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RetrieveWebHookConfigurations
     path: Configuration/ConfigurationExtensions.cs
@@ -4304,7 +4304,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetWebHookConfiguration
     path: Configuration/ConfigurationExtensions.cs
@@ -4363,7 +4363,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FindWebHookConfiguration
     path: Configuration/ConfigurationExtensions.cs
@@ -4411,7 +4411,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: UpdateWebHookConfiguration
     path: Configuration/ConfigurationExtensions.cs
@@ -4459,7 +4459,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: CreateWebHookConfiguration
     path: Configuration/ConfigurationExtensions.cs
@@ -4507,7 +4507,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RemoveWebHookConfiguration
     path: Configuration/ConfigurationExtensions.cs
@@ -4555,7 +4555,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetFileExtensions
     path: Configuration/ConfigurationExtensions.cs
@@ -4611,7 +4611,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RetrieveFileExtensions
     path: Configuration/ConfigurationExtensions.cs
@@ -4656,7 +4656,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetFileExtension
     path: Configuration/ConfigurationExtensions.cs
@@ -4715,7 +4715,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FindFileExtension
     path: Configuration/ConfigurationExtensions.cs
@@ -4763,7 +4763,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: UpdateFileExtension
     path: Configuration/ConfigurationExtensions.cs
@@ -4811,7 +4811,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: CreateFileExtension
     path: Configuration/ConfigurationExtensions.cs
@@ -4859,7 +4859,7 @@ items:
   source:
     remote:
       path: src/Configuration/ConfigurationExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RemoveFileExtension
     path: Configuration/ConfigurationExtensions.cs

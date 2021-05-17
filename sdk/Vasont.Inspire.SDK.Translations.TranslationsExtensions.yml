@@ -21,6 +21,7 @@ items:
   - Vasont.Inspire.SDK.Translations.TranslationsExtensions.GetTranslationJobById(Vasont.Inspire.SDK.InspireClient,System.Int64)
   - Vasont.Inspire.SDK.Translations.TranslationsExtensions.GetTranslationJobStates(Vasont.Inspire.SDK.InspireClient)
   - Vasont.Inspire.SDK.Translations.TranslationsExtensions.GetTranslationVendors(Vasont.Inspire.SDK.InspireClient)
+  - Vasont.Inspire.SDK.Translations.TranslationsExtensions.ProcessTransportResponse(Vasont.Inspire.SDK.InspireClient,System.String)
   - Vasont.Inspire.SDK.Translations.TranslationsExtensions.PutTranslationCancel(Vasont.Inspire.SDK.InspireClient,Vasont.Inspire.Models.Translations.TranslationJobModel)
   - Vasont.Inspire.SDK.Translations.TranslationsExtensions.ResetTranslationComponentsState(Vasont.Inspire.SDK.InspireClient,System.Collections.Generic.List{System.Int64})
   - Vasont.Inspire.SDK.Translations.TranslationsExtensions.RetrieveTranslationJobStates(Vasont.Inspire.SDK.InspireClient)
@@ -37,7 +38,7 @@ items:
   source:
     remote:
       path: src/Translations/TranslationsExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: TranslationsExtensions
     path: Translations/TranslationsExtensions.cs
@@ -82,7 +83,7 @@ items:
   source:
     remote:
       path: src/Translations/TranslationsExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetTranslationJobStates
     path: Translations/TranslationsExtensions.cs
@@ -138,7 +139,7 @@ items:
   source:
     remote:
       path: src/Translations/TranslationsExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RetrieveTranslationJobStates
     path: Translations/TranslationsExtensions.cs
@@ -183,7 +184,7 @@ items:
   source:
     remote:
       path: src/Translations/TranslationsExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetTranslationVendors
     path: Translations/TranslationsExtensions.cs
@@ -239,7 +240,7 @@ items:
   source:
     remote:
       path: src/Translations/TranslationsExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: RetrieveTranslationVendors
     path: Translations/TranslationsExtensions.cs
@@ -284,7 +285,7 @@ items:
   source:
     remote:
       path: src/Translations/TranslationsExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetTranslationJobById
     path: Translations/TranslationsExtensions.cs
@@ -343,7 +344,7 @@ items:
   source:
     remote:
       path: src/Translations/TranslationsExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FindTranslationJob
     path: Translations/TranslationsExtensions.cs
@@ -391,7 +392,7 @@ items:
   source:
     remote:
       path: src/Translations/TranslationsExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FindTranslationJobs
     path: Translations/TranslationsExtensions.cs
@@ -442,7 +443,7 @@ items:
   source:
     remote:
       path: src/Translations/TranslationsExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: PutTranslationCancel
     path: Translations/TranslationsExtensions.cs
@@ -490,7 +491,7 @@ items:
   source:
     remote:
       path: src/Translations/TranslationsExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetQueuedTranslationJobs
     path: Translations/TranslationsExtensions.cs
@@ -549,7 +550,7 @@ items:
   source:
     remote:
       path: src/Translations/TranslationsExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FindQueuedTranslationJobs
     path: Translations/TranslationsExtensions.cs
@@ -597,7 +598,7 @@ items:
   source:
     remote:
       path: src/Translations/TranslationsExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetTranslationExportState
     path: Translations/TranslationsExtensions.cs
@@ -656,7 +657,7 @@ items:
   source:
     remote:
       path: src/Translations/TranslationsExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FindTranslationExportState
     path: Translations/TranslationsExtensions.cs
@@ -704,7 +705,7 @@ items:
   source:
     remote:
       path: src/Translations/TranslationsExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: ResetTranslationComponentsState
     path: Translations/TranslationsExtensions.cs
@@ -755,7 +756,7 @@ items:
   source:
     remote:
       path: src/Translations/TranslationsExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: GetTranslationExportJobs
     path: Translations/TranslationsExtensions.cs
@@ -817,7 +818,7 @@ items:
   source:
     remote:
       path: src/Translations/TranslationsExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FindTranslationExportJobs
     path: Translations/TranslationsExtensions.cs
@@ -868,7 +869,7 @@ items:
   source:
     remote:
       path: src/Translations/TranslationsExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: SetTranslationJobStatus
     path: Translations/TranslationsExtensions.cs
@@ -904,6 +905,54 @@ items:
   - Shared
   fullName.vb: Vasont.Inspire.SDK.Translations.TranslationsExtensions.SetTranslationJobStatus(Vasont.Inspire.SDK.InspireClient, System.Collections.Generic.List(Of Vasont.Inspire.Models.Translations.TranslationExportJobModel))
   name.vb: SetTranslationJobStatus(InspireClient, List(Of TranslationExportJobModel))
+- uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.ProcessTransportResponse(Vasont.Inspire.SDK.InspireClient,System.String)
+  commentId: M:Vasont.Inspire.SDK.Translations.TranslationsExtensions.ProcessTransportResponse(Vasont.Inspire.SDK.InspireClient,System.String)
+  id: ProcessTransportResponse(Vasont.Inspire.SDK.InspireClient,System.String)
+  isExtensionMethod: true
+  parent: Vasont.Inspire.SDK.Translations.TranslationsExtensions
+  langs:
+  - csharp
+  - vb
+  name: ProcessTransportResponse(InspireClient, String)
+  nameWithType: TranslationsExtensions.ProcessTransportResponse(InspireClient, String)
+  fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.ProcessTransportResponse(Vasont.Inspire.SDK.InspireClient, System.String)
+  type: Method
+  source:
+    remote:
+      path: src/Translations/TranslationsExtensions.cs
+      branch: develop
+      repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
+    id: ProcessTransportResponse
+    path: Translations/TranslationsExtensions.cs
+    startLine: 260
+  assemblies:
+  - Vasont.Inspire.SDK
+  namespace: Vasont.Inspire.SDK.Translations
+  summary: "\nProcesses the message received from Transport as part of a project delivery.\n"
+  example: []
+  syntax:
+    content: public static bool ProcessTransportResponse(this InspireClient client, string transportProjectId)
+    parameters:
+    - id: client
+      type: Vasont.Inspire.SDK.InspireClient
+      description: <xref href="Vasont.Inspire.SDK.InspireClient" data-throw-if-not-resolved="false"></xref> used to communication with the API endpoint.
+    - id: transportProjectId
+      type: System.String
+      description: The Transport Project Id.
+    return:
+      type: System.Boolean
+      description: Returns success or failure of the operation.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ProcessTransportResponse(client As InspireClient, transportProjectId As String) As Boolean
+  overload: Vasont.Inspire.SDK.Translations.TranslationsExtensions.ProcessTransportResponse*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegrations(Vasont.Inspire.SDK.InspireClient,System.Boolean)
   commentId: M:Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegrations(Vasont.Inspire.SDK.InspireClient,System.Boolean)
   id: FindTranslationIntegrations(Vasont.Inspire.SDK.InspireClient,System.Boolean)
@@ -919,11 +968,11 @@ items:
   source:
     remote:
       path: src/Translations/TranslationsExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FindTranslationIntegrations
     path: Translations/TranslationsExtensions.cs
-    startLine: 260
+    startLine: 278
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Translations
@@ -967,11 +1016,11 @@ items:
   source:
     remote:
       path: src/Translations/TranslationsExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FindTranslationIntegration
     path: Translations/TranslationsExtensions.cs
-    startLine: 273
+    startLine: 291
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Translations
@@ -1015,11 +1064,11 @@ items:
   source:
     remote:
       path: src/Translations/TranslationsExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: FindTranslationIntegrations
     path: Translations/TranslationsExtensions.cs
-    startLine: 287
+    startLine: 305
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Translations
@@ -1067,11 +1116,11 @@ items:
   source:
     remote:
       path: src/Translations/TranslationsExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: UpdateTranslationIntegration
     path: Translations/TranslationsExtensions.cs
-    startLine: 306
+    startLine: 324
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Translations
@@ -1119,11 +1168,11 @@ items:
   source:
     remote:
       path: src/Translations/TranslationsExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: CreateTranslationIntegration
     path: Translations/TranslationsExtensions.cs
-    startLine: 325
+    startLine: 343
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Translations
@@ -1171,11 +1220,11 @@ items:
   source:
     remote:
       path: src/Translations/TranslationsExtensions.cs
-      branch: feature/TranslationIntegrationManagement
+      branch: develop
       repo: https://github.com/vasont-systems/Vasont.Inspire.SDK.git
     id: DeleteTranslationIntegration
     path: Translations/TranslationsExtensions.cs
-    startLine: 343
+    startLine: 361
   assemblies:
   - Vasont.Inspire.SDK
   namespace: Vasont.Inspire.SDK.Translations
@@ -2126,6 +2175,18 @@ references:
   name: SetTranslationJobStatus
   nameWithType: TranslationsExtensions.SetTranslationJobStatus
   fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.SetTranslationJobStatus
+- uid: Vasont.Inspire.SDK.Translations.TranslationsExtensions.ProcessTransportResponse*
+  commentId: Overload:Vasont.Inspire.SDK.Translations.TranslationsExtensions.ProcessTransportResponse
+  name: ProcessTransportResponse
+  nameWithType: TranslationsExtensions.ProcessTransportResponse
+  fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.ProcessTransportResponse
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: Vasont.Inspire.Models.Translations.TranslationIntegrationBrowseResultModel
   commentId: T:Vasont.Inspire.Models.Translations.TranslationIntegrationBrowseResultModel
   parent: Vasont.Inspire.Models.Translations
@@ -2138,13 +2199,6 @@ references:
   name: FindTranslationIntegrations
   nameWithType: TranslationsExtensions.FindTranslationIntegrations
   fullName: Vasont.Inspire.SDK.Translations.TranslationsExtensions.FindTranslationIntegrations
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  name: Boolean
-  nameWithType: Boolean
-  fullName: System.Boolean
 - uid: Vasont.Inspire.Models.Translations.TranslationIntegrationModel
   commentId: T:Vasont.Inspire.Models.Translations.TranslationIntegrationModel
   parent: Vasont.Inspire.Models.Translations
