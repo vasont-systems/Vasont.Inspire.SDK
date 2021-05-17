@@ -70,7 +70,7 @@
     </PackageReference>
     <PackageReference Include="IdentityModel" Version="5.1.0" />
     <PackageReference Include="Vasont.Inspire.Core" Version="1.0.21" />
-    <PackageReference Include="Vasont.Inspire.Models" Version="1.2.31" />
+    <PackageReference Include="Vasont.Inspire.Models" Version="1.2.33" />
   </ItemGroup>
   <ItemGroup>
     <XliffResource Include="MultilingualResources\Vasont.Inspire.SDK.de.xlf" />
