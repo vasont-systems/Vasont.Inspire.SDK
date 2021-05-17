@@ -64,13 +64,13 @@
     <None Remove="Vasont.Inspire.SDK.xml" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="docfx.console" Version="2.56.6">
+    <PackageReference Include="docfx.console" Version="2.57.2">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="IdentityModel" Version="4.5.0" />
-    <PackageReference Include="Vasont.Inspire.Core" Version="1.0.17" />
-    <PackageReference Include="Vasont.Inspire.Models" Version="1.2.4" />
+    <PackageReference Include="IdentityModel" Version="5.1.0" />
+    <PackageReference Include="Vasont.Inspire.Core" Version="1.0.21" />
+    <PackageReference Include="Vasont.Inspire.Models" Version="1.2.31" />
   </ItemGroup>
   <ItemGroup>
     <XliffResource Include="MultilingualResources\Vasont.Inspire.SDK.de.xlf" />
