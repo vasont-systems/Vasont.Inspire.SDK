@@ -7,6 +7,7 @@ namespace Vasont.Inspire.SDK.Translations
 {
     using System;
     using System.Collections.Generic;
+    using System.Net;
     using System.Net.Http;
     using Vasont.Inspire.Models.Translations;
     using Vasont.Inspire.Models.Worker;
@@ -266,20 +267,22 @@ namespace Vasont.Inspire.SDK.Translations
                 throw new ArgumentNullException(nameof(transportProjectId));
             }
 
+            HttpWebRequest request;
+
             if (projectStatus == "ProjectDelivery")
             {
-                var request = client.CreateRequest($"/Translations/ProcessTransportResponse/{transportProjectId}", HttpMethod.Post);
-                return client.RequestContent<bool>(request);
+                request = client.CreateRequest($"/Translations/ProcessTransportResponse/{transportProjectId}", HttpMethod.Post);
             }
             else if (projectStatus == "ProjectCancelled")
             {
-                var request = client.CreateRequest($"/Translations/ProcessTransportCancellation/{transportProjectId}", HttpMethod.Post);
-                return client.RequestContent<bool>(request);
+                request = client.CreateRequest($"/Translations/ProcessTransportCancellation/{transportProjectId}", HttpMethod.Post);
             }
             else
             {
                 return false;
             }
+
+            return client.RequestContent<bool>(request);
         }
 
         /// <summary>
