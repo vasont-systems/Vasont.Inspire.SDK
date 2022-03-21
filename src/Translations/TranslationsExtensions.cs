@@ -7,6 +7,7 @@ namespace Vasont.Inspire.SDK.Translations
 {
     using System;
     using System.Collections.Generic;
+    using System.Net;
     using System.Net.Http;
     using Vasont.Inspire.Models.Translations;
     using Vasont.Inspire.Models.Worker;
@@ -253,19 +254,33 @@ namespace Vasont.Inspire.SDK.Translations
         }
 
         /// <summary>
-        /// Processes the message received from Transport as part of a project delivery.
+        /// Processes the message received from Transport as part of a project delivery or cancellation.
         /// </summary>
         /// <param name="client"><see cref="InspireClient"/> used to communication with the API endpoint.</param>
         /// <param name="transportProjectId">The Transport Project Id.</param>
+        /// <param name="projectStatus">The status of the project.</param>
         /// <returns>Returns success or failure of the operation.</returns>
-        public static bool ProcessTransportResponse(this InspireClient client, string transportProjectId)
+        public static bool ProcessTransportResponse(this InspireClient client, string transportProjectId, string projectStatus)
         {
             if (string.IsNullOrEmpty(transportProjectId))
             {
                 throw new ArgumentNullException(nameof(transportProjectId));
             }
 
-            var request = client.CreateRequest($"/Translations/ProcessTransportResponse/{transportProjectId}", HttpMethod.Post);
+            HttpWebRequest request;
+
+            if (projectStatus == "ProjectDelivery")
+            {
+                request = client.CreateRequest($"/Translations/ProcessTransportResponse/{transportProjectId}", HttpMethod.Post);
+            }
+            else if (projectStatus == "ProjectCancelled")
+            {
+                request = client.CreateRequest($"/Translations/ProcessTransportCancellation/{transportProjectId}", HttpMethod.Post);
+            }
+            else
+            {
+                return false;
+            }
 
             return client.RequestContent<bool>(request);
         }
